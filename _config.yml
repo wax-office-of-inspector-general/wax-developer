@@ -24,7 +24,7 @@ layout: default
   The hub for blockchain development tutorials, quickstart guides, API documentation, and more.
   Everything you need to learn blockchain programming, blockchain dApp development on WAX, or duplicate an EOS dApp.
 baseurl: "/wax-docs" # the subpath of your site, e.g. /blog
-url: "http://www.rakeden.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://wax-office-of-inspector-general.github.io/wax-developer" # the base hostname & protocol for your site, e.g. http://example.com
 
 # socials
 twitter_username: WAX_io
