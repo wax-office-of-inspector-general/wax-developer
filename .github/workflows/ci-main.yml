@@ -1,9 +1,9 @@
 on: 
   push:
     branches:
-    - master
+    - main
 
-name: Master branch CI
+name: main branch CI
 
 jobs:
 
@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-    - uses: actions/checkout@master
+    - uses: actions/checkout@main
 
     - name: Build the site in the jekyll/builder container
       run: |
@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-    - uses: actions/checkout@master
+    - uses: actions/checkout@main
 
     - name: Build the site in the jekyll/builder container
       run: |
