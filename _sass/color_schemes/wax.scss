@@ -1,0 +1,28 @@
+$link-color: $blue-100;
+$btn-primary-color: $blue-100;
+$sidebar-color: $white;
+
+/* change default side navigation colors */
+.nav-list .nav-list-item .nav-list-link:hover, 
+.nav-list .nav-list-item .nav-list-link.active {
+  background-image: linear-gradient(-90deg, rgba(245, 245, 245, 0.5) 0%, rgba(245, 245, 245, 0.5), rgba(245, 245, 245, 0) 100%) !important;
+}
+
+/* change label styles, default looks aweful */  
+.label {
+  padding-top: 0.5em!important;
+  padding-right: 0.8em!important;
+  padding-bottom: 0.5em!important;
+  padding-left: 0.8em!important;
+  margin-right: 0.5em!important;
+  margin-left: 0.5em!important;
+  text-transform: inherit!important;
+  vertical-align: middle!important;
+  font-size: 14px!important;
+  border-radius: 5px !important;
+}
+
+.label-yellow {
+  background-color: transparent;
+  background: rgb(255, 250, 240) !important;
+}
