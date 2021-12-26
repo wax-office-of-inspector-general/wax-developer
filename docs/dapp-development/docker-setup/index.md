@@ -5,7 +5,7 @@ layout: default
 parent: dApp Development
 has_children: true
 ---
- 
+
 <a href="https://www.docker.com/" target="_blank">Docker</a> is a *container* platform that's similar to a virtual machine. Docker allows you to run software, applications, and even operating systems like Ubuntu from an isolated environment. Refer to Docker's <a href="https://www.docker.com/why-docker" target="_blank">Overview</a> guide to learn more.
 
 Our development and production Docker images provide a fast, easy way to run the WAX Blockchain in minutes. You can also use our Docker images to build and deploy smart contracts.
@@ -14,7 +14,7 @@ Using our Docker environment offers the following benefits:
 
 * Adds convenience and speed to your development efforts
 * Eliminates the need to manage source code 
-* Eliminates the need to meet our [Supported Operating Systems](/wax-developer/docs/os) requirements
+* Eliminates the need to meet our [Supported Operating Systems](/wax-developer/docs/tools/os) requirements
 * Doesn't overwrite an existing installation of EOSIO
 * Makes it easy to upgrade and try out new features
 * Makes it easy to switch between production and development environments
