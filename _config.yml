@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: WAX Developers
+title: WAX Developer
 email: your-email@mail.com
 layout: default
   The hub for blockchain development tutorials, quickstart guides, API documentation, and more.
@@ -113,7 +113,7 @@ search:
   button: false
 
 # Build and Theme settings
-theme: "just-the-docs"
+# theme: "just-the-docs"
 remote_theme: pmarsceill/just-the-docs
 color_scheme: wax
 
