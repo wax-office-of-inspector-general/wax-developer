@@ -8,15 +8,15 @@ grand_parent: WAX-RPC API Reference
 
 In this example, we'll sign up for a free account and get the WAX RNG abi using dfuse REST. 
 
-1. Sign up for a <a href="https://app.dfuse.io/" target="_blank">free dfuse account</a>.
+1. Sign up for a <a href="https://dfuse.eosnation.io/" target="_blank">free dfuse account</a>.
 
-2. Click Create New Key. For Category, select "Server to server."
+2. Click Create New Key.
 
 3. Get a short-lived JWT using your API key.
 
     ```
     curl -X POST \
-  https://auth.dfuse.io/v1/auth/issue \
+  https://auth.eosnation.io/v1/auth/issue \
   -H 'Content-Type: application/json' \
   -H 'cache-control: no-cache' \
   -d '{
@@ -28,7 +28,7 @@ In this example, we'll sign up for a free account and get the WAX RNG abi using 
 
     ```
     curl -X GET \
-      'https://mainnet.wax.dfuse.io/v0/state/abi?account=orng.wax&json=true' \
+      'https://wax.dfuse.eosnation.io/v0/state/abi?account=orng.wax&json=true' \
       -H 'Authorization: Bearer Your.JWT.Token' \
       -H 'cache-control: no-cache'
     ```
