@@ -6,7 +6,7 @@ has_children: true
 parent: WAX API Reference
 ---
 
-<a href="https://www.dfuse.io" target="_blank">dfuse</a> is a powerful suite of APIs for WAX dApp Developers. The dfuse platform allows you to easily execute searches, stream real-time data, and push transactions to the WAX Blockchain.
+<a href="https://dfuse.eosnation.io" target="_blank">dfuse</a> is a powerful suite of APIs for WAX dApp Developers. The dfuse platform allows you to easily execute searches, stream real-time data, and push transactions to the WAX Blockchain.
 
 ## What's Included
 
