@@ -4,6 +4,7 @@ layout: default
 nav_order: 100
 parent: Tools & Topics
 ---
+# Supported Operating Systems
 
 WAX currently supports the following operating systems:
 

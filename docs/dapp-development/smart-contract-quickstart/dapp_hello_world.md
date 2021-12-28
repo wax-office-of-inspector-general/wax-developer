@@ -5,6 +5,7 @@ nav_order: 62
 parent: Smart Contract Quickstart
 grand_parent: dApp Development
 ---
+# Create a Smart Contract
 
 In this section, you'll learn how to write and compile a WAX smart contract using **eosio-init**.
 
