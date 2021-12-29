@@ -154,9 +154,9 @@ When you [Set Up a Local dApp Environment](/wax-developer/docs/local_dapp_dev), 
 
 You can write WAX smart contracts using the C++ programming language. No custom language is required, although you'll need to familiarize yourself with the WAX C/C++ API library. This library contains the core files required to communicate with the WAX Blockchain. When you're ready to get started, refer to:
 
-* [WAX Contract Development Toolkit (WAX-CDT)](/wax-developer/docs/cdt)
-* [WAX-CDT API](/wax-developer/docs/cdt_api)
-* [Smart Contract Basics](/wax-developer/docs/smart_contract_basics)
+* [WAX Contract Development Toolkit (WAX-CDT)](/wax-developer/docs/dapp-development/wax-cdt)
+* [WAX-CDT API](/wax-developer/docs/api-reference/cdt_api)
+* [Smart Contract Quickstart](/wax-developer/docs/dapp-development/smart-contract-quickstart)
 
 <!--The [WAX Contract Development Toolkit (WAX-CDT)](/wax-developer/docs/cdt) includes everything you need to create and compile all of your smart contracts.-->
 
@@ -166,8 +166,6 @@ You can use any third party C++ editor or IDE to write your smart contracts, suc
 
 <a href="https://www.eosstudio.io/" target="_blank">EOS Studio</a> is a graphic IDE built for EOSIO dApp development, available on Linux, Mac OS, and Windows. This tool features a code editor, contract inspector, and a network manager. To integrate WAX with EOS Studio, refer to <a href="https://github.com/worldwide-asset-exchange/wax-blockchain/tree/develop/samples/eos-studio" target="_blank">How to use EOS Studio with WAX</a>. Our script provides a minimal integration, developed and tested with Ubuntu 18.04.
 
-<a href="https://github.com/EOSIO/eosjs" target="_blank">eosjs</a> is a javascript API SDK you can use to easily communicate with the WAX Blockchain API. Refer to [WAX RPC API](/wax-developer/docs/blockchain_api) for more information.
+<a href="https://github.com/EOSIO/eosjs" target="_blank">eosjs</a> is a javascript API SDK you can use to easily communicate with the WAX Blockchain API. Refer to [WAX RPC API](/wax-developer/docs/api-reference/rpc_api) for more information.
 
-<a href="https://www.dfuse.io" target="_blank">dfuse</a> is a powerful suite of APIs that allow you to query the WAX Blockchain and stream real-time data. Refer to [dfuse for WAX dApps](/wax-developer/docs/dfuse_overview) for more information.
-
-
+<a href="https://www.dfuse.io" target="_blank">dfuse</a> is a powerful suite of APIs that allow you to query the WAX Blockchain and stream real-time data. Refer to [dfuse for WAX dApps](/wax-developer/docs/api-reference/dfuse) for more information.
