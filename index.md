@@ -15,7 +15,7 @@ The hub for blockchain development tutorials, quickstart guides, API documentati
 ## Get Started
 You can use the following guides to set up your WAX dApp development environment:
 
-* [Complete our Docker Quickstart](/wax-developer/dapps/docker-quickstart/)
+* [Complete our Docker Quickstart](/wax-developer/docs/dapp-development/docker-setup/)
 * [Download WAX Blockchain source code and samples using the WAX Blockchain Setup guide](/wax-developer/dapps/wax-blockchain-setup/)
 * [Learn about the WAX Contract Development Toolkit WAX-CDT](/wax-developer/docs/dapp-development/wax-cdt/)
 * [Set Up a Local dApp Environment](/wax-developer/docs/dapp-development/setup-local-dapp-environment/)
