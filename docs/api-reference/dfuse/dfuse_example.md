@@ -3,7 +3,7 @@ title: dfuse Example
 layout: default
 nav_order: 121
 parent: dfuse for WAX dApps
-grand_parent: WAX-RPC API Reference
+grand_parent: WAX API Reference
 ---
 
 In this example, we'll sign up for a free account and get the WAX RNG abi using dfuse REST. 
