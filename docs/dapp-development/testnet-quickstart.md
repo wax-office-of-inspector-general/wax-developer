@@ -18,7 +18,7 @@ In this guide, you'll learn how to create Testnet accounts and deploy your smart
 
 3. To deploy your smart contracts, you'll need to create a wallet using your public and private keys. You can use the wallet features on <a href="https://local.bloks.io/wallet/transfer?nodeUrl=testnet.waxsweden.org&coreSymbol=WAX&corePrecision=8&systemDomain=eosio&hyperionUrl=https%3A%2F%2Ftestnet.waxsweden.org" target="_blank">Bloks.io</a>, or use our [Docker images](/wax-developer/docs/docker_qstart) to manage your wallet. 
 
-    To create a wallet from a Docker container, use the <span class="codeSample">cleos wallet</span> command:
+    To create a wallet from a Docker container, use the `cleos wallet` command:
 
     ```shell
     cleos rm -f ~/eosio-wallet/{account.name}.wallet &&
@@ -60,7 +60,7 @@ In this guide, you'll learn how to create Testnet accounts and deploy your smart
     cleos -u https://testnet.waxsweden.org set account permission {account.name} active --add-code
     ```
 
-3. **Deploy.** From the command line, set your contract with the <span class="codeSample">cleos set contract</span> command: 
+3. **Deploy.** From the command line, set your contract with the `cleos set contract` command: 
 
     ```shell
     cleos -u https://testnet.waxsweden.org set contract {account.name} $(pwd) waxnft.wasm waxnft.abi   

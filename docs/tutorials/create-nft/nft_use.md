@@ -76,7 +76,7 @@ In this example, we'll write a smart contract that creates a WAX NFT Sticker usi
     EOSIO_DISPATCH(waxnft, (createnft))
     ```    
         
-    Save your changes. This contract creates a WAX NFT Sticker with the same author and owner account. Because the <span class="codeSample">requireClaim</span> flag is set to false, your smart contract account is charged the RAM and the asset is instantly assigned to the owner (you).
+    Save your changes. This contract creates a WAX NFT Sticker with the same author and owner account. Because the `requireClaim` flag is set to false, your smart contract account is charged the RAM and the asset is instantly assigned to the owner (you).
 
      * **idata** includes key/value pairs that can not change.
     * **mdata** includes key/value pairs that you can update.

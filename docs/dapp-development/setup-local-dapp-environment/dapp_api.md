@@ -6,11 +6,11 @@ parent: Set Up a Local dApp Environment
 grand_parent: dApp Development
 ---
 
-The WAX mainnet exposes a set of **nodeos** API endpoints (RPC API), allowing you to interact with the WAX Blockchain. In production, this API is accessed from <span class="codeSample">https:<span></span>//chain.wax.io</span>.
+The WAX mainnet exposes a set of **nodeos** API endpoints (RPC API), allowing you to interact with the WAX Blockchain. In production, this API is accessed from `https://chain.wax.io`.
 
-Now that you have a local node running on your local development server, these endpoints can be accessed from your local IP address: <span class="codeSample">http:<span></span>//127.0.0.1:8888</span>. This API endpoint is initialized when you pass the <span class="codeSample">plugin eosio::chain_api_plugin</span> parameter to **nodeos**.
+Now that you have a local node running on your local development server, these endpoints can be accessed from your local IP address: `http://127.0.0.1:8888`. This API endpoint is initialized when you pass the `plugin eosio::chain_api_plugin` parameter to **nodeos**.
 
-To test your local RPC API, from the command line, make a **curl** request to the <span class="codeSample">get_info</span> endpoint:
+To test your local RPC API, from the command line, make a **curl** request to the `get_info` endpoint:
 
 ```
 curl --request POST \

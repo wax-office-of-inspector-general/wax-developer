@@ -58,7 +58,7 @@ Every WAX Account must have at least one public key. There are two types of publ
 - **Owner Key:** Required. This is the primary public key, with full permissions and complete control. In a production account, you should never give this out for most transactions. This key has a private/public key record in your local wallet.
 - **Active Key:** Optional. This is a secondary key, which can be changed by the Owner key. It requires an additional private/public key pair listed in your local wallet. In production, use this key to vote, send, and receive transactions.
 
-To create an account for your smart contract, you'll need to create a public and private key pair from your local development wallet. You can do this using your wallet's <span class="codeSample">create_key</span> command:
+To create an account for your smart contract, you'll need to create a public and private key pair from your local development wallet. You can do this using your wallet's `create_key` command:
 
 <strong>Note:</strong> Your wallet must be opened and unlocked to create your keys.
 {: .label .label-yellow }
@@ -78,7 +78,7 @@ Store this key someplace that's easily accessible (you'll need this public key i
 
 ## Create a Smart Contract Account
 
-To create a smart contract WAX Account, use the <span class="codeSample">create account</span> command:
+To create a smart contract WAX Account, use the `create account` command:
 
 | Parameter | Example | Description
 | --- | ----------- | -------------------------- |
@@ -92,7 +92,7 @@ To create a smart contract WAX Account, use the <span class="codeSample">create 
 cleos create account eosio waxsc1 EOS4yxqE5KYv5XaB2gj6sZTUDiGzKm42KfiRPDCeXWZUsAZZVXk1F 
 ```
 
-**cleos** broadcasts the <span class="codeSample">create account</span> command to your local blockchain and your wallet signs this transaction with a HASH.
+**cleos** broadcasts the `create account` command to your local blockchain and your wallet signs this transaction with a HASH.
 
 ```shell
 executed transaction: 4ebdc2eabcd545c7f26679e95d729893ebd0df919850791daa79a10e4865f702  200 bytes  15013 us
@@ -104,7 +104,7 @@ You should now have a WAX Blockchain Account to associate with your smart contra
 
 ## Verify Your New Account
 
-To view your new account's information, use the <span class="codeSample">get account</span> command:
+To view your new account's information, use the `get account` command:
 
 ```shell
 cleos get account waxcustomer

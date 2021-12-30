@@ -34,7 +34,7 @@ The WAX Source Code Repository includes a Hello World sample to quickly build an
     
 ### Dependencies
     
-<p>For a complete list of dependencies, refer to <a href="https://github.com/worldwide-asset-exchange/wax-blockchain/tree/develop/scripts" target="_blank">wax-blockchain/scripts</a> and locate the <span class="codeSample">wax_build_</span> file for your operating system.</p>
+<p>For a complete list of dependencies, refer to <a href="https://github.com/worldwide-asset-exchange/wax-blockchain/tree/develop/scripts" target="_blank">wax-blockchain/scripts</a> and locate the `wax_build_` file for your operating system.</p>
 
 ## System Requirements
 

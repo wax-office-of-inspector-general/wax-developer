@@ -38,7 +38,7 @@ In this guide, you'll use **cleos** to deploy and test the wax smart contract yo
 
 ## Deploy Your Smart Contract
 
-To deploy your smart contract's WASM file to your local blockchain, use <span class="codeSample">cleos set contract</span> from the command line:
+To deploy your smart contract's WASM file to your local blockchain, use `cleos set contract` from the command line:
 
 | Parameter | Example | Description
 | --- | ----------- | -------------------------- |
@@ -65,7 +65,7 @@ Your smart contract should now be live on your local blockchain.
 
 ## Test Your Smart Contract
 
-To test your smart contract, use <span class="codeSample">cleos push action</span> from the command line:
+To test your smart contract, use `cleos push action` from the command line:
 
 | Parameter | Example | Description
 | --- | ----------- | -------------------------- |
@@ -87,7 +87,7 @@ executed transaction: 6a0b1489d903f2cacc6480830358f07aaf65b20bf1d7e855dc20097f4d
 warning: transaction executed locally, but may not be confirmed by the network yet         ]
 ```
 
-If you receive an error that the transaction took too long, run <span class="codeSample">cleos push action</span> again. If you still receive an error, try restarting **nodeos**.
+If you receive an error that the transaction took too long, run `cleos push action` again. If you still receive an error, try restarting **nodeos**.
 
 ```shell
 Error 3080006: Transaction took too long

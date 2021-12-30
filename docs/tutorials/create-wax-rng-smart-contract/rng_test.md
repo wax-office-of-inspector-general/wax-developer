@@ -23,13 +23,13 @@ In this example, we'll use the following parameters:
 <tr>
 <td>customer_id</td>
 <td>1267</td>
-<td>Required <span class="codeSample">uint64_t</span>. Your internal database id for the customer.</td>
+<td>Required `uint64_t`. Your internal database id for the customer.</td>
 </tr>
 
 <tr>
 <td>signing_value</td>
 <td>445896213</td>
-<td>Required <span class="codeSample">uint64_t</span>. A pseudo-random number generated client-side.</td>
+<td>Required `uint64_t`. A pseudo-random number generated client-side.</td>
 </tr>
 
 </tbody>
@@ -37,7 +37,7 @@ In this example, we'll use the following parameters:
 
 ## Get a Random Number
 
-From the command line, use the <span class="codeSample">cleos push action</span> command to call the **getrandom** action.
+From the command line, use the `cleos push action` command to call the **getrandom** action.
 
 ```shell
 cleos -u https://chain.wax.io push action waxrng getrandom '["waxrng", 1267, 445896213]' -p waxrng@active
@@ -63,7 +63,7 @@ pending console output:
 
 ## Verify Your Random Number
 
-The callback function saves your random number to the **rngcustomers** table. To display the table values, use the <span class="codeSample">cleos get table</span> command.
+The callback function saves your random number to the **rngcustomers** table. To display the table values, use the `cleos get table` command.
 
 ```shell
 cleos -u https://chain.wax.io get table waxrng waxrng rngcustomers

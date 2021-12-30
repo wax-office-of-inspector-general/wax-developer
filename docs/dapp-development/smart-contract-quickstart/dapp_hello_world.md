@@ -33,13 +33,13 @@ To create your first WAX smart contract using **eosio-init**:
     cd mycontracts
     ```
 
-2. From the command line, use **eosio-init** with the <span class="codeSample">-project</span> parameter. 
+2. From the command line, use **eosio-init** with the `-project` parameter.
 
     ```
     eosio-init -project wax
     ```
 
-    **eosio-init** uses the <span class="codeSample">-project</span> name to create the following directory structure:
+    **eosio-init** uses the `-project` name to create the following directory structure:
 
     - mycontracts/wax/include 
     - mycontracts/wax/ricardian 
@@ -119,7 +119,7 @@ EOSIO_DISPATCH(wax, (greet))
 
 ## Compile Your Contract
 
-To deploy your smart contract, you'll need to create a <span class="codeSample">.wasm</span> and <span class="codeSample">.abi</span> file. You can do this using the WAX Contract Development Toolkit (WAX-CDT).
+To deploy your smart contract, you'll need to create a `.wasm` and `.abi` file. You can do this using the WAX Contract Development Toolkit (WAX-CDT).
 
 1. Install [WAX-CDT](/wax-developer/docs/cdt) (if you haven't done so already).
 

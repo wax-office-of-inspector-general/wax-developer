@@ -6,7 +6,7 @@ parent: Deploy Your dApp on WAX
 grand_parent: dApp Development
 ---
 
-In this guide, you'll use the <span class="codeSample">cleos set contract</span> command to deploy your smart contract to the WAX mainnet.
+In this guide, you'll use the `cleos set contract` command to deploy your smart contract to the WAX mainnet.
 
 Before you begin, you'll need to compile your smart contract and have your WASM and ABI files ready. Refer to [Smart Contract Quickstart](/wax-developer/docs/dapp_build) or [WAX-CDT Build Tools](/wax-developer/docs/cdt_cpp) for more information.
 
@@ -23,7 +23,7 @@ To deploy your smart contract to the WAX mainnet:
     cleos wallet open -n mywallet && cleos wallet unlock -n mywallet --password {wallet.pwd}
     ```
 
-2. Generate a public/private key pair that's used to create your smart contract's blockchain account. From the command line, use the <span class="codeSample">cleos create key</span> command:
+2. Generate a public/private key pair that's used to create your smart contract's blockchain account. From the command line, use the `cleos create key` command:
 
     ```shell
     cleos wallet create_key -n mywallet
@@ -32,7 +32,7 @@ To deploy your smart contract to the WAX mainnet:
     <strong>Note:</strong> You can also use an EOSIO compatible wallet (e.g., Scatter).
     {: .label .label-yellow }
 
-3. From the command line, use <span class="codeSample">cleos system newaccount</span> to create your smart contract's account. To run this command, you'll need to have the proper authority. This means that the wallet containing your primary account must be opened and unlocked. 
+3. From the command line, use `cleos system newaccount` to create your smart contract's account. To run this command, you'll need to have the proper authority. This means that the wallet containing your primary account must be opened and unlocked. 
 
     <table>
     <thead>
@@ -108,7 +108,7 @@ To deploy your smart contract to the WAX mainnet:
     <strong>Note:</strong> You'll need to repeat Steps 1 and 2 for each of your contracts. 
     {: .label .label-yellow }
 
-4. **Deploy.** From the command line, set your contract with the <span class="codeSample">cleos set contract</span> command: 
+4. **Deploy.** From the command line, set your contract with the `cleos set contract` command: 
 
     | Parameter | Example | Description
     | --- | ----------- | -------------------------- |

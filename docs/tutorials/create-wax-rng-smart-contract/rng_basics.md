@@ -58,19 +58,19 @@ The WAX RNG **requestrand** action accepts the following parameters:
 <tr>
 <td>assoc_id</td>
 <td>1405</td>
-<td>Required <span class="codeSample">uint64_t</span>. A unique value assigned by you (e.g., job id, database id).</td>
+<td>Required `uint64_t`. A unique value assigned by you (e.g., job id, database id).</td>
 </tr>
 
 <tr>
 <td>signing_value</td>
 <td>84569725</td>
-<td>Required <span class="codeSample">uint64_t</span>. A pseudo-random number generated client-side or on the back-end. Must be unique and never used before, even by other users.</td>
+<td>Required `uint64_t`. A pseudo-random number generated client-side or on the back-end. Must be unique and never used before, even by other users.</td>
 </tr>
 
 <tr>
 <td>caller</td>
 <td>get_self()</td>
-<td>Required <span class="codeSample">name</span>. The smart contract account calling the <strong>orng.wax</strong> action.</td>
+<td>Required `name`. The smart contract account calling the <strong>orng.wax</strong> action.</td>
 </tr>
 
 </tbody>
@@ -98,13 +98,13 @@ To receive your random number from the WAX RNG service, your smart contract must
 <tr>
 <td>assoc_id</td>
 <td>1405</td>
-<td>Required <span class="codeSample">uint64_t</span>. A unique value assigned by you (e.g., job id, database id).</td>
+<td>Required `uint64_t`. A unique value assigned by you (e.g., job id, database id).</td>
 </tr>
 
 <tr>
 <td>random_value</td>
 <td >Refer to Description.</td>
-<td style="word-wrap:break-word">Required <span class="codeSample">checksum256</span>. The RSA signed random value returned from the WAX RNG service.<br />
+<td style="word-wrap:break-word">Required `checksum256`. The RSA signed random value returned from the WAX RNG service.<br />
     <strong>Example: </strong>0979df3b6cb654bfe059481b586c2277697e7f0bfcef3e0dd198e19b54bce278
 </td>
 </tr>
@@ -133,25 +133,25 @@ To call the WAX RNG **requestrand** external action, you'll need to use the acti
 <tr>
 <td>permission</td>
 <td>{ get_self(), "active"_n }</td>
-<td>Required <span class="codeSample">structure</span>. This is your WAX Blockchain Account and permission type. For example, if you're smart contract's blockchain account is named <strong>waxsc1</strong>, { get_self(), "active"_n } returns <strong>waxsc1@active</strong> permissions.</td>
+<td>Required `structure`. This is your WAX Blockchain Account and permission type. For example, if you're smart contract's blockchain account is named <strong>waxsc1</strong>, { get_self(), "active"_n } returns <strong>waxsc1@active</strong> permissions.</td>
 </tr>
 
 <tr>
 <td>code</td>
 <td>"orng.wax"_n</td>
-<td>Required <span class="codeSample">name</span>. The WAX RNG smart contract account.</td>
+<td>Required `name`. The WAX RNG smart contract account.</td>
 </tr>
 
 <tr>
 <td>action</td>
 <td>"requestrand"_n</td>
-<td>Required <span class="codeSample">string</span>. The action name in the WAX RNG smart contract.</td>
+<td>Required `string`. The action name in the WAX RNG smart contract.</td>
 </tr>
 
 <tr>
 <td>data</td>
 <td>std::tuple{ your_id, signing_value, get_self() })</td>
-<td>Required <span class="codeSample">fixed-size collection</span>. The parameters required for the requestrand action.
+<td>Required `fixed-size collection`. The parameters required for the requestrand action.
 </td>
 </tr>
 </tbody>

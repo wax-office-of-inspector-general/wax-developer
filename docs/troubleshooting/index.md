@@ -10,7 +10,7 @@ Below is a list of known issues and fixes (if available).
 
 **Error Description:** WAX Source Code Repository Build Issue
 
-After running <span class="codeSample">sudo ./wax_install.sh</span> to build the WAX Source Code Repository on **Ubuntu 18.04**, the command line reports an error "In function 'fork_once_func'" (around [90%]):
+After running `sudo ./wax_install.sh` to build the WAX Source Code Repository on **Ubuntu 18.04**, the command line reports an error "In function 'fork_once_func'" (around [90%]):
 
 ```
 Scanning dependencies of target test_cypher_suites

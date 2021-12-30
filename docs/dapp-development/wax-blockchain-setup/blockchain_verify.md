@@ -6,7 +6,7 @@ parent: WAX Blockchain Setup
 grand_parent: dApp Development
 ---
 
-To verify your installation, you can use **cleos** to call the <span class="codeSample">get info</span> endpoint on the Wax Blockchain API. 
+To verify your installation, you can use **cleos** to call the `get info` endpoint on the Wax Blockchain API. 
 
 From the command line, enter the following:
 
@@ -14,7 +14,7 @@ From the command line, enter the following:
 cleos -u https://chain.wax.io get info
 ```
 
-If the [Blockchain Tools](/wax-developer/docs/blockchain_tools) installed successfully, this endpoint will return various details about the WAX Blockchain, including the <span class="codeSample">chain_id</span>, block producer, and most recent block height.
+If the [Blockchain Tools](/wax-developer/docs/blockchain_tools) installed successfully, this endpoint will return various details about the WAX Blockchain, including the `chain_id`, block producer, and most recent block height.
 
 
 ```json

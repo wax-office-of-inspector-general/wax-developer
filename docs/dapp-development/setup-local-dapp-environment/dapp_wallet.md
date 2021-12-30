@@ -40,7 +40,7 @@ In this guide, you'll use **cleos** to create, open, and unlock a new wallet.
 
 ## Create a Default Wallet
 
-To create a new wallet, use the <span class="codeSample">wallet create</span> command:
+To create a new wallet, use the `wallet create` command:
 
 ```shell
 cleos wallet create --to-console
@@ -48,10 +48,10 @@ cleos wallet create --to-console
 
 This command creates a wallet named **default**, saved to a local path (e.g. "/home/username/eosio-wallet/default.wallet"). 
 
-<strong>Tip:</strong> You can also include the --name parameter to name a wallet: <span class="codeSample">cleos wallet create --name mywallet --to-console</span>.
+<strong>Tip:</strong> You can also include the --name parameter to name a wallet: `cleos wallet create --name mywallet --to-console`.
 {: .label .label-yellow }
 
-The <span class="codeSample">--to-console</span> parameter prints your password to the console. Be sure to save this password someplace safe (you'll need it to unlock your wallet).
+The `--to-console` parameter prints your password to the console. Be sure to save this password someplace safe (you'll need it to unlock your wallet).
 
 ```shell
 warn  2019-07-16T22:39:39.847 thread-0  wallet.cpp:223                save_wallet_file     ] saving wallet to file /home/username/eosio-wallet/./default.wallet
@@ -66,25 +66,25 @@ Without password imported keys will not be retrievable.
 
 ## Open and Unlock Your Wallet
 
-Wallets are closed by default (when starting a **keosd** instance). To open your wallet, use the <span class="codeSample">wallet open</span> command:
+Wallets are closed by default (when starting a **keosd** instance). To open your wallet, use the `wallet open` command:
 
 ```shell
 cleos wallet open
 ```
 
-The console prints out that your **default** wallet is open: <span class="codeSample">Opened: default</span>.
+The console prints out that your **default** wallet is open: `Opened: default`.
 
 
-<strong>Tip:</strong> You can also include the --name parameter to open a wallet by name: <span class="codeSample">cleos wallet open --name named-wallet</span>.
+<strong>Tip:</strong> You can also include the --name parameter to open a wallet by name: `cleos wallet open --name named-wallet`.
 {: .label .label-yellow }
 
-Now that your wallet is open, you'll need to unlock it. You can use the <span class="codeSample">--password</span> command to unlock it in one step. Use the password that was printed to the console when you created your wallet.
+Now that your wallet is open, you'll need to unlock it. You can use the `cleos wallet open --name named-wallet` command to unlock it in one step. Use the password that was printed to the console when you created your wallet.
 
 ```shell
 cleos wallet unlock --password PW5KRXKVx25yjL3FvxxY9YxYxxYY9Yxx99yyXTRH8DjppKpD9tKtVz
 ```
 
-The console prints out that your **default** wallet is unlocked: <span class="codeSample">Unlocked: default</span>.
+The console prints out that your **default** wallet is unlocked: `cleos wallet open --name named-wallet`.
 
 <strong>Tip:</strong> By default, **keosd** will auto-lock your wallets after 15 minutes of inactivity. To disable this feature, you'll need to modify the **/home/username/eosio-wallet/config.ini** flag to an extremely large number. Setting it to 0 will cause keosd to always lock your wallet.
 {: .label .label-yellow }
@@ -105,7 +105,7 @@ Wallets:
 ]
 ```
 
-<strong>Tip:</strong> If you come back to this step later (after terminating your **kleos** instance) and your **default** wallet isn't listed: <span class="codeSample">Wallets: []</span>, you'll need to Open and Unlock your wallet again.
+<strong>Tip:</strong> If you come back to this step later (after terminating your **kleos** instance) and your **default** wallet isn't listed: `cleos wallet open --name named-wallet`, you'll need to Open and Unlock your wallet again.
 {: .label .label-yellow }
 
 

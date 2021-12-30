@@ -85,13 +85,13 @@ You're now running a local WAX node on your development server. Press Ctrl + c t
 
 To cleanly stop **nodeos**:
 
-1. From the command line, run <span class="codeSample">pkill</span>:
+1. From the command line, run `pkill`:
 
     ```shell
     pkill nodeos
     ```
 
-2. To verify that **nodeos** is no longer producing blocks, run the <span class="codeSample">tail</span> command to view the log:
+2. To verify that **nodeos** is no longer producing blocks, run the `tail` command to view the log:
 
     ```shell
     tail -f nodeos.log
