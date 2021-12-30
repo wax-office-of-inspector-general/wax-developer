@@ -12,7 +12,7 @@ In this example, we'll create a smart contract that uses the WAX RNG service to 
 
 1. From the command line, navigate to your smart contracts directory. For this example, we'll use **mycontracts**.
 
-2. Use **eosio-init** with the <span class="codeSample">-project</span> parameter to create your smart contract template. 
+2. Use **eosio-init** with the `-project` parameter to create your smart contract template. 
 
     ```shelleosio-init -project waxrng```
     

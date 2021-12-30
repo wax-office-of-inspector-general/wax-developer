@@ -32,8 +32,8 @@ The <a href="https://github.com/worldwide-asset-exchange/wax-blockchain" target=
 
 * Docker must be installed and configured to run without sudo. Linux users, refer to <a href="https://docs.docker.com/install/linux/linux-postinstall/" target="_blank">Post-installation steps for Linux</a> for more information.
 
-       <strong>Windows Subsystem for Linux Users:</strong> Docker configuration and installation requirements will vary depending on your WSL version. Recommended only for advanced Docker/Windows users. If you're running WSL 2, refer to <a href="https://docs.docker.com/docker-for-windows/wsl-tech-preview/" target="_blank">Docker Desktop WSL 2 Tech Preview</a> for more information.
-        {: .label .label-yellow }
+   <strong>Windows Subsystem for Linux Users:</strong> Docker configuration and installation requirements will vary depending on your WSL version. Recommended only for advanced Docker/Windows users. If you're running WSL 2, refer to <a href="https://docs.docker.com/docker-for-windows/wsl-tech-preview/" target="_blank">Docker Desktop WSL 2 Tech Preview</a> for more information.
+    {: .label .label-yellow }
 
 * make (VERSION 3.9 +)
 * A self-managed WAX Blockchain Account and its private key (to deploy the contract).

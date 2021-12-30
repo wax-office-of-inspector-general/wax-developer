@@ -120,7 +120,7 @@ To customize the build scripts:
 
 1. Copy **wax-cdt/examples/hello/CMakeLists.txt** into **mycontracts** (your parent smart contract directory). 
 
-2. From **mycontracts**, open **CmakeLists.txt** and modify the <span class="codeSample">ExternalProject_Add</span> method. 
+2. From **mycontracts**, open **CmakeLists.txt** and modify the `ExternalProject_Add` method. 
 
 **mycontracts/CMakeLists.txt:**
 
@@ -181,7 +181,7 @@ mkdir build
 cd build
 ```
 
-7. Run <span class="codeSample">cmake</span> to write the necessary build files to the **build** directory.
+7. Run `cmake` to write the necessary build files to the **build** directory.
 
 ```
 cmake ..

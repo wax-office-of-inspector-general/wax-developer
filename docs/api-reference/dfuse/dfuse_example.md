@@ -24,7 +24,7 @@ In this example, we'll sign up for a free account and get the WAX RNG abi using 
 }'
 ```
 
-4. Use the <span class="codeSample">abi</span> endpoint to get the WAX RNG smart contract endpoint. In the Header, set the Authorization to Bearer and use your JWT from the previous step.
+4. Use the `abi` endpoint to get the WAX RNG smart contract endpoint. In the Header, set the Authorization to Bearer and use your JWT from the previous step.
 
     ```
     curl -X GET \

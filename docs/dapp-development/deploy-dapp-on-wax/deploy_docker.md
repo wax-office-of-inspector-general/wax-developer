@@ -45,7 +45,7 @@ To modify the **hello-world** scripts to deploy your smart contract:
 
     Save the file. 
 
-5. Next, open **Makefile**. This file contains the scripts to run <span class="codeSample">cleos</span> and the WAX Docker Development image. 
+5. Next, open **Makefile**. This file contains the scripts to run `cleos` and the WAX Docker Development image.
 
     a. Type your contract name on Line 23.
     ```shell
@@ -66,10 +66,10 @@ To modify the **hello-world** scripts to deploy your smart contract:
     Save the file.
 
 
-    <strong>Note:</strong> <span class="codeSample">NODEOS_URL</span> is the only optional parameter. Its default value is the mainnet deployment address https://chain.wax.io/.  
+    <strong>Note:</strong> `NODEOS_URL` is the only optional parameter. Its default value is the mainnet deployment address https://chain.wax.io/.  
     {: .label .label-yellow }
 
-Once these changes have been made, you're ready to use the <span class="codeSample">make</span> scripts to build and deploy your smart contract.
+Once these changes have been made, you're ready to use the `make` scripts to build and deploy your smart contract.
 
 ## Deploy Your Smart Contract
 
@@ -81,7 +81,7 @@ To launch your WAX smart contract on the WAX Blockchain:
     make build
     ```
 
-    This creates <span class="codeSample">wax.wasm</span> and <span class="codeSample">wax.abi</span> in the **wax_deploy** folder.
+    This creates `wax.wasm` and `wax.abi` in the **wax_deploy** folder.
 
 2. **Generate keys for your smart contract's account.** From the command line, run:
 

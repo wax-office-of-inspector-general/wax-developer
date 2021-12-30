@@ -10,7 +10,7 @@ Now that you've deployed your WAX NFT smart contract, it's time to run a test ac
 
 ## Create a WAX NFT
 
-From the command line, use the <span class="codeSample">cleos push action</span> command to call the **createnft** action.
+From the command line, use the `cleos push action` command to call the **createnft** action.
 
 ```shell
 cleos -u https://chain.wax.io push action waxnftowner1 createnft [] -p waxnftowner1@active
@@ -29,7 +29,7 @@ warning: transaction executed locally, but may not be confirmed by the network y
 
 ## Verify Your WAX NFT
 
-You can locate WAX NFTs in the **sassets** table, scoped by the NFT's owner. To display your NFT records, use the <span class="codeSample">cleos get table</span> command.
+You can locate WAX NFTs in the **sassets** table, scoped by the NFT's owner. To display your NFT records, use the `cleos get table` command.
 
 ```json
 cleos -u https://chain.wax.io get table simpleassets waxnftowner1 sassets  

@@ -60,9 +60,9 @@ Transactions communicate using two models: inline and deferred.
 
 ### Permissions
 
-A smart contract and a WAX Blockchain Account communicate using the actions defined in your smart contract. You can secure your actions using WAX Account permissions. By including the <span class="codeSample">require_auth()</span> method in your actions, you can verify that an action call was initiated by your smart contract's blockchain account. You can also use the <span class="codeSample">require_auth()</span> method to secure WAX customer-specific actions, such as updating a user record. Requiring authentication on user-specific actions can ensure that only your customer can perform this action - not someone else. 
+A smart contract and a WAX Blockchain Account communicate using the actions defined in your smart contract. You can secure your actions using WAX Account permissions. By including the `require_auth()` method in your actions, you can verify that an action call was initiated by your smart contract's blockchain account. You can also use the `require_auth()` method to secure WAX customer-specific actions, such as updating a user record. Requiring authentication on user-specific actions can ensure that only your customer can perform this action - not someone else.
 
-Permissions can also enable your smart contracts to handle notifications and make action calls to other smart contracts (using the <span class="codeSample">eosio.code</span> permission).
+Permissions can also enable your smart contracts to handle notifications and make action calls to other smart contracts (using the `eosio.code` permission).
 
  Refer to EOSIO's <a href="https://developers.eos.io/eosio-nodeos/dev-docs/accounts-and-permissions" target="_blank">Accounts and Permissions</a> for more information.
 
@@ -73,7 +73,7 @@ Every time you call one of your smart contract's actions from your app, a new in
 To persist data between the actions of one or more of your smart contracts, you'll need to use the **multi_index** table functionality. 
     
 <strong>Note:</strong> Persistent data is stored on the WAX node's RAM and impacts the amount of WAX that you'll need to stake for your smart contract.
-    {: .label .label-yellow }
+{: .label .label-yellow }
 
 
  Refer to EOSIO's <a href="https://developers.eos.io/eosio-home/dev-docs/data-persistence" target="_blank">Data Persistence</a> for more information.

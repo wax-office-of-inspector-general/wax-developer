@@ -6,7 +6,7 @@ parent: Docker Setup
 grand_parent: dApp Development
 ---
 
-Once your **waxdev** bash session starts, you can use common commands to interact with your container. For example, to list your container's contents, use the <span class="codeSample">ls</span> command.
+Once your **waxdev** bash session starts, you can use common commands to interact with your container. For example, to list your container's contents, use the `ls` command.
 
 ```shell
 ls
@@ -18,16 +18,16 @@ The console prints:
 bin  boot  dev  etc  home  lib  lib32  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var  wax
 ```
 
-The list above includes the **wax** directory that you shared when you started your **waxdev** container. You can <span class="codeSample">cd</span> into this directory when you're ready to [Create a Smart Contract](/wax-developer/docs/dapp-development/smart-contract-quickstart/dapp_hello_world).
+The list above includes the **wax** directory that you shared when you started your **waxdev** container. You can `cd` into this directory when you're ready to [Create a Smart Contract](/wax-developer/docs/dapp-development/smart-contract-quickstart/dapp_hello_world).
 
-<strong>Tip:</strong> Sharing your local host's folder with your waxdev Docker container allows you to create directories that exist on both your host and the docker container. This makes it easy to build and deploy your smart contracts using Docker. 
+<strong>Tip:</strong> Sharing your local host's folder with your waxdev Docker container allows you to create directories that exist on both your host and the docker container. This makes it easy to build and deploy your smart contracts using Docker.
 {: .label .label-yellow }
 
 ## Use Our Guides
 
 Throughout our dApp Development section, we'll list various steps required to run blockchain commands and build your smart contracts. For example:
 
-1. From the command line, use the <span class="codeSample">cleos</span> command to get blockchain information from the WAX mainnet.
+1. From the command line, use the `cleos` command to get blockchain information from the WAX mainnet.
 
 ```shell
 cleos -u https://chain.wax.io get info
@@ -38,7 +38,7 @@ When you start an interactive bash session, the *command line* is your Docker co
 
 <img src="/wax-developer/assets/img/docker_root.jpg"/>
 
-When you press <span class="codeSample">Enter</span> to run the command, the console prints a JSON response directly in your Docker container:
+When you press `Enter` to run the command, the console prints a JSON response directly in your Docker container:
 
 <img src="/wax-developer/assets/img/docker_results.jpg"/>
 
@@ -63,8 +63,3 @@ When you press <span class="codeSample">Enter</span> to run the command, the con
   "fork_db_head_block_id": "013e93c480c99a55ecc17b9afb48eae8f9980b01f5779462b1cd0b2551719578"
 }
     ```-->
-
-
-
-
-
