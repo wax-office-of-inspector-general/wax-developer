@@ -14,7 +14,7 @@ Using our Docker environment offers the following benefits:
 
 * Adds convenience and speed to your development efforts
 * Eliminates the need to manage source code 
-* Eliminates the need to meet our [Supported Operating Systems](/wax-developer/docs/tools/os) requirements
+* Eliminates the need to meet our [Supported Operating Systems](/docs/tools/os) requirements
 * Doesn't overwrite an existing installation of EOSIO
 * Makes it easy to upgrade and try out new features
 * Makes it easy to switch between production and development environments
@@ -37,12 +37,12 @@ Below is a list of our core Docker images. For a complete list, refer to <a href
 <tbody>
 <tr>
 <td><a href="https://hub.docker.com/r/waxteam/dev" target="_blank">waxteam/dev</a></td>
-<td>This <strong>development</strong> image includes everything you need to get the WAX Blockchain up and running. You can use this image to run a WAX node, create a local development environment, and create and compile smart contracts using the [WAX Contract Development Toolkit (WAX-CDT)](/wax-developer/docs/cdt).</td>
+<td>This <strong>development</strong> image includes everything you need to get the WAX Blockchain up and running. You can use this image to run a WAX node, create a local development environment, and create and compile smart contracts using the [WAX Contract Development Toolkit (WAX-CDT)](/docs/cdt).</td>
 </tr>
 
 <tr>
 <td><a href="https://hub.docker.com/r/waxteam/cdt" target="_blank">waxteam/cdt</a></td>
-<td>Use this image to create and compile smart contracts using the [WAX Contract Development Toolkit (WAX-CDT)](/wax-developer/docs/cdt). This image does <strong>not</strong> allow you to run a WAX node or use [Blockchain Tools](/wax-developer/docs/blockchain_tools).</td>
+<td>Use this image to create and compile smart contracts using the [WAX Contract Development Toolkit (WAX-CDT)](/docs/cdt). This image does <strong>not</strong> allow you to run a WAX node or use [Blockchain Tools](/docs/blockchain_tools).</td>
 </tr>
 
     <tr>

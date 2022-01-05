@@ -5,7 +5,7 @@ nav_order: 112
 parent: Tools & Topics
 ---
 
-Similar to a [Ricardian Contract](/wax-developer/docs/ricardian_contract), a Ricardian clause is a digital document that specifies the terms of your entire smart contract - not just per action. 
+Similar to a [Ricardian Contract](/docs/ricardian_contract), a Ricardian clause is a digital document that specifies the terms of your entire smart contract - not just per action. 
 
 To associate a Ricardian clause with your smart contract, you'll need to create a markdown file. 
 
@@ -20,7 +20,7 @@ If you use **eosio-init** to create a smart contract template, a folder is autom
 
 The CMake scripts will automatically include the files listed in the **ricardian** directory.
 
-Refer to [Create a Smart Contract](/wax-developer/docs/dapp_hello_world) for more information.
+Refer to [Create a Smart Contract](/docs/dapp_hello_world) for more information.
 
 ## Use eosio-cpp
 

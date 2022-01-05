@@ -29,7 +29,7 @@ If you're using a virtual machine, it should be configured with at least 2 CPUs 
 
 ## Windows Users
 
-The quickest, easiest way to run the WAX Blockchain on Windows is to use our Docker images. Refer to [Docker Quickstart](/wax-developer/docs/docker_qstart) to get started. 
+The quickest, easiest way to run the WAX Blockchain on Windows is to use our Docker images. Refer to [Docker Quickstart](/docs/docker_qstart) to get started. 
 
 If you're an advanced Window's developer with an understanding of Linux, you do have other options:
 

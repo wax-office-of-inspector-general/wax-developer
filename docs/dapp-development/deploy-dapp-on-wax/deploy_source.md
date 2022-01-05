@@ -8,7 +8,7 @@ grand_parent: dApp Development
 
 In this guide, you'll use the `cleos set contract` command to deploy your smart contract to the WAX mainnet.
 
-Before you begin, you'll need to compile your smart contract and have your WASM and ABI files ready. Refer to [Smart Contract Quickstart](/wax-developer/docs/dapp_build) or [WAX-CDT Build Tools](/wax-developer/docs/cdt_cpp) for more information.
+Before you begin, you'll need to compile your smart contract and have your WASM and ABI files ready. Refer to [Smart Contract Quickstart](/docs/dapp_build) or [WAX-CDT Build Tools](/docs/cdt_cpp) for more information.
 
 You'll also need to:
 

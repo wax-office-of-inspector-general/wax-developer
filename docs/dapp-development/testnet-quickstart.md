@@ -16,7 +16,7 @@ In this guide, you'll learn how to create Testnet accounts and deploy your smart
 
 2. From the Testnet homepage, get free WAX Tokens to fund your new account. 
 
-3. To deploy your smart contracts, you'll need to create a wallet using your public and private keys. You can use the wallet features on <a href="https://local.bloks.io/wallet/transfer?nodeUrl=testnet.waxsweden.org&coreSymbol=WAX&corePrecision=8&systemDomain=eosio&hyperionUrl=https%3A%2F%2Ftestnet.waxsweden.org" target="_blank">Bloks.io</a>, or use our [Docker images](/wax-developer/docs/docker_qstart) to manage your wallet. 
+3. To deploy your smart contracts, you'll need to create a wallet using your public and private keys. You can use the wallet features on <a href="https://local.bloks.io/wallet/transfer?nodeUrl=testnet.waxsweden.org&coreSymbol=WAX&corePrecision=8&systemDomain=eosio&hyperionUrl=https%3A%2F%2Ftestnet.waxsweden.org" target="_blank">Bloks.io</a>, or use our [Docker images](/docs/docker_qstart) to manage your wallet. 
 
     To create a wallet from a Docker container, use the `cleos wallet` command:
 

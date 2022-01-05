@@ -12,12 +12,12 @@ In this tutorial, you'll learn how to create and deploy a WAX RNG smart contract
 
 ## Before You Begin
 
-* You'll need to complete our [Docker Quickstart](/wax-developer/docs/docker_qstart) (recommended) or use the [WAX Blockchain Setup](/wax-developer/docs/blockchain_setup) to build from source.
-* To compile and deploy your smart contract, you'll need to use the [WAX Contract Development Toolkit (WAX-CDT)](/wax-developer/docs/cdt).
-* Install the [WAX Random Number Generator (WAX RNG)](/wax-developer/docs/rng_setup).
+* You'll need to complete our [Docker Quickstart](/docs/docker_qstart) (recommended) or use the [WAX Blockchain Setup](/docs/blockchain_setup) to build from source.
+* To compile and deploy your smart contract, you'll need to use the [WAX Contract Development Toolkit (WAX-CDT)](/docs/cdt).
+* Install the [WAX Random Number Generator (WAX RNG)](/docs/rng_setup).
 * To deploy your smart contract to the WAX mainnet, you'll need to create a self-managed WAX Blockchain Account.
 
-<strong>New Developers:</strong> If you're new to dApp development, it's recommended that you review our [Create a Smart Contract](/wax-developer/docs/dapp_hello_world) Quickstart.
+<strong>New Developers:</strong> If you're new to dApp development, it's recommended that you review our [Create a Smart Contract](/docs/dapp_hello_world) Quickstart.
 {: .label .label-yellow }
 
 
