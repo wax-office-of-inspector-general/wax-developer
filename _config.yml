@@ -23,8 +23,8 @@ email: your-email@mail.com
 layout: default
   The hub for blockchain development tutorials, quickstart guides, API documentation, and more.
   Everything you need to learn blockchain programming, blockchain dApp development on WAX, or duplicate an EOS dApp.
-baseurl: "/wax-developer" # the subpath of your site, e.g. /blog
-url: "https://wax-office-of-inspector-general.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "http://developer.wax.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # socials
 twitter_username: WAX_io
