@@ -1,6 +1,15 @@
-$link-color: $blue-100;
-$btn-primary-color: $blue-100;
+$link-color: #1AA2C0;
+$btn-primary-color: #1AA2C0;
 $sidebar-color: $white;
+$body-text-color: #222;
+$body-heading-color: #222;
+$nav-child-link-color: #333;
+
+/* improve font rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 /* change default side navigation colors */
 .nav-list .nav-list-item .nav-list-link:hover, 
