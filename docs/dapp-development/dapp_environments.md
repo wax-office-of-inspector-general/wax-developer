@@ -18,17 +18,17 @@ Below you'll find WAX versions, URLs, and development environment information.
 <tbody>
         <tr>
         <td><a href="https://hub.docker.com/u/waxteam" target="_blank">Docker Images</a></td>
-        <td>Use WAX Docker images to run a local node, use blockchain tools, and compile your smart contracts. Refer to [Docker Quickstart](/docs/docker_qstart) for more information.</td>
+        <td>Use WAX Docker images to run a local node, use blockchain tools, and compile your smart contracts. Refer to [Docker Quickstart](/docs/dapp-development/docker-setup/) for more information.</td>
 </tr>
     <tr><td><a href="https://github.com/worldwide-asset-exchange/waxjs" target="_blank">waxjs</a></td>
         <td>WaxJS Javascript API for integration with the WAX Cloud Wallet. Use this to easily sign in users and send transactions to the WAX Blockchain from your dApp. Refer to [WAX Cloud Wallet Quickstart](/docs/waa_waxjs_qstart) for more information.</td>
     </tr>
 <tr>
- <td><a href="https://github.com/worldwide-asset-exchange/wax-blockchain" target="_blank">wax-blockchain</a></td><td>WAX Blockchain source files. Refer to [WAX Blockchain Setup](/docs/blockchain_setup) to get started.</td> 
+ <td><a href="https://github.com/worldwide-asset-exchange/wax-blockchain" target="_blank">wax-blockchain</a></td><td>WAX Blockchain source files. Refer to [WAX Blockchain Setup](/docs/dapp-development/wax-blockchain-setup/) to get started.</td> 
     </tr>
     <tr>
         <td><a href="https://github.com/worldwide-asset-exchange/wax-cdt" target="_blank">wax-cdt</a></td>
-        <td>WAX Contract Development Toolkit. Refer to [WAX Contract Development Toolkit (WAX-CDT)](/docs/cdt) to get started.</td>
+        <td>WAX Contract Development Toolkit. Refer to [WAX Contract Development Toolkit (WAX-CDT)](/docs/dapp-development/wax-cdt/) to get started.</td>
 </tr>
 </tbody>
 </table>
@@ -130,7 +130,7 @@ Below you'll find WAX versions, URLs, and development environment information.
 
 ## WAX Local Testnet
 
-When you [Set Up a Local dApp Environment](/docs/local_dapp_dev), you can make calls to your local API using the following URL.
+When you [Set Up a Local dApp Environment](/docs/dapp-development/), you can make calls to your local API using the following URL.
 
 <table>
 <thead>
@@ -158,7 +158,7 @@ You can write WAX smart contracts using the C++ programming language. No custom 
 * [WAX-CDT API](/docs/api-reference/cdt_api)
 * [Smart Contract Quickstart](/docs/dapp-development/smart-contract-quickstart)
 
-<!--The [WAX Contract Development Toolkit (WAX-CDT)](/docs/cdt) includes everything you need to create and compile all of your smart contracts.-->
+<!--The [WAX Contract Development Toolkit (WAX-CDT)](/docs/dapp-development/wax-cdt/) includes everything you need to create and compile all of your smart contracts.-->
 
 ## Development Tools
 

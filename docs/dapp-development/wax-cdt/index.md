@@ -12,7 +12,7 @@ WAX-CDT tools are included in the **waxteam/dev** Docker image, and we also prov
 
 ```shell run -it --name waxcdt -v /var/share/wax:/wax waxteam/cdt bash```
 
-Refer to our [Docker Quickstart](/docs/docker_qstart) for more information.
+Refer to our [Docker Quickstart](/docs/dapp-development/docker-setup/) for more information.
 
 If you'd like to access our sample contracts and scripts from your local drive or have a need to install WAX-CDT instead of using Docker, you can use this guide to download and optionally build the WAX-CDT source code.
 
@@ -20,7 +20,7 @@ If you'd like to access our sample contracts and scripts from your local drive o
 
 ## What's Included
 
-- A [C/C++ API library](/docs/cdt_api) to communicate with the WAX Blockchain
+- A [C/C++ API library](/docs/api-reference/cdt_api) to communicate with the WAX Blockchain
 - Sample smart contracts to jumpstart your dApp development
 - Tools to create new smart contract templates 
 - CMake scripts and tools to build optimized, high-performance WASM files
@@ -36,7 +36,7 @@ If you'd like to access our sample contracts and scripts from your local drive o
 - <a href="https://clang.llvm.org/" target="_blank">Clang</a> based tools , including
 
 
-compile your smart contracts and create smart contract templates. Refer to [WAX-CDT Options](/docs/cdt_options) for a list of tools and parameters.
+compile your smart contracts and create smart contract templates. Refer to [WAX-CDT Options](/docs/tools/cdt_options) for a list of tools and parameters.
 
 WAX-CDT includes various **eosio** commands, built around the <a href="https://clang.llvm.org/" target="_blank">Clang</a> front-end and tooling infrastructure. This collection includes various tools to :
 
@@ -46,7 +46,7 @@ WAX-CDT includes various **eosio** commands, built around the <a href="https://c
 
 ## How it Works
 
-When you're ready to deploy your smart contract to your local development environment or the WAX mainnet, you can use the <a href="https://github.com/worldwide-asset-exchange/wax-cdt" target="_blank">WAX Contract Development Toolkit (WAX-CDT)</a> to convert your contract to a WebAssembly (WASM) file. You can also use WAX-CDT to create an Application Binary Interface (ABI) file that includes [Ricardian Contracts](/docs/ricardian_contract) and [Ricardian Clauses](/docs/ricardian_clause).
+When you're ready to deploy your smart contract to your local development environment or the WAX mainnet, you can use the <a href="https://github.com/worldwide-asset-exchange/wax-cdt" target="_blank">WAX Contract Development Toolkit (WAX-CDT)</a> to convert your contract to a WebAssembly (WASM) file. You can also use WAX-CDT to create an Application Binary Interface (ABI) file that includes [Ricardian Contracts](/docs/tools/ricardian_contract) and [Ricardian Clauses](/docs/tools/ricardian_clause).
 
 - **WebAssembly (WASM) Files:** A WASM file is a compact, binary format of your C++ smart contract, optimized for speed and web performance. The WAX Blockchain uses this file to execute the actions defined in your smart contract. 
 

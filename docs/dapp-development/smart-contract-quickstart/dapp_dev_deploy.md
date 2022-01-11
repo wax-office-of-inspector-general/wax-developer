@@ -11,7 +11,7 @@ grand_parent: dApp Development
 - Compile your smart contract
 - Create a blockchain account for your smart contract.-->
 
-In this guide, you'll use **cleos** to deploy and test the wax smart contract you created and compiled in the [Create a Smart Contract](/docs/dapp_hello_world) tutorial. 
+In this guide, you'll use **cleos** to deploy and test the wax smart contract you created and compiled in the [Create a Smart Contract](/docs/dapp-development/wax-cdt/cdt_use.html#compile-hello-world) tutorial. 
 
 ## Before You Begin
 
