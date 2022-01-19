@@ -35,7 +35,9 @@ To use these examples, download and save [WaxJS](https://raw.githubusercontent.c
 **Simple Login**
 
 ```js
-const wax = new waxjs.WaxJS('https://wax.greymass.com', null, null, false); 
+const wax = new waxjs.WaxJS({
+    rpcEndpoint: 'https://wax.greymass.com'
+});
 
 autoLogin(); 
 
@@ -43,14 +45,14 @@ autoLogin();
 async function autoLogin() { 
     var isAutoLoginAvailable = await wax.isAutoLoginAvailable(); 
     if (isAutoLoginAvailable) { 
-    login(); 
+        login(); 
     } 
 } 
 
 //normal login. Triggers a popup for non-whitelisted dapps
 async function login() { 
     try { 
-    const userAccount = await wax.login();  
+        const userAccount = await wax.login();  
     } catch(e) { 
 
     } 
@@ -87,7 +89,9 @@ Below is a basic example of WaxJS functionality. To use this demo, click WAX Log
 
 
 <script>
-    const wax = new waxjs.WaxJS('https://wax.greymass.com', null, null, false);
+    const wax = new waxjs.WaxJS({
+        rpcEndpoint: 'https://wax.greymass.com'
+    });
 
     //automatically check for credentials
     autoLogin();
