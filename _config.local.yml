@@ -22,9 +22,9 @@ title: WAX Developer
 email: your-email@mail.com
 layout: default
   The hub for blockchain development tutorials, quickstart guides, API documentation, and more.
-  Everything you need to learn blockchain programming, blockchain dApp development on WAX, or duplicate an EOS dApp.
+  Everything you need to learn blockchain programming, blockchain dApp development on WAX.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://wax-office-of-inspector-general.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://developer.wax.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # socials
 twitter_username: WAX_io
@@ -73,7 +73,7 @@ back_to_top_text: "Back to top"
 # Footer "Edit this page on GitHub" link text
 gh_edit_link: true # show or hide edit this page link
 gh_edit_link_text: "Edit this page on GitHub"
-gh_edit_repository: "https://github.com/wax-office-of-inspector-general" # the github URL for your repo
+gh_edit_repository: "https://github.com/wax-office-of-inspector-general/wax-developer" # the github URL for your repo
 gh_edit_branch: "main" # the branch that your docs is served from
 # gh_edit_source: docs # the source that your files originate from
 gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
@@ -117,7 +117,7 @@ theme: "just-the-docs"
 # remote_theme: pmarsceill/just-the-docs
 color_scheme: wax
 
-footer_content: "- Footer Content"
+footer_content: "Help us make these docs great! See something that's wrong or unclear? Submit a pull request and get involved."
 
 
 #plugins:
