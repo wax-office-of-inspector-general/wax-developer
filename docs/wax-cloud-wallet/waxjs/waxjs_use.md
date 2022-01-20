@@ -36,16 +36,25 @@ To use **WaxJS**:
     To let WaxJS to assign the appropriate user values, you can simply pass an RPC URL:
 
     ```js
-    const wax = new waxjs.WaxJS('https://wax.greymass.com', null, null, false);
+    const wax = new waxjs.WaxJS({
+      rpcEndpoint: 'https://wax.greymass.com'
+    });
     ```
 
-     If you use the WAX Cloud Wallet OA service to sign a user in, you can use the profile endpoint with the `identity_wcw` scope to get a user's WAX Blockchain Account name and public keys. Once you have this information, you can pass it to the WaxJS constructor.
+    **Notice:** The constructor for WaxJS changed with version 1.0. If you are updating from a previous version you will need to change the constructor.
+    {: .label .label-yellow }
+
+    The library can also be instantiated with the user account and public keys. If you have this information, you can pass it to the WaxJS constructor.
 
     ```js
-    const wax = new waxjs.WaxJS('https://wax.greymass.com', '3m1q4.wam',["EOS6rjGKGYPBmVGsDDFAbM6UT5wQ9szB9m2fEcqHFMMcPge983xz9","EOS7wTCoctybwrQWuE2tWYGwdLEGRXE9rrzALeBLUhWfbHXysFr9W"], false);
+    const wax = new waxjs.WaxJS({
+      rpcEndpoint: 'https://wax.greymass.com',
+      userAccount: '3m1q4.wam',
+      pubKeys: ['EOS6rjGKGYPBmVGsDDFAbM6UT5wQ9szB9m2fEcqHFMMcPge983xz9','EOS7wTCoctybwrQWuE2tWYGwdLEGRXE9rrzALeBLUhWfbHXysFr9W']
+    });
     ```
     
-    **Tip:** If you pass these parameters, you won't need to call the autoLogin method.
+    **Tip:** If you pass these additional parameters, you won't need to call the autoLogin method.
     {: .label .label-yellow }
 
 
