@@ -52,11 +52,14 @@ Transactions communicate using two models: inline and deferred.
 
 - **Inline:** An inline transaction is a synchronous-like communication model that executes in the same transaction scope. These actions are guaranteed to run in-order and at the same time the original action is called. If the transaction fails, you can revert changes in the previous actions.  
 
-    For an example of an inline transaction, refer to EOSIO's <a href="https://developers.eos.io/eosio-home/dev-docs/inline-actions" target="_blank">Adding Inline Actions</a>.
+    For an example of an inline transaction, refer to EOSIO's <a href="https://developers.eos.io/welcome/v2.0/smart-contract-guides/adding-inline-actions" target="_blank">Adding Inline Actions</a>.
 
 - **Deferred:** A deferred action is an action that's scheduled to run in the future, similar to an asynchronous call. These transactions are not guaranteed to run (there is a potential of it being dropped by the node). The original (calling) action is applied to the WAX Blockchain when the action runs, and can not be reverted if the deferred transaction fails. 
     
-    For an example of a deferred transaction, refer to EOSIO's <a href="https://developers.eos.io/eosio-home/dev-docs/27-deferred-transactions" target="_blank">Deferred Transactions</a>.
+    For an example of a deferred transaction, refer to EOSIO's <a href="https://developers.eos.io/manuals/eosio.cdt/v1.7/best-practices/deferred_transactions" target="_blank">Deferred Transactions</a>.
+
+**Warning:** As of EOSIO 2.0 RC1 deferred transactions are deprecated.
+{: .label .label-yellow}
 
 ### Permissions
 
@@ -64,7 +67,7 @@ A smart contract and a WAX Blockchain Account communicate using the actions defi
 
 Permissions can also enable your smart contracts to handle notifications and make action calls to other smart contracts (using the `eosio.code` permission).
 
- Refer to EOSIO's <a href="https://developers.eos.io/eosio-nodeos/dev-docs/accounts-and-permissions" target="_blank">Accounts and Permissions</a> for more information.
+ Refer to EOSIO's <a href="https://developers.eos.io/welcome/v2.0/protocol-guides/accounts_and_permissions" target="_blank">Accounts and Permissions</a> for more information.
 
 ### Persist Data
 
@@ -76,7 +79,7 @@ To persist data between the actions of one or more of your smart contracts, you'
 {: .label .label-yellow }
 
 
- Refer to EOSIO's <a href="https://developers.eos.io/eosio-home/dev-docs/data-persistence" target="_blank">Data Persistence</a> for more information.
+ Refer to EOSIO's <a href="https://developers.eos.io/welcome/v2.0/smart-contract-guides/data-persistence/" target="_blank">Data Persistence</a> for more information.
 
 ### WAX Dispatchers
 

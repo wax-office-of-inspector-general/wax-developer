@@ -61,7 +61,7 @@ Without password imported keys will not be retrievable.
 "PW5KRXKVx25yjL3FvxxY9YxYxxYY9Yxx99yyXTRH8DjppKpD9tKtVz"
 ```
 
-<strong>Tip:</strong> For a complete list of cleos wallet subcommands and parameters, refer to EOSIO's <a href="https://developers.eos.io/eosio-cleos/reference#cleos-wallet" target="_blank">Cleos Reference Guide</a>.
+<strong>Tip:</strong> For a complete list of cleos wallet subcommands and parameters, refer to EOSIO's <a href="https://developers.eos.io/manuals/eos/v2.0/cleos/command-reference/wallet/index" target="_blank">Cleos Reference Guide</a>.
 {: .label .label-yellow }
 
 ## Open and Unlock Your Wallet
