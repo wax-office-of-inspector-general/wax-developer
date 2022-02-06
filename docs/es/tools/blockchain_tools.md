@@ -5,7 +5,7 @@ nav_order: 99
 parent: Tools & Topics
 ---
 
-To communicate with the WAX Blockchain, create a local development environment, and locally deploy your smart contracts, you'll need to use three key tools included in the [WAX Blockchain Setup](//docs/es/dapp-development/wax-blockchain-setup/):
+To communicate with the WAX Blockchain, create a local development environment, and locally deploy your smart contracts, you'll need to use three key tools included in the [WAX Blockchain Setup](//es/dapp-development/wax-blockchain-setup/):
 
 ## keosd
 
@@ -17,7 +17,7 @@ Refer to EOSIO's <a href="https://developers.eos.io/manuals/eos/v2.0/keosd/index
 
 This is the core WAX node daemon, used to run a local node on your server. You can initialize **nodeos** with various plug-ins and options.
 
-Nodeos also allows you to communicate with the [WAX RPC API](/docs/es/api-reference/rpc_api).
+Nodeos also allows you to communicate with the [WAX RPC API](/es/api-reference/rpc_api).
 
 Refer to EOSIO's <a href="https://developers.eos.io/manuals/eos/v2.0/nodeos/index" target="_blank">Overview - nodeos</a> for more information.
 

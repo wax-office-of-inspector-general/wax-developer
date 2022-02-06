@@ -14,7 +14,7 @@ In this example, we'll write a smart contract that creates a WAX NFT Sticker usi
 
 ## Get Set Up
 
-1. Use our [Docker Quickstart](/docs/es/dapp-development/docker-setup/) to start a new interactive bash session. From the command line, navigate to the **wax** directory (or the local directory that you shared with your Docker container).
+1. Use our [Docker Quickstart](/es/dapp-development/docker-setup/) to start a new interactive bash session. From the command line, navigate to the **wax** directory (or the local directory that you shared with your Docker container).
 
     ```shell
     cd wax

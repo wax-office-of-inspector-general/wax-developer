@@ -10,7 +10,7 @@ The **WaxJS** library exposes four primary components:
 * **wax.userAccount.** WAX Account user name, returned when you make a call to `wax.login()`.
 * **wax.pubKeys.** A user's active and owner keys. Available once a user's logged in or if you pass the keys in the WaxJS constructor.
 * **wax.api.** Use this to execute standard eosjs transactions.
-* **wax.rpc.** Use this to make API calls to the WAX Blockchain. Refer to [WAX RPC API](/docs/es/api-reference/) for more information.
+* **wax.rpc.** Use this to make API calls to the WAX Blockchain. Refer to [WAX RPC API](/es/api-reference/) for more information.
 
 To use **WaxJS**: 
 

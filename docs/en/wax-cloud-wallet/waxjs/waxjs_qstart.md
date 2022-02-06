@@ -15,13 +15,13 @@ In this guide, you'll learn how to use **WaxJS** to connect to the WAX Cloud Wal
 * Get blockchain account names, public keys, and permissions
 * Easily execute smart contract transactions from your client
 
-**Tip:** In the next few sections, we'll go over how everything works. If you'd like to jump right to the code and run our live WaxJS example, refer to [WaxJS Demo](/docs/en/wax-cloud-wallet/waxjs/waxjs_demo).
+**Tip:** In the next few sections, we'll go over how everything works. If you'd like to jump right to the code and run our live WaxJS example, refer to [WaxJS Demo](/en/wax-cloud-wallet/waxjs/waxjs_demo).
 {: .label .label-yellow }
 
 ## Before You Begin
 
 * Create a [WAX Cloud Wallet Account](http://all-access.wax.io). 
 * Be familiar with the [ESIO/eosjs](https://github.com/EOSIO/eosjs) Javascript API. Refer to the [eosjs](https://eosio.github.io/eosjs/latest) docs for more information.
-* For tips on building and deploying smart contracts on the WAX Blockchain, refer to our [dApp Development](/docs/en/dapp-development/) section. 
+* For tips on building and deploying smart contracts on the WAX Blockchain, refer to our [dApp Development](/en/dapp-development/) section. 
 
 

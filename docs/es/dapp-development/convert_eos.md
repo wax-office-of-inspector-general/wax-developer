@@ -23,22 +23,22 @@ WAX is fully compatible with EOS smart contracts and offers free blockchain acco
 
     <a href="https://all-access.wax.io" target="_blank">http://<span></span>all-access.wax.io</a>
 
-    A WAX Cloud Wallet Account automatically creates a WAX Blockchain account for your customers and allows you to integrate WaxJS into your dApps. Refer to [WAX Cloud Wallet Quickstart](/docs/es/waa_waxjs_qstart) for more information.
+    A WAX Cloud Wallet Account automatically creates a WAX Blockchain account for your customers and allows you to integrate WaxJS into your dApps. Refer to [WAX Cloud Wallet Quickstart](/es/waa_waxjs_qstart) for more information.
 
 ## Development Environment
 
 If you'd like to test your smart contracts on WAX, you can:
 
-* Complete our [Docker Quickstart](/docs/es/dapp-development/docker-setup) (recommended) or use the [WAX Blockchain Setup](/docs/es/dapp-development/wax-blockchain-setup) to build from source.
-* Build your contracts using the [WAX Contract Development Toolkit (WAX-CDT)](/docs/es/dapp-development/wax-cdt).
-* [Set Up a Local dApp Environment](/docs/es/dapp-development/setup-local-dapp-environment).
-* Deploy to the [WAX Testnet](/docs/es/dapp-development/testnet-quickstart).
+* Complete our [Docker Quickstart](/es/dapp-development/docker-setup) (recommended) or use the [WAX Blockchain Setup](/es/dapp-development/wax-blockchain-setup) to build from source.
+* Build your contracts using the [WAX Contract Development Toolkit (WAX-CDT)](/es/dapp-development/wax-cdt).
+* [Set Up a Local dApp Environment](/es/dapp-development/setup-local-dapp-environment).
+* Deploy to the [WAX Testnet](/es/dapp-development/testnet-quickstart).
 
 <strong>Warning:</strong> Setting up WAX source code in your local development environment will overwrite a current EOS installation. If you'd like to keep your EOS environment, it's recommended that you use Docker, a virtual machine, or a separate development environment.
 {: .label .label-yellow }
 
 ## Deploy Your Smart Contracts
 
-You must compile your smart contracts using the [WAX Contract Development Toolkit (WAX-CDT)](/docs/es/dapp-development/wax-cdt).
+You must compile your smart contracts using the [WAX Contract Development Toolkit (WAX-CDT)](/es/dapp-development/wax-cdt).
 
-If you don't want to install the WAX source code, you can use our [Docker Quickstart](/docs/es/dapp-development/docker-setup) or custom scripts to deploy your smart contracts. Refer to [Deploy Your dApp on WAX](/docs/es/dapp-development/deploy-dapp-on-wax) for more information.
+If you don't want to install the WAX source code, you can use our [Docker Quickstart](/es/dapp-development/docker-setup) or custom scripts to deploy your smart contracts. Refer to [Deploy Your dApp on WAX](/es/dapp-development/deploy-dapp-on-wax) for more information.

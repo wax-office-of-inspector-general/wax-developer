@@ -24,7 +24,7 @@ C++ header files contain global declarations. Because WAX uses a fork of EOSIO, 
   #include <eosio/eosio.hpp>
 ```
 
-This gives your smart contract access to WAX's C/C++ API, allowing you to define actions and structures that enable your smart contract to communicate with the WAX Blockchain. Refer to [WAX-CDT API](/docs/es/api-reference/cdt_api) for more information.
+This gives your smart contract access to WAX's C/C++ API, allowing you to define actions and structures that enable your smart contract to communicate with the WAX Blockchain. Refer to [WAX-CDT API](/es/api-reference/cdt_api) for more information.
 
 ### Actions
 

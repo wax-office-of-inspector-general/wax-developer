@@ -8,7 +8,7 @@ lang-ref: Deploy Your dApp on WAX
 lang: es
 ---
 
-To deploy your dApp on WAX, you'll need to use [WAX-CDT](/docs/es/dapp-development/wax-cdt/) and [Blockchain Tools](/docs/es/tools/blockchain_tools) to:
+To deploy your dApp on WAX, you'll need to use [WAX-CDT](/es/dapp-development/wax-cdt/) and [Blockchain Tools](/es/tools/blockchain_tools) to:
 
 * Compile your smart contracts
 * Create WAX Blockchain Accounts for each of your contracts
@@ -47,16 +47,16 @@ If you prefer, you can deploy your smart contracts from the command line using W
 
 ### Advantages
 
-* Allows more control over the build process and deployment parameters. Refer to [WAX-CDT Options](/docs/es/tools/cdt_options) for more information.
-* If you used **eosio-init** to [Create a Smart Contract](/docs/es/dapp-development/wax-cdt/cdt_use.html#compile-hello-world) and deploy to your local blockchain, this might be a good option for you.
+* Allows more control over the build process and deployment parameters. Refer to [WAX-CDT Options](/es/tools/cdt_options) for more information.
+* If you used **eosio-init** to [Create a Smart Contract](/es/dapp-development/wax-cdt/cdt_use.html#compile-hello-world) and deploy to your local blockchain, this might be a good option for you.
 * Compatible for Windows users. 
 
 ### What You'll Need
 
 To use this option, you'll need to:
 
-* Complete our [Docker Quickstart](/docs/es/dapp-development/docker-setup/) (recommended) or use the [WAX Blockchain Setup](/docs/es/dapp-development/wax-blockchain-setup/) to build from source.
-* Use the [WAX Contract Development Toolkit (WAX-CDT)](/docs/es/dapp-development/wax-cdt/) to compile your smart contracts.
+* Complete our [Docker Quickstart](/es/dapp-development/docker-setup/) (recommended) or use the [WAX Blockchain Setup](/es/dapp-development/wax-blockchain-setup/) to build from source.
+* Use the [WAX Contract Development Toolkit (WAX-CDT)](/es/dapp-development/wax-cdt/) to compile your smart contracts.
 
 ## Before You Begin
 

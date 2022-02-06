@@ -5,7 +5,7 @@ nav_order: 112
 parent: Tools & Topics
 ---
 
-Similar to a [Ricardian Contract](/docs/es/tools/ricardian_contract), a Ricardian clause is a digital document that specifies the terms of your entire smart contract - not just per action. 
+Similar to a [Ricardian Contract](/es/tools/ricardian_contract), a Ricardian clause is a digital document that specifies the terms of your entire smart contract - not just per action. 
 
 To associate a Ricardian clause with your smart contract, you'll need to create a markdown file. 
 
@@ -20,7 +20,7 @@ If you use **eosio-init** to create a smart contract template, a folder is autom
 
 The CMake scripts will automatically include the files listed in the **ricardian** directory.
 
-Refer to [Create a Smart Contract](/docs/es/dapp-development/smart-contract-quickstart/) for more information.
+Refer to [Create a Smart Contract](/es/dapp-development/smart-contract-quickstart/) for more information.
 
 ## Use eosio-cpp
 

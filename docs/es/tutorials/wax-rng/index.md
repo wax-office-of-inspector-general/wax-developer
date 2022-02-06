@@ -25,6 +25,6 @@ If you'd like to use our Docker images to build the <a href="https://github.com/
 
 To build the WAX RNG repo and run unit tests from source, you'll need to:
 
-1. Install the [Blockchain Setup](/docs/es/dapp-development/wax-blockchain-setup/)
-2. Install the [WAX Contract Development Toolkit (WAX-CDT)](/docs/es/dapp-development/wax-cdt/)
+1. Install the [Blockchain Setup](/es/dapp-development/wax-blockchain-setup/)
+2. Install the [WAX Contract Development Toolkit (WAX-CDT)](/es/dapp-development/wax-cdt/)
 

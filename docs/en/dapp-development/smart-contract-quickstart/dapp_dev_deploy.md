@@ -13,7 +13,7 @@ lang: en
 - Compile your smart contract
 - Create a blockchain account for your smart contract.-->
 
-In this guide, you'll use **cleos** to deploy and test the wax smart contract you created and compiled in the [Create a Smart Contract](/docs/en/dapp-development/wax-cdt/cdt_use.html#compile-hello-world) tutorial. 
+In this guide, you'll use **cleos** to deploy and test the wax smart contract you created and compiled in the [Create a Smart Contract](/en/dapp-development/wax-cdt/cdt_use.html#compile-hello-world) tutorial. 
 
 ## Before You Begin
 
@@ -36,7 +36,7 @@ In this guide, you'll use **cleos** to deploy and test the wax smart contract yo
     ```shell
     cleos wallet unlock --password PW5KRXKVx25yjL3FvxxY9YxYxxYY9Yxx99yyXTRH8DjppKpD9tKtVz
     ```
-- You must create a WAX Account for your smart contract. Refer to [Create Accounts](/docs/en/dapp_account) if you haven't completed this step.
+- You must create a WAX Account for your smart contract. Refer to [Create Accounts](/en/dapp_account) if you haven't completed this step.
 
 ## Deploy Your Smart Contract
 

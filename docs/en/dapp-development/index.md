@@ -12,23 +12,23 @@ The Worldwide Asset eXchange™ (WAX) is a purpose-built blockchain and protocol
 
 You can use the following guides to set up your WAX dApp development environment:
 
-  * Complete our [Docker Quickstart](/docs/en/dapp-development/docker-setup)
-  * Download WAX Blockchain source code and samples using the [WAX Blockchain Setup](/docs/en/dapp-development/wax-blockchain-setup) guide
-  * Learn about the [WAX Contract Development Toolkit (WAX-CDT)](/docs/en/dapp-development/wax-cdt)
-  * [Set Up a Local dApp Environment](/docs/en/dapp-development/setup-local-dapp-environment)
+  * Complete our [Docker Quickstart](/en/dapp-development/docker-setup)
+  * Download WAX Blockchain source code and samples using the [WAX Blockchain Setup](/en/dapp-development/wax-blockchain-setup) guide
+  * Learn about the [WAX Contract Development Toolkit (WAX-CDT)](/en/dapp-development/wax-cdt)
+  * [Set Up a Local dApp Environment](/en/dapp-development/setup-local-dapp-environment)
 
 <span class="anchor" id="buildDapp"></span>
 <h2>Build a dApp</h2>
 
 Once you've set up your development environment, these tutorials can help you launch the next great dApp on WAX:
 
-  * [Smart Contract Quickstart](/docs/en/dapp-development/smart-contract-quickstart)
-  * [Deploy Your dApp on WAX](/docs/en/dapp-development/deploy-dapp-on-wax)
+  * [Smart Contract Quickstart](/en/dapp-development/smart-contract-quickstart)
+  * [Deploy Your dApp on WAX](/en/dapp-development/deploy-dapp-on-wax)
 
 <span class="anchor" id="guides"></span>
 <h2>Guides</h2>
 
 Learn how to make API requests to your local blockchain and the WAX mainnet, and get an overview of the WAX-CDT C++ API used to build your smart contracts.
 
-  * [WAX RPC API](/docs/en/api-reference)
-  * [WAX-CDT API](/docs/en/api-reference/cdt_api)
+  * [WAX RPC API](/en/api-reference)
+  * [WAX-CDT API](/en/api-reference/cdt_api)

@@ -8,7 +8,7 @@ lang-ref: Deploy Your WAX RNG Contract
 lang: en
 ---
 
-In this example, we'll use WAX-CDT tools to deploy your Lucky Number Generator smart contract. Refer to [WAX-CDT Deploy](/docs/en/deploy_source) for more information.
+In this example, we'll use WAX-CDT tools to deploy your Lucky Number Generator smart contract. Refer to [WAX-CDT Deploy](/en/deploy_source) for more information.
 
 1. From Docker, open and unlock your wallet.
 

@@ -20,7 +20,7 @@ The console prints:
 bin  boot  dev  etc  home  lib  lib32  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var  wax
 ```
 
-The list above includes the **wax** directory that you shared when you started your **waxdev** container. You can `cd` into this directory when you're ready to [Create a Smart Contract](/docs/en/dapp-development/smart-contract-quickstart/dapp_hello_world).
+The list above includes the **wax** directory that you shared when you started your **waxdev** container. You can `cd` into this directory when you're ready to [Create a Smart Contract](/en/dapp-development/smart-contract-quickstart/dapp_hello_world).
 
 <strong>Tip:</strong> Sharing your local host's folder with your waxdev Docker container allows you to create directories that exist on both your host and the docker container. This makes it easy to build and deploy your smart contracts using Docker.
 {: .label .label-yellow }

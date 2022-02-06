@@ -14,7 +14,7 @@ From the command line, enter the following:
 cleos -u https://chain.wax.io get info
 ```
 
-If the [Blockchain Tools](/docs/es/tools/blockchain_tools) installed successfully, this endpoint will return various details about the WAX Blockchain, including the `chain_id`, block producer, and most recent block height.
+If the [Blockchain Tools](/es/tools/blockchain_tools) installed successfully, this endpoint will return various details about the WAX Blockchain, including the `chain_id`, block producer, and most recent block height.
 
 
 ```json

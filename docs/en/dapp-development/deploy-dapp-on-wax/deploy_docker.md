@@ -13,7 +13,7 @@ In this guide, you'll learn how to customize the **hello-world** build scripts t
 Before you begin:
 
 * Make sure Docker is configured to run without sudo. 
-* Download the <a href="https://github.com/worldwide-asset-exchange/wax-blockchain" target="_blank">WAX Blockchain Source Code</a>. Refer to the [WAX Blockchain Setup](/docs/en/dapp-development/wax-blockchain-setup/) for more information.
+* Download the <a href="https://github.com/worldwide-asset-exchange/wax-blockchain" target="_blank">WAX Blockchain Source Code</a>. Refer to the [WAX Blockchain Setup](/en/dapp-development/wax-blockchain-setup/) for more information.
 * Have your WAX Blockchain Account public/private keys available.
 * Make sure you have enough WAX staked in your account to allocate resources. 
 

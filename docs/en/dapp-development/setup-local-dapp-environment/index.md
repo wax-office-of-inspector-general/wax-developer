@@ -8,7 +8,7 @@ lang-ref: Set Up a Local dApp Environment
 lang: en
 ---
 
-Our [Docker Development Image](/docs/en/dapp-development/docker-setup/) includes everything you need to set up a local development environment. This reduces your development costs and offers a fully-functional sandbox for both new and experienced dApp developers. The WAX local testnet allows you to easily:
+Our [Docker Development Image](/en/dapp-development/docker-setup/) includes everything you need to set up a local development environment. This reduces your development costs and offers a fully-functional sandbox for both new and experienced dApp developers. The WAX local testnet allows you to easily:
 
 - Run a local development node on your server
 - Create free, local accounts to associate with your contract and simulate customers
@@ -18,9 +18,9 @@ Our [Docker Development Image](/docs/en/dapp-development/docker-setup/) includes
 
 ## How it Works
 
-To set up your local development environment, you'll need to use three key [Blockchain Tools](/docs/en/tools/blockchain_tools): keosd, nodeos, and cleos.
+To set up your local development environment, you'll need to use three key [Blockchain Tools](/en/tools/blockchain_tools): keosd, nodeos, and cleos.
 
-<!--To get started, you'll need to use three key tools included in the [WAX Blockchain Setup](/docs/en/dapp-development/wax-blockchain-setup/):
+<!--To get started, you'll need to use three key tools included in the [WAX Blockchain Setup](/en/dapp-development/wax-blockchain-setup/):
 
 - **nodeos:** This is the core WAX node daemon, used to run a local node on your server. **nodeos** can be configured with various plug-ins and options.
 - **keosd:** Used to store private keys. This program is automatically started when you initiate **cleos** commands and can start several instances on your local server.
@@ -38,5 +38,5 @@ Using a built-in development key and system account, you can also:
 
 Before you set up your local development environment:
 
-- You'll need to complete our [Docker Quickstart](/docs/en/dapp-development/docker-setup/) (recommended) or use the [WAX Blockchain Setup](/docs/en/dapp-development/wax-blockchain-setup/) to build from source.
+- You'll need to complete our [Docker Quickstart](/en/dapp-development/docker-setup/) (recommended) or use the [WAX Blockchain Setup](/en/dapp-development/wax-blockchain-setup/) to build from source.
 - Have a text document or note program ready. You'll need to use a wallet password and a public key to create accounts. 

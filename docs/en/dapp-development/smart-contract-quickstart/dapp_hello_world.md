@@ -47,7 +47,7 @@ To create your first WAX smart contract using **eosio-init**:
     - mycontracts/wax/ricardian 
     - mycontracts/wax/src 
 
-3. Optional. Add a [Ricardian Clause](/docs/en/tools/ricardian_clause). A  [Ricardian Contract](/docs/en/tools/ricardian_contract) is already included by default.
+3. Optional. Add a [Ricardian Clause](/en/tools/ricardian_clause). A  [Ricardian Contract](/en/tools/ricardian_contract) is already included by default.
 
 You should now have a smart contract template, including a sample smart contract (mycontracts/wax/src/wax.cpp). This contract includes the following action:
 
@@ -123,7 +123,7 @@ EOSIO_DISPATCH(wax, (greet))
 
 To deploy your smart contract, you'll need to create a `.wasm` and `.abi` file. You can do this using the WAX Contract Development Toolkit (WAX-CDT).
 
-1. Install [WAX-CDT](/docs/en/dapp-development/wax-cdt/) (if you haven't done so already).
+1. Install [WAX-CDT](/en/dapp-development/wax-cdt/) (if you haven't done so already).
 
 2. From the command line, navigate to the **mycontracts/wax** build folder.
 

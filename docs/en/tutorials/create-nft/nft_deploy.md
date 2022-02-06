@@ -8,7 +8,7 @@ lang-ref: Deploy Your NFT Smart Contract
 lang: en
 ---
 
-Next, we'll use WAX-CDT tools to deploy your NFT smart contract to the WAX mainnet. Refer to [WAX-CDT Deploy](/docs/en/dapp-development/deploy-dapp-on-wax/deploy_source) for more information.
+Next, we'll use WAX-CDT tools to deploy your NFT smart contract to the WAX mainnet. Refer to [WAX-CDT Deploy](/en/dapp-development/deploy-dapp-on-wax/deploy_source) for more information.
 
 1. From Docker, open and unlock your wallet.
 
