@@ -41,6 +41,11 @@ docs/
 
 Add an *index_ISO-639-1-CODE.md* file in *docs/* 
 
+Sample for Spanish translation:
+```
+docs/index_es.md
+```
+
 For each translated file add this parameters in heads:
 
 ```
