@@ -29,14 +29,32 @@ To add a translation to this documentation, you must add a folder for the conten
 ```
 docs/
   en/
-    file.md
+    index.md
     ...
   es/
-    file.md
+    index.md
     ...
   fr/
-    file.md
+    index.md
     ...
+```
+
+Add language reference in docs/_data/languages.yml
+
+Sample for Spanish translation:
+```
+es:
+  label: Español
+  icon: 🇪🇸
+```
+
+Add translations for general labels in docs/_data/translations.yml
+
+Sample for Spanish translation:
+```
+back_to_top_text: 
+  en: "Back to top"
+  es: "Volver arriba"
 ```
 
 Add an *index_ISO-639-1-CODE.md* file in *docs/* 
