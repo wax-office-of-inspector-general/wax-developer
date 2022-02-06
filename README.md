@@ -23,4 +23,27 @@ Learn how to make API requests to your local blockchain and the WAX mainnet, and
 * [WAX RPC API](https://developer.wax.io/docs/api-reference/rpc_api)
 * [dfuse](https://developer.wax.io/docs/api-reference/dfuse/)
 
+## How to add translated pages
+To add a translation to this documentation, you must add a folder for the content within *docs*. Please, use [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) codes.
 
+```
+docs/
+  en/
+    file.md
+    ...
+  es/
+    file.md
+    ...
+  fr/
+    file.md
+    ...
+```
+
+Add an *index_CODE.md* file in *docs/* 
+
+For each translated file add this parameters in heads:
+
+```
+lang-ref: {same as original *Title* parameter in default language (en)}
+lang: {ISO-639-1 code}
+```
