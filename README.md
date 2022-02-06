@@ -39,7 +39,7 @@ docs/
     ...
 ```
 
-Add language reference in docs/_data/languages.yml
+Add language reference in *docs/_data/languages.yml*
 
 Sample for Spanish translation:
 ```
@@ -48,7 +48,7 @@ es:
   icon: 🇪🇸
 ```
 
-Add translations for general labels in docs/_data/translations.yml
+Add translations for general labels in *docs/_data/translations.yml*
 
 Sample for Spanish translation:
 ```
