@@ -39,11 +39,20 @@ docs/
     ...
 ```
 
-Add an *index_CODE.md* file in *docs/* 
+Add an *index_ISO-639-1-CODE.md* file in *docs/* 
 
 For each translated file add this parameters in heads:
 
 ```
-lang-ref: {same as original *Title* parameter in default language (en)}
+lang-ref: {same as original Title parameter in default language (en)}
 lang: {ISO-639-1 code}
+```
+
+Sample for Spanish translation:
+```
+title: Bienvenido
+layout: home
+nav_order: 1
+lang-ref: Welcome
+lang: es
 ```
