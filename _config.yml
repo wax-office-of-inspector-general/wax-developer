@@ -32,7 +32,7 @@ data_dir: _data
 layouts_dir: _layouts
 includes_dir: _includes
 sass:
-    sass_dir: docs/_sass
+    sass_dir: _sass
     style: compressed
   
 # socials
@@ -94,7 +94,7 @@ heading_anchors: true
 # Build and Theme settings
 # theme: "just-the-docs"
 remote_theme: pmarsceill/just-the-docs
-color_scheme: wax
+color_scheme: dark
 
 footer_content: true
 
