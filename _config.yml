@@ -31,8 +31,9 @@ source: docs
 data_dir: docs/_data
 layouts_dir: docs/_layouts
 includes_dir: docs/_includes
-# sass:
-sass_dir: docs/_sass
+sass:
+  load_paths:
+    sass_dir: docs/_sass
   
 # socials
 twitter_username: WAX_io
