@@ -33,7 +33,7 @@ layouts_dir: docs/_layouts
 includes_dir: docs/_includes
 sass:
   load_paths:
-    - _sass
+    - docs/_sass
   
 # socials
 twitter_username: WAX_io
