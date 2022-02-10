@@ -25,7 +25,7 @@ description: "The hub for blockchain development tutorials, quickstart guides, A
 # baseurl: "" # the subpath of your site, e.g. /blog
 # url: "https://developer.wax.io" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "wax-developer"
-url: "https://3dkrender.github.io/wax-developer"
+url: "https://3dkrender.github.io"
 
 # source: docs
 data_dir: _data
@@ -95,7 +95,7 @@ heading_anchors: true
 # Build and Theme settings
 # theme: "just-the-docs"
 remote_theme: pmarsceill/just-the-docs
-# color_scheme: dark
+color_scheme: wax
 
 footer_content: true
 
