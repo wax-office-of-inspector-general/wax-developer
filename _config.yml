@@ -26,11 +26,11 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://developer.wax.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 source: docs
-data_dir: _data
-layouts_dir: _layouts
-includes_dir: _includes
-# sass:
-#     sass_dir: _sass
+data_dir: docs/_data
+layouts_dir: docs/_layouts
+includes_dir: docs/_includes
+sass:
+    sass_dir: docs/_sass
   
 # socials
 twitter_username: WAX_io
