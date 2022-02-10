@@ -14,8 +14,7 @@
     The case-sensitivity of string sorting is determined by `site.nav_sort`.
   {%- endcomment -%}
   
-  {%- assign string_ordered_pages = titled_pages
-        | where_exp:"item", "item.nav_order == nil and item.lang == page.lang" -%}
+  {%- assign string_ordered_pages = titled_pages | where_exp:"item", "item.nav_order == nil and item.lang == page.lang" -%}
   {%- assign nav_ordered_pages = titled_pages
         | where_exp:"item", "item.nav_order != nil and item.lang == page.lang"  -%}
 
