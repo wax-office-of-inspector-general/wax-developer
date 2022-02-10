@@ -15,9 +15,9 @@
   {%- endcomment -%}
   
   {%- assign string_ordered_pages = titled_pages
-        | where_exp:"item", "item.nav_order == nil and item.lang == post.lang" -%}
+        | where_exp:"item", "item.nav_order == nil" -%}
   {%- assign nav_ordered_pages = titled_pages
-        | where_exp:"item", "item.nav_order != nil and item.lang == post.lang"  -%}
+        | where_exp:"item", "item.nav_order != nil"  -%}
 
   {%- comment -%}
     The nav_ordered_pages have to be added to number_ordered_pages and
