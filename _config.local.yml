@@ -31,7 +31,7 @@ layouts_dir: _layouts
 includes_dir: _includes
 sass:
     sass_dir: _sass
-    style: compressed
+    # style: compressed
 
 # socials
 twitter_username: WAX_io
