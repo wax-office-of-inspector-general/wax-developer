@@ -22,12 +22,9 @@ title: WAX Developer
 email: your-email@mail.com
 layout: default
 description: "The hub for blockchain development tutorials, quickstart guides, API documentation, and more. Everything you need to learn blockchain programming, blockchain dApp development on WAX."
-# baseurl: "" # the subpath of your site, e.g. /blog
-# url: "https://developer.wax.io" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: ""
-url: "http://docs.3dkrender.com"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://developer.wax.io" # the base hostname & protocol for your site, e.g. http://example.com
 
-# source: docs
 data_dir: _data
 layouts_dir: _layouts
 includes_dir: _includes
