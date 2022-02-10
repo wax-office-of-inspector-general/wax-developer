@@ -28,9 +28,9 @@ baseurl: ""
 url: "https://3dkrender.github.io/wax-developer"
 
 source: docs
-data_dir: docs/_data
-layouts_dir: docs/_layouts
-includes_dir: docs/_includes
+data_dir: _data
+layouts_dir: _layouts
+includes_dir: _includes
 # sass:
 #     sass_dir: docs/_sass
 #     style: compressed
