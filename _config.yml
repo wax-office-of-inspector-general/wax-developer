@@ -24,10 +24,10 @@ layout: default
 description: "The hub for blockchain development tutorials, quickstart guides, API documentation, and more. Everything you need to learn blockchain programming, blockchain dApp development on WAX."
 # baseurl: "" # the subpath of your site, e.g. /blog
 # url: "https://developer.wax.io" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: ""
+baseurl: "docs"
 url: "https://3dkrender.github.io/wax-developer"
 
-source: docs
+# source: docs
 data_dir: docs/_data
 layouts_dir: docs/_layouts
 includes_dir: docs/_includes
