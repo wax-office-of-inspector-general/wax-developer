@@ -32,7 +32,7 @@ data_dir: docs/_data
 layouts_dir: docs/_layouts
 includes_dir: docs/_includes
 sass:
-    sass_dir: _sass
+    sass_dir: docs/_sass
     style: compressed
   
 # socials
