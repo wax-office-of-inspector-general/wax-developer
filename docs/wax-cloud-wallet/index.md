@@ -34,8 +34,8 @@ Tap into the global community of gamers, item traders, and collectors in just mi
 
 WCW is the uncomplicated crypto wallet
 
-* Localized into <b>48 languages
-* Stores both NFTs and crypto balances,</b> all in one wallet
+* Localized into <b>48 languages</b>
+* Stores both <b>NFTs and crypto balances</b> all in one wallet
 * Works on <b>mobile</b> just as easily as it does on a desktop
 * Customers can automatically log into your dApp any time they access it using the [WaxJS feature](/docs/wax-cloud-wallet/waxjs/)
 
