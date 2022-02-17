@@ -25,14 +25,14 @@ description: "The hub for blockchain development tutorials, quickstart guides, A
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://developer.wax.io" # the base hostname & protocol for your site, e.g. http://example.com
 
-source: docs
 data_dir: _data
 layouts_dir: _layouts
 includes_dir: _includes
 sass:
     sass_dir: _sass
-    # style: compressed
+    style: compressed
 
+  
 # socials
 twitter_username: WAX_io
 github_username:  wax-office-of-inspector-general
@@ -90,8 +90,8 @@ gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into t
 heading_anchors: true
 
 # Build and Theme settings
-theme: "just-the-docs"
-# remote_theme: pmarsceill/just-the-docs
+# theme: "just-the-docs"
+remote_theme: pmarsceill/just-the-docs
 color_scheme: wax
 
 footer_content: true
