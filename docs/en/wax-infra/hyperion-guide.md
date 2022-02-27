@@ -290,7 +290,17 @@ sudo rabbitmqctl add_vhost /hyperion
 sudo rabbitmqctl set_permissions -p /hyperion hyper ".*" ".*" ".*"
 ```
 
-###### If using ES snapshots, go to Kibana dev mode and enter the following commands:
+------------
+##### 12. Setup & Install Hyperion
+
+Now we have finished the dependencies setup, let's go ahead and start the actual Hyperion software installation.
+
+We have two options now:
+1. To install and sync everything from scratch
+2. Use ES snapshots to sync the data and then start the Hyperion instance.
+
+Note: If you are using ES snapshots from a snapshot service provider, go to Kibana dev mode and enter the following commands:
+
 ```
 PUT _snapshot/eosphere-repo
 {
@@ -306,5 +316,76 @@ POST _snapshot/eosphere-repo/wax_snapshot_2022.02.01/_restore
   "indices": "*,-.*"
 }
 ```
+###### Setup:
+
+Clone the latest codebase and install the hyperion:
+
+```
+git clone https://github.com/eosrio/hyperion-history-api.git
+cd hyperion-history-api
+npm install
+```
+Now it's installed, we have to setup the connections and the chain configuration.
+
+1. Follow the guide [here](https://hyperion.docs.eosrio.io/connections/  "here") to setup connections.json file. or find the example below:
+```
+{
+  "amqp": {
+    "host": "127.0.0.1:5672",
+    "api": "127.0.0.1:15672",
+    "protocol": "http",
+    "user": "hyper",
+    "pass": "<Enter your RMQ password>",
+    "vhost": "hyperion",
+    "frameMax": "0x10000"
+  },
+  "elasticsearch": {
+    "protocol": "http",
+    "host": "127.0.0.1:9200",
+    "ingest_nodes": [
+      "127.0.0.1:9200"
+    ],
+    "user": "elastic",
+    "pass": "<Enter the elastic user password from step 6>"
+  },
+  "redis": {
+    "host": "127.0.0.1",
+    "port": "6379"
+  },
+  "chains": {
+    "wax": {
+      "name": "Wax",
+      "ship": "ws://<Enter your Ship node endpoint here>:8080",
+      "http": "http://<Enter your API node endpoint here>:8888",
+      "chain_id": "1064487b3cd1a897ce03ae5b6a865651747e2e152090f99c1d19d44e01aea5a4",
+      "WS_ROUTER_HOST": "127.0.0.1",
+      "WS_ROUTER_PORT": 7001
+    }
+  }
+}
+```
+2. Follow the guide [here]https://hyperion.docs.eosrio.io/chain/  "here") to setup wax.config.json file
+
+###### Running Hyperion:
+
+There are two parts to Hyperion, one is Indexer and the other is the API.
+
+When you start with Indexer the first step is to run it with the ABI scan mode. And once the ABI scan is done you can start it back without it. The Hyperion Indexer is configured to perform an abi scan ("abi_scan_mode": true) as default. 
+
+You can use the following commands to run and stop the indexer.
+```
+./start.sh wax-indexer
+./stop.sh wax-indexer
+```
+Once the indexer is synced, you can start it with the live mode and then start the API.
+
+To start the API, you can use the following commands:
+```
+./start.sh wax-api
+./stop.sh wax-api
+```
+**Note:** If you have any further questions about how to use Hyperion, please write them here: https://t.me/EOSHyperion
+
+------------
 
 For setting up the partial history guide: https://medium.com/waxgalaxy/lightweight-wax-hyperion-api-node-setup-guide-f080a7d4a5b5
