@@ -14,12 +14,12 @@ En comparación con otras cadenas de bloques como Ethereum y Bitcoin, el funcion
 
 Existen distintos tipos de nodos en el ecosistema de la blockchain de WAX que pueden utilizarse para diferentes propósitos. Estos nodos incluyen:
 
-- Nodos pares
+- Nodos de pares (p2p)
 - Nodos de consulta de la API
 - Nodos validadores/productores de bloques
 - Ship nodes (también conocidos como nodos de archivo)
 - Nodos de historial completo/parcial (nodos de archivo de datos deserializados y consumibles)
-- Normas NFT y nodos específicos del mercado (AtomicAssets, AtomicMarket y Simpleassets)
+- Nodos específicos de Marketplace y estándares NFTs (AtomicAssets, AtomicMarket y Simpleassets)
 
 Para una explicación más detallada sobre los diferentes tipos de nodos y sus respectivos usos, consulta este enlace: https://developers.eos.io/welcome/latest/getting-started-guide/index/#development-and-testing
 
