@@ -12,9 +12,9 @@ Worldwide Asset eXchange™ (WAX) es una blockchain y un token de protocolo espe
 
 Puedes utilizar las siguientes guías para configurar tu entorno de desarrollo de WAX dApp:
 
-  * [Completa el Inicio rápido de Docker](/es/dapp-development/docker-setup)
-  * [Descarga el código fuente y los ejemplos de la blockchain usando la guía de configuración de la blockchain de WAX](/es/dapp-development/wax-blockchain-setup)
-  * [Descubre las herramientas para el desarrollo de contratos inteligentes de WAX (WAX Contract Development Toolkit WAX-CDT)](/es/dapp-development/wax-cdt)
+  * Completa el [Inicio rápido de Docker](/es/dapp-development/docker-setup)
+  * Descarga el código fuente y los ejemplos de la blockchain usando la [guía de configuración de la blockchain de WAX](/es/dapp-development/wax-blockchain-setup)
+  * Descubre las [herramientas para el desarrollo de contratos inteligentes de WAX (WAX Contract Development Toolkit WAX-CDT)](/es/dapp-development/wax-cdt)
   * [Configura un entorno local para tu dApp](/es/dapp-development/setup-local-dapp-environment)
 
 <span class="anchor" id="buildDapp"></span>
