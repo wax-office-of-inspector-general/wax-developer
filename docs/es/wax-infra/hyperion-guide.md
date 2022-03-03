@@ -1,64 +1,64 @@
 ---
-title: Full/Partial History nodes using Hyperion
+title: Hyperion y los nodos de historial
 nav_order: 141
 layout: default
 parent: WAX Infra Guides
 lang-ref: Full/Partial History nodes using Hyperion
-lang: en
+lang: es
 ---
 
-Having stable accessibility to consumable data is essential for Web3 applications on a blockchain. There are many use-cases for history data like accounting, taxes, transaction tracking, portfolio management etc. 
+Tener una accesibilidad estable a los datos consumibles es esencial para las aplicaciones Web3 en una blockchain. Existen muchos ejemplos de utilidad que se les puede atribuir a los datos del historial, como la contabilidad, los impuestos, el seguimiento de las transacciones, la gestión de carteras, etc. 
 
-There are multiple history solutions today that offers different features and functionalities, they all have different requirements in terms of infrastructure. The following guide presents the steps needed to setup a scalable and resilient Hyperion based history solution.
+Hoy en día existen múltiples soluciones del historial que ofrecen diferentes características y funcionalidades, todas ellas con sus diferentes requisitos en términos de infraestructura. La siguiente guía presenta los pasos necesarios para configurar una solución de historial escalable y resistente basada en Hyperion.
 
-### Pre-requisites/Requirements:
+### Requisitos previos y requerimientos:
 
-- **API node Hardware(minimum specs):** Multi-threaded CPU with at-least 4gHZ CPU speed or above, 64GB RAM, 14TB SSD(currenyly disk size is increasing around 25-30GB/day so plan accordingly) -  For ElasticSearch [Also it's recommended to have multi-node ES clusters for higher throughput]
-- **Full State-History node Hardware(recommended specs):** i9 CPU, 128GB RAM, 6TB NVME SSD [For a partial state-history, you can have lower specs or have it on the same server as Hyperion. This can also be started from a snapshot]
-- **Hyperion version:** v3.3.5 or above
-- **Dependencies:** Elasticsearch 7.17.X, RabbitMQ, Redis, Node.js v16, PM2
-- **OS:** Ubuntu20.04 (recommended)
+- **Hardware del nodo API (especificaciones mínimas):** CPU multihilo con al menos 4gHZ de velocidad de la CPU o superior, 64GB de RAM, 14TB SSD (actualmente el tamaño del disco está aumentando alrededor de 25-30GB/día, así que planifica en consecuencia) - para ElasticSearch (también se recomienda tener clusters ES multi-nodo para un mayor rendimiento).
+- **Hardware de nodo con historial completo (especificaciones recomendadas):** CPU i9, 128GB RAM, 6TB NVME SSD (para un estado-historia parcial, puede tener especificaciones más bajas o tenerlo en el mismo servidor que Hyperion. También se puede iniciar desde una instantánea).
+- **Versión de Hyperion:** v3.3.5 en adelante.
+- **Dependencias:** ElasticSearch 7.17.X, RabbitMQ, Redis, Node.js v16, PM2.
+- **Sistema Operativo:** Ubuntu20.04 (recomendado).
 
-#### Bare-Metal Infra providers:
+#### Proveedores de infraestructura "bare-metal":
 
 - [Hetzner](https://www.hetzner.com/dedicated-rootserver "Hetzner")
 - [Leaseweb](https://www.leaseweb.us/dedicated-servers "Leaseweb")
 
-### Setup and Installation:
+### Configuración e instalación:
 
-After securing the servers and setting up the boot configuration and appropriate RAID modes, you can login to the server and follow the next commands below: 
+Después de asegurar los servidores y establecer la configuración de arranque y los modos RAID apropiados, inicia sesión en el servidor y sigue los siguientes comandos: 
 
-[Recommendation - Only setup root partition in Raid1 or Raid5 modes for now. We shall partition the disks later on after the boot and allocate them to a ZFS pool]
+[Recomendación - Por ahora, configura únicamente la partición raíz en los modos Raid1 o Raid5. Más adelante particionaremos los discos tras el arranque y los asignaremos a un pool ZFS].
 
-##### 1. Update the default pacakages and install new ones
+##### 1. Actualizar los paquetes por defecto e instalar los nuevos
 ```
 apt-get update && apt-get install -y vim htop aptitude git lxc-utils zfsutils-linux netfilter-persistent sysstat ntp gpg screen zstd
 ```
-##### 2. For better CPU performance:
+##### 2. Para un mayor rendimiento de la CPU
 ```
 apt-get install -y cpufrequtils
 echo 'GOVERNOR="performance"' | tee /etc/default/cpufrequtils
 systemctl disable ondemand
 systemctl restart cpufrequtils
 ```
-##### 3. Create disk partitions 
-First step is to determine the disks and their names using the commands below:
+##### 3. Crear particiones de disco 
+Lo primero es identificar los discos y sus nombres usando los siguientes comandos:
 ```
 fdisk -l
 ```
-Now after identifying the disk names, let's partition them using the example command below, we need to create two partitions One for Swap and One for ZFS storage pool.
+Después de identificar los nombres de los discos, vamos a particionarlos usando el comando de ejemplo de abajo. Necesitamos crear dos particiones: una para Swap y otra para el pool de almacenamiento ZFS.
 
 ```
 cfdisk /dev/nvme0n1
 ```
-Do the above for all the disks on your server.
+Sigue estos mismos pasos con todos los discos de tu servidor.
 
-##### 4. Increase the Swap size as its usually small on the servers from Hetzner and Leaseweb.
+##### 4. Aumenta el tamaño del Swap, que suele ser pequeño en los servidores de Hetzner y Leaseweb.
 ```
 mkswap /dev/nvme0n1p5
 mkswap /dev/nvme1n1p5
 ```
-Now let's add the Swap pools to the System's FileSystem table by editing the file below:
+Ahora vamos a añadir los Swap pools a la tabla System's FileSystem editando el siguiente archivo:
 ```
 cat >>/etc/fstab <<'EOT'
 /dev/nvme0n1p5     none            swap            defaults,pri=-2 0 0
@@ -66,36 +66,36 @@ cat >>/etc/fstab <<'EOT'
 /dev/nvme2n1p5     none            swap            defaults,pri=-2 0 0
 EOT
 ```
-After editing, let's enable the newly added Swap pool using the command below:
+Después de editarlo, activa el nuevo Swap pool usando el siguiente comando:
 ```
 swapon -a
 ```
 
-##### 5. Create ZFS storage pool based on your requirements with zraid or mirror etc modes. A good resource to do calculations on disk sizes: http://www.raidz-calculator.com/
+##### 5. Crea un pool de almacenamiento ZFS según tus necesidades con los modos zraid, mirror, etc. Este es un buen recurso para hacer cálculos sobre el tamaño de los discos: http://www.raidz-calculator.com/
 
 ```
-zpool create -o ashift=12 zfast raidz /dev/nvme0n1p6 /dev/nvme1n1p6 /dev/nvme2n1p6 [--> adopt the partition names accordingly]
+zpool create -o ashift=12 zfast raidz /dev/nvme0n1p6 /dev/nvme1n1p6 /dev/nvme2n1p6 [--> Adopta los nombres de las particiones en consecuencia]
 zfs set atime=off zfast
-zfs set compression=lz4 zfast [-->not really needed as ES already compresses the data]
-zfs create -o mountpoint=/home zfast/home [-->Creates mountpoint]
+zfs set compression=lz4 zfast [--> No es realmente necesario, ya que ES ya comprime los datos]
+zfs create -o mountpoint=/home zfast/home [--> Crea un punto de montaje]
 ```
 
 ------------
 
-Now that we have setup the server and disk storage in a good way, let's go ahead with the next steps to setup the Hyperion related dependencies.
+Ahora que hemos configurado bien el servidor y el almacenamiento en disco, sigamos con los siguientes pasos para configurar las dependencias relacionadas con Hyperion.
 
 https://hyperion.docs.eosrio.io/manual_installation/
 
-##### 6. Elasticsearch v7.17.X Setup & Installation:
+##### 6. Configuración e instalación de Elasticsearch v7.17.X:
 
-The following steps are for a single node ES cluster but it is recommended to have a multi-node ES cluster for scalability & resiliency. Setup a minimum of 3 node ES cluster  so ES shards can be distributed and replicas are created. In addition use the Cross-Cluster replication in different data centres for geo resiliency.
+Los siguientes pasos son para un clúster de ES de un solo nodo, pero se recomienda tener un clúster de ES de varios nodos para la escalabilidad y la resistencia. Configura un clúster de ES de 3 nodos como mínimo para que los fragmentos de ES puedan distribuirse y se creen réplicas. También deberás usar la replicación de clústeres cruzados en diferentes centros de datos para la resiliencia geográfica.
 
-For multi node ES cluster setup, refer:
+Para la configuración del clúster ES de varios nodos, consulta este enlace:
 
 https://www.elastic.co/guide/en/elasticsearch/reference/7.17/scalability.html
 https://www.elastic.co/guide/en/elasticsearch/reference/current/add-elasticsearch-nodes.html
 
-**ES Installation using Apt package:**
+**Instalación de ES con el paquete Apt:**
 
 ```
 wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
@@ -103,7 +103,7 @@ sudo apt-get install apt-transport-https
 echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee /etc/apt/sources.list.d/elastic-7.x.list
 sudo apt-get update && sudo apt-get install elasticsearch
 ```
-Now, let's create new directories on the ZFS storage pool so that ES data & logs can be stored there instead of default directories:
+Ahora, vamos a crear nuevos directorios en el pool de almacenamiento ZFS para que los datos y registros de ES puedan ser almacenados allí en lugar de los directorios por defecto:
 ```
 cd /home
 mkdir es-data
@@ -111,33 +111,33 @@ mkdir es-logs
 chown -R elasticsearch:elasticsearch es-data/
 chown -R elasticsearch:elasticsearch es-logs/
 ```
-After creating the directories and fixing the folder permissions, let's edit the ES config by editing the file below:
+Después de crear los directorios y arreglar los permisos de las carpetas, vamos a editar la configuración de ES modificando el siguiente archivo:
 ```
 vim /etc/elasticsearch/elasticsearch.yml
 ```
 
-###### Replace the following sections in the ES config file
+###### Sustituye las siguientes secciones en el archivo de configuración del ES
 
 ```
-# ---------------------------------- Cluster -----------------------------------
+# ---------------------------------- Clúster -----------------------------------
 cluster.name: hyp-cluster
 bootstrap.memory_lock: true
-# ----------------------------------- Paths ------------------------------------
+# ------------------------------- Rutas de acceso ---------------------------------
 path.data: /home/es-data
-# Path to log files:
+# Ruta de acceso a los archivos de registro:
 path.logs: /home/es-logs
 ```
-###### Heap Size Configuration
+###### Configuración del tamaño de la pila
 
-For a optimized heap size, check how much RAM can be allocated by the JVM on your system. Run the following command:
+Para optimizar el tamaño de la pila de archivos, comprueba cuánta RAM puede asignar la JVM en tu sistema. Ejecuta el siguiente comando:
 ```
 java -Xms16g -Xmx16g -XX:+UseCompressedOops -XX:+PrintFlagsFinal Oops | grep Oops
 ```
-Check if UseCompressedOops is true on the results and change -Xms and -Xmx to the desired value.
+Comprueba si UseCompressedOops marca "true" en los resultados y cambia -Xms y -Xmx por el valor deseado.
 
-**Note:** Elasticsearch includes a bundled version of OpenJDK from the JDK maintainers. You can find it on /usr/share/elasticsearch/jdk
+**Nota:** Elasticsearch incluye una versión de OpenJDK del mantenimiento del JDK. Puedes encontrarla en /usr/share/elasticsearch/jdk
 
-After that, change the heap size by editting the following lines on
+Después, cambia el tamaño de la pila editando las siguientes líneas en:
 
 `vim /etc/elasticsearch/jvm.options`:
 
@@ -145,56 +145,56 @@ After that, change the heap size by editting the following lines on
 -Xms25g
 -Xmx25g
 ```
-**Note:** Xms and Xmx must have the same value.
-**Warning:** Avoid allocating more than 31GB when setting your heap size, even if you have enough RAM.
+**Nota:** Xms y Xmx deben tener el mismo valor.
+**Aviso:** Procura no asignar más de 31GB al establecer el tamaño de la pila, incluso si tienes suficiente RAM.
 
-###### Allow Memory Lock
+###### Permitir el bloqueo de la memoria
 
-Override systemd configuration by running `sudo systemctl edit elasticsearch` and add the following lines:
+Anula la configuración de systemd ejecutando `sudo systemctl edit elasticsearch` y añade las siguientes líneas:
 ```
 [Service]
 LimitMEMLOCK=infinity
 ```
-Run the following command to reload units:
+Ejecuta el siguiente comando para recargar las unidades:
 ```
 sudo systemctl daemon-reload
 ```
-###### Start Elasticsearch
-Start Elasticsearch and check the logs:
+###### Iniciar Elasticsearch
+Inicia Elasticsearch y comprueba los registros:
 ```
 sudo systemctl start elasticsearch.service
 sudo less /home/es-logs/hyp-cluster.log
 ```
-Enable it to run at startup:
+Habilítalo para que se ejecute al inicio:
 ```
 sudo systemctl enable elasticsearch.service
 ```
-And finally, test the REST API:
+Por último, prueba la API REST:
 ```
-curl -X GET "localhost:9200/?pretty" [Test if everything looks good]
+curl -X GET "localhost:9200/?pretty" [Comprueba si todo se ve correctamente]
 ```
 
-###### Set Up Minimal Security
-The Elasticsearch security features are disabled by default. To avoid security problems, we recommend enabling the security pack.
+###### Configura una seguridad mínima
+Las funciones de seguridad de Elasticsearch están desactivadas por defecto. Para evitar problemas de seguridad, se recomienda habilitar el paquete de seguridad.
 
-To do that, add the following line to the end of the file: `vim /etc/elasticsearch/elasticsearch.yml`
+Para hacerlo, añade la siguiente línea al final del archivo: `vim /etc/elasticsearch/elasticsearch.yml`
 
 ```
 xpack.security.enabled: true
 ```
-Restart Elasticsearch and set the passwords for the cluster:
+Reinicia Elasticsearch y establece las contraseñas para el clúster:
 ```
 sudo systemctl restart elasticsearch.service
 sudo /usr/share/elasticsearch/bin/elasticsearch-setup-passwords auto
 ```
-Save the passwords somewhere safe, they'll be necessary for future purpose.
+Guarda las contraseñas en algún lugar seguro, serán necesarias en el futuro.
 
-Now you can test the REST API using username and password:
+Ahora puedes probar la API REST utilizando el nombre de usuario y la contraseña:
 ```
-curl -X GET "http://localhost:9200/?pretty" -u elastic:<password>
+curl -X GET "http://localhost:9200/?pretty" -u elastic:<contraseña>
 ```
 
-##### 7. Kibana Installation using Apt package:
+##### 7. Instalación de Kibana usando el paquete Apt:
 
 ```
 wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
@@ -202,45 +202,45 @@ sudo apt-get install apt-transport-https
 echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-7.x.list
 sudo apt-get update && sudo apt-get install kibana
 ```
-###### Configuration:
+###### Configuración:
 
-Now let's edit the `vim /etc/kibana/kibana.yml`
+Ahora vamos a editar el archivo `vim /etc/kibana/kibana.yml`
 
-Update the host address to 0.0.0.0 if needed for accessing it using the IP on the public network. By default it's set to localhost.
+Si es necesario, actualiza la dirección del host a 0.0.0.0 para acceder a él utilizando la IP de la red pública. Por defecto está configurado como localhost.
 
-If you have enabled the security pack on Elasticsearch, you need to set up the password on Kibana:
+Si has habilitado el paquete de seguridad en Elasticsearch, necesitas configurar la contraseña en Kibana:
 ```
 elasticsearch.username: "kibana_system"
-elasticsearch.password: "password"
+elasticsearch.password: "contraseña"
 ```
-###### Start Kibana
-Start Kibana and check the logs:
+###### Inicia Kibana
+Inicia Kibana y comprueba los registros:
 ```
 sudo systemctl start kibana.service
 sudo less /var/log/kibana/kibana.log
 ```
-Enable it to run at startup:
+Habilítalo para que se ejecute al inicio:
 ```
 sudo systemctl enable kibana.service
 ```
 
-##### 8. Node JS installation:
+##### 8. Instala el nodo JS:
 ```
 curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt-get install -y nodejs
 node  -v
 ```
-##### 9.Redis installation
+##### 9.Instala Redis
 ```
 sudo add-apt-repository ppa:redislabs/redis
 sudo apt-get -y update
 sudo apt-get -y install redis
 redis-server -v
 ```
-###### Update Redis Supervision Method
-Change the `supervised` configuration from `supervised no` to `supervised systemd` on `/etc/redis/redis.conf`
+###### Actualiza el método de supervisión de Redis
+Cambia la configuración `supervised` de `supervised no` a `supervised systemd` en `/etc/redis/redis.conf`
 
-###### Restart Redis
+###### Reinicia Redis
 ```
 sudo systemctl restart redis-server
 sudo systemctl enable --now redis-server
@@ -250,32 +250,32 @@ sudo systemctl unmask  redis-server.service
 sudo systemctl restart redis-server
 sudo systemctl status redis-server
 ```
-##### 10. Pm2 installation
+##### 10. Instalación de Pm2
 ```
 npm install pm2@latest -g
 pm2 startup
 ```
 
-##### 11. RabbitMq Installation
+##### 11. Instalación de RabbitMq
 
-Copy the shell script from here and run it on the server: https://www.rabbitmq.com/install-debian.html#installation-methods
+Copia el shell script desde aquí y ejecútalo en el servidor: https://www.rabbitmq.com/install-debian.html#installation-methods
 ```
 cd builds
 vim rabbit_install.sh
 ```
-Let's create directories in our ZFS Storage pool for RabbitMq:
+Vamos a crear directorios en nuestro pool de almacenamiento ZFS para RabbitMq:
 ```
 cd /home
 mkdir rabbitmq
 chown -R rabbitmq:rabbitmq rabbitmq/
 ```
 
-Add a env file in `/etc/rabbitmq` so that we can charge the default directories:
+Crea un nuevo archivo en `/etc/rabbitmq` para poder cargar los directorios por defecto:
 ```
 cd /etc/rabbitmq
 vim rabbitmq-env.conf
 ```
-Add the following lines to the config file:
+Añade las siguientes líneas al archivo de configuración:
 ```
 `RABBITMQ_MNESIA_BASE=/home/rabbitmq`
 `RABBITMQ_LOG_BASE=/home/rabbitmq/log`
@@ -291,15 +291,15 @@ sudo rabbitmqctl set_permissions -p /hyperion hyper ".*" ".*" ".*"
 ```
 
 ------------
-##### 12. Setup & Install Hyperion
+##### 12. Instala y configura Hyperion
 
-Now we have finished the dependencies setup, let's go ahead and start the actual Hyperion software installation.
+Ahora que hemos terminado la configuración de las dependencias, vamos a iniciar la instalación del software Hyperion.
 
-We have two options now:
-1. To install and sync everything from scratch
-2. Use ES snapshots to sync the data and then start the Hyperion instance.
+Tenemos dos opciones:
+1. Instalar y sincronizar todo desde cero
+2. Usar las instantáneas de ES para sincronizar los datos y, después, iniciar la instancia de Hyperion.
 
-Note: If you are using ES snapshots from a snapshot service provider, go to Kibana dev mode and enter the following commands:
+Nota: Si estás usando las instantáneas de ES de un proveedor de servicios de instantáneas, entra en el modo Kibana dev e introduce los siguientes comandos:
 
 ```
 PUT _snapshot/eosphere-repo
@@ -316,18 +316,18 @@ POST _snapshot/eosphere-repo/wax_snapshot_2022.02.01/_restore
   "indices": "*,-.*"
 }
 ```
-###### Setup:
+###### Configuración:
 
-Clone the latest codebase and install the hyperion:
+Clona el último código base e instala el hyperion:
 
 ```
 git clone https://github.com/eosrio/hyperion-history-api.git
 cd hyperion-history-api
 npm install
 ```
-Now it's installed, we have to setup the connections and the chain configuration.
+Ahora que está instalado, tenemos que configurar las conexiones y la configuración de la cadena.
 
-1. Follow the guide [here](https://hyperion.docs.eosrio.io/connections/  "here") to setup connections.json file. or find the example below:
+1. Sigue esta [guía](https://hyperion.docs.eosrio.io/connections/  "guía") para configurar el archivo connections.json file o usa los siguientes ejemplos:
 ```
 {
   "amqp": {
@@ -335,7 +335,7 @@ Now it's installed, we have to setup the connections and the chain configuration
     "api": "127.0.0.1:15672",
     "protocol": "http",
     "user": "hyper",
-    "pass": "<Enter your RMQ password>",
+    "pass": "<Introduce tu contraseña de RMQ>",
     "vhost": "hyperion",
     "frameMax": "0x10000"
   },
@@ -346,7 +346,7 @@ Now it's installed, we have to setup the connections and the chain configuration
       "127.0.0.1:9200"
     ],
     "user": "elastic",
-    "pass": "<Enter the elastic user password from step 6>"
+    "pass": "<Introduce la contraseña del usuario de elastic del paso 6>"
   },
   "redis": {
     "host": "127.0.0.1",
@@ -355,8 +355,8 @@ Now it's installed, we have to setup the connections and the chain configuration
   "chains": {
     "wax": {
       "name": "Wax",
-      "ship": "ws://<Enter your Ship node endpoint here>:8080",
-      "http": "http://<Enter your API node endpoint here>:8888",
+      "ship": "ws://<Introduce aquí la extensión del nodo de archivo>:8080",
+      "http": "http://<Introduce aquí la extensión del nodo API>:8888",
       "chain_id": "1064487b3cd1a897ce03ae5b6a865651747e2e152090f99c1d19d44e01aea5a4",
       "WS_ROUTER_HOST": "127.0.0.1",
       "WS_ROUTER_PORT": 7001
@@ -364,28 +364,28 @@ Now it's installed, we have to setup the connections and the chain configuration
   }
 }
 ```
-2. Follow the guide [here]https://hyperion.docs.eosrio.io/chain/  "here") to setup wax.config.json file
+2. Sigue esta [guía](https://hyperion.docs.eosrio.io/chain/  "guía") para configurar el archivo wax.config.json
 
-###### Running Hyperion:
+###### Ejecutar Hyperion:
 
-There are two parts to Hyperion, one is Indexer and the other is the API.
+Hay dos partes en Hyperion, una es Indexer y la otra es la API.
 
-When you start with Indexer the first step is to run it with the ABI scan mode. And once the ABI scan is done you can start it back without it. The Hyperion Indexer is configured to perform an abi scan ("abi_scan_mode": true) as default. 
+Cuando empiezas con Indexer, el primer paso es ejecutarlo con el modo de escaneo ABI. Una vez que el escaneo ABI está hecho, puedes volver a arrancarlo sin él. El Hyperion Indexer está configurado para realizar un escaneo ABI ("abi_scan_mode": true) por defecto. 
 
-You can use the following commands to run and stop the indexer.
+Utiliza los siguientes comandos para ejecutar y detener el indexador.
 ```
 ./start.sh wax-indexer
 ./stop.sh wax-indexer
 ```
-Once the indexer is synced, you can start it with the live mode and then start the API.
+Una vez que el indexador está sincronizado, puedes iniciarlo con el modo en vivo y luego iniciar la API.
 
-To start the API, you can use the following commands:
+Para iniciar la API, utiliza los siguientes comandos:
 ```
 ./start.sh wax-api
 ./stop.sh wax-api
 ```
-**Note:** If you have any further questions about how to use Hyperion, please write them here: https://t.me/EOSHyperion
+**Nota:** Si tienes dudas sobre cómo utilizar Hyperion, escríbelas aquí: https://t.me/EOSHyperion
 
 ------------
 
-For setting up the partial history guide: https://medium.com/waxgalaxy/lightweight-wax-hyperion-api-node-setup-guide-f080a7d4a5b5
+Para configurar la guía de historial parcial: https://medium.com/waxgalaxy/lightweight-wax-hyperion-api-node-setup-guide-f080a7d4a5b5
