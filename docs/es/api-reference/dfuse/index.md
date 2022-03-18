@@ -21,7 +21,7 @@ lang: es
       <a href="https://docs.dfuse.eosnation.io/reference/eosio/rest/" target="_blank">REST</a>.</li>
 </ul>
 
-## Terminales
+## Endpoints
 
 Puedes utilizar las siguientes URLs para conectarte a las APIs de dfuse:
 
@@ -29,7 +29,7 @@ Puedes utilizar las siguientes URLs para conectarte a las APIs de dfuse:
 <thead>
 <tr>
 <th style="width:25%">Servicio dfuse</th>
-<th>Terminal de WAX</th>
+<th>Endpoint de WAX</th>
 </tr>
 </thead>
 
@@ -52,7 +52,7 @@ Puedes utilizar las siguientes URLs para conectarte a las APIs de dfuse:
 </tbody>
 </table>
 
-Consulta las <a href="https://docs.dfuse.eosnation.io/eosio/public-apis/reference/network-endpoints/#wax-mainnet" target="_blank">terminales de las APIs de WAX</a> para más información.
+Consulta los <a href="https://docs.dfuse.eosnation.io/eosio/public-apis/reference/network-endpoints/#wax-mainnet" target="_blank">Endpoints de las APIs de WAX</a> para más información.
 
 ## Recursos
 
