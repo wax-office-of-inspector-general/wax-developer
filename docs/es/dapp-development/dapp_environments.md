@@ -1,24 +1,26 @@
 ---
-title: Blockchain Environments
+title: Entornos de la Blockchain
 nav_order: 20
 layout: default
 parent: dApp Development
+lang-ref: Blockchain Environments
+lang: es
 ---
 
-Below you'll find WAX versions, URLs, and development environment information.
+A continuación, encontrarás versiones de WAX, URLs e información sobre los entornos de desarrollo en blockchains.
 
 <table>
 <thead>
 <tr>
-<th style="width:20%">Service</th>
-<th>Description</th>
+<th style="width:20%">Servicio</th>
+<th>Descripción</th>
 </tr>
 </thead>
 
 <tbody>
         <tr>
         <td><a href="https://hub.docker.com/u/waxteam" target="_blank">Docker Images</a></td>
-        <td>Use WAX Docker images to run a local node, use blockchain tools, and compile your smart contracts. Refer to [Docker Quickstart](/es/dapp-development/docker-setup/) for more information.</td>
+        <td>Utiliza las imágenes Docker de WAX para ejecutar un nodo local, utilizar herramientas de blockchain y compilar tus contratos inteligentes. Para más información, usa el [inicio rápido de Docker](/es/dapp-development/docker-setup/).</td>
 </tr>
     <tr><td><a href="https://github.com/worldwide-asset-exchange/waxjs" target="_blank">waxjs</a></td>
         <td>WaxJS Javascript API for integration with the WAX Cloud Wallet. Use this to easily sign in users and send transactions to the WAX Blockchain from your dApp. Refer to [WAX Cloud Wallet Quickstart](/es/waa_waxjs_qstart) for more information.</td>
