@@ -16,7 +16,7 @@ La API RPC de WAX Blockchain incluye puntos de acceso públicos utilizados para 
 
 | Entorno | URL |
 | --- | ----------- |
-| Mainnet de WAX | https://chain.wax.io |
+| Mainnet de WAX | Consulte disponibilidad de nodos en [https://validate.eosnation.io/wax/reports/endpoints.html](https://validate.eosnation.io/wax/reports/endpoints.html) |
 | Testnet local | http://127.0.0.1:8888 |
 
 Puedes realizar solicitudes de API directamente a los puntos de acceso de la blockchain:
@@ -30,7 +30,7 @@ curl --request POST \
 También puedes hacer solicitudes a estos puntos de acceso a través de los comandos **cleos**:
 
 ```
-cleos -u https://chain.wax.io get info
+cleos -u https://apiwax.3dkrender.com get info
 ```
 
 ## Información adicional y herramientas de terceros
