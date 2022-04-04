@@ -1,18 +1,20 @@
 ---
-title: dfuse Example
+title: Ejemplo de dfuse
 layout: default
 nav_order: 121
 parent: dfuse for WAX dApps
 grand_parent: WAX API Reference
+lang-ref: dfuse Example
+lang: es
 ---
 
-In this example, we'll sign up for a free account and get the WAX RNG abi using dfuse REST. 
+En este ejemplo, nos registraremos con una cuenta gratuita y obtendremos el abi de WAX RNG usando dfuse REST. 
 
-1. Sign up for a <a href="https://dfuse.eosnation.io/" target="_blank">free dfuse account</a>.
+1. Regístrate para crear una <a href="https://dfuse.eosnation.io/" target="_blank">cuenta de dfuse gratuita</a>.
 
-2. Click Create New Key.
+2. Haz clic en Crear nueva clave.
 
-3. Get a short-lived JWT using your API key.
+3. Obtén un JWT de corta duración utilizando tu clave API.
 
     ```
     curl -X POST \
@@ -24,7 +26,7 @@ In this example, we'll sign up for a free account and get the WAX RNG abi using 
 }'
 ```
 
-4. Use the `abi` endpoint to get the WAX RNG smart contract endpoint. In the Header, set the Authorization to Bearer and use your JWT from the previous step.
+4. Utiliza el endpoint `abi` para obtener el endpoint del contrato inteligente WAX RNG. En el encabezado, establece la autorización como "Bearer" y usa el JWT que has obtenido en el paso anterior.
 
     ```
     curl -X GET \

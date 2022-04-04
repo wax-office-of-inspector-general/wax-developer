@@ -1,5 +1,5 @@
 ---
-title: WAX-CDT API
+title: API WAX-CDT
 layout: default
 nav_order: 25
 parent: WAX API Reference
@@ -7,35 +7,35 @@ lang: es
 lang-ref: WAX-CDT API
 ---
 
-All of your smart contracts inherit from the C++ API files available in the [WAX Contract Development Toolkit (WAX-CDT)](/es/dapp-development/wax-cdt/) library. These files are used to define your smart contract's actions, structures, and data types. 
+Todos tus contratos inteligentes (smart contracts) heredan de los archivos API C++ disponibles en el [kit de herramientas para la creación de contratos en WAX (WAX Contract Development Toolkit-CDT)](/es/dapp-development/wax-cdt/). Estos archivos se utilizan para definir las acciones, estructuras y tipos de datos de tu contrato inteligente. 
 
-This smart contract API can be grouped into three key modules:
+Esta API puede agruparse en tres módulos principales:
 
-* **contracts:** This is the primary C++ contracts API used for communicating with the WAX Blockchain. This library defines actions, dispatchers, permissions, and more. 
-* **core:** This library handles datastreams, the **name** datatype, serialization objects, and more. 
-* **types:** This library defines the base contract, data layouts, data structures, and more. 
+* **Contratos:** Esta es la principal API de contratos C++ utilizada para comunicarse con la blockchain de WAX. Esta biblioteca define acciones, controladores, permisos y más. 
+* **Núcleo:** Esta biblioteca maneja los flujos de datos, los tipos de datos **nombre**, los objetos de serialización y muchos otros recursos. 
+* **Tipos:** Esta biblioteca define el contrato base, la organización y estructura de datos y mucho más. 
 
-All of these libraries are located in the **wax-cdt/libraries/eosiolib** folder. Most of this functionality is available once you include **<eosio/eosio.hpp>** in your smart contract. It's recommended that you review these files to help you understand how a smart contract is constructed.
+Todas estas librerías se encuentran en la carpeta **wax-cdt/libraries/eosiolib**. La mayor parte de esta funcionalidad está disponible una vez que se incluye **<eosio/eosio.hpp>** en el smart contract. Se recomienda revisar estos archivos para entender cómo se crea un contrato inteligente.
 
-## WAX API Overloads and Customizations 
+## Sobrecarga y personalización de la API de WAX 
 
-### Method Name: verify_rsa_sha256_sig
+### Nombre del método: verify_rsa_sha256_sig
 
-**Source Code:** <a href="https://github.com/worldwide-asset-exchange/wax-cdt/blob/master/libraries/eosiolib/core/eosio/crypto.hpp#L283" target="_blank">WAX GitHub Repository</a>
+**Código fuente:** <a href="https://github.com/worldwide-asset-exchange/wax-cdt/blob/master/libraries/eosiolib/core/eosio/crypto.hpp#L283" target="_blank">Repositorio WAX GitHub</a>
 
-**Description:** Verify a signature using the RSA 256 algorithm. Implemented in native code, this method is about 15x's faster than standard WASM verification. Refer to <a href="https://www.emc.com/collateral/white-papers/h11300-pkcs-1v2-2-rsa-cryptography-standard-wp.pdf" target="_blank">RSA Cryptography Standard</a> for more information.
+**Descripción:** Utiliza el algoritmo RSA 256 para verificar las firmas. Este método es unas 15 veces más rápido que la verificación estándar de WASM, al estar implementado en código nativo. Para más información, consulta el <a href="https://www.emc.com/collateral/white-papers/h11300-pkcs-1v2-2-rsa-cryptography-standard-wp.pdf" target="_blank">Estándar de criptografía RSA</a>.
 
-**Input Parameters:**
+**Parámetros de entrada:**
 
-| Parameter | Description
+| Parámetro | Descripción
 | --- | -------------------------- |
-| message | Message buffer to verify. |
-| message_len | Message buffer length. |
-| signature | Signature as hex string. |
-| exponent | Public key exponent as hex string. |
-| modulus  | Modulus as hex string (a leading zero is not allowed). |
+| message | Búfer de mensajes a verificar. |
+| message_len | Longitud del búfer de mensajes. |
+| signature | Firma como cadena hexadecimal. |
+| exponent | Exponente de clave pública como cadena hexadecimal. |
+| modulus  | Módulo como cadena hexadecimal (no se permiten ceros a la izquierda). |
 
-**Example Usage:** This method is used to in our WAX RNG service to verify that the RSA signature (random value) returned from the WAX RNG oracle is valid.
+**Ejemplo de uso:** Este método se utiliza en nuestro servicio WAX RNG para verificar que la firma RSA (valor aleatorio) devuelta por el oráculo WAX RNG es válida.
 
 ```
  eosio_assert(verify_rsa_sha256_sig(&signing_value, sizeof(signing_value), 
@@ -44,11 +44,11 @@ All of these libraries are located in the **wax-cdt/libraries/eosiolib** folder.
 ```
 
 
-**Return Value:** Boolean. True if the verification succeeds, False if not.
+**Valor de retorno:** Booleano. Verdadero, si la verificación tiene éxito, Falso, si no.
 
-## Data Types
+## Tipos de datos
 
-Your smart contracts can use the following data types:
+Tus contratos inteligentes pueden utilizar los siguientes tipos de datos:
 
 * bool
 * string
@@ -82,11 +82,11 @@ Your smart contracts can use the following data types:
 * symbol_code
 * asset
 
-Refer to EOSIO's <a href="https://eosio.github.io/eosio.cdt/1.6.0/group__types.html" target="_blank">Types</a> for more information.
+Para más información, consulta los <a href="https://eosio.github.io/eosio.cdt/1.6.0/group__types.html" target="_blank">tipos</a> de EOSIO.
 
-## Type Definitions
+## Definiciones de los tipos
 
-WAX-CDT also includes a custom library of type definitions:
+El WAX-CDT incluye también un glosario personalizado con las definiciones de los tipos:
 
 * typedef uint64_t account_name;
 * typedef uint64_t action_name;
@@ -98,6 +98,6 @@ WAX-CDT also includes a custom library of type definitions:
 * typedef struct checksum256 transaction_id_type;
 * typedef struct checksum256 block_id_type;
 
-## Additional Information
+## Información adicional
 
-For a complete list of features available from the smart contract C++ API, refer to EOSIO's <a href="https://eosio.github.io/eosio.cdt" target="_blank">C/C++ API</a>.
+Para obtener una lista completa de las funciones disponibles en la API C++ de los contratos inteligentes, haz click en el enlace de esta <a href="https://eosio.github.io/eosio.cdt" target="_blank">API C/C++</a> de EOSIO.
