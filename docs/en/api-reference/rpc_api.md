@@ -16,7 +16,7 @@ The WAX Blockchain RPC API includes public endpoints used to get block informati
 
 | Environment | URL |
 | --- | ----------- |
-| WAX mainnet | https://chain.wax.io |
+| WAX mainnet | Check node availability at [https://validate.eosnation.io/wax/reports/endpoints.html](https://validate.eosnation.io/wax/reports/endpoints.html) |
 | Local Testnet | http://127.0.0.1:8888 |
 
 You can make API requests directly to blockchain endpoints:
@@ -30,7 +30,7 @@ curl --request POST \
 You can also call these endpoints using **cleos** commands:
 
 ```
-cleos -u https://chain.wax.io get info
+cleos -u [api-url] get info
 ```
 
 ## Additional Information and Third-Party Tools
