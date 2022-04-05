@@ -30,7 +30,7 @@ curl --request POST \
 You can also call these endpoints using **cleos** commands:
 
 ```
-cleos -u https://apiwax.3dkrender.com get info
+cleos -u [api-url] get info
 ```
 
 ## Additional Information and Third-Party Tools
