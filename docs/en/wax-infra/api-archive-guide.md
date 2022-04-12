@@ -151,5 +151,11 @@ As the -P option is used on the build script this may take some time to compile 
 WAX Sweden team offers Pre-Build packages that can be easily installed. You can find them here: https://eosswedenorg.github.io/apt/wax
 Please visit the above link and follow the provided instructions.
 
-###### Configuration
+**Configuration**
+
+Now that WAX Software is installed, let's go ahead and configure the state-history setup:
+
+There are different components in the software like nodeos, cleos, keosd etc. **nodeos** is the core service which runs the protocol and is used across all the nodes. The configuration of nodeos is done using config.ini file. The settings of this file determine what kind of node you are running.
+
+
 
