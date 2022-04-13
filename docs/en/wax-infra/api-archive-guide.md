@@ -15,6 +15,9 @@ Archive nodes can be partial or full based on how they are started. These nodes 
 
 Archive nodes are also referred as State-History or Ship nodes.
 
+#### Credits:
+@cc32d9, Eossphere Team
+
 ### Pre-requisites/Requirements:
 
 - **Full State-History node Hardware(recommended specs):** 4Ghz+ CPU speed, 128GB RAM, 8TB SSD or NvME [For a partial state-history, you can have lower specs as its started from a snapshot]
