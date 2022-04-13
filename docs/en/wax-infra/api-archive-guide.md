@@ -16,7 +16,7 @@ Archive nodes can be partial or full based on how they are started. These nodes 
 Archive nodes are also referred as State-History or Ship nodes.
 
 #### Credits:
-@cc32d9, Eossphere Team
+@cc32d9, Eosphere Team
 
 ### Pre-requisites/Requirements:
 
