@@ -7,7 +7,7 @@ lang-ref: API Full/Partial Archive nodes
 lang: en
 ---
 
-WAX is a distributed network of computers running software (known as nodes) that can verify blocks and transaction data. You need WAX software, on your computer to "run" a node. "Node" refers to running WAX software. WAX software verifies all transactions in each block, keeping the network secure and the data accurate. 
+WAX is a distributed network of computers running software (known as nodes) that can verify blocks and transaction data. You need WAX software, on your server to "run" a node. "Node" refers to running WAX software. WAX software verifies all transactions in each block, keeping the network secure and the data accurate. 
 
 If you want to run your own node, you should understand that there are different types of node that consume and store data differently. In fact, WAX Software can be run in 3 different types of modes - peer, api, archive nodes. These setups also determine how quickly the node can get the most up-to-date information.
 
