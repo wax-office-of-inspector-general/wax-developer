@@ -157,5 +157,106 @@ Now that WAX Software is installed, let's go ahead and configure the state-histo
 
 There are different components in the software like nodeos, cleos, keosd etc. **nodeos** is the core service which runs the protocol and is used across all the nodes. The configuration of nodeos is done using config.ini file. The settings of this file determine what kind of node you are running.
 
+Follow the below steps to config the nodeos:
+
+```
+mkdir /home/data
+mkdir /home/conf
+
+nano config.ini
+```
+Below is an example config.ini file which is customized to setup state-history node, you can just copy and paste:
+
+```
+wasm-runtime = eos-vm-jit
+eos-vm-oc-compile-threads = 4
+eos-vm-oc-enable = true
+read-mode = head
+contracts-console = true
+
+chain-state-db-size-mb = 131072
+chain-state-db-guard-size-mb = 1024
+chain-threads = 4
+http-threads = 8
+
+# Safely shut down node when less free space
+chain-state-db-guard-size-mb = 128
+reversible-blocks-db-guard-size-mb = 2
+
+disable-subjective-p2p-billing = false
+http-server-address = 0.0.0.0:8888
+access-control-allow-origin = *
+access-control-allow-headers = Origin, X-Requested-With, Content-Type, Accept
+http-max-response-time-ms = 100
+verbose-http-errors = true
+http-validate-host = false
+
+#Peering endpoint config
+p2p-listen-endpoint = 0.0.0.0:9876
+p2p-server-address = 0.0.0.0:9876
+
+# State History Settings (need add to start params --disable-replay-opts )
+plugin = eosio::state_history_plugin
+state-history-dir = state-history
+trace-history = true
+chain-state-history = true
+state-history-endpoint = 0.0.0.0:8080
+
+
+allowed-connection = any
+
+max-clients = 150
+connection-cleanup-period = 30
+sync-fetch-span = 2000
+enable-account-queries = true
+
+# Core Blockchain plugins
+plugin = eosio::chain_plugin
+plugin = eosio::chain_api_plugin
+plugin = eosio::http_plugin
+
+#Peers list - Refer this link for latest: https://validate.eosnation.io/wax/reports/config.html
+
+# alohaeosprod: US, Oregon
+p2p-peer-address = peer.wax.alohaeos.com:9876
+
+# blacklusionx: DE, Germany
+p2p-peer-address = peer1.wax.blacklusion.io:4646
+
+# blacklusionx: DE, Germany
+p2p-peer-address = peer1-emea.wax.blacklusion.io:4646
+
+# bp.wecan: US, NewYork
+p2p-peer-address = seed3-wax-mainnet.wecan.dev:14998
+
+# dapplica: DE, Germany-Finland
+p2p-peer-address = wax.dapplica.io:9876
+
+# eosarabianet: DE, Munich
+p2p-peer-address = p2p-wax.eosarabia.net:9876
+
+# eosdacserver: GB, United Kingdom
+p2p-peer-address = wax-p2p.eosdac.io:29876
+
+# eosdublinwow: FI, Finland
+p2p-peer-address = wax.p2p.eosdublin.io:9876
+
+# eoseouldotio: JP, Seoul
+p2p-peer-address = p2p.wax.eoseoul.io:29876
+
+# eosphereiobp: AU, Sydney
+p2p-peer-address = peer2-wax.eosphere.io:9876
+
+# guild.nefty: FI, Finland
+p2p-peer-address = p2p-node2.neftyblocks.com:9876
+
+# ledgerwiseio: FI, LB
+p2p-peer-address = waxp2p.ledgerwise.io:21877
+
+# waxhiveguild: FI, Finnland
+p2p-peer-address = peer1.hivebp.io:9876
+```
+
+
 
 
