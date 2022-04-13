@@ -163,9 +163,10 @@ Follow the below steps to config the nodeos:
 mkdir /home/data
 mkdir /home/conf
 
+cd /home/data
 nano config.ini
 ```
-Below is an example config.ini file which is customized to setup state-history node, you can just copy and paste:
+Below is an example **mainnnet** config.ini file which is customized to setup state-history node, you can just copy and paste:
 
 ```
 wasm-runtime = eos-vm-jit
@@ -202,7 +203,6 @@ trace-history = true
 chain-state-history = true
 state-history-endpoint = 0.0.0.0:8080
 
-
 allowed-connection = any
 
 max-clients = 150
@@ -215,7 +215,7 @@ plugin = eosio::chain_plugin
 plugin = eosio::chain_api_plugin
 plugin = eosio::http_plugin
 
-#Peers list - Refer this link for latest: https://validate.eosnation.io/wax/reports/config.html
+#Peers list - Refer this link for mainnet latest peers: https://validate.eosnation.io/wax/reports/config.html
 
 # alohaeosprod: US, Oregon
 p2p-peer-address = peer.wax.alohaeos.com:9876
@@ -256,7 +256,145 @@ p2p-peer-address = waxp2p.ledgerwise.io:21877
 # waxhiveguild: FI, Finnland
 p2p-peer-address = peer1.hivebp.io:9876
 ```
+If you are starting the node from the 1st block, then you also need to have **genesis.json** file as well:
+
+```
+cd /home/conf
+nano genesis.json
+```
+Add the following config to the genesis.json file. This is for the **WAX Mainnet**:
+```
+{
+  "initial_timestamp": "2019-06-05T12:00:00.000",
+  "initial_key": "EOS8i2pkwtv2JmdYWNJdcy5BcJ7wCE5q6mpE1hwT25HdgHMzeRday",
+  "initial_configuration": {
+    "max_block_net_usage": 1048576,
+    "target_block_net_usage_pct": 1000,
+    "max_transaction_net_usage": 524288,
+    "base_per_transaction_net_usage": 12,
+    "net_usage_leeway": 500,
+    "context_free_discount_net_usage_num": 20,
+    "context_free_discount_net_usage_den": 100,
+    "max_block_cpu_usage": 500000,
+    "target_block_cpu_usage_pct": 2000,
+    "max_transaction_cpu_usage": 150000,
+    "min_transaction_cpu_usage": 100,
+    "max_transaction_lifetime": 3600,
+    "deferred_trx_expiration_window": 600,
+    "max_transaction_delay": 3888000,
+    "max_inline_action_size": 4096,
+    "max_inline_action_depth": 4,
+    "max_authority_depth": 6
+  }
+}
+```
+For **WAX Testnet**, add the following config to the genesis.json file:
+```
+{
+  "initial_timestamp": "2019-12-06T06:06:06.000",
+  "initial_key": "EOS7PmWAXLBaqCzSgbq8cyr2HFztQpwBpXk3djBJA8fyoyUnYM37q",
+  "initial_configuration": {
+    "max_block_net_usage": 1048576,
+    "target_block_net_usage_pct": 1000,
+    "max_transaction_net_usage": 524288,
+    "base_per_transaction_net_usage": 12,
+    "net_usage_leeway": 500,
+    "context_free_discount_net_usage_num": 20,
+    "context_free_discount_net_usage_den": 100,
+    "max_block_cpu_usage": 200000,
+    "target_block_cpu_usage_pct": 2500,
+    "max_transaction_cpu_usage": 150000,
+    "min_transaction_cpu_usage": 100,
+    "max_transaction_lifetime": 3600,
+    "deferred_trx_expiration_window": 600,
+    "max_transaction_delay": 3888000,
+    "max_inline_action_size": 4096,
+    "max_inline_action_depth": 6,
+    "max_authority_depth": 6
+  }
+}
+
+```
+##### 9. Running the Node:
+
+Once you are through the previous steps, the next step is to get started with the steps to run the node and sync with the WAX Mainnet/Testnet:
+
+You can start the **nodeos** using the command and parameters below:
+
+For starting the node from genesis:
+```
+nodeos --disable-replay-opts --data-dir /home/data/ --config-dir /home/data/ --genesis-json=/home/conf/genesis.json
+```
+For starting the node from a snapshot:
+```
+nodeos --disable-replay-opts --data-dir /home/data/ --config-dir /home/data/ --snapshot /home/data/snapshots/**<replace with snapshot file name>**
+```
+###### Running and managing nodeos using scripts:
+
+The below start and stop scripts will help you to daemonize and manage the nodeos service.
+```
+cd /home/conf
+vim start.sh
+```
+**start.sh**
+```
+#!/bin/bash
+DATADIR="/home/data"
+
+#change the directory path according to your configuration
+NODEOSBINDIR="/usr/opt/wax/2013wax01-mv/bin/" 
 
 
+$DATADIR/stop.sh
+echo -e "Starting Nodeos \n";
+
+ulimit -c unlimited
+ulimit -n 65535
+ulimit -s 64000
+
+$NODEOSBINDIR/nodeos/nodeos --data-dir $DATADIR --config-dir $DATADIR "$@" > $DATADIR/stdout.txt 2> $DATADIR/stderr.txt &  echo $! > $DATADIR/nodeos.pid
+```
+**stop.sh**
+```
+#!/bin/bash
+DIR="/home/data"
+ if [ -f $DIR"/nodeos.pid" ]; then
+        pid=`cat $DIR"/nodeos.pid"`
+        echo $pid
+        kill $pid
 
 
+        echo -ne "Stoping Nodeos"
+
+        while true; do
+            [ ! -d "/proc/$pid/fd" ] && break
+            echo -ne "."
+            sleep 1
+        done
+        rm -r $DIR"/nodeos.pid"
+
+        DATE=$(date -d "now" +'%Y_%m_%d-%H_%M')
+        if [ ! -d $DIR/logs ]; then
+            mkdir $DIR/logs
+        fi
+        tar -pcvzf $DIR/logs/stderr-$DATE.txt.tar.gz stderr.txt stdout.txt
+
+
+        echo -ne "\rNodeos Stopped.    \n"
+    fi
+```
+
+All you have to do now is start the script and monitor the logs in stderr.txt in /home/data folder.
+
+```
+tail -f stderr.tx
+```
+Your State-History node will now start syncing with the configured peers and catch-up with the chain headblock. It may take up to 2-3 weeks for a complete block sync from genesis for WAX Mainnet. It may also help if you choose a few closely located peers to limit peer overload and ensure low latency.
+
+Example screenshot when the node is syncing successfully:
+
+![image](https://user-images.githubusercontent.com/15923938/163224549-92f633fc-6ab5-4a15-adee-fe165ece874b.png)
+
+As your node syncs from the start of the chain it will build the log and index files in the /blocks and /state-history directories in your /home/data folder.
+
+**You can now query the node rest endpoint at http port 8888 and for websockets it is port 8080**
