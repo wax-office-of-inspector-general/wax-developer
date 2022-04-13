@@ -327,7 +327,7 @@ nodeos --disable-replay-opts --data-dir /home/data/ --config-dir /home/data/ --g
 ```
 For starting the node from a snapshot:
 ```
-nodeos --disable-replay-opts --data-dir /home/data/ --config-dir /home/data/ --snapshot /home/data/snapshots/**<replace with snapshot file name>**
+nodeos --disable-replay-opts --data-dir /home/data/ --config-dir /home/data/ --snapshot /home/data/snapshots/<replace with snapshot file name>
 ```
 ###### Running and managing nodeos using scripts:
 
