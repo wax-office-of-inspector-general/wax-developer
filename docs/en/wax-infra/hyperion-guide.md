@@ -263,6 +263,10 @@ Copy the shell script from here and run it on the server: https://www.rabbitmq.c
 cd builds
 vim rabbit_install.sh
 ```
+After copying the script, you can now execute it:
+```
+bash rabbit_install.sh
+```
 Let's create directories in our ZFS Storage pool for RabbitMq:
 ```
 cd /home
@@ -277,8 +281,12 @@ vim rabbitmq-env.conf
 ```
 Add the following lines to the config file:
 ```
-`RABBITMQ_MNESIA_BASE=/home/rabbitmq`
-`RABBITMQ_LOG_BASE=/home/rabbitmq/log`
+RABBITMQ_MNESIA_BASE=/home/rabbitmq
+RABBITMQ_LOG_BASE=/home/rabbitmq/log
+```
+Restart the rabbit server after updating the config:
+```
+service rabbitmq-server restart
 ```
 ```
 sudo rabbitmq-plugins enable rabbitmq_management
