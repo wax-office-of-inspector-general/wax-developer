@@ -8,48 +8,48 @@ lang-ref: Docker Setup
 lang: es
 ---
 
-<a href="https://www.docker.com/" target="_blank">Docker</a> is a *container* platform that's similar to a virtual machine. Docker allows you to run software, applications, and even operating systems like Ubuntu from an isolated environment. Refer to Docker's <a href="https://www.docker.com/why-docker" target="_blank">Overview</a> guide to learn more.
+<a href="https://www.docker.com/" target="_blank">Docker</a> es una plataforma *contenedora* similar a una máquina virtual. Docker permite ejecutar software, aplicaciones e incluso sistemas operativos como Ubuntu desde un entorno aislado. Si quieres profundizar más, puedes explorar la <a href="https://www.docker.com/why-docker" target="_blank">Guía General</a> de Docker.
 
-Our development and production Docker images provide a fast, easy way to run the WAX Blockchain in minutes. You can also use our Docker images to build and deploy smart contracts.
+Nuestras imágenes Docker de desarrollo y producción proporcionan una forma rápida y sencilla de ejecutar la Blockchain de WAX en cuestión de minutos. También puedes utilizar nuestras imágenes Docker para construir y desplegar contratos inteligentes.
 
-Using our Docker environment offers the following benefits:
+El uso de nuestro entorno Docker ofrece las siguientes ventajas:
 
-* Adds convenience and speed to your development efforts
-* Eliminates the need to manage source code 
-* Eliminates the need to meet our [Supported Operating Systems](/es/tools/os) requirements
-* Doesn't overwrite an existing installation of EOSIO
-* Makes it easy to upgrade and try out new features
-* Makes it easy to switch between production and development environments
+* Añade comodidad y rapidez a tus tareas de desarrollo.
+* Elimina la necesidad de gestionar el código fuente.
+* Elimina la necesidad de cumplir con los requisitos de [Sistemas Operativos Compatibles](/es/tools/os).
+* No sobrescribe una instalación de EOSIO ya existente.
+* Facilita la actualización y la prueba de nuevas funciones.
+* Facilita la alternancia entre los entornos de producción y desarrollo.
 
-<!--<strong>Note:</strong> While it isn't required to build the source code from our <a href="https://github.com/worldwide-asset-exchange" target="_blank">WAX Git Repository</a>, we still recommend that you . 
+<!--<strong>Nota:</strong> While it isn't required to build the source code from our <a href="https://github.com/worldwide-asset-exchange" target="_blank">WAX Git Repository</a>, we still recommend that you . 
 {: .label .label-yellow }-->
 
-## What's Included
+## Qué incluye
 
-Below is a list of our core Docker images. For a complete list, refer to <a href="https://hub.docker.com/u/waxteam" target="_blank">waxteam - Docker Repositories</a>.
+A continuación se muestra una lista de nuestras imágenes Docker principales. Para obtener una lista completa, accede a los <a href="https://hub.docker.com/u/waxteam" target="_blank">Repositorios waxteam - Docker</a>.
 
 <table>
 <thead>
 <tr>
-<th style="width:25%">Docker Image</th>
-<th>Description</th>
+<th style="width:25%">Imagen de Docker</th>
+<th>Descripción</th>
 </tr>
 </thead>
 
 <tbody>
 <tr>
 <td><a href="https://hub.docker.com/r/waxteam/dev" target="_blank">waxteam/dev</a></td>
-<td>This <strong>development</strong> image includes everything you need to get the WAX Blockchain up and running. You can use this image to run a WAX node, create a local development environment, and create and compile smart contracts using the [WAX Contract Development Toolkit (WAX-CDT)](/es/dapp-development/wax-cdt/).</td>
+<td>Esta imagen de <strong>desarrollo</strong> incluye todo lo que necesitas para poner en marcha la Blockchain de WAX. Puedes usar esta imagen para ejecutar un nodo WAX, crear un entorno de desarrollo local y crear y compilar contratos inteligentes usando el [Kit de herramientas de desarrollo de contratos WAX (WAX Contract Development Toolkit o WAX-CDT)](/es/dapp-development/wax-cdt/).</td>
 </tr>
 
 <tr>
 <td><a href="https://hub.docker.com/r/waxteam/cdt" target="_blank">waxteam/cdt</a></td>
-<td>Use this image to create and compile smart contracts using the [WAX Contract Development Toolkit (WAX-CDT)](/es/dapp-development/wax-cdt/). This image does <strong>not</strong> allow you to run a WAX node or use [Blockchain Tools](/es/tools/blockchain_tools).</td>
+<td>Utiliza esta imagen para crear y compilar contratos inteligentes a través del [Kit de herramientas de desarrollo de contratos WAX (WAX Contract Development Toolkit o WAX-CDT)](/es/dapp-development/wax-cdt/). Esta imagen <strong>no permite</strong> ejecutar un nodo WAX ni utilizar [Herramientas de la Blockchain](/es/tools/blockchain_tools).</td>
 </tr>
 
     <tr>
 <td><a href="https://hub.docker.com/r/waxteam/production" target="_blank">waxteam/production</a></td>
-<td>It's recommended that you use our <a href="https://hub.docker.com/r/waxteam/production" target="_blank">production docker images</a> to run a production node. Refer to <a href="https://github.com/worldwide-asset-exchange/wax-blockchain/tree/develop/samples/mainnet" target="_blank">Running a WAX node</a> for more information.</td>
+<td>Te recomendamos usar nuestras <a href="https://hub.docker.com/r/waxteam/production" target="_blank">imágenes de producción</a> para ejecutar un nodo de producción. Para más información, dirígete a: <a href="https://github.com/worldwide-asset-exchange/wax-blockchain/tree/develop/samples/mainnet" target="_blank">Ejecutar un nodo de WAX</a>.</td>
 </tr>
 
 </tbody>
