@@ -1,9 +1,11 @@
 ---
-title: Docker Deploy
+title: Despliegue de Docker
 layout: default
 nav_order: 72
 parent: Deploy Your dApp on WAX
 grand_parent: dApp Development
+lang-ref: Docker Deploy
+lang: es
 ---
 
 In this guide, you'll learn how to customize the **hello-world** build scripts to deploy your smart contracts to the WAX mainnet.
