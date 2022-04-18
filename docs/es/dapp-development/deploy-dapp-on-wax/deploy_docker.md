@@ -24,7 +24,7 @@ Antes de empezar:
 
 Para modificar los scripts **hello-world** y desplegar tu contrato inteligente:
 
-1. Desde la línea de comandos, encuentra la carpeta **hello-world** en el <a href="https://github.com/worldwide-asset-exchange/wax-blockchain" target="_blank">Repositorio de código fuente de la WAX Blockchain</a>:
+1. Desde la línea de comandos, encuentra la carpeta **hello-world** en el <a href="https://github.com/worldwide-asset-exchange/wax-blockchain" target="_blank">Repositorio de código fuente de la Blockchain de WAX</a>:
 
     ```shell
     cd wax-blockchain/samples/hello-world
@@ -98,9 +98,9 @@ Para lanzar tu contrato inteligente en la Blockchain de WAX:
     <table>
     <thead>
     <tr>
-    <th style="width:28%">Parameter</th>
-    <th>Example</th>
-    <th>Description</th>
+    <th style="width:28%">Parámetro</th>
+    <th>Ejemplo</th>
+    <th>Descripción</th>
     </tr>
     </thead>
 
@@ -140,9 +140,9 @@ Para lanzar tu contrato inteligente en la Blockchain de WAX:
     <table>
     <thead>
     <tr>
-    <th style="width:28%">Parameter</th>
-    <th>Example</th>
-    <th>Description</th>
+    <th style="width:28%">Parámetro</th>
+    <th>Ejemplo</th>
+    <th>Descripción</th>
     </tr>
     </thead>
 
@@ -173,7 +173,7 @@ Para lanzar tu contrato inteligente en la Blockchain de WAX:
     make test CONTRACT_ACCOUNT=waxsc1
     ```
 
-¡Tu dApp ya está publicada en WAX! 
+¡Tu dApp ya está en WAX! 
 
 <strong>Nota:</strong> Dependiendo de cómo esté construido el proceso de incorporación de tu dApp, es posible que tus clientes tengan que crear una cuenta de WAX para usar tu dApp en WAX.
 {: .label .label-yellow }
