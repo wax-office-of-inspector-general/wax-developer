@@ -20,10 +20,10 @@ To use **WaxJS**, you simply need to:
 1. Add the **WaxJS** library to your client
 2. Use `wax.login` to sign users in with WAX Cloud Wallet (Auto-login features available)
 
-![WaxJS Login](/assets/img/waxjs_login.png){:class="img-responsive"}
+![WaxJS Login](/assets/img/wax-cloud-wallet/waxjs/waxjs_login.png){:class="img-responsive"}
 
 3. Use `wax.api` to send your transactions to the WAX Blockchain
 
-![WaxJS Sign](/assets/img/waxjs_sign.png){:class="img-responsive"}
+![WaxJS Sign](/assets/img/wax-cloud-wallet/waxjs/waxjs_sign.png){:class="img-responsive"}
 
 In the next sections, you'll learn how to install and use **WaxJS**.
