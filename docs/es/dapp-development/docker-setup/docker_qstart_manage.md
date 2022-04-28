@@ -1,42 +1,44 @@
 ---
-title: Manage Containers
+title: Gestionar los contenedores
 nav_order: 24
 layout: default
 parent: Docker Setup
 grand_parent: dApp Development
+lang-ref: Manage Containers
+lang: es
 ---
 
-To exit your interactive bash session (without stopping your container), press `ctrl-p` + `ctrl-q` to send an escape sequence. The console prints:
+Para salir de la sesión interactiva de bash (sin detener tu contenedor), presiona `ctrl-p` + `ctrl-q` para enviar una secuencia de escape. La consola mostrará:
 
 ```shell
 read escape sequence
 ```
 
-The command above returns you to your host's command prompt. You can verify that your container is still running by using the `docker ps` command:
+El comando anterior te devuelve al prompt de comandos de tu host. Puedes verificar que tu contenedor sigue funcionando utilizando el comando `docker ps`:
 
 ```shell
 docker ps
 ```
 
-To re-attach to your bash session, use the `docker attach` command.
+Para volver a acceder a tu sesión de bash, utiliza el comando `docker attach`.
 
 ```shell
 docker attach waxdev
 ```
 
-To stop your container, use the `docker stop` command.
+Para detener el contenedor, utiliza el comando `docker stop`.
 
 ```shell
 docker stop waxdev
 ```
 
-To re-start your container, use the `docker start` command.
+Para reiniciar tu contenedor, utiliza el comando `docker start`.
 
 ```shell
 docker start waxdev
 ```
 
-Now that you've set up your Docker environment, you're ready to follow the guides in this section. While it's not required to complete the [WAX Blockchain Setup](/docs\dapp-development\wax-blockchain-setup) in the next tutorial, we still recommend downloading the source code to access code samples and **make** scripts.
+Ahora que has configurado tu entorno de Docker, estás listo para seguir el resto de guías de esta sección. Aunque no es necesario completar la [Configuración de la Blockchain de WAX](/docs\dapp-development\wax-blockchain-setup) en el siguiente tutorial, recomendamos descargar el código fuente para acceder a las muestras de códigos y a los códigos **make**.
 
 
 
