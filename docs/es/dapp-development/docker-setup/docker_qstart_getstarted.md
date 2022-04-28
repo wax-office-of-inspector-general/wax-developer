@@ -1,20 +1,22 @@
 ---
-title: Run a WAX Container
+title: Ejecutar Contenedor de WAX
 nav_order: 22
 layout: default
 parent: Docker Setup
 grand_parent: dApp Development
+lang-ref: Run a WAX Container
+lang: es
 ---
 
-To run the **waxteam/dev** Docker image:
+Para ejecutar la imagen Docker **waxteam/dev**:
 
-1. Install <a href="https://www.docker.com/get-started" target="_blank">Docker</a> (if you haven't done so already). 
+1. Instala <a href="https://www.docker.com/get-started" target="_blank">Docker</a> (si aún no lo has hecho). 
 
-    <strong>Linux Users:</strong> It's recommended that you configure Docker to run without sudo to utilize all of our Docker-enabled <strong>make</strong> scripts. Refer to <a href="https://docs.docker.com/install/linux/linux-postinstall/" target="_blank">Post-installation steps for Linux</a> for more information.{: .label .label-yellow }
+    <strong>Usuarios de Linux:</strong> Se recomienda configurar Docker para que se ejecute sin sudo y así poder utilizar todos nuestros scripts <strong>make</strong> habilitados para Docker. Para más información, dirígete a <a href="https://docs.docker.com/install/linux/linux-postinstall/" target="_blank">Pasos posteriores a la instalación de Linux</a>.{: .label .label-yellow }
 
-2. Create a new directory named **wax**. You can use this folder to store WAX Blockchain source code, samples, and your WAX smart contracts directory. 
+2. Crea un nuevo directorio llamado **wax**. Puedes usar esta carpeta para almacenar el código fuente de la Blockchain, muestras y tu directorio de contratos inteligentes. 
 
-3. From the command line, start your WAX containers in interactive mode and share your host's **wax** directory. This command starts a bash session inside the container.
+3. Desde la línea de comandos, inicia tus contenedores WAX en modo interactivo y comparte el directorio **wax** de tu host. Este comando abre una sesión bash dentro del contenedor.
 
     **Linux**
 
@@ -36,13 +38,13 @@ To run the **waxteam/dev** Docker image:
     docker run -it --name waxcdt -v c:\wax:/wax waxteam/cdt bash
     ```
 
-    The console prints something similar to:
+    La consola mostrará algo similar a esto:
 
     ```shell
     root@b6e444e3cc33:/#
     ```
 
-You should now have a running container with an active bash session. You can use this bash session to follow along with our Quickstart guides and tutorials.
+Ahora deberías tener un contenedor en funcionamiento con una sesión de bash activa. Puedes utilizar esta sesión de bash para seguir nuestras guías y tutoriales de inicio rápido.
 
 
 
