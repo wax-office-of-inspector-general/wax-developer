@@ -8,47 +8,49 @@ lang-ref: WAX Blockchain Setup
 lang: es
 ---
 
-To set up and use the WAX Blockchain, it's recommended that you use our  <a href="https://hub.docker.com/u/waxteam" target="_blank">waxteam - Docker Images</a>.  Our docker images provide a fast, fully supported way to run a node in seconds. Refer to [Docker Quickstart](/es/dapp-development/docker-setup/) for more information.
+Para configurar y utilizar la blockchain de WAX se recomienda utilizar nuestro <a href="https://hub.docker.com/u/waxteam" target="_blank">waxteam - Docker Images</a>. Nuestras imágenes Docker proporcionan una forma rápida y totalmente compatible de ejecutar un nodo en segundos. Consulte [Docker Quickstart](/es/dapp-development/docker-setup/) para más información.
 
-Our production and development Docker images include everything that's available from the <a href="https://github.com/worldwide-asset-exchange/wax-blockchain" target="_blank">WAX Blockchain Source Code Repository</a>, allowing you to run WAX nodes and build and deploy smart contracts.
+Nuestras imágenes Docker de producción y desarrollo incluyen todo lo que está disponible en el <a href="https://github.com/worldwide-asset-exchange/wax-blockchain" target="_blank">Repositorio de Código Fuente de WAX Blockchain</a>, permitiéndole ejecutar nodos WAX y construir y desplegar contratos inteligentes.
 
-If you'd like to access our sample contracts and scripts from your local drive or have a need to install the WAX Blockchain instead of using Docker, you can use this guide to download and optionally build the WAX Blockchain source code.
+Si quieres acceder a nuestros contratos y scripts de muestra desde tu disco local o tienes la necesidad de instalar WAX Blockchain en lugar de usar Docker, puedes usar esta guía para descargar y opcionalmente construir el código fuente de WAX Blockchain.
 
-<strong>Important:</strong> At this time, pre-compiled packages are not available. Support is <strong>not</strong> available when you build the WAX blockchain from source.{: .label .label-yellow }
-
-## What's Included
-
-The WAX Blockchain is a fork of <a href="https://developers.eos.io/" target="_blank">EOSIO</a>. This <a href="https://github.com/worldwide-asset-exchange/wax-blockchain" target="_blank">WAX Blockchain Source Code Repository</a> includes and installs:
-
-- WAX Blockchain source code
-- Dependencies
-- [Blockchain Tools](/es/tools/blockchain_tools), including keosd, nodeos, and cleos
-- Sample contracts
-
-You can use these components to manage local wallets, create local accounts, interact with the WAX Blockchain, and more. 
-
-<strong>EOS Developers:</strong> Building the WAX Source Code Repository will overwrite a previous EOS installation. 
+<strong>Importante:</strong> Hasta la fecha, los paquetes precompilados no están disponibles. Por lo que <strong>no hay soporte disponible</strong> si construyes WAX Blockchain desde el código fuente.
 {: .label .label-yellow }
 
-### Docker Quick Deploy
+## Qué incluye
 
-The WAX Source Code Repository includes a Hello World sample to quickly build and deploy WAX smart contracts to the WAX Blockchain. Refer to [Docker Quick Deploy](/es/dapp-development/deploy-dapp-on-wax/deploy_docker) for more information.
+WAX Blockchain es un fork de <a href="https://developers.eos.io/" target="_blank">EOSIO</a>. Este <a href="https://github.com/worldwide-asset-exchange/wax-blockchain" target="_blank">repositorio de código fuente de WAX Blockchain</a> incluye e instala:
+
+- Código fuente de WAX Blockchain
+- Dependencias
+- [Blockchain Tools](/es/tools/blockchain_tools), incluyendo keosd, nodeos, and cleos
+- Ejemplos de smart contracts
+
+Puedes utilizar estos componentes para gestionar wallets locales, crear cuentas locales, interactuar con la WAX Blockchain, y más.
+
+<strong>Desarrolladores EOS:</strong> La construcción del Repositorio de Código Fuente de WAX sobrescribirá cualquier instalación anterior de EOS. 
+{: .label .label-yellow }
+
+### Despliegue Rápido con Docker
+
+El Repositorio de Código Fuente de WAX incluye un ejemplo de Hello World para construir y desplegar rápidamente los contratos inteligentes de WAX en la Blockchain de WAX. Consulta [Docker Quick Deploy](/es/dapp-development/deploy-dapp-on-wax/deploy_docker) para más información.
+   
+### Dependencias
     
-### Dependencies
-    
-<p>For a complete list of dependencies, refer to <a href="https://github.com/worldwide-asset-exchange/wax-blockchain/tree/develop/scripts" target="_blank">wax-blockchain/scripts</a> and locate the `wax_build_` file for your operating system.</p>
+<p>Para una completa lista de dependencias consulte <a href="https://github.com/worldwide-asset-exchange/wax-blockchain/tree/develop/scripts" target="_blank">wax-blockchain/scripts</a> y localiza el archivo `wax_build_` para tu sistema operativo.</p>
 
-## System Requirements
+## Requisitos de Sistema
 
-If you're not using our Docker images, you'll need to:
+Si no está utilizando nuestras imágenes Docker, necesitará hacerlo:
 
-* Refer to [Supported Operating Systems](/es/tools/os) to make sure you meet the operating system requirements. 
+* Consulta [Supported Operating Systems](/es/tools/os) para confirmar todos los requerimientos del sistema. 
 
-    <strong>Ubuntu 18.04 Users:</strong> Refer to [Known Issues](/es/troubleshooting/) before you begin the WAX Blockchain Setup.{: .label .label-yellow }
+    <strong>Usuarios de Ubuntu 18.04:</strong> Consulta [Problemas Conocidos](/es/troubleshooting/) antes de configurar WAX Blockchain.
+    {: .label .label-yellow }
 
-* Have at least 7 GB of free RAM.
+* Dispón, como mínimo, de 7 GB de RAM libre.
 
-* Have at least 20 GB of free hard drive space.
+* Dispón, como mínimo, de 20 GB de espacio libre en el disco duro.
 
 
 

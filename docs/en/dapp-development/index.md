@@ -28,7 +28,7 @@ Once you've set up your development environment, these tutorials can help you la
 <span class="anchor" id="guides"></span>
 <h2>Guides</h2>
 
-Learn how to make API requests to your local blockchain and the WAX mainnet, and get an overview of the WAX-CDT C++ API used to build your smart contracts.
+Learn how to make API requests to your local blockchain, WAX testnet or WAX mainnet, and get an overview of the WAX-CDT C++ API used to build your smart contracts.
 
   * [WAX RPC API](/en/api-reference)
   * [WAX-CDT API](/en/api-reference/cdt_api)

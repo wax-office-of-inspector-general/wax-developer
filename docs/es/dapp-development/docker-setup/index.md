@@ -16,7 +16,7 @@ El uso de nuestro entorno Docker ofrece las siguientes ventajas:
 
 * Añade comodidad y rapidez a tus tareas de desarrollo.
 * Elimina la necesidad de gestionar el código fuente.
-* Elimina la necesidad de cumplir con los requisitos de [Sistemas Operativos Compatibles](/es/tools/os).
+* Elimina la necesidad de cumplir con los requisitos de nuestros [Sistemas Operativos Compatibles](/es/tools/os).
 * No sobrescribe una instalación de EOSIO ya existente.
 * Facilita la actualización y la prueba de nuevas funciones.
 * Facilita la alternancia entre los entornos de producción y desarrollo.
@@ -47,7 +47,6 @@ A continuación se muestra una lista de nuestras imágenes Docker principales. P
 <td>Utiliza esta imagen para crear y compilar contratos inteligentes a través del [Kit de herramientas de desarrollo de contratos WAX (WAX Contract Development Toolkit o WAX-CDT)](/es/dapp-development/wax-cdt/). Esta imagen <strong>no permite</strong> ejecutar un nodo WAX ni utilizar [Herramientas de la Blockchain](/es/tools/blockchain_tools).</td>
 </tr>
 
-    <tr>
 <td><a href="https://hub.docker.com/r/waxteam/production" target="_blank">waxteam/production</a></td>
 <td>Te recomendamos usar nuestras <a href="https://hub.docker.com/r/waxteam/production" target="_blank">imágenes de producción</a> para ejecutar un nodo de producción. Para más información, dirígete a: <a href="https://github.com/worldwide-asset-exchange/wax-blockchain/tree/develop/samples/mainnet" target="_blank">Ejecutar un nodo de WAX</a>.</td>
 </tr>

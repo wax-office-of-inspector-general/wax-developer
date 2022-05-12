@@ -18,7 +18,8 @@ Refer to our [Docker Quickstart](/en/dapp-development/docker-setup/) for more in
 
 If you'd like to access our sample contracts and scripts from your local drive or have a need to install WAX-CDT instead of using Docker, you can use this guide to download and optionally build the WAX-CDT source code.
 
-<strong>Important:</strong> At this time, pre-compiled packages are not available. Support is <strong>not</strong> available when you build WAX-CDT from source.{: .label .label-yellow }
+<strong>Important:</strong> At this time, pre-compiled packages are not available. Support is <strong>not</strong> available when you build WAX-CDT from source.
+{: .label .label-yellow }
 
 ## What's Included
 
@@ -28,23 +29,13 @@ If you'd like to access our sample contracts and scripts from your local drive o
 - CMake scripts and tools to build optimized, high-performance WASM files
 - Support for Ricardian files
 
-<!--WAX-CDT includes various **eosio** commands, built around the <a href="https://clang.llvm.org/" target="_blank">Clang</a> front-end and tooling infrastructure. This collection includes various tools to :
-
-- **eosio-cpp:** C++ WebAssembly Compiler
-- **eosio-ld:** WebAssembly Linker
-- **eosio-abigen:** C++ ABI Generator
+WAX-CDT includes various **eosio** commands, built around the <a href="https://clang.llvm.org/" target="_blank">Clang</a> front-end and tooling infrastructure. This collection includes various tools to compile your smart contracts and create smart contract templates. Refer to [WAX-CDT Options](/en/tools/cdt_options) for a list of tools and parameters:
 
 - Sample contracts and customizable **make** scripts to automatically generate WASM and ABI files.
 - <a href="https://clang.llvm.org/" target="_blank">Clang</a> based tools , including
-
-
-compile your smart contracts and create smart contract templates. Refer to [WAX-CDT Options](/en/tools/cdt_options) for a list of tools and parameters.
-
-WAX-CDT includes various **eosio** commands, built around the <a href="https://clang.llvm.org/" target="_blank">Clang</a> front-end and tooling infrastructure. This collection includes various tools to :
-
-- **eosio-cpp:** C++ WebAssembly Compiler
-- **eosio-ld:** WebAssembly Linker
-- **eosio-abigen:** C++ ABI Generator-->
+  - **eosio-cpp:** C++ WebAssembly Compiler
+  - **eosio-ld:** WebAssembly Linker
+  - **eosio-abigen:** C++ ABI Generator
 
 ## How it Works
 

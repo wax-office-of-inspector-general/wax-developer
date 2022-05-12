@@ -38,7 +38,7 @@ Para reiniciar tu contenedor, utiliza el comando `docker start`.
 docker start waxdev
 ```
 
-Ahora que has configurado tu entorno de Docker, estás listo para seguir el resto de guías de esta sección. Aunque no es necesario completar la [Configuración de la Blockchain de WAX](/docs\dapp-development\wax-blockchain-setup) en el siguiente tutorial, recomendamos descargar el código fuente para acceder a las muestras de códigos y a los códigos **make**.
+Ahora que has configurado tu entorno de Docker, estás listo para seguir el resto de guías de esta sección. Aunque no es necesario completar la [Configuración de la Blockchain de WAX](/docs\dapp-development\wax-blockchain-setup) en el siguiente tutorial, recomendamos descargar el código fuente para acceder a las muestras de códigos y a los scripts **make**.
 
 
 

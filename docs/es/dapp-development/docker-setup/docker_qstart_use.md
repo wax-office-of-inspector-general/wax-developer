@@ -32,8 +32,9 @@ A lo largo de nuestra sección de desarrollo de dApps, enumeraremos varios pasos
 1. En la línea de comandos, introduce el comando `cleos` para obtener información sobre la blockchain de la mainnet de WAX.
 
 ```shell
-cleos -u https://chain.wax.io get info
+cleos -u https://wax-api-url get info
 ```
+*Consulta https://validate.eosnation.io/wax/reports/endpoints.html para obtener un listado actualizado de APIs disponibles*
 <p>&nbsp;</p>
 
 Cuando inicias una sesión interactiva de bash, la *línea de comandos* es el prompt de bash de tu contenedor Docker:

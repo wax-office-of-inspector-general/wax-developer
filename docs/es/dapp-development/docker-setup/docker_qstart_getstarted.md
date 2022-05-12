@@ -14,7 +14,7 @@ Para ejecutar la imagen Docker **waxteam/dev**:
 
     <strong>Usuarios de Linux:</strong> Se recomienda configurar Docker para que se ejecute sin sudo y así poder utilizar todos nuestros scripts <strong>make</strong> habilitados para Docker. Para más información, dirígete a <a href="https://docs.docker.com/install/linux/linux-postinstall/" target="_blank">Pasos posteriores a la instalación de Linux</a>.{: .label .label-yellow }
 
-2. Crea un nuevo directorio llamado **wax**. Puedes usar esta carpeta para almacenar el código fuente de la Blockchain, muestras y tu directorio de contratos inteligentes. 
+2. Crea un nuevo directorio llamado **wax**. Puedes usar esta carpeta para almacenar el código fuente de la Blockchain, muestras y tu directorio de contratos inteligentes. Este directorio estará compartido entre tu sistema operativo y el contenedor Docker. Podrás editar tu código fuente con tu editor de código favorito en cualquiera de los dos entornos.
 
 3. Desde la línea de comandos, inicia tus contenedores WAX en modo interactivo y comparte el directorio **wax** de tu host. Este comando abre una sesión bash dentro del contenedor.
 
