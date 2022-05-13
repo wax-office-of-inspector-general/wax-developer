@@ -7,17 +7,17 @@ grand_parent: dApp Development
 lang-ref: Create a Smart Contract
 lang: es
 ---
-# Create a Smart Contract
+# Crear un Smart Contract
 
-In this section, you'll learn how to write and compile a WAX smart contract using **eosio-init**.
+En esta sección, aprenderás a escribir y compilar un contrato inteligente de WAX usando **eosio-init**.
 
-## How it Works
+## Cómo funciona
 
-**eosio-init** is a WAX-CDT tool that creates the following smart contract template/directory structure:
+**eosio-init** es una herramienta de WAX-CDT que crea la siguiente plantilla/directorio de contrato inteligente:
 
-- **include** folder: This includes a sample **.hpp** file.
-- **ricardian** folder: This includes a sample Ricardian contract markdown file.
-- **src** folder: This includes a sample **.cpp** smart contract file.
+- Carpeta **include**: Incluye una muestra de archivo **.hpp**.
+- Carpeta **ricardian**: This includes a sample Ricardian contract markdown file.
+- Carpeta **src**: This includes a sample **.cpp** smart contract file.
 
 The template files are named after the project name you specify when you use **eosio-init** from the command line. 
 
