@@ -1,11 +1,11 @@
 ---
-title: Smart Contract Basics
+title: Fundamentos de los contratos inteligentes
 layout: default
 nav_order: 61
 parent: Smart Contract Quickstart
 grand_parent: dApp Development
 lang-ref: Smart Contract Basics
-lang: en
+lang: es
 ---
 
 A WAX smart contract includes a collection of actions, type definitions, and persistent storage, allowing your dApp to sign transactions on the WAX Blockchain. When you call a smart contract from a front-end app:

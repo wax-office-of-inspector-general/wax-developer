@@ -1,11 +1,11 @@
 ---
-title: Deploy to Your Blockchain
+title: Desplegar a tu blockchain
 layout: default
 nav_order: 65
 parent: Smart Contract Quickstart
 grand_parent: dApp Development
 lang-ref: Deploy to Your Blockchain
-lang: en
+lang: es
 ---
 
 <!--To deploy your smart contract to your local development blockchain, you'll need to:

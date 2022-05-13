@@ -1,5 +1,5 @@
 ---
-title: Configura un entorno local para desarrollar tu dApp
+title: Configurar un entorno local para desarrollar tu dApp
 layout: default
 nav_order: 40
 parent: Desarrollo de dApps

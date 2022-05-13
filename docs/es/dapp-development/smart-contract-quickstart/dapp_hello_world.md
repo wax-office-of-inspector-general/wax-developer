@@ -1,11 +1,11 @@
 ---
-title: Create a Smart Contract
+title: Crear un Smart Contract
 layout: default
 nav_order: 62
 parent: Smart Contract Quickstart
 grand_parent: dApp Development
 lang-ref: Create a Smart Contract
-lang: en
+lang: es
 ---
 # Create a Smart Contract
 

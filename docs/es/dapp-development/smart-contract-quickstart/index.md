@@ -1,21 +1,21 @@
 ---
-title: Smart Contract Quickstart
+title: Inicio rápido del Smart Contract
 layout: default
 nav_order: 60
 parent: dApp Development
 has_children: true
 lang-ref: Smart Contract Quickstart
-lang: en
+lang: es
 ---
 
-A WAX smart contract is a WASM compiled C++ file that executes actions on the WAX Blockchain and stores persistent data on every WAX full node's RAM.
+Un contrato inteligente (Smart Contract) de WAX es un archivo C++ compilado por WASM que ejecuta acciones en la Blockchain de WAX y almacena datos persistentes en la RAM de cada nodo de WAX.
 
-In this tutorial, you'll learn how to create, compile, and deploy a WAX smart contract to your local development environment.
+En este tutorial, aprenderás a crear, compilar y desplegar un contrato inteligente WAX en tu entorno de desarrollo local.
 
-## Before You Begin
+## Antes de empezar
 
-- You'll need to complete our [Docker Quickstart](/en/dapp-development/docker-setup/) (recommended) or use the [WAX Blockchain Setup](/en/dapp-development/wax-blockchain-setup/) to build from source.
-- Have your local development environment ready. Refer to [Set Up a Local dApp Environment](/en/dapp-development/) for more information.
-- To compile and deploy your smart contract locally, you'll need to use the [WAX Contract Development Toolkit (WAX-CDT)](/en/dapp-development/wax-cdt/) and be familiar with basic concepts like WASM and ABI file generation.
+- Necesitarás completar nuestro [Inicio rápido de Docker](/en/dapp-development/docker-setup/) (recomendado) o usar la [Configuración de la Blockchain de WAX](/es/dapp-development/wax-blockchain-setup/) para poder usar el código fuente.
+- Ten preparado tu entorno de desarrollo local. Para más información, visita la guía [Configurar un entorno local para desarrollar tu dApp](/es/dapp-development/).
+- Para compilar y desplegar tu contrato inteligente de forma local, tendrás que utilizar el [Kit de herramientas para el desarrollo de contratos WAX (Contract Development Toolkit o WAX-CDT)](/es/dapp-development/wax-cdt/) y familiarizarte con conceptos básicos como la generación de archivos WASM y ABI.
 
 
