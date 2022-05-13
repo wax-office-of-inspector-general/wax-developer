@@ -8,88 +8,88 @@ lang-ref: Smart Contract Basics
 lang: es
 ---
 
-A WAX smart contract includes a collection of actions, type definitions, and persistent storage, allowing your dApp to sign transactions on the WAX Blockchain. When you call a smart contract from a front-end app:
+Un contrato inteligente (Smart Contract) de WAX incluye una recopilación de acciones, definiciones de tipos y almacenamiento persistente, lo que permite a tu dApp firmar transacciones en la Blockchain de WAX. Cuando llamas a un contrato inteligente desde una app front-end:
 
-- An ACTION is initialized
-- A message is pushed to the WAX mainnet 
-- The action completes, then continues to the next action (if required)
+- Se inicializa una ACCIÓN
+- Se envía un mensaje a la mainnet de WAX 
+- La acción se completa y continúa con la siguiente acción (si es necesario)
 
-## How it Works
+## Cómo funciona
 
-Smart contracts typically include header files, class inheritance, actions, permissions, persistent data, action dispatchers, and type definitions. 
+Los contratos inteligentes suelen incluir archivos de cabecera, herencia de clases, acciones, permisos, datos persistentes, despachadores de acciones y definiciones de tipos. 
 
-### Header Files
+### Archivos de cabecera
 
-C++ header files contain global declarations. Because WAX uses a fork of EOSIO, all of your WAX smart contracts will inherit from EOSIO contracts and classes. The <a href="https://github.com/worldwide-asset-exchange/wax-cdt/blob/master/libraries/eosiolib/eosio.hpp" target="_blank">eosio.hpp</a> header file must be included in every contract, and every contract must extend the <a href="https://github.com/worldwide-asset-exchange/wax-cdt/blob/master/libraries/eosiolib/contract.hpp" target="_blank">eosio::contract</a> class. 
+Los archivos de cabecera de C++ contienen declaraciones globales. Como WAX utiliza una rama de EOSIO, todos sus contratos inteligentes heredarán de los contratos y clases de EOSIO. El archivo <a href="https://github.com/worldwide-asset-exchange/wax-cdt/blob/master/libraries/eosiolib/eosio.hpp" target="_blank">eosio.hpp</a> debe incluirse en todos los contratos, y todo contrato debe incluir la clase <a href="https://github.com/worldwide-asset-exchange/wax-cdt/blob/master/libraries/eosiolib/contract.hpp" target="_blank">eosio::contract</a>. 
 
 ```
   #include <eosio/eosio.hpp>
 ```
 
-This gives your smart contract access to WAX's C/C++ API, allowing you to define actions and structures that enable your smart contract to communicate with the WAX Blockchain. Refer to [WAX-CDT API](/en/api-reference/cdt_api) for more information.
+Esto le da a tu contrato inteligente acceso a la API C/C++ de WAX, permitiéndote definir acciones y estructuras que le permitan comunicarse con la Blockchain de WAX. Para más información al respecto, visita la guía [API WAX-CDT](/es/api-reference/cdt_api).
 
-### Actions
+### Acciones
 
-Actions define the core functionality of your smart contract. When an action runs, events are written to the WAX Blockchain. 
+Las acciones definen la funcionalidad central de tu contrato inteligente. Cuando una acción se ejecuta, los eventos se escriben en la Blockchain de WAX. 
 
-Actions include the following properties:
+Las acciones incluyen las siguientes propiedades:
 
-- **Permission Level:** You can secure each action with various permissions.
-- **Code:** This is your smart contract's blockchain account.
-- **Action:** Name of the action.
-- **Data:** Actions support various data types and structures.
+- **Nivel de permiso:** Puedes asegurar cada acción con varios permisos.
+- **Código:** Esta es la cuenta de blockchain de tu contrato inteligente.
+- **Acción:** El nombre de la acción.
+- **Datos:** Las acciones admiten varios tipos y estructuras de datos.
 
-#### Transactions
+#### Transacciones
 
-A transaction is a list of one or more actions executed in the same block.
+Una transacción es una lista de una o más acciones ejecutadas en el mismo bloque.
 
-Actions run in an isolated block of code, typically called from your front-end client. If one of your actions needs to call another action, you can create a smart contract **Transaction**. 
+Las acciones se ejecutan en un bloque de código aislado, normalmente llamado desde tu cliente front-end. Si una de tus acciones necesita llamar a otra acción, puedes crear una **Transaction** de contrato inteligente. 
     
 <!--```
 //use eosio::transaction to call other actions from an existing action
 eosio::transaction t{};
 ```-->
 
-Transactions communicate using two models: inline and deferred.
+Las transacciones se comunican utilizando dos modelos: inline y diferido.
 
-- **Inline:** An inline transaction is a synchronous-like communication model that executes in the same transaction scope. These actions are guaranteed to run in-order and at the same time the original action is called. If the transaction fails, you can revert changes in the previous actions.  
+- **Inline:** Una transacción inline es un modelo de comunicación de tipo síncrono que se ejecuta en el mismo ámbito de la transacción. Se garantiza que estas acciones se ejecutan en orden y al mismo tiempo que se llama a la acción original. Si la transacción falla, se pueden revertir los cambios en las acciones anteriores.  
 
-    For an example of an inline transaction, refer to EOSIO's <a href="https://developers.eos.io/welcome/v2.0/smart-contract-guides/adding-inline-actions" target="_blank">Adding Inline Actions</a>.
+    Para ver un ejemplo de transacción inline, visita la guía de EOSIO <a href="https://developers.eos.io/welcome/v2.0/smart-contract-guides/adding-inline-actions" target="_blank">Añadir acciones inline</a>.
 
-- **Deferred:** A deferred action is an action that's scheduled to run in the future, similar to an asynchronous call. These transactions are not guaranteed to run (there is a potential of it being dropped by the node). The original (calling) action is applied to the WAX Blockchain when the action runs, and can not be reverted if the deferred transaction fails. 
+- **Diferido:** Una acción diferida es una acción que está programada para ejecutarse en el futuro, similar a una llamada asíncrona. No se garantiza que estas transacciones se ejecuten (existe la posibilidad de que el nodo las abandone). La acción original (de llamada) se aplica a la Blockchain de WAX cuando la acción se ejecuta, y no puede ser revertida si la transacción diferida falla. 
     
-    For an example of a deferred transaction, refer to EOSIO's <a href="https://developers.eos.io/manuals/eosio.cdt/v1.7/best-practices/deferred_transactions" target="_blank">Deferred Transactions</a>.
+    Para ver un ejemplo, visita la guía de EOSIO <a href="https://developers.eos.io/manuals/eosio.cdt/v1.7/best-practices/deferred_transactions" target="_blank">Transacciones diferidas</a>.
 
-**Warning:** As of EOSIO 2.0 RC1 deferred transactions are deprecated.
+**Advertencia:** A partir de EOSIO 2.0 RC1, las transacciones diferidas quedan obsoletas.
 {: .label .label-yellow}
 
-### Permissions
+### Permisos
 
-A smart contract and a WAX Blockchain Account communicate using the actions defined in your smart contract. You can secure your actions using WAX Account permissions. By including the `require_auth()` method in your actions, you can verify that an action call was initiated by your smart contract's blockchain account. You can also use the `require_auth()` method to secure WAX customer-specific actions, such as updating a user record. Requiring authentication on user-specific actions can ensure that only your customer can perform this action - not someone else.
+Un contrato inteligente y una cuenta de la Blockchain de WAX se comunican utilizando las acciones definidas en tu contrato inteligente. Puedes asegurar tus acciones usando los permisos de la cuenta WAX. Incluyendo el método `require_auth()` en tus acciones, puedes verificar que una llamada a una acción fue iniciada por la cuenta de blockchain de tu contrato inteligente. También puedes utilizar el método `require_auth()` para asegurar las acciones específicas del cliente de WAX, como la actualización de un registro de usuario. Requerir la autenticación en acciones específicas del usuario puede garantizar que sólo tu cliente (y nadie más) puede realizar esta acción.
 
-Permissions can also enable your smart contracts to handle notifications and make action calls to other smart contracts (using the `eosio.code` permission).
+Los permisos también pueden permitir que tus contratos inteligentes manejen notificaciones y hagan llamadas de acción a otros contratos inteligentes (usando el permiso `eosio.code`).
 
- Refer to EOSIO's <a href="https://developers.eos.io/welcome/v2.0/protocol-guides/accounts_and_permissions" target="_blank">Accounts and Permissions</a> for more information.
+ Para más información, visita la guía de <a href="https://developers.eos.io/welcome/v2.0/protocol-guides/accounts_and_permissions" target="_blank">Cuentas y permisos</a> de EOSIO.
 
-### Persist Data
+### Datos persistentes
 
-Every time you call one of your smart contract's actions from your app, a new instance of your smart contract is created. This new instance knows nothing about any previous contract states. When the action completes, this instance is destroyed. 
+Cada vez que llamas a una de las acciones de tu contrato inteligente desde tu aplicación, se crea una nueva instancia de tu contrato inteligente. Esta nueva instancia no sabe nada de los estados anteriores del contrato. Cuando la acción se completa, la instancia se destruye. 
 
-To persist data between the actions of one or more of your smart contracts, you'll need to use the **multi_index** table functionality. 
+Para persistir los datos entre las acciones de uno o más de sus contratos inteligentes, necesitará utilizar la funcionalidad de la tabla **multi_index**. 
     
-<strong>Note:</strong> Persistent data is stored on the WAX node's RAM and impacts the amount of WAX that you'll need to stake for your smart contract.
+<strong>Nota:</strong> Los datos persistentes se almacenan en la memoria RAM del nodo WAX y afectan a la cantidad de WAX que necesitarás para almacenar en tu contrato inteligente.
 {: .label .label-yellow }
 
 
- Refer to EOSIO's <a href="https://developers.eos.io/welcome/v2.0/smart-contract-guides/data-persistence/" target="_blank">Data Persistence</a> for more information.
+ Para más información, visita la guía <a href="https://developers.eos.io/welcome/v2.0/smart-contract-guides/data-persistence/" target="_blank">Persistencia de datos</a> de EOSIO.
 
-### WAX Dispatchers
+### Despachadores de WAX
 
-A dispatcher macro is the action handler, listening for incoming requests. You can use this macro to register all of your smart contract's actions.
+Una macro despachadora es el manejador de acciones, que escucha las solicitudes entrantes. Puedes utilizar esta macro para registrar todas las acciones de tu contrato inteligente.
 
-### Basic Structure
+### Estructura básica
 
-Here's a sample smart contract template with common elements.
+Aquí tienes un ejemplo de plantilla de contrato inteligente con los elementos más comunes.
 
 ```
 #include <eosio/eosio.hpp>
