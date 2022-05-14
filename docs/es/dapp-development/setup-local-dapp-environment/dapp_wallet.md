@@ -2,8 +2,8 @@
 title: Crear una cartera
 layout: default
 nav_order: 43
-parent: Set Up a Local dApp Environment
-grand_parent: dApp Development
+parent: Configurar un entorno local para desarrollar tu dApp
+grand_parent: Desarrollo de dApps
 lang-ref: Create a Wallet
 lang: es
 ---

@@ -29,7 +29,7 @@ To create your first WAX smart contract using **eosio-init**:
 
     ```shell
     mkdir mycontracts
-    ```shell
+    ```
     Navigate to this new directory:
     ```shell
     cd mycontracts

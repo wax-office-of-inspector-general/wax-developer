@@ -19,7 +19,8 @@ To create an account on your local blockchain, you'll need to have a pre-generat
 
 ### Default Wallet Content - Public/Private Key Pairs
 ```shell
-[[
+[
+  [
     "EOS4yxqE5KYv5XaB2gj6sZTUDiGzKm42KfiRPDCeXWZUsAZZVXk1F",
     "5JTZaN1zabi5wyC3LcdeZG3AzF7sLDX4JFqMDe68ThLC3Q5nYez"
   ],[
@@ -31,7 +32,7 @@ To create an account on your local blockchain, you'll need to have a pre-generat
 
 Your wallet will use these keys to sign your smart contract's actions and broadcast the signature to your local network. If the network confirms that the transaction is valid, it's included in a block on the blockchain. 
 
-<strong>Tip:</strong> Wallets do not store tokens - just the key pairs associated with a blockchain account. 
+<strong>Tip:</strong> Wallets do not store tokens - just the key pairs associated with a blockchain account.
 {: .label .label-yellow }
 
 In this guide, you'll use **cleos** to create, open, and unlock a new wallet.

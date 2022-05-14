@@ -2,7 +2,7 @@
 title: Desplegar una dApp de EOS en WAX
 layout: default
 nav_order: 10
-parent: dApp Development
+parent: Desarrollo de dApps
 lang-ref: Deploy an EOS dApp on WAX
 lang: es
 ---

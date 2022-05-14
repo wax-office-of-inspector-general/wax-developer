@@ -2,7 +2,7 @@
 title: Entornos de la Blockchain
 nav_order: 20
 layout: default
-parent: dApp Development
+parent: Desarrollo de dApps
 lang-ref: Blockchain Environments
 lang: es
 ---

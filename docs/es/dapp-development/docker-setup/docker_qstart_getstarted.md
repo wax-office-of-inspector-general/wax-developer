@@ -2,8 +2,8 @@
 title: Ejecutar Contenedor de WAX
 nav_order: 22
 layout: default
-parent: Docker Setup
-grand_parent: dApp Development
+parent: Configuración de Docker
+grand_parent: Desarrollo de dApps
 lang-ref: Run a WAX Container
 lang: es
 ---

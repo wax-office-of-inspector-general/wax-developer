@@ -2,13 +2,11 @@
 title: Crear un Smart Contract
 layout: default
 nav_order: 62
-parent: Smart Contract Quickstart
-grand_parent: dApp Development
+parent: Inicio rápido del Smart Contract
+grand_parent: Desarrollo de dApps
 lang-ref: Create a Smart Contract
 lang: es
 ---
-# Crear un Smart Contract
-
 En esta sección, aprenderás a escribir y compilar un contrato inteligente de WAX usando **eosio-init**.
 
 ## Cómo funciona

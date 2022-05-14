@@ -39,7 +39,7 @@ Actions include the following properties:
 - **Action:** Name of the action.
 - **Data:** Actions support various data types and structures.
 
-#### Transactions
+### Transactions
 
 A transaction is a list of one or more actions executed in the same block.
 

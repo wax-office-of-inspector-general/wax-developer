@@ -16,3 +16,6 @@ search_text:
 this_site_text:
   en: "This site is OS and was built by the WAX community."
   es: "Este sitio es OS y ha sido creado por la comunidad WAX."
+toc:
+  en: "Table of contents"
+  es: "Tabla de contenidos"

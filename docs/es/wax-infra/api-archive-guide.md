@@ -1,8 +1,8 @@
 ---
-title: Nodos de archivo completo/parcial de la API
+title: Nodos Full/Partial API
 nav_order: 142
 layout: default
-parent: WAX Infra Guides
+parent: Guías sobre la infraestructura de WAX
 lang-ref: API Full/Partial Archive nodes
 lang: es
 ---

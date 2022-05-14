@@ -2,8 +2,8 @@
 title: Gestionar los contenedores
 nav_order: 24
 layout: default
-parent: Docker Setup
-grand_parent: dApp Development
+parent: Configuración de Docker
+grand_parent: Desarrollo de dApps
 lang-ref: Manage Containers
 lang: es
 ---

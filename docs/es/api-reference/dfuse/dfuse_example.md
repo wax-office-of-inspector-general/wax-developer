@@ -2,7 +2,7 @@
 title: Ejemplo de dfuse
 layout: default
 nav_order: 121
-parent: dfuse for WAX dApps
+parent: dfuse para WAX dApps
 grand_parent: WAX API Reference
 lang-ref: dfuse Example
 lang: es

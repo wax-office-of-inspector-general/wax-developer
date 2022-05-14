@@ -2,7 +2,7 @@
 title: Inicio rápido del Smart Contract
 layout: default
 nav_order: 60
-parent: dApp Development
+parent: Desarrollo de dApps
 has_children: true
 lang-ref: Smart Contract Quickstart
 lang: es

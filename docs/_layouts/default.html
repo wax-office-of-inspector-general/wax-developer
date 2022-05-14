@@ -140,9 +140,9 @@ layout: table_wrappers
 
         {% if page.has_children == true and page.has_toc != false %}
           <hr>
-          <h2 class="text-delta">Table of contents</h2>
+          <h2 class="text-delta">{{site.data.translations['toc'][page.lang]}}</h2>
           <ul>
-            {%- assign children_list = pages_list | where: "parent", page.title | where: "grand_parent", page.parent | where: where:"lang", page.lang -%}
+            {%- assign children_list = pages_list | where: "parent", page.title | where: "grand_parent", page.parent | where: "lang", page.lang -%}
             {% for child in children_list %}
               <li>
                 <a href="{{ child.url | absolute_url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}

@@ -2,8 +2,8 @@
 title: Acceder a tu API local
 layout: default
 nav_order: 42
-parent: Set Up a Local dApp Environment
-grand_parent: dApp Development
+parent: Configurar un entorno local para desarrollar tu dApp
+grand_parent: Desarrollo de dApps
 lang-ref: Access Your Local API
 lang: es
 ---

@@ -2,7 +2,7 @@
 title: Inicio rápido de la Testnet de WAX
 layout: default
 nav_order: 66
-parent: dApp Development
+parent: Desarrollo de dApps
 lang-ref: WAX Testnet Quickstart
 lang: es
 ---

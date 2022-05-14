@@ -2,8 +2,8 @@
 title: Despliegue de Docker
 layout: default
 nav_order: 72
-parent: Deploy Your dApp on WAX
-grand_parent: dApp Development
+parent: Despliega tu dApp en WAX
+grand_parent: Desarrollo de dApps
 lang-ref: Docker Deploy
 lang: es
 ---
