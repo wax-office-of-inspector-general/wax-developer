@@ -36,7 +36,8 @@ If you're using our Docker images, you do **not** need to complete these steps.
 
 To build the WAX Blockchain from source, you can use the following steps. If you have a previous version installed, you'll need to uninstall it first. Refer to [Uninstall WAX](/en/tutorials/blockchain_uninstall) for more information.
 
-<strong>Important:</strong> Refer to [Known Issues](/en/troubleshooting/) if you encounter an issue with the build or use our [Docker Images](/en/dapp-development/docker-setup/) instead (recommended). Building from source is not supported. {: .label .label-yellow }
+<strong>Important:</strong> Refer to [Known Issues](/en/troubleshooting/) if you encounter an issue with the build or use our [Docker Images](/en/dapp-development/docker-setup/) instead (recommended). Building from source is not supported. 
+{: .label .label-yellow }
 
 1. Run the build script and set the installation directory. 
 
@@ -44,7 +45,8 @@ To build the WAX Blockchain from source, you can use the following steps. If you
     ./wax_build.sh -i ~/wax-blockchain
     ```
 
-    <strong>Tip:</strong> This installs [Blockchain Tools](/en/tools/blockchain_tools) to the <strong>wax-blockchain/bin</strong> directory.{: .label .label-yellow }
+    <strong>Tip:</strong> This installs [Blockchain Tools](/en/tools/blockchain_tools) to the <strong>wax-blockchain/bin</strong> directory.
+    {: .label .label-yellow }
 
 2. Install WAX to the directory you set in Step 4.
 

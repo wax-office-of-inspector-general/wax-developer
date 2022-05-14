@@ -1,16 +1,18 @@
 ---
-title: Access Your Local API
+title: Acceder a tu API local
 layout: default
 nav_order: 42
 parent: Set Up a Local dApp Environment
 grand_parent: dApp Development
+lang-ref: Access Your Local API
+lang: es
 ---
 
-The WAX mainnet exposes a set of **nodeos** API endpoints (RPC API), allowing you to interact with the WAX Blockchain. In production, this API is accessed from `https://chain.wax.io`.
+La mainnet de WAX expone un conjunto de endpoints de la API de **nodeos** (API RPC), que permiten interactuar con la Blockchain de WAX. En producción, se accede a esta API desde `https://chain.wax.io`.
 
-Now that you have a local node running on your local development server, these endpoints can be accessed from your local IP address: `http://127.0.0.1:8888`. This API endpoint is initialized when you pass the `plugin eosio::chain_api_plugin` parameter to **nodeos**.
+Ahora que tienes un nodo local ejecutándose en tu servidor de desarrollo local, se puede acceder a estos endpoints desde tu dirección IP local: `http://127.0.0.1:8888`. Este endpoint de la API se inicializa cuando se pasa el parámetro `plugin eosio::chain_api_plugin` a **nodeos**.
 
-To test your local RPC API, from the command line, make a **curl** request to the `get_info` endpoint:
+Para probar tu API RPC local, desde la línea de comandos, haz una petición **curl** al endpoint `get_info`:
 
 ```
 curl --request POST \
@@ -18,7 +20,7 @@ curl --request POST \
   --header 'content-type: application/x-www-form-urlencoded; charset=UTF-8'
 ```
 
-You should receive the following JSON Response:
+Deberías recibir la siguiente respuesta en JSON:
 
 ```
 {
@@ -38,15 +40,15 @@ You should receive the following JSON Response:
 }
 ```
 
-<strong>Tip:</strong> Notice the "head_block_producer":"eosio" parameter. Locally, <strong>eosio</strong> is the system account. If you make a request to the WAX mainnet API, it would return an actual block producer (e.g., "head_block_producer": "strongblock1").
+<strong>Consejo:</strong> Fíjate en el parámetro "head_block_producer": "eosio". En el entorno local, <strong>eosio</strong> es la cuenta del sistema. Si haces una petición a la API de la mainnet de WAX, esta devolverá un productor de bloques real (por ejemplo, "head_block_producer": "strongblock1").
 {: .label .label-yellow }
 
-**nodeos** must be running to call this endpoint. If not, you'll receive the following message:
+**Nodeos** debe estar ejecutándose para poder llamar a este endpoint. Si no es así, recibirás el siguiente mensaje:
 
 ```
 curl: (7) Failed to connect to 127.0.0.1 port 8888: Connection refused
 ```
 
-## Additional Information
+## Información adicional
 
-Refer to [WAX RPC API](/es/api-reference/rpc_api) for more information.
+Para más información, dirígete a la guía [API RPC de WAX](/es/api-reference/rpc_api).

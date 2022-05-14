@@ -1,45 +1,47 @@
 ---
-title: WAX-CDT Deploy
+title: Despliegue de WAX-CDT
 layout: default
 nav_order: 73
 parent: Deploy Your dApp on WAX
 grand_parent: dApp Development
+lang-ref: WAX-CDT Deploy
+lang: es
 ---
 
-In this guide, you'll use the `cleos set contract` command to deploy your smart contract to the WAX mainnet.
+En esta guía, utilizarás el comando `cleos set contract` para desplegar tu contrato inteligente en la mainnet de WAX.
 
-Before you begin, you'll need to compile your smart contract and have your WASM and ABI files ready. Refer to [Smart Contract Quickstart](/es/dapp-development/smart-contract-quickstart) or [WAX-CDT Build Tools](/es/dapp-development/wax-cdt/cdt_cpp) for more information.
+Antes de empezar, tendrás que compilar tu contrato inteligente y tener listos tus archivos WASM y ABI. Para obtener más información al respecto, dirígete al [Inicio rápido del contrato inteligente](/es/dapp-development/smart-contract-quickstart) o consulta las [Herramientas de construcción de WAX-CDT](/es/dapp-development/wax-cdt/cdt_cpp).
 
-You'll also need to:
+También necesitarás:
 
-* Create a self-managed WAX Blockchain Account. 
-* Make sure you have enough WAX staked in your account to allocate resources. 
+* Crear una cuenta autogestionada en la WAX Blockchain. 
+* Asegurarte de que tienes suficiente WAX acumulado en tu cuenta para asignar recursos.
 
-To deploy your smart contract to the WAX mainnet:
+Para desplegar tu contrato inteligente en la mainnet de WAX:
 
-1. Open and unlock your wallet. 
+1. Abre y desbloquea tu cartera.
 
     ```shell
     cleos wallet open -n mywallet && cleos wallet unlock -n mywallet --password {wallet.pwd}
     ```
 
-2. Generate a public/private key pair that's used to create your smart contract's blockchain account. From the command line, use the `cleos create key` command:
+2. Genera un par de claves públicas/privadas que usarás para crear la cuenta de blockchain de tu contrato inteligente. Desde la línea de comandos, utiliza el comando `cleos create key`:
 
     ```shell
     cleos wallet create_key -n mywallet
     ```
 
-    <strong>Note:</strong> You can also use an EOSIO compatible wallet (e.g., Scatter).
+    <strong>Nota:</strong> También puedes utilizar una cartera compatible con EOSIO (como Scatter, por ejemplo).
     {: .label .label-yellow }
 
-3. From the command line, use `cleos system newaccount` to create your smart contract's account. To run this command, you'll need to have the proper authority. This means that the wallet containing your primary account must be opened and unlocked. 
+3. Desde la línea de comandos, utiliza `cleos system newaccount` para crear la cuenta de tu contrato inteligente. Para ejecutar este comando, necesitarás tener autoridad sobre la cartera que contiene tu cuenta principal, lo que significa que debe estar abierta y desbloqueada. 
 
     <table>
     <thead>
     <tr>
-    <th style="width:25%">Parameter</th>
-    <th>Example</th>
-    <th>Description</th>
+    <th style="width:25%">Parámetro</th>
+    <th>Ejemplo</th>
+    <th>Descripción</th>
     </tr>
     </thead>
 
@@ -47,82 +49,82 @@ To deploy your smart contract to the WAX mainnet:
     <tr>
     <td>-u</td>
     <td>-u <a href="https://chain.wax.io">https://chain.wax.io</a></td>
-    <td>This is the WAX Blockchain URL.</td>
+    <td>Esta es la URL de la Blockchain de WAX.</td>
     </tr>
 
     <tr>
     <td>system</td>
     <td>system</td>
-    <td>Sends the system contract action to the WAX Blockchain.</td>
+    <td>Envía la acción del contrato del sistema a la Blockchain de WAX.</td>
     </tr>
 
     <tr>
     <td>newaccount</td>
     <td>newaccount</td>
-    <td>Command to create a new account.</td>
+    <td>Comando para crear una nueva cuenta.</td>
     </tr>
 
     <tr>
     <td>primaryAccount</td>
     <td>waxdappacct1</td>
-    <td>Your self-managed WAX Blockchain Account with staked WAX tokens.</td>
+    <td>Tu cuenta autogestionada de la Blockchain de WAX con tokens WAX acumulados.</td>
     </tr>
 
     <tr>
     <td>contractAccount</td>
     <td>HelloWorld10</td>
-    <td>Name of your smart contract's account. Exactly 12 characters from (a-z1-5).</td>
+    <td>Nombre de la cuenta de tu contrato inteligente. Debe contener exactamente 12 caracteres de (a-z, 1-5).</td>
     </tr>
 
     <tr>
     <td>newPublicKey</td>
     <td>EOS7jEb46pDiWvA39faCoFn3jUdn6LfL51irdXbvfpuSko86iNU5x</td>
-    <td>This is the public key you created in Step 1.</td>
+    <td>Esta es la clave pública que creaste en el paso 1.</td>
     </tr>
 
     <tr>
     <td>stake-net</td>
     <td>--stake-net '0.50000000 WAX'</td>
-    <td>Amount of WAX to stake for NET.</td>
+    <td>Cantidad de WAX para apostar por la NET.</td>
     </tr>
 
     <tr>
     <td>stake-cpu</td>
     <td>--stake-cpu '0.50000000 WAX'</td>
-    <td>Amount of WAX to allocate for CPU.</td>
+    <td>Cantidad de WAX para distribuir a la CPU.</td>
     </tr>
 
     <tr>
     <td>buy-ram-kbytes</td>
     <td>--buy-ram-kbytes 32</td>
-    <td>Amount of RAM to allocate.</td>
+    <td>Cantidad de RAM para distribuir.</td>
     </tr>
     </tbody>
     </table>
 
-    ### Example
+    ### Ejemplo
     ```shell
     cleos -u https://chain.wax.io system newaccount waxdappacct1 HelloWorld10 EOS7jEb46pDiWvA39faCoFn3jUdn6LfL51irdXbvfpuSko86iNU5x --stake-net '0.50000000 WAX' --stake-cpu '0.50000000 WAX' --buy-ram-kbytes 32
     ```
 
-    <strong>Note:</strong> You'll need to repeat Steps 1 and 2 for each of your contracts. 
+    <strong>Nota:</strong> Tendrás que repetir los pasos 1 y 2 en cada uno de tus contratos. 
     {: .label .label-yellow }
 
-4. **Deploy.** From the command line, set your contract with the `cleos set contract` command: 
+4. **Despliegue.** Desde la línea de comandos, establece tu contrato con el comando `cleos set contract`: 
 
-    | Parameter | Example | Description
+    | Parámetro | Ejemplo | Descripción
     | --- | ----------- | -------------------------- |
-    | -u | -u https://chain.wax.io | This is the WAX Blockchain URL. |
-    | contractAccount| HelloWorld10 | Your smart contract's account (created in Step 2). |
-    | fullPath | d/wax-blockchain/wax-cdt/mycontracts/wax/build | The full path to your WASM and ABI files. |
-    | wasmName | wax | Name of your WASM file. |
-    | abiName | wax | Name of your ABI file. |
+    | -u | -u https://chain.wax.io | Esta es la URL de la Blockchain de WAX. |
+    | contractAccount| HelloWorld10 | La cuenta de tu contrato inteligente (creada en el paso 2). |
+    | fullPath | d/wax-blockchain/wax-cdt/mycontracts/wax/build | La ruta completa de tus archivos WASM y ABI. |
+    | wasmName | wax | Nombre de tu archivo WASM. |
+    | abiName | wax | Nombre de tu archivo ABI. |
 
     ```shell
     cleos -u https://chain.wax.io set contract HelloWorld10 d/wax-blockchain/wax-cdt/mycontracts/wax/build wax.wasm wax.abi
     ```
 
-Your dApp is now live on WAX! 
+¡Tu dApp ya está en WAX! 
 
-<strong>Note:</strong> Depending on how your dApp's onboarding process is built, your customers may need to create a WAX Account to use your dApp on WAX.
+<strong>Nota:</strong> Dependiendo de cómo esté construido el proceso de incorporación de tu dApp, es posible que tus clientes tengan que crear una cuenta de WAX para usar tu dApp en WAX.
 {: .label .label-yellow }

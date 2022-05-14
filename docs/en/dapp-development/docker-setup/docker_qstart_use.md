@@ -32,8 +32,9 @@ Throughout our dApp Development section, we'll list various steps required to ru
 1. From the command line, use the `cleos` command to get blockchain information from the WAX mainnet.
 
 ```shell
-cleos -u https://chain.wax.io get info
+cleos -u https://wax-api-url get info
 ```
+*Check https://validate.eosnation.io/wax/reports/endpoints.html to get an updated API endpoint URL*
 <p>&nbsp;</p>
 
 When you start an interactive bash session, the *command line* is your Docker container bash prompt:
