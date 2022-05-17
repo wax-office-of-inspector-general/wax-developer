@@ -11,6 +11,8 @@ En esta sección, aprenderás a escribir y compilar un contrato inteligente de W
 
 ## Cómo funciona
 
+TODO
+
 **eosio-init** es una herramienta de WAX-CDT que crea la siguiente plantilla/directorio de contrato inteligente:
 
 - Carpeta **include**: Incluye una muestra de archivo **.hpp**.
