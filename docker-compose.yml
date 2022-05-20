@@ -11,4 +11,4 @@ services:
       - .:/usr/src/app
     stdin_open: true
     tty: true
-    command: bundle exec jekyll serve --livereload --config _config.local.yml -H 0.0.0.0 -t
+    command: bundle exec jekyll serve --livereload --config ./docs/_config.local.yml -H 0.0.0.0 -t
