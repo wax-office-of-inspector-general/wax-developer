@@ -1,5 +1,5 @@
 ---
-title: Crear cuentas
+title: Crear una cuenta de WAX
 layout: default
 nav_order: 63
 parent: Smart Contract Quickstart
@@ -8,24 +8,24 @@ lang-ref: Create Accounts
 lang: es
 ---
 
-A WAX Account is stored on the blockchain and used to identify your smart contracts and dApp users. Blockchain accounts are required to send or receive valid transactions to the blockchain, in both your local and production environments. 
+Una cuenta de WAX se almacena en la blockchain y se utiliza para identificar tus contratos inteligentes y los usuarios de la dApp. Las cuentas de la blockchain son necesarias para enviar o recibir transacciones válidas a la misma, tanto en tu entorno local como en el de producción. 
 
-## How it Works
+## Cómo funciona
 
-There are several different account types that you'll need to deploy your smart contracts:
+Hay varios tipos de cuentas diferentes que necesitarás para desplegar tus contratos inteligentes:
 
-- **Primary Account:** This is your primary WAX Blockchain Account, used to stake WAX for CPU and RAM. Locally, this account is simulated using the **eosio** system user. In your local development environment, you can use this system user to create various accounts. In production, all WAX Accounts are free.
-- **Smart Contract Accounts:** Each of your smart contracts will need a separate account. 
-- **Customer Accounts:** These are the accounts used to interact with your smart contract's actions. In your local development environment, you can create an unlimited number of customer accounts.
+- **Cuenta primaria:** Esta es tu cuenta principal de la blockchain de WAX, la cual se utiliza para acumular WAX para la CPU y la RAM. Localmente, esta cuenta se simula utilizando el usuario del sistema **eosio**. En un entorno de desarrollo local, puedes usarlo para crear varias cuentas. En producción, todas las cuentas de WAX son libres.
+- **Cuentas de Smart Contract:** Cada contrato inteligente que crees necesitará tener su propia cuenta. 
+- **Cuentas de cliente:** Estas son las cuentas que se utilizan para interactuar con las acciones de tu contrato inteligente. Puedes crear un número ilimitado de cuentas de cliente en el entorno de desarrollo local.
 
-In this guide, you'll use **cleos** to create a new WAX Blockchain Account that you can use to deploy your smart contract.
+En esta guía, utilizarás **cleos** para crear una nueva cuenta en la Blockchain de WAX, que te permitirá desplegar tu contrato inteligente.
 
-<strong>Tip</strong> For a complete list of cleos create account subcommands and options, refer to EOSIO's <a href="https://developers.eos.io/manuals/eos/v2.0/cleos/command-reference/create/account" target="_blank">Cleos Reference Guide: create account</a>.
+<strong>Consejo</strong> Para ver una lista completa de los subcomandos y opciones de creación de cuentas de cleos, visita la <a href="https://developers.eos.io/manuals/eos/v2.0/cleos/command-reference/create/account" target="_blank">Guía de referencia de Cleos: crear una cuenta</a> de EOSIO.
 {: .label .label-yellow }
 
-## Before You Begin
+## Antes de empezar
 
-- **nodeos** must be running 
+- **nodeos** debe estar ejecutándose
     ```shell
     nodeos -e -p eosio \
         --plugin eosio::producer_plugin \
@@ -36,7 +36,7 @@ In this guide, you'll use **cleos** to create a new WAX Blockchain Account that 
         --http-validate-host=false \
         --verbose-http-errors >> nodeos.log 2>&1 &
     ```
-- Your wallet must be Opened and Unlocked
+- Tu cartera debe estar abierta y desbloqueada
     ```shell
     cleos wallet open
     ```
@@ -53,48 +53,48 @@ Ensure that you have created a wallet and have it open
 Error Details:
 You don't have any wallet!-->
 
-## Create Public/Private Keys
+## Crear claves públicas/privadas
 
-Every WAX Account must have at least one public key. There are two types of public keys, based on account permissions:
+Cada cuenta de WAX debe tener al menos una clave pública. Hay dos tipos de claves públicas, basadas en los permisos de la cuenta:
 
-- **Owner Key:** Required. This is the primary public key, with full permissions and complete control. In a production account, you should never give this out for most transactions. This key has a private/public key record in your local wallet.
-- **Active Key:** Optional. This is a secondary key, which can be changed by the Owner key. It requires an additional private/public key pair listed in your local wallet. In production, use this key to vote, send, and receive transactions.
+- **Clave del propietario:** Requerida. Esta es la clave pública principal, con todos los permisos y el control absoluto. En una cuenta de producción, nunca deberías proporcionarla para la mayoría de las transacciones. Esta clave tiene un registro de clave privada/pública en tu cartera local.
+- **Clave activa:** Opcional. Esta es una clave secundaria, que puede ser cambiada por la clave del Propietario. Requiere un par de claves privadas/públicas adicionales en tu cartera local. En producción, usa esta clave para valorar, enviar y recibir transacciones.
 
-To create an account for your smart contract, you'll need to create a public and private key pair from your local development wallet. You can do this using your wallet's `create_key` command:
+Para crear una cuenta para tu contrato inteligente, necesitarás crear un par de claves públicas y privadas desde tu cartera de desarrollo local. Puedes hacerlo utilizando el comando `create_key` de tu cartera:
 
-<strong>Note:</strong> Your wallet must be opened and unlocked to create your keys.
+<strong>Nota:</strong> Tu cartera debe estar abierta y desbloqueada para crear las claves.
 {: .label .label-yellow }
 
 ```shell
 cleos wallet create_key
 ```
 
-The console prints your public key:
+La consola te mostrará tu clave pública:
 
 ```shell
 warn  2019-07-16T23:16:23.435 thread-0  wallet.cpp:223                save_wallet_file     ] saving wallet to file /home/username/eosio-wallet/./default.wallet
 Created new private key with a public key of: "EOS4yxqE5KYv5XaB2gj6sZTUDiGzKm42KfiRPDCeXWZUsAZZVXk1F"
 ```
 
-Store this key someplace that's easily accessible (you'll need this public key in the next step).
+Ten a mano esta clave, la necesitarás para el siguiente paso.
 
-## Create a Smart Contract Account
+## Crear una cuenta de Smart Contract
 
-To create a smart contract WAX Account, use the `create account` command:
+Para crear una cuenta WAX de contrato inteligente, utiliza el comando `create account`:
 
-| Parameter | Example | Description
+| Parámetro | Ejemplo | Descripción
 | --- | ----------- | -------------------------- |
-| creator | eosio | The name of the primary account creating the new account. In production, this is your WAX Account. |
-| name | waxsc1 | The name of the new account. Account names must be less than 13 characters and only contain letters [a-z] and numbers [1-5]. |
-| OwnerKey | EOS4yxqE5KYv5XaB2gj6sZTUDiGzKm42KfiRPDCeXWZUsAZZVXk1F | Public key, created from your local development wallet. |
+| creator | eosio | El nombre de la cuenta principal que crea la nueva cuenta. En producción, esta es tu cuenta de WAX. |
+| name | waxsc1 | El nombre de la nueva cuenta. Los nombres de las cuentas deben tener menos de 13 caracteres y sólo contener letras [a-z] y números [1-5]. |
+| OwnerKey | EOS4yxqE5KYv5XaB2gj6sZTUDiGzKm42KfiRPDCeXWZUsAZZVXk1F | Clave pública, creada a partir de tu cartera de desarrollo local. |
 
-### Example
+### Ejemplo
 
 ```shell
 cleos create account eosio waxsc1 EOS4yxqE5KYv5XaB2gj6sZTUDiGzKm42KfiRPDCeXWZUsAZZVXk1F 
 ```
 
-**cleos** broadcasts the `create account` command to your local blockchain and your wallet signs this transaction with a HASH.
+**cleos** transmite el comando `create account` a tu blockchain local y tu cartera firma esta transacción con un HASH.
 
 ```shell
 executed transaction: 4ebdc2eabcd545c7f26679e95d729893ebd0df919850791daa79a10e4865f702  200 bytes  15013 us
@@ -102,17 +102,17 @@ executed transaction: 4ebdc2eabcd545c7f26679e95d729893ebd0df919850791daa79a10e48
 warning: transaction executed locally, but may not be confirmed by the network yet         ]
 ```
 
-You should now have a WAX Blockchain Account to associate with your smart contract.
+Ahora deberías tener una cuenta en la Blockchain de WAX para asociarla a tu contrato inteligente.
 
-## Verify Your New Account
+## Verifica tu nueva cuenta
 
-To view your new account's information, use the `get account` command:
+Para ver la información de tu nueva cuenta, usa el comando `get account`:
 
 ```shell
 cleos get account waxcustomer
 ```
 
-The console prints your new account's details. Notice that the owner and active keys are the same because we didn't include an active public key when we created the account.
+La consola muestra los detalles de tu nueva cuenta. Fíjate en que las claves de propietario y la activa son las mismas porque no incluimos una clave pública activa cuando creamos la cuenta.
 
 ```shell
 created: 2019-07-22T20:22:16.000
