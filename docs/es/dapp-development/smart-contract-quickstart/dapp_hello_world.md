@@ -1,53 +1,55 @@
 ---
-title: Create a Smart Contract
+title: Crear un Smart Contract
 layout: default
 nav_order: 62
 parent: Smart Contract Quickstart
 grand_parent: dApp Development
+lang-ref: Create a Smart Contract
+lang: es
 ---
-# Create a Smart Contract
+# Crear un Smart Contract
 
-In this section, you'll learn how to write and compile a WAX smart contract using **eosio-init**.
+En esta sección, aprenderás a escribir y compilar un contrato inteligente de WAX usando **eosio-init**.
 
-## How it Works
+## Cómo funciona
 
-**eosio-init** is a WAX-CDT tool that creates the following smart contract template/directory structure:
+**eosio-init** es una herramienta de WAX-CDT que crea la siguiente plantilla/directorio de contrato inteligente:
 
-- **include** folder: This includes a sample **.hpp** file.
-- **ricardian** folder: This includes a sample Ricardian contract markdown file.
-- **src** folder: This includes a sample **.cpp** smart contract file.
+- Carpeta **include**: Incluye una muestra de archivo **.hpp**.
+- Carpeta **ricardian**: Incluye un archivo de muestra de contratos ricardianos.
+- Carpeta **src**: Incluye un archivo de muestra **.cpp** de un contrato inteligente.
 
-The template files are named after the project name you specify when you use **eosio-init** from the command line. 
+Los archivos plantilla se denominan con el nombre del proyecto que se especifica cuando se utiliza **eosio-init** en la línea de comandos. 
 
-## Use eosio-init
+## Usar eosio-init
 
-To create your first WAX smart contract using **eosio-init**:
+Para crear tu primer contrato inteligente WAX usando **eosio-init**:
 
-1. Create a smart contracts directory. For this tutorial, we'll use a folder named **mycontracts**.
+1. Crea un directorio de contratos inteligentes. Para este tutorial, usaremos una carpeta llamada **mycontracts**.
 
     ```shell
     mkdir mycontracts
     ```shell
-    Navigate to this new directory:
+    Accede a este nuevo directorio:
     ```shell
     cd mycontracts
     ```
 
-2. From the command line, use **eosio-init** with the `-project` parameter.
+2. Desde la línea de comandos, utiliza **eosio-init** con el parámetro `project`.
 
     ```
     eosio-init -project wax
     ```
 
-    **eosio-init** uses the `-project` name to create the following directory structure:
+    **eosio-init** utiliza el nombre del `proyecto` para crear la siguiente estructura de directorios:
 
     - mycontracts/wax/include 
     - mycontracts/wax/ricardian 
     - mycontracts/wax/src 
 
-3. Optional. Add a [Ricardian Clause](/es/tools/ricardian_clause). A  [Ricardian Contract](/es/tools/ricardian_contract) is already included by default.
+3. Opcional. Añade una [Cláusula ricardiana](/en/tools/ricardian_clause). Por defecto, ya se incluye un  [contrato ricardiano](/en/tools/ricardian_contract).
 
-You should now have a smart contract template, including a sample smart contract (mycontracts/wax/src/wax.cpp). This contract includes the following action:
+Ahora deberías tener una plantilla de contrato inteligente, incluyendo un contrato inteligente de ejemplo (mycontracts/wax/src/wax.cpp). Este contrato incluye la siguiente acción:
 
 ```
 #include <wax.hpp>
@@ -57,7 +59,7 @@ ACTION wax::hi( name nm ) {
 }
 ```
 
-The header file (mycontracts/wax/include/wax.hpp) inherits from **<eosio/eosio.hpp>**.
+El archivo de cabecera (mycontracts/wax/include/wax.hpp) hereda de **<eosio/eosio.hpp>**.
 
 ```
 // Inherit your contract from eosio::contract. 
@@ -82,7 +84,7 @@ CONTRACT wax : public contract {
 };
 ```
 
-<strong>Tip:</strong> The action_wrapper struct creates a template/pointer based off of a specific action. You can use action_wrappers to make action calls from one contract to another. 
+<strong>Consejo:</strong> La estructura action_wrapper crea una plantilla/puntero basada en una acción específica. Puedes usar action_wrappers para hacer llamadas de acción de un contrato a otro. 
 {: .label .label-yellow }
 
 <!--
@@ -117,25 +119,25 @@ EOSIO_DISPATCH(wax, (greet))
 ```-->
 
 
-## Compile Your Contract
+## Redacta tu contrato
 
-To deploy your smart contract, you'll need to create a `.wasm` and `.abi` file. You can do this using the WAX Contract Development Toolkit (WAX-CDT).
+Para desplegar tu contrato inteligente, necesitarás crear un archivo `.wasm` y `.abi`. Puedes hacerlo utilizando el Kit de herramientas de desarrollo de WAX (WAX Contract Development Toolkit o WAX-CDT).
 
-1. Install [WAX-CDT](/es/dapp-development/wax-cdt/) (if you haven't done so already).
+1. Instala el [WAX-CDT](/es/dapp-development/wax-cdt/) (si no lo habías hecho antes).
 
-2. From the command line, navigate to the **mycontracts/wax** build folder.
+2. Desde la línea de comandos, ve a la carpeta de construcción **mycontracts/wax**.
 
     ```shell
     cd wax/build
     ```
 
-3. Initialize cmake to write the necessary build files to the **build** directory.
+3. Inicializa cmake para que escriba los archivos de construcción necesarios en el directorio **build**.
 
     ```shell
     cmake ..
     ```
 
-    The console prints the following build tasks:
+    La consola mostrará las siguientes tareas de construcción:
 
     ```shell
     -- The C compiler identification is GNU 7.4.0
@@ -148,13 +150,13 @@ To deploy your smart contract, you'll need to create a `.wasm` and `.abi` file. 
     -- Build files have been written to: waxblockchain/wax-blockchain/wax-cdt/examples/hello/build
     ```
 
-4. Build the scripts.
+4. Crea los scripts.
 
     ```shell
     make
     ```
 
-    The console prints the following confirmation:
+    La consola mostrará la siguiente confirmación:
 
     ```shell
     Scanning dependencies of target wax
@@ -168,5 +170,5 @@ To deploy your smart contract, you'll need to create a `.wasm` and `.abi` file. 
     [100%] Built target wax_project
     ```
 
-You can locate the **wax.wasm** and **wax.abi** files in the **build/wax** directory. 
+Puedes localizar los archivos **wax.wasm** y **wax.abi** en el directorio **build/wax**. 
 

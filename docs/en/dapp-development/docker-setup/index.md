@@ -47,7 +47,6 @@ Below is a list of our core Docker images. For a complete list, refer to <a href
 <td>Use this image to create and compile smart contracts using the [WAX Contract Development Toolkit (WAX-CDT)](/en/dapp-development/wax-cdt/). This image does <strong>not</strong> allow you to run a WAX node or use [Blockchain Tools](/en/tools/blockchain_tools).</td>
 </tr>
 
-    <tr>
 <td><a href="https://hub.docker.com/r/waxteam/production" target="_blank">waxteam/production</a></td>
 <td>It's recommended that you use our <a href="https://hub.docker.com/r/waxteam/production" target="_blank">production docker images</a> to run a production node. Refer to <a href="https://github.com/worldwide-asset-exchange/wax-blockchain/tree/develop/samples/mainnet" target="_blank">Running a WAX node</a> for more information.</td>
 </tr>

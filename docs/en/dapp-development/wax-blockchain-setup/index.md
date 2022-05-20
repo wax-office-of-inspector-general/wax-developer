@@ -14,7 +14,8 @@ Our production and development Docker images include everything that's available
 
 If you'd like to access our sample contracts and scripts from your local drive or have a need to install the WAX Blockchain instead of using Docker, you can use this guide to download and optionally build the WAX Blockchain source code.
 
-<strong>Important:</strong> At this time, pre-compiled packages are not available. Support is <strong>not</strong> available when you build the WAX blockchain from source.{: .label .label-yellow }
+<strong>Important:</strong> At this time, pre-compiled packages are not available. Support is <strong>not</strong> available when you build the WAX blockchain from source.
+{: .label .label-yellow }
 
 ## What's Included
 
@@ -44,7 +45,8 @@ If you're not using our Docker images, you'll need to:
 
 * Refer to [Supported Operating Systems](/en/tools/os) to make sure you meet the operating system requirements. 
 
-    <strong>Ubuntu 18.04 Users:</strong> Refer to [Known Issues](/en/troubleshooting/) before you begin the WAX Blockchain Setup.{: .label .label-yellow }
+    <strong>Ubuntu 18.04 Users:</strong> Refer to [Known Issues](/en/troubleshooting/) before you begin the WAX Blockchain Setup.
+    {: .label .label-yellow }
 
 * Have at least 7 GB of free RAM.
 

@@ -1,104 +1,106 @@
 ---
-title: Docker Deploy
+title: Despliegue de Docker
 layout: default
 nav_order: 72
 parent: Deploy Your dApp on WAX
 grand_parent: dApp Development
+lang-ref: Docker Deploy
+lang: es
 ---
 
-In this guide, you'll learn how to customize the **hello-world** build scripts to deploy your smart contracts to the WAX mainnet.
+En esta guía, aprenderás a personalizar los scripts de construcción de **hello-world** para desplegar tus contratos inteligentes en la mainnet de WAX.
 
-Before you begin:
+Antes de empezar:
 
-* Make sure Docker is configured to run without sudo. 
-* Download the <a href="https://github.com/worldwide-asset-exchange/wax-blockchain" target="_blank">WAX Blockchain Source Code</a>. Refer to the [WAX Blockchain Setup](/es/dapp-development/wax-blockchain-setup/) for more information.
-* Have your WAX Blockchain Account public/private keys available.
-* Make sure you have enough WAX staked in your account to allocate resources. 
+* Asegúrate de que Docker está configurado para ejecutarse sin sudo.
+* Descarga el <a href="https://github.com/worldwide-asset-exchange/wax-blockchain" target="_blank">Código Fuente de la Blockchain de WAX</a>. Para más información, revisa la [Configuración de la Blockchain de WAX](/es/dapp-development/wax-blockchain-setup/).
+* Ten disponibles las claves públicas/privadas de tu cuenta en la WAX Blockchain.
+* Asegúrate de tener suficiente WAX en tu cuenta para asignar los recursos. 
 
-<strong>Note:</strong> You do not need to build WAX source code to complete these steps. 
+<strong>Nota:</strong> No es necesario construir código fuente de WAX para completar estos pasos. 
 {: .label .label-yellow }
 
-## Modify the Scripts
+## Modifica los scripts
 
-To modify the **hello-world** scripts to deploy your smart contract:
+Para modificar los scripts **hello-world** y desplegar tu contrato inteligente:
 
-1. From the command line, navigate to the **hello-world** folder in the <a href="https://github.com/worldwide-asset-exchange/wax-blockchain" target="_blank">WAX Blockchain Source Code Repository</a>:
+1. Desde la línea de comandos, encuentra la carpeta **hello-world** en el <a href="https://github.com/worldwide-asset-exchange/wax-blockchain" target="_blank">Repositorio de código fuente de la Blockchain de WAX</a>:
 
     ```shell
     cd wax-blockchain/samples/hello-world
     ```
 
-3. Copy the contents of **hello-world** to your smart contract's directory. For this example, we'll use **wax_deploy**. 
+3. Copia el contenido de **hello-world** al directorio de tu contrato inteligente. Para este ejemplo, usaremos **wax_deploy**. 
 
-4. From **wax_deploy**, open **CMakeLists.txt**. This file stores your project name and smart contract file name.
+4. Desde **wax_deploy**, abre **CMakeLists.txt**. Este archivo almacena el nombre de tu proyecto y el nombre del archivo del contrato inteligente.
 
-    a. Type your contract name on line 25.
+    a. Escribe el nombre de tu contrato en la línea 25.
     ```shell
     project(waxcontract)
     ```
 
-    b. Type your contract's filename on line 29.
+    b. Escribe el nombre del archivo de tu contrato en la línea 29.
 
     ```shell
     add_contract(${PROJECT_NAME} ${PROJECT_NAME} waxcontract.cpp)
     ```
 
-    Save the file. 
+    Guarda el archivo.
 
-5. Next, open **Makefile**. This file contains the scripts to run `cleos` and the WAX Docker Development image.
+5. A continuación, abre **Makefile**. Este archivo contiene los scripts para ejecutar `cleos` y la imagen WAX Docker Development.
 
-    a. Type your contract name on Line 23.
+    a. Escribe el nombre de tu contrato en la línea 23.
     ```shell
     CONTRACT_NAME = waxcontract
     ```
 
-    b. Update the WAX allocations for your smart contract on Line 87, if required.
+    b. Si es necesario, actualiza las asignaciones de WAX para tu contrato inteligente en la línea 87.
     ```shell
     --stake-net '0.50000000 WAX' --stake-cpu '0.50000000 WAX' --buy-ram-kbytes 32"
     ```
 
-    c. To test your smart contract, you can update line 48 to run your action:
+    c. Para probar tu contrato inteligente, puedes actualizar la línea 48 para ejecutar tu acción:
 
     ```shell
     push action ${CONTRACT_ACCOUNT} greet '[]' -p ${CONTRACT_ACCOUNT}@active"
     ```
 
-    Save the file.
+    Guarda el archivo.
 
 
-    <strong>Note:</strong> `NODEOS_URL` is the only optional parameter. Its default value is the mainnet deployment address https://chain.wax.io/.  
+    <strong>Nota:</strong> `NODEOS_URL` es el único parámetro opcional. Su valor por defecto es la dirección de despliegue de la mainnet https://chain.wax.io/.  
     {: .label .label-yellow }
 
-Once these changes have been made, you're ready to use the `make` scripts to build and deploy your smart contract.
+Una vez realizados estos cambios, ya tienes todo listo para utilizar los scripts `make` y crear y desplegar tu contrato inteligente.
 
-## Deploy Your Smart Contract
+## Despliega tu contrato inteligente
 
-To launch your WAX smart contract on the WAX Blockchain:
+Para lanzar tu contrato inteligente en la Blockchain de WAX:
 
-1. **Build your smart contract.** In the command line, run the following script from the **wax_deploy** folder:
+1. **Crea tu contrato inteligente.** En la línea de comandos, ejecuta el siguiente script desde la carpeta **wax_deploy**:
 
     ```shell
     make build
     ```
 
-    This creates `wax.wasm` and `wax.abi` in the **wax_deploy** folder.
+    Esto hará que se creen los archivos `wax.wasm` y `wax.abi` en la carpeta **wax_deploy**.
 
-2. **Generate keys for your smart contract's account.** From the command line, run:
+2. **Genera claves para la cuenta de tu contrato inteligente.** Desde la línea de comandos, ejecuta:
 
     ```shell
     make create-key
     ```
 
-    This creates a pair of private/public keys for your smart contract's account (save the console response in a safe place, you'll need to use them later).
+    Esto crea un par de claves privadas/públicas para la cuenta de tu contrato inteligente (guarda la respuesta de la consola en un lugar seguro, las necesitarás más tarde).
 
-4. **Create a WAX Contract Account.** To create a blockchain account for your smart contract, run:
+4. **Crea una cuenta de contrato WAX.** Para crear una cuenta de blockchain para tu contrato inteligente, ejecuta:
 
     <table>
     <thead>
     <tr>
-    <th style="width:28%">Parameter</th>
-    <th>Example</th>
-    <th>Description</th>
+    <th style="width:28%">Parámetro</th>
+    <th>Ejemplo</th>
+    <th>Descripción</th>
     </tr>
     </thead>
 
@@ -106,25 +108,25 @@ To launch your WAX smart contract on the WAX Blockchain:
     <tr>
     <td>WAX_ACCOUNT</td>
     <td>waxprimary</td>
-    <td>Your dApp Developer Account name.</td>
+    <td>El nombre de tu cuenta de desarrollador de dApp.</td>
     </tr>
 
     <tr>
     <td>WAX_PRIVATE_KEY</td>
     <td>5JTZaN1zabi5wyC3LcdeZG3AzF7sLDX4JFqMDe68ThLC3Q5nYez</td>
-    <td>Private key for your dApp Developer Account.</td>
+    <td>Clave privada para tu cuenta de desarrollador de dApp.</td>
     </tr>
 
     <tr>
     <td>CONTRACT_ACCOUNT</td>
     <td>waxsc1</td>
-    <td>Specify a new name for your smart contract account. Account names must be less than 13 characters and only contain letters [a-z] and numbers [1-5].</td>
+    <td>Especifica un nuevo nombre para tu cuenta de contrato inteligente. Los nombres de las cuentas deben tener menos de 13 caracteres y sólo contener letras [a-z] y números [1-5].</td>
     </tr>
 
     <tr>
     <td>CONTRACT_PUBLIC_KEY</td>
     <td>EOS4yxqE5KYv5XaB2gj6sZTUDiGzKm42KfiRPDCeXWZUsAZZVXk1F</td>
-    <td>New public key that you created in Step 2.</td>
+    <td>Nueva clave pública creada en el paso 2.</td>
     </tr>
     </tbody>
     </table>
@@ -133,14 +135,14 @@ To launch your WAX smart contract on the WAX Blockchain:
     make create-account WAX_ACCOUNT=waxprimary WAX_PRIVATE_KEY=5JTZaN1zabi5wyC3LcdeZG3AzF7sLDX4JFqMDe68ThLC3Q5nYez CONTRACT_ACCOUNT=waxsc1 CONTRACT_PUBLIC_KEY=EOS4yxqE5KYv5XaB2gj6sZTUDiGzKm42KfiRPDCeXWZUsAZZVXk1F
     ```
 
-5. **Deploy your contract.** From the command line, run: 
+5. **Despliega tu contrato.** Desde la línea de comandos, ejecuta: 
 
     <table>
     <thead>
     <tr>
-    <th style="width:28%">Parameter</th>
-    <th>Example</th>
-    <th>Description</th>
+    <th style="width:28%">Parámetro</th>
+    <th>Ejemplo</th>
+    <th>Descripción</th>
     </tr>
     </thead>
 
@@ -148,13 +150,13 @@ To launch your WAX smart contract on the WAX Blockchain:
     <tr>
     <td>CONTRACT_ACCOUNT</td>
     <td>waxsc1</td>
-    <td>The name you specified for your smart contract's account.</td>
+    <td>El nombre que especificaste para la cuenta de tu contrato inteligente.</td>
     </tr>
 
     <tr>
     <td>CONTRACT_PRIVATE_KEY</td>
     <td>9X5KRXKVx25yjL3FvxxY9YxYxxYY9Yxx99yyXTRH8DjppKpD9tKtVz</td>
-    <td>Private key for your smart contract's account (that you created in Step 2).</td>
+    <td>Clave privada de la cuenta de tu contrato inteligente (que creaste en el paso 2).</td>
     </tr>
     </tbody>
     </table>
@@ -163,16 +165,16 @@ To launch your WAX smart contract on the WAX Blockchain:
     make deploy CONTRACT_ACCOUNT=waxsc1 CONTRACT_PRIVATE_KEY=9X5KRXKVx25yjL3FvxxY9YxYxxYY9Yxx99yyXTRH8DjppKpD9tKtVz
     ```
 
-    This deploys your smart contract to the mainnet. You only need to pass your smart contract's account name and private key.
+    Esto desplegará tu contrato inteligente en la red principal. Solo tienes que pasar el nombre de la cuenta y la clave privada de tu contrato inteligente.
 
-5. **Test your smart contract.** From the command line, run:
+5. **Prueba tu contrato inteligente.** Desde la línea de comandos, ejecuta:
 
     ```shell
     make test CONTRACT_ACCOUNT=waxsc1
     ```
 
-Your dApp is now live on WAX! 
+¡Tu dApp ya está en WAX! 
 
-<strong>Note:</strong> Depending on how your dApp's onboarding process is built, your customers may need to create a WAX Account to use your dApp on WAX.
+<strong>Nota:</strong> Dependiendo de cómo esté construido el proceso de incorporación de tu dApp, es posible que tus clientes tengan que crear una cuenta de WAX para usar tu dApp en WAX.
 {: .label .label-yellow }
 

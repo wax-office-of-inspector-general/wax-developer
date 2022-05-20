@@ -4,6 +4,8 @@ layout: default
 nav_order: 52
 parent: WAX Contract Development Toolkit
 grand_parent: dApp Development
+lang-ref: WAX-CDT Sample Contracts
+lang: en
 ---
 
 WAX-CDT provides a **wax-cdt/examples** directory that includes the following sample smart contracts:
@@ -16,7 +18,7 @@ Each project includes two **CMakeLists.txt** files: one in the project's root di
 
 In this tutorial, you'll learn how to use the **make** scripts to build the Hello World example.
 
-<strong>Note:</strong> These samples were created with **eosio-init** (part of the [WAX-CDT Options](/es/tools/cdt_options) suite of tools). Refer to [Create a Smart Contract](/es/dapp-development/wax-cdt/cdt_use.html#compile-hello-world) to customize these scripts for your smart contracts.
+<strong>Note:</strong> These samples were created with **eosio-init** (part of the [WAX-CDT Options](/en/tools/cdt_options) suite of tools). Refer to [Create a Smart Contract](/en/dapp-development/wax-cdt/cdt_use.html#compile-hello-world) to customize these scripts for your smart contracts.
 {: .label .label-yellow }
 
 ## Compile Hello World
@@ -35,7 +37,7 @@ To compile the Hello World example:
     mkdir build
     ```
 
-    <strong>Note:</strong> By default, <strong>eosio-init</strong> creates a build directory. Because this directory is empty, it's not uploaded to Git. If you use <strong>eosio-init</strong> to [Create a Smart Contract](/es/dapp-development/wax-cdt/cdt_use.html#compile-hello-world), you'll be able to skip this step. 
+    <strong>Note:</strong> By default, <strong>eosio-init</strong> creates a build directory. Because this directory is empty, it's not uploaded to Git. If you use <strong>eosio-init</strong> to [Create a Smart Contract](/en/dapp-development/wax-cdt/cdt_use.html#compile-hello-world), you'll be able to skip this step. 
     {: .label .label-yellow }
 
 3. Navigate to the **build** directory.

@@ -1,9 +1,11 @@
 ---
-title: Deploy to Your Blockchain
+title: Desplegar a tu blockchain
 layout: default
 nav_order: 65
 parent: Smart Contract Quickstart
 grand_parent: dApp Development
+lang-ref: Deploy to Your Blockchain
+lang: es
 ---
 
 <!--To deploy your smart contract to your local development blockchain, you'll need to:
@@ -11,11 +13,11 @@ grand_parent: dApp Development
 - Compile your smart contract
 - Create a blockchain account for your smart contract.-->
 
-In this guide, you'll use **cleos** to deploy and test the wax smart contract you created and compiled in the [Create a Smart Contract](/es/dapp-development/wax-cdt/cdt_use.html#compile-hello-world) tutorial. 
+En esta guía, usarás **cleos** para desplegar y probar el contrato inteligente de WAX que creaste y compilaste en el tutorial [Crear un Smart Contract](/es/dapp-development/wax-cdt/cdt_use.html#compile-hello-world). 
 
-## Before You Begin
+## Antes de empezar
 
-- **nodeos** must be running 
+- **nodeos** debe estar ejecutándose
     ```shell
     nodeos -e -p eosio \
         --plugin eosio::producer_plugin \
@@ -26,7 +28,7 @@ In this guide, you'll use **cleos** to deploy and test the wax smart contract yo
         --http-validate-host=false \
         --verbose-http-errors >> nodeos.log 2>&1 &
     ```
-- Your wallet must be Opened and Unlocked
+- Tu cartera debe estar abierta y desbloqueada
     ```shell
     cleos wallet open
     ```
@@ -34,23 +36,23 @@ In this guide, you'll use **cleos** to deploy and test the wax smart contract yo
     ```shell
     cleos wallet unlock --password PW5KRXKVx25yjL3FvxxY9YxYxxYY9Yxx99yyXTRH8DjppKpD9tKtVz
     ```
-- You must create a WAX Account for your smart contract. Refer to [Create Accounts](/es/dapp_account) if you haven't completed this step.
+- Debes crear una cuenta de WAX para tu contrato inteligente. Si aún no la has creado, visita la guía [Crear una cuenta de WAX](/es/dapp_account).
 
-## Deploy Your Smart Contract
+## Despliega tu contrato inteligente
 
-To deploy your smart contract's WASM file to your local blockchain, use `cleos set contract` from the command line:
+Para desplegar el archivo WASM de tu contrato en la blockchain local, utiliza `cleos set contract` en la línea de comandos:
 
-| Parameter | Example | Description
+| Parámetro | Ejemplo | Descripción
 | --- | ----------- | -------------------------- |
-| account | waxsc1 | Your smart contract's account. |
-| path | /users/wax-blockchain/wax-cdt/mycontracts/wax | Full path to your WASM file. |
-| permission | -p waxsc1@active | Active or Owner permission for your smart contract's account. |
+| account | waxsc1 | La cuenta de tu contrato inteligente. |
+| path | /users/wax-blockchain/wax-cdt/mycontracts/wax | La ruta completa de tu archivo WASM. |
+| permission | -p waxsc1@active | El permiso Active u Owner para la cuenta de tu contrato inteligente. |
 
 ```shell
 cleos set contract waxsc1 /users/wax-blockchain/wax-cdt/mycontracts/wax -p waxsc1@active
 ```
 
-The console prints the following confirmation:
+La consola mostrará esta confirmación:
 
 ```shell
 Reading WASM from /users/wax-blockchain/wax-cdt/mycontracts/wax/wax.wasm...
@@ -61,24 +63,24 @@ executed transaction: 8a79664a3f0457513fabaa5753c41b18588cb2994cd5e3164328eafc96
 warning: transaction executed locally, but may not be confirmed by the network yet         ]
 ```
 
-Your smart contract should now be live on your local blockchain.
+Tu contrato ya debería estar disponible en tu blockchain local.
 
-## Test Your Smart Contract
+## Prueba tu Smart Contract
 
-To test your smart contract, use `cleos push action` from the command line:
+Para probar tu contrato inteligente, usa la acción `cleos push action` desde la línea de comandos:
 
-| Parameter | Example | Description
+| Parámetro | Ejemplo | Descripción
 | --- | ----------- | -------------------------- |
-| account | waxsc1 | Your smart contract's account. |
-| action | hi | Name of action. |
-| datastream | '["YourName"]' | Enter your name or any other string. |
-| permission | -p waxsc1@active | Active or Owner permission for your smart contract's account. |
+| account | waxsc1 | La cuenta de tu contrato inteligente. |
+| action | hi | Nombre de la acción. |
+| datastream | '["YourName"]' | Introduce tu nombre o cualquier otra cadena. |
+| permission | -p waxsc1@active | El permiso Active u Owner para la cuenta de tu contrato inteligente. |
 
 ```shell
 cleos push action waxsc1 hi '["YourName"]' -p waxsc1@active
 ```
 
-The console prints the following:
+La consola mostrará lo siguiente:
 
 ```shell
 executed transaction: 6a0b1489d903f2cacc6480830358f07aaf65b20bf1d7e855dc20097f4d64dc52  104 bytes  1727 us
@@ -87,7 +89,7 @@ executed transaction: 6a0b1489d903f2cacc6480830358f07aaf65b20bf1d7e855dc20097f4d
 warning: transaction executed locally, but may not be confirmed by the network yet         ]
 ```
 
-If you receive an error that the transaction took too long, run `cleos push action` again. If you still receive an error, try restarting **nodeos**.
+Si aparece un error que indica que la transacción ha tardado demasiado, vuelve a ejecutar `cleos push action`. Si el error persiste, prueba a reiniciar **nodeos**.
 
 ```shell
 Error 3080006: Transaction took too long

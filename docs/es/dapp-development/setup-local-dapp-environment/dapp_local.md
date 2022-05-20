@@ -1,20 +1,22 @@
 ---
-title: Start a Local Node
+title: Iniciar un nodo local
 layout: default
 nav_order: 41
 parent: Set Up a Local dApp Environment
 grand_parent: dApp Development
+lang-ref: Start a Local Node
+lang: es
 ---
 
-To start a local WAX node on your development server:
+Para iniciar un nodo local de WAX en tu servidor de desarrollo:
 
-1.  From the command line, enter the following to initialize **keosd**.
+1.  Desde la línea de comandos, introduce lo siguiente para inicializar **keosd**.
 
     ```shell
     keosd &
     ```
 
-    The console prints the following information:
+    La consola muestra la siguiente información:
 
     ```shell
     info  2019-07-16T21:22:39.501 thread-0  wallet_plugin.cpp:42          plugin_initialize    ] initializing wallet plugin
@@ -37,7 +39,7 @@ To start a local WAX node on your development server:
     info  2019-07-16T21:22:39.567 thread-0  http_plugin.cpp:622           add_handler          ] add api url: /v1/wallet/unlock
     ```
 
-2. Next, paste the following to start producing blocks:
+2. A continuación, pega lo siguiente para empezar a producir bloques:
 
     ```shell
     nodeos -e -p eosio \
@@ -50,25 +52,25 @@ To start a local WAX node on your development server:
     --verbose-http-errors >> nodeos.log 2>&1 &
     ```
 
-    This will initialize all of the basic plugins, set the server address (yours), and add contract debugging and logging. 
+    Esto inicializará todos los plugins básicos, establecerá la dirección del servidor (la tuya), y añadirá la depuración y el registro de contratos. 
 
 
-    <strong>Important:</strong> The --access-control-allow-origin='*' parameter enables Cross-Origin Resource Sharing (CORS). Never enable this for a public node.     
+    <strong>Importante:</strong> El parámetro --access-control-allow-origin='*' habilita el uso compartido de recursos entre orígenes (CORS). Nunca habilites esto para un nodo público.     
     {: .label .label-yellow }
 
-    When the command completes, the console prints out a number, similar to the following:
+    Cuando el comando se completa, la consola muestra un número similar al siguiente:
 
     ```shell
     [2] 4529.
     ```
 
-3. To verify that **nodeos** is producing blocks, from the command line, use the **tail** command to view the log:
+3. Para verificar que **nodeos** está produciendo bloques, desde la línea de comandos, usa el comando **tail** para ver el registro:
 
     ```shell
     tail -f nodeos.log
     ```
 
-    The console prints your block information:
+    La consola muestra la información de tu bloque:
 
     ```shell
     info  2019-07-16T21:36:14.501 thread-0  producer_plugin.cpp:1597      produce_block        ] Produced block 0000043f8f7c37a1... #1087 @ 2019-07-16T21:36:14.500 signed by eosio [trxs: 0, lib: 1086, confirmed: 0]
@@ -76,28 +78,28 @@ To start a local WAX node on your development server:
     ```
 
 
-    <strong>Tip:</strong> Notice the "signed by eosio" signature - this is the local system account.
+    <strong>Consejo:</strong> Fíjate en la firma " signed by eosio" - se trata de la cuenta del sistema local.
     {: .label .label-yellow }
 
-You're now running a local WAX node on your development server. Press Ctrl + c to close the log (**nodeos** will continue to run in the background). 
+Ya estás ejecutando un nodo WAX local en tu servidor de desarrollo. Pulsa Ctrl + c para cerrar el registro (**los nodos** seguirán ejecutándose en segundo plano). 
 
-## Stop a Local Node
+## Detener un nodo local
 
-To cleanly stop **nodeos**:
+Para detener **nodeos** de manera limpia:
 
-1. From the command line, run `pkill`:
+1. Desde la línea de comandos, ejecuta `pkill`:
 
     ```shell
     pkill nodeos
     ```
 
-2. To verify that **nodeos** is no longer producing blocks, run the `tail` command to view the log:
+2. Para verificar que **nodeos** ya no está produciendo bloques, ejecuta el comando `tail` para ver el registro:
 
     ```shell
     tail -f nodeos.log
     ```
 
-    On the last line, the console prints: "nodeos successfully exiting."
+    En la última línea, la consola mostrará: "nodeos successfully exiting".
 
     ```shell
     info  2019-07-16T21:45:43.501 thread-0  producer_plugin.cpp:1597      produce_block        ] Produced block 000008b10f51d1ae... #2225 @ 2019-07-16T21:45:43.500 signed by eosio [trxs: 0, lib: 2224, confirmed: 0]

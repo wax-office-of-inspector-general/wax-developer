@@ -8,60 +8,60 @@ lang-ref: Deploy Your dApp on WAX
 lang: es
 ---
 
-To deploy your dApp on WAX, you'll need to use [WAX-CDT](/es/dapp-development/wax-cdt/) and [Blockchain Tools](/es/tools/blockchain_tools) to:
+Para desplegar tu dApp en WAX, tendrás que utilizar [WAX-CDT](/es/dapp-development/wax-cdt/) y las [Herramientas de Blockchain](/es/tools/blockchain_tools) para:
 
-* Compile your smart contracts
-* Create WAX Blockchain Accounts for each of your contracts
-* Deploy your smart contracts to the WAX Blockchain
+* Compilar tus contratos inteligentes
+* Crear cuentas de WAX para cada uno de tus contratos
+* Desplegar tus contratos inteligentes en la Blockchain de WAX
 
-WAX provides two ways to accomplish these deployment steps. You can use our custom **make** scripts (recommended for EOS developers) or use WAX-CDT tools from your local Docker container or installation. Below is a list of benefits and requirements for each option.
+WAX proporciona dos maneras de realizar estos pasos de despliegue. Puedes utilizar nuestros scripts **make** personalizados (recomendados para desarrolladores de EOS) o utilizar las herramientas WAX-CDT desde tu contenedor o instalación local de Docker. A continuación hay una lista de beneficios y requisitos para cada opción.
 
-## Custom Deploy Scripts
+## Scripts de despliegue personalizados
 
-The <a href="https://github.com/worldwide-asset-exchange/wax-blockchain" target="_blank">WAX Source Code Repository</a> includes a **hello-world** sample contract, along with **make** scripts that provide an easy, automated way to build and deploy your smart contracts. These scripts use the <a href="https://hub.docker.com/r/waxteam/dev" target="_blank">WAX Docker Development image</a> to:
+El <a href="https://github.com/worldwide-asset-exchange/wax-blockchain" target="_blank">Repositorio de código fuente de WAX</a> incluye un contrato de ejemplo, **hello-world**, junto con scripts **make** que ofrecen una forma fácil y automatizada de crear y desplegar tus contratos inteligentes. Estos scripts usan una <a href="https://hub.docker.com/r/waxteam/dev" target="_blank">Imagen de desarrollo de WAX Docker</a> para:
 
-* Create a WASM and ABI file
-* Create a WAX Blockchain Account for your smart contract
-* Deploy your smart contract to WAX
-* Test your smart contract on the WAX Blockchain
+* Crear un archivo WASM y ABI
+* Crear una cuenta de WAX Blockchain para tu contrato inteligente
+* Desplegar tu contrato inteligente en WAX
+* Probar tu contrato inteligente en la Blockchain de WAX
 
-### Advantages
+### Ventajas
 
-* Allows you to deploy a smart contract from a Docker container, without installing any WAX source code (you'll still need to download the **hello-world** source code and scripts from the <a href="https://github.com/worldwide-asset-exchange/wax-blockchain" target="_blank">WAX Source Code Repository</a>).
-* You can run the customizable **make** scripts from your smart contract's directory, without passing paths to your WASM and ABI files.
+* Nos permite desplegar un contrato inteligente desde un contenedor Docker sin instalar ningún código fuente de WAX (seguirás necesitando descargar el código fuente **hello-world** y los scripts del <a href="https://github.com/worldwide-asset-exchange/wax-blockchain" target="_blank">Repositorio de código fuente de WAX</a>).
+* Puedes ejecutar los scripts personalizados **make** del directorio de tu contrato inteligente sin pasar las rutas a sus archivos WASM y ABI.
 
-### What You'll Need:
+### Qué necesitas:
 
-* Docker must be installed and configured to run without sudo. Linux users, refer to <a href="https://docs.docker.com/install/linux/linux-postinstall/" target="_blank">Post-installation steps for Linux</a> for more information.
+* Docker debe estar instalado y configurado para ejecutarse sin sudo. Si utilizas Linux, consulta los  <a href="https://docs.docker.com/install/linux/linux-postinstall/" target="_blank">pasos posteriores a la instalación de Linux</a> para más información.
 
-   <strong>Windows Subsystem for Linux Users:</strong> Docker configuration and installation requirements will vary depending on your WSL version. Recommended only for advanced Docker/Windows users. If you're running WSL 2, refer to <a href="https://docs.docker.com/docker-for-windows/wsl-tech-preview/" target="_blank">Docker Desktop WSL 2 Tech Preview</a> for more information.
+   <strong>Subsistema Windows para usuarios de Linux:</strong> Los requisitos de configuración e instalación de Docker varían en función de su versión de WSL. Recomendado sólo para usuarios avanzados de Docker/Windows. Si estás ejecutando WSL 2, consulta el <a href="https://docs.docker.com/docker-for-windows/wsl-tech-preview/" target="_blank">avance técnico de Docker Desktop WSL 2</a>.
     {: .label .label-yellow }
 
 * make (VERSION 3.9 +)
 * A self-managed WAX Blockchain Account and its private key (to deploy the contract).
 
 
-## Docker Depoy (WAX-CDT)
+## Despliegue de Docker (WAX-CDT)
 
-If you prefer, you can deploy your smart contracts from the command line using WAX-CDT tools. 
+Si lo prefieres, puedes desplegar tus contratos inteligentes desde la línea de comandos utilizando las herramientas WAX-CDT. 
 
-### Advantages
+### Ventajas
 
-* Allows more control over the build process and deployment parameters. Refer to [WAX-CDT Options](/es/tools/cdt_options) for more information.
-* If you used **eosio-init** to [Create a Smart Contract](/es/dapp-development/wax-cdt/cdt_use.html#compile-hello-world) and deploy to your local blockchain, this might be a good option for you.
-* Compatible for Windows users. 
+* Permite un mayor control sobre el proceso de construcción y los parámetros de despliegue. Consulta las [opciones de WAX-CDT](/es/tools/cdt_options) para obtener más información.
+* Si has usado **eosio-init** para [crear un Smart Contract](/es/dapp-development/wax-cdt/cdt_use.html#compile-hello-world) y desplegarlo en tu blockchain local, esta podría ser una buena opción para ti.
+* Es compatible con Windows. 
 
-### What You'll Need
+### Qué necesitas
 
-To use this option, you'll need to:
+Para utilizar esta opción, necesitarás:
 
-* Complete our [Docker Quickstart](/es/dapp-development/docker-setup/) (recommended) or use the [WAX Blockchain Setup](/es/dapp-development/wax-blockchain-setup/) to build from source.
-* Use the [WAX Contract Development Toolkit (WAX-CDT)](/es/dapp-development/wax-cdt/) to compile your smart contracts.
+* Completar nuestro [inicio rápido de Docker](/es/dapp-development/docker-setup/) (recomendado) o usar la [Configuración de la Blockchain de WAX](/es/dapp-development/wax-blockchain-setup/) para poder trabajar desde el código fuente.
+* Usar el [Kit de herramientas de desarrollo de contratos WAX (WAX Contract Development Toolkit o WAX-CDT)](/es/dapp-development/wax-cdt/) para compilar tus contratos inteligentes.
 
-## Before You Begin
+## Antes de empezar
 
-No matter which deployment option you choose, you'll need to:
+Independientemente de la opción de despliegue que elijas, tendrás que:
 
-* Create a self-managed WAX Blockchain Account. 
-* Make sure you have enough WAX staked in your account to allocate resources. 
+* Crear una cuenta autogestionada de WAX Blockchain. 
+* Asegurarte de tener suficiente WAX en tu cuenta para asignar recursos.
 
