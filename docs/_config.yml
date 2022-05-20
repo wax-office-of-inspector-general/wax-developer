@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: WAX Developer
+title: WAX Developer Docs
 email: your-email@mail.com
 layout: default
 description: "The hub for blockchain development tutorials, quickstart guides, API documentation, and more. Everything you need to learn blockchain programming, blockchain dApp development on WAX."
