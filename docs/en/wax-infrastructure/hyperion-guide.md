@@ -2,7 +2,7 @@
 title: Full/Partial History nodes using Hyperion
 nav_order: 141
 layout: default
-parent: WAX Infra Guides
+parent: WAX Infrastructure Guides
 lang-ref: Full/Partial History nodes using Hyperion
 lang: en
 ---

@@ -2,7 +2,7 @@
 title: API Full/Partial Archive nodes
 nav_order: 142
 layout: default
-parent: WAX Infra Guides
+parent: WAX Infrastructure Guides
 lang-ref: API Full/Partial Archive nodes
 lang: en
 ---

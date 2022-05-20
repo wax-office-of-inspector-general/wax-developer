@@ -1,10 +1,10 @@
 ---
-title: WAX Infra Guides
+title: WAX Infrastructure Guides
 nav_order: 2
 layout: default
 has_children: true
 has_toc: true
-lang-ref: WAX Infra Guides
+lang-ref: WAX Infrastructure Guides
 lang: en
 ---
 
