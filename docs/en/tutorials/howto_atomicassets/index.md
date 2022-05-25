@@ -4,6 +4,7 @@ nav_order: 30
 layout: default
 parent: Tutorials
 has_children: true
+has_toc: true
 lang-ref: How-To AtomicAssets
 lang: en
 ---
