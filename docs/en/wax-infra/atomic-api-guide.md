@@ -166,7 +166,7 @@ vim /etc/postgresql/14/main/postgresql.conf
 data_directory = '/var/lib/postgresql/14/main'
 ```
 
-##### 8.Redis installation
+##### 8. Redis installation
 ```
 sudo add-apt-repository ppa:redislabs/redis
 sudo apt-get -y update
@@ -186,7 +186,7 @@ sudo systemctl unmask  redis-server.service
 sudo systemctl restart redis-server
 sudo systemctl status redis-server
 ```
-##### 9.PGAdmin4 installation
+##### 9. PGAdmin4 installation
 
 Guides:
   - https://computingforgeeks.com/how-to-install-pgadmin-4-on-ubuntu/
