@@ -129,4 +129,3 @@ The following pictures will show you which information you have to fill in, in o
 ## Helpful Links
 - Official Repository: [https://github.com/eosrio/bp-info-standard](https://github.com/eosrio/bp-info-standard)
 - Tool to validate your bp.json: [https://validate.eosnation.io/wax/producers/](https://validate.eosnation.io/wax/producers/)
-- Chains.json tutorial: [https://docs.blacklusion.io/#/en/getting-started/chains_json](https://docs.blacklusion.io/#/en/getting-started/chains_json)
