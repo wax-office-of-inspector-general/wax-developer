@@ -1,11 +1,11 @@
 ---
-title: Managing AtomicAssets templates from javaScript
+title: Managing AA Templates
 nav_order: 36
 layout: default
 parent: How-To AtomicAssets
 grand_parent: Tutorials
 has_children: false
-lang-ref: Managing AtomicAssets templates from javaScript
+lang-ref: Managing AA Templates
 lang: en
 ---
 

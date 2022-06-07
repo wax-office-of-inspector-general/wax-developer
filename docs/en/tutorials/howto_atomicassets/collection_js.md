@@ -1,11 +1,11 @@
 ---
-title: Managing AtomicAssets collections from javaScript
+title: Managing AA Collections
 nav_order: 34
 layout: default
 parent: How-To AtomicAssets
 grand_parent: Tutorials
 has_children: false
-lang-ref: Managing AtomicAssets collections from javaScript
+lang-ref: Managing AA Collections
 lang: en
 ---
 
