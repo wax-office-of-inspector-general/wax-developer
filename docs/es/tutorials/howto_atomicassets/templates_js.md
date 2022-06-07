@@ -29,6 +29,8 @@ Al crear una plantilla haremos uso de los tipos de datos declarados en el esquem
 - max_supply: Número máximo de impresiones permitidas. Si es 0 se supone infinito.
 - immutable_data: Array de información inmutable que se incluirá en todas las copias creadas con esta plantilla.
 
+Los datos inmutables deben definirse en un mapa del tipo [ATTRIBUTE_MAP](https://github.com/pinknetworkx/atomicassets-contract/wiki/Custom-Types#attribute_map) compuesto por pares de claves y valores.
+
 Un NFT AtomicAssets también puede contener datos modificables (mutable data). Esto lo veremos más adelante ya que no se deben especificar durante la creación de la plantilla.
 {: .label .label-yellow }
 
@@ -64,20 +66,7 @@ const immutableData = [
     {
         key: "class",
         value: ["string", "Warrior"],
-    },
-    {
-        key: "points",
-        value: ["uint32", 0],
-    },
-    {
-        key: "life",
-        value: ["uint16", 100],
-    },
-    {
-        key: "shield",
-        value: ["uint16", 20],
-    },
-
+    }
 ];
 
 // Create schema
