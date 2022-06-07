@@ -17,16 +17,40 @@ There are different types of nodes in WAX Blockchain ecosystem that can used for
 - Peer nodes
 - API query nodes
 - Validator/Block Producer nodes
-- Ship nodes (a.k.a Archive nodes)
-- Full/Partial History nodes (Deserialized & Consumable data archive nodes)
-- NFT standards and Marketplace specific nodes (AtomicAssets, AtomicMarket & Simpleassets)
+- [Ship nodes (a.k.a Archive nodes)](/en/wax-infra/api-archive-guide)
+- [Full/Partial History nodes (Deserialized & Consumable data archive nodes)](/en/wax-infra/hyperion-guide)
+- NFT standards and Marketplace specific nodes ([AtomicAssets, AtomicMarket](/en/wax-infra/atomic-api-guide) & Simpleassets)
 
 For more detailed explaination on the different types of nodes and their use-cases, please refer: https://developers.eos.io/welcome/latest/getting-started-guide/index/#development-and-testing
 
 The guides presented here will share some best practices, help you get a deeper understanding on how you can setup and maintain the WAX blockchain infrastructure in a scalable & resilient way.
 
-If you don't want to host your own infrastructure, you can also refer to the following service providers:
+If you don't want to setup and manage your infrastructure, there are a couple of service providers you can choose from below:
 
-https://t.me/waxapi
-https://waxgalaxy.io/tools/api-services
-https://dfuse.eosnation.io/pricing
+## Public and Free API Service Providers
+
+There are public APIs provided by different validator teams but often times they are heavily rate-limited etc. You can find the list of public APIs here:
+https://validate.eosnation.io/wax/reports/endpoints.html
+
+## Paid API Service Providers
+
+Paid service providers offer much more reliability, flexibility and better rate-limits with SLAs for your dapps and removes the hassle to setup & maintain the infrastructure, you can find different service providers and their offerings below:
+
+|Provider Name|Website|Offerings|Offerings Type|Contact Information
+|----------------|-------------------------------|-----------------------------|----------------------|-------------|
+|WAX Galaxy|https://waxgalaxy.io/tools/api-services|FAH, PAH, SH, AA|Dedicated Servers, API Metered Subscriptions|contact@waxgalaxy.io, Telegram ID: @sukeshtedla
+|Zaisan|            |FAH, AA, SH, LA|Dedicated and Shared Servers|Telegram ID: @dumplings_5
+|EOS USA|https://www.eosusa.io/hosting/|FAH, SH, AA|Dedicated Servers|https://www.eosusa.io/hosting/, Telegram ID: @EOSUSA_Michael
+|EOS Nation| https://dfuse.eosnation.io/pricing|FAH|API Metered Subscriptions|[info@eosnation.io](mailto:info@eosnation.io), Telegram ID: @mdarwin
+|WAX Sweden|https://waxsweden.org/commercial-api/|SH, Contract Notifications|Dedicated Servers|https://t.me/eossweden
+
+
+- FAH: Full Archive History
+- PAH: Partial Archive History
+- SH: State History nodes
+- AA: AtomicAssets/Market API nodes
+- LA: Light API nodes
+
+If you want to communicate with infra service providers, visit this telegram channel:
+
+- https://t.me/waxapi
