@@ -29,6 +29,8 @@ When creating a template we will make use of the data types declared in the sche
 - max_supply: Maximum number of prints allowed. If 0 it is assumed to be infinite.
 - immutable_data: Array of immutable information to be included in all copies created with this template.
 
+Immutable data must be defined in a map of type [ATTRIBUTE_MAP](https://github.com/pinknetworkx/atomicassets-contract/wiki/Custom-Types#attribute_map) consisting of key and value pairs
+
 An AtomicAssets NFT can also contain mutable data. This will be discussed later as it should not be specified during template creation.
 {: .label .label-yellow }
 
@@ -64,20 +66,7 @@ const immutableData = [
     {
         key: "class",
         value: ["string", "Warrior"],
-    },
-    {
-        key: "points",
-        value: ["uint32", 0],
-    },
-    {
-        key: "life",
-        value: ["uint16", 100],
-    },
-    {
-        key: "shield",
-        value: ["uint16", 20],
-    },
-
+    }
 ];
 
 // Create schema
@@ -86,7 +75,7 @@ const immutableData = [
     console.log(result);
 })();
 ``` 
-**Nota**: los datos tipo "ipfs" e "image" son tratados como "string"
+**Note**: "ipfs" and "image" data are treated as "string".
 {: .label .label-yellow }
 
 And call to action...
