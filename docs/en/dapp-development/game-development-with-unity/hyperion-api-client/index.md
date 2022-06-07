@@ -1,3 +1,13 @@
+---
+title: Hyperion API Client
+layout: default
+nav_order: 50
+parent: Unity Game Development
+has_children: true
+lang-ref: Hyperion API Client
+lang: en
+---
+
 # Doxybook2 Example
 
 * [Classes](Classes/README.md)
