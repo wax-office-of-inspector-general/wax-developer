@@ -1,11 +1,11 @@
 ---
-title: Managing AtomicAssets schemas from javaScript
+title: Managing AA schemas
 nav_order: 36
 layout: default
 parent: How-To AtomicAssets
 grand_parent: Tutorials
 has_children: false
-lang-ref: Managing AtomicAssets schemas from javaScript
+lang-ref: Managing AA schemas
 lang: en
 ---
 As mentioned above, schemas allow us to declare the common characteristics of the NFTs in our collection and to create groups. If we are creating NFTs for a game that has several characters, each character will be unique, but will share attributes with the rest of the characters. All the characters will have a name, a score, a life point level, etc. 

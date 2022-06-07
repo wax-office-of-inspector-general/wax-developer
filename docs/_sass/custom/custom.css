@@ -1,0 +1,28 @@
+.nav-list .nav-list-item .nav-list-link {
+  color: inherit;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.nav-list .nav-list-item > .nav-list .nav-list-link {
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  padding-left: 0;
+}
+
+.nav-list .nav-list-item > .nav-list {
+  border-left: 2px solid #E5E5E5;
+  padding-left: 1em;
+  margin-left: 2.5em;
+}
+
+.nav-list .nav-list-item > .nav-list .nav-list-item > .nav-list {
+  border-left: none;
+  padding-left: 1em;
+  margin-left: 0;
+}
+
+.nav-list .nav-list-item > .nav-list .nav-list-item > .nav-list .nav-list-link {
+  font-size: 13px;
+  line-height: 17px;
+}
