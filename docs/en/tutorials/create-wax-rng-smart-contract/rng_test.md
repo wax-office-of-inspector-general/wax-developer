@@ -42,7 +42,7 @@ In this example, we'll use the following parameters:
 From the command line, use the `cleos push action` command to call the **getrandom** action.
 
 ```shell
-cleos -u https://chain.wax.io push action waxrng getrandom '["waxrng", 1267, 445896213]' -p waxrng@active
+cleos -u [chain-api-url] push action waxrng getrandom '["waxrng", 1267, 445896213]' -p waxrng@active
 ```
 
 The console prints the following:
@@ -68,7 +68,7 @@ pending console output:
 The callback function saves your random number to the **rngcustomers** table. To display the table values, use the `cleos get table` command.
 
 ```shell
-cleos -u https://chain.wax.io get table waxrng waxrng rngcustomers
+cleos -u [chain-api-url] get table waxrng waxrng rngcustomers
 ```
 
 The console prints the following JSON results, including the **random_value** returned from the WAX RNG service and the **finalnumber** derived from the **random_value**:

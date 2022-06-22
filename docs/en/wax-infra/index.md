@@ -30,7 +30,8 @@ If you don't want to setup and manage your infrastructure, there are a couple of
 ## Public and Free API Service Providers
 
 There are public APIs provided by different validator teams but often times they are heavily rate-limited etc. You can find the list of public APIs here:
-https://validate.eosnation.io/wax/reports/endpoints.html
+
+[EOSNATION API List](https://validate.eosnation.io/wax/reports/endpoints.html)
 
 ## Paid API Service Providers
 
