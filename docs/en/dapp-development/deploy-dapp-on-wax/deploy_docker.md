@@ -68,7 +68,7 @@ To modify the **hello-world** scripts to deploy your smart contract:
     Save the file.
 
 
-    <strong>Note:</strong> `NODEOS_URL` is the only optional parameter. Its default value is the mainnet deployment address https://chain.wax.io/.  
+    <strong>Note:</strong> `NODEOS_URL` is the only optional parameter. Its default value is the mainnet deployment address [chain-api-url](/en/wax-infrastructure/#public-and-free-api-service-providers).  
     {: .label .label-yellow }
 
 Once these changes have been made, you're ready to use the `make` scripts to build and deploy your smart contract.

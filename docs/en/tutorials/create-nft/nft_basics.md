@@ -69,5 +69,5 @@ There are four key tables included with the Simple Assets smart contract:
 To download the **simpleassets.abi** file to your current directory, use the `cleos get code` command from your Docker interactive bash session.
 
 ```shell
-cleos -u https://chain.wax.io get code simpleassets -a simpleassets.abi
+cleos -u [chain-api-url] get code simpleassets -a simpleassets.abi
     ```

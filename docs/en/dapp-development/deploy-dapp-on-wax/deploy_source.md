@@ -48,7 +48,7 @@ To deploy your smart contract to the WAX mainnet:
     <tbody>
     <tr>
     <td>-u</td>
-    <td>-u <a href="https://chain.wax.io">https://chain.wax.io</a></td>
+    <td>-u <a href="/en/wax-infrastructure/#public-and-free-api-service-providers">chain-api-url</a></td>
     <td>This is the WAX Blockchain URL.</td>
     </tr>
 
@@ -104,7 +104,7 @@ To deploy your smart contract to the WAX mainnet:
 
     ### Example
     ```shell
-    cleos -u https://chain.wax.io system newaccount waxdappacct1 HelloWorld10 EOS7jEb46pDiWvA39faCoFn3jUdn6LfL51irdXbvfpuSko86iNU5x --stake-net '0.50000000 WAX' --stake-cpu '0.50000000 WAX' --buy-ram-kbytes 32
+    cleos -u chain-api-url system newaccount waxdappacct1 HelloWorld10 EOS7jEb46pDiWvA39faCoFn3jUdn6LfL51irdXbvfpuSko86iNU5x --stake-net '0.50000000 WAX' --stake-cpu '0.50000000 WAX' --buy-ram-kbytes 32
     ```
 
     <strong>Note:</strong> You'll need to repeat Steps 1 and 2 for each of your contracts. 
@@ -114,14 +114,14 @@ To deploy your smart contract to the WAX mainnet:
 
     | Parameter | Example | Description
     | --- | ----------- | -------------------------- |
-    | -u | -u https://chain.wax.io | This is the WAX Blockchain URL. |
+    | -u | -u [chain-api-url](/en/wax-infrastructure/#public-and-free-api-service-providers) | This is the WAX Blockchain URL. |
     | contractAccount| HelloWorld10 | Your smart contract's account (created in Step 2). |
     | fullPath | d/wax-blockchain/wax-cdt/mycontracts/wax/build | The full path to your WASM and ABI files. |
     | wasmName | wax | Name of your WASM file. |
     | abiName | wax | Name of your ABI file. |
 
     ```shell
-    cleos -u https://chain.wax.io set contract HelloWorld10 d/wax-blockchain/wax-cdt/mycontracts/wax/build wax.wasm wax.abi
+    cleos -u chain-api-url set contract HelloWorld10 d/wax-blockchain/wax-cdt/mycontracts/wax/build wax.wasm wax.abi
     ```
 
 Your dApp is now live on WAX! 
