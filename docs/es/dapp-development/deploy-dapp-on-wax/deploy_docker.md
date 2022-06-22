@@ -68,7 +68,7 @@ Para modificar los scripts **hello-world** y desplegar tu contrato inteligente:
     Guarda el archivo.
 
 
-    <strong>Nota:</strong> `NODEOS_URL` es el único parámetro opcional. Su valor por defecto es la dirección de despliegue de la mainnet https://chain.wax.io/.  
+    <strong>Nota:</strong> `NODEOS_URL` es el único parámetro opcional. Su valor por defecto es la dirección de despliegue de la mainnet https://[chain-api-url](/en/wax-infra/#public-and-free-api-service-providers)/.  
     {: .label .label-yellow }
 
 Una vez realizados estos cambios, ya tienes todo listo para utilizar los scripts `make` y crear y desplegar tu contrato inteligente.

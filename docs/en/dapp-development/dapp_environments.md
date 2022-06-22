@@ -49,7 +49,7 @@ Below you'll find WAX versions, URLs, and development environment information.
 <tbody>
 <tr>
 <td>Blockchain URL</td>
-<td><a href="https://chain.wax.io">https://chain.wax.io</a></td>
+<td><a href="/en/wax-infra/#public-and-free-api-service-providers">chain-api-url</a></td>
 <td>Used to make API calls and deploy your smart contracts to the WAX mainnet.</td>
 </tr>
 
