@@ -48,7 +48,7 @@ To deploy your smart contract to the WAX mainnet:
     <tbody>
     <tr>
     <td>-u</td>
-    <td>-u <a href="/en/wax-infra/#public-and-free-api-service-providers">chain-api-url</a></td>
+    <td>-u <a href="/en/wax-infrastructure/#public-and-free-api-service-providers">chain-api-url</a></td>
     <td>This is the WAX Blockchain URL.</td>
     </tr>
 
@@ -114,7 +114,7 @@ To deploy your smart contract to the WAX mainnet:
 
     | Parameter | Example | Description
     | --- | ----------- | -------------------------- |
-    | -u | -u [chain-api-url](/en/wax-infra/#public-and-free-api-service-providers) | This is the WAX Blockchain URL. |
+    | -u | -u [chain-api-url](/en/wax-infrastructure/#public-and-free-api-service-providers) | This is the WAX Blockchain URL. |
     | contractAccount| HelloWorld10 | Your smart contract's account (created in Step 2). |
     | fullPath | d/wax-blockchain/wax-cdt/mycontracts/wax/build | The full path to your WASM and ABI files. |
     | wasmName | wax | Name of your WASM file. |

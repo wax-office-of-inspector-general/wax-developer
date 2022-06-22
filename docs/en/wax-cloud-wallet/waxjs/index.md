@@ -1,6 +1,7 @@
 ---
 title: WaxJS Overview
 layout: default
+nav_order: 3
 parent: WAX Cloud Wallet
 has_children: true
 has_toc: true

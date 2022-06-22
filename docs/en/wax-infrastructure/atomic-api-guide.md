@@ -2,7 +2,7 @@
 title: Atomic Assets/Market API
 nav_order: 143
 layout: default
-parent: WAX Infra Guides
+parent: WAX Infrastructure/APIs
 lang-ref: Atomic Assets/Market API
 lang: en
 ---

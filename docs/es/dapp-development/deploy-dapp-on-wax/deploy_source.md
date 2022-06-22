@@ -48,7 +48,7 @@ Para desplegar tu contrato inteligente en la mainnet de WAX:
     <tbody>
     <tr>
     <td>-u</td>
-    <td>-u <a href="/en/wax-infra/#public-and-free-api-service-providers">[chain-api-url]</a></td>
+    <td>-u <a href="/en/wax-infrastructure/#public-and-free-api-service-providers">[chain-api-url]</a></td>
     <td>Esta es la URL de la Blockchain de WAX.</td>
     </tr>
 
@@ -114,7 +114,7 @@ Para desplegar tu contrato inteligente en la mainnet de WAX:
 
     | Parámetro | Ejemplo | Descripción
     | --- | ----------- | -------------------------- |
-    | -u | -u https://[chain-api-url](/en/wax-infra/#public-and-free-api-service-providers) | Esta es la URL de la Blockchain de WAX. |
+    | -u | -u https://[chain-api-url](/en/wax-infrastructure/#public-and-free-api-service-providers) | Esta es la URL de la Blockchain de WAX. |
     | contractAccount| HelloWorld10 | La cuenta de tu contrato inteligente (creada en el paso 2). |
     | fullPath | d/wax-blockchain/wax-cdt/mycontracts/wax/build | La ruta completa de tus archivos WASM y ABI. |
     | wasmName | wax | Nombre de tu archivo WASM. |

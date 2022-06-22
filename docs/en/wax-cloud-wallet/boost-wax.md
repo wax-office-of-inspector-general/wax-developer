@@ -1,6 +1,7 @@
 ---
 title: boost.wax
 layout: default
+nav_order: 2
 parent: WAX Cloud Wallet
 lang-ref: boost.wax
 lang: en

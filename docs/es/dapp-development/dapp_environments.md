@@ -49,7 +49,7 @@ A continuación, encontrarás versiones de WAX, URLs e información sobre los en
 <tbody>
 <tr>
 <td>URL de la Blockchain</td>
-<td><a href="/en/wax-infra/#public-and-free-api-service-providers">[chain-api-url]</a></td>
+<td><a href="/en/wax-infrastructure/#public-and-free-api-service-providers">[chain-api-url]</a></td>
 <td>Se utiliza para hacer llamadas a la API y desplegar los contratos inteligentes en la red principal (mainnet) de WAX.</td>
 </tr>
 
