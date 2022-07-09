@@ -1,6 +1,6 @@
 ---
 title: Transfiriendo NFTs AtomicAssets
-nav_order: 40
+nav_order: 42
 layout: default
 parent: How-To AtomicAssets
 grand_parent: Tutoriales
