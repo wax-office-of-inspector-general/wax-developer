@@ -1,6 +1,6 @@
 ---
 title: Managing AA Templates
-nav_order: 36
+nav_order: 38
 layout: default
 parent: How-To AtomicAssets
 grand_parent: Tutorials

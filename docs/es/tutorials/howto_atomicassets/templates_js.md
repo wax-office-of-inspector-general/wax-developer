@@ -1,6 +1,6 @@
 ---
 title: Administrar plantillas AtomicAssets desde javaScript
-nav_order: 36
+nav_order: 38
 layout: default
 parent: How-To AtomicAssets
 grand_parent: Tutoriales

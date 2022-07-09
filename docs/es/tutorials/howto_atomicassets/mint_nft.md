@@ -1,6 +1,6 @@
 ---
 title: Acuñando NFTs AtomicAssets
-nav_order: 38
+nav_order: 40
 layout: default
 parent: How-To AtomicAssets
 grand_parent: Tutoriales
