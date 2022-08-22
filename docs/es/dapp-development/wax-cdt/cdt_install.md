@@ -1,43 +1,43 @@
 ---
-title: Install WAX-CDT
+title: Instalar WAX-CDT
 layout: default
 nav_order: 51
 parent: WAX Contract Development Toolkit
 grand_parent: dApp Development
 lang-ref: Install WAX-CDT
-lang: en
+lang: es
 ---
 
-The GitHub WAX-CDT Repository downloads to the **wax-cdt** directory. The download and build process can take several minutes to several hours, depending on your Internet connection, operating system, and hardware specifications.
+El repositorio de WAX-CDT de GitHub se descarga en el directorio **wax-cdt**. El proceso de descarga y compilación puede durar desde varios minutos hasta varias horas, dependiendo de la conexión a Internet, el sistema operativo y las especificaciones del hardware.
 
-To download the WAX-CDT Source Code Repository, paste the following into the command line:
+Para descargar el repositorio de código fuente de WAX-CDT, inserta lo siguiente en la línea de comandos:
 
 ```
 git clone --recursive https://github.com/worldwide-asset-exchange/wax-cdt.git
 ```
 
-## Build WAX-CDT
+## Crea el WAX-CDT
 
-If you're using our Docker images, you do **not** need to complete these steps.
+Si estás utilizando nuestras imágenes Docker, no es necesario que completes estos pasos.
 
-To build WAX-CDT from source, you can use the following steps. If you have a previous version installed, you'll need to uninstall it first. Refer to [Uninstall WAX-CDT](/en/tutorials/cdt_uninstall) for more information.
+Para construir WAX-CDT desde el código fuente, puedes seguir los siguientes pasos. Si tienes instalada una versión previa, necesitarás desinstalarla primero. Puedes consultar cómo [desinstalar WAX-CDT](/es/tutorials/cdt_uninstall) si es necesario.
 
-<strong>Important:</strong> Building from source is not supported. If you encounter an issue with the build, you can use our [Docker Images](/en/dapp-development/docker-setup/) instead (recommended).
+<strong>Importante:</strong> No se admite la construcción desde el código fuente. Si te surge algún problema, en su lugar puedes usar nuestras [imágenes Docker](/es/dapp-development/docker-setup/) (recomendado).
 {: .label .label-yellow }
 
-1. Change your directory to **wax-cdt**.
+1. Cambia tu directorio a **wax-cdt**.
 
 ```
 cd wax-cdt
 ```
 
-2. Run the build script.
+2. Ejecuta el script build.
 
 ```
 ./build.sh
 ```
 
-3. Run the install script.
+3. Ejecuta el script de instalación.
 
 ```
 sudo ./install.sh

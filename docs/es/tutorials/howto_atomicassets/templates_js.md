@@ -9,7 +9,7 @@ lang-ref: Managing AtomicAssets templates from javaScript
 lang: es
 ---
 
-Sin tenemos que acuñar múltiples copias de un mismo asset como, por ejemplo, una espada que se obtiene de recompensa en una misión, nos vendrá bien hacerlo con una plantilla. Gracias a la plantilla estaremos ahorrando memoria RAM, agilizaremos el trabajo y mantendremos una coherencia en la colección completa.
+Si tenemos que acuñar múltiples copias de un mismo asset como, por ejemplo, una espada que se obtiene de recompensa en una misión, nos vendrá bien hacerlo con una plantilla. Gracias a la plantilla estaremos ahorrando memoria RAM, agilizaremos el trabajo y mantendremos una coherencia en la colección completa.
 
 AtomicAssets dispone de dos acciones para gestionar las plantillas:
 - createtempl: Crear unaplantilla.
