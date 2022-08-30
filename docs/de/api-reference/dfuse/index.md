@@ -54,7 +54,7 @@ Sie können die folgenden URLs verwenden, um sich mit dfuse APIs zu verbinden:
 
 Siehe auch <a href="https://docs.dfuse.eosnation.io/eosio/public-apis/reference/network-endpoints/#wax-mainnet" target="_blank">WAX API Endpunkte</a> für mehr Informationen.
 
-## Weitere Hilfsmittel
+## Weitere Informationen
 
 Mehr über dfuse zu erfahren:
 

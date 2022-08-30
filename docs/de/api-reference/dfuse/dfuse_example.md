@@ -14,7 +14,7 @@ In diesem Beispiel melden wir uns für ein kostenloses Konto an und erhalten das
 
 2. "Create New Key" klicken.
 
-3. Erhalten Sie ein kurzlebiges JWT mit Ihrem API-Key.
+3. Einen kurzlebiges JWT Token anfordern
 
     ```
     curl -X POST \
@@ -35,7 +35,7 @@ In diesem Beispiel melden wir uns für ein kostenloses Konto an und erhalten das
       -H 'cache-control: no-cache'
     ```
 
-    ### Beispiel Antwort
+### Beispiel Antwort
 
     ```json
     {
