@@ -43,6 +43,8 @@ First of all you need to obtain a valid snapshot file from a trusted source. The
 The [EOS Nation bp.json Validator](https://validate.eosnation.io/wax/reports/resources.html#chain) has a very handy snapshot service list collated from what the Guilds have advertised.
 {: .label .label-yellow }
 
+![image](https://user-images.githubusercontent.com/12730423/187578145-07ba4f0d-8532-4a46-9e47-83347d5793a9.png)
+
 ### Usage
 
 Using the example ```nodeos``` build in the [previous](/en/wax-infrastructure/wax-testnet-node) WAX Technical How To, all relevant files are located in ```~/waxdata```.
