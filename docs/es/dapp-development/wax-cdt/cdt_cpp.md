@@ -1,38 +1,38 @@
 ---
-title: WAX-CDT Build Tools
+title: Herramientas de construcción del WAX-CDT
 layout: default
 nav_order: 53
 parent: WAX Contract Development Toolkit
 grand_parent: dApp Development
 lang-ref: WAX-CDT Build Tools
-lang: en
+lang: es
 ---
 
-WAX-CDT includes various **eosio** commands, built around the <a href="https://clang.llvm.org/" target="_blank">Clang</a> front-end and tooling infrastructure. This collection includes various tools to build optimized, high-performance WASM files. Refer to [WAX-CDT Options](/en/tools/cdt_options) for more information.
+El WAX-CDT incluye varios comandos **eosio**, creados a partir de la infraestructura de front-end y herramientas de <a href="https://clang.llvm.org/" target="_blank">Clang</a>. Esta colección incluye varias herramientas para construir archivos WASM optimizados y de alto rendimiento. Si quieres saber más, consulta las [opciones de WAX-CDT](/es/tools/cdt_options).
 
-It's recommended that you use **eosio-init** to [Create a Smart Contract](/en/dapp-development/wax-cdt/cdt_use.html#compile-hello-world). This tool provides scripts to easily organize and build your project. 
+Te recomendamos que uses **eosio-init** para [crear un contrato inteligente](/es/dapp-development/wax-cdt/cdt_use.html#compile-hello-world). Esta herramienta te proporciona scripts para organizar y construir tu proyecto fácilmente. 
 
-If these scripts do not meet your needs, you can also use the **eosi-cpp** command to compile your smart contracts.
+Si estos scripts no se ajustan a tus necesidades, también puedes utilizar el comando **eosio-cpp** para compilar tus contratos inteligentes.
 
-## Use eosio-cpp
+## Utiliza eosio-cpp
 
-To generate a WASM and ABI file for your smart contract:
+Para generar un archivo WASM y ABI para tu contrato inteligente:
 
-1. From the command line, navigate to your smart contracts folder.
+1. Busca en la línea de comandos la carpeta con tus contratos.
 
-2. Run the **eosio-cpp** build command with the **-abigen** parameter.
+2. Ejecuta el comando build **eosio-cpp** con el parámetro **-abigen**.
 
-<strong>Tip:</strong> <strong>eosio-cpp</strong> also includes Ricardian terms in your ABI file. Refer to [Ricardian Contracts](/en/tools/ricardian_contract) and [Ricardian Clauses](/en/tools/ricardian_clause) for more information.
+<strong>Consejo:</strong> El <strong>eosio-cpp</strong> también incluye algunos términos ricardianos en tu archivo ABI. Puedes consultar la página de [contratos](/es/tools/ricardian_contract) y [cláusulas ricardianas](/es/tools/ricardian_clause) si necesitas más información.
 {: .label .label-yellow }
 
 ```
 eosio-cpp -abigen wax.cpp -o wax.wasm
 ```
 
-This will generate two files in your contract's directory:
+Esto generará dos archivos en el directorio de tu contrato:
 
-* The compiled binary WASM (wax.wasm)
-* The generated ABI file (wax.abi)
+* El archivo WASM binario compilado (wax.wasm)
+* El archivo ABI generado (wax.abi)
 
 <!--## Use eosio-abigen to Generate an ABI
 

@@ -1,58 +1,58 @@
 ---
-title: WAX-CDT Sample Contracts
+title: Contratos de muestra WAX-CDT
 layout: default
 nav_order: 52
 parent: WAX Contract Development Toolkit
 grand_parent: dApp Development
 lang-ref: WAX-CDT Sample Contracts
-lang: en
+lang: es
 ---
 
-WAX-CDT provides a **wax-cdt/examples** directory that includes the following sample smart contracts:
+WAX-CDT contiene un directorio, **wax-cdt/examples**, que incluye los siguientes ejemplos de contratos inteligentes:
 
 - Hello World
-- multi_index Example
-- Inline Transaction Example
+- Ejemplo multi_index 
+- Ejemplo de Inline Transaction (transacción inline)
 
-Each project includes two **CMakeLists.txt** files: one in the project's root directory, and the other in the projects **src** directory. You can use these files to automatically generate WASM and ABI files for the sample projects.
+Cada proyecto incluye dos archivos **CMakeLists.txt**: uno en el directorio raíz y el otro en el directorio **src**. Puedes utilizarlos para generar automáticamente archivos WASM y ABI en los proyectos de ejemplo.
 
-In this tutorial, you'll learn how to use the **make** scripts to build the Hello World example.
+En este tutorial, aprenderás a utilizar los scripts **make** para crear el ejemplo de Hello World.
 
-<strong>Note:</strong> These samples were created with **eosio-init** (part of the [WAX-CDT Options](/en/tools/cdt_options) suite of tools). Refer to [Create a Smart Contract](/en/dapp-development/wax-cdt/cdt_use.html#compile-hello-world) to customize these scripts for your smart contracts.
+<strong>Nota:</strong> Estos ejemplos están creados con **eosio-init**, que forma parte del paquete de herramientas de [opciones de WAX-CDT](/es/tools/cdt_options). Para customizar estos scripts para tus propios contratos, visita la entrada [Crear un contrato inteligente](/es/dapp-development/wax-cdt/cdt_use.html#compile-hello-world).
 {: .label .label-yellow }
 
-## Compile Hello World
+## Compila el Hello World
 
-To compile the Hello World example:
+Para compilar el ejemplo Hello World:
 
-1. From the command line, navigate to **wax-cdt/examples/hello**.
+1. En la línea de comandos, accede a **wax-cdt/examples/hello**.
 
     ```shell
     cd wax-cdt/examples/hello
     ```
 
-2. Create a **build** directory.
+2. Crea un directorio **build**.
 
     ```shell
     mkdir build
     ```
 
-    <strong>Note:</strong> By default, <strong>eosio-init</strong> creates a build directory. Because this directory is empty, it's not uploaded to Git. If you use <strong>eosio-init</strong> to [Create a Smart Contract](/en/dapp-development/wax-cdt/cdt_use.html#compile-hello-world), you'll be able to skip this step. 
+    <strong>Nota:</strong> Por defecto, <strong>eosio-init</strong> crea un directorio build vacío. Al estar vacío, el directorio no se carga en Git. Si usas <strong>eosio-init</strong> para [crear un contrato inteligente](/es/dapp-development/wax-cdt/cdt_use.html#compile-hello-world), puedes saltarte este paso. 
     {: .label .label-yellow }
 
-3. Navigate to the **build** directory.
+3. Accede al directorio **build**.
 
     ```shell
     cd build
     ```
 
-4. Initialize cmake from the **wax-cdt/examples/hello** directory to write the necessary build files to the **build** directory.
+4. Inicializa cmake desde el directorio **wax-cdt/examples/hello** para escribir los archivos de construcción necesarios en el directorio **build**.
 
     ```shell
     cmake ..
     ```
 
-    The console prints the following build tasks:
+    La consola mostrará las siguientes tareas build:
 
     ```shell
     -- The C compiler identification is GNU 7.4.0
@@ -85,7 +85,7 @@ To compile the Hello World example:
     -- Build files have been written to: waxblockchain/wax-blockchain/wax-cdt/examples/hello/build
     ```
 
-4. Build the scripts.
+4. Crea el código.
 
     ```shell
     make
@@ -103,7 +103,7 @@ To compile the Hello World example:
     [ 55%] Performing configure step for 'hello_tests_project'
     ```
 
-You should now be able to locate the **hello.wasm** and **hello.abi** files in the **build/hello** directory. 
+Ahora deberías poder localizar los archivos **hello.wasm** y **hello.abi** en el directorio **build/hello**. 
 
 <!--## Modify the Scripts and Build Your Project
 
