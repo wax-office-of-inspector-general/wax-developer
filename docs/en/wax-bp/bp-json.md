@@ -100,7 +100,7 @@ cleos -u https://wax.blacklusion.io push action producerjson set '{"owner":"blac
 ```
 
 ## 2. Pushing via bloks.io
-Especially when you are starting out, books.io is a great option, since it offers a more user friendly way than a CLI-Command.
+Especially when you are starting out, bloks.io is a great option, since it offers a more user friendly way than a CLI-Command.
 
 ### Go to the producerjson contract:
 Click on this [link](https://wax.bloks.io/account/producerjson?loadContract=true&tab=Actions&account=producerjson&scope=producerjson&limit=100&action=set) to access the producerjson smartcontract.
