@@ -2,7 +2,7 @@
 title: Test Your NFT Smart Contract 
 layout: default
 nav_order: 91
-parent: Create Non-Fungible Tokens
+parent: How-To SimpleAssets
 grand_parent: Tutorials
 lang-ref: Test Your NFT Smart Contract 
 lang: en

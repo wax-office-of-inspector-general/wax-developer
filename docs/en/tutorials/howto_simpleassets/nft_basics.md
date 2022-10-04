@@ -2,7 +2,7 @@
 title: Simple Assets Basics
 layout: default
 nav_order: 88
-parent: Create Non-Fungible Tokens
+parent: How-To SimpleAssets
 grand_parent: Tutorials
 lang-ref: Simple Assets Basics
 lang: en
