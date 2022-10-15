@@ -60,8 +60,8 @@ A continuación, encontrarás versiones de WAX, URLs e información sobre los en
 </tr>
 <tr>
 <td>Explorador de la Blockchain</td>
-<td><a href="https://wax.bloks.io/" target="_blank">https:<span></span>//wax.bloks.io</a></td>
-<td>Explorador Bloks.io.</td>
+<td><a href="https://waxblock.io/" target="_blank">https:<span></span>//waxblock.io</a></td>
+<td>Explorador Waxblock.io.</td>
 </tr>
 
 <tr>

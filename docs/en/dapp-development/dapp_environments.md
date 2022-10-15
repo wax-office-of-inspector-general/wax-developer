@@ -60,8 +60,8 @@ Below you'll find WAX versions, URLs, and development environment information.
 </tr>
 <tr>
 <td>Blockchain Explorer</td>
-<td><a href="https://wax.bloks.io/" target="_blank">https:<span></span>//wax.bloks.io</a></td>
-<td>Bloks.io block explorer.</td>
+<td><a href="https://waxblock.io/" target="_blank">https:<span></span>//waxblock.io</a></td>
+<td>waxblock.io block explorer.</td>
 </tr>
 
 <tr>

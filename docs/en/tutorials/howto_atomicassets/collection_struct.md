@@ -45,7 +45,7 @@ The description and identification data are entered according to the following s
 ]
 ```
 
-If we create the collection from an interface like [https://wax.bloks.io](https://wax.bloks.io/account/atomicassets?loadContract=true&tab=Actions&account=atomicassets&scope=atomicassets&limit=100&action=createcol) we will have to fill in this data entry:
+If we create the collection from an interface like [https://waxblock.io](https://waxblock.io/account/atomicassets?action=createcol#contract-actions) we will have to fill in this data entry:
 
 ![AtomicAssets - createcol action](/assets/img/tutorials/howto_atomicassets/createcol_atomicassets.png)
 
