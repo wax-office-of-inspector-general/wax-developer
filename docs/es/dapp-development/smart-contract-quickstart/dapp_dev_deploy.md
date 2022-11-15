@@ -28,7 +28,7 @@ En esta guía, usarás **cleos** para desplegar y probar el contrato inteligente
         --http-validate-host=false \
         --verbose-http-errors >> nodeos.log 2>&1 &
     ```
-- Tu cartera debe estar abierta y desbloqueada
+- Tu wallet debe estar abierta y desbloqueada
     ```shell
     cleos wallet open
     ```

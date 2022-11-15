@@ -9,12 +9,6 @@ lang: en
 
 WAX is fully compatible with EOS smart contracts and offers free blockchain accounts and cheaper fees. This guide provides an overview of how to deploy your EOS dApps to the WAX mainnet.
 
-<!--## What's Compatible
-
-* All EOSIO System Contracts
-* All EOSIO CDT libraries
-* <a href="https://github.com/EOSIO/eosjs" target="_blank">eosjs</a> API SDK-->
-
 ## Blockchain Accounts
 
 1. To deploy your smart contracts to the WAX mainnet, you'll need to create a self-managed WAX Blockchain Account.

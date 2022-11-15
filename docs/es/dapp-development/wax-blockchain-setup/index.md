@@ -19,7 +19,7 @@ Si quieres acceder a nuestros contratos y scripts de muestra desde tu disco loca
 
 ## Qué incluye
 
-WAX Blockchain es un fork de <a href="https://developers.eos.io/" target="_blank">EOSIO</a>. Este <a href="https://github.com/worldwide-asset-exchange/wax-blockchain" target="_blank">repositorio de código fuente de WAX Blockchain</a> incluye e instala:
+WAX Blockchain es un fork de <a href="https://docs.eosnetwork.com/" target="_blank">EOS (Antelope)</a>. Este <a href="https://github.com/worldwide-asset-exchange/wax-blockchain" target="_blank">repositorio de código fuente de WAX Blockchain</a> incluye e instala:
 
 - Código fuente de WAX Blockchain
 - Dependencias

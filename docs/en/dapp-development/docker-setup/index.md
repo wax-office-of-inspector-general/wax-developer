@@ -17,7 +17,7 @@ Using our Docker environment offers the following benefits:
 * Adds convenience and speed to your development efforts
 * Eliminates the need to manage source code 
 * Eliminates the need to meet our [Supported Operating Systems](/en/tools/os) requirements
-* Doesn't overwrite an existing installation of EOSIO
+* Doesn't overwrite an existing installation of Leap
 * Makes it easy to upgrade and try out new features
 * Makes it easy to switch between production and development environments
 

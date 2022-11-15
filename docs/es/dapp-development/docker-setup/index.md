@@ -17,7 +17,7 @@ El uso de nuestro entorno Docker ofrece las siguientes ventajas:
 * Añade comodidad y rapidez a tus tareas de desarrollo.
 * Elimina la necesidad de gestionar el código fuente.
 * Elimina la necesidad de cumplir con los requisitos de nuestros [Sistemas Operativos Compatibles](/es/tools/os).
-* No sobrescribe una instalación de EOSIO ya existente.
+* No sobrescribe una instalación de Leap ya existente.
 * Facilita la actualización y la prueba de nuevas funciones.
 * Facilita la alternancia entre los entornos de producción y desarrollo.
 

@@ -63,7 +63,7 @@ Without password imported keys will not be retrievable.
 "PW5KRXKVx25yjL3FvxxY9YxYxxYY9Yxx99yyXTRH8DjppKpD9tKtVz"
 ```
 
-<strong>Tip:</strong> For a complete list of cleos wallet subcommands and parameters, refer to EOSIO's <a href="https://developers.eos.io/manuals/eos/v2.0/cleos/command-reference/wallet/index" target="_blank">Cleos Reference Guide</a>.
+<strong>Tip:</strong> For a complete list of cleos wallet subcommands and parameters, refer to <a href="https://docs.eosnetwork.com/leap/latest/cleos/command-reference/wallet/" target="_blank">Cleos Reference Guide</a>.
 {: .label .label-yellow }
 
 ## Open and Unlock Your Wallet
@@ -117,9 +117,9 @@ For development purposes, every WAX chain includes a default system user called 
 
 In your local development environment, this **eosio** user will simulate your WAX Blockchain Account. You can use the **eosio** user to create new accounts and push your smart contracts to your local blockchain, without having to worry about staking any WAX. 
 
-To sign transactions on behalf of the **eosio** system user, you'll need to import the EOSIO development key into your wallet. 
+To sign transactions on behalf of the **eosio** system user, you'll need to import the **eosio** development key into your wallet. 
 
-<strong>Important:</strong> This development key is the **same for all WAX and EOSIO developers**. Never use this key for a production WAX Account! Doing so will most certainly result in the loss of access to your account.
+<strong>Important:</strong> This development key is the **same for all WAX and Antelope developers**. Never use this key for a production WAX Account! Doing so will most certainly result in the loss of access to your account.
 {: .label .label-yellow }
 
 

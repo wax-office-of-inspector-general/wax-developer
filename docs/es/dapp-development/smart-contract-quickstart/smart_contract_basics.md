@@ -20,7 +20,7 @@ Los contratos inteligentes suelen incluir archivos de cabecera, herencia de clas
 
 ### Archivos de cabecera
 
-Los archivos de cabecera de C++ contienen declaraciones globales. Como WAX utiliza una rama de EOSIO, todos sus contratos inteligentes heredarán de los contratos y clases de EOSIO. El archivo <a href="https://github.com/worldwide-asset-exchange/wax-cdt/blob/master/libraries/eosiolib/eosio.hpp" target="_blank">eosio.hpp</a> debe incluirse en todos los contratos, y todo contrato debe incluir la clase <a href="https://github.com/worldwide-asset-exchange/wax-cdt/blob/master/libraries/eosiolib/contract.hpp" target="_blank">eosio::contract</a>. 
+Los archivos de cabecera de C++ contienen declaraciones globales. Como WAX utiliza una rama de EOS (Antelope), todos sus contratos inteligentes heredarán de los contratos y clases de EOS. El archivo <a href="https://github.com/worldwide-asset-exchange/wax-cdt/blob/master/libraries/eosiolib/eosio.hpp" target="_blank">eosio.hpp</a> debe incluirse en todos los contratos, y todo contrato debe incluir la clase <a href="https://github.com/worldwide-asset-exchange/wax-cdt/blob/master/libraries/eosiolib/contract.hpp" target="_blank">eosio::contract</a>. 
 
 ```
   #include <eosio/eosio.hpp>
@@ -54,13 +54,11 @@ Las transacciones se comunican utilizando dos modelos: inline y diferido.
 
 - **Inline:** Una transacción inline es un modelo de comunicación de tipo síncrono que se ejecuta en el mismo ámbito de la transacción. Se garantiza que estas acciones se ejecutan en orden y al mismo tiempo que se llama a la acción original. Si la transacción falla, se pueden revertir los cambios en las acciones anteriores.  
 
-    Para ver un ejemplo de transacción inline, visita la guía de EOSIO <a href="https://developers.eos.io/welcome/v2.0/smart-contract-guides/adding-inline-actions" target="_blank">Añadir acciones inline</a>.
+    Para ver un ejemplo de transacción inline, visita la guía de EOS Network <a href="https://docs.eosnetwork.com/docs/latest/getting-started/smart-contract-development/adding-inline-actions" target="_blank">Añadir acciones inline</a>.
 
 - **Diferido:** Una acción diferida es una acción que está programada para ejecutarse en el futuro, similar a una llamada asíncrona. No se garantiza que estas transacciones se ejecuten (existe la posibilidad de que el nodo las abandone). La acción original (de llamada) se aplica a la Blockchain de WAX cuando la acción se ejecuta, y no puede ser revertida si la transacción diferida falla. 
-    
-    Para ver un ejemplo, visita la guía de EOSIO <a href="https://developers.eos.io/manuals/eosio.cdt/v1.7/best-practices/deferred_transactions" target="_blank">Transacciones diferidas</a>.
 
-**Advertencia:** A partir de EOSIO 2.0 RC1, las transacciones diferidas quedan obsoletas.
+**Advertencia:** A partir de Leap 3.1, las transacciones diferidas quedan obsoletas.
 {: .label .label-yellow}
 
 ### Permisos
@@ -69,7 +67,7 @@ Un contrato inteligente y una cuenta de la Blockchain de WAX se comunican utiliz
 
 Los permisos también pueden permitir que tus contratos inteligentes manejen notificaciones y hagan llamadas de acción a otros contratos inteligentes (usando el permiso `eosio.code`).
 
- Para más información, visita la guía de <a href="https://developers.eos.io/welcome/v2.0/protocol-guides/accounts_and_permissions" target="_blank">Cuentas y permisos</a> de EOSIO.
+ Para más información, visita la guía <a href="https://docs.eosnetwork.com/docs/latest/protocol/accounts_and_permissions" target="_blank">Cuentas y permisos</a> de EOS Network.
 
 ### Datos persistentes
 
@@ -81,7 +79,7 @@ Para persistir los datos entre las acciones de uno o más de sus contratos intel
 {: .label .label-yellow }
 
 
- Para más información, visita la guía <a href="https://developers.eos.io/welcome/v2.0/smart-contract-guides/data-persistence/" target="_blank">Persistencia de datos</a> de EOSIO.
+ Para más información, visita la guía <a href="https://docs.eosnetwork.com/docs/latest/getting-started/smart-contract-development/data-persistence" target="_blank">Persistencia de datos</a> de EOS Network.
 
 ### Despachadores de WAX
 

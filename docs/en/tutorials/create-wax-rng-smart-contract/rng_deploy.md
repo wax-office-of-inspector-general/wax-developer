@@ -16,7 +16,7 @@ In this example, we'll use WAX-CDT tools to deploy your Lucky Number Generator s
     cleos wallet open -n mywallet && cleos wallet unlock -n mywallet --password {wallet.pwd}
     ```
 
-2. Using **cleos** or an EOSIO compatible wallet, create a new public/private key pair for your smart contract.
+2. Using **cleos** or an Antelope compatible wallet, create a new public/private key pair for your smart contract.
 
     ```shell
     cleos wallet create_key -n mywallet
