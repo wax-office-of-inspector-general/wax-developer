@@ -103,7 +103,7 @@ cleos -u https://wax.blacklusion.io push action producerjson set '{"owner":"blac
 Vor allem für Einsteiger ist bloks.io eine gute Option, da es einen benutzerfreundlicheren Weg als ein CLI-Befehl bietet.
 
 ### Zum producerjson contract navigieren:
-[link](https://wax.bloks.io/account/producerjson?loadContract=true&tab=Actions&account=producerjson&scope=producerjson&limit=100&action=set).
+[link](https://waxblock.io/account/producerjson?action=set#contract-actions).
 ![](/assets/img/wax-bp/bp-json/img01.png){:class="img-responsive"}
 
 ### Füllen Sie die Informationen aus und senden Sie sie ab
@@ -111,7 +111,7 @@ Wählen Sie "set" und geben Sie Ihre Informationen ein. Als Kontoname verwenden 
 
 ![](/assets/img/wax-bp/bp-json/img02.png){:class="img-responsive"}
 
-Wenn Sie alles richtig gemacht haben, wird bloks.io Ihre erfolgreiche Transaktion bestätigen. Sie können sich diese Beispieltransaktion ansehen [here](https://wax.bloks.io/transaction/4bfb8f1219abd7f5e231bf54100c35604c0a655d6ff50925a472afdcf6e4bfe9).
+Wenn Sie alles richtig gemacht haben, wird bloks.io Ihre erfolgreiche Transaktion bestätigen. Sie können sich diese Beispieltransaktion ansehen [here](https://waxblock.io/transaction/4bfb8f1219abd7f5e231bf54100c35604c0a655d6ff50925a472afdcf6e4bfe9).
 
 ![](/assets/img/wax-bp/bp-json/img03.png){:class="img-responsive"}
 

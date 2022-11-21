@@ -43,7 +43,7 @@ La descripción y datos de identificación se introducen según la siguiente est
 	{ "name": "creator_info", "type": "string" } 
 ]
 ```
-Si creamos la colección desde un interface como [https://wax.bloks.io](https://wax.bloks.io/account/atomicassets?loadContract=true&tab=Actions&account=atomicassets&scope=atomicassets&limit=100&action=createcol) tendremos que cumplimentar esta entrada de datos:
+Si creamos la colección desde un interface como [https://waxblock.io](https://waxblock.io/account/atomicassets?action=createcol#contract-actions) tendremos que cumplimentar esta entrada de datos:
 
 ![AtomicAssets - createcol action](/assets/img/tutorials/howto_atomicassets/createcol_atomicassets.png)
 
