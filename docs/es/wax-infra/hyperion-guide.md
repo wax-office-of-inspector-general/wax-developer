@@ -2,7 +2,7 @@
 title: Hyperion y los nodos de historial
 nav_order: 141
 layout: default
-parent: WAX Infrastructure/APIs
+parent: WAX Infrastructure Guides
 lang-ref: Full/Partial History nodes using Hyperion
 lang: es
 ---

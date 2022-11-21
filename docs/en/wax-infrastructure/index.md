@@ -1,10 +1,10 @@
 ---
-title: WAX Infrastructure/APIs
+title: WAX Infrastructure Guides
 nav_order: 2
 layout: default
 has_children: true
 has_toc: true
-lang-ref: WAX Infrastructure/APIs
+lang-ref: WAX Infrastructure Guides
 lang: en
 ---
 
@@ -17,9 +17,9 @@ There are different types of nodes in WAX Blockchain ecosystem that can used for
 - Peer nodes
 - API query nodes
 - Validator/Block Producer nodes
-- [Ship nodes (a.k.a Archive nodes)](/en/wax-infrastructure/api-archive-guide)
-- [Full/Partial History nodes (Deserialized & Consumable data archive nodes)](/en/wax-infrastructure/hyperion-guide)
-- NFT standards and Marketplace specific nodes ([AtomicAssets, AtomicMarket](/en/wax-infrastructure/atomic-api-guide) & Simpleassets)
+- Ship nodes (a.k.a Archive nodes)
+- Full/Partial History nodes (Deserialized & Consumable data archive nodes)
+- NFT standards and Marketplace specific nodes (AtomicAssets, AtomicMarket & Simpleassets)
 
 For more detailed explaination on the different types of nodes and their use-cases, please refer: https://developers.eos.io/welcome/latest/getting-started-guide/index/#development-and-testing
 
