@@ -23,7 +23,7 @@ Every information you have to fill out should be pretty straight forward, howeve
 
 ### General Information:
 - **producer_account_name**: <br>
-Self-explanatory. However, if you are not familiar with the naming scheme in the EOSIO ecosystem: It is important to note, that you have to use the name that you also have used (or are planning to use) for the action “regproducer”. That means that your official guild name may differ from the guild name you use on-chain.
+Self-explanatory. However, if you are not familiar with the naming scheme in the Antelope ecosystem: It is important to note, that you have to use the name that you also have used (or are planning to use) for the action “regproducer”. That means that your official guild name may differ from the guild name you use on-chain.
 
 - **candidate_name**:<br>
 This is the field, where you can fill in the official name of your guild. Spaces are allowed.

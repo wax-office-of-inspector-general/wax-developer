@@ -7,7 +7,7 @@ lang-ref: Full/Partial History nodes using Hyperion
 lang: es
 ---
 
-Tener una accesibilidad estable a los datos consumibles es esencial para las aplicaciones Web3 en una blockchain. Existen muchos ejemplos de utilidad que se les puede atribuir a los datos del historial, como la contabilidad, los impuestos, el seguimiento de las transacciones, la gestión de carteras, etc. 
+Tener una accesibilidad estable a los datos consumibles es esencial para las aplicaciones Web3 en una blockchain. Existen muchos ejemplos de utilidad que se les puede atribuir a los datos del historial, como la contabilidad, los impuestos, el seguimiento de las transacciones, la gestión de wallets, etc. 
 
 Hoy en día existen múltiples soluciones del historial que ofrecen diferentes características y funcionalidades, todas ellas con sus diferentes requisitos en términos de infraestructura. La siguiente guía presenta los pasos necesarios para configurar una solución de historial escalable y resistente basada en Hyperion.
 

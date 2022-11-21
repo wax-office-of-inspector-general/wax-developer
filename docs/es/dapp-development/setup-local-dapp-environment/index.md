@@ -30,7 +30,7 @@ Cuando inicias **nodeos** con varios plug-ins de desarrollo, este lanza un nodo 
 
 También puedes utilizar una clave de desarrollo y una cuenta del sistema incorporadas para: 
 
-- **Crear una cartera de desarrollo.** Esto es necesario para crear cuentas.
+- **Crear una wallet de desarrollo.** Esto es necesario para crear cuentas.
 - **Crear una cuenta de contratos.** Cada uno de tus contratos debe estar asociado a una cuenta.
 - **Crear usuarios de prueba.** Puedes crear tantas cuentas locales como necesites y financiarlas con tokens locales.
 
@@ -39,4 +39,4 @@ También puedes utilizar una clave de desarrollo y una cuenta del sistema incorp
 Antes de configurar tu entorno de desarrollo local:
 
 - Tendrás que completar nuestro [Inicio rápido de Docker](/es/dapp-development/docker-setup/) (recomendado) o usar la [Configuración de la Blockchain de WAX](/es/dapp-development/wax-blockchain-setup/) para poder utilizar el código fuente.
-- Ten a mano un documento de texto o una app de notas. Tendrás que utilizar una contraseña para tu cartera y una clave pública para crear cuentas. 
+- Ten a mano un documento de texto o una app de notas. Tendrás que utilizar una contraseña para tu wallet y una clave pública para crear cuentas. 

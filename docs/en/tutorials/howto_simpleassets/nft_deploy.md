@@ -2,7 +2,7 @@
 title: Deploy Your NFT Smart Contract
 layout: default
 nav_order: 90
-parent: Create Non-Fungible Tokens
+parent: How-To SimpleAssets
 grand_parent: Tutorials
 lang-ref: Deploy Your NFT Smart Contract
 lang: en

@@ -10,7 +10,7 @@ lang: es
 
 La infraestructura es la columna vertebral de cualquier aplicación y lo mismo ocurre con WAX Blockchain y las aplicaciones Web3, DeFi y NFT construidas sobre esta.
 
-En comparación con otras cadenas de bloques como Ethereum y Bitcoin, el funcionamiento de los nodos de WAX es bastante diferente y requiere una buena comprensión acerca de las operaciones del software de la blockchain EOSIO.
+En comparación con otras cadenas de bloques como Ethereum y Bitcoin, el funcionamiento de los nodos de WAX es bastante diferente y requiere una buena comprensión acerca de las operaciones del software de la blockchain Antelope.
 
 Existen distintos tipos de nodos en el ecosistema de la blockchain de WAX que pueden utilizarse para diferentes propósitos. Estos nodos incluyen:
 
@@ -21,7 +21,7 @@ Existen distintos tipos de nodos en el ecosistema de la blockchain de WAX que pu
 - Nodos de historial completo/parcial (nodos de archivo de datos deserializados y consumibles)
 - Nodos específicos de Marketplace y estándares NFTs (AtomicAssets, AtomicMarket y Simpleassets)
 
-Para una explicación más detallada sobre los diferentes tipos de nodos y sus respectivos usos, consulta este enlace: https://developers.eos.io/welcome/latest/getting-started-guide/index/#development-and-testing
+Para una explicación más detallada sobre los diferentes tipos de nodos y sus respectivos usos, consulta este enlace: https://docs.eosnetwork.com/leap/latest/nodeos/usage/node-setups/
 
 Las guías aquí presentes comparten algunos de los mejores procedimientos y te ayudarán a comprender mejor cómo puedes configurar y mantener la infraestructura de la blockchain de WAX, de forma que sea escalable y resistente.
 

@@ -29,7 +29,7 @@ Technically speaking, there is no difference between mutable and immutable data 
 
 It is true that the smart contract can be modified to avoid this, but this would make it dubious and render it useless.
 
-AtomicAssets is the most popular smart contract from WAX Blockchain -as well as other EOSIO Blockchains- and is extremely well designed to be used in video games, thus having both mutable and immutable data. We will now learn how to modify this data.
+AtomicAssets is the most popular smart contract from WAX Blockchain -as well as other Antelope Blockchains- and is extremely well designed to be used in video games, thus having both mutable and immutable data. We will now learn how to modify this data.
 
 Here we can see an example of an NFT -from a card game- with immutable data to the left and mutable data to the right. In this case we can see that the card level (Lvl) can rise, as its “strong”, “shield”, “loot” and other attributes can.
 

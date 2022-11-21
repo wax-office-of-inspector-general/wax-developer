@@ -2,7 +2,7 @@
 title: Create a WAX NFT
 layout: default
 nav_order: 89
-parent: Create Non-Fungible Tokens
+parent: How-To SimpleAssets
 grand_parent: Tutorials
 lang-ref: Create a WAX NFT
 lang: en

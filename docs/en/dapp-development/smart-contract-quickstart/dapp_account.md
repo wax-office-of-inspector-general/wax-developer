@@ -20,7 +20,7 @@ There are several different account types that you'll need to deploy your smart 
 
 In this guide, you'll use **cleos** to create a new WAX Blockchain Account that you can use to deploy your smart contract.
 
-<strong>Tip</strong> For a complete list of cleos create account subcommands and options, refer to EOSIO's <a href="https://developers.eos.io/manuals/eos/v2.0/cleos/command-reference/create/account" target="_blank">Cleos Reference Guide: create account</a>.
+<strong>Tip</strong> For a complete list of cleos create account subcommands and options, refer to <a href="https://docs.eosnetwork.com/leap/latest/cleos/command-reference/create/account" target="_blank">Cleos Reference Guide: create account</a>.
 {: .label .label-yellow }
 
 ## Before You Begin

@@ -134,7 +134,7 @@ Ahora que hemos configurado bien el servidor y el almacenamiento en disco, sigam
 
 ##### 8. Crear y configurar el software:
 
-El software WAX es una versión modificada de código abierto del software EOSIO para adaptarse a las necesidades de la red WAX. Actualmente, la versión del software WAX aceptada es la v2.0.13wax01, creada por [cc32d9](https://cc32d9.medium.com/), que es miembro del [Gremio de EOS Amsterdam](https://eosamsterdam.net/)
+El software WAX es una versión modificada de código abierto del software Antelope para adaptarse a las necesidades de la red WAX. Actualmente, la versión del software WAX aceptada es la v2.0.13wax01, creada por [cc32d9](https://cc32d9.medium.com/), que es miembro del [Gremio de EOS Amsterdam](https://eosamsterdam.net/)
 
 El último tag de waxbuild está siempre disponible en el [Github de WAX](https://github.com/worldwide-asset-exchange/wax-blockchain/tags).
 

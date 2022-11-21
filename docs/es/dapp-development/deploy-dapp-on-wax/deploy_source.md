@@ -19,7 +19,7 @@ También necesitarás:
 
 Para desplegar tu contrato inteligente en la mainnet de WAX:
 
-1. Abre y desbloquea tu cartera.
+1. Abre y desbloquea tu wallet.
 
     ```shell
     cleos wallet open -n mywallet && cleos wallet unlock -n mywallet --password {wallet.pwd}
@@ -31,10 +31,10 @@ Para desplegar tu contrato inteligente en la mainnet de WAX:
     cleos wallet create_key -n mywallet
     ```
 
-    <strong>Nota:</strong> También puedes utilizar una cartera compatible con EOSIO (como Scatter, por ejemplo).
+    <strong>Nota:</strong> También puedes utilizar una wallet compatible con EOSIO (como Scatter, por ejemplo).
     {: .label .label-yellow }
 
-3. Desde la línea de comandos, utiliza `cleos system newaccount` para crear la cuenta de tu contrato inteligente. Para ejecutar este comando, necesitarás tener autoridad sobre la cartera que contiene tu cuenta principal, lo que significa que debe estar abierta y desbloqueada. 
+3. Desde la línea de comandos, utiliza `cleos system newaccount` para crear la cuenta de tu contrato inteligente. Para ejecutar este comando, necesitarás tener autoridad sobre la wallet que contiene tu cuenta principal, lo que significa que debe estar abierta y desbloqueada. 
 
     <table>
     <thead>

@@ -134,7 +134,7 @@ Now that we have setup the server and disk storage in a good way, let's go ahead
 
 ##### 8. Build and Configure the Software:
 
-WAX software is an open-source modified version of EOSIO software to suit the needs of the WAX Network.Currently the WAX accepted software build and version is v2.0.13wax01 created by [cc32d9](https://cc32d9.medium.com/) who is a member of the [EOS Amsterdam Guild](https://eosamsterdam.net/)
+WAX software is an open-source modified version of Antelope software to suit the needs of the WAX Network.Currently the WAX accepted software build and version is v2.0.13wax01 created by [cc32d9](https://cc32d9.medium.com/) who is a member of the [EOS Amsterdam Guild](https://eosamsterdam.net/)
 
 The latest waxbuild tag is always available on the [WAX Github](https://github.com/worldwide-asset-exchange/wax-blockchain/tags).
 

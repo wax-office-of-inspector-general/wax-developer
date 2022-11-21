@@ -35,6 +35,6 @@ cleos -u https://apiwax.3dkrender.com get info
 
 ## Información adicional y herramientas de terceros
 
-Puedes consultar este enlace de EOSIO (<a href="https://developers.eos.io/manuals/eos/v2.0/nodeos/plugins/chain_api_plugin/api-reference/index" target="_blank">RPC API</a>) para acceder a una lista completa de puntos de acceso.
+Puedes consultar <a href="https://docs.eosnetwork.com/leap/latest/nodeos/rpc_apis/" target="_blank">RPC API</a> para acceder a una lista completa de API calls.
 
 <a href="https://github.com/EOSIO/eosjs" target="_blank">eosjs</a> es un SDK de la API de javascript que se utiliza para comunicarse fácilmente con la API RPC de WAX. Para simplificar el desarrollo, puedes utilizar esta herramienta para llegar a los puntos de acceso de la blockchain.

@@ -20,7 +20,7 @@ Hay varios tipos de cuentas diferentes que necesitarás para desplegar tus contr
 
 En esta guía, utilizarás **cleos** para crear una nueva cuenta en la Blockchain de WAX, que te permitirá desplegar tu contrato inteligente.
 
-<strong>Consejo</strong> Para ver una lista completa de los subcomandos y opciones de creación de cuentas de cleos, visita la <a href="https://developers.eos.io/manuals/eos/v2.0/cleos/command-reference/create/account" target="_blank">Guía de referencia de Cleos: crear una cuenta</a> de EOSIO.
+<strong>Consejo</strong> Para ver una lista completa de los subcomandos y opciones de creación de cuentas de cleos, visita la <a href="https://docs.eosnetwork.com/leap/latest/cleos/command-reference/create/account" target="_blank">Guía de referencia de Cleos: crear una cuenta</a> de EOS Network.
 {: .label .label-yellow }
 
 ## Antes de empezar
@@ -36,7 +36,7 @@ En esta guía, utilizarás **cleos** para crear una nueva cuenta en la Blockchai
         --http-validate-host=false \
         --verbose-http-errors >> nodeos.log 2>&1 &
     ```
-- Tu cartera debe estar abierta y desbloqueada
+- Tu wallet debe estar abierta y desbloqueada
     ```shell
     cleos wallet open
     ```
@@ -57,12 +57,12 @@ You don't have any wallet!-->
 
 Cada cuenta de WAX debe tener al menos una clave pública. Hay dos tipos de claves públicas, basadas en los permisos de la cuenta:
 
-- **Clave del propietario:** Requerida. Esta es la clave pública principal, con todos los permisos y el control absoluto. En una cuenta de producción, nunca deberías proporcionarla para la mayoría de las transacciones. Esta clave tiene un registro de clave privada/pública en tu cartera local.
-- **Clave activa:** Opcional. Esta es una clave secundaria, que puede ser cambiada por la clave del Propietario. Requiere un par de claves privadas/públicas adicionales en tu cartera local. En producción, usa esta clave para valorar, enviar y recibir transacciones.
+- **Clave del propietario:** Requerida. Esta es la clave pública principal, con todos los permisos y el control absoluto. En una cuenta de producción, nunca deberías proporcionarla para la mayoría de las transacciones. Esta clave tiene un registro de clave privada/pública en tu wallet local.
+- **Clave activa:** Opcional. Esta es una clave secundaria, que puede ser cambiada por la clave del Propietario. Requiere un par de claves privadas/públicas adicionales en tu wallet local. En producción, usa esta clave para valorar, enviar y recibir transacciones.
 
-Para crear una cuenta para tu contrato inteligente, necesitarás crear un par de claves públicas y privadas desde tu cartera de desarrollo local. Puedes hacerlo utilizando el comando `create_key` de tu cartera:
+Para crear una cuenta para tu contrato inteligente, necesitarás crear un par de claves públicas y privadas desde tu wallet de desarrollo local. Puedes hacerlo utilizando el comando `create_key` de tu wallet:
 
-<strong>Nota:</strong> Tu cartera debe estar abierta y desbloqueada para crear las claves.
+<strong>Nota:</strong> Tu wallet debe estar abierta y desbloqueada para crear las claves.
 {: .label .label-yellow }
 
 ```shell
@@ -86,7 +86,7 @@ Para crear una cuenta WAX de contrato inteligente, utiliza el comando `create ac
 | --- | ----------- | -------------------------- |
 | creator | eosio | El nombre de la cuenta principal que crea la nueva cuenta. En producción, esta es tu cuenta de WAX. |
 | name | waxsc1 | El nombre de la nueva cuenta. Los nombres de las cuentas deben tener menos de 13 caracteres y sólo contener letras [a-z] y números [1-5]. |
-| OwnerKey | EOS4yxqE5KYv5XaB2gj6sZTUDiGzKm42KfiRPDCeXWZUsAZZVXk1F | Clave pública, creada a partir de tu cartera de desarrollo local. |
+| OwnerKey | EOS4yxqE5KYv5XaB2gj6sZTUDiGzKm42KfiRPDCeXWZUsAZZVXk1F | Clave pública, creada a partir de tu wallet de desarrollo local. |
 
 ### Ejemplo
 
@@ -94,7 +94,7 @@ Para crear una cuenta WAX de contrato inteligente, utiliza el comando `create ac
 cleos create account eosio waxsc1 EOS4yxqE5KYv5XaB2gj6sZTUDiGzKm42KfiRPDCeXWZUsAZZVXk1F 
 ```
 
-**cleos** transmite el comando `create account` a tu blockchain local y tu cartera firma esta transacción con un HASH.
+**cleos** transmite el comando `create account` a tu blockchain local y tu wallet firma esta transacción con un HASH.
 
 ```shell
 executed transaction: 4ebdc2eabcd545c7f26679e95d729893ebd0df919850791daa79a10e4865f702  200 bytes  15013 us

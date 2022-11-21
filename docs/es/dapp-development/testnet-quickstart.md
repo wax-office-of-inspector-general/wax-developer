@@ -18,9 +18,9 @@ En esta guía, aprenderás a crear cuentas de Testnet y a desplegar tus contrato
 
 2. Desde la página de inicio de Testnet, consigue tokens de WAX gratuitos para financiar tu nueva cuenta. 
 
-3. Para desplegar tus contratos inteligentes, necesitarás crear una cartera utilizando tus claves públicas y privadas. Puedes utilizar las funciones de cartera en <a href="https://local.bloks.io/wallet/transfer?nodeUrl=testnet.waxsweden.org&coreSymbol=WAX&corePrecision=8&systemDomain=eosio&hyperionUrl=https%3A%2F%2Ftestnet.waxsweden.org" target="_blank">Bloks.io</a>, o usar nuestras [imágenes de Docker](/es/dapp-development/docker-setup/) para controlar tu cartera. 
+3. Para desplegar tus contratos inteligentes, necesitarás crear una wallet utilizando tus claves públicas y privadas. Puedes utilizar las funciones de wallet en <a href="https://local.bloks.io/wallet/transfer?nodeUrl=testnet.waxsweden.org&coreSymbol=WAX&corePrecision=8&systemDomain=eosio&hyperionUrl=https%3A%2F%2Ftestnet.waxsweden.org" target="_blank">Bloks.io</a>, o usar nuestras [imágenes de Docker](/es/dapp-development/docker-setup/) para controlar tu wallet. 
 
-    Para crear una cartera desde un contenedor Docker, usa el comando `cleos wallet`:
+    Para crear una wallet desde un contenedor Docker, usa el comando `cleos wallet`:
 
     ```shell
     cleos rm -f ~/eosio-wallet/{account.name}.wallet &&
@@ -29,9 +29,9 @@ En esta guía, aprenderás a crear cuentas de Testnet y a desplegar tus contrato
     cleos wallet import -n {account.name} --private-key {owner.privatekey}
     ```
 
-    Guarda la contraseña de tu cartera en un lugar seguro: la necesitarás para ejecutar los comandos de la blockchain.
+    Guarda la contraseña de tu wallet en un lugar seguro: la necesitarás para ejecutar los comandos de la blockchain.
 
-4. Una vez que tengas una cartera configurada con tu cuenta de Testnet, puedes apostar por NET, CPU y RAM desde Bloks.io o tu contenedor Docker.
+4. Una vez que tengas una wallet configurada con tu cuenta de Testnet, puedes apostar por NET, CPU y RAM desde Bloks.io o tu contenedor Docker.
 
     Comprar RAM:
 
@@ -47,7 +47,7 @@ En esta guía, aprenderás a crear cuentas de Testnet y a desplegar tus contrato
 
 ## Despliegue de contratos inteligentes en la Testnet de WAX
 
-<strong>Consejo:</strong> Para completar estos pasos, asegúrate de que tu cartera está abierta y desbloqueada. Consulta la sección de Resolución de problemas que hay más abajo para obtener más información al respecto.
+<strong>Consejo:</strong> Para completar estos pasos, asegúrate de que tu wallet está abierta y desbloqueada. Consulta la sección de Resolución de problemas que hay más abajo para obtener más información al respecto.
 {: .label .label-yellow }
 
 1. Desde una sesión interactiva de Docker bash, navega a tu directorio de contratos inteligentes y crea tu contrato inteligente.
@@ -72,7 +72,7 @@ En esta guía, aprenderás a crear cuentas de Testnet y a desplegar tus contrato
 
 ## Resolución de problemas
 
-Si recibes errores de cartera y/o autorización, es posible que tengas que abrir y desbloquear tu cartera:
+Si recibes errores de wallet y/o autorización, es posible que tengas que abrir y desbloquear tu wallet:
 
 ```shell
 cleos wallet open -n {account.name} &&
