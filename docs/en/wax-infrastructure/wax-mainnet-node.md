@@ -1,6 +1,6 @@
 ---
 title: How to Set Up a Solid WAX Mainnet Node
-nav_order: 144
+nav_order: 145
 layout: default
 parent: WAX Infrastructure Guides
 lang-ref: How to Set Up a Solid WAX Mainnet Node
@@ -9,13 +9,15 @@ lang: en
 
 Freely available tokens and relatively low system requirements make the WAX Testnet an ideal place to learn, however it’s now time to graduate to the WAX Mainnet.
 
-This article will give you the insight to build solid WAX Mainnet nodes that will handle the network and infrastructure demands that are required to be met by successful Guilds.
+This guide will give you the insight to build solid WAX Mainnet nodes that will handle the network and infrastructure demands that are required to be met by successful Guilds.
+
+_This article has been updated to incorporate the_ [_Antelope_](https://antelope.io/) _Leap software build process._
 
 # How to Set Up a Solid WAX Mainnet Node
 
-The WAX Mainnet as far as EOSIO chains go has a very heavy infrastructure requirement. Of course the WAX Mainnet is constantly growing and there are numerous ways to fulfill these requirements.
+The WAX Mainnet as far as Antelope chains go has a very heavy infrastructure requirement. Of course the WAX Mainnet is constantly growing and there are numerous ways to fulfill these requirements.
 
-This article will walk through an example that is currently valid (October 2021) and in use by the EOSphere Guild who are serving multiple peers and millions of API requests per day.
+This article will walk through an example that is currently valid (September 2022) and in use by the EOSphere Guild who are serving multiple peers and millions of API requests per day.
 
 # Mainnet Requirements
 
@@ -24,19 +26,13 @@ This article will walk through an example that is currently valid (October 2021)
 -   4 Core CPU /  _4Ghz+ recommended if you would like to produce blocks_
 -   (1) 256GB+ Disk /  _Enterprise Grade SSD or NVMe (_**_High Endurance Req._**_)_
 -   (2) 4TB+ Disk /  _SAS or SATA are OK however SSD or NVMe preferred_
--   64GB+ RAM
+-   128GB+ RAM
 
 **Operating System**
 
--   Amazon Linux 2
--   CentOS 7
--   CentOS 7.x
--   CentOS 8
--   Ubuntu 16.04
--   Ubuntu 18.04  **_(Recommended)_**
+-   Ubuntu 18.04
 -   Ubuntu 20.04  **_(Recommended)_**
--   MacOS 10.14 (Mojave)
--   MacOS 10.15 (Catalina)
+-   Ubuntu 22.04
 
 **Internet**
 
@@ -45,17 +41,17 @@ This article will walk through an example that is currently valid (October 2021)
 
 # Prepare the Operating System Environment
 
-Before the WAX software is built and configured, the operating system environment Ubuntu 18.04 in this case needs to be configured for performance and the load that is will take on.
+Before the WAX software is built and configured, the operating system environment Ubuntu 20.04 in this case needs to be configured for performance and the load that is will take on.
 
 ## Zettabyte File System (ZFS)
 
-This node build uses  **2 Discrete Disks**  in order to balance disk IO and provide a more affordable storage option for the  `blocks.log`  file, which is currently 637GB and growing.
+This node build uses  **2 Discrete Disks**  in order to balance disk IO and provide a more affordable storage option for the  `blocks.log`  file, which is currently 2.1TB and growing.
 
 **Disk 1** is the high speed enterprise grade SSD or NVMe will be the OS disk used for the WAX software, all config and the state files. The state files are extremely IO intensive, a consumer based SSD’s life span will be short lived due to the high number of writes hence the need to use a high endurance enterprise SSD or NVMe.
 
 _Note:_  _It needs to be mentioned that there are mechanisms to run these state files in memory if you have enough available, this topic will be covered in a future article._
 
-In this example Disk 1 will run the default OS  **Ext4 File System** that will already be implemented during the Ubuntu 18.04 installation.
+In this example Disk 1 will run the default OS  **Ext4 File System** that will already be implemented during the Ubuntu 20.04 installation.
 
 **Disk 2**  is the large capacity SATA or SAS disk that will host the  `blocks.log`  file. The IO demands on the blocks directory are far lower than the state files and slower larger capacity spindle based disks are still suitable.
 
@@ -63,7 +59,8 @@ In this example Disk 2 will run the  **ZFS File System** which will give us two 
 
 Implement ZFS on Disk 2 with the below configuration:
 
-```#Install ZFS  
+```
+#Install ZFS  
 > sudo apt-get install zfsutils-linux
 
 #Locate the Disk 2 device name  
@@ -96,7 +93,8 @@ It is crucial for a globally meshed blockchain to have synchronised time across 
 
 Install, configure and verify as below:
 
-```#Install Chrony  
+```
+#Install Chrony  
 > sudo apt install chrony
 
 #If necessary manually add local peers, these are AU servers  
@@ -120,7 +118,7 @@ server 3.pool.ntp.org
 
 ## Stack Limits and Openfiles
 
-WAX software memory addressing and the number of API requests a Production Mainnet Node will receive require that the Ubuntu 18.04 default Stack Limit and Number of Open Files be increased.
+WAX software memory addressing and the number of API requests a Production Mainnet Node will receive require that the Ubuntu 20.04 default Stack Limit and Number of Open Files be increased.
 
 Configure and verify the raised limits as below:
 
@@ -137,11 +135,11 @@ DefaultLimitSTACK=65536000
 
 # Build the Software
 
-The WAX software is derived from opensource EOSIO software, however it has been modified to suit the needs of the WAX Protocol Network.
+The WAX software is derived from opensource Antelope software, however it has been modified to suit the needs of the WAX Protocol Network.
 
-Currently the WAX Block Producer accepted software build and version is  `v2.0.13wax01`  created by  [cc32d9](https://cc32d9.medium.com/)  who is member of the  [EOS Amsterdam Guild](https://eosamsterdam.net/)
+Currently the WAX Block Producer accepted software build and version is  `v3.1.0wax01`  created by  [cc32d9](https://cc32d9.medium.com/)  who is member of the  [EOS Amsterdam Guild](https://eosamsterdam.net/)
 
-The latest  `wax`build tag is always available on the  [WAX Github](https://github.com/worldwide-asset-exchange/wax-blockchain/tags)
+The latest  `wax`build tag is currently available on the  [cc32d9 Github](https://github.com/cc32d9/wax-leap/tags)
 
 **Building Process**
 
@@ -150,21 +148,26 @@ This example uses  [Ubuntu Linux](https://ubuntu.com/)  to build the WAX softwar
 ```
 > cd ~
 
-> git clone https://github.com/worldwide-asset-exchange/wax-blockchain.git
+> sudo apt install -y file
 
-> cd wax-blockchain
+> git clone https://github.com/cc32d9/wax-leap.git
 
-> git checkout v2.0.13wax01
+> cd wax-leap
 
-> git submodule update --init --recursive> cd scripts 
+> git checkout v3.1.0.wax01 
 
-> ./eosio_build.sh -P  
+> git submodule update --init --recursive
 
-> ./eosio_install.sh   
+> sudo bash scripts/install_deps.sh
 
-#If you want to install. Binaries are in ~/wax2.0/build/programs
+> mkdir build
+
+# If necessary supplement $(nproc) below with the number of jobs your server can sustain, I suggest 4GB RAM required / job
+
+> nice bash scripts/pinned_build.sh ~/wax-leap/build/leap-deps ~/wax-leap/build $(nproc)
+
+# Binaries are located in ~/wax-leap/build/programs
 ```
-As the  `-P`  option is used on the build script this may take some time to compile as it will build with pinned clang and libcxx
 
 # Configuration
 
@@ -172,7 +175,7 @@ Now that a clean build of the WAX software has been compiled lets get into confi
 
 To configure and start the node  `nodeos`  will be used,  `nodeos`is the core service daemon that runs on every WAX Protocol Network node.
 
-`nodeos`  can be configured to process smart contracts, validate transactions, produce blocks containing valid transactions, and confirm blocks to record them on the blockchain. You can read more about it  [here](https://developers.eos.io/manuals/eos/latest/nodeos/index).
+`nodeos`  can be configured to process smart contracts, validate transactions, produce blocks containing valid transactions, and confirm blocks to record them on the blockchain.
 
 The primary operational functions of  `nodeos`  are; running it as a Block Producer, Network API Endpoint, P2P Seed Node or State-History Node. Typically on a busy network such as the WAX Mainnet you would separate these functions across physically discrete servers.
 
@@ -187,8 +190,11 @@ Create a default  `config.ini`  by running  `nodeos`  without config as per the 
 ```
 > mkdir ~/waxdata
 
-> nodeos --data-dir ~/waxdata --config-dir ~/waxdata
+> cd ~/wax-leap/build/programs/nodeos
+
+> ./nodeos --data-dir ~/waxdata --config-dir ~/waxdata
 ```
+
 You will then be able to edit the newly created  `config.ini`  and see all the available parameters:
 
 ```
@@ -200,7 +206,9 @@ Now edit the  `config.ini`and add the following configuration settings:
 
 ```
 # the location of the blocks directory on Disk 2  
-blocks-dir = /home/eosphere/datavolume/blockswasm-runtime = eos-vm-jit  
+blocks-dir = /home/eosphere/datavolume/blocks
+
+wasm-runtime = eos-vm-jit
 chain-state-db-size-mb = 131072  
 chain-state-db-guard-size-mb = 1024  
 enable-account-queries = true  
@@ -212,8 +220,11 @@ verbose-http-errors = true
 http-validate-host = false  
 p2p-listen-endpoint = 0.0.0.0:9876
 
-# alohaeosprod: US, Oregon  
-p2p-peer-address = peer.wax.alohaeos.com:9876  
+# 3dkrenderwax: FI, wax-peer  
+p2p-peer-address = peer.3dkrender.com:9880  
+  
+# 3dkrenderwax: FI, query  
+p2p-peer-address = query.3dkrender.com:9880  
   
 # amsterdamwax: NL, Amsterdam  
 p2p-peer-address = wax.eu.eosamsterdam.net:9101  
@@ -304,12 +315,12 @@ p2p-peer-address = wax-bp.wizardsguild.one:8876
 agent-name = "<yourname> WAX Mainnet"  
 max-clients = 100  
 sync-fetch-span = 500  
+
 plugin = eosio::http_plugin  
-plugin = eosio::history_api_plugin  
-plugin = eosio::history_plugin  
 plugin = eosio::chain_plugin  
 plugin = eosio::chain_api_plugin
 ```
+
 **genesis.json**
 
 These are the initial state parameters required by every new starting node on the WAX Mainnet. Create the file as below:
@@ -353,24 +364,30 @@ Now that the  `config.ini`  has been configured and the initial WAX Mainnet chai
 Use screen to keep your session live even when you disconnect, usage below:
 
 ```
-#Create a new screen session
+#Create a new screen session  
+  
 > screen -US wax 
 
 #Disconnect screen session  
+  
 > ctrl-a+d 
 
 #Reconnect screen session  
+  
 > screen -r wax
 ```
 
 Run  `nodeos`  with pointers to the config, data directory and genesis file:
 
 ```
-nodeos --data-dir ~/waxdata --config-dir ~/waxdata --genesis-json ~/waxdata/genesis.json
+> cd ~/wax-leap/build/programs/nodeos
+
+> nodeos --data-dir ~/waxdata --config-dir ~/waxdata --genesis-json ~/waxdata/genesis.json
 ```
+
 Your WAX Mainnet node will now start syncing with the configured peers until it catches up and is current with the WAX Mainnet chain.
 
-It is possible to speed up the sync process by starting with a snapshot and valid  `blocks.log`  the process is explained in the **Using WAX Snapshots** article.
+It is possible to speed up the sync process by starting with a snapshot and valid  `blocks.log`  the process is explained in the **WAX Snapshots Guide**.
 
 ---
 
