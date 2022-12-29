@@ -3,7 +3,7 @@ title: Modifying mutable data for AA
 nav_order: 44
 layout: default
 parent: How-To AtomicAssets
-grand_parent: Tutoriales
+grand_parent: Tutorials
 has_children: false
 lang-ref: Modifying mutable data for AA
 lang: en
@@ -49,7 +49,10 @@ In an NFT's template it is defined which is mutable data and which is immutable 
 
 So if we wished to create a data map to specify this information:
 ```json
-{ name: “Delorean”, speed: 300 }
+{ 
+    name: “Delorean”, 
+    speed: 300 
+}
 ```
 We should create an array of objects while keeping its specifications from the template:
 ```json
@@ -113,11 +116,14 @@ Const updateNft = (authorized, owner, asset_id, name, speed) => {
 
 We have seen how to introduce mutable data in an NFT, but sometimes we will need to update its content, such as, for instance, to add a number of points to its actual score.
 
-Obviously, we will first need to read the field's content, but we should keep in mind that the data is serialized, as we mentioned earlier. If we use the eosjs library, we will have to deserialize the information first. Fortunately, the Pink Network team, creators of the AtomicAssets standard, also created a JavaScript library in order for us to access all collections, patterns, blueprints and, of course, NFTs, in a much easier way.
+Obviously, we will first need to read the field's content, but we should keep in mind that the data is serialized, as we mentioned earlier. If we use the eosjs library, we will have to deserialize the information first. Fortunately, the Pink Network team, creators of the AtomicAssets standard, also created a JavaScript library in order for us to access all collections, schemes, templates and, of course, NFTs, in a much easier way.
 
 https://www.npmjs.com/package/atomicassets
 
 As the eosjs library requires to be connected to a Full Story API from the WAX Blockchain, the AtomicAssets library needs to be connected to a specific Atomic API. There are several WAX Block producers who offer this service, fortunately, and it is free for WAX Blockchain users.
+
+<strong>Note:</strong> If you are developing an application for public use it is convenient to have your own APIs and not depend on the availability of public APIs.
+{: .label .label-yellow }
 
 In this example we see how to connect to an Atomic API in order to read an NFT, based on its ID, and how to obtain one of its data's contents.
 ```js
