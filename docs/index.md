@@ -2,10 +2,10 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/dev-docs/themes/#overriding-theme-defaults
 
-title: Welcome
+title: Welcome to WAX
 layout: home
 nav_order: 1
-lang-ref: Welcome
+lang-ref: Welcome to WAX
 lang: en
 ---
 
