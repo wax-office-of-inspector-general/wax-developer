@@ -80,7 +80,7 @@ The WAX RNG **requestrand** action accepts the following parameters:
 
 ### Example
 
-```cppACTION requestrand(uint64_t assoc_id, uint64_t signing_value, const name& caller)```
+```ACTION requestrand(uint64_t assoc_id, uint64_t signing_value, const name& caller)```
 
 ## Callback Function
 
