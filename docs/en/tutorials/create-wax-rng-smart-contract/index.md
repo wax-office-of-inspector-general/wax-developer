@@ -10,7 +10,7 @@ lang: en
 
 In this tutorial, you'll learn how to create and deploy a WAX RNG smart contract.
 
-<strong>Note:</strong> At this time, the WAX RNG service is not available from a local development environment. You'll need to publish your smart contract to the WAX mainnet to test it.{: .label .label-yellow }
+<strong>Note:</strong> At this time, the WAX RNG service is not available from a local development environment. You'll need to publish your smart contract to the WAX mainnet to test it.
 
 ## Before You Begin
 
