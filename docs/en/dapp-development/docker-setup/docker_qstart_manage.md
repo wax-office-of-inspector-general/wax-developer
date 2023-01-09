@@ -38,7 +38,7 @@ To re-start your container, use the `docker start` command.
 docker start waxdev
 ```
 
-Now that you've set up your Docker environment, you're ready to follow the guides in this section. While it's not required to complete the [WAX Blockchain Setup](/docs\dapp-development\wax-blockchain-setup) in the next tutorial, we still recommend downloading the source code to access code samples and **make** scripts.
+Now that you've set up your Docker environment, you're ready to follow the guides in this section. While it's not required to complete the [WAX Blockchain Setup](/en/dapp-development/wax-blockchain-setup) in the next tutorial, we still recommend downloading the source code to access code samples and **make** scripts.
 
 
 
