@@ -38,6 +38,12 @@ To re-start your container, use the `docker start` command.
 docker start waxdev
 ```
 
+If the `docker ps` command does not display your container, try running it with the `-a` key. This command will show everything, even containers that are not running
+
+```shell
+docker ps -a
+```
+
 Now that you've set up your Docker environment, you're ready to follow the guides in this section. While it's not required to complete the [WAX Blockchain Setup](/en/dapp-development/wax-blockchain-setup) in the next tutorial, we still recommend downloading the source code to access code samples and **make** scripts.
 
 
