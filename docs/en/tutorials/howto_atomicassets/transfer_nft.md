@@ -3,7 +3,7 @@ title: Transfer atomicassets NFTs
 nav_order: 42
 layout: default
 parent: How-To AtomicAssets
-grand_parent: Tutoriales
+grand_parent: Tutorials
 has_children: false
 lang-ref: Transfer atomicassets NFTs
 lang: en
