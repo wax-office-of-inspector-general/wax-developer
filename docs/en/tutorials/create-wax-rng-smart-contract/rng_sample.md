@@ -1,141 +1,230 @@
 ---
-title: Build & Compile Your WAX RNG Contract
+title: Build Your Contract to call WAX RNG contract
 layout: default
 nav_order: 84
 parent: Create a WAX RNG Smart Contract
 grand_parent: Tutorials
-lang-ref: Build & Compile Your WAX RNG Contract
+lang-ref: Build Your Contract to call WAX RNG contract
 lang: en
 ---
 
 In this example, we'll create a smart contract that uses the WAX RNG service to generate a random number no larger than 100. This number gets written to a multi_index table, along with an internal Customer ID, the customer's signing_value, and the checksum256 random_value returned from the WAX RNG oracle.
 
+To provide fairness, provability, and user confidence, it's recommended that you allow the customer to view or even edit the client-side signing_value. If you prefer to generate the signing_value on the back-end or your app doesn't require a front-end signing_value, you could use the user's transaction hash sent from their wallet. This value is a sha256 hash signed by the client that must be reduced to a 64-bit data.
+
+By reducing the 256-bit hash to a 64-bit portion, we may find that it is not a unique code. The number we send as a seed for random number generation must be unique, i.e. it must not have been used before for another random number request. For this we can query the WAX RNG smart contract and check if our candidate seed is unique or has already been used.
+
+To perform this check we will need to access the _signvals.a_ table of the WAX RNG smart contract. To facilitate this we will add the _wax-orng-interface.hpp_ file to our smart contract and link it in our header file:
+
 ## Create Your Contract
 
 1. From the command line, navigate to your smart contracts directory. For this example, we'll use **mycontracts**.
 
-2. Use **eosio-init** with the `-project` parameter to create your smart contract template. 
+2. Use **eosio-init** with the `-project` parameter to create your smart contract template.
 
-    ```shelleosio-init -project waxrng```
-    
-3. From your smart contracts folder, open **waxrng/include/waxrng.hpp** and paste the following:
+   `$ eosio-init -project rngtest`
 
-    ```
-    #include <eosio/eosio.hpp>
-    #include <string>
-    #include <tuple>
+3. From your smart contracts folder, open **rngtest/include/rngtest.hpp** and paste the following:
 
-    CONTRACT waxrng : public eosio::contract {
-       public:
-          using eosio::contract::contract;
-	      //this example uses a multi_index table to store user information.
-	      //in the line below, make sure to define a default constructor for this table 
-	      waxrng(eosio::name receiver, eosio::name code, eosio::datastream<const char*> ds)
-		      : contract(receiver, code, ds), rngcustomers(receiver, receiver.value) {}
+```c++
+#include <eosio/eosio.hpp>
 
-	      //actions available for our RNG smart contract
-	      ACTION getrandom(eosio::name nm, uint64_t customer_id, uint64_t signing_value);
-	      ACTION receiverand(uint64_t customer_id, const eosio::checksum256& random_value);
+#include <eosio/crypto.hpp>
+#include <eosio/transaction.hpp>
 
-	      //table structure
-	      TABLE rngcustomers_table{
-		    eosio::name nm;
-		    uint64_t customer_id;
-		    eosio::checksum256 random_value;
-		    uint64_t finalnumber;
-		    uint64_t primary_key() const { return customer_id; }
-	      };
+#include <wax-orng-interface.hpp>
 
-	      //define table based on table structure
-	      typedef eosio::multi_index<"rngcustomers"_n, rngcustomers_table> rngcustomers_index;
+#define ORNG_CONTRACT name("orng.wax")
 
-	      //action wrappers
-          using getrandom_action = eosio::action_wrapper<"getrandom"_n, &waxrng::getrandom>;
-	      using receiverand_action = eosio::action_wrapper<"receiverand"_n, & waxrng::receiverand>;
+using namespace eosio;
+using namespace std;
 
-	      //set our table to 'rngcustomers' variable
-	      rngcustomers_index rngcustomers;
+CONTRACT rngtest : public contract {
+   public:
+      using contract::contract;
+
+      // actions available
+      ACTION getrnd( name& customer_id );
+      ACTION receiverand(uint64_t signing_value, const checksum256& random_value);
+
+      //table structure
+      TABLE rngcustomers_table{
+         uint64_t signing_value;
+         name customer_id;
+         checksum256 random_value;
+		 uint8_t final_number;
+
+         uint64_t primary_key() const { return signing_value; }
+      };
+      //define table based on table structure
+      typedef multi_index<"rngcustomers"_n, rngcustomers_table> rngcustomers_index;
+
+      // action wrappers
+      using getrnd_action = action_wrapper<"getrnd"_n, &rngtest::getrnd>;
+      using receiverand_action = action_wrapper<"receiverand"_n, &rngtest::receiverand>;
+
+      // Set table 'rngcustomers'
+      rngcustomers_index _customers = rngcustomers_index(get_self(), get_self().value);
+};
+```
+
+We will work with cryptographic functions and checksum256 data, so we include the `crypto.hpp` library.
+
+We will capture the *transaction_id* of the transaction calling the smart contract, so we include the `transaction.hpp` library.
+
+As mentioned above, to access the table of values used by WAX RNG to generate the random numbers, we include the definition file `wax-orng-interface.hpp`. We include the source code of the file in `rngtest/include/wax-rng-interface.hpp`.
+
+```c++
+#include <eosio/eosio.hpp>
+
+using namespace eosio;
+
+namespace orng {
+
+    static constexpr name ORNG_CONTRACT = name("orng.wax");
+
+    TABLE signvals_a {
+        uint64_t signing_value;
+
+        auto primary_key() const { return signing_value; }
     };
-    ```                
+    typedef multi_index <name("signvals.a"), signvals_a> signvals_t;
 
-4. Next, open **src/waxrng.cpp** and paste the following:
+    signvals_t signvals = signvals_t(ORNG_CONTRACT, ORNG_CONTRACT.value);
+}
+```
 
-    ```
-    #include <waxrng.hpp>
+We declare `rngcustomers` as a multi-index data structure to temporarily store the data required to call to WAX RNG and to store the random number returned for later use in the task for which we have requested it.
 
-    using namespace eosio;
+We declare the actions that we are going to use in our example and that we will explain later.
 
-    //call the WAX RNG requestrand action
-    ACTION waxrng::getrandom(name nm, uint64_t customer_id, uint64_t signing_value) {
+4. We begin to edit the code of the smart contract in the file **src/rngtest.cpp**.
 
-	    //check if this customer_id exists in the table
-	    auto itrCustomer = rngcustomers.find(customer_id);
-	    //if not, insert a new record
-	    if (itrCustomer == rngcustomers.end()) {
-		    rngcustomers.emplace(_self, [&](auto& rec) {
-			    rec.customer_id = customer_id;
-			    rec.nm = nm;
-		    });
-	    }
-	
-	    //call orng.wax
-	    action(
-		    { get_self(), "active"_n },
-		    "orng.wax"_n,
-		    "requestrand"_n,
-		    std::tuple{ customer_id, signing_value, get_self() })
-		    .send();
-    }
+We begin with the inclusion of the header file
 
-    // Called automatically by 'orng.wax' smart contract when the RNG Oracle
-    // has generated the random value. wax.orng, before calling this action,
-    // verifies that the generated random value was signed with the
-    // provided "signing_value"
-    ACTION waxrng::receiverand(uint64_t customer_id, const checksum256& random_value) {
+```c++
+#include <rngtest.hpp>
+```
+And we will add the following functions:
 
-	    //cast the random_value to a smaller number
-	    uint64_t max_value = 100;
-	    auto byte_array = random_value.extract_as_byte_array();
+4.1 ACTION getrnd
 
-	    uint64_t random_int = 0;
-	    for (int i = 0; i < 8; i++) {
-		    random_int <<= 8;
-		    random_int |= (uint64_t)byte_array[i];
-	    }
+This action captures the *transaction_id* of the transaction that has called the smart contract to generate a unique number that will serve as a seed for the call to WAX RNG.
 
-	    uint64_t num1 = random_int % max_value;
+In addition, it will store in the `rngcustomers` table the auxiliary data to be able to receive the random number from WAX RNG and to be able to recognize it among different requests.
 
-	    //find the customer record by customer_id
-	    auto itrCustomer = rngcustomers.find(customer_id);
-	    //make sure the record exists
-	    check(itrCustomer != rngcustomers.end(), "customer table not set");
-	    //update the random numbers by customer_id
-	    rngcustomers.modify(itrCustomer, _self, [&](auto& rec) {
-		    rec.random_value = random_value;
-		    rec.finalnumber = num1;
-	    });
+**Parameters**
 
-    }
+| Parameter   | Type | Sample      | Description                                       |
+| ----------- | ---- | ------------ | ---------------------------------------------------- |
+| customer_id | name | arpegiator21 | Name of the user making the request|
 
-    EOSIO_DISPATCH(waxrng,
-    (getrandom)
-    (receiverand)
-    )
-    ```
+```c++
+ACTION rngtest::getrnd( name& customer_id ) {
+   require_auth(customer_id);
 
-## Compile Your Contract
+   // Read transaction_id
+   size_t size = transaction_size();
+   char buf[size];
+   uint32_t read = read_transaction(buf, size);
+   check(size == read, "Signing value generation: read_transaction() has failed.");
+   checksum256 tx_id = eosio::sha256(buf, read);
 
-1. From the command line, navigate to **waxrng/build** and run **cmake**.
+   // Get first 64 bits from transaction_id
+   uint64_t signing_value;
+   memcpy(&signing_value, tx_id.data(), sizeof(signing_value));
 
-    ```shell
-    cmake ..
-    ```
+   // Check if signing_value is valid...
+   auto iSigningValue = orng::signvals.begin();
+   uint8_t c = 0;
 
-2. Build the scripts.
+   while( iSigningValue != orng::signvals.end() && c < 64){
+      iSigningValue = orng::signvals.find(signing_value);
 
-    ```shell
-    make
-    ```
+      // If signing_value exists, we rotate 1 bit to modify the hash. There are 64 possible variations...
+      if(iSigningValue != orng::signvals.end()){
+         signing_value <<= 1;
+         c++;
+      }
+   }
 
-You can locate the **wax.wasm** and **wax.abi** files in the **build/waxrng** folder.
-        
+   // Ok, I don't think this will happen but... what if it does?
+   check(c < 64, "No combination was valid? Inconceivable!");
+
+   // Prepare the table where the random value will be received.
+   _customers.emplace(get_self(), [&](auto& rec) {
+      rec.signing_value = signing_value;
+      rec.customer_id = customer_id;
+   });
+
+   // Call to orng.wax smart contract
+   action(
+      { get_self(), "active"_n },
+      "orng.wax"_n,
+      "requestrand"_n,
+      std::tuple{ signing_value, signing_value, get_self() })
+      .send();
+}
+```
+
+*transaction_id* is a unique number but since we have to select only a 64-bit portion it is possible that the resulting value is not unique. For that reason we perform the check against the `signvals.a` table and, if the result is a number already chosen, we perform a 1-bit rotation to try again.
+
+When we are certain that we have found a unique number, we store the number, along with the user's name, and call WAX RNG by sending it the seed (*signing_value*) and the same value as the call identifier. We could use the user's own name as the identifier (*customer_id.value*) but this would complicate the code in case a user requests several random numbers and his requests are simultaneously stored in the table `rngcustomers` whose primary key is *signing_value*.
+
+4.2. ACTION receiverand
+
+Callback action that will be called from WAX RNG to return us, in case of success, the random number, together with the code that we provide as identifier of the request (*signing_value*).
+
+**Parameters**
+
+| Parameter   | Type | Description                                       |
+| ----------- | ---- | ---------------------------------------------------- |
+| signing_value | uint64_t    | Code sent as identifier.                                   |
+| random_value  | checksum256 | Hash code generated by WAX RNG that we will use to obtain the random number |
+
+```c++
+ACTION rngtest::receiverand(uint64_t signing_value, const checksum256& random_value) {
+   require_auth(ORNG_CONTRACT);
+
+   //cast the random_value to a smaller number
+   uint64_t max_value = 100;
+   auto byte_array = random_value.extract_as_byte_array();
+
+   uint64_t random_int = 0;
+   for (int i = 0; i < 8; i++) {
+      random_int <<= 8;
+      random_int |= (uint64_t)byte_array[i];
+   }
+
+   uint64_t num1 = random_int % max_value;
+
+   auto iCustomers = _customers.require_find(signing_value, "Error: Petition not found!");
+
+   // update table with random_value
+   _customers.modify(iCustomers, get_self(), [&](auto& rec) {
+      rec.random_value = random_value;
+      rec.final_number = num1;
+   });
+}
+```
+We make sure that only WAX RNG will be able to call this action with *require_auth*.
+
+We extract the first 8 bits of the returned random number and use it to get a number no larger than 100. 
+
+**Note:** We still have many bits available in case we need to get more random numbers!
+{: .label .label-yellow }
+
+We locate the record associated with the request identifier and update its contents to store the returned hash code.
+
+We can now use the random value from the client to perform the function for which we requested it.
+
+## Compiling the smart contract
+
+1. From the console we go to the **rngtest/build** folder and execute the following commands:
+
+````shell
+cmake ..
+make
+```
+
+We will find the files **rngtest.wasm** and **rngtest.abi** in the **rngtest/build/rngtest** folder.
