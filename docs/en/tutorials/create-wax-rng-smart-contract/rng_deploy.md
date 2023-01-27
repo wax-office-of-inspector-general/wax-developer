@@ -8,49 +8,44 @@ lang-ref: Deploy Your WAX RNG Contract
 lang: en
 ---
 
-In this example, we'll use WAX-CDT tools to deploy your Lucky Number Generator smart contract. Refer to [WAX-CDT Deploy](/en/deploy_source) for more information.
+In this example, we'll use WAX-CDT tools to deploy your Lucky Number Generator smart contract. Refer to [WAX-CDT Deploy](/en/dapp-development/deploy-dapp-on-wax/deploy_source) for more information.
 
-1. From Docker, open and unlock your wallet.
+1. First we will need to create a self-custodied account on testnet or mainnet to deploy the smart contract. For our example we will assume that the account is called *mywaxrngtest*.
 
-    ```shell
-    cleos wallet open -n mywallet && cleos wallet unlock -n mywallet --password {wallet.pwd}
-    ```
+**Note:** You can use the [WAXSweden](https://waxsweden.org/testnet/) team tools to create the testnet account and supply it with funds that you will need to purchase the RAM required for the smart contract deployment.
+{: .label .label-yellow }
 
-2. Using **cleos** or an Antelope compatible wallet, create a new public/private key pair for your smart contract.
+2. From Docker, we open and unlock the wallet we created in the tutorials about [how to create the development environment](/en/dapp-development/setup-local-dapp-environment/dapp_wallet).
 
-    ```shell
-    cleos wallet create_key -n mywallet
-    ```
+```shell
+cleos wallet open -n mywallet && cleos wallet unlock -n mywallet --password {wallet.pwd}
+```
+and import the mywaxrngtest active private key 
 
-3. From the command line, use `cleos system newaccount`. The example below uses **waxdappacct1** as the primary WAX Account holder and creates a new smart contract account named **waxrng**. To run this command, you'll need to have the proper authority. This means that the wallet containing your primary account must be opened and unlocked.
+```shell
+cleos wallet import --private-key {mywaxrngtest_active_private_key}
+```
 
-    ```shell
-    cleos -u [chain-api-url] system newaccount waxdappacct1 waxrng EOS7jEb46pDiWvA39faCoFn3jUdn6LfL51irdXbvfpuSko86iNU5x --stake-net '0.50000000 WAX' --stake-cpu '0.50000000 WAX' --buy-ram-kbytes 32
-    ```
+3. To run the inline **requestrand** action on the **orng.wax** smart contract, you'll need to give your new **mywaxrngtest@active** permission the additional **eosio.code** permission. This permission enhances security and allows your smart contract to send inline actions. From the command line, run the `cleos set account permission` command, and include the literal `--add-code` parameter.
 
-4. To run the inline **requestrand** action on the **orng.wax** smart contract, you'll need to give your new **waxrng@active** permission the additional **eosio.code** permission. This permission enhances security and allows your smart contract to send inline actions. From the command line, run the `cleos set account permission` command, and include the literal `--add-code` parameter.
+```shell
+cleos -u [chain-api-url] set account permission mywaxrngtest active --add-code
+```
 
-    ```shell
-    cleos -u [chain-api-url] set account permission waxrng active --add-code
-    ```
+To verify the new permission, use the `cleos get account` command:
 
-    To verify the new permission, use the `cleos get account` command:
+```shell
+cleos -u [chain-api-url] get account mywaxrngtest
+```
 
-    ```shell
-     cleos -u [chain-api-url] get account waxrng
-    ```
+4. Buy some RAM to depoy the smart contract:
 
-    The **active** permission now displays the new **waxrng@eosio.code** permission.
-
-    ```shell
-    created: 2019-08-22T16:13:29.500
-    permissions:
-     owner     1:    1 EOS7jEb46pDiWvA39faCoFn3jUdn6LfL51irdXbvfpuSko86iNU5x
-     active    1:    1 EOS7jEb46pDiWvA39faCoFn3jUdn6LfL51irdXbvfpuSko86iNU5x, 1 waxrng@eosio.code
-    ```
+```shell
+cleos -u [chain-api-url] push action eosio buyram '["mywaxrngtest", "mywaxrngtest", "200.00000000 WAX"]' -p mywaxrngtest@active  
+```
 
 5. Finally, set your contract with the `cleos set contract` command:
 
-    ```shell
-    cleos -u [chain-api-url] set contract waxrng mycontracts/waxrng/build/waxrng waxrng.wasm waxrng.abi
-    ```
+```shell
+cleos -u [chain-api-url] set contract mywaxrngtest mycontracts/rngtest/build/rngtest -p mywaxrngtest@active
+```
