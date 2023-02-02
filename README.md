@@ -1,4 +1,4 @@
-# wax-developer documentation
+# WAX Developer Documentation
 
 [Visit WAX Developer Documentation](https://developer.wax.io)
 
