@@ -5,3 +5,6 @@ _site
 vendor
 .DS_Store
 .bundle
+node_modules
+.temp
+.cache

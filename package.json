@@ -1,0 +1,26 @@
+{
+  "name": "wax-developer",
+  "version": "0.2.0",
+  "description": "[Visit WAX Developer Documentation](https://developer.wax.io)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wax-office-of-inspector-general/wax-developer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wax-office-of-inspector-general/wax-developer/issues"
+  },
+  "homepage": "https://github.com/wax-office-of-inspector-general/wax-developer#readme",
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.60"
+  }
+}
