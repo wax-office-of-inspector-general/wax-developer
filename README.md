@@ -6,15 +6,15 @@
 ## Get Started
 You can use the following guides to set up your WAX dApp development environment:
 
-* [Complete our Docker Quickstart](https://developer.wax.io/dapps/docker-quickstart/)
-* [Download WAX Blockchain source code and samples using the WAX Blockchain Setup guide](https://developer.wax.io/dapps/wax-blockchain-setup/)
+* [Complete our Docker Quickstart](https://developer.wax.io/docs/dapps/docker-quickstart/)
+* [Download WAX Blockchain source code and samples using the WAX Blockchain Setup guide](https://developer.wax.io/docs/dapps/wax-blockchain-setup/)
 * [Learn about the WAX Contract Development Toolkit WAX-CDT](https://developer.wax.io/docs/dapp-development/wax-cdt/)
 * [Set Up a Local dApp Environment](https://developer.wax.io/docs/dapp-development/setup-local-dapp-environment/)
 
 ## Build a dApp
 Once you’ve set up your development environment, these tutorials can help you launch the next great dApp on WAX:
 
-* [Smart Contract Quickstart](https://developer.wax.io/dapps/smart-contract-quickstart/) 
+* [Smart Contract Quickstart](https://developer.wax.io/docs/dapps/smart-contract-quickstart/) 
 * [Deploy Your dApp on WAX](https://developer.wax.io/docs/dapp-development/deploy-dapp-on-wax/deploy_source)
 
 ## Guides
