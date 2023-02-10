@@ -1,12 +1,10 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/dev-docs/themes/#overriding-theme-defaults
-
 title: Welcome to WAX
+description: description
 layout: home
 nav_order: 1
 lang-ref: Welcome to WAX
-lang: en
+lang: en-US
 ---
 
 The Worldwide Asset eXchange™ (WAX) is a purpose-built blockchain and protocol token designed to make e-commerce transactions faster, easier, and safer for everyone. WAX makes building and deploying high-performance, secure dApps easy. Here you'll find Quickstarts, sample code, API reference guides, and all of the developer tools you need to set up a local WAX environment and write your smart contracts.
