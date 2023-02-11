@@ -37,4 +37,4 @@ cleos -u [api-url] get info
 
 Refer to <a href="https://docs.eosnetwork.com/leap/latest/nodeos/rpc_apis/" target="_blank">RPC API documentation </a> for a list of API calls.
 
-<a href="https://github.com/EOSIO/eosjs" target="_blank">eosjs</a> is a javascript API SDK that's used to easily communicate with the WAX RPC API. To simplify development, you can use this tool to access blockchain endpoints.
+<a href="https://github.com/eosnetworkfoundation/mandel-eosjs" target="_blank">eosjs</a> is a javascript API SDK that's used to easily communicate with the WAX RPC API. To simplify development, you can use this tool to access blockchain endpoints.
