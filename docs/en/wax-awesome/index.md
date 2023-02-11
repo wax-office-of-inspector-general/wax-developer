@@ -37,6 +37,11 @@ You are new to the WAX Blockchain and you are looking to get started? You want t
 - [Validationcore.io](https://wax.validationcore.io/reports/nodes/api)
 - [EOS Nation Validator](https://validate.eosnation.io/wax/reports/endpoints.html)
 
+**CPU Renting**
+- [Waxp.tools](https://waxp.tools/cpu)
+- [NftHive](https://nfthive.io/cpu)
+
+
 **More Projects**
 - [WaxZilla](https://waxzilla.io/)
 - [Waxmarketcap](https://waxmarketcap.com/)
