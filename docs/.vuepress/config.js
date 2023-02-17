@@ -2,8 +2,8 @@ import { defineUserConfig } from 'vuepress'
 
 export default defineUserConfig({
   locales: {
-    '/': {
-      lang: 'en-US 🇺🇸',
+    '/en': {
+      lang: 'English 🇺🇸',
       title: 'WAX Developer',
       description: 'WAX developer documentation hosted by WAX OIG and the developer community.',
     },

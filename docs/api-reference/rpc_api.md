@@ -1,6 +1,6 @@
 ---
 title: WAX-RPC API
-nav_order: 20
+
 layout: default
 has_children: false
 parent: WAX API Reference

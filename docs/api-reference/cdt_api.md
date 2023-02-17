@@ -1,7 +1,7 @@
 ---
 title: WAX-CDT API
 layout: default
-nav_order: 25
+
 parent: WAX API Reference
 lang: en
 lang-ref: WAX-CDT API

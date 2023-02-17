@@ -1,7 +1,7 @@
 ---
 title: dfuse for WAX dApps
 layout: default
-nav_order: 120
+
 has_children: true
 parent: WAX API Reference
 lang-ref: dfuse for WAX dApps
