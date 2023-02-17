@@ -4,7 +4,7 @@ nav_order: 142
 layout: default
 parent: WAX Infrastructure Guides
 lang-ref: Set Up a WAX Testnet Node
-lang: en
+lang: en-US
 ---
 
 Running Antelope infrastructure to support the WAX Protocol Network can be quite daunting when first starting out. This series of guides aims to demystify the infrastructure and operational requirements required to run Rock Solid services for the WAX Protocol Network.

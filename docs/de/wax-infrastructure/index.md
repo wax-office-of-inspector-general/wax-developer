@@ -5,7 +5,7 @@ layout: default
 has_children: true
 has_toc: true
 lang-ref: WAX Infrastructure/APIs
-lang: de
+lang: es-DE
 ---
 
 Eine stabile Infrastruktur ist essentiell für jede Anwendung, und dies gilt auch für die WAX-Blockchain und die darauf aufbauenden Web3, DeFi und NFT Anwendungen.

@@ -5,7 +5,7 @@ nav_order: 72
 parent: Deploy Your dApp on WAX
 grand_parent: dApp Development
 lang-ref: Docker Deploy
-lang: es
+lang: es-ES
 ---
 
 En esta guía, aprenderás a personalizar los scripts de construcción de **hello-world** para desplegar tus contratos inteligentes en la mainnet de WAX.

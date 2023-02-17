@@ -6,7 +6,7 @@ parent: WAX Cloud Wallet
 has_children: true
 has_toc: true
 lang-ref: WaxJS Overview
-lang: de
+lang: es-DE
 ---
 
 **WaxJS** ist eine Javascript-Bibliothek, die sich mit WAX Cloud Wallet verbindet, um Benutzer anzumelden und intelligente Vertragstransaktionen auszuführen, ohne dass eine externe Wallet (z. B. Scatter) erforderlich ist. Ähnlich wie beim standardmäßigen OAuth 2.0-Flow gestatten Benutzer Ihrer dApp einfach, auf ihren WAX Blockchain-Kontonamen zuzugreifen. Sobald Ihre dApp autorisiert wurde, können Benutzer Ihre Smart-Contract-Transaktionen von ihrem WAX Cloud Wallet-Konto genehmigen.

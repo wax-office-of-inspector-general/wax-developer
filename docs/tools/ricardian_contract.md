@@ -4,7 +4,7 @@ layout: default
 nav_order: 111
 parent: Tools & Topics
 lang-ref: Ricardian Contracts
-lang: en
+lang: en-US
 ---
 
 A Ricardian contract is a machine and human-readable digital agreement between two parties (e.g., your app and your customer). Similar to a standard legal document, it includes your smart contracts actions, intentions, terms, and conditions. 

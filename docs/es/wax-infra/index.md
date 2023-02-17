@@ -5,7 +5,7 @@ layout: default
 has_children: true
 has_toc: true
 lang-ref: WAX Infrastructure Guides
-lang: es
+lang: es-ES
 ---
 
 La infraestructura es la columna vertebral de cualquier aplicación y lo mismo ocurre con WAX Blockchain y las aplicaciones Web3, DeFi y NFT construidas sobre esta.

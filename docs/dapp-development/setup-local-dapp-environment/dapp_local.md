@@ -5,7 +5,7 @@ nav_order: 41
 parent: Set Up a Local dApp Environment
 grand_parent: dApp Development
 lang-ref: Start a Local Node
-lang: en
+lang: en-US
 ---
 
 To start a local WAX node on your development server:

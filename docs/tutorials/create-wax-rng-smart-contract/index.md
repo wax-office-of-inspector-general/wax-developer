@@ -5,7 +5,7 @@ nav_order: 82
 parent: Tutorials
 has_children: true
 lang-ref: Create a WAX RNG Smart Contract
-lang: en
+lang: en-US
 ---
 
 In this tutorial, you'll learn how to create and deploy a WAX RNG smart contract.

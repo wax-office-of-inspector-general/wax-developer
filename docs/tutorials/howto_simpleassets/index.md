@@ -5,7 +5,7 @@ nav_order: 87
 parent: Tutorials
 has_children: true
 lang-ref: How-To SimpleAssets
-lang: en
+lang: en-US
 ---
  
 You can easily create non-fungible tokens (NFTs) on the WAX Blockchain using the <a href="https://github.com/CryptoLions/SimpleAssets" target="_blank">Simple Assets</a> smart contract.

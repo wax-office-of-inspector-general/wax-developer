@@ -4,7 +4,7 @@ nav_order: 142
 layout: default
 parent: WAX Infrastructure Guides
 lang-ref: Full/Partial History nodes using Hyperion
-lang: en
+lang: en-US
 ---
 
 Having stable accessibility to consumable data is essential for Web3 applications on a blockchain. There are many use-cases for history data like accounting, taxes, transaction tracking, portfolio management etc. 

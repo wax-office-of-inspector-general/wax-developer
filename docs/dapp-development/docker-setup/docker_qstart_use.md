@@ -5,7 +5,7 @@ layout: default
 parent: Docker Setup
 grand_parent: dApp Development
 lang-ref: Run Commands
-lang: en
+lang: en-US
 ---
 
 Once your **waxdev** bash session starts, you can use common commands to interact with your container. For example, to list your container's contents, use the `ls` command.

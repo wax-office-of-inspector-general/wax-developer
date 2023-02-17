@@ -5,7 +5,7 @@ nav_order: 50
 parent: dApp Development
 has_children: true
 lang-ref: WAX Contract Development Toolkit
-lang: en
+lang: en-US
 ---
 
 The <a href="https://github.com/worldwide-asset-exchange/wax-cdt" target="_blank">WAX Contract Development Toolkit (WAX-CDT)</a> includes a C/C++ API and a <a href="https://clang.llvm.org/" target="_blank">Clang</a> based set of tools used to build and deploy your smart contracts.

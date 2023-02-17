@@ -5,7 +5,7 @@ layout: default
 parent: Docker Setup
 grand_parent: dApp Development
 lang-ref: Run a WAX Container
-lang: en
+lang: en-US
 ---
 
 To run the **waxteam/dev** Docker image:

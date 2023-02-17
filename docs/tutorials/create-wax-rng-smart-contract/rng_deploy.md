@@ -5,7 +5,7 @@ nav_order: 85
 parent: Create a WAX RNG Smart Contract
 grand_parent: Tutorials
 lang-ref: Deploy Your WAX RNG Contract
-lang: en
+lang: en-US
 ---
 
 In this example, we'll use WAX-CDT tools to deploy your Lucky Number Generator smart contract. Refer to [WAX-CDT Deploy](/en/dapp-development/deploy-dapp-on-wax/deploy_source) for more information.

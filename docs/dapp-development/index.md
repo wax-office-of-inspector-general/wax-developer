@@ -5,7 +5,7 @@ layout: default
 has_children: true
 has_toc: true
 lang-ref: dApp Development
-lang: en
+lang: en-US
 ---
 The Worldwide Asset eXchange™ (WAX) is a purpose-built blockchain and protocol token designed to make e-commerce transactions faster, easier, and safer for everyone. WAX makes building and deploying high-performance, secure dApps easy. Here you'll find Quickstarts, sample code, API reference guides, and all of the developer tools you need to set up a local WAX environment and write your smart contracts.
 ## Get Started

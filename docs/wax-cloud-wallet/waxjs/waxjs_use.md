@@ -4,7 +4,7 @@ layout: default
 parent: WaxJS Overview
 grand_parent: WAX Cloud Wallet
 lang-ref: Use WaxJS
-lang: en
+lang: en-US
 ---
 
 The **WaxJS** library exposes four primary components:

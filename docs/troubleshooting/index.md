@@ -3,7 +3,7 @@ title: Troubleshooting
 layout: default
 nav_order: 200
 lang-ref: Troubleshooting
-lang: en
+lang: en-US
 ---
 
 Below is a list of known issues and fixes (if available).

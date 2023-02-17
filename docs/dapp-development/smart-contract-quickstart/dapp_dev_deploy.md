@@ -5,7 +5,7 @@ nav_order: 65
 parent: Smart Contract Quickstart
 grand_parent: dApp Development
 lang-ref: Deploy to Your Blockchain
-lang: en
+lang: en-US
 ---
 
 <!--To deploy your smart contract to your local development blockchain, you'll need to:

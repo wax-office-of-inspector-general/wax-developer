@@ -5,7 +5,7 @@ nav_order: 121
 parent: dfuse for WAX dApps
 grand_parent: WAX API Reference
 lang-ref: dfuse Example
-lang: es
+lang: es-ES
 ---
 
 En este ejemplo, nos registraremos con una cuenta gratuita y obtendremos el abi de WAX RNG usando dfuse REST. 

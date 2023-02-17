@@ -6,7 +6,7 @@ parent: How-To AtomicAssets
 grand_parent: Tutorials
 has_children: false
 lang-ref: Collection structure
-lang: en
+lang: en-US
 ---
 
 An NFT can be unique, like an exclusive work of art, or it can be part of a series, like playing cards, where the only thing that changes in the assets of the same edition is the order in which they have been minted. For the latter case, AtomicAssets offers the possibility of configuring a "template" to be able to issue more copies of the assets every time we need more units, infinitely or until we reach a previously established quantity, as we will see. For example, we could have a template for the game object "Silent Sword of Oblivion", with all its attributes already defined: the image, its name, its description, etc.

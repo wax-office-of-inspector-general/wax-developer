@@ -4,7 +4,7 @@ layout: default
 nav_order: 2
 parent: WAX Cloud Wallet
 lang-ref: boost.wax
-lang: en
+lang: en-US
 ---
 
 This contract registers other contracts that wish to have WAX apply extended management over CPU and Net for their WAX Cloud Wallet users.

@@ -5,7 +5,7 @@ nav_order: 85
 parent: Utilizar WAX RNG desde smart contract
 grand_parent: Tutoriales
 lang-ref: Deploy Your WAX RNG Contract
-lang: es
+lang: es-ES
 ---
 
 En este ejemplo, utilizaremos las herramientas WAX-CDT para desplegar tu contrato inteligente. Consulta [WAX-CDT Deploy](/es/dapp-development/deploy-dapp-on-wax/deploy_source) para más información.

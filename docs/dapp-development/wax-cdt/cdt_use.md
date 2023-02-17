@@ -5,7 +5,7 @@ nav_order: 52
 parent: WAX Contract Development Toolkit
 grand_parent: dApp Development
 lang-ref: WAX-CDT Sample Contracts
-lang: en
+lang: en-US
 ---
 
 WAX-CDT provides a **wax-cdt/examples** directory that includes the following sample smart contracts:

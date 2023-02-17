@@ -6,7 +6,7 @@ parent: How-To AtomicAssets
 grand_parent: Tutorials
 has_children: false
 lang-ref: Minting atomicassets NFTs
-lang: es
+lang: es-ES
 ---
 After having created the structure of the collection, it is time to start operating with the NFTs. To do so, the atomicassets smart contract offers us these actions:
 

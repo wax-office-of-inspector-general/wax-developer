@@ -4,7 +4,7 @@ nav_order: 144
 layout: default
 parent: WAX Infrastructure Guides
 lang-ref: Set Up a WAX Testnet Block Producer Node
-lang: en
+lang: en-US
 ---
 
 Providing API and Seed services are key to being part of the WAX service provider Ecosystem, however to be rewarded for your efforts and to participate in the governance of the chain you will need to become a  **WAX Testnet Block Producer.**

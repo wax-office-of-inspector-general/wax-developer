@@ -4,7 +4,7 @@ layout: default
 parent: WaxJS Überblick
 grand_parent: WAX Cloud Wallet
 lang-ref: WAX Cloud Wallet Quickstart
-lang: de
+lang: es-DE
 ---
 
 Wenn sich Benutzer bei WAX Cloud Wallet registrieren oder anmelden, wird automatisch ein WAX Blockchain-Konto erstellt. Benutzer können ihre Ressourcen, Blockchain-Transaktionen, NFTs und dApps auf der Whitelist ganz einfach über das WAX Cloud Wallet-Dashboard verwalten.

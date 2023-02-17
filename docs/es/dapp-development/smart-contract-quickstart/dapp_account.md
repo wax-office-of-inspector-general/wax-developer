@@ -5,7 +5,7 @@ nav_order: 63
 parent: Smart Contract Quickstart
 grand_parent: dApp Development
 lang-ref: Create Accounts
-lang: es
+lang: es-ES
 ---
 
 Una cuenta de WAX se almacena en la blockchain y se utiliza para identificar tus contratos inteligentes y los usuarios de la dApp. Las cuentas de la blockchain son necesarias para enviar o recibir transacciones válidas a la misma, tanto en tu entorno local como en el de producción. 

@@ -4,7 +4,7 @@ layout: default
 nav_order: 10
 parent: dApp Development
 lang-ref: Deploy an EOS dApp on WAX
-lang: en
+lang: en-US
 ---
 
 WAX is fully compatible with EOS smart contracts and offers free blockchain accounts and cheaper fees. This guide provides an overview of how to deploy your EOS dApps to the WAX mainnet.

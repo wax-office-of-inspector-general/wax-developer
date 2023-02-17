@@ -5,7 +5,7 @@ nav_order: 70
 parent: Desarrollo de dApps
 has_children: true
 lang-ref: Deploy Your dApp on WAX
-lang: es
+lang: es-ES
 ---
 
 Para desplegar tu dApp en WAX, tendrás que utilizar [WAX-CDT](/es/dapp-development/wax-cdt/) y las [Herramientas de Blockchain](/es/tools/blockchain_tools) para:

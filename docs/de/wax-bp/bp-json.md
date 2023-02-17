@@ -4,7 +4,7 @@ nav_order: 142
 layout: default
 parent: WAX Block Producer
 lang-ref: Creating a bp.json
-lang: de
+lang: es-DE
 ---
 
 Hinweis: Der aktuelle bp.json-Standard wird in einem GitHub-Repository aktualisiert. In dieser Anleitung wird alles erklärt, was Sie für den Einstieg benötigen. Die neuesten Updates finden Sie im [Repository](https://github.com/eosrio/bp-info-standard)

@@ -5,7 +5,7 @@ nav_order: 40
 parent: dApp Development
 has_children: true
 lang-ref: Set Up a Local dApp Environment
-lang: en
+lang: en-US
 ---
 
 Our [Docker Development Image](/en/dapp-development/docker-setup/) includes everything you need to set up a local development environment. This reduces your development costs and offers a fully-functional sandbox for both new and experienced dApp developers. The WAX local testnet allows you to easily:

@@ -5,7 +5,7 @@ nav_order: 43
 parent: Set Up a Local dApp Environment
 grand_parent: dApp Development
 lang-ref: Create a Wallet
-lang: en
+lang: en-US
 ---
 
 A WAX wallet is a named, encrypted repository of public and private key pairs that are stored in a file on your local server (not the blockchain). You'll need to create a development wallet to:

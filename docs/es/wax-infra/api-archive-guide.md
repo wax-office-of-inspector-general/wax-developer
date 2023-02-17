@@ -4,7 +4,7 @@ nav_order: 142
 layout: default
 parent: WAX Infrastructure Guides
 lang-ref: API Full/Partial Archive nodes
-lang: es
+lang: es-ES
 ---
 
 WAX es una red distribuida de ordenadores que ejecutan software (conocidos como nodos) que pueden verificar bloques y datos de transacciones. Necesitarás el software de WAX en tu servidor para "ejecutar" un nodo. Con "nodo", se refiere a la ejecución del software de WAX. WAX verifica todas las transacciones de cada bloque, manteniendo la red segura y los datos precisos. 

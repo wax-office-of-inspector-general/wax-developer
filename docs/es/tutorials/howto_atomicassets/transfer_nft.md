@@ -6,7 +6,7 @@ parent: How-To AtomicAssets
 grand_parent: Tutoriales
 has_children: false
 lang-ref: Transfer atomicassets NFTs
-lang: es
+lang: es-ES
 ---
 
 Entre los atributos de un NFT, como hemos visto en el documento anterior, podemos encontrar el atributo "owner", el cual especifíca quién es el propietario actual del NFT.

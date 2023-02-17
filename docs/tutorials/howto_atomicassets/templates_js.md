@@ -6,7 +6,7 @@ parent: How-To AtomicAssets
 grand_parent: Tutorials
 has_children: false
 lang-ref: Managing AA Templates
-lang: en
+lang: en-US
 ---
 
 If we have to mint multiple copies of the same asset, for example, a sword that is obtained as a reward in a mission, it will be useful to do it with a template. Thanks to the template we will be saving RAM memory, speed up the work and we will keep a coherence in the whole collection.

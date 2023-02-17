@@ -4,7 +4,7 @@ layout: default
 nav_order: 92
 parent: Tutorials
 lang-ref: Uninstall WAX
-lang: en
+lang: en-US
 ---
 
 If you have a previous version of the WAX Blockchain installed (Version : 1.6.1), you'll need to uninstall it before you can install the latest version. 

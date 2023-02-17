@@ -5,7 +5,7 @@ nav_order: 82
 parent: Tutoriales
 has_children: true
 lang-ref: Create a WAX RNG Smart Contract
-lang: es
+lang: es-ES
 ---
 
 En este tutorial aprenderás a crear un smart contract que realice llamadas a WAX RNG para obtener un hash aleatorio.

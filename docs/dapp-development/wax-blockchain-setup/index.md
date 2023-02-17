@@ -5,7 +5,7 @@ layout: default
 parent: dApp Development
 has_children: true
 lang-ref: WAX Blockchain Setup
-lang: en
+lang: en-US
 ---
 
 To set up and use the WAX Blockchain, it's recommended that you use our  <a href="https://hub.docker.com/u/waxteam" target="_blank">waxteam - Docker Images</a>.  Our docker images provide a fast, fully supported way to run a node in seconds. Refer to [Docker Quickstart](/en/dapp-development/docker-setup/) for more information.

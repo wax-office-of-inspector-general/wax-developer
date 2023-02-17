@@ -6,7 +6,7 @@ parent: How-To AtomicAssets
 grand_parent: Tutoriales
 has_children: false
 lang-ref: Collection structure
-lang: es
+lang: es-ES
 ---
 
 Un NFT puede ser único, como una obra de arte exclusiva, o puede formar parte de una serie, como las cartas de juego, donde lo único que cambia en los activos de una misma edición es el orden en que han sido acuñados. Para este último caso, AtomicAssets ofrece la posibilidad de configurar una "plantilla" para poder emitir más copias de los activos cada vez que necesitemos más unidades, de forma infinita o hasta llegar a una cantidad previamente establecida, como veremos. Por ejemplo, podríamos tener una plantilla para el objeto de juego "Silent Sword of Oblivion", con todos sus atributos ya definidos: la imagen, su nombre, su descripción, etc.

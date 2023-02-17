@@ -5,7 +5,7 @@ layout: default
 parent: WAX Blockchain Setup
 grand_parent: dApp Development
 lang-ref: Verify Your Installation
-lang: en
+lang: en-US
 ---
 
 To verify your installation, you can use **cleos** to call the `get info` endpoint on the Wax Blockchain API. 

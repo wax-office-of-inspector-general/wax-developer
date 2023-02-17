@@ -5,7 +5,7 @@ nav_order: 51
 parent: WAX Contract Development Toolkit
 grand_parent: dApp Development
 lang-ref: Install WAX-CDT
-lang: es
+lang: es-ES
 ---
 
 El repositorio de WAX-CDT de GitHub se descarga en el directorio **wax-cdt**. El proceso de descarga y compilación puede durar desde varios minutos hasta varias horas, dependiendo de la conexión a Internet, el sistema operativo y las especificaciones del hardware.

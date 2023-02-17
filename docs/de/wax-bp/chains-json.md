@@ -4,7 +4,7 @@ nav_order: 141
 layout: default
 parent: WAX Block Producer
 lang-ref: Creating a chains.json
-lang: de
+lang: es-DE
 ---
 
 ## Warum eine chains.json?

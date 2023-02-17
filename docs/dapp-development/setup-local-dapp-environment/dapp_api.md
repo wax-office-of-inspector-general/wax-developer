@@ -5,7 +5,7 @@ nav_order: 42
 parent: Set Up a Local dApp Environment
 grand_parent: dApp Development
 lang-ref: Access Your Local API
-lang: en
+lang: en-US
 ---
 
 The WAX mainnet exposes a set of **nodeos** API endpoints (RPC API), allowing you to interact with the WAX Blockchain. Commonly known as [chain-api-url](/en/wax-infrastructure/#public-and-free-api-service-providers)

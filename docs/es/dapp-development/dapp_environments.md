@@ -4,7 +4,7 @@ nav_order: 20
 layout: default
 parent: dApp Development
 lang-ref: Blockchain Environments
-lang: es
+lang: es-ES
 ---
 
 A continuación, encontrarás versiones de WAX, URLs e información sobre los entornos de desarrollo en blockchains.

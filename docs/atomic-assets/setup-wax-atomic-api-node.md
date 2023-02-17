@@ -4,7 +4,7 @@ nav_order: 4
 layout: default
 parent: Atomic Assets
 lang-href: How to Set Up a WAX Atomic API Node
-lang: en
+lang: en-US
 ---
 
 The AtomicAssets NFT standard developed by  [Pink.gg](https://pink.gg/)  has become synonymous with the WAX Protocol Network and the widely utilised  [WAX Atomic Hub](https://wax.atomichub.io/).

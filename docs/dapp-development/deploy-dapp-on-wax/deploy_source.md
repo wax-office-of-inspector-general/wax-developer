@@ -5,7 +5,7 @@ nav_order: 73
 parent: Deploy Your dApp on WAX
 grand_parent: dApp Development
 lang-ref: WAX-CDT Deploy
-lang: en
+lang: en-US
 ---
 
 In this guide, you'll use the `cleos set contract` command to deploy your smart contract to the WAX mainnet.

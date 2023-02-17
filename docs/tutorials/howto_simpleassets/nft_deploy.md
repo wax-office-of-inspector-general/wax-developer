@@ -5,7 +5,7 @@ nav_order: 90
 parent: How-To SimpleAssets
 grand_parent: Tutorials
 lang-ref: Deploy Your NFT Smart Contract
-lang: en
+lang: en-US
 ---
 
 Next, we'll use WAX-CDT tools to deploy your NFT smart contract to the WAX mainnet. Refer to [WAX-CDT Deploy](/en/dapp-development/deploy-dapp-on-wax/deploy_source) for more information.

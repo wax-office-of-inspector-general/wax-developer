@@ -4,7 +4,7 @@ layout: default
 nav_order: 142
 parent: Release Notes
 lang-ref: WAX RNG Release Notes
-lang: en
+lang: en-US
 ---
 
 Release Notes for the RNG Contract

@@ -4,7 +4,7 @@ layout: default
 nav_order: 96
 parent: Tutorials
 lang-ref: Custom Permissions
-lang: en
+lang: en-US
 ---
 
 ## Why custom permissions?

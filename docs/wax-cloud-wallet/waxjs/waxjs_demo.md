@@ -4,7 +4,7 @@ layout: default
 parent: WaxJS Overview
 grand_parent: WAX Cloud Wallet
 lang-ref: WaxJS Demo
-lang: en
+lang: en-US
 ---
 
 Below is a basic example of WaxJS functionality. To use this demo, click WAX Login (if you're not automatically logged in), then click Sign Transaction.

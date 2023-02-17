@@ -5,7 +5,7 @@ nav_order: 62
 parent: Smart Contract Quickstart
 grand_parent: dApp Development
 lang-ref: Create a Smart Contract
-lang: en
+lang: en-US
 ---
 # Create a Smart Contract
 

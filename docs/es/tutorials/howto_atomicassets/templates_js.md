@@ -6,7 +6,7 @@ parent: How-To AtomicAssets
 grand_parent: Tutoriales
 has_children: false
 lang-ref: Managing AtomicAssets templates from javaScript
-lang: es
+lang: es-ES
 ---
 
 Si tenemos que acuñar múltiples copias de un mismo asset como, por ejemplo, una espada que se obtiene de recompensa en una misión, nos vendrá bien hacerlo con una plantilla. Gracias a la plantilla estaremos ahorrando memoria RAM, agilizaremos el trabajo y mantendremos una coherencia en la colección completa.

@@ -5,7 +5,7 @@ nav_order: 91
 parent: How-To SimpleAssets
 grand_parent: Tutorials
 lang-ref: Test Your NFT Smart Contract 
-lang: en
+lang: en-US
 ---
 
 Now that you've deployed your WAX NFT smart contract, it's time to run a test action and create your first NFT.

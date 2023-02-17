@@ -5,7 +5,7 @@ nav_order: 52
 parent: WAX Contract Development Toolkit
 grand_parent: dApp Development
 lang-ref: WAX-CDT Sample Contracts
-lang: es
+lang: es-ES
 ---
 
 WAX-CDT contiene un directorio, **wax-cdt/examples**, que incluye los siguientes ejemplos de contratos inteligentes:

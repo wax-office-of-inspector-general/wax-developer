@@ -4,7 +4,7 @@ nav_order: 143
 layout: default
 parent: WAX Infrastructure Guides
 lang-ref: Using WAX Snapshots
-lang: en
+lang: en-US
 ---
 
 You will have noticed that syncing up to a blockchain that has been running for millions of blocks can take quite some time. Luckily Syncing up can be expedited by using an existing valid snapshot of the chain state database.

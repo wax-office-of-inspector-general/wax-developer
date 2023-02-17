@@ -5,7 +5,7 @@ layout: default
 parent: Desarrollo de dApps
 has_children: true
 lang-ref: Docker Setup
-lang: es
+lang: es-ES
 ---
 
 <a href="https://www.docker.com/" target="_blank">Docker</a> es una plataforma *contenedora* similar a una máquina virtual. Docker permite ejecutar software, aplicaciones e incluso sistemas operativos como Ubuntu desde un entorno aislado. Si quieres profundizar más, puedes explorar la <a href="https://www.docker.com/why-docker" target="_blank">Guía General</a> de Docker.

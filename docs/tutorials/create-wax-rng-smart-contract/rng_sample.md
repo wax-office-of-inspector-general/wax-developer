@@ -5,7 +5,7 @@ nav_order: 84
 parent: Create a WAX RNG Smart Contract
 grand_parent: Tutorials
 lang-ref: Build Your Contract to call WAX RNG contract
-lang: en
+lang: en-US
 ---
 
 In this example, we'll create a smart contract that uses the WAX RNG service to generate a random number no larger than 100. This number gets written to a multi_index table, along with an internal Customer ID, the customer's signing_value, and the checksum256 random_value returned from the WAX RNG oracle.

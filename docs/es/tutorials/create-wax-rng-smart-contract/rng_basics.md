@@ -5,7 +5,7 @@ nav_order: 82
 parent: Utilizar WAX RNG desde smart contract
 grand_parent: Tutoriales
 lang-ref: WAX RNG Basics
-lang: es
+lang: es-ES
 ---
 
 ## Cómo funciona

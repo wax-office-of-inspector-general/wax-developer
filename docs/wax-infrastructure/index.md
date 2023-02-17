@@ -5,7 +5,7 @@ layout: default
 has_children: true
 has_toc: true
 lang-ref: WAX Infrastructure Guides
-lang: en
+lang: en-US
 ---
 
 Infrastructure is the backbone of any application and the same goes with WAX Blockchain and the Web3, DeFi, NFT applications built on top of it.

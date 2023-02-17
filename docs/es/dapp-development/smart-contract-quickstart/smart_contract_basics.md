@@ -5,7 +5,7 @@ nav_order: 61
 parent: Smart Contract Quickstart
 grand_parent: dApp Development
 lang-ref: Smart Contract Basics
-lang: es
+lang: es-ES
 ---
 
 Un contrato inteligente (Smart Contract) de WAX incluye una recopilación de acciones, definiciones de tipos y almacenamiento persistente, lo que permite a tu dApp firmar transacciones en la Blockchain de WAX. Cuando llamas a un contrato inteligente desde una app front-end:

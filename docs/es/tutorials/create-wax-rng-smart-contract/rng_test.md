@@ -5,7 +5,7 @@ nav_order: 86
 parent: Utilizar WAX RNG desde smart contract
 grand_parent: Tutoriales
 lang-ref: Test Your WAX RNG Contract
-lang: es
+lang: es-ES
 ---
 
 Para probar el smart contract realizaremos una llamada a la acción *getrnd* con los siguientes parámetros:

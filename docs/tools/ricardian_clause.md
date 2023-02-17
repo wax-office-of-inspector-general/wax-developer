@@ -4,7 +4,7 @@ layout: default
 nav_order: 112
 parent: Tools & Topics
 lang-ref: Ricardian Clauses
-lang: en
+lang: en-US
 ---
 
 Similar to a [Ricardian Contract](/en/tools/ricardian_contract), a Ricardian clause is a digital document that specifies the terms of your entire smart contract - not just per action. 

@@ -1,11 +1,9 @@
 ---
 title: dfuse Example
-layout: default
 
 parent: dfuse for WAX dApps
 grand_parent: WAX API Reference
-lang-ref: dfuse Example
-lang: en
+lang: en-US-US
 ---
 
 In this example, we'll sign up for a free account and get the WAX RNG abi using dfuse REST. 

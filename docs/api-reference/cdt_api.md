@@ -1,10 +1,8 @@
 ---
 title: WAX-CDT API
-layout: default
 
 parent: WAX API Reference
-lang: en
-lang-ref: WAX-CDT API
+lang: en-US-US
 ---
 
 All of your smart contracts inherit from the C++ API files available in the [WAX Contract Development Toolkit (WAX-CDT)](/en/dapp-development/wax-cdt/) library. These files are used to define your smart contract's actions, structures, and data types. 

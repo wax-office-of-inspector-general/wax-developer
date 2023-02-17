@@ -4,7 +4,7 @@ nav_order: 142
 layout: default
 parent: WAX Infrastructure/APIs
 lang-ref: API Full/Partial Archive nodes
-lang: de
+lang: es-DE
 ---
 
 WAX ist ein verteiltes Netz von Computern, auf denen Software (sogenannte Nodes) läuft, die Blöcke und Transaktionsdaten überprüfen kann. Sie benötigen WAX-Software auf Ihrem Server, um eine Node zu "betreiben". Die WAX-Software verifiziert alle Transaktionen in jedem Block und sorgt so für die Sicherheit des Netzwerks und die Richtigkeit der Daten.

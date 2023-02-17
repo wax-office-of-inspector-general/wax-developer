@@ -5,7 +5,7 @@ nav_order: 53
 parent: WAX Contract Development Toolkit
 grand_parent: dApp Development
 lang-ref: WAX-CDT Build Tools
-lang: es
+lang: es-ES
 ---
 
 El WAX-CDT incluye varios comandos **eosio**, creados a partir de la infraestructura de front-end y herramientas de <a href="https://clang.llvm.org/" target="_blank">Clang</a>. Esta colección incluye varias herramientas para construir archivos WASM optimizados y de alto rendimiento. Si quieres saber más, consulta las [opciones de WAX-CDT](/es/tools/cdt_options).

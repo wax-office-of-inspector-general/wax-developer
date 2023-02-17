@@ -4,7 +4,7 @@ layout: default
 nav_order: 2
 parent: WAX Cloud Wallet
 lang-ref: boost.wax
-lang: de
+lang: es-DE
 ---
 
 Mit diesem Contract werden andere Contracts registriert, die für ihre WAX Cloud Wallet-Benutzer ein erweitertes CPU- und Net-management einrichten möchten.

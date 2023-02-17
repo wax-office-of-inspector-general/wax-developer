@@ -5,7 +5,7 @@ layout: default
 parent: WAX Blockchain Setup
 grand_parent: dApp Development
 lang-ref: Install the WAX Blockchain
-lang: es
+lang: es-ES
 ---
 
 El repositorio de código fuente de la WAX Blockchain de GitHub se descarga en el directorio **wax-blockchain**. El proceso de descarga y construcción puede durar desde varios minutos hasta varias horas, dependiendo de tu conexión a Internet, el sistema operativo y las especificaciones del hardware.

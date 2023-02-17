@@ -4,7 +4,7 @@ nav_order: 147
 layout: default
 parent: WAX Infrastructure/APIs
 lang-ref: How to Mitigate API abuse on a WAX Load Balancer
-lang: de
+lang: es-DE
 ---
 
 Auch wenn Sie einen WAX Guild-Dienst anbieten, der von einem leistungsstarken HAProxy unterstützt wird, kann dieser Dienst von gierigen oder böswilligen Benutzern ausgenutzt werden.

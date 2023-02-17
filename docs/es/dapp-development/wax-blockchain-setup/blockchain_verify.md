@@ -5,7 +5,7 @@ layout: default
 parent: WAX Blockchain Setup
 grand_parent: dApp Development
 lang-ref: Verify Your Installation
-lang: es
+lang: es-ES
 ---
 
 Para verificar la instalación, puedes usar **cleos** para llamar al endpoint `get info` en la API de la blockchain de WAX. 

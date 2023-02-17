@@ -4,7 +4,7 @@ nav_order: 141
 layout: default
 parent: WAX Infrastructure/APIs
 lang-ref: Full/Partial History nodes using Hyperion
-lang: de
+lang: es-DE
 ---
 
 Ein stabiler Zugang zu deserialisierten Daten ist für Web3-Anwendungen auf einer Blockchain unerlässlich. Es gibt viele Anwendungsfälle für historische Daten wie Buchhaltung, Steuern, Transaktionsverfolgung, Portfolioverwaltung usw.

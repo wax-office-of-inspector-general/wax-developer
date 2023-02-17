@@ -5,7 +5,7 @@ layout: default
 parent: Docker Setup
 grand_parent: dApp Development
 lang-ref: Run Commands
-lang: es
+lang: es-ES
 ---
 
 Una vez que tu sesión bash de **waxdev** se inicia, puedes usar comandos comunes para interactuar con tu contenedor. Por ejemplo, para listar el contenido de tu contenedor, utiliza el comando `ls`.

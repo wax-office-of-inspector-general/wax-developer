@@ -4,7 +4,7 @@ nav_order: 146
 layout: default
 parent: WAX Infrastructure Guides
 lang-ref: How to Set Up a Reliable WAX Load Balancer
-lang: en
+lang: en-US
 ---
 
 Our previous guides have focused primarily on building and running WAX Software, but that is only part of the picture when providing reliable services to the WAX Ecosystem.

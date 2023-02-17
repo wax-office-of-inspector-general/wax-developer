@@ -4,7 +4,7 @@ nav_order: 145
 layout: default
 parent: WAX Infrastructure/APIs
 lang-ref: How to Set Up a Solid WAX Mainnet Node
-lang: de
+lang: es-DE
 ---
 
 Frei verfügbare Token und relativ niedrige Systemanforderungen machen das WAX Testnet zu einem idealen Lernort, doch nun ist es an der Zeit, das WAX Mainnet anzugehen.

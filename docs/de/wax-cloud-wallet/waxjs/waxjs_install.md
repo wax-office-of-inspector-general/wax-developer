@@ -4,7 +4,7 @@ layout: default
 parent: WaxJS Überblick
 grand_parent: WAX Cloud Wallet
 lang-ref: Install WaxJS
-lang: de
+lang: es-DE
 ---
 
 Ess gibt mehrere Möglichkeiten **WaxJS** zu installieren:

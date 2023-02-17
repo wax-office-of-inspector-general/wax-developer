@@ -5,7 +5,7 @@ nav_order: 51
 parent: WAX Contract Development Toolkit
 grand_parent: dApp Development
 lang-ref: Install WAX-CDT
-lang: en
+lang: en-US
 ---
 
 The GitHub WAX-CDT Repository downloads to the **wax-cdt** directory. The download and build process can take several minutes to several hours, depending on your Internet connection, operating system, and hardware specifications.

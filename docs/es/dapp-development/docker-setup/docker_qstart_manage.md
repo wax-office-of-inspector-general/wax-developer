@@ -5,7 +5,7 @@ layout: default
 parent: Docker Setup
 grand_parent: dApp Development
 lang-ref: Manage Containers
-lang: es
+lang: es-ES
 ---
 
 Para salir de la sesión interactiva de bash (sin detener tu contenedor), presiona `ctrl-p` + `ctrl-q` para enviar una secuencia de escape. La consola mostrará:

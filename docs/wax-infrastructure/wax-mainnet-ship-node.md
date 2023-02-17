@@ -4,7 +4,7 @@ nav_order: 148
 layout: default
 parent: WAX Infrastructure Guides
 lang-ref: How to Set Up a WAX State-History Node
-lang: en
+lang: en-US
 ---
 
 There is a nodeos implementation type that is crucial for the operation of numerous WAX Mainnet Services such as  [Hyperion Full History](https://github.com/eosrio/hyperion-history-api)  and the  [Atomic Assets API](https://github.com/pinknetworkx/eosio-contract-api)  and that is the State-History service.

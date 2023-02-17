@@ -5,7 +5,7 @@ nav_order: 89
 parent: How-To SimpleAssets
 grand_parent: Tutorials
 lang-ref: Create a WAX NFT
-lang: en
+lang: en-US
 ---
 
 In this example, we'll write a smart contract that creates a WAX NFT Sticker using the **simpleassets** smart contract. 

@@ -5,7 +5,7 @@ nav_order: 121
 parent: dfuse für WAX dApps
 grand_parent: WAX API Referenz
 lang-ref: dfuse Example
-lang: de
+lang: es-DE
 ---
 
 In diesem Beispiel melden wir uns für ein kostenloses Konto an und erhalten das WAX RNG abi über dfuse REST. 

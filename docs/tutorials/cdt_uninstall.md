@@ -4,7 +4,7 @@ layout: default
 nav_order: 95
 parent: Tutorials
 lang-ref: Uninstall WAX-CDT
-lang: en
+lang: en-US
 ---
 
 If you have a previous version of WAX-CDT installed (Version : wax-1.4.1-1.0.0), you'll need to uninstall it before you can install the latest version. 

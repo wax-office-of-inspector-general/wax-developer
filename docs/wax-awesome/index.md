@@ -5,7 +5,7 @@ layout: default
 has_children: true
 has_toc: true
 lang-ref: WAX Awesome
-lang: en
+lang: en-US
 ---
 
 ## A curated Lists of awesome projects built on WAX 

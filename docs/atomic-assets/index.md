@@ -5,7 +5,7 @@ layout: default
 has_children: true
 has_toc: true
 lang-ref: Atomic Assets
-lang: en
+lang: en-US
 ---
 
 Atomic Assets API

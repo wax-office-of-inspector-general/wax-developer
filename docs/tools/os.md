@@ -4,7 +4,7 @@ layout: default
 nav_order: 100
 parent: Tools & Topics
 lang-ref: Supported Operating Systems
-lang: en
+lang: en-US
 ---
 # Supported Operating Systems
 

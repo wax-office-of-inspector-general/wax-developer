@@ -6,7 +6,7 @@ parent: How-To AtomicAssets
 grand_parent: Tutoriales
 has_children: false
 lang-ref: Managing AtomicAssets schemas from javaScript
-lang: es
+lang: es-ES
 ---
 
 Como hemos comentado, los esquemas nos permiten declarar las características comunes de los NFTs de nuestra colección y poder crear grupos. Si estamos creando NFTs para un juego que tiene varios personajes, cada uno de ellos será único, pero compartirá atributos con el resto de personajes. Todos los personajes tendrán un nombre, una puntuación, un nivel de puntos de vida, etc. 

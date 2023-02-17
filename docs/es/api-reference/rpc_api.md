@@ -5,7 +5,7 @@ layout: default
 has_children: false
 parent: WAX API Reference
 lang-ref: WAX-RPC API
-lang: es
+lang: es-ES
 ---
 
 La API RPC de WAX Blockchain incluye puntos de acceso públicos utilizados para obtener información de bloques y su historial e información sobre los nodos y sobre los productores de nodos. Esta API, expuesta a través de los plugins **nodeos**, está disponible en la red principal de WAX y en su entorno de desarrollo local. 

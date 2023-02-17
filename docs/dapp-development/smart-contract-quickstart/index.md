@@ -5,7 +5,7 @@ nav_order: 60
 parent: dApp Development
 has_children: true
 lang-ref: Smart Contract Quickstart
-lang: en
+lang: en-US
 ---
 
 A WAX smart contract is a WASM compiled C++ file that executes actions on the WAX Blockchain and stores persistent data on every WAX full node's RAM.

@@ -4,7 +4,7 @@ layout: default
 nav_order: 66
 parent: dApp Development
 lang-ref: WAX Testnet Quickstart
-lang: en
+lang: en-US
 ---
 
 In this guide, you'll learn how to create Testnet accounts and deploy your smart contracts to the WAX Testnet.

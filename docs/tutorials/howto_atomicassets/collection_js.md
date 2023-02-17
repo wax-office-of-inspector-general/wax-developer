@@ -6,7 +6,7 @@ parent: How-To AtomicAssets
 grand_parent: Tutorials
 has_children: false
 lang-ref: Managing AA Collections
-lang: en
+lang: en-US
 ---
 
 Collections are the main pillar of NFT management. If we want to use the AtomicAssets standard to create our NFTs in WAX blockchain, the first thing we have to do is to create a collection that serves as a container catalogue for all the NFTs (and that are part of the context of that collection).

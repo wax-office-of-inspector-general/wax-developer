@@ -1,7 +1,7 @@
 ---
 title: Welcome to WAX
 description: description
-lang: en-US
+lang: en-US-US
 ---
 
 # WAX Developer Documentation

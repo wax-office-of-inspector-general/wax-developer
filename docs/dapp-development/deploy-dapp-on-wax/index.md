@@ -5,7 +5,7 @@ nav_order: 70
 parent: dApp Development
 has_children: true
 lang-ref: Deploy Your dApp on WAX
-lang: en
+lang: en-US
 ---
 
 To deploy your dApp on WAX, you'll need to use [WAX-CDT](/en/dapp-development/wax-cdt/) and [Blockchain Tools](/en/tools/blockchain_tools) to:

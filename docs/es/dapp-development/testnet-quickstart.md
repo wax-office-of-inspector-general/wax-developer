@@ -4,7 +4,7 @@ layout: default
 nav_order: 66
 parent: dApp Development
 lang-ref: WAX Testnet Quickstart
-lang: es
+lang: es-ES
 ---
 
 En esta guía, aprenderás a crear cuentas de Testnet y a desplegar tus contratos inteligentes en la Testnet de WAX.

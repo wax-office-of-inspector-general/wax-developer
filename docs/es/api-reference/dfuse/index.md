@@ -5,7 +5,7 @@ nav_order: 120
 has_children: true
 parent: WAX API Reference
 lang-ref: dfuse for WAX dApps
-lang: es
+lang: es-ES
 ---
 
 <a href="https://dfuse.eosnation.io" target="_blank">Dfuse</a> es un potente conjunto de APIs para desarrolladores de WAX dApps. La plataforma dfuse nos permite ejecutar búsquedas, transmitir datos en tiempo real y enviar transacciones a la Blockchain de WAX de manera fácil.

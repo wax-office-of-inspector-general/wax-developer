@@ -4,7 +4,7 @@ nav_order: 149
 layout: default
 parent: WAX Infrastructure Guides
 lang-ref: Working with WAX Software Files and Folders
-lang: en
+lang: en-US
 ---
 
 Many of our guides have worked with configuring and deploying WAX software, however it did occur to me that I might not have explained the file and folder functions. In particular some of the nuances with node types and recovering or successfully syncing to the chain head block.

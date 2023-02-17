@@ -6,7 +6,7 @@ parent: How-To AtomicAssets
 grand_parent: Tutoriales
 has_children: false
 lang-ref: Managing AtomicAssets collections from javaScript
-lang: es
+lang: es-ES
 ---
 
 Las colecciones son el pilar principal de la gestión de NFTs. Si queremos utilizar el estándar AtomicAssets para crear nuestras NFT en WAX blockchain, lo primero que tenemos que hacer es crear una colección que sirva de catálogo contenedor para todas las NFT (y que formen parte del contexto de esa colección).

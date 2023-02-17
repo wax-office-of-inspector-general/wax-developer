@@ -5,7 +5,7 @@ layout: default
 parent: Tutoriales
 has_children: true
 lang-ref: How-To AtomicAssets
-lang: es
+lang: es-ES
 ---
 AtomicAssets es el smart contract creado por Pink Network, importante Gremio validador para WAX Blockchain, para administrar el estándar NFT del mismo nombre y cuyo repositorio puede consultarse en GitHub: [AtomicAssets](https://github.com/pinknetworkx/atomicassets-contract)
 

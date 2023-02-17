@@ -4,7 +4,7 @@ nav_order: 146
 layout: default
 parent: WAX Infrastructure/APIs
 lang-ref: How to Set Up a Reliable WAX Load Balancer
-lang: de
+lang: es-DE
 ---
 
 Unsere bisherigen Leitfäden haben sich in erster Linie auf die Erstellung und den Betrieb von WAX-Software konzentriert, aber das ist nur ein Teil des Bildes, wenn es um die Bereitstellung zuverlässiger Dienste für das WAX-Ökosystem geht.

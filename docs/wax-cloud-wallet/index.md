@@ -5,7 +5,7 @@ nav_order: 2
 has_children: true
 has_toc: true
 lang-ref: WAX Cloud Wallet
-lang: en
+lang: en-US
 ---
 
 With just a few lines of code, WAX Cloud Wallet makes it as simple for customers to use your dApp as any mainstream app.
