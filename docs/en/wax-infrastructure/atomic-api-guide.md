@@ -7,7 +7,7 @@ lang-ref: Atomic Assets/Market API
 lang: en
 ---
 
-WAX Blockchain is hevaily focused on NFTs and AtomicAssets standard has became the defacto standard on WAX for NFTs. This guide helps project teams to setup their own AtomicAssets API Infrastructure to access NFTs and Marketplaces specific data. This API data can be useful for various purposes like:
+WAX Blockchain is heavily focused on NFTs and AtomicAssets standard has became the defacto standard on WAX for NFTs. This guide helps project teams to setup their own AtomicAssets API Infrastructure to access NFTs and Marketplaces specific data. This API data can be useful for various purposes like:
 
 - Building Games
 - Building Marketplaces
