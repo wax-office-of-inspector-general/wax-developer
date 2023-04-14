@@ -5,6 +5,10 @@ _site
 vendor
 .DS_Store
 .bundle
-node_modules
 .temp
 .cache
+node_modules/
+src/.vuepress/.cache/
+src/.vuepress/.temp/
+src/.vuepress/dist/
+

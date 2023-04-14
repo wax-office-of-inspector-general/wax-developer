@@ -1,0 +1,26 @@
+// place your custom styles here
+
+/* disable collapsible sidebar */
+.toggle-sidebar-wrapper {
+  display: none;
+}
+
+.nav-links {
+  .nav-item {
+    margin: 0 1em;
+
+    a {
+      font-weight: bold;
+    }
+  }
+}
+
+.toc-header {
+  .print-button {
+    display: none;
+  }
+}
+
+.page-reading-time-info {
+  display: none!important;
+}
