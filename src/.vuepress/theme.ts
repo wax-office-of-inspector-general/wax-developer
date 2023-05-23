@@ -6,9 +6,11 @@ export default hopeTheme({
   hostname: "https://vuepress-theme-hope-docs-demo.netlify.app",
 
   author: {
-    name: "Mr.Hope",
-    url: "https://mrhope.site",
+    name: "Rakeden",
+    url: "https://github.com/rakeden",
   },
+
+  pure: true,
 
   iconAssets: "fontawesome",
 
@@ -26,12 +28,13 @@ export default hopeTheme({
 
   docsDir: "./src",
 
+  sidebar: "heading",
+
   locales: {
     "/": {
       // navbar
       navbar: enNavbar,
 
-      // sidebar
       sidebar: enSidebar,
 
       footer: "Default footer",

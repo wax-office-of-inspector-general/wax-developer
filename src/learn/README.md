@@ -1,6 +1,6 @@
 ---
 title: About WAX
-index: true
+index: false
 author: false
 homefeatures: Tell me more
 ---

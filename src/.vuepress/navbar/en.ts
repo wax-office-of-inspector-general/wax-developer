@@ -4,5 +4,5 @@ export const enNavbar = navbar([
   { text: "Learn", link: "/learn/" },
   { text: "Build", link: "/build/" },
   { text: "Operate", link: "/operate/" },
-  { text: "Governance", link: "/governance/" },
+  { text: "Create", link: "/create/" },
 ]);
