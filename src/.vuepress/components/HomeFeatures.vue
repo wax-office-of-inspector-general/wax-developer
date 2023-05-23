@@ -18,9 +18,11 @@ console.log(props);
 </script>
 
 <template>
-  <h3>jojojo</h3>
-  <p>This is my custom component</p>
-  <ul v-if="props.features">
-    <li>{{ props.features }}</li>
-  </ul>
+  <div class="home-features">
+    <h3>jojojo</h3>
+    <p>This is my custom component</p>
+    <ul v-if="props.features">
+      <li>{{ props.features }}</li>
+    </ul>
+  </div>
 </template>

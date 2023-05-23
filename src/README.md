@@ -93,6 +93,10 @@ features:
 
 <HomeFeatures :features="{key: 'Striiiing'}" />
 
+<HomeFeatures :features="{key: 'Striiiing'}" />
+
+<HomeFeatures :features="{key: 'Striiiing'}" />
+
 This is an example of a project homepage. You can place your main content here.
 
 To use this layout, you need to set `home: true` in the page front matter.
