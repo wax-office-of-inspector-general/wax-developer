@@ -14,7 +14,7 @@ export default hopeTheme({
 
   iconAssets: "fontawesome",
 
-  logo: "/logo.svg",
+  logo: "/logo.png",
 
   // show repo in navbar
   repo: "wax-office-of-inspector-general/wax-developer",
@@ -22,7 +22,7 @@ export default hopeTheme({
 
   pageInfo: false,
 
-  darkmode: 'disable',
+  darkmode: 'enable',
 
   navbarLayout: {
     start: ["Brand"],

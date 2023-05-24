@@ -1,5 +1,7 @@
+@use '@sass-palette/hope-config';
+
 .grid-catalog-wrapper {
-  margin-bottom: 2em;;
+  padding: 3em 0;
   
   .grid-catalog-title {
     display: block;
@@ -9,8 +11,18 @@
     margin-top: 2em;
 
     display: grid;
-    grid-gap: 1.5em 2em;
-    grid-template-columns: repeat(3, 250px);
+    grid-gap: 1.5em 1.5em;
+    grid-template-columns: repeat(auto-fit, minmax(calc(33% - 1.5em), 1fr));
+
+    @media screen and (max-width: hope-config.$pad) {
+      grid-gap: 1.5em 2em;
+      grid-template-columns: repeat(auto-fit, minmax(calc(50% - 2em), 1fr));
+    };
+
+    @media screen and (max-width: hope-config.$mobile) {
+      grid-gap: 1.5em 2em;
+      grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    };
 
     .grid-item-link {
       color: unset;

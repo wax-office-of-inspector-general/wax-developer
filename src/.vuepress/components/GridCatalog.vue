@@ -175,9 +175,6 @@ const getCatalogInfo = (): CatalogInfo[] => {
 };
 
 const info = computed(() => getCatalogInfo());
-
-console.log(info.value);
-
 </script>
 <template>
   <div class="grid-catalog-wrapper">

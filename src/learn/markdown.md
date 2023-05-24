@@ -1,6 +1,7 @@
 ---
 title: Markdown Enhance
 order: 2
+toc: true
 ---
 
 VuePress basically generate pages from Markdown files. So you can use it to generate documentation or blog sites easily.
@@ -364,39 +365,6 @@ const msg = ref("Hello World!");
 :::
 
 - [View Detail](https://theme-hope.vuejs.press/guide/markdown/vue-playground.html)
-
-#### Presentation
-
-@slidestart
-
-## Slide 1
-
-A paragraph with some text and a [link](https://mrhope.site)
-
----
-
-## Slide 2
-
-- Item 1
-- Item 2
-
----
-
-## Slide 3.1
-
-```js
-const a = 1;
-```
-
---
-
-## Slide 3.2
-
-$$
-J(\theta_0,\theta_1) = \sum_{i=0}
-$$
-
-@slideend
 
 - [View Detail](https://theme-hope.vuejs.press/guide/markdown/presentation.html)
 

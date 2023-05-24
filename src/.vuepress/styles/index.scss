@@ -1,4 +1,37 @@
 // place your custom styles here
+html[data-theme=dark] {
+  --navbar-bg-color: #17151F;
+  --sidebar-bg-color: #17151F;
+  --text-color: #E1DFFA;
+  
+  --bg-color: linear-gradient(97.22deg, #182633 0%, #363448 100%) ;
+}
+
+html[data-theme=dark] #app {
+  --code-color: #CDAAEE !important;
+  --code-line-color: #CDAAEE !important;
+  --code-bg-color: #363448;
+  --code-border-color: #CDAAEE !important;
+  --code-highlight-line-color: #CDAAEE !important;
+}
+
+body {
+
+}
+
+h1, h2, h3, h4 {
+  display: block;
+  width: 100%;
+
+  &:after {
+    content: '';
+    display: block;
+    margin-top: 0.75em;
+    width: 2em;
+    height: 2px;
+    background: var(--code-line-color);
+  }
+}
 
 .page {
   transform: none!important;

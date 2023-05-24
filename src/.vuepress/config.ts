@@ -38,4 +38,15 @@ export default defineUserConfig({
       componentsDir: path.resolve(__dirname, './components'),
     }),
   ],
+
+  /*
+  alias: {
+    // Here you can redirect aliases to your own components
+    // For example, here we change the theme's home page component to HomePage.vue under user .vuepress/components
+    "@theme-hope/modules/sidebar/components/Sidebar": path.resolve(
+      __dirname,
+      "./components/SidebarExtended.vue"
+    ),
+  }
+  */
 });

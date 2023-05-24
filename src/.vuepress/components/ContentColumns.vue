@@ -1,34 +1,25 @@
 <script setup lang="ts">
-import { usePageFrontmatter, usePageData } from "@vuepress/client";
-
-import "../styles/grid-catalog.scss";
+import "../styles/content-columns.scss";
 
 const props = defineProps({
-  features: {
-    type: Object,
-    default: {}
+  ltr: {
+    type: Boolean,
+    default: false
   },
-})
+});
 
-// const features = computed(() => getFeatures());
-
-const frontmatter = usePageFrontmatter();
-const page = usePageData();
-
-/*
-console.log(props);
-console.log(frontmatter.value);
-console.log(page.value);
-*/
 </script>
 
 <template>
-  <div class="content-columns-wrapper">
-    <div>
+  <div
+    class="content-columns-wrapper"
+    :class="{'reverse': ltr}"
+  >
+    <div class="grid-column first">
       <slot name="first"></slot>
     </div>
     
-    <div>
+    <div class="grid-column second">
       <slot name="second"></slot>
     </div>
   </div>
