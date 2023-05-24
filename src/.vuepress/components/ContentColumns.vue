@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { usePageFrontmatter, usePageData } from "@vuepress/client";
 
+import "../styles/grid-catalog.scss";
+
 const props = defineProps({
   features: {
     type: Object,
@@ -21,11 +23,13 @@ console.log(page.value);
 </script>
 
 <template>
-  <div class="home-features">
-    <h3>jojojo</h3>
-    <p>This is my custom component</p>
-    <ul v-if="props.features">
-      <li>{{ props.features }}</li>
-    </ul>
+  <div class="content-columns-wrapper">
+    <div>
+      <slot name="first"></slot>
+    </div>
+    
+    <div>
+      <slot name="second"></slot>
+    </div>
   </div>
 </template>

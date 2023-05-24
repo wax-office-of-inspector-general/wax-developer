@@ -1,5 +1,9 @@
 // place your custom styles here
 
+.page {
+  transform: none!important;
+}
+
 /* disable collapsible sidebar */
 .toggle-sidebar-wrapper {
   display: none;

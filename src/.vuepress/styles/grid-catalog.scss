@@ -1,0 +1,35 @@
+.grid-catalog-wrapper {
+  margin-bottom: 2em;;
+  
+  .grid-catalog-title {
+    display: block;
+  }
+
+  .grid-catalog-items {
+    margin-top: 2em;
+
+    display: grid;
+    grid-gap: 1.5em 2em;
+    grid-template-columns: repeat(3, 250px);
+
+    .grid-item-link {
+      color: unset;
+
+      .grid-item-img {
+        background: #F9F9F9;
+        aspect-ratio: 16 / 9;
+        border-radius: 10px;
+      }
+
+      .grid-item-title {
+        color: unset;
+      }
+
+      &:hover {
+        .grid-item-img {
+          background: #EEEEEE;
+        }
+      }
+    }
+  }
+}

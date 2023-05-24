@@ -20,6 +20,10 @@ export default hopeTheme({
   repo: "wax-office-of-inspector-general/wax-developer",
   repoDisplay: false,
 
+  pageInfo: false,
+
+  darkmode: 'disable',
+
   navbarLayout: {
     start: ["Brand"],
     center: ["Links"],
@@ -27,8 +31,6 @@ export default hopeTheme({
   },
 
   docsDir: "./src",
-
-  sidebar: "heading",
 
   locales: {
     "/": {

@@ -1,6 +1,9 @@
 ---
 title: Page Config
 order: 1
+author: false
+breadcrumb: true
+toc: true
 ---
 
 Content before `more` comment is regarded as page excerpt.
