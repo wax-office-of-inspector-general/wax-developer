@@ -1,30 +1,32 @@
 // place your custom styles here
-html[data-theme=dark] {
-  --navbar-bg-color: #17151F;
-  --sidebar-bg-color: #17151F;
-  --text-color: #E1DFFA;
-  
-  --bg-color: linear-gradient(97.22deg, #182633 0%, #363448 100%) ;
+html[data-theme="dark"] {
+  --navbar-bg-color: #17151f;
+  --sidebar-bg-color: #17151f;
+  --text-color: #e1dffa;
+
+  --bg-color: linear-gradient(97.22deg, #182633 0%, #363448 100%);
 }
 
-html[data-theme=dark] #app {
-  --code-color: #CDAAEE !important;
-  --code-line-color: #CDAAEE !important;
+html[data-theme="dark"] #app {
+  --code-color: #cdaaee !important;
+  --code-line-color: #cdaaee !important;
   --code-bg-color: #363448;
-  --code-border-color: #CDAAEE !important;
-  --code-highlight-line-color: #CDAAEE !important;
+  --code-border-color: #cdaaee !important;
+  --code-highlight-line-color: #cdaaee !important;
 }
 
 body {
-
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   display: block;
   width: 100%;
 
   &:after {
-    content: '';
+    content: "";
     display: block;
     margin-top: 0.75em;
     width: 2em;
@@ -34,7 +36,7 @@ h1, h2, h3, h4 {
 }
 
 .page {
-  transform: none!important;
+  transform: none !important;
 }
 
 /* disable collapsible sidebar */
@@ -59,9 +61,109 @@ h1, h2, h3, h4 {
 }
 
 .page-reading-time-info {
-  display: none!important;
+  display: none !important;
 }
 
 .home-features {
-  
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+
+  // NOTE: Compatible with Android Wechat
+  // inset-inline-start: 0;
+  left: 0;
+
+  // this prevents footer issue on tablet
+  z-index: 1;
+
+  overflow-y: auto;
+
+  width: var(--sidebar-width);
+  margin: 0;
+  padding-inline-start: calc(var(--sidebar-space) - var(--sidebar-width));
+
+  background: var(--sidebar-bg-color);
+  box-shadow: 2px 0 8px var(--card-shadow);
+
+  font-size: 0.94rem;
+
+  transition: background var(--color-transition),
+    box-shadow var(--color-transition), padding var(--transform-transition),
+    transform var(--transform-transition);
+
+  backdrop-filter: saturate(150%) blur(12px);
+  scrollbar-color: var(--theme-color) var(--border-color);
+  scrollbar-width: thin;
+
+  @media print {
+    display: none;
+  }
+
+  a {
+    display: inline-block;
+    color: var(--text-color);
+    font-weight: normal;
+  }
+
+  .icon {
+    margin-inline-end: 0.25em;
+  }
+
+  &.hide-icon .icon {
+    display: none !important;
+  }
+
+  .blogger-info.mobile {
+    display: none;
+    
+    + hr {
+      display: none;
+    }
+  }
+
+  .sidebar-group {
+    .title {
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+
+      color: #E1DFFA;
+    }
+    .sidebar-link {
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      
+      color: #E1DFFA;
+    }
+  }
+}
+
+.sidebar-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+
+  width: 100vw;
+  height: 100vh;
+
+  background: rgb(0 0 0 / 15%);
+
+  &.fade-enter-active,
+  &.fade-leave-active {
+    transition: opacity 0.25s;
+  }
+
+  &.fade-enter-from,
+  &.fade-leave-to {
+    opacity: 0;
+  }
 }

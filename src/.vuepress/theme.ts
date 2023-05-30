@@ -22,7 +22,8 @@ export default hopeTheme({
 
   pageInfo: false,
 
-  darkmode: 'enable',
+  // darkmode: 'enable',
+  darkmode: 'switch',
 
   navbarLayout: {
     start: ["Brand"],
@@ -38,7 +39,7 @@ export default hopeTheme({
       navbar: enNavbar,
 
       sidebar: enSidebar,
-
+      
       footer: "Default footer",
 
       displayFooter: true,
@@ -51,22 +52,22 @@ export default hopeTheme({
     /**
      * Chinese locale config
      */
-    "/es/": {
-      // navbar
-      navbar: zhNavbar,
+    // "/es/": {
+    //   // navbar
+    //   navbar: zhNavbar,
 
-      // sidebar
-      sidebar: zhSidebar,
+    //   // sidebar
+    //   sidebar: zhSidebar,
 
-      footer: "默认页脚",
+    //   footer: "默认页脚",
 
-      displayFooter: true,
+    //   displayFooter: true,
 
-      // page meta
-      metaLocales: {
-        editLink: "在 GitHub 上编辑此页",
-      },
-    },
+    //   // page meta
+    //   metaLocales: {
+    //     editLink: "在 GitHub 上编辑此页",
+    //   },
+    // },
   },
 
   // global breadcrumb control

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 
 import {
-  type SlotsType,
+  // type SlotsType,
   type VNode,
   defineComponent,
   h,
@@ -60,16 +60,5 @@ onMounted(() => {
 
 </script>
 <template>
-  <aside
-    id="sidebar"
-    ref="sidebar"
-    class="sidebar yeeeeah"
-    :class="{ 'hide-icon': themeLocale.sidebarIcon === false }"
-  >
-    <slot name="top"></slot>
-    <slot name="default">
-      <SidebarLinks :config="sidebarItems" />
-    </slot>
-    <slot name="bottom"></slot>
-  </aside>
+
 </template>
