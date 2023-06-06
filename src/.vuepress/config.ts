@@ -14,18 +14,13 @@ export default defineUserConfig({
     "/": {
       lang: "en-US",
       title: "WAX Developer",
-      description: "A docs demo for vuepress-theme-hope",
+      description: "WAX Developer Portal",
     },
     "/es/": {
       lang: "es-ES",
       title: "WAX Developer ES",
-      description: "vuepress-theme-hope",
-    },
-    "/de/": {
-      lang: "de-DE",
-      title: "WAX Developer DE",
-      description: "vuepress-theme-hope",
-    },
+      description: "Portal de desarrolladores de WAX",
+    }
   },
 
   theme,

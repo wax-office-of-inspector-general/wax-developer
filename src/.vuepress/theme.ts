@@ -1,6 +1,6 @@
 import { hopeTheme } from "vuepress-theme-hope";
-import { enNavbar, zhNavbar } from "./navbar/index.js";
-import { enSidebar, zhSidebar } from "./sidebar/index.js";
+import { enNavbar, esNavbar } from "./navbar/index.js";
+import { enSidebar, esSidebar } from "./sidebar/index.js";
 
 export default hopeTheme({
   hostname: "https://vuepress-theme-hope-docs-demo.netlify.app",
@@ -49,22 +49,22 @@ export default hopeTheme({
     },
 
     /**
-     * Chinese locale config
+     * Spanish locale config
      */
     "/es/": {
       // navbar
-      navbar: zhNavbar,
+      navbar: esNavbar,
 
       // sidebar
-      sidebar: zhSidebar,
+      sidebar: esSidebar,
 
-      footer: "默认页脚",
+      footer: "WAX Developer ES",
 
       displayFooter: true,
 
       // page meta
       metaLocales: {
-        editLink: "在 GitHub 上编辑此页",
+        editLink: "Edita esta página en GitHub",
       },
     },
   },

@@ -3,7 +3,7 @@ home: true
 title: WAX Developer
 heroImage: /logo.svg
 heroText: WAX Developer
-tagline: You can place the description of the project here.
+tagline: Work in progress
 features:
   - title: Markdown Enhance
     icon: markdown
@@ -91,14 +91,4 @@ features:
     link: https://theme-hope.vuejs.press/guide/feature/
 ---
 
-<HomeFeatures :features="{key: 'Striiiing'}" />
 
-<HomeFeatures :features="{key: 'Striiiing'}" />
-
-<HomeFeatures :features="{key: 'Striiiing'}" />
-
-This is an example of a project homepage. You can place your main content here.
-
-To use this layout, you need to set `home: true` in the page front matter.
-
-For related descriptions of configuration items, please see [Project HomePage Layout Config](https://theme-hope.vuejs.press/guide/layout/home/).

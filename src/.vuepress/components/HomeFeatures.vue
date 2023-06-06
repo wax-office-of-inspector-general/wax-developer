@@ -25,7 +25,7 @@ console.log(page.value);
     <h3>jojojo</h3>
     <p>This is my custom component</p>
     <ul v-if="props.features">
-      <li>{{ props.features }}</li>
+      <li>{{ props.features.key }}</li>
     </ul>
   </div>
 </template>

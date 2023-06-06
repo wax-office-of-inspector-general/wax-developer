@@ -75,7 +75,7 @@ Sample for Spanish translation:
 ```
 title: Bienvenido
 layout: home
-nav_order: 1
+order: 1
 lang-ref: Welcome
 lang: es
 ```
