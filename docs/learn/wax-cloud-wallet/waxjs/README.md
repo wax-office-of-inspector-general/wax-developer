@@ -3,6 +3,8 @@ title: WaxJS Overview
 lang: en
 ---
 
+# wax.js
+
 **WaxJS** is a Javascript library that connects to WAX Cloud Wallet to sign in users and execute smart contract transactions, without requiring an external wallet (e.g., Scatter). Similar to the standard OAuth 2.0 flow, users simply allow your dApp to access their WAX Blockchain Account name. Once your dApp's been authorized, users can approve your smart contract transactions from their WAX Cloud Wallet Account.
 
 To get started, you simply need to include our [WaxJS](https://github.com/worldwide-asset-exchange/waxjs) library and make a few simple calls from your client. If you'd like to jump right to the code and run our live WaxJS example, refer to [WaxJS Demo](waxjs_demo.md).

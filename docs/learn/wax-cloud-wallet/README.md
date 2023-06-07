@@ -3,6 +3,8 @@ title: WAX Cloud Wallet
 lang: en-US
 ---
 
+# WAX Cloud Wallet
+
 With just a few lines of code, WAX Cloud Wallet makes it as simple for customers to use your dApp as any mainstream app.
 
 1. Free SSO in 48 languages, using our free single sign on software.

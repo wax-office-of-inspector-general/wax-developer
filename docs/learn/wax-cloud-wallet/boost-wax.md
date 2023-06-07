@@ -3,6 +3,8 @@ title: boost.wax
 lang: en
 ---
 
+# boost.wax
+
 This contract registers other contracts that wish to have WAX apply extended management over CPU and Net for their WAX Cloud Wallet users.
 
 Deployed to: [boost.wax](https://wax.bloks.io/account/boost.wax)

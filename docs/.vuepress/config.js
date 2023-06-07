@@ -30,6 +30,10 @@ module.exports = {
     '/de/': {
       lang: 'de-DE',
       title: 'Deutsch'
+    },
+    '/es/': {
+      lang: 'es-ES',
+      title: 'Espanol'
     }
   },
 
@@ -40,12 +44,15 @@ module.exports = {
    */
   themeConfig: {
     repo: "wax-office-of-inspector-general/wax-developer",
+    repoLabel: 'Contribute',
     repoDisplay: false,
     editLinks: true,
     docsDir: 'docs',
     editLinkText: '',
     lastUpdated: false,
     logo: "/logo.png",
+
+    searchPlaceholder: 'Search...',
     
     // display all links in sidebar
     displayAllHeaders: true,
@@ -64,81 +71,115 @@ module.exports = {
         link: '/operate/'
       }
     ],
-    /*
-    sidebar: {
-      '/': [
-        {
-          title: 'Home',
-          collapsable: true,
-          children: [
-            '/learn/',
-            '/build/',
-            '/operate/',
-          ]
-        }
-      ],
-      '/learn/': [
-        {
-          title: 'Learn',
-          collapsable: true,
-          children: [
-            '',
-          ]
-        }
-      ],
-      '/build/': [
-        {
-          title: 'Build',
-          collapsable: true,
-          children: [
-            '',
-          ]
-        }
-      ],
-      '/operate/': [
-        {
-          title: 'Operate',
-          collapsable: true,
-          children: [
-            '',
-          ]
-        }
-      ],
-    }
-    */
+
     sidebar: [
       {
-        title: 'Learn',   // required
-        path: '/learn/',      // optional, link of the title, which should be an absolute path and must exist
-        collapsable: false, // optional, defaults to true
-        sidebarDepth: 3,    // optional, defaults to 1
+        title: 'Learn',
+        path: '/learn/',
+        collapsable: true,
+        sidebarDepth: 2,
+        initialOpenGroupIndex: 0,
         children: [
-          '/learn/'
+          {
+            title: 'About WAX',
+            path: '/learn/about-wax/',
+            collapsable: true,
+            sidebarDepth: 2,
+            children: [
+              {
+                title: 'What is WAX?',
+                path: '/learn/about-wax/what-is-wax',
+              },
+              {
+                title: 'Why WAX?',
+                path: '/learn/about-wax/why-wax',
+              },
+              {
+                title: 'What is WAXP token?',
+                path: '/learn/about-wax/what-is-waxp-token',
+              },
+              {
+                title: 'Consensus on WAX',
+                path: '/learn/about-wax/wax-consensus',
+              },
+              {
+                title: 'Wax Interoparability',
+                path: '/learn/about-wax/wax-interoparability',
+              },
+              {
+                title: 'Wax Governance',
+                path: '/learn/about-wax/wax-governance',
+              },
+            ]
+          },
+          {
+            title: 'WAX Cloud Wallet',
+            path: '/learn/wax-cloud-wallet/',
+            collapsable: true,
+            initialOpenGroupIndex: -1,
+            sidebarDepth: 1,
+            children: [
+              {
+                title: 'wax.js',
+                path: '/learn/wax-cloud-wallet/waxjs/',
+                collapsable: true,
+                initialOpenGroupIndex: -1,
+                sidebarDepth: 1,
+                children: [
+                  '/learn/wax-cloud-wallet/waxjs/waxjs_qstart',
+                  '/learn/wax-cloud-wallet/waxjs/waxjs_install',
+                  '/learn/wax-cloud-wallet/waxjs/waxjs_use',
+                  '/learn/wax-cloud-wallet/waxjs/waxjs_demo',
+                ]
+              },
+              {
+                title: 'boost.wax',
+                path: '/learn/wax-cloud-wallet/boost-wax',
+                collapsable: true,
+                initialOpenGroupIndex: -1,
+                sidebarDepth: 1,
+              }
+            ]
+          },
+          /*
+          {
+            title: 'API Reference',
+            path: '/learn/api-reference/',
+            collapsable: false,
+            sidebarDepth: 2,
+          },
+          {
+            title: 'Release Notes',
+            path: '/learn/release-notes/',
+            collapsable: false,
+            sidebarDepth: 2,
+          },
+          */
         ]
       },
       {
-        title: 'Build',   // required
-        path: '/build/',      // optional, link of the title, which should be an absolute path and must exist
-        collapsable: false, // optional, defaults to true
-        sidebarDepth: 2,    // optional, defaults to 1
+        title: 'Build',
+        path: '/build/',
+        collapsable: false,
+        sidebarDepth: 2,
         children: [
           '/build/'
         ]
       },
       {
-        title: 'Operate',   // required
-        path: '/operate/',      // optional, link of the title, which should be an absolute path and must exist
-        collapsable: false, // optional, defaults to true
-        sidebarDepth: 1,    // optional, defaults to 1
+        title: 'Operate',
+        path: '/operate/',
+        collapsable: false,
+        sidebarDepth: 2,
         children: [
           '/operate/'
         ]
       },
       {
-        title: 'Create',   // required
-        path: '/create/',      // optional, link of the title, which should be an absolute path and must exist
-        collapsable: false, // optional, defaults to true
-        sidebarDepth: 1,    // optional, defaults to 1
+        title: 'Create',
+        path: '/create/',
+        collapsable: false,
+        sidebarDepth: 1,
         children: [
           '/create/'
         ]
@@ -152,6 +193,7 @@ module.exports = {
   plugins: [
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
+    'vuepress-plugin-child-toc',
     ['@vuepress/plugin-search', {
       searchMaxSuggestions: 10
     }],

@@ -91,9 +91,10 @@ $navbar-vertical-padding = 0.7rem
 $navbar-horizontal-padding = 1.5rem
 
 .navbar
-  padding-left $navbar-vertical-padding $navbar-horizontal-padding
+  padding-left $navbar-horizontal-padding
   line-height $navbarHeight - 1.4rem
   top 40px
+
   a, span, img
     display inline-block
   .logo
@@ -110,23 +111,42 @@ $navbar-horizontal-padding = 1.5rem
   .links
     padding-left 1.5rem
     box-sizing border-box
-    background-color white
     white-space nowrap
     font-size 0.9rem
     position absolute
     right $navbar-horizontal-padding
     top $navbar-vertical-padding
     display flex
+    .nav-links
+      padding-right 1.5em
     .search-box
       flex: 0 0 auto
       vertical-align top
+      input
+        background-color #f8f8f8
+        background-position: 1em center;
+        height: 2.2rem
+        padding-left 2.5em
+        border: 1px solid #E1DFFA;
+        border-radius 12px
+        filter drop-shadow(0px 8px 40px rgba(123, 97, 255, 0.24))
+      .suggestions
+        right 0
 
 @media (max-width: $MQMobile)
   .navbar
-    padding-left 4rem
+    padding-left 0
+    padding-top 0!important
     top 0
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    height: 70px
     .logo
       display block
+      max-width: 120px
+      margin 0
     .can-hide
       display none
     .links
