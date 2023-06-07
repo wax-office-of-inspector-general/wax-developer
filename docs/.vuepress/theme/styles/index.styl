@@ -1,0 +1,53 @@
+/**
+ * Custom Styles here.
+ *
+ * ref：https://v1.vuepress.vuejs.org/config/#index-styl
+ */
+@require 'palette'
+@require 'fonts'
+
+ html, body
+  padding 0
+  margin 0
+  background linear-gradient(180.84deg, rgba(136, 136, 136, 0.04) -11.6%, rgba(123, 97, 255, 0.03) 113.41%);
+
+body
+  font-size 16px
+  color $textColor
+
+.home .hero img
+  max-width 450px!important
+
+.theme-default-content
+  max-width 800px!important
+
+.navbar
+  position: relative
+  background transparent
+  border none
+  z-index 40
+  padding-top 40px !important
+
+.sidebar
+  top 0
+  border none
+  z-index 50
+
+.content-wrapper
+  padding-left $sidebarWidth
+
+.page
+  padding-left 0
+
+.sidebar-mask
+  background rgba(0,0,0,0.3)
+
+@media (max-width: $MQMobile)
+  .content-wrapper
+    padding-left 0
+  .sidebar
+    padding-top 0!important
+  .sidebar-logo
+    display none !important
+  .page
+    padding-left 0

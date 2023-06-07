@@ -1,5 +1,5 @@
 ---
-title: Welcome to WAX Developer Portal
+title: Welcome to WAX
 order: 1
 ---
 
@@ -42,4 +42,3 @@ order: 1
     <ContentLinkItem href="#" text="Set Up a Local dApp Environment" />
   </template>
 </ContentLinks>
-
