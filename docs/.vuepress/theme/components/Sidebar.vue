@@ -85,7 +85,7 @@ export default {
           ariaLabel: this.$themeLocaleConfig.ariaLabel || 'Select language',
           items: Object.keys(locales).map(path => {
             const locale = locales[path]
-            const text = themeLocales[path] && themeLocales[path].label || locale.lang
+            const text = themeLocales[path] && themeLocales[path].label || locale.label
             let link
             // Stay on the current page
             if (locale.lang === this.$lang) {

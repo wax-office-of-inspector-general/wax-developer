@@ -26,14 +26,18 @@ module.exports = {
     /* This is where you place your general locale config */
     '/': {
       lang: 'en-US',
+      ariaLabel: 'English',
+      label: 'English',
     },
     '/de/': {
       lang: 'de-DE',
-      title: 'Deutsch'
+      ariaLabel: 'Deutsch',
+      label: 'Deutsch',
     },
     '/es/': {
       lang: 'es-ES',
-      title: 'Espanol'
+      ariaLabel: 'Spanish',
+      label: 'Spanish',
     }
   },
 
