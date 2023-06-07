@@ -4,6 +4,8 @@ order: 87
 lang: en
 ---
  
+# How-To: SimpleAssets
+
 You can easily create non-fungible tokens (NFTs) on the WAX Blockchain using the <a href="https://github.com/CryptoLions/SimpleAssets" target="_blank">Simple Assets</a> smart contract.
 
 <a href="https://www.simpleassets.io/" target="_blank">Simple Assets</a> is a standard developed by <a href="https://cryptolions.io/" target="_blank">CryptoLions</a>, an EOS and WAX block producer. Using the Simple Assets smart contract, you can quickly create in-game items, cards, stickers, and other unique collectibles. 

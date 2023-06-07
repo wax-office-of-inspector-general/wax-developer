@@ -3,6 +3,8 @@ title: WAX Random Number Generator
 order: 80
 ---
 
+# WAX Random Number Generator
+
 The WAX Random Number Generator (WAX RNG) is a native blockchain service that provides provably fair random numbers for single-users. Based on the <a href="https://github.com/gluk256/misc/blob/master/rng4ethereum/signidice.md" target="_blank">Signidice algorithm</a>, WAX RNG offers excellent randomization, a cleaner workflow, and lightning-fast RSA verification. 
 
 ## What's Included

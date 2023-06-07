@@ -160,10 +160,68 @@ module.exports = {
       {
         title: 'Build',
         path: '/build/',
-        collapsable: false,
+        collapsable: true,
         sidebarDepth: 2,
         children: [
-          '/build/'
+          {
+            title: 'dApp Development',
+            path: '/build/dapp-development/',
+            collapsable: true,
+            children: [
+              {
+                title: 'Setup local Environment',
+                path: '/build/dapp-development/setup-local-dapp-environment/',
+              },
+              {
+                title: 'Docker Setup',
+                path: '/build/dapp-development/docker-setup/',
+              },
+              {
+                title: 'WAX Blockchain Setup',
+                path: '/build/dapp-development/wax-blockchain-setup/',
+              },
+              {
+                title: 'Smart Contract Development',
+                path: '/build/dapp-development/smart-contract-quickstart/',
+              },
+              {
+                title: 'WAX CDT',
+                path: '/build/dapp-development/wax-cdt/',
+              },
+              {
+                title: 'Deploy on WAX',
+                path: '/build/dapp-development/deploy-dapp-on-wax/',
+              },
+            ]
+          },
+          {
+            title: 'Tutorials',
+            path: '/build/tutorials/',
+            collapsable: true,
+            children: [
+              {
+                title: 'AtomicAssets Guide',
+                path: '/build/tutorials/howto_atomicassets/',
+              },
+              {
+                title: 'SimpleAssets Guide',
+                path: '/build/tutorials/howto_simpleassets/',
+              },
+              {
+                title: 'WAX RNG',
+                path: '/build/tutorials/wax-rng/',
+              },
+              {
+                title: 'Create RNG Contract',
+                path: '/build/tutorials/create-wax-rng-smart-contract/',
+              },
+            ]
+          },
+          {
+            title: 'Tools',
+            path: '/build/tools/',
+            collapsable: true,
+          },
         ]
       },
       {
