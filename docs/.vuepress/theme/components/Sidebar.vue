@@ -40,10 +40,14 @@
           v-if="item.type === 'links'"
           :item="item"
         />
-        <NavLink
+        <!-- <NavLink
           v-else
           :item="item"
-        />
+        /> -->
+        <label class="switch">
+          <input type="checkbox" v-model="isChecked">
+          <span class="slider"></span>
+        </label>
       </div>
     </div>
 
@@ -110,6 +114,56 @@ export default {
 </script>
 
 <style lang="stylus">
+.switch
+  position relative
+  display inline-block
+  width: 44px
+  height: 24px
+
+.switch input
+  opacity 0
+  width 0
+  height 0
+
+.slider
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  transition: 0.4s;
+  border: 1px solid #B3AEDF;
+  border-radius: 18px;
+
+.slider:before
+  position absolute
+  content ""
+  height 18px
+  width 18px
+  left 4px
+  bottom 2px
+  background-color #8549B6
+  transition .4s
+  border-radius: 50%;
+
+input:checked + .slider
+  background-color #2196F3
+
+input:focus + .slider
+  box-shadow 0 0 1px #2196F3
+
+input:checked + .slider:before
+  transform translateX(16px)
+
+.nav-item 
+  width: 100%;
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1.5rem !important;
+
 .sidebar-logo
   padding 0.5rem 0 0.5rem 1.5rem
 
@@ -132,6 +186,7 @@ export default {
   a
     display inline-block
   .nav-links
+    background: #F8F8FF;
     border-top  1px solid $borderColor
     border-bottom 1px solid $borderColor
     padding 0.5rem 0 0.75rem 0
