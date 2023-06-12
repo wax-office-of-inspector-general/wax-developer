@@ -56,29 +56,29 @@ module.exports = {
     lastUpdated: false,
     logo: "/logo.png",
 
-    searchPlaceholder: 'Search...',
+    searchPlaceholder: 'Search WAX Developer...',
     
     // display all links in sidebar
     displayAllHeaders: true,
     
-    nav: [
-      {
-        text: 'Learn',
-        link: '/learn/',
-      },
-      {
-        text: 'Build',
-        link: '/build/'
-      },
-      {
-        text: 'Operate',
-        link: '/operate/'
-      }
-    ],
+    // nav: [
+    //   {
+    //     text: 'Learn',
+    //     link: '/learn/',
+    //   },
+    //   {
+    //     text: 'Build',
+    //     link: '/build/'
+    //   },
+    //   {
+    //     text: 'Operate',
+    //     link: '/operate/'
+    //   }
+    // ],
 
     sidebar: [
       {
-        title: 'Learn',
+        title: 'WAX Infrastructure Guides',
         path: '/learn/',
         collapsable: true,
         sidebarDepth: 2,
@@ -257,7 +257,8 @@ module.exports = {
     '@vuepress/plugin-medium-zoom',
     'vuepress-plugin-child-toc',
     ['@vuepress/plugin-search', {
-      searchMaxSuggestions: 10
+      searchMaxSuggestions: 10,
+      searchIcon: false,
     }],
   ]
 }
