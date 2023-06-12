@@ -25,11 +25,6 @@
         :options="algolia"
       />
       <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false" />
-
-      <div class="email-input">
-        <input placeholder="Enter your email to get updates"  />
-        <button>subcribe</button>
-      </div>
     </div>
   </header>
 </template>
@@ -112,7 +107,6 @@ $navbar-horizontal-padding = 1.5rem
     color $textColor
     position relative
   .links
-    padding-left 1.5rem
     box-sizing border-box
     white-space nowrap
     font-size 0.9rem
@@ -120,7 +114,7 @@ $navbar-horizontal-padding = 1.5rem
     right $navbar-horizontal-padding
     top $navbar-vertical-padding
     display flex
-    justify-content: space-between
+    justify-content: end
     width: 100%
     .nav-links
       padding-right 1.5em
@@ -140,44 +134,6 @@ $navbar-horizontal-padding = 1.5rem
         height: 48px;
       .suggestions
         right 0
-    .email-input 
-      display: flex;
-      flex-direction: row;
-      gap: 12px;
-      input
-        background-color #f8f8f8
-        background-position: 1em center;
-        height: 2.2rem
-        padding: 0px 16px;
-        border: 1px solid #E1DFFA;
-        border-radius 12px
-        filter drop-shadow(0px 8px 40px rgba(123, 97, 255, 0.24))
-        background: none;
-        width: 320px
-        height: 48px
-      button
-        display: flex
-        flex-direction: row
-        justify-content: center
-        align-items: center
-        padding: 16px
-        width: 98px
-        height: 48px        
-        background: #8549B6
-        border-radius: 12px
-        border: none
-        font-family: 'Titillium Web'
-        font-style: normal
-        font-weight: 700
-        font-size: 14px
-        line-height: 16px
-        display: flex
-        align-items: center
-        text-align: center
-        letter-spacing: 0.04em
-        text-transform: uppercase
-        color: #FFFFFF
-
 
 @media (max-width: $MQMobile)
   .navbar

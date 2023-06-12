@@ -69,6 +69,12 @@ export default {
 
   props: ['items'],
 
+  data () {
+    return {
+      isChecked: false
+    }
+  },
+
   computed: {
     navLinks () {
       return (this.languageNav || []).map(link => {
