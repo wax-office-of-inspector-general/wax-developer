@@ -1,6 +1,6 @@
 <template>
   <header class="navbar">
-    <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')" />
+    <SidebarButton @sidebar-toggle="$emit('sidebar-toggle')" />
 
     <RouterLink
       :to="$localePath"
@@ -91,6 +91,7 @@ $navbar-horizontal-padding = 1.5rem
 
 .navbar
   padding-left $navbar-horizontal-padding
+  padding-right $navbar-horizontal-padding
   line-height $navbarHeight - 1.4rem
 
   a, span, img
@@ -122,29 +123,37 @@ $navbar-horizontal-padding = 1.5rem
       flex: 0 0 auto
       vertical-align top
       input
-        background-color #f8f8f8
+        background: #FFF
         background-position: 1em center
         height: 2.2rem
         padding: 0px 16px
         border: 1px solid #E1DFFA
         border-radius 12px
         filter drop-shadow(0px 8px 40px rgba(123, 97, 255, 0.24))
-        background: none;
-        width: 320px;
-        height: 48px;
+        background: #FFF
+        height: 48px
+        &.focused
+          width 331px
+          border-bottom-right-radius 0
+          border-bottom-left-radius 0
       .suggestions
         right 0
+        border-color #E1DFFA
+        border-top-right-radius 0
+        border-top-left-radius 0
+        width 350px
+
 
 @media (max-width: $MQMobile)
   .navbar
     padding-left 0
     padding-top 0!important
     top 0
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    height: 70px
+    display flex
+    justify-content space-around
+    align-items center
+    flex-direction row
+    height 70px
     .logo
       display block
       max-width: 120px
@@ -153,9 +162,24 @@ $navbar-horizontal-padding = 1.5rem
       display none
     .links
       padding-left 1.5rem
+      max-width 100px
     .site-name
       width calc(100vw - 9.4rem)
       overflow hidden
       white-space nowrap
       text-overflow ellipsis
+    .search-box
+      input
+        background: #FFF
+        left: auto
+        min-width 60px
+        &.focused
+          width 231px!important
+          border-bottom-right-radius 0
+          border-bottom-left-radius 0
+      .suggestions
+        border-color #E1DFFA
+        border-top-right-radius 0
+        border-top-left-radius 0
+        width 250px!important
 </style>

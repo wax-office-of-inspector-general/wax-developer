@@ -9,7 +9,7 @@ order: 1
   </template>
   <template v-slot:second>
     <div>
-      <h1>Welcome to WAX</h1>
+      <h1>WAX Developer Portal</h1>
       <p>The Worldwide Asset eXchange™ (WAX) is a purpose-built blockchain and protocol token designed to make e-commerce transactions faster, easier, and safer for everyone. WAX makes building and deploying high-performance, secure dApps easy. Here you’ll find Quickstarts, sample code, API reference guides, and all of the developer tools you need to set up a local WAX environment and write your smart contracts.</p>
     </div>
   </template>

@@ -115,7 +115,7 @@ export default {
 
 .sidebar 
   .nav-links
-    width 100%
+    width calc(100% - 3rem)
     margin-top auto
     background: #F8F8FF;
     border-top  1px solid $borderColor
@@ -132,6 +132,7 @@ export default {
         padding 0.3em 0
         position relative
         .nav-dropdown
+          background #fff
           border 1px solid $borderColor !important
           padding 0.5em
           min-width 200px
@@ -146,6 +147,7 @@ export default {
   flex-direction column
   justify-content start
   padding-top 0px
+  width 20rem !important
   .sidebar-logo
     padding 1rem 1.5rem 1rem 1.5rem
     > a 
@@ -158,6 +160,18 @@ export default {
         margin-bottom 0
       .site-name
         margin-left 0.5em
+  > .sidebar-links > li > section > a
+    font-size 1.25em
+    > span:first-child
+      &:after
+        content ''
+        display block
+        margin-top 0.25em
+        margin-bottom 0.25em
+        width 1.5em
+        border-bottom 2.5px solid $accentColor
+    &.active
+      font-weight bold
   .sidebar-links
     > li .sidebar-group
       > .sidebar-heading.open
@@ -174,7 +188,7 @@ export default {
         display: inline-block
         padding: 3px
       .right
-        transform: rotate(-45deg) translateX(-50%)
+        transform: rotate(-45deg) translateY(-50%)
       .down
         transform: rotate(45deg) translateX(-50%)
     .sidebar-sub-headers
@@ -192,9 +206,11 @@ export default {
   & > .sidebar-links
     padding 1.5rem 0
     & > li > a.sidebar-link
-      font-size 1.1em
+      font-size 1em
       line-height 1.7
       font-weight bold
+      &.active
+        font-weight bold
     & > li:not(:first-child)
       margin-top .75rem
 

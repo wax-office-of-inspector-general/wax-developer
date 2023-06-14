@@ -57,7 +57,7 @@ module.exports = {
     lastUpdated: false,
     logo: "/logo.png",
 
-    searchPlaceholder: 'Search WAX Developer...',
+    searchPlaceholder: 'Search…',
     
     // display all links in sidebar
     displayAllHeaders: true,

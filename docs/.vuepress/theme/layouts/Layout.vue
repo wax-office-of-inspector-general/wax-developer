@@ -1,17 +1,18 @@
 <template>
   <div
     class="theme-container"
+    :class="pageClasses"
     @touchstart="onTouchStart"
     @touchend="onTouchEnd"
   >
     <div
       class="sidebar-mask"
-      @click="toggleSidebar(false)"
-    />
+      @click="sidebarToggle(false)"
+    ></div>
 
     <Sidebar
       :items="sidebarItems"
-      @toggle-sidebar="toggleSidebar"
+      @sidebar-toggle="sidebarToggle"
     >
       <template #top>
         <slot name="sidebar-top" />
@@ -23,7 +24,7 @@
 
     <div class="content-wrapper">
       <Navbar
-        @toggle-sidebar="toggleSidebar"
+        @sidebar-toggle="sidebarToggle"
       />
 
       <PageWithHeader v-if="$page.frontmatter.pageWithHeader" />
@@ -75,6 +76,15 @@ export default {
         this.$localePath
       )
     },
+    pageClasses () {
+      const userPageClass = this.$page.frontmatter.pageClass
+      return [
+        {
+          'sidebar-open': this.isSidebarOpen,
+        },
+        userPageClass
+      ]
+    }
   },
 
   mounted () {
@@ -84,9 +94,10 @@ export default {
   },
 
   methods: {
-    toggleSidebar (to) {
+    sidebarToggle (to) {
+      console.log(to);
       this.isSidebarOpen = typeof to === 'boolean' ? to : !this.isSidebarOpen
-      this.$emit('toggle-sidebar', this.isSidebarOpen)
+      this.$emit('sidebar-toggle', this.isSidebarOpen)
     },
 
     // side swipe
@@ -102,9 +113,9 @@ export default {
       const dy = e.changedTouches[0].clientY - this.touchStart.y
       if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) {
         if (dx > 0 && this.touchStart.x <= 80) {
-          this.toggleSidebar(true)
+          this.sidebarToggle(true)
         } else {
-          this.toggleSidebar(false)
+          this.sidebarToggle(false)
         }
       }
     }
