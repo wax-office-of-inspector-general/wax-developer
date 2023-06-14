@@ -40,14 +40,6 @@
           v-if="item.type === 'links'"
           :item="item"
         />
-        <!-- <NavLink
-          v-else
-          :item="item"
-        /> -->
-        <label class="switch">
-          <input type="checkbox" v-model="isChecked">
-          <span class="slider"></span>
-        </label>
       </div>
     </div>
 
@@ -120,67 +112,73 @@ export default {
 </script>
 
 <style lang="stylus">
-.switch
-  position relative
-  display inline-block
-  width: 44px
-  height: 24px
 
-.switch input
-  opacity 0
-  width 0
-  height 0
-
-.slider
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: transparent;
-  transition: 0.4s;
-  border: 1px solid #B3AEDF;
-  border-radius: 18px;
-
-.slider:before
-  position absolute
-  content ""
-  height 18px
-  width 18px
-  left 4px
-  bottom 2px
-  background-color #8549B6
-  transition .4s
-  border-radius: 50%;
-
-input:checked + .slider
-  background-color #2196F3
-
-input:focus + .slider
-  box-shadow 0 0 1px #2196F3
-
-input:checked + .slider:before
-  transform translateX(16px)
-
-.nav-item 
-  width: 100%;
-  display: flex !important;
-  justify-content: space-between;
-  align-items: center;
-  padding-right: 1.5rem !important;
-
-.sidebar-logo
-  padding 0.5rem 0 0.5rem 1.5rem
+.sidebar 
+  .nav-links
+    width 100%
+    margin-top auto
+    background: #F8F8FF;
+    border-top  1px solid $borderColor
+    border-bottom 1px solid $borderColor
+    padding 1rem 1.5rem
+    a
+      font-weight 600
+    .nav-item 
+      width calc(100% - 3em)
+      display flex !important
+      align-items center
+      .dropdown-wrapper
+        height auto
+        padding 0.3em 0
+        position relative
+        .nav-dropdown
+          border 1px solid $borderColor !important
+          padding 0.5em
+          min-width 200px
+          border #eaecef
+          top auto
+          bottom 0
+          right auto
+          left 0
 
 .sidebar
-  padding-top 40px
-  .sidebar-nav
-    width 100%
-    display flex
-  .logo
-    max-width 130px
-    margin-bottom 1em
+  display flex
+  flex-direction column
+  justify-content start
+  padding-top 0px
+  .sidebar-logo
+    padding 1rem 1.5rem 1rem 1.5rem
+    > a 
+      display flex
+      flex-direction coluns
+      justify-content start
+      align-items end
+      .logo
+        max-width 130px
+        margin-bottom 0
+      .site-name
+        margin-left 0.5em
+  .sidebar-links
+    > li .sidebar-group
+      > .sidebar-heading.open
+        color $accentColor
+        font-weight bold
+    .sidebar-heading 
+      display flex !important
+      align-items center
+      justify-content space-between
+      .arrow
+        top: 0px !important
+        border: solid #363448
+        border-width: 0 1.5px 1.5px 0
+        display: inline-block
+        padding: 3px
+      .right
+        transform: rotate(-45deg) translateX(-50%)
+      .down
+        transform: rotate(45deg) translateX(-50%)
+    .sidebar-sub-headers
+      display none
   .site-name
     display block
     font-size 14px
@@ -191,18 +189,6 @@ input:checked + .slider:before
     list-style-type none
   a
     display inline-block
-  .nav-links
-    background: #F8F8FF;
-    border-top  1px solid $borderColor
-    border-bottom 1px solid $borderColor
-    padding 0.5rem 0 0.75rem 0
-    a
-      font-weight 600
-    .nav-item, .repo-link
-      display block
-      line-height 1.25rem
-      font-size 1.1em
-      padding 0.5rem 0 0.5rem 1.5rem
   & > .sidebar-links
     padding 1.5rem 0
     & > li > a.sidebar-link

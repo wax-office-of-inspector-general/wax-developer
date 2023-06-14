@@ -9,7 +9,7 @@
  html, body
   padding 0
   margin 0
-  background linear-gradient(180.84deg, rgba(136, 136, 136, 0.04) -11.6%, rgba(123, 97, 255, 0.03) 113.41%);
+  background linear-gradient(180.84deg, rgba(136, 136, 136, 0.04) -11.6%, rgba(123, 97, 255, 0.03) 113.41%)
 
 body
   font-size 16px
@@ -36,44 +36,15 @@ body
 .content-wrapper
   padding-left $sidebarWidth
 
-.sidebar-group
-  span
-    font-family: 'Titillium Web';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    color: #363448;
-.sidebar-heading 
-  margin: 12px 0px !important;
-  display: flex !important;
-  align-items: center;
-  .arrow
-    top: 0px !important;
-    border: solid #363448;
-    border-width: 0 2px 2px 0;
-    display: inline-block;
-    padding: 3px;
-  .right
-    transform: rotate(-45deg);
-  .down
-    transform: rotate(45deg);
-.sidebar-link
-  margin: 8px 0px;
-  font-family: 'Titillium Web';
-  font-style: normal;
-  font-weight: 400 !important;
-  font-size: 16px !important;
-  line-height: 24px !important;
-  color: #363448 !important;
 .page
   padding-left 0
-  background: linear-gradient(180.84deg, rgba(136, 136, 136, 0.04) -11.6%, rgba(123, 97, 255, 0.08) 113.41%);
+  background linear-gradient(180.84deg, rgba(136, 136, 136, 0.04) -11.6%, rgba(123, 97, 255, 0.08) 113.41%)
 
 .sidebar-mask
   background rgba(0,0,0,0.3)
+
+a.outbound
+  color $accentColor
 
 @media (max-width: $MQMobile)
   .content-wrapper

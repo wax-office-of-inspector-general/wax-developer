@@ -32,12 +32,12 @@ module.exports = {
     '/de/': {
       lang: 'de-DE',
       ariaLabel: 'Deutsch',
-      label: 'Deutsch',
+      label: 'Deutsch (WIP)',
     },
     '/es/': {
       lang: 'es-ES',
       ariaLabel: 'Spanish',
-      label: 'Spanish',
+      label: 'Spanish (WIP)',
     }
   },
 
@@ -48,11 +48,12 @@ module.exports = {
    */
   themeConfig: {
     repo: "wax-office-of-inspector-general/wax-developer",
-    repoLabel: 'Contribute',
-    repoDisplay: false,
-    editLinks: true,
     docsDir: 'docs',
-    editLinkText: '',
+    docsBranch: 'dev',
+    repoLabel: 'Contribute',
+    editLinks: true,
+    editLinkText: 'Help us improve this page!',
+    repoDisplay: false,
     lastUpdated: false,
     logo: "/logo.png",
 
@@ -78,7 +79,7 @@ module.exports = {
 
     sidebar: [
       {
-        title: 'WAX Infrastructure Guides',
+        title: 'Learn',
         path: '/learn/',
         collapsable: true,
         sidebarDepth: 2,
