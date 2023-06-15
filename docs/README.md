@@ -44,3 +44,5 @@ order: 1
   </template>
 </ContentLinks>
 
+<ChildTableOfContents :max="2" title="More inside this section" />
+
