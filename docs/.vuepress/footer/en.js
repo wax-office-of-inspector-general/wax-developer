@@ -39,7 +39,11 @@ module.exports = {
         {
           text: 'WAX DeDFi',
           href: 'https://www.waxdefi.io/'
-        }
+        },
+        {
+          text: 'MyCloudWallet',
+          href: 'https://www.mycloudwallet.com/'
+        },
       ]
     },
     {

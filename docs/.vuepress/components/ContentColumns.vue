@@ -34,7 +34,7 @@ export default {
   grid-gap: 1.5em 3em
   grid-template-columns: 1fr 1fr
 
-  @media screen and (max-width: $MQMobile)
+  @media screen and (max-width: $MQNarrow)
     grid-gap: 1.5em 2em
     grid-template-columns: repeat(auto-fit, minmax(100%, 1fr))
 

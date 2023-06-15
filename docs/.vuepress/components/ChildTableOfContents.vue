@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="toc-wrapper">
         <h2>{{ title }}</h2>
         <div class="toc-items">
             <div
@@ -95,19 +95,24 @@ export default {
 </script>
 
 <style lang="stylus">
-.toc-items
-    display grid
-    grid-gap 1em
-    grid-template-columns repeat(6, calc(25% - 1em))
-    grid-template-rows 25% 25% 25%
-    .toc-item
-        .toc-item-image
-            border-radius 12px
-        > a 
-            text-decoration none
-            font-size 1em
-        width 100%
-        .toc-item-title
-            margin 0
+.toc-wrapper
+    margin-top: 2em
+    
+    .toc-items
+        display grid
+        grid-gap 1em
+        grid-template-columns repeat(6, calc(25% - 1em))
+        grid-template-rows 25% 25% 25%
         
+        .toc-item
+            width 100%
+            
+            .toc-item-image
+                border-radius 12px
+            > a 
+                text-decoration none
+                font-size 1em
+        
+            .toc-item-title
+                margin 0
 </style>

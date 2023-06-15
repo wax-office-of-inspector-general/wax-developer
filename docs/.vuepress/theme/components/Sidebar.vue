@@ -121,16 +121,20 @@ export default {
     border-top  1px solid $borderColor
     border-bottom 1px solid $borderColor
     padding 1rem 1.5rem
+    
     a
       font-weight 600
+    
     .nav-item 
       width calc(100% - 3em)
       display flex !important
       align-items center
+    
       .dropdown-wrapper
         height auto
         padding 0.3em 0
         position relative
+    
         .nav-dropdown
           background #fff
           border 1px solid $borderColor !important
@@ -149,20 +153,26 @@ export default {
   padding-top 0px
   width 20rem !important
   border-right 1px solid $borderColor
+
   .sidebar-logo
     padding 1rem 1.5rem 1rem 1.5rem
+    
     > a 
       display flex
       flex-direction coluns
       justify-content start
       align-items end
+    
       .logo
         max-width 130px
         margin-bottom 0
+    
       .site-name
         margin-left 0.5em
+  
   > .sidebar-links > li > section > a
-    font-size 1.25em
+    font-size 1.35em
+  
     > span:first-child
       &:after
         content ''
@@ -173,45 +183,58 @@ export default {
         border-bottom 2.5px solid $accentColor
     &.active
       font-weight bold
+  
   .sidebar-links
+
     > li .sidebar-group
       > .sidebar-heading.open
         color $accentColor
         font-weight bold
+
     .sidebar-heading 
       display flex !important
       align-items center
       justify-content space-between
+
       .arrow
-        top: 0px !important
-        border: solid #363448
-        border-width: 0 1.5px 1.5px 0
-        display: inline-block
-        padding: 3px
-      .right
-        transform: rotate(-45deg) translateY(-50%)
-      .down
-        transform: rotate(45deg) translateX(-50%)
+        top 0px !important
+        border solid lighten($textColor, 30)
+        border-width 0 1.5px 1.5px 0
+        display inline-block
+        padding 2.5px
+        margin-left 0.3em
+        &.right
+          transform rotate(-45deg)
+        &.down
+          transform rotate(45deg)
+        
     .sidebar-sub-headers
       display none
+
   .site-name
     display block
     font-size 14px
     font-weight 700
+
   ul
     padding 0
     margin 0
     list-style-type none
+
   a
     display inline-block
+
   & > .sidebar-links
     padding 1.5rem 0
+    
     & > li > a.sidebar-link
       font-size 1em
       line-height 1.7
       font-weight bold
+    
       &.active
         font-weight bold
+    
     & > li:not(:first-child)
       margin-top .75rem
 
