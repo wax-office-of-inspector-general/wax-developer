@@ -42,3 +42,5 @@ order: 1
     <ContentLinkItem href="#" text="Set Up a Local dApp Environment" />
   </template>
 </ContentLinks>
+
+<ChildTableOfContents :max="2" title="More inside this section" />

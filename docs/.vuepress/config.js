@@ -87,7 +87,6 @@ module.exports = {
   plugins: [
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
-    'vuepress-plugin-child-toc',
     ['@vuepress/plugin-search', {
       searchMaxSuggestions: 10,
       searchIcon: false,
