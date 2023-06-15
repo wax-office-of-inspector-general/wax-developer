@@ -172,44 +172,46 @@ export default {
   
   > .sidebar-links > li > section > a
     font-size 1.35em
-  
-    > span:first-child
-      &:after
-        content ''
-        display block
-        margin-top 0.25em
-        margin-bottom 0.25em
-        width 1.5em
-        border-bottom 2.5px solid $accentColor
+
     &.active
       font-weight bold
   
-  .sidebar-links
+  > .sidebar-links
+    > li
+      margin-top 0 !important
+      
+      > .sidebar-group
+        border-bottom 1px solid $borderColor
 
-    > li .sidebar-group
-      > .sidebar-heading.open
-        color $accentColor
-        font-weight bold
+        > .sidebar-heading
+          padding 0.75em 2em 0.75em 1em
 
-    .sidebar-heading 
-      display flex !important
-      align-items center
-      justify-content space-between
+          &.open
+            color $accentColor
+            font-weight bold
 
-      .arrow
-        top 0px !important
-        border solid lighten($textColor, 30)
-        border-width 0 1.5px 1.5px 0
-        display inline-block
-        padding 2.5px
-        margin-left 0.3em
-        &.right
-          transform rotate(-45deg)
-        &.down
-          transform rotate(45deg)
-        
-    .sidebar-sub-headers
-      display none
+          + .sidebar-group-items
+            padding-bottom 0.75em
+
+      .sidebar-heading 
+        display flex !important
+        align-items center
+        justify-content space-between
+
+        .arrow
+          top 0px !important
+          border solid lighten($textColor, 30)
+          border-width 0 1.5px 1.5px 0
+          display inline-block
+          padding 2.5px
+          margin-left 0.3em
+          &.right
+            transform rotate(-45deg)
+          &.down
+            transform rotate(45deg)
+          
+      .sidebar-sub-headers
+        display none
 
   .site-name
     display block
