@@ -8,56 +8,19 @@
         :alt="$siteTitle"
       >
     </div>
-    <div class="link-columns">
-      <div class="link-column">
+    <div v-if="hasFooterLinks" class="link-columns">
+      <div v-for="(column, index) in footerColumns" class="link-column">
         <ul>
           <li>
-            <span>Join the conversation</span>
+            <span>{{ column.title }}</span>
           </li>
-          <li>
-            <a href="#">Chat on Telegram</a>
-          </li>
-          <li>
-            <a href="#">Chat on Discord</a>
-          </li>
-        </ul>
-      </div>
-      <div class="link-column">
-        <ul>
-          <li>
-            <span>About WAX</span>
-          </li>
-          <li>
-            <a href="#">Chat on Telegram</a>
-          </li>
-          <li>
-            <a href="#">Chat on Discord</a>
-          </li>
-        </ul>
-      </div>
-      <div class="link-column">
-        <ul>
-          <li>
-            <span>Follow us</span>
-          </li>
-          <li>
-            <a href="#">Chat on Telegram</a>
-          </li>
-          <li>
-            <a href="#">Chat on Discord</a>
-          </li>
-        </ul>
-      </div>
-      <div class="link-column">
-        <ul>
-          <li>
-            <span>Follow us</span>
-          </li>
-          <li>
-            <a href="#">Chat on Telegram</a>
-          </li>
-          <li>
-            <a href="#">Chat on Discord</a>
+          <li
+            v-if="column.links.length"
+            v-for="link in column.links"
+          >
+            <a :href="link.href">
+              {{ link.text }}
+            </a>
           </li>
         </ul>
       </div>
@@ -69,20 +32,12 @@
 export default {
   name: 'Footer',
   computed: {
-    footerSocials() {
-      
+    hasFooterLinks() {
+      return this.$themeLocaleConfig.hasOwnProperty('footer')
     },
-  },
-  methods: {
-    titleCase: function (str) {
-      return str
-        .toLowerCase()
-        .split(' ')
-        .map(function (word) {
-          return word.charAt(0).toUpperCase() + word.slice(1);
-        })
-        .join(' ');
+    footerColumns() {
+      return this.$themeLocaleConfig.footer.columns
     },
-  },
+  }
 };
 </script>

@@ -1,6 +1,7 @@
 const { description } = require('../../package')
 const { path } = require('@vuepress/utils');
 const sidebar = require('./sidebar/en');
+const footer = require('./footer/en');
 
 module.exports = {
   /**
@@ -28,7 +29,7 @@ module.exports = {
     '/': {
       lang: 'en-US',
       ariaLabel: 'English',
-      label: 'English',
+      label: 'English'
     },
     '/de/': {
       lang: 'de-DE',
@@ -62,6 +63,18 @@ module.exports = {
     
     // display all links in sidebar
     displayAllHeaders: true,
+
+    locales: {
+      '/': {
+        footer: footer
+      },
+      '/de/': {
+        
+      },
+      '/es/': {
+        
+      }
+    },
     
     nav: [
        {
@@ -78,7 +91,7 @@ module.exports = {
        }
     ],
 
-    sidebar: sidebar
+    sidebar: sidebar,
   },
 
   /**
