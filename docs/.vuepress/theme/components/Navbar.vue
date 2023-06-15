@@ -42,7 +42,7 @@ export default {
     SidebarButton,
     NavLinks,
     SearchBox,
-    AlgoliaSearchBox
+    AlgoliaSearchBox,
   },
 
   data () {
@@ -122,6 +122,7 @@ $navbar-horizontal-padding = 1.5rem
     .search-box
       flex: 0 0 auto
       vertical-align top
+      margin-left auto
       input
         background: #FFF
         background-position: 1em center
@@ -132,16 +133,17 @@ $navbar-horizontal-padding = 1.5rem
         filter drop-shadow(0px 8px 40px rgba(123, 97, 255, 0.24))
         background: #FFF
         height: 48px
+        width 180px!important
         &.focused
-          width 331px
           border-bottom-right-radius 0
           border-bottom-left-radius 0
+          width 331px!important
       .suggestions
         right 0
         border-color #E1DFFA
         border-top-right-radius 0
         border-top-left-radius 0
-        width 350px
+        width 350px!important
 
 
 @media (max-width: $MQMobile)
@@ -172,14 +174,30 @@ $navbar-horizontal-padding = 1.5rem
       input
         background: #FFF
         left: auto
-        min-width 60px
+        width 60px !important
         &.focused
-          width 231px!important
+          width 211px!important
           border-bottom-right-radius 0
           border-bottom-left-radius 0
       .suggestions
         border-color #E1DFFA
         border-top-right-radius 0
         border-top-left-radius 0
-        width 250px!important
+        width 300px!important
+
+@media (max-width: $MQNarrow)
+  .search-box
+    input
+      background: #FFF
+      left: auto
+      width 60px !important
+      &.focused
+        width 231px!important
+        border-bottom-right-radius 0
+        border-bottom-left-radius 0
+    .suggestions
+      border-color #E1DFFA
+      border-top-right-radius 0
+      border-top-left-radius 0
+      width 250px!important
 </style>

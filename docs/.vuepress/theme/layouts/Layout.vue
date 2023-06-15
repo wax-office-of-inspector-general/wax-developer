@@ -34,6 +34,7 @@
         :sidebar-items="sidebarItems"
       >
         <template #top>
+          <Breadcrumb />
           <slot name="page-top" />
         </template>
         <template #bottom>
@@ -49,6 +50,7 @@ import PageWithHeader from '@theme/components/PageWithHeader.vue'
 import Navbar from '@theme/components/Navbar.vue'
 import Page from '@theme/components/Page.vue'
 import Sidebar from '@theme/components/Sidebar.vue'
+import Breadcrumb from '@theme/components/Breadcrumb.vue'
 import { resolveSidebarItems } from '@parent-theme/util'
 
 export default {
@@ -58,7 +60,8 @@ export default {
     PageWithHeader,
     Page,
     Sidebar,
-    Navbar
+    Navbar,
+    Breadcrumb
   },
 
   data () {

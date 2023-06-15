@@ -1,0 +1,25 @@
+.bread-crumbs
+  display flex
+  align-items: center
+  justify-content: end
+  padding 1rem 2.5rem
+
+  .bread-crumb
+    font-size: 0.9rem
+    color: lighten($textColor, 20)
+
+    &:hover
+      color: $accentColor
+      text-decoration: underline
+
+    &:last-child
+      color: $textColor
+
+  .bread-crumb-separator
+    color: lighten($textColor, 30)
+    margin 0 0.3em 0 0.25em
+
+  .bread-crumb-nolink:hover
+    color: #999
+    cursor: default
+    text-decoration: none
