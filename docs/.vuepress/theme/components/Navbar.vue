@@ -133,18 +133,33 @@ $navbar-horizontal-padding = 1.5rem
         filter drop-shadow(0px 8px 40px rgba(123, 97, 255, 0.24))
         background: #FFF
         height: 48px
-        width 180px!important
+        width 180px
         &.focused
           border-bottom-right-radius 0
           border-bottom-left-radius 0
-          width 331px!important
+          width 331px
       .suggestions
         right 0
         border-color #E1DFFA
         border-top-right-radius 0
         border-top-left-radius 0
-        width 350px!important
+        width 350px
 
+@media (max-width: $MQNarrow)
+  .search-box
+    input
+      background: #FFF
+      left: auto
+      width 180px
+      &.focused
+        width 231px
+        border-bottom-right-radius 0
+        border-bottom-left-radius 0
+    .suggestions
+      border-color #E1DFFA
+      border-top-right-radius 0
+      border-top-left-radius 0
+      width 250p
 
 @media (max-width: $MQMobile)
   .navbar
@@ -176,28 +191,13 @@ $navbar-horizontal-padding = 1.5rem
         left: auto
         width 60px !important
         &.focused
-          width 211px!important
+          width 231px!important
           border-bottom-right-radius 0
           border-bottom-left-radius 0
       .suggestions
         border-color #E1DFFA
         border-top-right-radius 0
         border-top-left-radius 0
-        width 300px!important
+        width 250px!important
 
-@media (max-width: $MQNarrow)
-  .search-box
-    input
-      background: #FFF
-      left: auto
-      width 60px !important
-      &.focused
-        width 231px!important
-        border-bottom-right-radius 0
-        border-bottom-left-radius 0
-    .suggestions
-      border-color #E1DFFA
-      border-top-right-radius 0
-      border-top-left-radius 0
-      width 250px!important
 </style>

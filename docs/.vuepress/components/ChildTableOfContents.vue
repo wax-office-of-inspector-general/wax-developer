@@ -100,9 +100,12 @@ export default {
     
     .toc-items
         display grid
-        grid-gap 1em
-        grid-template-columns repeat(6, calc(25% - 1em))
-        grid-template-rows 25% 25% 25%
+        grid-gap 2em 1em
+        grid-template-columns repeat(4, calc(25% - 1em))
+
+        @media screen and (max-width: $MQNarrow)
+            grid-gap 1em 2em
+            grid-template-columns repeat(2, calc(50% - 1em))
         
         .toc-item
             width 100%

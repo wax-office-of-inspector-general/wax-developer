@@ -152,7 +152,6 @@ export default {
   justify-content start
   padding-top 0px
   width 20rem !important
-  border-right 1px solid $borderColor
 
   .sidebar-logo
     padding 1rem 1.5rem 1rem 1.5rem
@@ -177,11 +176,12 @@ export default {
       font-weight bold
   
   > .sidebar-links
+    border-top 1px solid lighten($borderColor, 3)
     > li
       margin-top 0 !important
       
       > .sidebar-group
-        border-bottom 1px solid $borderColor
+        border-bottom 1px solid lighten($borderColor, 3)
 
         > .sidebar-heading
           padding 0.75em 2em 0.75em 1em
