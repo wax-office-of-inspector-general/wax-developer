@@ -1,0 +1,42 @@
+.footer
+  background #f8f8ff
+  border-top 1px solid $borderColor
+  padding 4rem 2.5rem
+  .logo
+    max-width 130px
+    margin-bottom: 1.5em;
+  .link-columns
+    display grid
+    grid-gap 20px
+    grid-template-columns: repeat(auto-fit, calc(25% - 20px))
+    .link-column
+      ul
+        margin 0
+        padding 0
+        li
+          list-style: none
+          font-size 0.9em
+          >span
+            color lighten($accentColor, 5)
+            font-weight bold
+            margin-bottom 0.5em
+            display inline-block
+          > a
+            color $textColor
+            &:hover
+              color $accentColor
+
+@media (max-width: $MQNarrow)
+  .footer
+    .link-columns
+      display grid
+      grid-gap 20px
+      grid-template-columns repeat(auto-fit, calc(50% - 20px))
+
+@media (max-width: $MQMobile)
+  .footer 
+    .link-columns
+      display grid
+      grid-gap 20px
+      grid-template-columns repeat(auto-fit, 100%)
+

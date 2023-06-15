@@ -43,6 +43,7 @@ export default {
   display inline-block
 
   color $accentColor
+  text-decoration none
   filter drop-shadow(0px 12px 34px rgba(42, 13, 69, 0.08))
 
   &:hover

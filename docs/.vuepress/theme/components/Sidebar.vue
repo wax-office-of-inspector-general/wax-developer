@@ -148,6 +148,7 @@ export default {
   justify-content start
   padding-top 0px
   width 20rem !important
+  border-right 1px solid $borderColor
   .sidebar-logo
     padding 1rem 1.5rem 1rem 1.5rem
     > a 

@@ -41,6 +41,8 @@
           <slot name="page-bottom" />
         </template>
       </Page>
+
+      <Footer />
     </div>
   </div>
 </template>
@@ -51,6 +53,7 @@ import Navbar from '@theme/components/Navbar.vue'
 import Page from '@theme/components/Page.vue'
 import Sidebar from '@theme/components/Sidebar.vue'
 import Breadcrumb from '@theme/components/Breadcrumb.vue'
+import Footer from '@theme/components/Footer.vue'
 import { resolveSidebarItems } from '@parent-theme/util'
 
 export default {
@@ -61,7 +64,8 @@ export default {
     Page,
     Sidebar,
     Navbar,
-    Breadcrumb
+    Breadcrumb,
+    Footer
   },
 
   data () {
