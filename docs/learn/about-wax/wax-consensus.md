@@ -1,6 +1,6 @@
 ---
 title: WAX Consensus
-order: 1
+order: 3
 ---
 
 # Consensus

@@ -1,6 +1,6 @@
 ---
 title: Why WAX?
-order: 1
+order: 2
 ---
 
 # Why WAX?

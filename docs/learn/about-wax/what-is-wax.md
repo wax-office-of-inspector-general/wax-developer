@@ -3,7 +3,7 @@ title: What is WAX?
 order: 1
 ---
 
-# What is WAX blockchain?
+# What is the WAX blockchain?
 
 WAX, which stands for Worldwide Asset eXchange, is a blockchain-based platform that facilitates the creation, trading, and exchange of virtual assets. It was designed to enable a decentralized marketplace for virtual items and collectibles, with a particular focus on the gaming industry.
 

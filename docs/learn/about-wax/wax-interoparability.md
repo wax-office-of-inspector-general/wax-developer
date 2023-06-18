@@ -1,6 +1,6 @@
 ---
 title: WAX Interoperability
-order: 1
+order: 7
 ---
 
 # WAX Interoperability

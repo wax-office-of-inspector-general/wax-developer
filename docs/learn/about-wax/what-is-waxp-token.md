@@ -1,6 +1,6 @@
 ---
-title: What is the WAXP token
-order: 1
+title: What is the WAXP token?
+order: 4
 ---
 
-# What is the WAXP token
+# What is the WAXP token?

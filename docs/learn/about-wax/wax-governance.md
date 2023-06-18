@@ -1,6 +1,6 @@
 ---
 title: WAX Governance
-order: 1
+order: 6
 ---
 
 # WAX Governance

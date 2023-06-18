@@ -74,13 +74,13 @@ export default {
 
                 const split = p.regularPath
                     .substr(currentUrl.length)
-                    .split("/");
+                    .split('/');
 
-                if (p.regularPath.endsWith("/") && split.length === 2) {
+                if (p.regularPath.endsWith('/') && split.length === 2) {
                     return true;
                 }
 
-                if (p.regularPath.endsWith(".html") && split.length === 1) {
+                if (p.regularPath.endsWith('.html') && split.length === 1) {
                     return true;
                 }
 
