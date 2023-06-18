@@ -33,7 +33,7 @@ If you're using our Docker images, you do **not** need to complete these steps.
 To build the WAX Blockchain from source, you can use the following steps. If you have a previous version installed, you'll need to uninstall it first. Refer to [Uninstall WAX](/docs/tutorials/blockchain_uninstall) for more information.
 
 :::warning
-<strong>Important:</strong> Refer to [Known Issues](/docs/troubleshooting/) if you encounter an issue with the build or use our [Docker Images](/docs/dapp-development/docker-setup/) instead (recommended). Building from source is not supported. 
+<strong>Important:</strong> Refer to [Known Issues](/docs/troubleshooting/) if you encounter an issue with the build or use our [Docker Images](/build/dapp-development/docker-setup/) instead (recommended). Building from source is not supported. 
 :::
 
 1. Run the build script and set the installation directory. 

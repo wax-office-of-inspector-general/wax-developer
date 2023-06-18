@@ -26,8 +26,8 @@ The following video from Simple Assets demonstrates the core functionality of th
 
 ## Before You Begin
 
-* You'll need to complete our [Docker Quickstart](/docs/dapp-development/docker-setup/) (recommended).
-* To compile your smart contract, you'll need to use [WAX-CDT](/docs/dapp-development/wax-cdt/cdt_use).
+* You'll need to complete our [Docker Quickstart](/build/dapp-development/docker-setup/) (recommended).
+* To compile your smart contract, you'll need to use [WAX-CDT](/build/dapp-development/wax-cdt/cdt_use).
 * To deploy your smart contract to the WAX mainnet, you'll need to create a self-managed WAX Blockchain Account.
 
 

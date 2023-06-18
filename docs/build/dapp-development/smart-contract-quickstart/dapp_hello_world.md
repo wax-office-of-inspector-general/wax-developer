@@ -88,7 +88,7 @@ CONTRACT wax : public contract {
 
 To deploy your smart contract, you'll need to create a `.wasm` and `.abi` file. You can do this using the WAX Contract Development Toolkit (WAX-CDT).
 
-1. Install [WAX-CDT](/docs/dapp-development/wax-cdt/) (if you haven't done so already).
+1. Install [WAX-CDT](/build/dapp-development/wax-cdt/) (if you haven't done so already).
 
 2. From the command line, navigate to the **mycontracts/wax** build folder.
 

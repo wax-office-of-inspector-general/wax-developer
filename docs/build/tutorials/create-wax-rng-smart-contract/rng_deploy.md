@@ -4,14 +4,14 @@ order: 85
 lang: en
 ---
 
-In this example, we'll use WAX-CDT tools to deploy your Lucky Number Generator smart contract. Refer to [WAX-CDT Deploy](/docs/dapp-development/deploy-dapp-on-wax/deploy_source) for more information.
+In this example, we'll use WAX-CDT tools to deploy your Lucky Number Generator smart contract. Refer to [WAX-CDT Deploy](/build/dapp-development/deploy-dapp-on-wax/deploy_source) for more information.
 
 1. First we will need to create a self-custodied account on testnet or mainnet to deploy the smart contract. For our example we will assume that the account is called *mywaxrngtest*.
 
 **Note:** You can use the [WAXSweden](https://waxsweden.org/testnet/) team tools to create the testnet account and supply it with funds that you will need to purchase the RAM required for the smart contract deployment.
 :::
 
-2. From Docker, we open and unlock the wallet we created in the tutorials about [how to create the development environment](/docs/dapp-development/setup-local-dapp-environment/dapp_wallet).
+2. From Docker, we open and unlock the wallet we created in the tutorials about [how to create the development environment](/build/dapp-development/setup-local-dapp-environment/dapp_wallet).
 
 ```shell
 cleos wallet open -n mywallet && cleos wallet unlock -n mywallet --password {wallet.pwd}

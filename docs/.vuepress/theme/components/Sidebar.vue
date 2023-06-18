@@ -176,7 +176,6 @@ export default {
       font-weight bold
   
   > .sidebar-links
-    border-top 1px solid lighten($borderColor, 3)
     > li
       margin-top 0 !important
       
@@ -191,7 +190,14 @@ export default {
             font-weight bold
 
           + .sidebar-group-items
-            padding-bottom 0.75em
+            padding-bottom 1em
+            padding-right 1.05em
+      
+      .sidebar-group.is-sub-group > .sidebar-heading
+        font-size 1.05em
+      
+      .sidebar-group.is-sub-group > .sidebar-group-items > li > .sidebar-link
+        font-size 1em
 
       .sidebar-heading 
         display flex !important
@@ -206,7 +212,7 @@ export default {
           padding 2.5px
           margin-left 0.3em
           &.right
-            transform rotate(-45deg)
+            transform rotate(-45deg) translateX(-2px)
           &.down
             transform rotate(45deg)
           

@@ -10,7 +10,7 @@ WAX-CDT tools are included in the **waxteam/dev** Docker image, and we also prov
 
 ```shell run -it --name waxcdt -v /var/share/wax:/wax waxteam/cdt bash```
 
-Refer to our [Docker Quickstart](/docs/dapp-development/docker-setup/) for more information.
+Refer to our [Docker Quickstart](/build/dapp-development/docker-setup/) for more information.
 
 If you'd like to access our sample contracts and scripts from your local drive or have a need to install WAX-CDT instead of using Docker, you can use this guide to download and optionally build the WAX-CDT source code.
 

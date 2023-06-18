@@ -19,7 +19,7 @@ If you use **eosio-init** to create a smart contract template, a folder is autom
 
 The CMake scripts will automatically include the files listed in the **ricardian** directory.
 
-Refer to [Create a Smart Contract](/docs/dapp-development/smart-contract-quickstart/) for more information.
+Refer to [Create a Smart Contract](/build/dapp-development/smart-contract-quickstart/) for more information.
 
 ## Use eosio-cpp
 
