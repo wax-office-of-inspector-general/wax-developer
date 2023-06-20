@@ -20,7 +20,7 @@ The "Filler" engine must connect to a SHIP node of the blockchain in order to re
 
 https://github.com/eosdac/eosio-statereceiver
 
-:::note
+:::warning
 <strong>Note</strong>: For this tutorial, the library has been modified to update it to "enf-eosjs", the new JavaScript library for Antelope blockchains that replaces the obsolete "eosjs". For that reason, in the example repository, the files "connection.js" and "statereceiver.js" of that library have been included directly as part of the code.
 :::
 
@@ -81,7 +81,7 @@ The "trace_handler" object contains our filler engine. With this sentence we lin
 sr.registerTraceHandler(trace_handler);
 ```
 
-:::note
+:::warning
 <strong>Note</strong>: StateReceiver allows us to create other types of handles to receive data. We can create handles to process blocks, traces or deltas, for example.
 :::
 

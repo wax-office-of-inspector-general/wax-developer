@@ -87,7 +87,7 @@ module.exports = [
     title: 'Build',
     path: '/build/',
     collapsable: true,
-    sidebarDepth: 2,
+    sidebarDepth: 4,
     children: [
       {
         title: 'dApp Development',
@@ -113,6 +113,12 @@ module.exports = [
           {
             title: 'WAX CDT',
             path: '/build/dapp-development/wax-cdt/',
+            children: [
+              '/build/dapp-development/wax-cdt/cdt_install',
+              '/build/dapp-development/wax-cdt/cdt_uninstall',
+              '/build/dapp-development/wax-cdt/cdt_use',
+              '/build/dapp-development/wax-cdt/cdt_cpp',
+            ]
           },
           {
             title: 'Deploy on WAX',

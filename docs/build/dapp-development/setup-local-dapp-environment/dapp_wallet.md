@@ -33,7 +33,7 @@ Wallets do not store tokens - just the key pairs associated with a blockchain ac
 
 In this guide, you'll use **cleos** to create, open, and unlock a new wallet.
 
-:::note
+:::warning
 <strong>Note:</strong> <strong>nodeos</strong> does not need to be running to complete these steps. **kleos** will start automatically (if it's not running already).
 :::
 
