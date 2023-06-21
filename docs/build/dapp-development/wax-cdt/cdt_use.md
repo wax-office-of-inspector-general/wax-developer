@@ -34,9 +34,9 @@ To compile the Hello World example:
     mkdir build
     ```
 
-    :::warning
+:::warning
     <strong>Note:</strong> By default, <strong>eosio-init</strong> creates a build directory. Because this directory is empty, it's not uploaded to Git. If you use <strong>eosio-init</strong> to [Create a Smart Contract](/build/dapp-development/wax-cdt/cdt_use.html#compile-hello-world), you'll be able to skip this step. 
-    :::
+:::
 
 3. Navigate to the **build** directory.
 

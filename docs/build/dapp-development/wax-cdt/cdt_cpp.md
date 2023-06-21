@@ -19,7 +19,7 @@ To generate a WASM and ABI file for your smart contract:
 2. Run the **eosio-cpp** build command with the **-abigen** parameter.
 
 :::tip
-<strong>Tip:</strong> <strong>eosio-cpp</strong> also includes Ricardian terms in your ABI file. Refer to [Ricardian Contracts](/docs/tools/ricardian_contract) and [Ricardian Clauses](/docs/tools/ricardian_clause) for more information.
+<strong>eosio-cpp</strong> also includes Ricardian terms in your ABI file. Refer to [Ricardian Contracts](/docs/tools/ricardian_contract) and [Ricardian Clauses](/docs/tools/ricardian_clause) for more information.
 :::
 
 ```

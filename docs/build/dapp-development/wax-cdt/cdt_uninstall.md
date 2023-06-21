@@ -23,7 +23,7 @@ This script will remove the following tools:
 * eosio-readelf
 
 :::tip
-<strong>Tip:</strong> If you created folders or modified any files in this directory, they will remain intact after the uninstall script runs. This script only removes the WAX-CDT tools.
+If you created folders or modified any files in this directory, they will remain intact after the uninstall script runs. This script only removes the WAX-CDT tools.
 :::
 
 

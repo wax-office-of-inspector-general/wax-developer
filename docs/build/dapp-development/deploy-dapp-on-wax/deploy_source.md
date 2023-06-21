@@ -27,9 +27,9 @@ To deploy your smart contract to the WAX mainnet:
     cleos wallet create_key -n mywallet
     ```
 
-    :::tip
-    <strong>Note:</strong> You can also use an EOSIO compatible wallet (e.g., Scatter).
-    :::
+:::tip
+You can also use an EOSIO compatible wallet (e.g., Scatter).
+:::
 
 3. From the command line, use `cleos system newaccount` to create your smart contract's account. To run this command, you'll need to have the proper authority. This means that the wallet containing your primary account must be opened and unlocked. 
 
@@ -104,9 +104,9 @@ To deploy your smart contract to the WAX mainnet:
     cleos -u chain-api-url system newaccount waxdappacct1 HelloWorld10 EOS7jEb46pDiWvA39faCoFn3jUdn6LfL51irdXbvfpuSko86iNU5x --stake-net '0.50000000 WAX' --stake-cpu '0.50000000 WAX' --buy-ram-kbytes 32
     ```
 
-    :::tip
-    <strong>Note:</strong> You'll need to repeat Steps 1 and 2 for each of your contracts. 
-    :::
+:::tip
+You'll need to repeat Steps 1 and 2 for each of your contracts. 
+:::
 
 4. **Deploy.** From the command line, set your contract with the `cleos set contract` command: 
 
@@ -125,5 +125,5 @@ To deploy your smart contract to the WAX mainnet:
 Your dApp is now live on WAX! 
 
 :::tip
-<strong>Note:</strong> Depending on how your dApp's onboarding process is built, your customers may need to create a WAX Account to use your dApp on WAX.
+Depending on how your dApp's onboarding process is built, your customers may need to create a WAX Account to use your dApp on WAX.
 :::

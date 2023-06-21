@@ -14,7 +14,7 @@ Before you begin:
 * Make sure you have enough WAX staked in your account to allocate resources. 
 
 :::tip
-<strong>Note:</strong> You do not need to build WAX source code to complete these steps. 
+You do not need to build WAX source code to complete these steps. 
 :::
 
 ## Modify the Scripts
@@ -65,8 +65,8 @@ To modify the **hello-world** scripts to deploy your smart contract:
     Save the file.
 
 :::tip
-    <strong>Note:</strong> `NODEOS_URL` is the only optional parameter. Its default value is the mainnet deployment address [chain-api-url](/docs/wax-infrastructure/#public-and-free-api-service-providers/.  
-    :::
+`NODEOS_URL` is the only optional parameter. Its default value is the mainnet deployment address [chain-api-url](/docs/wax-infrastructure/#public-and-free-api-service-providers/.  
+:::
 
 Once these changes have been made, you're ready to use the `make` scripts to build and deploy your smart contract.
 
@@ -173,6 +173,6 @@ To launch your WAX smart contract on the WAX Blockchain:
 Your dApp is now live on WAX! 
 
 :::tip
-<strong>Note:</strong> Depending on how your dApp's onboarding process is built, your customers may need to create a WAX Account to use your dApp on WAX.
+Depending on how your dApp's onboarding process is built, your customers may need to create a WAX Account to use your dApp on WAX.
 :::
 

@@ -7,7 +7,7 @@ lang: en
 In this guide, you'll learn how to create Testnet accounts and deploy your smart contracts to the WAX Testnet.
 
 :::tip
-<strong>Tip:</strong> Every smart contract requires a blockchain account. It's recommended that you name your accounts based on your smart contract's functionality (e.g., mywaxnftgame). Account names must be 12 characters and only contain letters [a-z] and numbers [1-5].
+Every smart contract requires a blockchain account. It's recommended that you name your accounts based on your smart contract's functionality (e.g., mywaxnftgame). Account names must be 12 characters and only contain letters [a-z] and numbers [1-5].
 :::
 
 ## Create and Fund Testnet Accounts
@@ -46,7 +46,7 @@ In this guide, you'll learn how to create Testnet accounts and deploy your smart
 ## Deploy Smart Contracts to the WAX Testnet
 
 :::tip
-<strong>Tip:</strong> To complete these steps, make sure that your wallet is opened and unlocked. Refer to Troubleshooting below for more information.
+To complete these steps, make sure that your wallet is opened and unlocked. Refer to Troubleshooting below for more information.
 :::
 
 1. From an interactive Docker bash session, navigate to your smart contracts directory and build your smart contract.

@@ -60,7 +60,7 @@ Every WAX Account must have at least one public key. There are two types of publ
 To create an account for your smart contract, you'll need to create a public and private key pair from your local development wallet. You can do this using your wallet's `create_key` command:
 
 :::tip
-<strong>Note:</strong> Your wallet must be opened and unlocked to create your keys.
+Your wallet must be opened and unlocked to create your keys.
 :::
 
 ```shell

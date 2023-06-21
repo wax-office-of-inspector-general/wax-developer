@@ -51,9 +51,9 @@ To start a local WAX node on your development server:
     This will initialize all of the basic plugins, set the server address (yours), and add contract debugging and logging. 
 
 
-    :::warning
+:::warning
     <strong>Important:</strong> The --access-control-allow-origin='*' parameter enables Cross-Origin Resource Sharing (CORS). Never enable this for a public node.     
-    :::
+:::
 
     When the command completes, the console prints out a number, similar to the following:
 
@@ -75,9 +75,9 @@ To start a local WAX node on your development server:
     ```
 
 
-    :::tip
-    <strong>Tip:</strong> Notice the "signed by eosio" signature - this is the local system account.
-    :::
+:::tip
+Notice the "signed by eosio" signature - this is the local system account.
+:::
 
 You're now running a local WAX node on your development server. Press Ctrl + c to close the log (**nodeos** will continue to run in the background). 
 

@@ -80,7 +80,7 @@ CONTRACT wax : public contract {
 };
 ```
 :::tip
-<strong>Tip:</strong> The action_wrapper struct creates a template/pointer based off of a specific action. You can use action_wrappers to make action calls from one contract to another. 
+The action_wrapper struct creates a template/pointer based off of a specific action. You can use action_wrappers to make action calls from one contract to another. 
 :::
 
 

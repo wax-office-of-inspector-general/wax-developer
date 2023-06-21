@@ -8,9 +8,9 @@ To run the **waxteam/dev** Docker image:
 
 1. Install <a href="https://www.docker.com/get-started" target="_blank">Docker</a> (if you haven't done so already). 
 
-    :::tip
-    <strong>Linux Users:</strong> It's recommended that you configure Docker to run without sudo to utilize all of our Docker-enabled <strong>make</strong> scripts. Refer to <a href="https://docs.docker.com/install/linux/linux-postinstall/" target="_blank">Post-installation steps for Linux</a> for more information.
-    :::
+:::tip
+<strong>Linux Users:</strong> It's recommended that you configure Docker to run without sudo to utilize all of our Docker-enabled <strong>make</strong> scripts. Refer to <a href="https://docs.docker.com/install/linux/linux-postinstall/" target="_blank">Post-installation steps for Linux</a> for more information.
+:::
 
 2. Create a new directory named **wax**. You can use this folder to store WAX Blockchain source code, samples, and your WAX smart contracts directory. This directory will be shared between your operating system and the Docker container. You will be able to edit your source code with your favourite IDE in either environment.
 

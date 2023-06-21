@@ -49,7 +49,7 @@ cleos wallet create --to-console
 This command creates a wallet named **default**, saved to a local path (e.g. "/home/username/eosio-wallet/default.wallet"). 
 
 :::tip
-<strong>Tip:</strong> You can also include the --name parameter to name a wallet: `cleos wallet create --name mywallet --to-console`.
+You can also include the --name parameter to name a wallet: `cleos wallet create --name mywallet --to-console`.
 :::
 
 The `--to-console` parameter prints your password to the console. Be sure to save this password someplace safe (you'll need it to unlock your wallet).
@@ -63,7 +63,7 @@ Without password imported keys will not be retrievable.
 ```
 
 :::tip
-<strong>Tip:</strong> For a complete list of cleos wallet subcommands and parameters, refer to <a href="https://docs.eosnetwork.com/leap/latest/cleos/command-reference/wallet/" target="_blank">Cleos Reference Guide</a>.
+For a complete list of cleos wallet subcommands and parameters, refer to <a href="https://docs.eosnetwork.com/leap/latest/cleos/command-reference/wallet/" target="_blank">Cleos Reference Guide</a>.
 :::
 
 ## Open and Unlock Your Wallet
@@ -77,7 +77,7 @@ cleos wallet open
 The console prints out that your **default** wallet is open: `Opened: default`.
 
 :::tip
-<strong>Tip:</strong> You can also include the --name parameter to open a wallet by name: `cleos wallet open --name named-wallet`.
+You can also include the --name parameter to open a wallet by name: `cleos wallet open --name named-wallet`.
 :::
 
 Now that your wallet is open, you'll need to unlock it. You can use the `cleos wallet open --name named-wallet` command to unlock it in one step. Use the password that was printed to the console when you created your wallet.
@@ -89,7 +89,7 @@ cleos wallet unlock --password PW5KRXKVx25yjL3FvxxY9YxYxxYY9Yxx99yyXTRH8DjppKpD9
 The console prints out that your **default** wallet is unlocked: `cleos wallet open --name named-wallet`.
 
 :::tip
-<strong>Tip:</strong> By default, **keosd** will auto-lock your wallets after 15 minutes of inactivity. To disable this feature, you'll need to modify the **/home/username/eosio-wallet/config.ini** flag to an extremely large number. Setting it to 0 will cause keosd to always lock your wallet.
+By default, **keosd** will auto-lock your wallets after 15 minutes of inactivity. To disable this feature, you'll need to modify the **/home/username/eosio-wallet/config.ini** flag to an extremely large number. Setting it to 0 will cause keosd to always lock your wallet.
 :::
 
 
@@ -109,7 +109,7 @@ Wallets:
 ```
 
 :::tip
-<strong>Tip:</strong> If you come back to this step later (after terminating your **kleos** instance) and your **default** wallet isn't listed: `cleos wallet open --name named-wallet`, you'll need to Open and Unlock your wallet again.
+If you come back to this step later (after terminating your **kleos** instance) and your **default** wallet isn't listed: `cleos wallet open --name named-wallet`, you'll need to Open and Unlock your wallet again.
 :::
 
 

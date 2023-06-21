@@ -7,7 +7,7 @@ lang: en
 The WAX Blockchain RPC API includes public endpoints used to get block information, block history, node information, and node producer information. Exposed through **nodeos** plugins, this API is available on the WAX mainnet and your local development environment. 
 
 :::tip
-<strong>Note:</strong> If you're making local requests, <strong>nodeos</strong> must be running.
+If you're making local requests, <strong>nodeos</strong> must be running.
 :::
 
 

@@ -37,7 +37,7 @@ You should receive the following JSON Response:
 ```
 
 :::tip
-<strong>Tip:</strong> Notice the "head_block_producer":"eosio" parameter. Locally, <strong>eosio</strong> is the system account. If you make a request to the WAX mainnet API, it would return an actual block producer (e.g., "head_block_producer": "strongblock1").
+Notice the "head_block_producer":"eosio" parameter. Locally, <strong>eosio</strong> is the system account. If you make a request to the WAX mainnet API, it would return an actual block producer (e.g., "head_block_producer": "strongblock1").
 :::
 
 **nodeos** must be running to call this endpoint. If not, you'll receive the following message:

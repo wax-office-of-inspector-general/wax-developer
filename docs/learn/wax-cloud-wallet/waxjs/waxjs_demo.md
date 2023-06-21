@@ -24,8 +24,6 @@ Below is a basic example of WaxJS functionality. To use this demo, click WAX Log
 <button class="mt-4 border-black border-solid border-2 rounded px-4 py-2 w-40" id="sign" onclick=sign() >Sign Transaction</button>
 ```
 
-<code id="response">Transaction Response</code>
-
 
 ## Code Examples
 
@@ -62,7 +60,7 @@ async function login() {
 
 To run the demo above, copy the following code to **index.html**:
 
-```
+```html
 <!DOCTYPE html>
 <html>
 <script src='waxjs.js'></script>

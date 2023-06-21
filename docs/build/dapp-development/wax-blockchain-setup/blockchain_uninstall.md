@@ -15,7 +15,7 @@ This script will remove the following tools:
 * cleos
 
 :::tip
-<strong>Tip:</strong> If you created folders or modified any files in this directory, they will remain intact after the uninstall script runs. This script only removes the WAX Blockchain tools.
+If you created folders or modified any files in this directory, they will remain intact after the uninstall script runs. This script only removes the WAX Blockchain tools.
 :::
 
 ## Run the Uninstall Script

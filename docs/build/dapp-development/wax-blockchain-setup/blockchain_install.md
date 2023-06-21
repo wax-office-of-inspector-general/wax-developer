@@ -42,9 +42,9 @@ To build the WAX Blockchain from source, you can use the following steps. If you
     ./wax_build.sh -i ~/wax-blockchain
     ```
 
-    :::tip
-    <strong>Tip:</strong> This installs [Blockchain Tools](/docs/tools/blockchain_tools) to the <strong>wax-blockchain/bin</strong> directory.
-    :::
+:::tip
+This installs [Blockchain Tools](/docs/tools/blockchain_tools) to the <strong>wax-blockchain/bin</strong> directory.
+:::
 
 2. Install WAX to the directory you set in Step 4.
 
