@@ -4,32 +4,32 @@ title: boost.wax
 
 # boost.wax
 
-This contract registers other contracts that wish to have WAX apply extended management over CPU and Net for their WAX Cloud Wallet users.
+This contract registers other contracts that wish to have WAX apply extended management over CPU and Net for their MyCloudWallet users.
 
 Deployed to: [boost.wax](https://wax.bloks.io/account/boost.wax)
 
 
-## WAX Cloud Wallet Resource Model
+## MyCloudWallet Resource Model
 
-The resource allocation model for WAX Cloud Wallet accounts was designed to be based on account activity. Instead of allocating resources to each WAX Cloud Wallet account at the time of creation, the new resource model allocates necessary resources to each account at the time of executing and signing of a transaction. These resources are then reclaimed. This new model allows for pooling resources from accounts that are less active at the moment and use those resources to boost activity of active accounts. This new boost system is designed as a tiered resource pool system with two resource tiers being checked first for available bandwidth before a user would be required to provide resources to complete a transaction from their own WAXP resource stake.
+The resource allocation model for MyCloudWallet accounts was designed to be based on account activity. Instead of allocating resources to each MyCloudWallet account at the time of creation, the new resource model allocates necessary resources to each account at the time of executing and signing of a transaction. These resources are then reclaimed. This new model allows for pooling resources from accounts that are less active at the moment and use those resources to boost activity of active accounts. This new boost system is designed as a tiered resource pool system with two resource tiers being checked first for available bandwidth before a user would be required to provide resources to complete a transaction from their own WAXP resource stake.
 
 ### dApp Boost Resource Pool Tier
 
-WAX Cloud Wallet will allocate up to 5 seconds of CPU and 5M words of NET bandwidth per dApp in a given 24h period; This equals to about 10000 boosted actions per dApp in that time period assuming 0.5 ms average action resource cost. The parameters of the dApp boost resource pool may be adjusted over time as more utilization data becomes available.
+MyCloudWallet will allocate up to 5 seconds of CPU and 5M words of NET bandwidth per dApp in a given 24h period; This equals to about 10000 boosted actions per dApp in that time period assuming 0.5 ms average action resource cost. The parameters of the dApp boost resource pool may be adjusted over time as more utilization data becomes available.
    
 Additionally, each dApp can contribute their own WAXP to extend its dApp boost resource pool. dApp smart contract must have a permission called paybw, and it must be linked to the boost.wax#noop action. Furthermore, it must have a 1 of 1 authority using the account@permission boost.wax@paybw. As an example see the [test.wax@paybw permission](https://wax.bloks.io/account/test.wax#keys).
    
-When initial dApp boost resource pool tier is exceeded, the WAX Cloud Wallet will sign for dApps users using this permission if it has sufficient CPU and NET allocated to its contract's account. Each dApp needs to also configure its dApp boost resource pool allocation per user via boost.wax smart contract via [this action](https://wax.bloks.io/account/boost.wax?loadContract=true&tab=Actions&account=boost.wax&scope=boost.wax&limit=100&action=reg).
+When initial dApp boost resource pool tier is exceeded, the MyCloudWallet will sign for dApps users using this permission if it has sufficient CPU and NET allocated to its contract's account. Each dApp needs to also configure its dApp boost resource pool allocation per user via boost.wax smart contract via [this action](https://wax.bloks.io/account/boost.wax?loadContract=true&tab=Actions&account=boost.wax&scope=boost.wax&limit=100&action=reg).
 
-If dApp pool has available resources then WAX Cloud Wallet will boost users' transactions from that dApp pool and decrement the pool metering accordingly.
+If dApp pool has available resources then MyCloudWallet will boost users' transactions from that dApp pool and decrement the pool metering accordingly.
    
-WAX Cloud Wallet team reserves the right to disable dApp Boost Resource Pool for a given dApp.
+MyCloudWallet team reserves the right to disable dApp Boost Resource Pool for a given dApp.
 
 ### User Boost Resource Pool Tier
 
-WAX Cloud Wallet will allocate up to 5 ms of CPU and 5k words of NET bandwidth per each user in a given 24h period. This equals to about 10 boosted actions per user in that time period assuming 0.5 ms average action resource cost. The parameters of the User Boost Resource Pool may be adjusted over time as more utilization data becomes available.
+MyCloudWallet will allocate up to 5 ms of CPU and 5k words of NET bandwidth per each user in a given 24h period. This equals to about 10 boosted actions per user in that time period assuming 0.5 ms average action resource cost. The parameters of the User Boost Resource Pool may be adjusted over time as more utilization data becomes available.
 
-Both dApp Boost Resource Pool Tier and User Boost Resource Pool Tier must have resources in order for an action to be boosted by the new WAX Cloud Wallet resource mechanism. If either dApp Boost Resource Pool or User Boost Resource Pool has been exhausted then WAX Cloud Wallet will switch to using resources from the dApp’s own staked resources, and if the user has exceeded the dApp’s configured 24 hour bandwidth limit, WCW will switch to using the user’s staked resources.
+Both dApp Boost Resource Pool Tier and User Boost Resource Pool Tier must have resources in order for an action to be boosted by the new MyCloudWallet resource mechanism. If either dApp Boost Resource Pool or User Boost Resource Pool has been exhausted then MyCloudWallet will switch to using resources from the dApp’s own staked resources, and if the user has exceeded the dApp’s configured 24 hour bandwidth limit, WCW will switch to using the user’s staked resources.
 
 ::: info
 ![alt text](https://github.com/worldwide-asset-exchange/boost.wax/blob/master/BoostDecisionTree.png?raw=true)
@@ -62,7 +62,7 @@ WCW creates new accounts with the bare minimum RAM to successfully create each a
    
 * **[`noop()`](https://wax.bloks.io/account/boost.wax?loadContract=true&tab=Tables&account=boost.wax&scope=boost.wax&limit=100&action=noop)**: 
 
-   No-op action inserted into WAX Cloud Wallet transactions that satisfy bandwidth management crtieria.  
+   No-op action inserted into MyCloudWallet transactions that satisfy bandwidth management crtieria.  
 
 * **`boost(name from, name to, asset cpu, asset net)`**: *Deprecated*
 * **`updateboost(name from, name to, asset cpu_to, asset net_to)`**: *Deprecated*

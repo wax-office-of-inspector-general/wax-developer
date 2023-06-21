@@ -2,7 +2,7 @@ module.exports = [
     {
         title: 'Learn',
         path: '/learn/',
-        collapsable: true,
+        collapsable: false,
         sidebarDepth: 2,
         initialOpenGroupIndex: 0,
         children: [
@@ -39,28 +39,28 @@ module.exports = [
                 ],
             },
             {
-                title: 'WAX Cloud Wallet',
-                path: '/learn/wax-cloud-wallet/',
+                title: 'MyCloudWallet',
+                path: '/learn/my-cloud-wallet/',
                 collapsable: true,
                 initialOpenGroupIndex: -1,
                 sidebarDepth: 1,
                 children: [
                     {
                         title: 'wax.js',
-                        path: '/learn/wax-cloud-wallet/waxjs/',
+                        path: '/learn/my-cloud-wallet/waxjs/',
                         collapsable: true,
                         initialOpenGroupIndex: -1,
                         sidebarDepth: 1,
                         children: [
-                            '/learn/wax-cloud-wallet/waxjs/waxjs_qstart',
-                            '/learn/wax-cloud-wallet/waxjs/waxjs_install',
-                            '/learn/wax-cloud-wallet/waxjs/waxjs_use',
-                            '/learn/wax-cloud-wallet/waxjs/waxjs_demo',
+                            '/learn/my-cloud-wallet/waxjs/waxjs_qstart',
+                            '/learn/my-cloud-wallet/waxjs/waxjs_install',
+                            '/learn/my-cloud-wallet/waxjs/waxjs_use',
+                            '/learn/my-cloud-wallet/waxjs/waxjs_demo',
                         ],
                     },
                     {
                         title: 'boost.wax',
-                        path: '/learn/wax-cloud-wallet/boost-wax',
+                        path: '/learn/my-cloud-wallet/boost-wax',
                         collapsable: true,
                         initialOpenGroupIndex: -1,
                         sidebarDepth: 1,
@@ -220,7 +220,7 @@ module.exports = [
     {
         title: 'Operate',
         path: '/operate/',
-        collapsable: false,
+        collapsable: true,
         sidebarDepth: 2,
         children: [
             {
@@ -264,7 +264,7 @@ module.exports = [
     {
         title: 'Create',
         path: '/create/',
-        collapsable: false,
+        collapsable: true,
         sidebarDepth: 1,
         children: [
           {
