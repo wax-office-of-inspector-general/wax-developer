@@ -1,8 +1,19 @@
 {
   "name": "wax-developer",
-  "version": "0.2.0",
   "description": "WAX Developer Portal",
+  "version": "0.2.0",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wax-office-of-inspector-general/wax-developer.git"
+  },
+  "author": "many",
+  "license": "UNLICENSED",
+  "keywords": [
+    "docs",
+    "documentation",
+    "vuepress"
+  ],
   "directories": {
     "doc": "docs"
   },
@@ -10,17 +21,9 @@
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wax-office-of-inspector-general/wax-developer.git"
+  "engines": {
+    "node": ">=16.19.0"
   },
-  "keywords": [
-    "docs",
-    "documentation",
-    "vuepress"
-  ],
-  "author": "",
-  "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/wax-office-of-inspector-general/wax-developer/issues"
   },
