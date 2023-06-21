@@ -14,7 +14,7 @@ In short, AtomicAssets organises the collection set in different levels of subse
 
 Collection -> Schemas -> Templates -> NFTs.
 
-![AtomicAssests Collection Schema](/img/tutorials/howto_atomicassets/atomicassets_scheme.jpg)
+![AtomicAssests Collection Schema](/assets/images/tutorials/howto_atomicassets/atomicassets_scheme.jpg)
 
 ## Collection
 
@@ -42,7 +42,7 @@ The description and identification data are entered according to the following s
 
 If we create the collection from an interface like [https://waxblock.io](https://waxblock.io/account/atomicassets?action=createcol#contract-actions) we will have to fill in this data entry:
 
-![AtomicAssets - createcol action](/img/tutorials/howto_atomicassets/createcol_atomicassets.png)
+![AtomicAssets - createcol action](/assets/images/tutorials/howto_atomicassets/createcol_atomicassets.png)
 
 An example of the information accepted in the "*data*" field is shown below. 
 

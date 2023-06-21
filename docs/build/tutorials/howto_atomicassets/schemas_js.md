@@ -14,7 +14,7 @@ AtomicAssets incorporates the following actions to manage the schemes:
 
 ## Create a schema
 
-![AtomicAsssets createschema](/img/tutorials/howto_atomicassets/createschema_atomicassets.png)
+![AtomicAsssets createschema](/assets/images/tutorials/howto_atomicassets/createschema_atomicassets.png)
 
 - authorized_creator: Name of an account authorised to manipulate the collection. The action must be signed by this account.
 - collection_name: Name of the collection we are managing.
@@ -117,7 +117,7 @@ const createSchema = async (
 
 After creating the schema we realise that a character in the game will be exposed to dangers and should be protected by armour. We cannot modify attributes that already exist in a schema, but we can add new attributes with the action "*extendschema*".
 
-![AtomicAsssets createschema](/img/tutorials/howto_atomicassets/extendschema_atomicassets.png)
+![AtomicAsssets createschema](/assets/images/tutorials/howto_atomicassets/extendschema_atomicassets.png)
 
 This is the new data we will add to the schema:
 - Armour: uint16

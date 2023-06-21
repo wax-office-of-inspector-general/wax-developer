@@ -16,7 +16,7 @@ Minting NFTs consists of creating instances from a reference template, which con
 
 The parameters of the action would be the following:
 
-![AtomicAsssets mintasset](/img/tutorials/howto_atomicassets/atomiassets_mintasset.png)
+![AtomicAsssets mintasset](/assets/images/tutorials/howto_atomicassets/atomiassets_mintasset.png)
 
 
 - authorised_minter: Account authorised by the collection.
@@ -32,7 +32,7 @@ Immutable_data and mutable_data are defined as objects of type [ATTRIBUTE_MAP](h
 
 We can consult the "config" table of the smart contract atomicassets to check which tokens are currently allowed to be associated with NFTs as not all of them are allowed.
 
-AtomicAsssets config](/img/tutorials/howto_atomicassets/atomicassets_supportedtokens.png)
+AtomicAsssets config](/assets/images/tutorials/howto_atomicassets/atomicassets_supportedtokens.png)
 
 If you need to associate other types of tokens to an NFT, or even other NFTs, you can use third-party utilities, such as Blenderizer V.2
 :::
@@ -128,30 +128,30 @@ const mintAsset = async (
 ```
 Again, if we trace the ID of the transaction performed, we can get the ID of the new NFT
 
-![AtomicAsssets transfer traces](/img/tutorials/howto_atomicassets/atomicassets_tracesmintasset.png)
+![AtomicAsssets transfer traces](/assets/images/tutorials/howto_atomicassets/atomicassets_tracesmintasset.png)
 
 And if we go to an NFT browser, like the AtomicHub marketplace, we can see our NFT.
 
-![AtomicAsssets new NFT](/img/tutorials/howto_atomicassets/atomicasset_mintasset.png)
+![AtomicAsssets new NFT](/assets/images/tutorials/howto_atomicassets/atomicasset_mintasset.png)
 
 ## What does the NFT we have created look like?
 
 
 We can access the collections table of the smart contract atomicassets to check it (enter the collection name in the search filter):
 
-![AtomicAsssets mintasset](/img/tutorials/howto_atomicassets/aa_coltable.png)
+![AtomicAsssets mintasset](/assets/images/tutorials/howto_atomicassets/aa_coltable.png)
 
 We can also access the schema table to see the schema we have created (this time we will use the name of the collection to set the scope of the search):
 
-![AtomicAsssets mintasset](/img/tutorials/howto_atomicassets/aa_schematable.png)
+![AtomicAsssets mintasset](/assets/images/tutorials/howto_atomicassets/aa_schematable.png)
 
 We can see the structure of the template by consulting the table "templates".
 
-![AtomicAsssets mintasset](/img/tutorials/howto_atomicassets/aa_templatetable.png)
+![AtomicAsssets mintasset](/assets/images/tutorials/howto_atomicassets/aa_templatetable.png)
 
 By consulting the "asset" table and filtering by owner name and NFT ID, we obtain the data of the NFT itself.
 
-![AtomicAsssets mintasset](/img/tutorials/howto_atomicassets/aa_assettable.png)
+![AtomicAsssets mintasset](/assets/images/tutorials/howto_atomicassets/aa_assettable.png)
 
 If you look, some of the information is serialised to save RAM, which makes it difficult to verify the information in the tables. Pink Network has developed an [API service](https://github.com/pinknetworkx/eosio-contract-api) to facilitate queries to the NFT database. Some WAX guilds offer redundant replicas of this service for easy access and availability. If we make use of one of those APIs, for example, the one maintained by 3DK Render on testnet, the guild that shares this tutorial, to access the NFT information we can get something like this (depending on the NFT created in our exercise):
 

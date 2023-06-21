@@ -14,7 +14,7 @@ AtomicAssets has two actions to manage templates:
 
 When creating a template we will make use of the data types declared in the schema to which the template will belong and assign values to those attributes. In this way, each time we mint a new NFT from the template we will not need to repeat that information; it is contained in the template.
 
-![AtomicAsssets createschema](/img/tutorials/howto_atomicassets/createtempl_atomicassets.png)
+![AtomicAsssets createschema](/assets/images/tutorials/howto_atomicassets/createtempl_atomicassets.png)
 
 - authorised_crator: Account authorised by the collection to perform the action.
 - collection_name: Name of the collection
@@ -122,15 +122,15 @@ const createTempl = async (
 ```
 Once the action is executed, and if there are no problems, we will get the transaction information as a return. We can capture the transaction ID to analyse the response from the AtomicAssets smart contract.
 
-![AtomicAsssets createschema](/img/tutorials/howto_atomicassets/transaction_id.png)
+![AtomicAsssets createschema](/assets/images/tutorials/howto_atomicassets/transaction_id.png)
 
 If we analyse the transaction in a explorer, we can see that the smart contract replied with another action: "lognewtempl". This action includes a piece of information that will be of vital importance to us: the ID of the newly created template.
 
-![AtomicAsssets createschema](/img/tutorials/howto_atomicassets/template_id_traces.png)
+![AtomicAsssets createschema](/assets/images/tutorials/howto_atomicassets/template_id_traces.png)
 
 We can also go to the Atomic market website (AtomicHub) and check out the templates created by the collection:
 
-![AtomicAsssets createschema](/img/tutorials/howto_atomicassets/template_view.png)
+![AtomicAsssets createschema](/assets/images/tutorials/howto_atomicassets/template_view.png)
 
 ## Lock a template
 
@@ -141,7 +141,7 @@ Whether a template has been configured with a limit of impressions or to infinit
 
 For this AtomicAssets has the action "*locktemplate*".
 
-![AtomicAsssets createschema](/img/tutorials/howto_atomicassets/locktemplate_atomicassets.png)
+![AtomicAsssets createschema](/assets/images/tutorials/howto_atomicassets/locktemplate_atomicassets.png)
 
 - athorized_editor: Name of the account authorised by the collection. It must be the one who signs the transaction.
 - collection_name: Name of the collection.

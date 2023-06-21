@@ -10,7 +10,7 @@ It doesn’t matter if our intention is to create a series of NFTs for blockchai
 
 All the collection creation and management operations can be done from the official AtomicHub interface but, in this series of articles, we are going to explain how we can manage all the necessary operations to create and maintain our collection of NFTs from JavaScrip.
 
-![AtomicAsssets Actions](/img/tutorials/howto_atomicassets/atomicassets_actions.png)
+![AtomicAsssets Actions](/assets/images/tutorials/howto_atomicassets/atomicassets_actions.png)
 
 These are the actions we are going to cover in this article:
 

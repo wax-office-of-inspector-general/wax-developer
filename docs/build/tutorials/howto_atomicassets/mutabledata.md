@@ -28,7 +28,7 @@ AtomicAssets is the most popular smart contract from WAX Blockchain -as well as 
 
 Here we can see an example of an NFT -from a card game- with immutable data to the left and mutable data to the right. In this case we can see that the card level (Lvl) can rise, as its “strong”, “shield”, “loot” and other attributes can.
 
-![AtomicAsssets mintasset](/img/tutorials/howto_atomicassets/mutabledata_aa.png)
+![AtomicAsssets mintasset](/assets/images/tutorials/howto_atomicassets/mutabledata_aa.png)
 
 Let us see how to modify them, now.
 
@@ -65,7 +65,7 @@ Let us see how to do this in JavaScript now.
 
 For this example we need to call the "setassetdata" action from the AtomicAssets' smart contract. This action requires of four parameters:
 
-![AtomicAsssets mintasset](/img/tutorials/howto_atomicassets/setassets_aa.png)
+![AtomicAsssets mintasset](/assets/images/tutorials/howto_atomicassets/setassets_aa.png)
 
 - **authorized_editor**: the name of the account which must be authorized to access the collection the NFT belongs to.
 - **asset_owner**: the name of the account belonging to the current owner of the asset -it is not necessary to be the owner of the asset in order to modify its mutable data; you just need to be authorized to do so, or be its creator.

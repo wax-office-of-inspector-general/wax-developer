@@ -103,16 +103,17 @@ Especially when you are starting out, bloks.io is a great option, since it offer
 
 ### Go to the producerjson contract:
 Click on this [link](https://waxblock.io/account/producerjson?action=set#contract-actions) to access the producerjson smartcontract.
-![](/img/wax-bp/bp-json/img01.png){:class="img-responsive"}
+
+![](/assets/images/wax-bp/bp-json/img01.png)
 
 ### Fill out the information and submit
 Select “set” and fill in your information. As account name just use the account name you have registered producer with and for the json field just copy the actual content of your bp.json. Don’t use the URL to your hosted bp.json here. Finally click on “Submit Transaction” and choose your wallet of choice.
 
-![](/img/wax-bp/bp-json/img02.png){:class="img-responsive"}
+![](/assets/images/wax-bp/bp-json/img02.png)
 
 If you have done everything correctly bloks.io will confirm your successful transaction. You can have a look at this sample transaction [here](https://waxblock.io/transaction/4bfb8f1219abd7f5e231bf54100c35604c0a655d6ff50925a472afdcf6e4bfe9).
 
-![](/img/wax-bp/bp-json/img03.png){:class="img-responsive"}
+![](/assets/images/wax-bp/bp-json/img03.png)
 
 ## Custom permission
 
@@ -120,8 +121,8 @@ For added security or if you often have to push the bp.json, we highly recommend
 
 The following pictures will show you which information you have to fill in, in order to set up the producerjson permission.
 
-![](/img/wax-bp/bp-json/img04.png){:class="img-responsive"}
-![](/img/wax-bp/bp-json/img05.png){:class="img-responsive"}
+![](/assets/images/wax-bp/bp-json/img04.png)
+![](/assets/images/wax-bp/bp-json/img05.png)
 
 **Important**: Don't forget to update your [chains.json](/docs/getting-started/chains-json) to contain the name of your bp.json and the according chainId.
 

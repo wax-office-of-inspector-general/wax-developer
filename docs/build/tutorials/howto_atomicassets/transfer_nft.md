@@ -12,7 +12,7 @@ Transferring an NFT from one user account to another is a matter of changing the
 
 To do so, we will call the "transfer" action of the smart contract atomicassets
 
-![AtomicAsssets transfer](/img/tutorials/howto_atomicassets/aa_transfer.png)
+![AtomicAsssets transfer](/assets/images/tutorials/howto_atomicassets/aa_transfer.png)
 
 - from: Originating account and current owner of the NFT. Must sign the transaction.
 - to: Destination account.

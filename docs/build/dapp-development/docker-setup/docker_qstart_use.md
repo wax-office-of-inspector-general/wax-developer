@@ -36,9 +36,9 @@ cleos -u https://wax-api-url get info
 
 When you start an interactive bash session, the *command line* is your Docker container bash prompt:
 
-![](/img/dapp-development/docker-setup/docker_root.jpg){:class="img-responsive"}
+![](/assets/images/dapp-development/docker-setup/docker_root.jpg)
 
 When you press `Enter` to run the command, the console prints a JSON response directly in your Docker container:
 
-![](/img/dapp-development/docker-setup/docker_results.jpg){:class="img-responsive"}
+![](/assets/images/dapp-development/docker-setup/docker_results.jpg)
 
