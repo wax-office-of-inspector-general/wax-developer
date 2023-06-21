@@ -27,7 +27,7 @@ export default {
 <style scoped lang="stylus">
 .content-columns-wrapper
   width: 100%
-  padding: 5em 0
+  padding: 0 0 3em 0
 
   display: grid
 

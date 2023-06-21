@@ -35,7 +35,7 @@ export default {
 <style scoped lang="stylus">
 .content-links-wrapper
   width: 100%
-  padding: 3em 0
+  padding: 0 0 3em 0
 
   align-items: center
   justify-content: space-between
