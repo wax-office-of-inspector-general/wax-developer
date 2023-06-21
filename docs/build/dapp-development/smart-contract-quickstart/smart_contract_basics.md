@@ -1,7 +1,6 @@
 ---
 title: Smart Contract Basics
 order: 61
-lang: en
 ---
 
 A WAX smart contract includes a collection of actions, type definitions, and persistent storage, allowing your dApp to sign transactions on the WAX Blockchain. When you call a smart contract from a front-end app:
@@ -22,7 +21,7 @@ C++ header files contain global declarations. Because WAX uses a fork of EOS (An
   #include <eosio/eosio.hpp>
 ```
 
-This gives your smart contract access to WAX's C/C++ API, allowing you to define actions and structures that enable your smart contract to communicate with the WAX Blockchain. Refer to [WAX-CDT API](/docs/api-reference/cdt_api) for more information.
+This gives your smart contract access to WAX's C/C++ API, allowing you to define actions and structures that enable your smart contract to communicate with the WAX Blockchain. Refer to [WAX-CDT API](/learn/api-reference/cdt_api) for more information.
 
 ### Actions
 
@@ -45,7 +44,7 @@ Transactions communicate using two models: inline and deferred.
 
 - **Inline:** An inline transaction is a synchronous-like communication model that executes in the same transaction scope. These actions are guaranteed to run in-order and at the same time the original action is called. If the transaction fails, you can revert changes in the previous actions.
 
-  For an example of an inline transaction, refer to EOS Network's guide <a href="https://docs.eosnetwork.com/docs/latest/getting-started/smart-contract-development/adding-inline-actions" target="_blank">Adding Inline Actions</a>.
+  For an example of an inline transaction, refer to EOS Network's guide <a href="https://docs.eosnetwork.com/docs/latest/" target="_blank">Adding Inline Actions</a>.
 
 - **Deferred:** A deferred action is an action that's scheduled to run in the future, similar to an asynchronous call. These transactions are not guaranteed to run (there is a potential of it being dropped by the node). The original (calling) action is applied to the WAX Blockchain when the action runs, and can not be reverted if the deferred transaction fails.
 
@@ -59,7 +58,7 @@ A smart contract and a WAX Blockchain Account communicate using the actions defi
 
 Permissions can also enable your smart contracts to handle notifications and make action calls to other smart contracts (using the `eosio.code` permission).
 
-Refer to EOS Network's guide <a href="https://docs.eosnetwork.com/docs/latest/protocol/accounts_and_permissions" target="_blank">Accounts and Permissions</a> for more information.
+Refer to EOS Network's guide <a href="https://docs.eosnetwork.com/docs/latest/" target="_blank">Accounts and Permissions</a> for more information.
 
 ### Persist Data
 
@@ -71,7 +70,7 @@ To persist data between the actions of one or more of your smart contracts, you'
 Persistent data is stored on the WAX node's RAM and impacts the amount of WAX that you'll need to stake for your smart contract.
 :::
 
-Refer to EOS Network's guide <a href="https://docs.eosnetwork.com/docs/latest/getting-started/smart-contract-development/data-persistence" target="_blank">Data Persistence</a> for more information.
+Refer to EOS Network's guide <a href="https://docs.eosnetwork.com/docs/latest/" target="_blank">Data Persistence</a> for more information.
 
 ### WAX Dispatchers
 

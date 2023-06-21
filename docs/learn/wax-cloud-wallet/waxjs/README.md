@@ -1,6 +1,5 @@
 ---
 title: WaxJS Overview
-lang: en
 ---
 
 # wax.js

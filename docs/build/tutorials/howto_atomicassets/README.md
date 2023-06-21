@@ -1,7 +1,6 @@
 ---
 title: How-To AtomicAssets
 order: 30
-lang: en
 ---
 
 # How-To: AtomicAssets

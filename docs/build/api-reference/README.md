@@ -1,8 +1,6 @@
 ---
-title: Tutorials
-order: 95
+title: WAX API Reference
+order: 20
 ---
-
-# Tutorials
 
 <ChildTableOfContents :max="2" title="More inside this section" />

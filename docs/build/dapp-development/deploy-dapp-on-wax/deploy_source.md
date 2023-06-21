@@ -1,7 +1,6 @@
 ---
 title: WAX-CDT Deploy
 order: 73
-lang: en
 ---
 
 In this guide, you'll use the `cleos set contract` command to deploy your smart contract to the WAX mainnet.
@@ -45,7 +44,7 @@ You can also use an EOSIO compatible wallet (e.g., Scatter).
     <tbody>
     <tr>
     <td>-u</td>
-    <td>-u <a href="/docs/wax-infrastructure/#public-and-free-api-service-providers">chain-api-url</a></td>
+    <td>-u <a href="/operate/wax-infrastructure/#public-and-free-api-service-providers">chain-api-url</a></td>
     <td>This is the WAX Blockchain URL.</td>
     </tr>
 
@@ -112,7 +111,7 @@ You'll need to repeat Steps 1 and 2 for each of your contracts.
 
     | Parameter | Example | Description
     | --- | ----------- | -------------------------- |
-    | -u | -u [chain-api-url](/docs/wax-infrastructure/#public-and-free-api-service-providers/)| This is the WAX Blockchain URL. |
+    | -u | -u [chain-api-url](/operate/wax-infrastructure/#public-and-free-api-service-providers/)| This is the WAX Blockchain URL. |
     | contractAccount| HelloWorld10 | Your smart contract's account (created in Step 2). |
     | fullPath | d/wax-blockchain/wax-cdt/mycontracts/wax/build | The full path to your WASM and ABI files. |
     | wasmName | wax | Name of your WASM file. |

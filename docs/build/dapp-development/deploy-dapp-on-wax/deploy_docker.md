@@ -1,7 +1,6 @@
 ---
 title: Docker Deploy
 order: 72
-lang: en
 ---
 
 In this guide, you'll learn how to customize the **hello-world** build scripts to deploy your smart contracts to the WAX mainnet.
@@ -65,7 +64,7 @@ To modify the **hello-world** scripts to deploy your smart contract:
     Save the file.
 
 :::tip
-`NODEOS_URL` is the only optional parameter. Its default value is the mainnet deployment address [chain-api-url](/docs/wax-infrastructure/#public-and-free-api-service-providers/.  
+`NODEOS_URL` is the only optional parameter. Its default value is the mainnet deployment address [chain-api-url](/operate/wax-infrastructure/#public-and-free-api-service-providers/.  
 :::
 
 Once these changes have been made, you're ready to use the `make` scripts to build and deploy your smart contract.

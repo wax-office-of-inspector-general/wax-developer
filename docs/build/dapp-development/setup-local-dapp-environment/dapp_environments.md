@@ -1,14 +1,13 @@
 ---
 title: Blockchain Environments
 order: 20
-lang: en
 ---
 Below you'll find WAX versions, URLs, and development environment information.
 
 | Service | Description |
 |---------|-------------|
 | [Docker Images](https://hub.docker.com/u/waxteam) | Use WAX Docker images to run a local node, use blockchain tools, and compile your smart contracts. Refer to [Docker Quickstart](/build/dapp-development/docker-setup/) for more information. |
-| [waxjs](https://github.com/worldwide-asset-exchange/waxjs) | WaxJS Javascript API for integration with the WAX Cloud Wallet. Use this to easily sign in users and send transactions to the WAX Blockchain from your dApp. Refer to [WAX Cloud Wallet Quickstart](/docs/waa_waxjs_qstart/) for more information. |
+| [waxjs](https://github.com/worldwide-asset-exchange/waxjs) | WaxJS Javascript API for integration with the WAX Cloud Wallet. Use this to easily sign in users and send transactions to the WAX Blockchain from your dApp. Refer to [WAX Cloud Wallet Quickstart](/learn/wax-cloud-wallet/waxjs/waxjs_qstart) for more information. |
 | [wax-blockchain](https://github.com/worldwide-asset-exchange/wax-blockchain) | WAX Blockchain source files. Refer to [WAX Blockchain Setup](/build/dapp-development/wax-blockchain-setup/) to get started. |
 | [wax-cdt](https://github.com/worldwide-asset-exchange/wax-cdt) | WAX Contract Development Toolkit. Refer to [WAX Contract Development Toolkit (WAX-CDT)](/build/dapp-development/wax-cdt/) to get started. |
 
@@ -16,7 +15,7 @@ Below you'll find WAX versions, URLs, and development environment information.
 
 | Service | URL | Description |
 |---------|-----|-------------|
-| Blockchain URL | [chain-api-url](/docs/wax-infrastructure/#public-and-free-api-service-providers) | Used to make API calls and deploy your smart contracts to the WAX mainnet. |
+| Blockchain URL | [chain-api-url](/operate/wax-infrastructure/#public-and-free-api-service-providers) | Used to make API calls and deploy your smart contracts to the WAX mainnet. |
 | Blockchain P2P | peers.wax.io:9876 | Peering endpoint for synchronizing a producer or full node (with no protocol in front of it). |
 | Blockchain Explorer | [https://waxblock.io](https://waxblock.io/) | waxblock.io block explorer. |
 | WAX Account | (e.g., Scatter) | Create a WAX Blockchain Account. |
@@ -49,7 +48,7 @@ When you [Set Up a Local dApp Environment](/build/dapp-development/), you can ma
 You can write WAX smart contracts using the C++ programming language. No custom language is required, although you'll need to familiarize yourself with the WAX C/C++ API library. This library contains the core files required to communicate with the WAX Blockchain. When you're ready to get started, refer to:
 
 - [WAX Contract Development Toolkit (WAX-CDT)](/build/dapp-development/wax-cdt/)
-- [WAX-CDT API](/docs/api-reference/cdt_api/)
+- [WAX-CDT API](/learn/api-reference/cdt_api/)
 - [Smart Contract Quickstart](/build/dapp-development/smart-contract-quickstart/)
 
 ## Development Tools
@@ -58,6 +57,6 @@ You can use any third party C++ editor or IDE to write your smart contracts, suc
 
 [EOS Studio](https://www.eosstudio.io/) is a graphic IDE built for EOSIO dApp development, available on Linux, Mac OS, and Windows. This tool features a code editor, contract inspector, and a network manager. To integrate WAX with EOS Studio, refer to [How to use EOS Studio with WAX](https://github.com/worldwide-asset-exchange/wax-blockchain/tree/develop/samples/eos-studio). Our script provides a minimal integration, developed and tested with Ubuntu 18.04.
 
-[eosjs](https://github.com/EOSIO/eosjs) is a javascript API SDK you can use to easily communicate with the WAX Blockchain API. Refer to [WAX RPC API](/docs/api-reference/rpc_api/) for more information.
+[eosjs](https://github.com/EOSIO/eosjs) is a javascript API SDK you can use to easily communicate with the WAX Blockchain API. Refer to [WAX RPC API](/learn/api-reference/rpc_api/) for more information.
 
-[dfuse](https://www.dfuse.io) is a powerful suite of APIs that allow you to query the WAX Blockchain and stream real-time data. Refer to [dfuse for WAX dApps](/docs/api-reference/dfuse/) for more information.
+[dfuse](https://www.dfuse.io) is a powerful suite of APIs that allow you to query the WAX Blockchain and stream real-time data. Refer to [dfuse for WAX dApps](/learn/api-reference/dfuse/) for more information.

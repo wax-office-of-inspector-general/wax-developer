@@ -1,7 +1,6 @@
 ---
 title: Creating a bp.json
 order: 142
-lang: en
 ---
 
 :::tip
@@ -28,7 +27,7 @@ Self-explanatory. However, if you are not familiar with the naming scheme in the
 This is the field, where you can fill in the official name of your guild. Spaces are allowed.
 
 - **github_user**:<br />
-Important: List atleast one GitHub Account from your team here. These accounts could potentially be used to give you access to private Repositories.
+Important:  List atleast one GitHub Account from your team here. These accounts could potentially be used to give you access to private Repositories.
 
 - **chain_resources**:<br />
 You can list one website here, containing links to your chain related resources, such as snapshot sites or backups. An array is not allowed here.
@@ -68,7 +67,7 @@ Just host the bp.json at the root of that domain. So for example "example.com/wa
 
 # Pushing the bp.json on-chain
 
-If you have successfully created and hosted your [bp.json](/docs/wax-bp/bp-json), the next step would be to push that bp.json on-chain.
+If you have successfully created and hosted your [bp.json](/operate/wax-bp/bp-json), the next step would be to push that bp.json on-chain.
 
 ## Why push on-chain?
 Bp.jsons that are published on-chain offer a couple of benefits over those that are hosted on a website:
@@ -124,7 +123,7 @@ The following pictures will show you which information you have to fill in, in o
 ![](/assets/images/wax-bp/bp-json/img04.png)
 ![](/assets/images/wax-bp/bp-json/img05.png)
 
-**Important**: Don't forget to update your [chains.json](/docs/getting-started/chains-json) to contain the name of your bp.json and the according chainId.
+**Important**: Don't forget to update your [chains.json](/operate/wax-bp/chains-json) to contain the name of your bp.json and the according chainId.
 
 ## Helpful Links
 - Official Repository: [https://github.com/eosrio/bp-info-standard](https://github.com/eosrio/bp-info-standard)

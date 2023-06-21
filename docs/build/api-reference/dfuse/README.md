@@ -1,7 +1,6 @@
 ---
 title: dfuse for WAX dApps
 order: 120
-lang: en
 ---
 
 [dfuse](https://dfuse.eosnation.io) is a powerful suite of APIs for WAX dApp Developers. The dfuse platform allows you to easily execute searches, stream real-time data, and push transactions to the WAX Blockchain.

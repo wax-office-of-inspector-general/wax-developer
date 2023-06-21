@@ -1,7 +1,6 @@
 ---
 title: WAX RNG Basics
 order: 82
-lang: en
 ---
 
 ## How it Works

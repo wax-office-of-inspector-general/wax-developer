@@ -1,7 +1,6 @@
 ---
 title: Create a WAX NFT
 order: 89
-lang: en
 ---
 
 In this example, we'll write a smart contract that creates a WAX NFT Sticker using the **simpleassets** smart contract.

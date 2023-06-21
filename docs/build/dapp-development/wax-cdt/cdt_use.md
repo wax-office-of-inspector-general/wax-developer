@@ -1,7 +1,6 @@
 ---
 title: WAX-CDT Sample Contracts
 order: 52
-lang: en
 ---
 
 WAX-CDT provides a **wax-cdt/examples** directory that includes the following sample smart contracts:
@@ -15,7 +14,7 @@ Each project includes two **CMakeLists.txt** files: one in the project's root di
 In this tutorial, you'll learn how to use the **make** scripts to build the Hello World example.
 
 :::warning
-<strong>Note:</strong> These samples were created with **eosio-init** (part of the [WAX-CDT Options](/docs/tools/cdt_options) suite of tools). Refer to [Create a Smart Contract](/build/dapp-development/wax-cdt/cdt_use.html#compile-hello-world) to customize these scripts for your smart contracts.
+<strong>Note:</strong> These samples were created with **eosio-init** (part of the [WAX-CDT Options](/build/tools/cdt_options) suite of tools). Refer to [Create a Smart Contract](/build/dapp-development/wax-cdt/cdt_use.html#compile-hello-world) to customize these scripts for your smart contracts.
 :::
 
 ## Compile Hello World

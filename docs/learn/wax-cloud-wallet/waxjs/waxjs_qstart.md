@@ -1,7 +1,6 @@
 ---
 title: WAX Cloud Wallet Quickstart
 order: 3
-lang: en
 ---
 
 When users sign up or sign in to WAX Cloud Wallet, a WAX Blockchain Account is automatically created. Users can easily manage their resources, blockchain transactions, NFTs, and whitelisted dApps from the WAX Cloud Wallet dashboard. 

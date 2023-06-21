@@ -1,10 +1,9 @@
 ---
 title: Ricardian Clauses
 order: 112
-lang: en
 ---
 
-Similar to a [Ricardian Contract](/docs/tools/ricardian_contract), a Ricardian clause is a digital document that specifies the terms of your entire smart contract - not just per action. 
+Similar to a [Ricardian Contract](/build/tools/ricardian_contract), a Ricardian clause is a digital document that specifies the terms of your entire smart contract - not just per action. 
 
 To associate a Ricardian clause with your smart contract, you'll need to create a markdown file. 
 

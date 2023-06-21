@@ -1,7 +1,6 @@
 ---
 title: WAX Testnet Quickstart
 order: 66
-lang: en
 ---
 
 In this guide, you'll learn how to create Testnet accounts and deploy your smart contracts to the WAX Testnet.

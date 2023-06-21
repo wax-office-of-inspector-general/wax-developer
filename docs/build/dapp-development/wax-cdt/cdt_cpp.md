@@ -1,10 +1,9 @@
 ---
 title: WAX-CDT Build Tools
 order: 53
-lang: en
 ---
 
-WAX-CDT includes various **eosio** commands, built around the <a href="https://clang.llvm.org/" target="_blank">Clang</a> front-end and tooling infrastructure. This collection includes various tools to build optimized, high-performance WASM files. Refer to [WAX-CDT Options](/docs/tools/cdt_options) for more information.
+WAX-CDT includes various **eosio** commands, built around the <a href="https://clang.llvm.org/" target="_blank">Clang</a> front-end and tooling infrastructure. This collection includes various tools to build optimized, high-performance WASM files. Refer to [WAX-CDT Options](/build/tools/cdt_options) for more information.
 
 It's recommended that you use **eosio-init** to [Create a Smart Contract](/build/dapp-development/wax-cdt/cdt_use.html#compile-hello-world). This tool provides scripts to easily organize and build your project. 
 
@@ -19,7 +18,7 @@ To generate a WASM and ABI file for your smart contract:
 2. Run the **eosio-cpp** build command with the **-abigen** parameter.
 
 :::tip
-<strong>eosio-cpp</strong> also includes Ricardian terms in your ABI file. Refer to [Ricardian Contracts](/docs/tools/ricardian_contract) and [Ricardian Clauses](/docs/tools/ricardian_clause) for more information.
+<strong>eosio-cpp</strong> also includes Ricardian terms in your ABI file. Refer to [Ricardian Contracts](/build/tools/ricardian_contract) and [Ricardian Clauses](/build/tools/ricardian_clause) for more information.
 :::
 
 ```

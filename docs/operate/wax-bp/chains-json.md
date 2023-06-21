@@ -1,12 +1,11 @@
 ---
 title: Creating a chains.json
 order: 141
-lang: en
 ---
 
 ## Why a chains.json?
 
-Since a [bp.json](/docs/wax-bp/bp-json) is needed for every chain (this includes a separate producerjson for Mainnet and Testnet), there is the need for listing all the producerjson associated with a block producer and chain. The chains.json simply lists and links the bp.json to a chain-id.
+Since a [bp.json](/operate/wax-bp/bp-json) is needed for every chain (this includes a separate producerjson for Mainnet and Testnet), there is the need for listing all the producerjson associated with a block producer and chain. The chains.json simply lists and links the bp.json to a chain-id.
 
 ## Creating the chains.json
 
@@ -44,4 +43,4 @@ location ~ \.json {
 ## Helpful Links
 - Template chains.json with ChainIds: [https://github.com/Blacklusion/chains.json](https://github.com/Blacklusion/chains.json)
 - Tools to validate your chains.json: [Validationcore](https://wax.validationcore.io/validations) [EOS Nation Validator](https://validate.eosnation.io/wax/producers/)
-- [bp.json tutorial](/docs/wax-bp/bp-json)
+- [bp.json tutorial](/operate/wax-bp/bp-json)

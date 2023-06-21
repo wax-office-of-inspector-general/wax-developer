@@ -1,7 +1,6 @@
 ---
 title: dfuse Example
 order: 121
-lang: en
 ---
 
 In this example, we'll sign up for a free account and get the WAX RNG abi using dfuse REST. 

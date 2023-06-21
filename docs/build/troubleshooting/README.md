@@ -1,7 +1,6 @@
 ---
 title: Troubleshooting
 order: 200
-lang: en
 ---
 
 Below is a list of known issues and fixes (if available).

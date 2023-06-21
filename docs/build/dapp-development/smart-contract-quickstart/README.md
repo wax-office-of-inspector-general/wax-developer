@@ -1,7 +1,6 @@
 ---
 title: Smart Contract Quickstart
 order: 60
-lang: en
 ---
 
 A WAX smart contract is a WASM compiled C++ file that executes actions on the WAX Blockchain and stores persistent data on every WAX full node's RAM.

@@ -1,7 +1,6 @@
 ---
 title: Set Up a Local dApp Environment
 order: 40
-lang: en
 ---
 
 Our [Docker Development Image](/build/dapp-development/docker-setup/) includes everything you need to set up a local development environment. This reduces your development costs and offers a fully-functional sandbox for both new and experienced dApp developers. The WAX local testnet allows you to easily:
@@ -14,7 +13,7 @@ Our [Docker Development Image](/build/dapp-development/docker-setup/) includes e
 
 ## How it Works
 
-To set up your local development environment, you'll need to use three key [Blockchain Tools](/docs/tools/blockchain_tools): keosd, nodeos, and cleos.
+To set up your local development environment, you'll need to use three key [Blockchain Tools](/build/tools/blockchain_tools): keosd, nodeos, and cleos.
 
 <!--To get started, you'll need to use three key tools included in the [WAX Blockchain Setup](/build/dapp-development/wax-blockchain-setup/):
 

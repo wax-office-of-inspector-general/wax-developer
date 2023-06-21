@@ -1,7 +1,6 @@
 ---
 title: WAX Blockchain Setup
 order: 30
-lang: en
 ---
 
 To set up and use the WAX Blockchain, it's recommended that you use our <a href="https://hub.docker.com/u/waxteam" target="_blank">waxteam - Docker Images</a>. Our docker images provide a fast, fully supported way to run a node in seconds. Refer to [Docker Quickstart](/build/dapp-development/docker-setup/) for more information.
@@ -11,7 +10,7 @@ Our production and development Docker images include everything that's available
 If you'd like to access our sample contracts and scripts from your local drive or have a need to install the WAX Blockchain instead of using Docker, you can use this guide to download and optionally build the WAX Blockchain source code.
 
 :::warning
-<strong>Important:</strong> At this time, pre-compiled packages are not available. Support is <strong>not</strong> available when you build the WAX blockchain from source.
+Important: At this time, pre-compiled packages are not available. Support is <strong>not</strong> available when you build the WAX blockchain from source.
 :::
 
 ## What's Included
@@ -20,7 +19,7 @@ The WAX Blockchain is a fork of <a href="https://docs.eosnetwork.com/" target="_
 
 - WAX Blockchain source code
 - Dependencies
-- [Blockchain Tools](/docs/tools/blockchain_tools), including keosd, nodeos, and cleos
+- [Blockchain Tools](/build/tools/blockchain_tools), including keosd, nodeos, and cleos
 - Sample contracts
 
 You can use these components to manage local wallets, create local accounts, interact with the WAX Blockchain, and more.
@@ -41,10 +40,10 @@ The WAX Source Code Repository includes a Hello World sample to quickly build an
 
 If you're not using our Docker images, you'll need to:
 
-- Refer to [Supported Operating Systems](/docs/tools/os) to make sure you meet the operating system requirements.
+- Refer to [Supported Operating Systems](/build/tools/os) to make sure you meet the operating system requirements.
 
   :::warning
-  <strong>Ubuntu 18.04 Users:</strong> Refer to [Known Issues](/docs/troubleshooting/) before you begin the WAX Blockchain Setup.
+  <strong>Ubuntu 18.04 Users:</strong> Refer to [Known Issues](/build/troubleshooting/) before you begin the WAX Blockchain Setup.
   :::
 
 - Have at least 7 GB of free RAM.

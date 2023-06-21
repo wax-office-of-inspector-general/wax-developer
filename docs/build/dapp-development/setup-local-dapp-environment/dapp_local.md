@@ -1,7 +1,6 @@
 ---
 title: Start a Local Node
 order: 41
-lang: en
 ---
 
 To start a local WAX node on your development server:
@@ -52,7 +51,7 @@ To start a local WAX node on your development server:
 
 
 :::warning
-    <strong>Important:</strong> The --access-control-allow-origin='*' parameter enables Cross-Origin Resource Sharing (CORS). Never enable this for a public node.     
+    Important: The --access-control-allow-origin='*' parameter enables Cross-Origin Resource Sharing (CORS). Never enable this for a public node.     
 :::
 
     When the command completes, the console prints out a number, similar to the following:

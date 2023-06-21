@@ -1,7 +1,6 @@
 ---
 title: Create a Wallet
 order: 43
-lang: en
 ---
 
 A WAX wallet is a named, encrypted repository of public and private key pairs that are stored in a file on your local server (not the blockchain). You'll need to create a development wallet to:
@@ -122,7 +121,7 @@ In your local development environment, this **eosio** user will simulate your WA
 To sign transactions on behalf of the **eosio** system user, you'll need to import the **eosio** development key into your wallet. 
 
 :::tip
-<strong>Important:</strong> This development key is the **same for all WAX and Antelope developers**. Never use this key for a production WAX Account! Doing so will most certainly result in the loss of access to your account.
+Important: This development key is the **same for all WAX and Antelope developers**. Never use this key for a production WAX Account! Doing so will most certainly result in the loss of access to your account.
 :::
 
 

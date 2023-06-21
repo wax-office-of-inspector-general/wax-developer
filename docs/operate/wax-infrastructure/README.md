@@ -1,6 +1,5 @@
 ---
-title: WAX Infrastructure/APIs
-lang: en-US
+title: WAX Infrastructure/APIs-US
 ---
 
 # Guides for Node and API operators

@@ -1,7 +1,6 @@
 ---
 title: Run a WAX Container
 order: 22
-lang: en
 ---
 
 To run the **waxteam/dev** Docker image:

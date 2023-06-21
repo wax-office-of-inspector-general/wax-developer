@@ -1,7 +1,6 @@
 ---
 title: Install WaxJS
 order: 1
-lang: en
 ---
 
 There are several ways to download and install **WaxJS**:

@@ -1,7 +1,6 @@
 ---
 title: Deploy an EOS dApp on WAX
 order: 10
-lang: en
 ---
 
 WAX is fully compatible with EOS smart contracts and offers free blockchain accounts and cheaper fees. This guide provides an overview of how to deploy your EOS dApps to the WAX mainnet.
@@ -16,7 +15,7 @@ WAX is fully compatible with EOS smart contracts and offers free blockchain acco
 
     <a href="https://all-access.wax.io" target="_blank">http://<span></span>all-access.wax.io</a>
 
-    A WAX Cloud Wallet Account automatically creates a WAX Blockchain account for your customers and allows you to integrate WaxJS into your dApps. Refer to [WAX Cloud Wallet Quickstart](/docs/waa_waxjs_qstart/)for more information.
+    A WAX Cloud Wallet Account automatically creates a WAX Blockchain account for your customers and allows you to integrate WaxJS into your dApps. Refer to [WAX Cloud Wallet Quickstart](/learn/wax-cloud-wallet/waxjs/waxjs_qstart)for more information.
 
 ## Development Environment
 

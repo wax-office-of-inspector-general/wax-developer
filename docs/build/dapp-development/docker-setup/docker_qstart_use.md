@@ -1,7 +1,6 @@
 ---
 title: Run Commands
 order: 23
-lang: en
 ---
 
 Once your **waxdev** bash session starts, you can use common commands to interact with your container. For example, to list your container's contents, use the `ls` command.

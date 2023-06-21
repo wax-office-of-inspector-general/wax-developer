@@ -1,7 +1,6 @@
 ---
 title: How to explore WAX Blockchain
 order: 97
-lang: en
 ---
 
 # How to explore WAX Blockchain block by block at a low level (Node.JS)
@@ -21,7 +20,7 @@ The "Filler" engine must connect to a SHIP node of the blockchain in order to re
 https://github.com/eosdac/eosio-statereceiver
 
 :::warning
-<strong>Note</strong>: For this tutorial, the library has been modified to update it to "enf-eosjs", the new JavaScript library for Antelope blockchains that replaces the obsolete "eosjs". For that reason, in the example repository, the files "connection.js" and "statereceiver.js" of that library have been included directly as part of the code.
+ For this tutorial, the library has been modified to update it to "enf-eosjs", the new JavaScript library for Antelope blockchains that replaces the obsolete "eosjs". For that reason, in the example repository, the files "connection.js" and "statereceiver.js" of that library have been included directly as part of the code.
 :::
 
 ## Structure
@@ -82,7 +81,7 @@ sr.registerTraceHandler(trace_handler);
 ```
 
 :::warning
-<strong>Note</strong>: StateReceiver allows us to create other types of handles to receive data. We can create handles to process blocks, traces or deltas, for example.
+ StateReceiver allows us to create other types of handles to receive data. We can create handles to process blocks, traces or deltas, for example.
 :::
 
 ## processTrace
@@ -180,6 +179,6 @@ At the start of each cycle we check if Queue has data to process or if the proce
 
 A complete example is available on Github:
 
-https://github.com/3dkrender/WAXCrawler
+[https://github.com/3dkrender/WAXCrawler](https://github.com/3dkrender/WAXCrawler)
 
 In this example we will crawl the blockchain to locate those transactions over 10000 WAX. We use a database to store the number of the first block from where we want to start crawling the blockchain and to store the transactions that meet the condition.

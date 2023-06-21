@@ -1,7 +1,6 @@
 ---
 title: Create a Smart Contract
 order: 62
-lang: en
 ---
 # Create a Smart Contract
 
@@ -43,7 +42,7 @@ To create your first WAX smart contract using **eosio-init**:
     - mycontracts/wax/ricardian 
     - mycontracts/wax/src 
 
-3. Optional. Add a [Ricardian Clause](/docs/tools/ricardian_clause). A  [Ricardian Contract](/docs/tools/ricardian_contract) is already included by default.
+3. Optional. Add a [Ricardian Clause](/build/tools/ricardian_clause). A  [Ricardian Contract](/build/tools/ricardian_contract) is already included by default.
 
 You should now have a smart contract template, including a sample smart contract (mycontracts/wax/src/wax.cpp). This contract includes the following action:
 

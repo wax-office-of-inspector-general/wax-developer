@@ -1,7 +1,6 @@
 ---
 title: Test Your WAX RNG Contract
 order: 86
-lang: en
 ---
 
 To test the smart contract we will make a call to action *getrnd* with the following parameters:

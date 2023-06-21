@@ -1,7 +1,6 @@
 ---
 title: How to Set Up a WAX Atomic API Node
 order: 4
-lang: en
 ---
 
 The AtomicAssets NFT standard developed by  [Pink.gg](https://pink.gg/)  has become synonymous with the WAX Protocol Network and the widely utilised  [WAX Atomic Hub](https://wax.atomichub.io/).

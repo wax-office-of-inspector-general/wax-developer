@@ -183,6 +183,7 @@ module.exports = [
                             '/build/tutorials/create-wax-rng-smart-contract/rng_deploy',
                         ],
                     },
+                    '/build/tutorials/howto_blockexplorer'
                 ],
             },
             {
@@ -195,6 +196,23 @@ module.exports = [
                     '/build/tools/cdt_options',
                     '/build/tools/ricardian_contract',
                     '/build/tools/ricardian_clause',
+                ],
+            },
+            {
+                title: 'API Reference',
+                path: '/build/api-reference/',
+                collapsable: true,
+                children: [
+                    '/build/api-reference/rpc_api',
+                    '/build/api-reference/cdt_api',
+                    {
+                        title: 'dFuse',
+                        path: '/build/api-reference/dfuse',
+                        collapsable: true,
+                        children: [
+                            '/build/api-reference/dfuse/dfuse_example',
+                        ],
+                    }
                 ],
             },
         ],

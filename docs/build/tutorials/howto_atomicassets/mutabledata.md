@@ -1,7 +1,6 @@
 ---
 title: Modifying mutable data for AA
 order: 44
-lang: en
 ---
 ## Index
 

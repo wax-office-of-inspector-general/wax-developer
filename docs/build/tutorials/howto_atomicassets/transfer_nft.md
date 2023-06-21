@@ -1,7 +1,6 @@
 ---
 title: Transfer atomicassets NFTs
 order: 42
-lang: en
 ---
 Among the attributes of an NFT, as we have seen in the previous document, we can find the "owner" attribute, which specifies who is the current owner of the NFT.
 

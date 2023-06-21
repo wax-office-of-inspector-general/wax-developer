@@ -1,7 +1,6 @@
 ---
 title: Supported Operating Systems
 order: 100
-lang: en
 ---
 # Supported Operating Systems
 

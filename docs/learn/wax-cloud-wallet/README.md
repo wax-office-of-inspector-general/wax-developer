@@ -1,6 +1,5 @@
 ---
-title: WAX Cloud Wallet
-lang: en-US
+title: WAX Cloud Wallet-US
 ---
 
 # WAX Cloud Wallet

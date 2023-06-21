@@ -1,6 +1,5 @@
 ---
 title: boost.wax
-lang: en
 ---
 
 # boost.wax

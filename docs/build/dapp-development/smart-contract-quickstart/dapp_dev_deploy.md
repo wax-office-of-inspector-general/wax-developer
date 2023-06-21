@@ -1,7 +1,6 @@
 ---
 title: Deploy to Your Blockchain
 order: 65
-lang: en
 ---
 
 <!--To deploy your smart contract to your local development blockchain, you'll need to:
@@ -32,7 +31,7 @@ In this guide, you'll use **cleos** to deploy and test the wax smart contract yo
     ```shell
     cleos wallet unlock --password PW5KRXKVx25yjL3FvxxY9YxYxxYY9Yxx99yyXTRH8DjppKpD9tKtVz
     ```
-- You must create a WAX Account for your smart contract. Refer to [Create Accounts](/docs/dapp_account) if you haven't completed this step.
+- You must create a WAX Account for your smart contract. Refer to [Create Accounts](/build/dapp-development/smart-contract-quickstart/dapp_account) if you haven't completed this step.
 
 ## Deploy Your Smart Contract
 

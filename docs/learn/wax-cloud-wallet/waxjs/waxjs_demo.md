@@ -1,7 +1,6 @@
 ---
 title: WaxJS Demo
 order: 4
-lang: en
 ---
 
 Below is a basic example of WaxJS functionality. To use this demo, click WAX Login (if you're not automatically logged in), then click Sign Transaction.

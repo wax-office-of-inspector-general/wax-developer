@@ -1,7 +1,6 @@
 ---
 title: WAX-CDT Options
 order: 110
-lang: en
 ---
 
 Below is a list of common WAX-CDT tools and parameters. You can use these tools to generate WASM and ABI files for your smart contracts.

@@ -1,7 +1,6 @@
 ---
 title: Manage Containers
 order: 24
-lang: en
 ---
 
 To exit your interactive bash session (without stopping your container), press `ctrl-p` + `ctrl-q` to send an escape sequence. The console prints:
