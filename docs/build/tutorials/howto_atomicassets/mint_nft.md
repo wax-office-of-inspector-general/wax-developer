@@ -1,7 +1,6 @@
 ---
 title: Minting atomicassets NFTs
 order: 40
-lang: es
 ---
 After having created the structure of the collection, it is time to start operating with the NFTs. To do so, the atomicassets smart contract offers us these actions:
 

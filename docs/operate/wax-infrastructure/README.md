@@ -3,6 +3,8 @@ title: WAX Infrastructure/APIs
 lang: en-US
 ---
 
+# Guides for Node and API operators
+
 Infrastructure is the backbone of any application and the same goes with WAX Blockchain and the Web3, DeFi, NFT applications built on top of it.
 
 Compared to other blockchains like Ethereum & Bitcoin, running WAX nodes is quite different and needs a good understanding of the underlying Antelope blockchain software operations.

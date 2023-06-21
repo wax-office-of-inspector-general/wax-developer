@@ -50,11 +50,15 @@ module.exports = {
       title: 'About WAX OIG',
       links: [
         {
-          text: 'WAX OIG website',
+          text: 'OIG Github',
+          href: 'https://github.com/wax-office-of-inspector-general'
+        },
+        {
+          text: 'OIG website',
           href: 'https://oig.wax.io/'
         },
         {
-          text: 'WAX OIG Ratings',
+          text: 'OIG Ratings',
           href: 'https://www.notion.so/wax-oig/Guild-Ratings-0e51defdf10641748a253ccc7f5146b1'
         },
         {

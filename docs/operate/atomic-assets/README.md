@@ -4,4 +4,4 @@ order: 2
 lang: en
 ---
 
-Atomic Assets API
+<ChildTableOfContents :max="2" title="More inside this section" />
