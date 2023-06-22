@@ -3,6 +3,8 @@ title: Start a Local Node
 order: 41
 ---
 
+# Start a Local Node
+
 To start a local WAX node on your development server:
 
 1.  From the command line, enter the following to initialize **keosd**.

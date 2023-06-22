@@ -3,6 +3,8 @@ title: Deploy an EOS dApp on WAX
 order: 10
 ---
 
+# Deploy an EOS dApp on WAX
+
 WAX is fully compatible with EOS smart contracts and offers free blockchain accounts and cheaper fees. This guide provides an overview of how to deploy your EOS dApps to the WAX mainnet.
 
 ## Blockchain Accounts

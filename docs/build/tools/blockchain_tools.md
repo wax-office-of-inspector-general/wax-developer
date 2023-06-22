@@ -3,6 +3,8 @@ title: Blockchain Tools
 order: 99
 ---
 
+# Blockchain Tools
+
 To communicate with the WAX Blockchain, create a local development environment, and locally deploy your smart contracts, you'll need to use three key tools included in the [WAX Blockchain Setup](//build/dapp-development/wax-blockchain-setup/):
 
 ## keosd

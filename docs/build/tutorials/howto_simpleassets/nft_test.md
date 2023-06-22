@@ -3,6 +3,8 @@ title: Test Your NFT Smart Contract
 order: 91
 ---
 
+# Test Your NFT Smart Contract 
+
 Now that you've deployed your WAX NFT smart contract, it's time to run a test action and create your first NFT.
 
 ## Create a WAX NFT

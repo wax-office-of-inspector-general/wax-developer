@@ -2,6 +2,7 @@
 title: Supported Operating Systems
 order: 100
 ---
+
 # Supported Operating Systems
 
 WAX currently supports the following operating systems:

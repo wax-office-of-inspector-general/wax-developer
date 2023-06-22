@@ -3,6 +3,8 @@ title: Docker Deploy
 order: 72
 ---
 
+# Docker Deploy
+
 In this guide, you'll learn how to customize the **hello-world** build scripts to deploy your smart contracts to the WAX mainnet.
 
 Before you begin:

@@ -3,6 +3,8 @@ title: Deploy Your dApp on WAX
 order: 70
 ---
 
+# Deploy Your dApp on WAX
+
 To deploy your dApp on WAX, you'll need to use [WAX-CDT](/build/dapp-development/wax-cdt/)and [Blockchain Tools](/build/tools/blockchain_tools/)to:
 
 - Compile your smart contracts
@@ -59,3 +61,5 @@ No matter which deployment option you choose, you'll need to:
 
 - Create a self-managed WAX Blockchain Account.
 - Make sure you have enough WAX staked in your account to allocate resources.
+
+<ChildTableOfContents :max="2" title="More inside this section" />

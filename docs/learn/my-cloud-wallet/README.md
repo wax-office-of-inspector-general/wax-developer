@@ -2,8 +2,6 @@
 title: MyCloudWallet
 ---
 
-<ChildTableOfContents :max="2" title="More inside this section" />
-
 # MyCloudWallet
 
 With just a few lines of code, MyCloudWallet makes it as simple for customers to use your dApp as any mainstream app.
@@ -43,3 +41,4 @@ WCW is the uncomplicated crypto wallet
 
 Convert more customers. Completely free.
 
+<ChildTableOfContents :max="2" title="More inside this section" />

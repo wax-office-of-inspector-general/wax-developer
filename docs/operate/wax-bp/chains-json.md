@@ -3,6 +3,8 @@ title: Creating a chains.json
 order: 141
 ---
 
+# Creating a chains.json
+
 ## Why a chains.json?
 
 Since a [bp.json](/operate/wax-bp/bp-json) is needed for every chain (this includes a separate producerjson for Mainnet and Testnet), there is the need for listing all the producerjson associated with a block producer and chain. The chains.json simply lists and links the bp.json to a chain-id.

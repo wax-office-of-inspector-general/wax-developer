@@ -3,6 +3,8 @@ title: Uninstall WAX-CDT
 order: 95
 ---
 
+# Uninstall WAX-CDT
+
 If you have a previous version of WAX-CDT installed (Version : wax-1.4.1-1.0.0), you'll need to uninstall it before you can install the latest version. 
 
 ## What's removed

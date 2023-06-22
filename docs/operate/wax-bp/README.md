@@ -1,5 +1,5 @@
 ---
-title: WAX Block Producer
+title: Operator Basics
 order: 3
 ---
 

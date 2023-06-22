@@ -3,6 +3,8 @@ title: Access Your Local API
 order: 42
 ---
 
+# Access Your Local API
+
 The WAX mainnet exposes a set of **nodeos** API endpoints (RPC API), allowing you to interact with the WAX Blockchain. Commonly known as [chain-api-url](/operate/wax-infrastructure/#public-and-free-api-service-providers)
 
 Now that you have a local node running on your local development server, these endpoints can be accessed from your local IP address: `http://127.0.0.1:8888`. This API endpoint is initialized when you pass the `plugin eosio::chain_api_plugin` parameter to **nodeos**.

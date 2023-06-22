@@ -3,6 +3,8 @@ title: Install WAX-CDT
 order: 51
 ---
 
+# Install WAX-CDT
+
 The GitHub WAX-CDT Repository downloads to the **wax-cdt** directory. The download and build process can take several minutes to several hours, depending on your Internet connection, operating system, and hardware specifications.
 
 To download the WAX-CDT Source Code Repository, paste the following into the command line:

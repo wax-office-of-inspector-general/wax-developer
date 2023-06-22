@@ -3,6 +3,8 @@ title: Create a Wallet
 order: 43
 ---
 
+# Create a Wallet
+
 A WAX wallet is a named, encrypted repository of public and private key pairs that are stored in a file on your local server (not the blockchain). You'll need to create a development wallet to:
 
 - Create local WAX Blockchain Accounts

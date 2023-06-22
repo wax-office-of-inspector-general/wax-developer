@@ -3,7 +3,7 @@ title: WAX RNG Basics
 order: 82
 ---
 
-## How it Works
+# WAX RNG Basics
 
 * **WAX RNG Smart Contract.** The WAX RNG smart contract runs on the WAX mainnet, owned by the **orng.wax** account.  
 * **WAX RNG Oracle Service.** Secured by the **oracle.wax** account, this service monitors the WAX Blockchain externally, listening for new calls to the WAX RNG smart contract. When you request a new random number, the RNG oracle creates RSA signatures that generate provably fair random numbers. 

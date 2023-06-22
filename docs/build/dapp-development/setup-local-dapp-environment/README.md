@@ -3,6 +3,8 @@ title: Set Up a Local dApp Environment
 order: 40
 ---
 
+# Set Up a Local dApp Environment
+
 Our [Docker Development Image](/build/dapp-development/docker-setup/) includes everything you need to set up a local development environment. This reduces your development costs and offers a fully-functional sandbox for both new and experienced dApp developers. The WAX local testnet allows you to easily:
 
 - Run a local development node on your server
@@ -35,3 +37,5 @@ Before you set up your local development environment:
 
 - You'll need to complete our [Docker Quickstart](/build/dapp-development/docker-setup/) (recommended) or use the [WAX Blockchain Setup](/build/dapp-development/wax-blockchain-setup/) to build from source.
 - Have a text document or note program ready. You'll need to use a wallet password and a public key to create accounts. 
+
+<ChildTableOfContents :max="2" title="More inside this section" />

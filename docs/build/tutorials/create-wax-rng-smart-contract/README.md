@@ -22,3 +22,5 @@ In this tutorial, you'll learn how to create and deploy a WAX RNG smart contract
 
 **Source Code:** 
 https://github.com/3dkrender/WAX-RNG-Test
+
+<ChildTableOfContents :max="2" title="More inside this section" />

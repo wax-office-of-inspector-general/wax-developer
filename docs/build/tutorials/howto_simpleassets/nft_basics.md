@@ -3,6 +3,8 @@ title: Simple Assets Basics
 order: 88
 ---
 
+# Simple Assets Basics
+
 The Simple Asset's video below includes everything you need to know about NFT data structures and actions. Refer to the <a href="https://github.com/CryptoLions/SimpleAssets" target="_blank">Simple Assets GitHub Repository</a> for detailed information and change log updates.
 <br /><br />
 

@@ -3,6 +3,8 @@ title: WAX-RPC API
 order: 20
 ---
 
+# WAX-RPC API
+
 The WAX Blockchain RPC API includes public endpoints used to get block information, block history, node information, and node producer information. Exposed through **nodeos** plugins, this API is available on the WAX mainnet and your local development environment. 
 
 :::tip

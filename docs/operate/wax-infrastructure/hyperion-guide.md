@@ -2,6 +2,8 @@
 title: Full/Partial History nodes using Hyperion-US
 ---
 
+# Full/Partial History nodes using Hyperion-US
+
 Having stable accessibility to consumable data is essential for Web3 applications on a blockchain. There are many use-cases for history data like accounting, taxes, transaction tracking, portfolio management etc. 
 
 There are multiple history solutions today that offers different features and functionalities, they all have different requirements in terms of infrastructure. The following guide presents the steps needed to setup a scalable and resilient Hyperion based history solution.

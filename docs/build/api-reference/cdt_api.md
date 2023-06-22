@@ -3,6 +3,8 @@ title: WAX-CDT API
 order: 25
 ---
 
+# WAX-CDT API
+
 All of your smart contracts inherit from the C++ API files available in the [WAX Contract Development Toolkit (WAX-CDT)](/build/dapp-development/wax-cdt/)library. These files are used to define your smart contract's actions, structures, and data types. 
 
 This smart contract API can be grouped into three key modules:

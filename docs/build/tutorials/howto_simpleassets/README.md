@@ -29,7 +29,4 @@ The following video from Simple Assets demonstrates the core functionality of th
 * To compile your smart contract, you'll need to use [WAX-CDT](/build/dapp-development/wax-cdt/cdt_use).
 * To deploy your smart contract to the WAX mainnet, you'll need to create a self-managed WAX Blockchain Account.
 
-
-
-
-
+<ChildTableOfContents :max="2" title="More inside this section" />

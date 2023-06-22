@@ -17,3 +17,5 @@ Among the most important features to highlight we can mention:
 - Data is serialised to achieve significant RAM savings.
 - It uses a template system which, together with serialisation, allows RAM consumption to be reduced.
 - It has its own open source API that allows for faster access to NFT data without having to read the smart contract tables.
+
+<ChildTableOfContents :max="2" title="More inside this section" />

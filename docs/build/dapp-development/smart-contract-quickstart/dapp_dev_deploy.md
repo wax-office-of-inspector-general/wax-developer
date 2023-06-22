@@ -3,6 +3,8 @@ title: Deploy to Your Blockchain
 order: 65
 ---
 
+# Deploy to Your Blockchain
+
 <!--To deploy your smart contract to your local development blockchain, you'll need to:
 
 - Compile your smart contract

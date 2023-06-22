@@ -27,3 +27,4 @@ To build the WAX RNG repo and run unit tests from source, you'll need to:
 1. Install the [Blockchain Setup](/build/dapp-development/wax-blockchain-setup/)
 2. Install the [WAX Contract Development Toolkit (WAX-CDT)](/build/dapp-development/wax-cdt/)
 
+<ChildTableOfContents :max="2" title="More inside this section" />

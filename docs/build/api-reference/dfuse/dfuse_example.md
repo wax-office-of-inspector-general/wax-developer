@@ -3,6 +3,8 @@ title: dfuse Example
 order: 121
 ---
 
+# dfuse Example
+
 In this example, we'll sign up for a free account and get the WAX RNG abi using dfuse REST. 
 
 1. Sign up for a <a href="https://dfuse.eosnation.io/" target="_blank">free dfuse account</a>.

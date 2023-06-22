@@ -3,6 +3,8 @@ title: WAX-CDT Build Tools
 order: 53
 ---
 
+# WAX-CDT Build Tools
+
 WAX-CDT includes various **eosio** commands, built around the <a href="https://clang.llvm.org/" target="_blank">Clang</a> front-end and tooling infrastructure. This collection includes various tools to build optimized, high-performance WASM files. Refer to [WAX-CDT Options](/build/tools/cdt_options) for more information.
 
 It's recommended that you use **eosio-init** to [Create a Smart Contract](/build/dapp-development/wax-cdt/cdt_use.html#compile-hello-world). This tool provides scripts to easily organize and build your project. 

@@ -2,6 +2,9 @@
 title: Managing AA schemas
 order: 36
 ---
+
+# Managing AA schemas
+
 As mentioned above, schemas allow us to declare the common characteristics of the NFTs in our collection and to create groups. If we are creating NFTs for a game that has several characters, each character will be unique, but will share attributes with the rest of the characters. All the characters will have a name, a score, a life point level, etc. 
 
 Likewise, our game will have weapons and all of them will share attributes such as name, damage point value, durability points, etc.

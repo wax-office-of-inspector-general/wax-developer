@@ -3,6 +3,8 @@ title: Verify Your Installation
 order: 32
 ---
 
+# Verify Your Installation
+
 To verify your installation, you can use **cleos** to call the `get info` endpoint on the Wax Blockchain API. 
 <p>&nbsp;</p>
 

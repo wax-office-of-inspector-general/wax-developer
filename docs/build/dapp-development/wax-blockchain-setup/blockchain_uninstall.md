@@ -3,6 +3,8 @@ title: Uninstall WAX
 order: 92
 ---
 
+# Uninstall WAX
+
 If you have a previous version of the WAX Blockchain installed (Version : 1.6.1), you'll need to uninstall it before you can install the latest version. 
 
 ## What's removed

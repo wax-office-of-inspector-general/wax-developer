@@ -3,6 +3,8 @@ title: Collection structure
 order: 32
 ---
 
+# Collection structure
+
 An NFT can be unique, like an exclusive work of art, or it can be part of a series, like playing cards, where the only thing that changes in the assets of the same edition is the order in which they have been minted. For the latter case, AtomicAssets offers the possibility of configuring a "template" to be able to issue more copies of the assets every time we need more units, infinitely or until we reach a previously established quantity, as we will see. For example, we could have a template for the game object "Silent Sword of Oblivion", with all its attributes already defined: the image, its name, its description, etc.
 
 But as we will have other types of assets in the game, we can create different templates whose structure will be identical but not their content. This structure can be defined in what AtomicAssets calls "schemas". Schemas define what kind of data the templates we generate from them will contain.

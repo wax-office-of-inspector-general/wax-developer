@@ -3,6 +3,8 @@ title: Deploy Your NFT Smart Contract
 order: 90
 ---
 
+# Deploy Your NFT Smart Contract
+
 Next, we'll use WAX-CDT tools to deploy your NFT smart contract to the WAX mainnet. Refer to [WAX-CDT Deploy](/build/dapp-development/deploy-dapp-on-wax/deploy_source) for more information.
 
 1. From Docker, open and unlock your wallet.

@@ -3,6 +3,8 @@ title: Troubleshooting
 order: 200
 ---
 
+# Troubleshooting
+
 Below is a list of known issues and fixes (if available).
 
 ## Build Error in Function `fork_once_func'

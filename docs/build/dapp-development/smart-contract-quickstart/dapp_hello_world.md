@@ -2,6 +2,7 @@
 title: Create a Smart Contract
 order: 62
 ---
+
 # Create a Smart Contract
 
 In this section, you'll learn how to write and compile a WAX smart contract using **eosio-init**.

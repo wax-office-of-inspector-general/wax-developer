@@ -5,6 +5,7 @@ index: false
 author: false
 ---
 
+# Awesome WAX
 
 ## A curated Lists of awesome projects built on WAX 
 You are new to the WAX Blockchain and you are looking to get started? You want to trade some NFTs or you want built the next big dApp? This list will help you to get started and find the best entrypoints for the WAX blockchain!

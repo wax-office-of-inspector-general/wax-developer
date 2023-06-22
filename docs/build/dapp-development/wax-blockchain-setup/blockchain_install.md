@@ -3,6 +3,8 @@ title: Install the WAX Blockchain
 order: 31
 ---
 
+# Install the WAX Blockchain
+
 The GitHub WAX Blockchain Source Code Repository downloads to the **wax-blockchain** directory. The download and build process can take several minutes to several hours, depending on your Internet connection, operating system, and hardware specifications.
 
 To download the WAX Blockchain Source Code Repository:

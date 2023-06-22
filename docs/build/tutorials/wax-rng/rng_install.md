@@ -3,6 +3,8 @@ title: Install and Build WAX RNG
 order: 81
 ---
 
+# Install and Build WAX RNG
+
 To install <a href="https://github.com/worldwide-asset-exchange/wax-orng" target="_blank">WAX RNG</a> from GitHub:
 
 1. From the command line, clone the Git repository.

@@ -3,6 +3,8 @@ title: Create Accounts
 order: 63
 ---
 
+# Create Accounts
+
 A WAX Account is stored on the blockchain and used to identify your smart contracts and dApp users. Blockchain accounts are required to send or receive valid transactions to the blockchain, in both your local and production environments. 
 
 ## How it Works

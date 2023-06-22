@@ -3,6 +3,8 @@ title: Managing AA Templates
 order: 38
 ---
 
+# Managing AA Templates
+
 If we have to mint multiple copies of the same asset, for example, a sword that is obtained as a reward in a mission, it will be useful to do it with a template. Thanks to the template we will be saving RAM memory, speed up the work and we will keep a coherence in the whole collection.
 
 AtomicAssets has two actions to manage templates:

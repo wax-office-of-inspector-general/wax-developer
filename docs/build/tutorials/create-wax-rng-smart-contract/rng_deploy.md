@@ -3,6 +3,8 @@ title: Deploy Your WAX RNG Contract
 order: 85
 ---
 
+# Deploy Your WAX RNG Contract
+
 In this example, we'll use WAX-CDT tools to deploy your Lucky Number Generator smart contract. Refer to [WAX-CDT Deploy](/build/dapp-development/deploy-dapp-on-wax/deploy_source) for more information.
 
 1. First we will need to create a self-custodied account on testnet or mainnet to deploy the smart contract. For our example we will assume that the account is called *mywaxrngtest*.

@@ -3,6 +3,8 @@ title: WAX-CDT Sample Contracts
 order: 52
 ---
 
+# WAX-CDT Sample Contracts
+
 WAX-CDT provides a **wax-cdt/examples** directory that includes the following sample smart contracts:
 
 - Hello World

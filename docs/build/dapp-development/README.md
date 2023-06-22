@@ -30,3 +30,5 @@ Learn how to make API requests to your local blockchain, WAX testnet or WAX main
 
   * [WAX RPC API](/learn/api-reference/)
   * [WAX-CDT API](/learn/api-reference/cdt_api/)
+
+<ChildTableOfContents :max="2" title="More inside this section" />
