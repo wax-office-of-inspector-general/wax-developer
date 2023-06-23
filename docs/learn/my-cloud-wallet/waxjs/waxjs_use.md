@@ -3,6 +3,8 @@ title: Use WaxJS
 order: 2
 ---
 
+# Use WaxJS
+
 The **WaxJS** library exposes four primary components:
 
 - **wax.userAccount.** WAX Account user name, returned when you make a call to `wax.login()`.

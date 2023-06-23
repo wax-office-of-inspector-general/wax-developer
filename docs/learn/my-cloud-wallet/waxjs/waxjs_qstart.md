@@ -3,6 +3,8 @@ title: MyCloudWallet Quickstart
 order: 3
 ---
 
+# MyCloudWallet Quickstart
+
 When users sign up or sign in to MyCloudWallet, a WAX Blockchain Account is automatically created. Users can easily manage their resources, blockchain transactions, NFTs, and whitelisted dApps from the MyCloudWallet dashboard. 
 
 In this guide, you'll learn how to use **WaxJS** to connect to the MyCloudWallet, allowing you to:

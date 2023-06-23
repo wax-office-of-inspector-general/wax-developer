@@ -3,6 +3,8 @@ title: Install WaxJS
 order: 1
 ---
 
+# Install WaxJS
+
 There are several ways to download and install **WaxJS**:
 
 ## NPM
