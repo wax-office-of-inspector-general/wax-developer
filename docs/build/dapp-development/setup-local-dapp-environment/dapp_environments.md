@@ -10,7 +10,7 @@ Below you'll find WAX versions, URLs, and development environment information.
 | Service | Description |
 |---------|-------------|
 | [Docker Images](https://hub.docker.com/u/waxteam) | Use WAX Docker images to run a local node, use blockchain tools, and compile your smart contracts. Refer to [Docker Quickstart](/build/dapp-development/docker-setup/) for more information. |
-| [waxjs](https://github.com/worldwide-asset-exchange/waxjs) | WaxJS Javascript API for integration with the MyCloudWallet. Use this to easily sign in users and send transactions to the WAX Blockchain from your dApp. Refer to [MyCloudWallet Quickstart](/learn/my-cloud-wallet/waxjs/waxjs_qstart) for more information. |
+| [waxjs](https://github.com/worldwide-asset-exchange/waxjs) | WaxJS Javascript API for integration with the Cloud Wallet . Use this to easily sign in users and send transactions to the WAX Blockchain from your dApp. Refer to [Cloud Wallet  Quickstart](/learn/my-cloud-wallet/waxjs/waxjs_qstart) for more information. |
 | [wax-blockchain](https://github.com/worldwide-asset-exchange/wax-blockchain) | WAX Blockchain source files. Refer to [WAX Blockchain Setup](/build/dapp-development/wax-blockchain-setup/) to get started. |
 | [wax-cdt](https://github.com/worldwide-asset-exchange/wax-cdt) | WAX Contract Development Toolkit. Refer to [WAX Contract Development Toolkit (WAX-CDT)](/build/dapp-development/wax-cdt/) to get started. |
 

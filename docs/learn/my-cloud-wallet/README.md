@@ -1,10 +1,10 @@
 ---
-title: MyCloudWallet
+title: Cloud Wallet 
 ---
 
-# MyCloudWallet
+# Cloud Wallet 
 
-With just a few lines of code, MyCloudWallet makes it as simple for customers to use your dApp as any mainstream app.
+With just a few lines of code, Cloud Wallet  makes it as simple for customers to use your dApp as any mainstream app.
 
 1. Free SSO in 48 languages, using our free single sign on software.
 2. Zero investment in account security & management means you stay focused on driving business.
@@ -13,7 +13,7 @@ With just a few lines of code, MyCloudWallet makes it as simple for customers to
 The simplest way to onboard & manage accounts.
 Designed for use by anyone - gamers, developers, even crypto fanatics
 
-## What makes MyCloudWallet different?
+## What makes Cloud Wallet  different?
 It's simple for mainstream gamers and app customers to use your dApp (not just the crypto community).
 
 * No complicated onboarding process - just a 2 step login
@@ -37,7 +37,7 @@ WCW is the uncomplicated crypto wallet
 * Works on <b>mobile</b> just as easily as it does on a desktop
 * Customers can automatically log into your dApp any time they access it using the [WaxJS feature](./waxjs)
 
-## Join dApps already using MyCloudWallet
+## Join dApps already using Cloud Wallet 
 
 Convert more customers. Completely free.
 

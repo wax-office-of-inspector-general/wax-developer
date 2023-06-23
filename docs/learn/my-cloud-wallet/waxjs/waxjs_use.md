@@ -64,7 +64,7 @@ To use **WaxJS**:
 
 3. Before you can start signing transactions from your dApp, a user must be logged in. WaxJS includes an `isAutoLoginAvailable` function that:
 
-   - Securely checks for MyCloudWallet credentials
+   - Securely checks for Cloud Wallet  credentials
    - Checks to see if your dApp is whitelisted
 
    If both conditions are true, a user's userAccount and public keys are set in your WaxJS object, and you don't need to call the `login()` function. You'll also have access to wax.userAccount and wax.pubKeys.
@@ -76,7 +76,7 @@ To use **WaxJS**:
    var pubKeys = wax.pubKeys;
    ```
 
-   If auto-login is not available, you can easily use the `login()` function to allows users to sign in or sign up using MyCloudWallet.
+   If auto-login is not available, you can easily use the `login()` function to allows users to sign in or sign up using Cloud Wallet .
 
    ```js
    //normal login. Triggers a popup for non-whitelisted dapps
@@ -88,7 +88,7 @@ To use **WaxJS**:
    }
    ```
 
-   The `login()` function opens MyCloudWallet in a new browser window. Users are prompted that your dApp would like to "Know your WAX Account Name." Once they click Approve, they're redirected back to your dApp
+   The `login()` function opens Cloud Wallet  in a new browser window. Users are prompted that your dApp would like to "Know your WAX Account Name." Once they click Approve, they're redirected back to your dApp
 
    A successful login returns the userAccount (e.g., jq3ao.wam), and you can also access this property by calling `wax.userAccount`.
 
@@ -133,4 +133,4 @@ const result = await wax.api.transact(
 The `wax.api` method is an instance of the **eosjs** object, and provides the same functionality. Refer to the [eosjs](https://eosio.github.io/eosjs/latest) docs for more information.
 :::
 
-The `wax.api.transact()` function launches MyCloudWallet in a new browser window. On this screen, users can review the transaction details and Approve or Deny the transaction. Once users click Approve, the transaction is signed on the WAX Blockchain and users are returned to your dApp.
+The `wax.api.transact()` function launches Cloud Wallet  in a new browser window. On this screen, users can review the transaction details and Approve or Deny the transaction. Once users click Approve, the transaction is signed on the WAX Blockchain and users are returned to your dApp.
