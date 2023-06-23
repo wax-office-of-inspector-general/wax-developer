@@ -1,0 +1,31 @@
+.grid-catalog-wrapper
+  padding: 3em 0
+  
+  .grid-catalog-title
+    display: block
+
+  .grid-catalog-items
+    margin-top: 2em
+
+    display: grid
+    grid-gap: 1.5em 1.5em
+    grid-template-columns: repeat(auto-fit, minmax(calc(33% - 1.5em), 1fr))
+
+    @media screen and (max-width: $MQMobile)
+      grid-gap: 1.5em 2em
+      grid-template-columns: repeat(auto-fit, minmax(calc(50% - 2em), 1fr))
+
+    .grid-item-link
+      color: unset
+
+      .grid-item-img
+        background: #F9F9F9
+        aspect-ratio: 16 / 9
+        border-radius: 10px
+
+      .grid-item-title
+        color: unset
+
+      &:hover
+        .grid-item-img
+          background: #EEEEEE

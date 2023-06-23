@@ -1,0 +1,96 @@
+/**
+ * Custom Styles here.
+ *
+ * ref：https://v1.vuepress.vuejs.org/config/#index-styl
+ */
+@require 'palette'
+@require 'fonts'
+@require 'breadcrumb'
+@require 'footer'
+
+ html, body
+  padding 0
+  margin 0
+
+.home .hero img
+  max-width 450px!important
+
+.theme-default-content
+  max-width 800px!important
+
+.navbar
+  position: relative
+  background transparent
+  border none
+  z-index 40
+  padding-top 72px !important
+
+.sidebar
+  top 0
+  border none
+  z-index 50
+
+.content-wrapper
+  padding-left $sidebarWidth
+
+.page
+  padding-left 0
+  padding-bottom: 4rem !important
+  background linear-gradient(180.84deg, rgba(136, 136, 136, 0.04) -11.6%, rgba(123, 97, 255, 0.05) 113.41%)
+
+.page-edit
+  border-top 1px dashed $arrowBgColor
+
+.page-nav
+  border-top 1px dashed $arrowBgColor
+  .inner
+    display flex
+    flex-direction: row
+    flex-wrap wrap
+    gap 10px
+    justify-content: space-between
+    align-items: stretch
+    overflow: hidden
+    border-top: none!important
+  .inner > .next, .inner > .prev
+    flex 0 1 auto
+    background #fff
+    border 1px solid $borderColor
+    padding 0.75em 1.5em
+    border-radius 12px
+    float none
+
+.sidebar-mask
+  background rgba(0,0,0,0.3)
+
+table
+  thead
+    tr
+      background-color: lighten($borderColor, 20)
+  tbody
+    tr
+      background-color: lighten($borderColor, 10)
+    &:nth-child(2n)
+      background-color: lighten($borderColor, 7)
+
+.theme-default-content
+  a
+    text-decoration none
+    &:hover
+      text-decoration: underline
+    &.outbound
+      color $accentColor
+
+.page-edit, .page-nav
+  a
+    text-decoration none
+    &.outbound
+      color $accentColor
+
+@media (max-width: $MQMobile)
+  .content-wrapper
+    padding-left 0
+  .sidebar
+    padding-top 0!important
+  .page
+    padding-left 0

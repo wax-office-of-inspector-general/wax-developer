@@ -1,0 +1,24 @@
+.content-columns-wrapper
+  width: 100%
+  padding: 5em 0
+
+  display: grid
+
+  grid-gap: 1.5em 3em
+  grid-template-columns: 2fr 1fr
+
+  @media screen and (max-width: $MQMobile)
+    grid-gap: 1.5em 2em
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr))
+
+  align-items: center
+  justify-content: space-between
+
+  &.reverse
+    grid-template-columns: 1fr 2fr
+
+    .grid-column.first
+      order: 2
+
+    .grid-column.second
+      order: 1

@@ -1,0 +1,43 @@
+{
+  "name": "wax-developer",
+  "description": "WAX Developer Portal",
+  "version": "0.2.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wax-office-of-inspector-general/wax-developer.git"
+  },
+  "author": "many",
+  "license": "UNLICENSED",
+  "keywords": [
+    "docs",
+    "documentation",
+    "vuepress"
+  ],
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "engines": {
+    "node": ">=16.19.0"
+  },
+  "bugs": {
+    "url": "https://github.com/wax-office-of-inspector-general/wax-developer/issues"
+  },
+  "homepage": "https://github.com/wax-office-of-inspector-general/wax-developer#readme",
+  "devDependencies": {
+    "@vuepress/client": "^2.0.0-beta.45",
+    "@vuepress/plugin-back-to-top": "^1.9.9",
+    "@vuepress/plugin-medium-zoom": "^1.9.9",
+    "@vuepress/plugin-search": "^1.9.9",
+    "@vuepress/utils": "^2.0.0-alpha.1",
+    "sass-loader": "^7.3.1",
+    "vuepress": "^1.9.9"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.0"
+  }
+}
