@@ -41,7 +41,7 @@ module.exports = {
           href: 'https://www.waxdefi.io/'
         },
         {
-          text: 'MyCloudWallet',
+          text: 'Cloud Wallet',
           href: 'https://www.mycloudwallet.com/'
         },
       ]
