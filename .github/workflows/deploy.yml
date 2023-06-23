@@ -14,26 +14,24 @@ jobs:
     strategy:
       matrix:
         node-version: [16.x]
-    
+
+    name: Build using Node.js ${{ matrix.node-version }}
+
     steps:
       - uses: actions/checkout@v3
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-          with:
-            node-version: ${{ matrix.node-version }}
-            cache: 'npm'
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
       
-      - name: Install dependencies
-        - run: CI=false npm install
+      - run: CI=false npm install
       
-      - name: Build Docs
-        - run: npm run docs:build
+      - run: npm run docs:build
       
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-          with:
-            path: docs/.vuepress/dist/
+      - uses: actions/upload-pages-artifact@v1
+        with:
+          path: docs/.vuepress/dist/
 
   deploy:
     runs-on: ubuntu-latest
