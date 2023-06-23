@@ -31,6 +31,7 @@ module.exports = {
       ariaLabel: 'English',
       label: 'English'
     },
+    /*
     '/de/': {
       lang: 'de-DE',
       ariaLabel: 'Deutsch',
@@ -41,6 +42,7 @@ module.exports = {
       ariaLabel: 'Spanish',
       label: 'Spanish (WIP)',
     }
+    */
   },
 
   /**
