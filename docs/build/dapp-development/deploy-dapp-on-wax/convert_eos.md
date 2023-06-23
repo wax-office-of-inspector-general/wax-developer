@@ -17,7 +17,7 @@ WAX is fully compatible with EOS smart contracts and offers free blockchain acco
 
     <a href="https://all-access.wax.io" target="_blank">http://<span></span>all-access.wax.io</a>
 
-    A Cloud Wallet  Account automatically creates a WAX Blockchain account for your customers and allows you to integrate WaxJS into your dApps. Refer to [Cloud Wallet  Quickstart](/learn/my-cloud-wallet/waxjs/waxjs_qstart)for more information.
+    A Cloud Wallet  Account automatically creates a WAX Blockchain account for your customers and allows you to integrate WaxJS into your dApps. Refer to [Cloud Wallet  Quickstart](/build/cloud-wallet/waxjs/waxjs_qstart)for more information.
 
 ## Development Environment
 

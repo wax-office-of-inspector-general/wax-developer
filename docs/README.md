@@ -32,7 +32,7 @@ order: 1
   </template>
   <template v-slot:items>
     <ContentLinkItem href="/learn/about-wax/" text="About WAX" />
-    <ContentLinkItem href="/learn/my-cloud-wallet/" text="My Cloud Wallet" />
+    <ContentLinkItem href="/build/cloud-wallet/" text="My Cloud Wallet" />
   </template>
 </ContentLinks>
 

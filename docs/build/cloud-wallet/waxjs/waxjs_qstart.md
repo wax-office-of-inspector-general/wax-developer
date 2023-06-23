@@ -15,7 +15,7 @@ In this guide, you'll learn how to use **WaxJS** to connect to the Cloud Wallet 
 
 :::tip 
 Note: 
-In the next few sections, we'll go over how everything works. If you'd like to jump right to the code and run our live WaxJS example, refer to [WaxJS Demo](/learn/my-cloud-wallet/waxjs/waxjs_demo).
+In the next few sections, we'll go over how everything works. If you'd like to jump right to the code and run our live WaxJS example, refer to [WaxJS Demo](/build/cloud-wallet/waxjs/waxjs_demo).
 :::
 
 ## Before You Begin
