@@ -172,7 +172,9 @@ export default {
   > .sidebar-links > li > section > a
     font-size 1.35em
 
-    &.active
+    &.active,
+    &:hover,
+      color $accentColor
       font-weight bold
   
   > .sidebar-links
