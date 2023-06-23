@@ -15,4 +15,4 @@ In this tutorial, you'll learn how to create, compile, and deploy a WAX smart co
 - Have your local development environment ready. Refer to [Set Up a Local dApp Environment](/build/dapp-development/) for more information.
 - To compile and deploy your smart contract locally, you'll need to use the [WAX Contract Development Toolkit (WAX-CDT)](/build/dapp-development/wax-cdt/) and be familiar with basic concepts like WASM and ABI file generation.
 
-
+<ChildTableOfContents :max="2" title="More inside this section" />
