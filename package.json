@@ -1,6 +1,6 @@
 {
   "name": "wax-developer",
-  "description": "WAX Developer Portal",
+  "description": "WAX Developer Portal - Inside the WAX Developer Portal, you'll find a wealth of resources to guide you on your development journey.",
   "version": "0.2.0",
   "main": "index.js",
   "repository": {
