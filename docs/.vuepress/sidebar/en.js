@@ -29,11 +29,11 @@ module.exports = [
                         path: '/learn/about-wax/wax-consensus',
                     },
                     {
-                        title: 'Wax Interoparability',
+                        title: 'WAXInteroparability',
                         path: '/learn/about-wax/wax-interoparability',
                     },
                     {
-                        title: 'Wax Governance',
+                        title: 'WAXGovernance',
                         path: '/learn/about-wax/wax-governance',
                     },
                 ],
