@@ -170,8 +170,6 @@ export default {
         margin-left 0.5em
   
   > .sidebar-links > li > section > a
-    font-size 1.35em
-
     &.active,
     &:hover,
       color $accentColor
@@ -186,10 +184,8 @@ export default {
 
         > .sidebar-heading
           padding 0.75em 2em 0.75em 1em
-
-          &.open
-            color $accentColor
-            font-weight bold
+          font-size 1.35em
+          font-weight bold
 
           + .sidebar-group-items
             padding-bottom 1em

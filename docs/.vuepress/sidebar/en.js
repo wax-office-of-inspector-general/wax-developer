@@ -1,10 +1,8 @@
 module.exports = [
     {
         title: 'Learn',
-        path: '/learn/',
         collapsable: false,
         sidebarDepth: 2,
-        initialOpenGroupIndex: 0,
         children: [
             {
                 title: 'About WAX',
@@ -42,8 +40,7 @@ module.exports = [
     },
     {
         title: 'Build',
-        path: '/build/',
-        collapsable: true,
+        collapsable: false,
         sidebarDepth: 4,
         children: [
             {
@@ -115,14 +112,12 @@ module.exports = [
                 title: 'MyCloudWallet',
                 path: '/build/cloud-wallet/',
                 collapsable: true,
-                initialOpenGroupIndex: -1,
                 sidebarDepth: 1,
                 children: [
                     {
                         title: 'wax.js',
                         path: '/build/cloud-wallet/waxjs/',
                         collapsable: true,
-                        initialOpenGroupIndex: -1,
                         sidebarDepth: 1,
                         children: [
                             '/build/cloud-wallet/waxjs/waxjs_qstart',
@@ -135,7 +130,6 @@ module.exports = [
                         title: 'boost.wax',
                         path: '/build/cloud-wallet/boost-wax',
                         collapsable: true,
-                        initialOpenGroupIndex: -1,
                         sidebarDepth: 1,
                     },
                 ],
@@ -219,8 +213,7 @@ module.exports = [
     },
     {
         title: 'Operate',
-        path: '/operate/',
-        collapsable: true,
+        collapsable: false,
         sidebarDepth: 2,
         children: [
             {
@@ -264,7 +257,7 @@ module.exports = [
     {
         title: 'Create',
         path: '/create/',
-        collapsable: true,
+        collapsable: false,
         sidebarDepth: 1,
         children: [
           {
