@@ -187,12 +187,20 @@ export default {
           font-size 1.35em
           font-weight bold
 
+          &.open.active
+            font-weight bold
+            color $accentColor
+
           + .sidebar-group-items
             padding-bottom 1em
             padding-right 1.05em
       
       .sidebar-group.is-sub-group > .sidebar-heading
         font-size 1.05em
+
+        &.active
+            font-weight bold
+            color $accentColor
       
       .sidebar-group.is-sub-group > .sidebar-group-items > li > .sidebar-link
         font-size 1em

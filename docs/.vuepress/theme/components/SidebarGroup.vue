@@ -23,7 +23,7 @@
       <span
         v-if="collapsable"
         class="arrow"
-        :class="open ? 'down' : 'right'"
+        :class="(open || isActive($route, item.path)) ? 'down' : 'right'"
       />
     </RouterLink>
 
