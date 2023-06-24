@@ -7,9 +7,6 @@
   <a href="https://github.com/wax-office-of-inspector-general/wax-developer/graphs/commit-activity" target="_blank">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
   </a>
-  <a href="#" target="_blank">
-    <img alt="License: UNLICENSED" src="https://img.shields.io/github/license/wax-office-of-inspector-general/WAX Developer Portal" />
-  </a>
   <a href="https://twitter.com/WAXOIG" target="_blank">
     <img alt="Twitter: WAXOIG" src="https://img.shields.io/twitter/follow/WAXOIG.svg?style=social" />
   </a>
@@ -17,7 +14,7 @@
 
 > WAX Developer Portal - Inside the WAX Developer Portal, you'll find a wealth of resources to guide you on your development journey.
 
-### [Homepage](https://developer.wax.io/)
+### [Visit Documentation](https://developer.wax.io/)
 
 ## Prerequisites
 
