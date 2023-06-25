@@ -22,4 +22,4 @@ For more detailed explaination on the different types of nodes and their use-cas
 
 The guides presented here will share some best practices, help you get a deeper understanding on how you can setup and maintain the WAX blockchain infrastructure in a scalable & resilient way.
 
-If you don't want to setup and manage your infrastructure, there are a couple of service providers you can choose from below:
+If you don't want to setup and manage your infrastructure, there are a couple of service providers you can choose from: [WAX API Services](/operate/wax-api-services/)
