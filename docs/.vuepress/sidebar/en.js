@@ -252,6 +252,11 @@ module.exports = [
                     '/operate/wax-infrastructure/atomic-api-guide'
                 ],
             },
+            {
+                title: 'WAX API Services',
+                path: '/operate/wax-api-services/',
+                collapsable: true,
+            },
         ],
     },
     {
