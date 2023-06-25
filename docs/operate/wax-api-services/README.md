@@ -16,9 +16,9 @@ Paid service providers offer much more reliability, flexibility and better rate-
 | Provider Name | Website                                 | Offerings                  | Offerings Type                               | Contact Information                                                  |
 | ------------- | --------------------------------------- | -------------------------- | -------------------------------------------- | -------------------------------------------------------------------- |
 | WAX Galaxy    | [https://waxgalaxy.io/tools/api-services](https://waxgalaxy.io/tools/api-services) | FAH, PAH, SH, AA           | Dedicated Servers, API Metered Subscriptions | contact@waxgalaxy.io, Telegram ID: @sukeshtedla                      |
-| Zaisan        |                                         | FAH, AA, SH, LA            | Dedicated and Shared Servers                 | Telegram ID: @dumplings_5                                            |
-| EOS USA       | [https://www.eosusa.io/hosting/](https://www.eosusa.io/hosting/)          | FAH, SH, AA                | Dedicated Servers                            | https://www.eosusa.io/hosting/, Telegram ID: @EOSUSA_Michael         |
-| EOS Nation    | [https://dfuse.eosnation.io/pricing ](https://dfuse.eosnation.io/pricing )     | FAH                        | API Metered Subscriptions                    | [info@eosnation.io](mailto:info@eosnation.io), Telegram ID: @mdarwin |
+| binfra.one    | [https://binfra.one/](https://binfra.one/)                     | FAH, AA, SH, LA            | Dedicated and Shared Servers                 | https://t.me/cc32d9                                                  |
+| EOS USA       | [https://www.eosusa.io/hosting/](https://www.eosusa.io/hosting/ )         | FAH, SH, AA                | Dedicated Servers                            | https://www.eosusa.io/hosting/, Telegram ID: @EOSUSA_Michael         |
+| EOS Nation    | [https://dfuse.eosnation.io/pricing](https://dfuse.eosnation.io/pricing)      | FAH                        | API Metered Subscriptions                    | [info@eosnation.io](mailto:info@eosnation.io), Telegram ID: @mdarwin |
 | WAX Sweden    | [https://waxsweden.org/commercial-api/](https://waxsweden.org/commercial-api/)   | SH, Contract Notifications | Dedicated Servers                            | https://t.me/eossweden                                               |
 
 - FAH: Full Archive History
