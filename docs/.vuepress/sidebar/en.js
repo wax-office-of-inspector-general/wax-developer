@@ -239,17 +239,18 @@ module.exports = [
                 path: '/operate/wax-infrastructure/',
                 collapsable: true,
                 children: [
-                    '/operate/wax-infrastructure/working-with-wax-software-files',
-                    '/operate/wax-infrastructure/wax-mainnet-node-load-balancer',
+                    '/operate/wax-infrastructure/wax-testnet-node',
+                    '/operate/wax-infrastructure/wax-snapshots',
+                    '/operate/wax-infrastructure/wax-testnet-block-producer',
                     '/operate/wax-infrastructure/wax-mainnet-node',
+                    '/operate/wax-infrastructure/wax-mainnet-node-load-balancer',
                     '/operate/wax-infrastructure/wax-mainnet-node-mitigate-abuse',
                     '/operate/wax-infrastructure/wax-mainnet-ship-node',
-                    '/operate/wax-infrastructure/wax-testnet-node',
-                    '/operate/wax-infrastructure/wax-testnet-block-producer',
-                    '/operate/wax-infrastructure/api-archive-guide',
-                    '/operate/wax-infrastructure/wax-snapshots',
+                    '/operate/wax-infrastructure/working-with-wax-software-files',
+                    '/operate/wax-infrastructure/wax-ram-disk-utilisation',
+                    '/operate/wax-infrastructure/wax-account-custom-permissions', 
                     '/operate/wax-infrastructure/hyperion-guide',
-                    '/operate/wax-infrastructure/atomic-api-guide'
+                    '/operate/wax-infrastructure/atomic-api-guide' 
                 ],
             },
             {
