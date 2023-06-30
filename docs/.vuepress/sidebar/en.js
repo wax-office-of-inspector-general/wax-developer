@@ -231,7 +231,7 @@ module.exports = [
                 collapsable: true,
                 children: [
                     '/operate/atomic-assets/setup-wax-atomic-api-node',
-                    // '/operate/atomic-assets/optimise-restore-wax-atomic-api-node',
+                    '/operate/atomic-assets/optimise-restore-wax-atomic-api-node'
                 ],
             },
             {
