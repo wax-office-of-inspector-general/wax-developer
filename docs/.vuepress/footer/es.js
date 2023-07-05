@@ -1,39 +1,39 @@
 module.exports = {
   columns: [
     {
-      title: 'Join the conversation',
+      title: 'Únete a la conversación',
       links: [
         {
-          text: 'Developer Chat',
+          text: 'Chat de Desarrolladores',
           href: 'https://t.me/waxdevelopers'
         },
         {
-          text: 'Testnet Chat',
+          text: 'Chat de Testnet',
           href: 'https://t.me/waxtestnet'
         },
         {
-          text: 'Infrastructure Chat',
+          text: 'Chat de Infraestructura',
           href: 'https://t.me/waxinfra#'
         },
         {
-          text: 'Governance Chat',
+          text: 'Chat de Gobernanza',
           href: 'https://t.me/waxgov'
         },
         {
-          text: 'WAX Jobs',
+          text: 'Empleos en WAX',
           href: 'https://t.me/waxjobs'
         }
       ]
     },
     {
-      title: 'About WAX',
+      title: 'Acerca de WAX',
       links: [
         {
-          text: 'WAX website',
+          text: 'Sitio web de WAX',
           href: 'https://www.wax.io/'
         },
         {
-          text: 'WAX Explorer',
+          text: 'Explorador de WAX',
           href: 'https://waxblock.io/'
         },
         {
@@ -47,18 +47,18 @@ module.exports = {
       ]
     },
     {
-      title: 'About WAX OIG',
+      title: 'Acerca de WAX OIG',
       links: [
         {
-          text: 'OIG Github',
+          text: 'Github de WAX OIG',
           href: 'https://github.com/wax-office-of-inspector-general'
         },
         {
-          text: 'OIG website',
+          text: 'Sitio web de WAX OIG',
           href: 'https://oig.wax.io/'
         },
         {
-          text: 'OIG Ratings',
+          text: 'Calificaciones de WAX OIG',
           href: 'https://www.notion.so/wax-oig/Guild-Ratings-0e51defdf10641748a253ccc7f5146b1'
         },
         {
@@ -68,22 +68,22 @@ module.exports = {
       ]
     },
     {
-      title: 'Follow us',
+      title: 'Síguenos',
       links: [
         {
-          text: 'on Discord',
+          text: 'en Discord',
           href: 'https://discord.com/invite/dJtPetMdfb',
         },
         {
-          text: 'on Twitter',
+          text: 'en Twitter',
           href: 'https://discord.com/invite/dJtPetMdfb',
         },
         {
-          text: 'on Telegram',
+          text: 'en Telegram',
           href: 'https://t.me/wax_io',
         },
         {
-          text: 'on Medium',
+          text: 'en Medium',
           href: 'https://wax-io.medium.com/',
         },
       ]
