@@ -184,10 +184,14 @@ ACTION rngtest::receiverand(uint64_t signing_value, const checksum256& random_va
    require_auth(ORNG_CONTRACT);
 
    //cast the random_value to a smaller number
+   //COMMENT: max_value isn't the max value. Adding +1 to num1 might fix this if you want a number from 1 to 100.
    uint64_t max_value = 100;
    auto byte_array = random_value.extract_as_byte_array();
 
-   uint8_t random_int = 0;
+   //COMMENT: This is a bad practice. SEE: modulo bias
+   //  modulo bias shows 8-bit size for random_int is bad practice due to its size relative to max_value.
+   //  The first (2**8 % max_value) numbers (0-55) will have a +50% increased chance of being chosen in this example.
+   uint8_t random_int = 0; 
    random_int = byte_array[0];
 
    uint8_t num1 = random_int % max_value;
@@ -207,6 +211,8 @@ We extract the first 8 bits of the returned random number and use it to get a nu
 
 **Note:** We still have many bits available in case we need to get more random numbers!
 :::
+
+**COMMENT:** Using only the first 8 bits is bad practice! We need more bits for fairness. SEE: Modulo bias.
 
 We locate the record associated with the request identifier and update its contents to store the returned hash code.
 
