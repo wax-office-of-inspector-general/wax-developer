@@ -183,14 +183,14 @@ Callback action that will be called from WAX RNG to return us, in case of succes
 ACTION rngtest::receiverand(uint64_t signing_value, const checksum256& random_value) {
    require_auth(ORNG_CONTRACT);
 
-   //cast the random_value to a smaller number
-   uint64_t max_value = 100;
+   uint8_t divisor = 100; //To cast the random_chunk extracted from random_value to a smaller number (0-99)
+
    auto byte_array = random_value.extract_as_byte_array();
 
-   uint8_t random_int = 0;
-   random_int = byte_array[0];
+   uint16_t random_chunk = 0;
+   random_chunk = (static_cast<uint16_t>(byte_array[0]) << 8) + static_cast<uint16_t>(byte_array[1]);
 
-   uint8_t num1 = random_int % max_value;
+   uint8_t num1 = random_chunk % divisor;
 
    auto iCustomers = _customers.require_find(signing_value, "Error: Petition not found!");
 
@@ -203,7 +203,7 @@ ACTION rngtest::receiverand(uint64_t signing_value, const checksum256& random_va
 ```
 We make sure that only WAX RNG will be able to call this action with *require_auth*.
 
-We extract the first 8 bits of the returned random number and use it to get a number no larger than 100. 
+We extract the first 16 bits of the returned random number and use it to get a number no larger than 100. Although it could be done with only 1 byte, it is preferable to increase the number of numerator bits before performing the reduction operation to avoid the modulo bias effect as much as possible.
 
 **Note:** We still have many bits available in case we need to get more random numbers!
 :::
