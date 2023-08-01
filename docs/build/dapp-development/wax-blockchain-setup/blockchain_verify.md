@@ -5,7 +5,7 @@ order: 32
 
 # Verify Your Installation
 
-To verify your installation, you can use **cleos** to call the `get info` endpoint on the Wax Blockchain API. 
+To verify your installation, you can use **cleos** to call the `get info` endpoint on the WAXBlockchain API. 
 <p>&nbsp;</p>
 
 From the command line, enter the following:

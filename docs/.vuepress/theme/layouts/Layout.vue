@@ -27,10 +27,7 @@
         @sidebar-toggle="sidebarToggle"
       />
 
-      <PageWithHeader v-if="$page.frontmatter.pageWithHeader" />
-
       <Page
-        v-else
         :sidebar-items="sidebarItems"
       >
         <template #top>
@@ -50,7 +47,7 @@
 <script>
 import PageWithHeader from '@theme/components/PageWithHeader.vue'
 import Navbar from '@theme/components/Navbar.vue'
-import Page from '@theme/components/Page.vue'
+import Page from '@parent-theme/components/Page.vue'
 import Sidebar from '@theme/components/Sidebar.vue'
 import Breadcrumb from '@theme/components/Breadcrumb.vue'
 import Footer from '@theme/components/Footer.vue'

@@ -28,11 +28,11 @@ order: 1
 <ContentLinks>
   <template v-slot:content>
     <h1>LEARN</h1>
-    <p>Expand your understanding of blockchain technology and the intricacies of the WAX ecosystem. Discover the mechanics behind the WAX consensus, explore smart contract development, and master essential tools like MyCloudWallet. Dive into our curated resources and empower yourself with in-depth knowledge to navigate the world of blockchain with confidence.</p>
+    <p>Expand your understanding of blockchain technology and the intricacies of the WAX ecosystem. Discover the mechanics behind the WAX consensus, explore smart contract development, and master essential tools like Cloud Wallet . Dive into our curated resources and empower yourself with in-depth knowledge to navigate the world of blockchain with confidence.</p>
   </template>
   <template v-slot:items>
     <ContentLinkItem href="/learn/about-wax/" text="About WAX" />
-    <ContentLinkItem href="/learn/my-cloud-wallet/" text="My Cloud Wallet" />
+    <ContentLinkItem href="/build/cloud-wallet/" text="My Cloud Wallet" />
   </template>
 </ContentLinks>
 

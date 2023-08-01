@@ -1,3 +1,5 @@
+import pageComponents from '@internal/page-components'
+
 /**
  * Client app enhancement file.
  *
@@ -9,5 +11,7 @@ export default ({
   router, // the router instance for the app
   siteData // site metadata
 }) => {
-  // ...apply enhancements for the site.
+  for (const [name, component] of Object.entries(pageComponents)) {
+    Vue.component(name, component)
+  }
 }

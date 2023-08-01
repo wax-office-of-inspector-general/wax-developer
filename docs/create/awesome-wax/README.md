@@ -11,7 +11,7 @@ author: false
 You are new to the WAX Blockchain and you are looking to get started? You want to trade some NFTs or you want built the next big dApp? This list will help you to get started and find the best entrypoints for the WAX blockchain!
 
 **Create a WAX account / Wallets**
-- [MyCloudWallet](https://all-access.wax.io/) 
+- [Cloud Wallet ](https://all-access.wax.io/) 
 - [Anchor](https://greymass.com/en/anchor/)
 - [Wombat](https://www.wombat.app/)
 - [Ledger](https://www.ledger.com/eos-wallet/)

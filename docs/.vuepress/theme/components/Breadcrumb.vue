@@ -17,7 +17,8 @@
 
 <script>
 export default {
-  name: 'Breadcrumbs',
+  name: 'Breadcrumb',
+  
   computed: {
     isFrontPage() {
       return this.$page.path === '/'

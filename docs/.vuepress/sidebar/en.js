@@ -1,10 +1,8 @@
 module.exports = [
     {
         title: 'Learn',
-        path: '/learn/',
         collapsable: false,
         sidebarDepth: 2,
-        initialOpenGroupIndex: 0,
         children: [
             {
                 title: 'About WAX',
@@ -29,41 +27,12 @@ module.exports = [
                         path: '/learn/about-wax/wax-consensus',
                     },
                     {
-                        title: 'Wax Interoparability',
+                        title: 'WAXInteroparability',
                         path: '/learn/about-wax/wax-interoparability',
                     },
                     {
-                        title: 'Wax Governance',
+                        title: 'WAXGovernance',
                         path: '/learn/about-wax/wax-governance',
-                    },
-                ],
-            },
-            {
-                title: 'MyCloudWallet',
-                path: '/learn/my-cloud-wallet/',
-                collapsable: true,
-                initialOpenGroupIndex: -1,
-                sidebarDepth: 1,
-                children: [
-                    {
-                        title: 'wax.js',
-                        path: '/learn/my-cloud-wallet/waxjs/',
-                        collapsable: true,
-                        initialOpenGroupIndex: -1,
-                        sidebarDepth: 1,
-                        children: [
-                            '/learn/my-cloud-wallet/waxjs/waxjs_qstart',
-                            '/learn/my-cloud-wallet/waxjs/waxjs_install',
-                            '/learn/my-cloud-wallet/waxjs/waxjs_use',
-                            '/learn/my-cloud-wallet/waxjs/waxjs_demo',
-                        ],
-                    },
-                    {
-                        title: 'boost.wax',
-                        path: '/learn/my-cloud-wallet/boost-wax',
-                        collapsable: true,
-                        initialOpenGroupIndex: -1,
-                        sidebarDepth: 1,
                     },
                 ],
             },
@@ -71,8 +40,7 @@ module.exports = [
     },
     {
         title: 'Build',
-        path: '/build/',
-        collapsable: true,
+        collapsable: false,
         sidebarDepth: 4,
         children: [
             {
@@ -137,6 +105,32 @@ module.exports = [
                             '/build/dapp-development/deploy-dapp-on-wax/deploy_docker',
                             '/build/dapp-development/deploy-dapp-on-wax/convert_eos',
                         ],
+                    },
+                ],
+            },
+            {
+                title: 'MyCloudWallet',
+                path: '/build/cloud-wallet/',
+                collapsable: true,
+                sidebarDepth: 1,
+                children: [
+                    {
+                        title: 'wax.js',
+                        path: '/build/cloud-wallet/waxjs/',
+                        collapsable: true,
+                        sidebarDepth: 1,
+                        children: [
+                            '/build/cloud-wallet/waxjs/waxjs_qstart',
+                            '/build/cloud-wallet/waxjs/waxjs_install',
+                            '/build/cloud-wallet/waxjs/waxjs_use',
+                            '/build/cloud-wallet/waxjs/waxjs_demo',
+                        ],
+                    },
+                    {
+                        title: 'boost.wax',
+                        path: '/build/cloud-wallet/boost-wax',
+                        collapsable: true,
+                        sidebarDepth: 1,
                     },
                 ],
             },
@@ -219,8 +213,7 @@ module.exports = [
     },
     {
         title: 'Operate',
-        path: '/operate/',
-        collapsable: true,
+        collapsable: false,
         sidebarDepth: 2,
         children: [
             {
@@ -238,7 +231,7 @@ module.exports = [
                 collapsable: true,
                 children: [
                     '/operate/atomic-assets/setup-wax-atomic-api-node',
-                    // '/operate/atomic-assets/optimise-restore-wax-atomic-api-node',
+                    '/operate/atomic-assets/optimise-restore-wax-atomic-api-node'
                 ],
             },
             {
@@ -246,25 +239,31 @@ module.exports = [
                 path: '/operate/wax-infrastructure/',
                 collapsable: true,
                 children: [
-                    '/operate/wax-infrastructure/working-with-wax-software-files',
-                    '/operate/wax-infrastructure/wax-mainnet-node-load-balancer',
+                    '/operate/wax-infrastructure/wax-testnet-node',
+                    '/operate/wax-infrastructure/wax-snapshots',
+                    '/operate/wax-infrastructure/wax-testnet-block-producer',
                     '/operate/wax-infrastructure/wax-mainnet-node',
+                    '/operate/wax-infrastructure/wax-mainnet-node-load-balancer',
                     '/operate/wax-infrastructure/wax-mainnet-node-mitigate-abuse',
                     '/operate/wax-infrastructure/wax-mainnet-ship-node',
-                    '/operate/wax-infrastructure/wax-testnet-node',
-                    '/operate/wax-infrastructure/wax-testnet-block-producer',
-                    '/operate/wax-infrastructure/api-archive-guide',
-                    '/operate/wax-infrastructure/wax-snapshots',
+                    '/operate/wax-infrastructure/working-with-wax-software-files',
+                    '/operate/wax-infrastructure/wax-ram-disk-utilisation',
+                    '/operate/wax-infrastructure/wax-account-custom-permissions', 
                     '/operate/wax-infrastructure/hyperion-guide',
-                    '/operate/wax-infrastructure/atomic-api-guide'
+                    '/operate/wax-infrastructure/atomic-api-guide' 
                 ],
+            },
+            {
+                title: 'WAX API Services',
+                path: '/operate/wax-api-services/',
+                collapsable: true,
             },
         ],
     },
     {
         title: 'Create',
         path: '/create/',
-        collapsable: true,
+        collapsable: false,
         sidebarDepth: 1,
         children: [
           {

@@ -11,7 +11,7 @@ The WAX blockchain is built on top of the Antelope software (formerly known as E
 
 One of the key features of WAX is the creation and management of non-fungible tokens (NFTs). NFTs are unique digital assets that represent ownership or proof of authenticity of a particular item, such as virtual goods, game items, or digital art. WAX provides tools and infrastructure for developers to create and issue NFTs on its platform, allowing users to securely buy, sell, and trade these assets.
 
-WAX also offers a user-friendly marketplace called MyCloudWallet (formerly MyCloudWallet), which serves as a digital wallet for storing and managing virtual assets. The wallet provides an interface for users to browse, buy, and sell NFTs directly within the platform.
+WAX also offers a user-friendly marketplace called Cloud Wallet  (formerly Cloud Wallet ), which serves as a digital wallet for storing and managing virtual assets. The wallet provides an interface for users to browse, buy, and sell NFTs directly within the platform.
 
 ## What makes WAX unique?
 
@@ -19,7 +19,7 @@ WAX also offers a user-friendly marketplace called MyCloudWallet (formerly MyClo
 
 - **NFT Creation and Management**: WAX places a strong emphasis on non-fungible tokens (NFTs), which are unique digital assets that represent ownership or proof of authenticity for virtual items. WAX provides a comprehensive set of tools and infrastructure for developers to create, issue, and manage NFTs. This enables users to securely buy, sell, and trade these assets within the WAX ecosystem.
 
-- **User-Friendly Marketplace**: The MyCloudWallet, known as MyCloudWallet in this alternate description, is a user-friendly interface that serves as a digital wallet for storing and managing virtual assets. It provides a convenient platform for users to browse, buy, and sell NFTs directly within the ecosystem. The wallet's intuitive design and easy accessibility contribute to a seamless user experience.
+- **User-Friendly Marketplace**: The Cloud Wallet , known as Cloud Wallet  in this alternate description, is a user-friendly interface that serves as a digital wallet for storing and managing virtual assets. It provides a convenient platform for users to browse, buy, and sell NFTs directly within the ecosystem. The wallet's intuitive design and easy accessibility contribute to a seamless user experience.
 
 ## How does WAX compare?
 
@@ -31,4 +31,4 @@ WAX employs a delegated proof-of-stake (DPoS) consensus mechanism, which disting
 
 - **NFT-Focused Approach**: While other PoS chains may support NFTs to some extent, WAX specifically caters to the needs of the virtual asset and gaming industry. Its infrastructure, tools, and marketplace are designed to provide a seamless experience for creators, collectors, and traders of NFTs in the gaming ecosystem. This targeted focus sets WAX apart as a specialized blockchain platform.
 
-In summary, WAX stands out by focusing on the gaming industry, offering comprehensive NFT creation and management tools, providing a user-friendly marketplace like MyCloudWallet, and utilizing a DPoS consensus mechanism for enhanced scalability and governance. These unique features contribute to WAX's position as a leading blockchain platform for virtual asset trading and NFTs.
+In summary, WAX stands out by focusing on the gaming industry, offering comprehensive NFT creation and management tools, providing a user-friendly marketplace like Cloud Wallet , and utilizing a DPoS consensus mechanism for enhanced scalability and governance. These unique features contribute to WAX's position as a leading blockchain platform for virtual asset trading and NFTs.
