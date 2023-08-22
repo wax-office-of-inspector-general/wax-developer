@@ -193,14 +193,18 @@ Creation of the transaction, sending to the wallet, and receiving the result:
 
 ```javascript
 export const TAPOS = {
-  blocksBehind: 3,
   expireSeconds: 120,
-  broadcast: false
+  broadcast: false,
+  chain: import.meta.env.VITE_CHAINID
 };
 
 export const InitTransaction = async (dataTrx: IBaseTransaction ) => {
   
-  const session = await sessionKit.restore();
+  const session = await sessionKit.restore(
+    // Optional parameter to restore session from a specific blockchain
+    // if you have multiple chains configured in your app
+    chain: import.meta.env.VITE_CHAINID
+  );
   if (!session) {
     console.log("No session found");
     return null;
