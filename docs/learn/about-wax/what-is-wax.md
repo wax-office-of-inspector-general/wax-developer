@@ -5,30 +5,12 @@ order: 1
 
 # What is the WAX blockchain?
 
-WAX, which stands for Worldwide Asset eXchange, is a blockchain-based platform that facilitates the creation, trading, and exchange of virtual assets. It was designed to enable a decentralized marketplace for virtual items and collectibles, with a particular focus on the gaming industry.
+WAX Blockchain, recognized as the King of NFTs, is a leading layer 1 blockchain platform that revolutionizes the creation, trading, and ownership of digital assets. It boasts the largest user base and transaction volume in the industry, as verified by [Dappradar.com](https://dappradar.com/). WAX's mission is to make NFTs accessible to the mass market through a secure, eco-friendly, and user-friendly marketplace.
 
-The WAX blockchain is built on top of the Antelope software (formerly known as EOSIO) and utilizes a delegated proof-of-stake (DPoS) consensus mechanism. DPoS allows for faster transaction processing and scalability compared to other consensus algorithms. The WAX blockchain is specifically tailored to handle the high transaction volumes and requirements of virtual asset trading.
+Founded in 2017 by William E. Quigley and Jonathan Yantis, WAX has facilitated the exchange of over 360 million digital collectibles, collaborating with renowned brands like NASCAR, AMC, Mattel, and Hasbro. WAX pioneered the connection of NFTs to physical consumer products, offering exciting possibilities for consumer product companies, known as vIRLs®. 
+WAX extends its influence beyond collectibles, serving as a leading network for entertainment NFTs and web3 games in the metaverse. Notable blockchain games like Alien Worlds and Splinterlands find their home on the WAX platform. Its success lies in its user-friendly infrastructure, enabling seamless experiences for crypto enthusiasts and newcomers alike, with no transaction fees and impressive scalability.
 
-One of the key features of WAX is the creation and management of non-fungible tokens (NFTs). NFTs are unique digital assets that represent ownership or proof of authenticity of a particular item, such as virtual goods, game items, or digital art. WAX provides tools and infrastructure for developers to create and issue NFTs on its platform, allowing users to securely buy, sell, and trade these assets.
+Operating on a delegated proof-of-stake (DPoS) consensus mechanism, WAX ensures fast transactions and high throughput, catering to the demands of digital asset trading. Moreover, its interoperability capabilities allow for integration with other blockchains and external systems, enhancing the reach and utility of WAX-created digital assets.
+WAX Blockchain has a deep and incredible community full of artists, creators, developers, and entrepreneurs that band together to enhance the tools and capabilities of the chain. Some developers have provided easy tools to create and launch digital commerce sales and some have even delved into the digital to physical space. Teams like [BountyBlok](https://www.bountyblok.io/), [NFT Hive](https://nfthive.io/) and [Atomic Hub](https://wax.atomichub.io/) are just a few examples of how this community has made it easy for people to create, buy, sell, trade on WAX Blockchain. 
 
-WAX also offers a user-friendly marketplace called Cloud Wallet  (formerly Cloud Wallet ), which serves as a digital wallet for storing and managing virtual assets. The wallet provides an interface for users to browse, buy, and sell NFTs directly within the platform.
-
-## What makes WAX unique?
-
-- **Focus on Gaming**: WAX recognizes the immense popularity and economic value of virtual assets within the gaming ecosystem. By concentrating on gaming-related virtual items, WAX aims to meet the specific requirements of this industry, including high transaction volumes, fast processing times, and seamless interoperability between different games.
-
-- **NFT Creation and Management**: WAX places a strong emphasis on non-fungible tokens (NFTs), which are unique digital assets that represent ownership or proof of authenticity for virtual items. WAX provides a comprehensive set of tools and infrastructure for developers to create, issue, and manage NFTs. This enables users to securely buy, sell, and trade these assets within the WAX ecosystem.
-
-- **User-Friendly Marketplace**: The Cloud Wallet , known as Cloud Wallet  in this alternate description, is a user-friendly interface that serves as a digital wallet for storing and managing virtual assets. It provides a convenient platform for users to browse, buy, and sell NFTs directly within the ecosystem. The wallet's intuitive design and easy accessibility contribute to a seamless user experience.
-
-## How does WAX compare?
-
-WAX employs a delegated proof-of-stake (DPoS) consensus mechanism, which distinguishes it from other proof-of-stake (PoS) chains. Here are some notable comparisons:
-
-- **Scalability**: DPoS consensus allows for faster transaction processing and scalability compared to traditional PoS chains. With a network of elected block producers, DPoS minimizes block confirmation times and enhances the overall efficiency of the blockchain. This feature is particularly advantageous for WAX as it aims to handle a high volume of transactions associated with virtual asset trading.
-
-- **Governance**: DPoS-based blockchains like WAX often incorporate a governance model that enables token holders to participate in decision-making processes. By voting for block producers, token holders can influence the direction and development of the platform. This decentralized governance approach empowers the community and fosters transparency and inclusivity.
-
-- **NFT-Focused Approach**: While other PoS chains may support NFTs to some extent, WAX specifically caters to the needs of the virtual asset and gaming industry. Its infrastructure, tools, and marketplace are designed to provide a seamless experience for creators, collectors, and traders of NFTs in the gaming ecosystem. This targeted focus sets WAX apart as a specialized blockchain platform.
-
-In summary, WAX stands out by focusing on the gaming industry, offering comprehensive NFT creation and management tools, providing a user-friendly marketplace like Cloud Wallet , and utilizing a DPoS consensus mechanism for enhanced scalability and governance. These unique features contribute to WAX's position as a leading blockchain platform for virtual asset trading and NFTs.
+As a decentralized powerhouse, WAX drives the adoption of digital assets and NFTs, creating opportunities for creators, collectors, and businesses. To learn more about WAX, visit [https://wax.io](https://wax.io) and stay updated through their [Twitter](https://twitter.com/WAX_io) and [Discord channels](https://discord.com/invite/dJtPetMdfb).
