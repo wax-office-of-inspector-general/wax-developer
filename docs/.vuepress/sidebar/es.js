@@ -39,11 +39,11 @@ module.exports = [
             },
         ],
     },
-    // {
-    //     title: 'Construir',
-    //     collapsable: false,
-    //     sidebarDepth: 4,
-    //     children: [
+    {
+        title: 'Construir',
+        collapsable: false,
+        sidebarDepth: 4,
+        children: [
     //         {
     //             title: 'Desarrollo de dApps',
     //             path: '/es/build/dapp-development/',
@@ -135,12 +135,12 @@ module.exports = [
     //                 },
     //             ],
     //         },
-    //         {
-    //             title: 'Tutoriales',
-    //             path: '/es/build/tutorials/',
-    //             collapsable: true,
-    //             children: [
-    //                 {
+            {
+                title: 'Tutoriales',
+                path: '/es/build/tutorials/',
+                collapsable: true,
+                children: [
+                    // {
     //                     title: 'Guía de AtomicAssets',
     //                     path: '/es/build/tutorials/howto_atomicassets/',
     //                     children: [
@@ -178,9 +178,16 @@ module.exports = [
     //                         '/es/build/tutorials/create-wax-rng-smart-contract/rng_deploy',
     //                     ],
     //                 },
+                        {
+                          title: 'WharfKit',
+                          path: '/es/build/tutorials/wharfkit/',
+                          children: [
+                              '/es/build/tutorials/wharfkit/howto_react',
+                          ],
+                        },
     //                 '/es/build/tutorials/howto_blockexplorer',
-    //             ],
-    //         },
+                ],
+            },
     //         {
     //             title: 'Herramientas',
     //             path: '/es/build/tools/',
@@ -208,8 +215,8 @@ module.exports = [
     //                 },
     //             ],
     //         },
-    //     ],
-    // },
+        ],
+    },
     // {
     //     title: 'Operar',
     //     collapsable: false,
