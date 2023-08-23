@@ -250,7 +250,7 @@ module.exports = [
                     '/operate/wax-infrastructure/wax-ram-disk-utilisation',
                     '/operate/wax-infrastructure/wax-account-custom-permissions', 
                     '/operate/wax-infrastructure/hyperion-guide',
-                    '/operate/wax-infrastructure/atomic-api-guide' 
+                    '/operate/wax-infrastructure/atomic-api-guide', 
                 ],
             },
             {
