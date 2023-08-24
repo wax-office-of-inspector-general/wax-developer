@@ -248,9 +248,19 @@ module.exports = [
                     '/operate/wax-infrastructure/wax-mainnet-ship-node',
                     '/operate/wax-infrastructure/working-with-wax-software-files',
                     '/operate/wax-infrastructure/wax-ram-disk-utilisation',
-                    '/operate/wax-infrastructure/wax-account-custom-permissions', 
+                    '/operate/wax-infrastructure/wax-account-custom-permissions',
+                    '/operate/wax-infrastructure/wax-route-specific-api-queries',
+                    '/operate/wax-infrastructure/wax-websocket-load-balancer',
                     '/operate/wax-infrastructure/hyperion-guide',
-                    '/operate/wax-infrastructure/atomic-api-guide', 
+                    '/operate/wax-infrastructure/atomic-api-guide' 
+                ],
+            },
+            {
+                title: 'WAX Hyperion History',
+                path: '/operate/wax-hyperion/',
+                collapsable: true,
+                children: [
+                    '/operate/wax-hyperion/wax-intro-to-hyperion-full-history'         
                 ],
             },
             {
