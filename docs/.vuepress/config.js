@@ -1,7 +1,9 @@
 const { description } = require('../../package')
 const { path } = require('@vuepress/utils');
 const sidebar = require('./sidebar/en');
+const sidebar_es = require('./sidebar/es');
 const footer = require('./footer/en');
+const footer_es = require('./footer/es');
 
 module.exports = {
   /**
@@ -37,12 +39,12 @@ module.exports = {
       ariaLabel: 'Deutsch',
       label: 'Deutsch (WIP)',
     },
+    */
     '/es/': {
       lang: 'es-ES',
       ariaLabel: 'Spanish',
       label: 'Spanish (WIP)',
     }
-    */
   },
 
   /**
@@ -68,13 +70,17 @@ module.exports = {
 
     locales: {
       '/': {
-        footer: footer
+        footer: footer,
+        sidebar: sidebar,
       },
       '/de/': {
         
       },
       '/es/': {
-        
+        sidebar: sidebar_es,
+        footer: footer_es,
+        editLinkText: 'Ayúdanos a mejorar esta página!',
+        searchPlaceholder: 'Buscar…',
       }
     },
     
@@ -93,7 +99,7 @@ module.exports = {
        }
     ],
 
-    sidebar: sidebar,
+    // sidebar: sidebar,
   },
 
   /**

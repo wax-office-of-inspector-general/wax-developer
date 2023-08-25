@@ -177,6 +177,13 @@ module.exports = [
                             '/build/tutorials/create-wax-rng-smart-contract/rng_deploy',
                         ],
                     },
+                    {
+                        title: 'WharfKit',
+                        path: '/build/tutorials/wharfkit/',
+                        children: [
+                            '/build/tutorials/wharfkit/howto_react',
+                        ],
+                    },
                     '/build/tutorials/howto_blockexplorer'
                 ],
             },
