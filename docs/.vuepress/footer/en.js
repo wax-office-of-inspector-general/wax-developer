@@ -41,9 +41,13 @@ module.exports = {
           href: 'https://www.waxdefi.io/'
         },
         {
+          text: 'WAX vIRL Widget',
+          href: 'https://github.com/worldwide-asset-exchange/wax-marketplace-widget'
+        },
+        {
           text: 'Cloud Wallet',
           href: 'https://www.mycloudwallet.com/'
-        },
+        }
       ]
     },
     {
