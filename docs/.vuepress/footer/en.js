@@ -80,7 +80,7 @@ module.exports = {
         },
         {
           text: 'on Twitter',
-          href: 'https://discord.com/invite/dJtPetMdfb',
+          href: 'https://twitter.com/WAX_io',
         },
         {
           text: 'on Telegram',

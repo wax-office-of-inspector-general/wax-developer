@@ -132,6 +132,16 @@ module.exports = [
                         collapsable: true,
                         sidebarDepth: 1,
                     },
+                    {
+                        title: 'WalletConnect',
+                        path: '/build/cloud-wallet/wallet-connect/',
+                        collapsable: true,
+                        sidebarDepth: 1,
+                        children: [
+                            '/build/cloud-wallet/wallet-connect/setting-up-walletconnect',
+                            '/build/cloud-wallet/wallet-connect/walletconnect-developer-guide',
+                        ],
+                    },
                 ],
             },
             {
