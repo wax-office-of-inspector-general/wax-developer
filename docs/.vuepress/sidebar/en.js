@@ -140,6 +140,7 @@ module.exports = [
                         children: [
                             '/build/cloud-wallet/wallet-connect/setting-up-walletconnect',
                             '/build/cloud-wallet/wallet-connect/walletconnect-developer-guide',
+                            '/build/cloud-wallet/wallet-connect/walletconnect-integration-guide',
                         ],
                     },
                 ],
