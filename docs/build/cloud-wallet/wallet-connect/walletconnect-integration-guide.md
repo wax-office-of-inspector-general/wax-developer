@@ -59,7 +59,7 @@ Events: list support events
   </tr>
 </table>
 
-**Example:**
+**Example**
 
 ```json
 requiredNamespaces: {
@@ -91,7 +91,7 @@ pairingTopic: '4738621948defd3bf860cd2a235f1d998ed7e136fd3c82f19f3cd6ce7f8abcc8'
 
 If the request is rejected, a 4001 error will be returned.
 
-**Example:**
+**Example**
 
 ```json
 {
@@ -241,7 +241,7 @@ To provide context and information about the requesting DApp, Wallet can retriev
 </table>
 
 
-**Example:**
+**Example**
 
 ```json
 {
@@ -705,7 +705,7 @@ Return:
 This method expects a transaction in JSON format and will attempt to apply it to the blockchain.
 
 
-**Parameters: application/json**
+**Parameters**
 
 
 <table>
