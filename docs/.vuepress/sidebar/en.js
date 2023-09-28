@@ -27,11 +27,11 @@ module.exports = [
                         path: '/learn/about-wax/wax-consensus',
                     },
                     {
-                        title: 'WAXInteroparability',
+                        title: 'WAX Interoparability',
                         path: '/learn/about-wax/wax-interoparability',
                     },
                     {
-                        title: 'WAXGovernance',
+                        title: 'WAX Governance',
                         path: '/learn/about-wax/wax-governance',
                     },
                 ],
@@ -132,6 +132,17 @@ module.exports = [
                         collapsable: true,
                         sidebarDepth: 1,
                     },
+                    {
+                        title: 'WalletConnect',
+                        path: '/build/cloud-wallet/wallet-connect/',
+                        collapsable: true,
+                        sidebarDepth: 1,
+                        children: [
+                            '/build/cloud-wallet/wallet-connect/setting-up-walletconnect',
+                            '/build/cloud-wallet/wallet-connect/walletconnect-developer-guide',
+                            '/build/cloud-wallet/wallet-connect/walletconnect-integration-guide',
+                        ],
+                    },
                 ],
             },
             {
@@ -175,6 +186,13 @@ module.exports = [
                             '/build/tutorials/create-wax-rng-smart-contract/rng_sample',
                             '/build/tutorials/create-wax-rng-smart-contract/rng_test',
                             '/build/tutorials/create-wax-rng-smart-contract/rng_deploy',
+                        ],
+                    },
+                    {
+                        title: 'WharfKit',
+                        path: '/build/tutorials/wharfkit/',
+                        children: [
+                            '/build/tutorials/wharfkit/howto_react',
                         ],
                     },
                     '/build/tutorials/howto_blockexplorer'

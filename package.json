@@ -31,6 +31,7 @@
   "devDependencies": {
     "@vuepress/client": "^2.0.0-beta.45",
     "@vuepress/plugin-back-to-top": "^1.9.9",
+    "@vuepress/plugin-google-analytics": "^1.9.10",
     "@vuepress/plugin-medium-zoom": "^1.9.9",
     "@vuepress/plugin-search": "^1.9.9",
     "@vuepress/utils": "^2.0.0-alpha.1",
