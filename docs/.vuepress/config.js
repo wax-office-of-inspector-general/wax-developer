@@ -112,5 +112,11 @@ module.exports = {
       searchMaxSuggestions: 10,
       searchIcon: false,
     }],
+    [
+      '@vuepress/google-analytics',
+      {
+        'ga': 'UA-178851075-4'
+      }
+    ]
   ]
 }
