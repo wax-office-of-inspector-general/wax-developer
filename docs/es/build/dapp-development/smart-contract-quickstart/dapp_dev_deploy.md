@@ -82,8 +82,6 @@ La consola imprime lo siguiente:
 ```shell
 executed transaction: 6a0b1489d903f2cacc6480830358f07aaf65b20bf1d7e855dc20097f4d64dc52  104 bytes  1727 us
 #        waxsc2 <= waxsc2::hi                   {"nm":"YourName"}
-
-
 >> Name : YourName
 warning: transaction executed locally, but may not be confirmed by the network yet         ]
 ```

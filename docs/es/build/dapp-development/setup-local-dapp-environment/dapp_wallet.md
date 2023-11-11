@@ -56,10 +56,10 @@ También puedes incluir el parámetro --name para nombrar una cartera: `cleos wa
 El parámetro `--to-console` imprime tu contraseña en la consola. Asegúrate de guardar esta contraseña en un lugar seguro (la necesitarás para desbloquear tu cartera).
 
 ```shell
-warn  2019-07-16T22:39:39.847 thread-0  wallet.cpp:223                save_wallet_file     ] guardando cartera en el archivo /home/username/eosio-wallet/./default.wallet
-Creando cartera: default
-Guarda la contraseña para usar en el futuro para desbloquear esta cartera.
-Sin la contraseña, las claves importadas no podrán ser recuperadas.
+warn  2019-07-16T22:39:39.847 thread-0  wallet.cpp:223                save_wallet_file     ] saving wallet to file /home/username/eosio-wallet/./default.wallet
+Creating wallet: default
+Save password to use in the future to unlock this wallet.
+Without password imported keys will not be retrievable.
 "PW5KRXKVx25yjL3FvxxY9YxYxxYY9Yxx99yyXTRH8DjppKpD9tKtVz"
 ```
 
@@ -136,5 +136,5 @@ cleos wallet import --private-key 5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79z
 La consola imprime que tu clave de desarrollo ha sido importada para: (tu clave privada de cartera).
 
 ```shell
-clave privada importada para: EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV
+imported private key for: EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV
 ```

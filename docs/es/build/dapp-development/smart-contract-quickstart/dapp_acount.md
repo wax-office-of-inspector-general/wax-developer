@@ -72,9 +72,7 @@ La consola imprime tu clave pública:
 
 ```shell
 warn  2019-07-16T23:16:23.435 thread-0  wallet.cpp:223                save_wallet_file     ] saving wallet to file /home/username/eosio-wallet/./default.wallet
-Created new private key with a public key of: "EOS4yxqE5
-
-KYv5XaB2gj6sZTUDiGzKm42KfiRPDCeXWZUsAZZVXk1F"
+Created new private key with a public key of: "EOS4yxqE5KYv5XaB2gj6sZTUDiGzKm42KfiRPDCeXWZUsAZZVXk1F"
 ```
 
 Guarda esta clave en algún lugar de fácil acceso (necesitarás esta clave pública en el siguiente paso).
