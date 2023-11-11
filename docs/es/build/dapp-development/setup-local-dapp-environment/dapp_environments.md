@@ -42,9 +42,7 @@ Cuando [Configures un Entorno dApp Local](/es/build/dapp-development/), puedes r
 
 | Servicio | URL | Descripción |
 |---------|-----|-------------|
-| URL de Blockchain | [http://127.0.0.1:8888](http://127.0.0.1:
-
-8888) | Utilizado para realizar llamadas API en tu entorno de desarrollo local. |
+| URL de Blockchain | [http://127.0.0.1:8888](http://127.0.0.1:8888) | Utilizado para realizar llamadas API en tu entorno de desarrollo local. |
 
 ## Entorno C++
 
