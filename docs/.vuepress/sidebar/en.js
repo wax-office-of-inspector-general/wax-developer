@@ -27,11 +27,11 @@ module.exports = [
                         path: '/learn/about-wax/wax-consensus',
                     },
                     {
-                        title: 'WAXInteroparability',
+                        title: 'WAX Interoparability',
                         path: '/learn/about-wax/wax-interoparability',
                     },
                     {
-                        title: 'WAXGovernance',
+                        title: 'WAX Governance',
                         path: '/learn/about-wax/wax-governance',
                     },
                 ],
@@ -132,6 +132,17 @@ module.exports = [
                         collapsable: true,
                         sidebarDepth: 1,
                     },
+                    {
+                        title: 'WalletConnect',
+                        path: '/build/cloud-wallet/wallet-connect/',
+                        collapsable: true,
+                        sidebarDepth: 1,
+                        children: [
+                            '/build/cloud-wallet/wallet-connect/setting-up-walletconnect',
+                            '/build/cloud-wallet/wallet-connect/walletconnect-developer-guide',
+                            '/build/cloud-wallet/wallet-connect/walletconnect-integration-guide',
+                        ],
+                    },
                 ],
             },
             {
@@ -175,6 +186,13 @@ module.exports = [
                             '/build/tutorials/create-wax-rng-smart-contract/rng_sample',
                             '/build/tutorials/create-wax-rng-smart-contract/rng_test',
                             '/build/tutorials/create-wax-rng-smart-contract/rng_deploy',
+                        ],
+                    },
+                    {
+                        title: 'WharfKit',
+                        path: '/build/tutorials/wharfkit/',
+                        children: [
+                            '/build/tutorials/wharfkit/howto_react',
                         ],
                     },
                     '/build/tutorials/howto_blockexplorer'
@@ -248,9 +266,19 @@ module.exports = [
                     '/operate/wax-infrastructure/wax-mainnet-ship-node',
                     '/operate/wax-infrastructure/working-with-wax-software-files',
                     '/operate/wax-infrastructure/wax-ram-disk-utilisation',
-                    '/operate/wax-infrastructure/wax-account-custom-permissions', 
+                    '/operate/wax-infrastructure/wax-account-custom-permissions',
+                    '/operate/wax-infrastructure/wax-route-specific-api-queries',
+                    '/operate/wax-infrastructure/wax-websocket-load-balancer',
                     '/operate/wax-infrastructure/hyperion-guide',
                     '/operate/wax-infrastructure/atomic-api-guide' 
+                ],
+            },
+            {
+                title: 'WAX Hyperion History',
+                path: '/operate/wax-hyperion/',
+                collapsable: true,
+                children: [
+                    '/operate/wax-hyperion/wax-intro-to-hyperion-full-history'         
                 ],
             },
             {
