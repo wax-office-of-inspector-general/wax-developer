@@ -278,7 +278,9 @@ module.exports = [
                 path: '/operate/wax-hyperion/',
                 collapsable: true,
                 children: [
-                    '/operate/wax-hyperion/wax-intro-to-hyperion-full-history'         
+                    '/operate/wax-hyperion/wax-intro-to-hyperion-full-history',
+                    '/operate/wax-hyperion/wax-config-hyperion-software-components',
+                    '/operate/wax-hyperion/wax-build-hyperion-software-components'
                 ],
             },
             {
