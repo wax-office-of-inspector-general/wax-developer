@@ -44,71 +44,71 @@ module.exports = [
         collapsable: false,
         sidebarDepth: 4,
         children: [
-    //         {
-    //             title: 'Desarrollo de dApps',
-    //             path: '/es/build/dapp-development/',
-    //             collapsable: true,
-    //             children: [
-    //                 {
-    //                     title: 'Configuración del entorno local',
-    //                     path: '/es/build/dapp-development/setup-local-dapp-environment/',
-    //                     children: [
-    //                         '/es/build/dapp-development/setup-local-dapp-environment/dapp_local',
-    //                         '/es/build/dapp-development/setup-local-dapp-environment/dapp_environments',
-    //                         '/es/build/dapp-development/setup-local-dapp-environment/dapp_wallet',
-    //                         '/es/build/dapp-development/setup-local-dapp-environment/dapp_api',
-    //                     ],
-    //                 },
-    //                 {
-    //                     title: 'Configuración de Docker',
-    //                     path: '/es/build/dapp-development/docker-setup/',
-    //                     children: [
-    //                         '/es/build/dapp-development/docker-setup/docker_qstart_getstarted',
-    //                         '/es/build/dapp-development/docker-setup/docker_qstart_use',
-    //                         '/es/build/dapp-development/docker-setup/docker_qstart_manage',
-    //                     ],
-    //                 },
-    //                 {
-    //                     title: 'Configuración de la cadena de bloques WAX',
-    //                     path: '/es/build/dapp-development/wax-blockchain-setup/',
-    //                     children: [
-    //                         '/es/build/dapp-development/wax-blockchain-setup/blockchain_install',
-    //                         '/es/build/dapp-development/wax-blockchain-setup/blockchain_uninstall',
-    //                         '/es/build/dapp-development/wax-blockchain-setup/blockchain_verify',
-    //                     ],
-    //                 },
-    //                 {
-    //                     title: 'Desarrollo de contratos inteligentes',
-    //                     path: '/es/build/dapp-development/smart-contract-quickstart/',
-    //                     children: [
-    //                         '/es/build/dapp-development/smart-contract-quickstart/smart_contract_basics',
-    //                         '/es/build/dapp-development/smart-contract-quickstart/dapp_account',
-    //                         '/es/build/dapp-development/smart-contract-quickstart/dapp_hello_world',
-    //                         '/es/build/dapp-development/smart-contract-quickstart/dapp_dev_deploy',
-    //                         '/es/build/dapp-development/smart-contract-quickstart/custom_permission',
-    //                     ],
-    //                 },
-    //                 {
-    //                     title: 'WAX CDT',
-    //                     path: '/es/build/dapp-development/wax-cdt/',
-    //                     children: [
-    //                         '/es/build/dapp-development/wax-cdt/cdt_install',
-    //                         '/es/build/dapp-development/wax-cdt/cdt_uninstall',
-    //                         '/es/build/dapp-development/wax-cdt/cdt_use',
-    //                         '/es/build/dapp-development/wax-cdt/cdt_cpp',
-    //                     ],
-    //                 },
-    //                 {
-    //                     title: 'Implementación en WAX',
-    //                     path: '/es/build/dapp-development/deploy-dapp-on-wax/',
-    //                     children: [
-    //                         '/es/build/dapp-development/deploy-dapp-on-wax/deploy_source',
-    //                         '/es/build/dapp-development/deploy-dapp-on-wax/deploy_docker',
-    //                         '/es/build/dapp-development/deploy-dapp-on-wax/convert_eos',
-    //                     ],
-    //                 },
-    //             ],
-    //         },
+            {
+                title: 'Desarrollo de dApps',
+                path: '/es/build/dapp-development/',
+                collapsable: true,
+                children: [
+                    {
+                        title: 'Configuración del entorno local',
+                        path: '/es/build/dapp-development/setup-local-dapp-environment/',
+                        children: [
+                            '/es/build/dapp-development/setup-local-dapp-environment/dapp_local',
+                            '/es/build/dapp-development/setup-local-dapp-environment/dapp_environments',
+                            '/es/build/dapp-development/setup-local-dapp-environment/dapp_wallet',
+                            '/es/build/dapp-development/setup-local-dapp-environment/dapp_api',
+                        ],
+                    },
+                    {
+                        title: 'Configuración de Docker',
+                        path: '/es/build/dapp-development/docker-setup/',
+                        children: [
+                            '/es/build/dapp-development/docker-setup/docker_qstart_getstarted',
+                            '/es/build/dapp-development/docker-setup/docker_qstart_use',
+                            '/es/build/dapp-development/docker-setup/docker_qstart_manage',
+                        ],
+                    },
+                    {
+                        title: 'Configuración de la cadena de bloques WAX',
+                        path: '/es/build/dapp-development/wax-blockchain-setup/',
+                        children: [
+                            '/es/build/dapp-development/wax-blockchain-setup/blockchain_install',
+                            '/es/build/dapp-development/wax-blockchain-setup/blockchain_uninstall',
+                            '/es/build/dapp-development/wax-blockchain-setup/blockchain_verify',
+                        ],
+                    },
+                    {
+                        title: 'Desarrollo de contratos inteligentes',
+                        path: '/es/build/dapp-development/smart-contract-quickstart/',
+                        children: [
+                            '/es/build/dapp-development/smart-contract-quickstart/smart_contract_basics',
+                            '/es/build/dapp-development/smart-contract-quickstart/dapp_account',
+                            '/es/build/dapp-development/smart-contract-quickstart/dapp_hello_world',
+                            '/es/build/dapp-development/smart-contract-quickstart/dapp_dev_deploy',
+                            '/es/build/dapp-development/smart-contract-quickstart/custom_permission',
+                        ],
+                    },
+                    {
+                        title: 'WAX CDT',
+                        path: '/es/build/dapp-development/wax-cdt/',
+                        children: [
+                            '/es/build/dapp-development/wax-cdt/cdt_install',
+                            '/es/build/dapp-development/wax-cdt/cdt_uninstall',
+                            '/es/build/dapp-development/wax-cdt/cdt_use',
+                            '/es/build/dapp-development/wax-cdt/cdt_cpp',
+                        ],
+                    },
+                    {
+                        title: 'Implementación en WAX',
+                        path: '/es/build/dapp-development/deploy-dapp-on-wax/',
+                        children: [
+                            '/es/build/dapp-development/deploy-dapp-on-wax/deploy_source',
+                            '/es/build/dapp-development/deploy-dapp-on-wax/deploy_docker',
+                            '/es/build/dapp-development/deploy-dapp-on-wax/convert_eos',
+                        ],
+                    },
+                ],
+            },
     //         {
     //             title: 'MyCloudWallet',
     //             path: '/es/build/cloud-wallet/',
@@ -133,8 +133,8 @@ module.exports = [
     //                     collapsable: true,
     //                     sidebarDepth: 1,
     //                 },
-    //             ],
-    //         },
+                // ],
+            // },
             {
                 title: 'Tutoriales',
                 path: '/es/build/tutorials/',

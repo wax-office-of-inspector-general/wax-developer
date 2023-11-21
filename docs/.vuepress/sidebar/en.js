@@ -195,6 +195,15 @@ module.exports = [
                             '/build/tutorials/wharfkit/howto_react',
                         ],
                     },
+                    {
+                      title: 'MyCloudWallet',
+                      path: '/build/tutorials/mycloudwallet/',
+                      children: [
+                          '/build/tutorials/mycloudwallet/claim-account',
+                          '/build/tutorials/mycloudwallet/relink-account',
+                      ],
+                  },
+
                     '/build/tutorials/howto_blockexplorer'
                 ],
             },
