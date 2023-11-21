@@ -289,7 +289,9 @@ module.exports = [
                 children: [
                     '/operate/wax-hyperion/wax-intro-to-hyperion-full-history',
                     '/operate/wax-hyperion/wax-config-hyperion-software-components',
-                    '/operate/wax-hyperion/wax-build-hyperion-software-components'
+                    '/operate/wax-hyperion/wax-build-hyperion-software-components',
+                    '/operate/wax-hyperion/wax-running-hyperion',
+                    '/operate/wax-hyperion/wax-clustering-elasticsearch-for-hyperion'
                 ],
             },
             {
