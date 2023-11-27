@@ -17,11 +17,9 @@ Our [Docker Development Image](/build/dapp-development/docker-setup/) includes e
 
 To set up your local development environment, you'll need to use three key [Blockchain Tools](/build/tools/blockchain_tools): keosd, nodeos, and cleos.
 
-<!--To get started, you'll need to use three key tools included in the [WAX Blockchain Setup](/build/dapp-development/wax-blockchain-setup/):
-
 - **nodeos:** This is the core WAX node daemon, used to run a local node on your server. **nodeos** can be configured with various plug-ins and options.
 - **keosd:** Used to store private keys. This program is automatically started when you initiate **cleos** commands and can start several instances on your local server.
-- **cleos:** Used to interact with your local blockchain and manage local wallets and accounts. -->
+- **cleos:** Used to interact with your local blockchain and manage local wallets and accounts.
 
 When you start **nodeos** with various development plug-ins, it will launch a local test node on your server and start producing blocks. These blocks are written to a log, allowing you to view signed transactions initiated from your smart contracts. 
 
