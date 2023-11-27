@@ -195,4 +195,5 @@ const extendSchema = async (
   }
 }
 ```
-
+# WAX Media Metadata Standards 
+Community metadata standards have been published for [Video, Photos, Images, Music and Literature](https://standards.cxc.world/media). Use them directly, or modify, or as a reference when developing your own schemas.

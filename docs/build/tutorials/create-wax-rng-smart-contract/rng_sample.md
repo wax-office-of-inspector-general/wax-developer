@@ -183,14 +183,18 @@ Callback action that will be called from WAX RNG to return us, in case of succes
 ACTION rngtest::receiverand(uint64_t signing_value, const checksum256& random_value) {
    require_auth(ORNG_CONTRACT);
 
-   uint8_t divisor = 100; //To cast the random_chunk extracted from random_value to a smaller number (0-99)
-
+   //cast the random_value to a smaller number
+   //COMMENT: max_value isn't the max value. Adding +1 to num1 might fix this if you want a number from 1 to 100.
+   uint64_t max_value = 100;
    auto byte_array = random_value.extract_as_byte_array();
 
-   uint16_t random_chunk = 0;
-   random_chunk = (static_cast<uint16_t>(byte_array[0]) << 8) + static_cast<uint16_t>(byte_array[1]);
+   //COMMENT: This is a bad practice. SEE: modulo bias
+   //  modulo bias shows 8-bit size for random_int is bad practice due to its size relative to max_value.
+   //  The first (2**8 % max_value) numbers (0-55) will have a +50% increased chance of being chosen in this example.
+   uint8_t random_int = 0; 
+   random_int = byte_array[0];
 
-   uint8_t num1 = random_chunk % divisor;
+   uint8_t num1 = random_int % max_value;
 
    auto iCustomers = _customers.require_find(signing_value, "Error: Petition not found!");
 
@@ -203,10 +207,12 @@ ACTION rngtest::receiverand(uint64_t signing_value, const checksum256& random_va
 ```
 We make sure that only WAX RNG will be able to call this action with *require_auth*.
 
-We extract the first 16 bits of the returned random number and use it to get a number no larger than 100. Although it could be done with only 1 byte, it is preferable to increase the number of numerator bits before performing the reduction operation to avoid the modulo bias effect as much as possible.
+We extract the first 8 bits of the returned random number and use it to get a number no larger than 100. 
 
 **Note:** We still have many bits available in case we need to get more random numbers!
 :::
+
+**COMMENT:** Using only the first 8 bits is bad practice! We need more bits for fairness. SEE: Modulo bias.
 
 We locate the record associated with the request identifier and update its contents to store the returned hash code.
 
