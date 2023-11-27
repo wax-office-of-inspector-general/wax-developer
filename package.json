@@ -18,8 +18,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "docs:dev": "NODE_OPTIONS=--openssl-legacy-provider vuepress dev docs",
-    "docs:build": "NODE_OPTIONS=--openssl-legacy-provider vuepress build docs"
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "engines": {
     "node": ">=16.19.0"
@@ -36,6 +37,7 @@
     "@vuepress/plugin-search": "^1.9.9",
     "@vuepress/utils": "^2.0.0-alpha.1",
     "sass-loader": "^7.3.1",
+    "vitepress": "^1.0.0-rc.31",
     "vuepress": "^1.9.9"
   },
   "dependencies": {
