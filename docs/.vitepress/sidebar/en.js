@@ -41,7 +41,7 @@ module.exports = [
     {
         text: 'Build',
         link: '/build/',
-        collapsed: false,
+        collapsed: true,
         items: [
             {
                 text: 'dApp Development',
@@ -228,12 +228,12 @@ module.exports = [
     {
         text: 'Operate',
         link: '/operate/',
-        collapsed: false,
+        collapsed: true,
         items: [
             {
                 text: 'Basics',
                 link: '/operate/wax-bp/',
-                collapsed: true,
+                collapsed: false,
                 items: [
                     '/operate/wax-bp/chains-json',
                     '/operate/wax-bp/bp-json'
@@ -287,7 +287,7 @@ module.exports = [
     {
         text: 'Create',
         link: '/create/',
-        collapsed: false,
+        collapsed: true,
         items: [
           {
             text: 'Awesome WAX',
