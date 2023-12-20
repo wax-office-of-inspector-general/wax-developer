@@ -292,7 +292,9 @@ module.exports = [
                     '/operate/wax-hyperion/wax-config-hyperion-software-components',
                     '/operate/wax-hyperion/wax-build-hyperion-software-components',
                     '/operate/wax-hyperion/wax-running-hyperion',
-                    '/operate/wax-hyperion/wax-clustering-elasticsearch-for-hyperion'
+                    '/operate/wax-hyperion/wax-clustering-elasticsearch-for-hyperion',
+                    '/operate/wax-hyperion/wax-rectify-missing-blocks-in-hyperion',
+                    '/operate/wax-hyperion/wax-hyperion-indexer-scaling'
                 ],
             },
             {
