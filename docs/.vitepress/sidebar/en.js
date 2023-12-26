@@ -51,59 +51,66 @@ module.exports = [
                     {
                         text: 'Setup local Environment',
                         link: '/build/dapp-development/setup-local-dapp-environment/',
+                        collapsed: true,
                         items: [
-                            '/build/dapp-development/setup-local-dapp-environment/dapp_local',
-                            '/build/dapp-development/setup-local-dapp-environment/dapp_environments',
-                            '/build/dapp-development/setup-local-dapp-environment/dapp_wallet',
-                            '/build/dapp-development/setup-local-dapp-environment/dapp_api',
+                            {text: 'Start a Local Node', link: '/build/dapp-development/setup-local-dapp-environment/dapp_local'},
+                            {text: 'Blockchain Environments', link: '/build/dapp-development/setup-local-dapp-environment/dapp_environments'},
+                            {text: 'Create a Wallet', link: '/build/dapp-development/setup-local-dapp-environment/dapp_wallet'},
+                            {text: 'Access Local API', link: '/build/dapp-development/setup-local-dapp-environment/dapp_api'},
                         ],
                     },
                     {
                         text: 'Docker Setup',
                         link: '/build/dapp-development/docker-setup/',
+                        collapsed: true,
                         items: [
-                            '/build/dapp-development/docker-setup/docker_qstart_getstarted',
-                            '/build/dapp-development/docker-setup/docker_qstart_use',
-                            '/build/dapp-development/docker-setup/docker_qstart_manage',
+                          {text: 'Run a WAX Container', link: '/build/dapp-development/docker-setup/docker_qstart_getstarted'},
+                          {text: 'Run Commands', link: '/build/dapp-development/docker-setup/docker_qstart_use'},
+                          {text: 'Manage Container', link: '/build/dapp-development/docker-setup/docker_qstart_manage'},
                         ],
                     },
                     {
                         text: 'WAX Blockchain Setup',
                         link: '/build/dapp-development/wax-blockchain-setup/',
+                        collapsed: true,
                         items: [
-                            '/build/dapp-development/wax-blockchain-setup/blockchain_install',
-                            '/build/dapp-development/wax-blockchain-setup/blockchain_uninstall',
-                            '/build/dapp-development/wax-blockchain-setup/blockchain_verify',
+                          {text: 'Install WAX Blockchain', link: '/build/dapp-development/wax-blockchain-setup/blockchain_install'},
+                          {text: 'Uninstall WAX', link: '/build/dapp-development/wax-blockchain-setup/blockchain_uninstall'},
+                          {text: 'Verify Your Install', link: '/build/dapp-development/wax-blockchain-setup/blockchain_verify'},
                         ],
                     },
                     {
                         text: 'Smart Contract Development',
                         link: '/build/dapp-development/smart-contract-quickstart/',
+                        collapsed: true,
                         items: [
-                            '/build/dapp-development/smart-contract-quickstart/smart_contract_basics',
-                            '/build/dapp-development/smart-contract-quickstart/dapp_account',
-                            '/build/dapp-development/smart-contract-quickstart/dapp_hello_world',
-                            '/build/dapp-development/smart-contract-quickstart/dapp_dev_deploy',
-                            '/build/dapp-development/smart-contract-quickstart/custom_permission',
+                          {text: 'Smart Contract Basics', link: '/build/dapp-development/smart-contract-quickstart/smart_contract_basics'},
+                          {text: 'Create Accounts', link: '/build/dapp-development/smart-contract-quickstart/dapp_account'},
+                          {text: 'Create a Smart Contract', link: '/build/dapp-development/smart-contract-quickstart/dapp_hello_world'},
+                          {text: 'Deploy to Blockchain', link: '/build/dapp-development/smart-contract-quickstart/dapp_dev_deploy'},
+                          {text: 'Custom Permissions', link: '/build/dapp-development/smart-contract-quickstart/custom_permission'},
                         ],
                     },
                     {
                         text: 'WAX CDT',
                         link: '/build/dapp-development/wax-cdt/',
+                        collapsed: true,
                         items: [
-                            '/build/dapp-development/wax-cdt/cdt_install',
-                            '/build/dapp-development/wax-cdt/cdt_uninstall',
-                            '/build/dapp-development/wax-cdt/cdt_use',
-                            '/build/dapp-development/wax-cdt/cdt_cpp',
+                          {text: 'Install WAX-CDT', link: '/build/dapp-development/wax-cdt/cdt_install'},
+                          {text: 'Uninstall WAX-CDT', link: '/build/dapp-development/wax-cdt/cdt_uninstall'},
+                          {text: 'Sample Contracts', link: '/build/dapp-development/wax-cdt/cdt_use'},
+                          {text: 'Build Tools', link: '/build/dapp-development/wax-cdt/cdt_cpp'},
+                          {text: 'WAX-CDT Options', link: '/build/tools/cdt_options'},
                         ],
                     },
                     {
                         text: 'Deploy on WAX',
                         link: '/build/dapp-development/deploy-dapp-on-wax/',
+                        collapsed: true,
                         items: [
-                            '/build/dapp-development/deploy-dapp-on-wax/deploy_source',
-                            '/build/dapp-development/deploy-dapp-on-wax/deploy_docker',
-                            '/build/dapp-development/deploy-dapp-on-wax/convert_eos',
+                          {text: 'WAX-CDT Deploy', link: '/build/dapp-development/deploy-dapp-on-wax/deploy_source'},
+                          {text: 'Docker Deploy', link: '/build/dapp-development/deploy-dapp-on-wax/deploy_docker'},
+                          {text: 'Deploy an EOS dApp on WAX', link: '/build/dapp-development/deploy-dapp-on-wax/convert_eos'},
                         ],
                     },
                 ],
@@ -118,10 +125,10 @@ module.exports = [
                         link: '/build/cloud-wallet/waxjs/',
                         collapsed: true,
                         items: [
-                            '/build/cloud-wallet/waxjs/waxjs_qstart',
-                            '/build/cloud-wallet/waxjs/waxjs_install',
-                            '/build/cloud-wallet/waxjs/waxjs_use',
-                            '/build/cloud-wallet/waxjs/waxjs_demo',
+                            {text: 'Cloud Wallet Quickstart', link: '/build/cloud-wallet/waxjs/waxjs_qstart'},
+                            {text: 'Install WaxJS', link: '/build/cloud-wallet/waxjs/waxjs_install'},
+                            {text: 'Use WaxJS', link: '/build/cloud-wallet/waxjs/waxjs_use'},
+                            {text: 'WaxJS Demo', link: '/build/cloud-wallet/waxjs/waxjs_demo'},
                         ],
                     },
                     {
@@ -134,9 +141,9 @@ module.exports = [
                         link: '/build/cloud-wallet/wallet-connect/',
                         collapsed: true,
                         items: [
-                            '/build/cloud-wallet/wallet-connect/setting-up-walletconnect',
-                            '/build/cloud-wallet/wallet-connect/walletconnect-developer-guide',
-                            '/build/cloud-wallet/wallet-connect/walletconnect-integration-guide',
+                            {text: 'Setting Up WalletConnect', link: '/build/cloud-wallet/wallet-connect/setting-up-walletconnect'},
+                            {text: 'Developer Guide', link: '/build/cloud-wallet/wallet-connect/walletconnect-developer-guide'},
+                            {text: 'Integration Guide', link: '/build/cloud-wallet/wallet-connect/walletconnect-integration-guide'},
                         ],
                     },
                 ],
@@ -149,24 +156,25 @@ module.exports = [
                     {
                         text: 'AtomicAssets Guide',
                         link: '/build/tutorials/howto_atomicassets/',
+                        collapsed: true,
                         items: [
-                            '/build/tutorials/howto_atomicassets/collection_struct',
-                            '/build/tutorials/howto_atomicassets/collection_js',
-                            '/build/tutorials/howto_atomicassets/schemas_js',
-                            '/build/tutorials/howto_atomicassets/templates_js',
-                            '/build/tutorials/howto_atomicassets/mint_nft',
-                            '/build/tutorials/howto_atomicassets/transfer_nft',
-                            '/build/tutorials/howto_atomicassets/mutabledata',
+                            {text: 'Collection Structure', link: '/build/tutorials/howto_atomicassets/collection_struct'},
+                            {text: 'Collections', link: '/build/tutorials/howto_atomicassets/collection_js'},
+                            {text: 'Schemas', link: '/build/tutorials/howto_atomicassets/schemas_js'},
+                            {text: 'Templates', link: '/build/tutorials/howto_atomicassets/templates_js'},
+                            {text: 'Mint NFT', link: '/build/tutorials/howto_atomicassets/mint_nft'},
+                            {text: 'Transfer NFT', link: '/build/tutorials/howto_atomicassets/transfer_nft'},
+                            {text: 'Mutable Data', link: '/build/tutorials/howto_atomicassets/mutabledata'},
                         ],
                     },
                     {
                         text: 'SimpleAssets Guide',
                         link: '/build/tutorials/howto_simpleassets/',
                         items: [
-                            '/build/tutorials/howto_simpleassets/nft_basics',
-                            '/build/tutorials/howto_simpleassets/nft_use',
-                            '/build/tutorials/howto_simpleassets/nft_deploy',
-                            '/build/tutorials/howto_simpleassets/nft_test',
+                            {text: 'Structure', link: '/build/tutorials/howto_simpleassets/nft_basics'},
+                            {text: 'Mint NFT', link: '/build/tutorials/howto_simpleassets/nft_use'},
+                            {text: 'Deploy NFT Smart Contract', link: '/build/tutorials/howto_simpleassets/nft_deploy'},
+                            {text: 'Test NFT Smart Contract', link: '/build/tutorials/howto_simpleassets/nft_test'},
                         ],
                     },
                     {
@@ -178,20 +186,20 @@ module.exports = [
                         text: 'Create RNG Contract',
                         link: '/build/tutorials/create-wax-rng-smart-contract/',
                         items: [
-                            '/build/tutorials/create-wax-rng-smart-contract/rng_basics',
-                            '/build/tutorials/create-wax-rng-smart-contract/rng_sample',
-                            '/build/tutorials/create-wax-rng-smart-contract/rng_test',
-                            '/build/tutorials/create-wax-rng-smart-contract/rng_deploy',
+                            {text: 'RNG Basics', link: '/build/tutorials/create-wax-rng-smart-contract/rng_basics'},
+                            {text: 'Calling RNG Contract', link: '/build/tutorials/create-wax-rng-smart-contract/rng_sample'},
+                            {text: 'Test Your RNG Contract', link: '/build/tutorials/create-wax-rng-smart-contract/rng_test'},
+                            {text: 'Deploy Your Smart Contract', link: '/build/tutorials/create-wax-rng-smart-contract/rng_deploy'},
                         ],
                     },
                     {
                         text: 'WharfKit',
                         link: '/build/tutorials/wharfkit/',
                         items: [
-                            '/build/tutorials/wharfkit/howto_react',
+                          {text: 'Wharfkit in React', link: '/build/tutorials/wharfkit/howto_react'},
                         ],
                     },
-                    '/build/tutorials/howto_blockexplorer'
+                    {text: 'How To Explore WAX Blockchain', link: '/build/tutorials/howto_blockexplorer'}
                 ],
             },
             {
@@ -199,11 +207,11 @@ module.exports = [
                 link: '/build/tools/',
                 collapsed: true,
                 items: [
-                    '/build/tools/blockchain_tools',
-                    '/build/tools/os',
-                    '/build/tools/cdt_options',
-                    '/build/tools/ricardian_contract',
-                    '/build/tools/ricardian_clause',
+                    {text: 'Blockchain Tools', link: '/build/tools/blockchain_tools'},
+                    {text: 'Supported OS', link: '/build/tools/os'},
+                    {text: 'WAX-CDT Options', link: '/build/tools/cdt_options'},
+                    {text: 'Ricardian Contracts', link: '/build/tools/ricardian_contract'},
+                    {text: 'Ricardian Clauses', link: '/build/tools/ricardian_clause'},
                 ],
             },
             {
@@ -211,8 +219,8 @@ module.exports = [
                 link: '/build/api-reference/',
                 collapsed: true,
                 items: [
-                    '/build/api-reference/rpc_api',
-                    '/build/api-reference/cdt_api',
+                    {text: 'WAX-RPC API', link: '/build/api-reference/rpc_api'},
+                    {text: 'WAX-CDT API', link: '/build/api-reference/cdt_api'},
                     {
                         text: 'dFuse',
                         link: '/build/api-reference/dfuse',
@@ -235,8 +243,8 @@ module.exports = [
                 link: '/operate/wax-bp/',
                 collapsed: false,
                 items: [
-                    '/operate/wax-bp/chains-json',
-                    '/operate/wax-bp/bp-json'
+                    {text: 'chains.json', link: '/operate/wax-bp/chains-json'},
+                    {text: 'bp.json', link: '/operate/wax-bp/bp-json'}
                 ],
             },
             {
@@ -244,8 +252,8 @@ module.exports = [
                 link: '/operate/atomic-assets/',
                 collapsed: true,
                 items: [
-                    '/operate/atomic-assets/setup-wax-atomic-api-node',
-                    '/operate/atomic-assets/optimise-restore-wax-atomic-api-node'
+                    {text: '', link: '/operate/atomic-assets/setup-wax-atomic-api-node'},
+                    {text: '', link: '/operate/atomic-assets/optimise-restore-wax-atomic-api-node'}
                 ],
             },
             {
@@ -253,20 +261,20 @@ module.exports = [
                 link: '/operate/wax-infrastructure/',
                 collapsed: true,
                 items: [
-                    '/operate/wax-infrastructure/wax-testnet-node',
-                    '/operate/wax-infrastructure/wax-snapshots',
-                    '/operate/wax-infrastructure/wax-testnet-block-producer',
-                    '/operate/wax-infrastructure/wax-mainnet-node',
-                    '/operate/wax-infrastructure/wax-mainnet-node-load-balancer',
-                    '/operate/wax-infrastructure/wax-mainnet-node-mitigate-abuse',
-                    '/operate/wax-infrastructure/wax-mainnet-ship-node',
-                    '/operate/wax-infrastructure/working-with-wax-software-files',
-                    '/operate/wax-infrastructure/wax-ram-disk-utilisation',
-                    '/operate/wax-infrastructure/wax-account-custom-permissions',
-                    '/operate/wax-infrastructure/wax-route-specific-api-queries',
-                    '/operate/wax-infrastructure/wax-websocket-load-balancer',
-                    '/operate/wax-infrastructure/hyperion-guide',
-                    '/operate/wax-infrastructure/atomic-api-guide' 
+                    {text: 'Set Up a Testnet Node', link: '/operate/wax-infrastructure/wax-testnet-node'},
+                    {text: 'Set Up a Testnet Producer Node', link: '/operate/wax-infrastructure/wax-testnet-block-producer'},
+                    {text: 'Set Up a Mainnet Node', link: '/operate/wax-infrastructure/wax-mainnet-node'},
+                    {text: 'Set Up a State-Hisory Node', link: '/operate/wax-infrastructure/wax-mainnet-ship-node'},
+                    {text: 'Using Snapshots', link: '/operate/wax-infrastructure/wax-snapshots'},
+                    {text: 'Set Up a Load Balancer', link: '/operate/wax-infrastructure/wax-mainnet-node-load-balancer'},
+                    {text: 'How To Mitigate API Abuse', link: '/operate/wax-infrastructure/wax-mainnet-node-mitigate-abuse'},
+                    {text: 'WAX Files and Folders', link: '/operate/wax-infrastructure/working-with-wax-software-files'},
+                    {text: 'Optimising RAM and Disk', link: '/operate/wax-infrastructure/wax-ram-disk-utilisation'},
+                    {text: 'Custom Permissions', link: '/operate/wax-infrastructure/wax-account-custom-permissions'},
+                    {text: 'How To Route API Queries', link: '/operate/wax-infrastructure/wax-route-specific-api-queries'},
+                    {text: 'Set Up Websocket Support on a Load Balancer', link: '/operate/wax-infrastructure/wax-websocket-load-balancer'},
+                    {text: 'Set Up Full/Partial History Nodes (Hyperion)', link: '/operate/wax-infrastructure/hyperion-guide'},
+                    {text: 'Set Up an Atomic API Node', link: '/operate/wax-infrastructure/atomic-api-guide'} 
                 ],
             },
             {
@@ -274,7 +282,11 @@ module.exports = [
                 link: '/operate/wax-hyperion/',
                 collapsed: true,
                 items: [
-                    '/operate/wax-hyperion/wax-intro-to-hyperion-full-history'         
+                    {text: 'Introduction', link: '/operate/wax-hyperion/wax-intro-to-hyperion-full-history'},
+                    {text: 'Hyperion Conmponents', link: '/operate/wax-hyperion/wax-build-hyperion-software-components'},
+                    {text: 'Configure Hyperion Components', link: '/operate/wax-hyperion/wax-config-hyperion-software-components'},
+                    {text: 'Running Hyperion', link: '/operate/wax-hyperion/wax-running-hyperion'},
+                    {text: 'Set Up Hyperion Cluster', link: '/operate/wax-hyperion/wax-clustering-elasticsearch-for-hyperion'},
                 ],
             },
             {
