@@ -127,9 +127,9 @@ export const GetUserTokens = () => {
   const [tokens, setTokens] = useState<TTokens>([]);
 
   useEffect(() => {
-    sessionKit.getSessions().then((sessions) => {
-      if (sessions.length) {
-        const userName = String(sessions[0].actor);
+    sessionKit.restore().then((session: Session | undefined) => {
+      if (session) {
+        const userName = String(session.actor);
         ctGetUserTokens(userName)
           .then((res: any) => {
             setTokens(res);
