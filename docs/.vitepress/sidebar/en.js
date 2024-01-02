@@ -197,6 +197,7 @@ module.exports = [
                         link: '/build/tutorials/wharfkit/',
                         items: [
                           {text: 'Wharfkit in React', link: '/build/tutorials/wharfkit/howto_react'},
+                          {text: 'Wharfkit Multi-Session', link: '/build/tutorials/wharfkit/multisession'},
                         ],
                     },
                     {text: 'How To Explore WAX Blockchain', link: '/build/tutorials/howto_blockexplorer'}

@@ -181,7 +181,8 @@ export default [
                         text: 'WharfKit',
                         link: '/es/build/tutorials/wharfkit/',
                         items: [
-                            '/es/build/tutorials/wharfkit/howto_react',
+                            {text: 'Wharfkit React How To', link: '/es/build/tutorials/wharfkit/howto_react'},
+                            {text: 'Wharfkit Multi-Session', link: '/es/build/tutorials/wharfkit/multisession'},
                         ],
                       },
   //                 '/es/build/tutorials/howto_blockexplorer',
