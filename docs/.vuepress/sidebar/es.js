@@ -183,6 +183,7 @@ module.exports = [
                           path: '/es/build/tutorials/wharfkit/',
                           children: [
                               '/es/build/tutorials/wharfkit/howto_react',
+                              '/es/build/tutorials/wharfkit/multisession',
                           ],
                         },
     //                 '/es/build/tutorials/howto_blockexplorer',
