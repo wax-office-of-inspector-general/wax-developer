@@ -25,7 +25,6 @@ hero:
     link: /create/
 
 features:
-
 - title: Our Mission
   details: Empowering developers like you to build innovative applications, NFT marketplaces, decentralized finance (DeFi) tools, and community-driven experiences on the WAX blockchain.
 - title: Resources
