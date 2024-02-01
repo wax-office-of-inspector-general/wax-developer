@@ -17,8 +17,14 @@ export default defineConfig({
     sidebar: sidebarEN,
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/wax-office-of-inspector-general/wax-developer' }
     ],
+
+    editLink: {
+      pattern: 'https://github.com/wax-office-of-inspector-general/wax-developer/edit/main/docs/:path',
+      text: 'Improve this page on GitHub'
+    },
+
     search: {
       provider: 'local'
     }
@@ -29,5 +35,5 @@ export default defineConfig({
       lang: 'en-US'
     },
     es: esLocale
-  }
+  },
 })
