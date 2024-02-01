@@ -44,7 +44,7 @@ The console prints your NFTs, including the unique asset **id**:
       "author": "waxnftowner1",
       "category": "sticker",
       "idata": "{\"name\": \"WAX Developer Hive\", \"desc\": \"WAX Developer Hive Sticker\" }",
-      "mdata": "{\"color\": \"black\", \"img\": \"https://developer.wax.io/img/wax_sticker.png\" }",
+      "mdata": "{\"color\": \"black\", \"img\": \"https://developer.wax.io/images/wax_sticker.png\" }",
       "container": [],
       "containerf": []
     }
