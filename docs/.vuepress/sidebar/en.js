@@ -294,7 +294,9 @@ module.exports = [
                     '/operate/wax-hyperion/wax-running-hyperion',
                     '/operate/wax-hyperion/wax-clustering-elasticsearch-for-hyperion',
                     '/operate/wax-hyperion/wax-rectify-missing-blocks-in-hyperion',
-                    '/operate/wax-hyperion/wax-hyperion-indexer-scaling'
+                    '/operate/wax-hyperion/wax-hyperion-indexer-scaling',
+                    '/operate/wax-hyperion/wax-hyperion-streaming-load-balancer',
+                    '/operate/wax-hyperion/wax-hyperion-repair-indexed-data'
                 ],
             },
             {
