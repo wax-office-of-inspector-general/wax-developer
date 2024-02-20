@@ -36,7 +36,7 @@ Podemos consultar la tabla “config” del smart contract atomicassets para com
 
 ![AtomicAsssets config](/assets/images/tutorials/howto_atomicassets/atomicassets_supportedtokens.png)
 
-::: tip NOTA
+::: tip 📝 Nota
 Si necesita asociar otro tipo de tokens a un NFT, o incluso otros NFTs, puede utilizar utilidades de terceros, como Blenderizer V.2
 :::
 

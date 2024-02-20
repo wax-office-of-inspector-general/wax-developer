@@ -9,7 +9,8 @@ En este ejemplo, utilizaremos las herramientas de WAX-CDT para desplegar tu cont
 
 1. Primero necesitaremos crear una cuenta autogestionada en testnet o mainnet para desplegar el contrato inteligente. Para nuestro ejemplo asumiremos que la cuenta se llama *mywaxrngtest*.
 
-**Nota:** Puedes usar las herramientas del equipo de [WAXSweden](https://waxsweden.org/testnet/) para crear la cuenta de testnet y suministrarla con los fondos que necesitarás para comprar la RAM requerida para el despliegue del contrato inteligente.
+::: tip 🛠️ Herramientas del Equipo de WAXSweden
+Puedes usar las herramientas del equipo de [WAXSweden](https://waxsweden.org/testnet/) para crear la cuenta de testnet y suministrarla con los fondos que necesitarás para comprar la RAM requerida para el despliegue del contrato inteligente.
 :::
 
 2. Desde Docker, abrimos y desbloqueamos la billetera que creamos en los tutoriales sobre [cómo crear el entorno de desarrollo](/build/dapp-development/setup-local-dapp-environment/dapp_wallet).

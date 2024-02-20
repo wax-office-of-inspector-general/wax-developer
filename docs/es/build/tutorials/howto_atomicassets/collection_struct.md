@@ -81,6 +81,6 @@ Una vez creado un esquema de datos es posble añadir más datos al mismo pero ya
 
 La plantilla es el molde con el que acuñaremos todos los assets de un mismo tipo. En la plantilla es donde se declara la información que estará disponible en un NFT como el nombre, la URL de la imágen (preferiblemente IPFS), la descripción, etc. Gracias a esto no es necesario repetir la información una y otra vez en cada NFT acuñado. Para conocer el nombre, la descripción o cualquier otro campo de un NFT solo es necesario acceder al contenido de ese atributo declarado en la plantilla.
 
-::: tip NOTA
+::: tip 📝 Nota
 Los datos inmutables se almacenan en la plantilla pero los datos mutables, propios de cada unidad NFT, se almacenan en el mismo NFT al que pertenecen por lo que, en caso de existir, aumentarán la memoria RAM consumida. 
 :::

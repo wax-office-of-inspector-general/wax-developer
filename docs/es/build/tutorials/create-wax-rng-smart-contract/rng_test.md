@@ -11,7 +11,9 @@ Para probar el contrato inteligente, haremos una llamada a la acción *getrnd* c
 | ----------- | ---- | ------------ | ---------------------------------------------------- |
 | customer_id | name | arpegiator21 | Nombre de cuenta del usuario solicitante |
 
-**Nota:** Para ilustrar el caso uso la cuenta *arpegiator21* pero debes usar tu propia cuenta cuya clave ya ha sido importada a la billetera y con la que puedes firmar transacciones.
+::: tip 📝 Nota
+Para ilustrar el caso uso la cuenta *arpegiator21* pero debes usar tu propia cuenta cuya clave ya ha sido importada a la billetera y con la que puedes firmar transacciones.
+:::
 
 ## Llamada a la acción
 

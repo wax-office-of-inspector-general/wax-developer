@@ -27,7 +27,7 @@ Al crear una plantilla haremos uso de los tipos de datos declarados en el esquem
 
 Los datos inmutables deben definirse en un mapa del tipo [ATTRIBUTE_MAP](https://github.com/pinknetworkx/atomicassets-contract/wiki/Custom-Types#attribute_map) compuesto por pares de claves y valores.
 
-::: tip NOTA
+::: tip 📝 Nota
 Un NFT AtomicAssets también puede contener datos modificables (mutable data). Esto lo veremos más adelante ya que no se deben especificar durante la creación de la plantilla.
 :::
 
@@ -72,7 +72,7 @@ const immutableData = [
     console.log(result);
 })();
 ``` 
-::: tip NOTA
+::: tip 📝 Nota
 los datos tipo "ipfs" e "image" son tratados como "string"
 :::
 
@@ -139,7 +139,7 @@ También podemos acudir a la web del market de Atomic (AtomicHub) y comprobar la
 
 Tanto si una plantilla ha sido configurada con un límite de impresiones o hasta el infinito puede que deseemos bloquear una plantilla para evitar nuevas impresiones. Por ejemplo, podemos acuñar NFTs durante un evento de 3 días desde una plantilla infinita y, finalizado el plazo, bloquear la plantilla. El max supply sería el total de NFTs acuñados hasta el momento.
 
-::: tip NOTA
+::: tip 📝 Nota
 No es posible bloquear una plantilla si no tiene creado, al menos, 1 NFT.
 :::
 
@@ -192,6 +192,6 @@ const lockTemplate = async (
 }
 ```
 
-::: tip NOTA
+::: tip 📝 Nota
 Esta acción es irreversible.
 :::

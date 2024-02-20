@@ -213,7 +213,8 @@ Nos aseguramos de que solo WAX RNG pueda llamar a esta acción con *require_auth
 
 Extraemos los primeros 16 bits del número aleatorio devuelto y lo usamos para obtener un número no mayor a 100. Aunque se podría hacer con solo 1 byte, es preferible aumentar el número de bits del numerador antes de realizar la operación de reducción para evitar lo más posible el efecto del sesgo de módulo.
 
-**Nota:** ¡Todavía tenemos muchos bits disponibles en caso de que necesitemos obtener más números aleatorios!
+::: tip 📝 Nota
+¡Todavía tenemos muchos bits disponibles en caso de que necesitemos obtener más números aleatorios!
 :::
 
 **COMENTARIO:** ¡Usar solo los primeros 8 bits es una mala práctica! Necesitamos más bits para la justicia. VER: Sesgo de módulo.

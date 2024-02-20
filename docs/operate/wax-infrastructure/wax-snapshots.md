@@ -36,7 +36,7 @@ The most common use for a snapshot is recovering from an incorrectly stopped nod
 First of all you need to obtain a valid snapshot file from a trusted source. There are quite a few WAX snapshot services being provided by the WAX Guilds including [EOSphere](https://snapshots.eosphere.io/), however not all provide testnet snapshots.. so you may need to look around a bit.
 
 
-::: tip NOTE
+::: tip 📝 Note
 The [EOS Nation bp.json Validator](https://validate.eosnation.io/wax/reports/resources.html#chain) has a very handy snapshot service list collated from what the Guilds have advertised.
 :::
 
