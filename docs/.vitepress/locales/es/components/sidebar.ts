@@ -1,13 +1,13 @@
 export default [
   {
       text: 'Aprender',
-      collapsable: false,
+      collapsed: false,
       sidebarDepth: 2,
       items: [
           {
               text: 'Acerca de WAX',
               link: '/es/learn/about-wax/',
-              collapsable: true,
+              collapsed: true,
               sidebarDepth: 2,
               items: [
                   {
@@ -40,146 +40,156 @@ export default [
   },
   {
       text: 'Construir',
-      collapsable: false,
+      collapsed: false,
       sidebarDepth: 4,
       items: [
-  //         {
-  //             text: 'Desarrollo de dApps',
-  //             link: '/es/build/dapp-development/',
-  //             collapsable: true,
-  //             items: [
-  //                 {
-  //                     text: 'Configuración del entorno local',
-  //                     link: '/es/build/dapp-development/setup-local-dapp-environment/',
-  //                     items: [
-  //                         '/es/build/dapp-development/setup-local-dapp-environment/dapp_local',
-  //                         '/es/build/dapp-development/setup-local-dapp-environment/dapp_environments',
-  //                         '/es/build/dapp-development/setup-local-dapp-environment/dapp_wallet',
-  //                         '/es/build/dapp-development/setup-local-dapp-environment/dapp_api',
-  //                     ],
-  //                 },
-  //                 {
-  //                     text: 'Configuración de Docker',
-  //                     link: '/es/build/dapp-development/docker-setup/',
-  //                     items: [
-  //                         '/es/build/dapp-development/docker-setup/docker_qstart_getstarted',
-  //                         '/es/build/dapp-development/docker-setup/docker_qstart_use',
-  //                         '/es/build/dapp-development/docker-setup/docker_qstart_manage',
-  //                     ],
-  //                 },
-  //                 {
-  //                     text: 'Configuración de la cadena de bloques WAX',
-  //                     link: '/es/build/dapp-development/wax-blockchain-setup/',
-  //                     items: [
-  //                         '/es/build/dapp-development/wax-blockchain-setup/blockchain_install',
-  //                         '/es/build/dapp-development/wax-blockchain-setup/blockchain_uninstall',
-  //                         '/es/build/dapp-development/wax-blockchain-setup/blockchain_verify',
-  //                     ],
-  //                 },
-  //                 {
-  //                     text: 'Desarrollo de contratos inteligentes',
-  //                     link: '/es/build/dapp-development/smart-contract-quickstart/',
-  //                     items: [
-  //                         '/es/build/dapp-development/smart-contract-quickstart/smart_contract_basics',
-  //                         '/es/build/dapp-development/smart-contract-quickstart/dapp_account',
-  //                         '/es/build/dapp-development/smart-contract-quickstart/dapp_hello_world',
-  //                         '/es/build/dapp-development/smart-contract-quickstart/dapp_dev_deploy',
-  //                         '/es/build/dapp-development/smart-contract-quickstart/custom_permission',
-  //                     ],
-  //                 },
-  //                 {
-  //                     text: 'WAX CDT',
-  //                     link: '/es/build/dapp-development/wax-cdt/',
-  //                     items: [
-  //                         '/es/build/dapp-development/wax-cdt/cdt_install',
-  //                         '/es/build/dapp-development/wax-cdt/cdt_uninstall',
-  //                         '/es/build/dapp-development/wax-cdt/cdt_use',
-  //                         '/es/build/dapp-development/wax-cdt/cdt_cpp',
-  //                     ],
-  //                 },
-  //                 {
-  //                     text: 'Implementación en WAX',
-  //                     link: '/es/build/dapp-development/deploy-dapp-on-wax/',
-  //                     items: [
-  //                         '/es/build/dapp-development/deploy-dapp-on-wax/deploy_source',
-  //                         '/es/build/dapp-development/deploy-dapp-on-wax/deploy_docker',
-  //                         '/es/build/dapp-development/deploy-dapp-on-wax/convert_eos',
-  //                     ],
-  //                 },
-  //             ],
-  //         },
-  //         {
-  //             text: 'MyCloudWallet',
-  //             link: '/es/build/cloud-wallet/',
-  //             collapsable: true,
-  //             sidebarDepth: 1,
-  //             items: [
-  //                 {
-  //                     text: 'wax.js',
-  //                     link: '/es/build/cloud-wallet/waxjs/',
-  //                     collapsable: true,
-  //                     sidebarDepth: 1,
-  //                     items: [
-  //                         '/es/build/cloud-wallet/waxjs/waxjs_qstart',
-  //                         '/es/build/cloud-wallet/waxjs/waxjs_install',
-  //                         '/es/build/cloud-wallet/waxjs/waxjs_use',
-  //                         '/es/build/cloud-wallet/waxjs/waxjs_demo',
-  //                     ],
-  //                 },
-  //                 {
-  //                     text: 'boost.wax',
-  //                     link: '/es/build/cloud-wallet/boost-wax',
-  //                     collapsable: true,
-  //                     sidebarDepth: 1,
-  //                 },
-  //             ],
-  //         },
+          {
+              text: 'Desarrollo de dApps',
+              link: '/es/build/dapp-development/',
+              collapsed: true,
+              items: [
+                  {
+                      text: 'Configuración del entorno local',
+                      link: '/es/build/dapp-development/setup-local-dapp-environment/',
+                      collapsed: true,
+                      items: [
+                          {text: 'Iniciar un nodo local', link: '/es/build/dapp-development/setup-local-dapp-environment/dapp_local'},
+                          {text: 'Entornos de Blockchain', link: '/es/build/dapp-development/setup-local-dapp-environment/dapp_environments'},
+                          {text: 'Crear una Wallet', link: '/es/build/dapp-development/setup-local-dapp-environment/dapp_wallet'},
+                          {text: 'Acceso al API local', link: '/es/build/dapp-development/setup-local-dapp-environment/dapp_api'},
+                      ],
+                  },
+                  {
+                      text: 'Configuración de Docker',
+                      link: '/es/build/dapp-development/docker-setup/',
+                      collapsed: true,
+                      items: [
+                          {text: 'Crear contenedor WAX', link: '/es/build/dapp-development/docker-setup/docker_qstart_getstarted'},
+                          {text: 'Ejecutar comandos', link: '/es/build/dapp-development/docker-setup/docker_qstart_use'},
+                          {text: 'Gestionar contenedores', link: '/es/build/dapp-development/docker-setup/docker_qstart_manage'},
+                      ],
+                  },
+                  {
+                      text: 'Configuración de la cadena de bloques WAX',
+                      link: '/es/build/dapp-development/wax-blockchain-setup/',
+                      collapsed: true,
+                      items: [
+                        {text: 'Instalar WAX Blockchain', link: '/es/build/dapp-development/wax-blockchain-setup/blockchain_install'},
+                        {text: 'Desinstalar WAX', link: '/es/build/dapp-development/wax-blockchain-setup/blockchain_uninstall'},
+                        {text: 'Verificar la instalación', link: '/es/build/dapp-development/wax-blockchain-setup/blockchain_verify'},
+                      ],
+                  },
+                  {
+                      text: 'Desarrollo de contratos inteligentes',
+                      link: '/es/build/dapp-development/smart-contract-quickstart/',
+                      collapsed: true,
+                      items: [
+                          {text: 'Fundamentos básicos', link: '/es/build/dapp-development/smart-contract-quickstart/smart_contract_basics'},
+                          {text: 'Crear cuentas', link: '/es/build/dapp-development/smart-contract-quickstart/dapp_account'},
+                          {text: 'Crear un smart contract', link: '/es/build/dapp-development/smart-contract-quickstart/dapp_hello_world'},
+                          {text: 'Desplegar el smart contract', link: '/es/build/dapp-development/smart-contract-quickstart/dapp_dev_deploy'},
+                          {text: 'Personalizar permisos', link: '/es/build/dapp-development/smart-contract-quickstart/custom_permission'},
+                      ],
+                  },
+                  {
+                      text: 'WAX CDT',
+                      link: '/es/build/dapp-development/wax-cdt/',
+                      collapsed: true,
+                      items: [
+                          {text: 'Instalar WAX-CDT', link: '/es/build/dapp-development/wax-cdt/cdt_install'},
+                          {text: 'Desinstalar WAX-CDT', link: '/es/build/dapp-development/wax-cdt/cdt_uninstall'},
+                          {text: 'Contratos de muestra', link: '/es/build/dapp-development/wax-cdt/cdt_use'},
+                          {text: 'Herramientas de construcción', link: '/es/build/dapp-development/wax-cdt/cdt_cpp'},
+                      ],
+                  },
+                  {
+                      text: 'Implementación en WAX',
+                      link: '/es/build/dapp-development/deploy-dapp-on-wax/',
+                      collapsed: true,
+                      items: [
+                          {text: 'Despliegue con WAX-CDT', link: '/es/build/dapp-development/deploy-dapp-on-wax/deploy_source'},
+                          {text: 'Despliegue con Docker', link: '/es/build/dapp-development/deploy-dapp-on-wax/deploy_docker'},
+                          {text: 'Despliegue de una dApp EOS en WAX', link: '/es/build/dapp-development/deploy-dapp-on-wax/convert_eos'},
+                      ],
+                  },
+              ],
+          },
+          {
+              text: 'MyCloudWallet',
+              link: '/es/build/cloud-wallet/',
+              collapsed: true,
+              sidebarDepth: 1,
+              items: [
+                  {
+                      text: 'wax.js',
+                      link: '/es/build/cloud-wallet/waxjs/',
+                      collapsed: true,
+                      sidebarDepth: 1,
+                      items: [
+                          {text: 'Guía Rápida', link: '/es/build/cloud-wallet/waxjs/waxjs_qstart'},
+                          {text: 'Instalar waxjs', link: '/es/build/cloud-wallet/waxjs/waxjs_install'},
+                          {text: 'Guía de uso', link: '/es/build/cloud-wallet/waxjs/waxjs_use'},
+                          {text: 'Demostración', link: '/es/build/cloud-wallet/waxjs/waxjs_demo'},
+                      ],
+                  },
+                  {
+                      text: 'boost.wax',
+                      link: '/es/build/cloud-wallet/boost-wax',
+                      collapsed: true,
+                      sidebarDepth: 1,
+                  },
+              ],
+          },
           {
               text: 'Tutoriales',
               link: '/es/build/tutorials/',
-              collapsable: true,
+              collapsed: true,
               items: [
-                  // {
-  //                     text: 'Guía de AtomicAssets',
-  //                     link: '/es/build/tutorials/howto_atomicassets/',
-  //                     items: [
-  //                         '/es/build/tutorials/howto_atomicassets/collection_struct',
-  //                         '/es/build/tutorials/howto_atomicassets/collection_js',
-  //                         '/es/build/tutorials/howto_atomicassets/schemas_js',
-  //                         '/es/build/tutorials/howto_atomicassets/templates_js',
-  //                         '/es/build/tutorials/howto_atomicassets/mint_nft',
-  //                         '/es/build/tutorials/howto_atomicassets/transfer_nft',
-  //                         '/es/build/tutorials/howto_atomicassets/mutabledata',
-  //                     ],
-  //                 },
-  //                 {
-  //                     text: 'Guía de SimpleAssets',
-  //                     link: '/es/build/tutorials/howto_simpleassets/',
-  //                     items: [
-  //                         '/es/build/tutorials/howto_simpleassets/nft_basics',
-  //                         '/es/build/tutorials/howto_simpleassets/nft_use',
-  //                         '/es/build/tutorials/howto_simpleassets/nft_deploy',
-  //                         '/es/build/tutorials/howto_simpleassets/nft_test',
-  //                     ],
-  //                 },
-  //                 {
-  //                     text: 'WAX RNG',
-  //                     link: '/es/build/tutorials/wax-rng/',
-  //                     items: ['/es/build/tutorials/wax-rng/rng_install'],
-  //                 },
-  //                 {
-  //                     text: 'Crear contrato RNG',
-  //                     link: '/es/build/tutorials/create-wax-rng-smart-contract/',
-  //                     items: [
-  //                         '/es/build/tutorials/create-wax-rng-smart-contract/rng_basics',
-  //                         '/es/build/tutorials/create-wax-rng-smart-contract/rng_sample',
-  //                         '/es/build/tutorials/create-wax-rng-smart-contract/rng_test',
-  //                         '/es/build/tutorials/create-wax-rng-smart-contract/rng_deploy',
-  //                     ],
-  //                 },
+                  {
+                      text: 'Guía de AtomicAssets',
+                      link: '/es/build/tutorials/howto_atomicassets/',
+                      collapsed: true,
+                      items: [
+                          {text: 'Estructura de la colección', link: '/es/build/tutorials/howto_atomicassets/collection_struct'},
+                          {text: 'Administrar colecciones de NFTs', link: '/es/build/tutorials/howto_atomicassets/collection_js'},
+                          {text: 'Esquemas', link: '/es/build/tutorials/howto_atomicassets/schemas_js'},
+                          {text: 'Plantillas', link: '/es/build/tutorials/howto_atomicassets/templates_js'},
+                          {text: 'Acuñar NFT', link: '/es/build/tutorials/howto_atomicassets/mint_nft'},
+                          {text: 'Transferir NFT', link: '/es/build/tutorials/howto_atomicassets/transfer_nft'},
+                          {text: 'Datos Mutables', link: '/es/build/tutorials/howto_atomicassets/mutabledata'},
+                      ],
+                  },
+                  {
+                      text: 'Guía de SimpleAssets',
+                      link: '/es/build/tutorials/howto_simpleassets/',
+                      collapsed: true,
+                      items: [
+                          {text: 'Inicio Rápido', link: '/es/build/tutorials/howto_simpleassets/nft_basics'},
+                          {text: 'Acuñar NFT desde smart contract', link: '/es/build/tutorials/howto_simpleassets/nft_use'},
+                          {text: 'Desplegar smart contract', link: '/es/build/tutorials/howto_simpleassets/nft_deploy'},
+                          {text: 'Test del smart contract', link: '/es/build/tutorials/howto_simpleassets/nft_test'},
+                      ],
+                  },
+                  {
+                      text: 'WAX RNG',
+                      link: '/es/build/tutorials/wax-rng/',
+                      items: ['/es/build/tutorials/wax-rng/rng_install'],
+                  },
+                  {
+                      text: 'Crear contrato RNG',
+                      link: '/es/build/tutorials/create-wax-rng-smart-contract/',
+                      collapsed: true,
+                      items: [
+                          {text: 'Conceptos básicos', link: '/es/build/tutorials/create-wax-rng-smart-contract/rng_basics'},
+                          {text: 'Construye tu smart contract', link: '/es/build/tutorials/create-wax-rng-smart-contract/rng_sample'},
+                          {text: 'Prueba el smart contract', link: '/es/build/tutorials/create-wax-rng-smart-contract/rng_test'},
+                          {text: 'Despliega el smart contract', link: '/es/build/tutorials/create-wax-rng-smart-contract/rng_deploy'},
+                      ],
+                  },
                       {
                         text: 'WharfKit',
                         link: '/es/build/tutorials/wharfkit/',
+                        collapsed: true,
                         items: [
                             {text: 'Wharfkit React How To', link: '/es/build/tutorials/wharfkit/howto_react'},
                             {text: 'Wharfkit Multi-Session', link: '/es/build/tutorials/wharfkit/multisession'},
@@ -191,7 +201,7 @@ export default [
   //         {
   //             text: 'Herramientas',
   //             link: '/es/build/tools/',
-  //             collapsable: true,
+  //             collapsed: true,
   //             items: [
   //                 '/es/build/tools/blockchain_tools',
   //                 '/es/build/tools/os',
@@ -203,14 +213,14 @@ export default [
   //         {
   //             text: 'API de referencia',
   //             link: '/es/build/api-reference/',
-  //             collapsable: true,
+  //             collapsed: true,
   //             items: [
   //                 '/es/build/api-reference/rpc_api',
   //                 '/es/build/api-reference/cdt_api',
   //                 {
   //                     text: 'dFuse',
   //                     link: '/es/build/api-reference/dfuse',
-  //                     collapsable: true,
+  //                     collapsed: true,
   //                     items: ['/es/build/api-reference/dfuse/dfuse_example'],
   //                 },
   //             ],
@@ -219,13 +229,13 @@ export default [
   },
   // {
   //     text: 'Operar',
-  //     collapsable: false,
+  //     collapsed: false,
   //     sidebarDepth: 2,
   //     items: [
   //         {
   //             text: 'Conceptos básicos',
   //             link: '/es/operate/wax-bp/',
-  //             collapsable: true,
+  //             collapsed: true,
   //             items: [
   //                 '/es/operate/wax-bp/chains-json',
   //                 '/es/operate/wax-bp/bp-json',
@@ -234,7 +244,7 @@ export default [
   //         {
   //             text: 'API de Atomic Assets',
   //             link: '/es/operate/atomic-assets/',
-  //             collapsable: true,
+  //             collapsed: true,
   //             items: [
   //                 '/es/operate/atomic-assets/setup-wax-atomic-api-node',
   //                 '/es/operate/atomic-assets/optimise-restore-wax-atomic-api-node',
@@ -243,7 +253,7 @@ export default [
   //         {
   //             text: 'Guías',
   //             link: '/es/operate/wax-infrastructure/',
-  //             collapsable: true,
+  //             collapsed: true,
   //             items: [
   //                 '/es/operate/wax-infrastructure/wax-testnet-node',
   //                 '/es/operate/wax-infrastructure/wax-snapshots',
@@ -262,25 +272,25 @@ export default [
   //         {
   //             text: 'Servicios de API de WAX',
   //             link: '/es/operate/wax-api-services/',
-  //             collapsable: true,
+  //             collapsed: true,
   //         },
   //     ],
   // },
   // {
   //     text: 'Crear',
   //     link: '/es/create/',
-  //     collapsable: false,
+  //     collapsed: false,
   //     sidebarDepth: 1,
   //     items: [
   //         {
   //             text: 'Awesome WAX',
   //             link: '/es/create/awesome-wax/',
-  //             collapsable: true,
+  //             collapsed: true,
   //         },
   //         {
   //             text: 'Ayúdanos a mejorar la documentación',
   //             link: '/es/create/docs/',
-  //             collapsable: true,
+  //             collapsed: true,
   //         },
   //     ],
   // },
