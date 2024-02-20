@@ -2,8 +2,10 @@ const { description } = require('../../package')
 const { path } = require('@vuepress/utils');
 const sidebar = require('./sidebar/en');
 const sidebar_es = require('./sidebar/es');
+const sidebar_cn = require('./sidebar/cn');
 const footer = require('./footer/en');
 const footer_es = require('./footer/es');
+const footer_cn = require('./footer/cn');
 
 module.exports = {
   /**
@@ -44,6 +46,11 @@ module.exports = {
       lang: 'es-ES',
       ariaLabel: 'Spanish',
       label: 'Spanish (WIP)',
+    },
+    '/cn/': {
+      lang: 'cn-CN',
+      ariaLabel: 'Chinese',
+      label: 'Chinese (WIP)',
     }
   },
 
@@ -81,6 +88,12 @@ module.exports = {
         footer: footer_es,
         editLinkText: 'Ayúdanos a mejorar esta página!',
         searchPlaceholder: 'Buscar…',
+      },
+      '/cn/': {
+        sidebar: sidebar_cn,
+        footer: footer_cn,
+        editLinkText: '帮助我们改善此页面',
+        searchPlaceholder: '搜索',
       }
     },
     
