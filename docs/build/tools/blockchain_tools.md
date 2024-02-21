@@ -1,28 +1,28 @@
 ---
-title: Blockchain Tools
+title: Herramientas Blockchain
 order: 99
 ---
 
-# Blockchain Tools
+# Herramientas Blockchain
 
-To communicate with the WAX Blockchain, create a local development environment, and locally deploy your smart contracts, you'll need to use three key tools included in the [WAX Blockchain Setup](//build/dapp-development/wax-blockchain-setup/):
+Para comunicarte con la Blockchain de WAX, crear un entorno de desarrollo local y desplegar tus contratos inteligentes localmente, necesitarás usar tres herramientas clave incluidas en la [Configuración de la Blockchain de WAX](//build/dapp-development/wax-blockchain-setup/):
 
 ## keosd
 
-Used to store private keys. This program automatically starts when you initiate **cleos** commands and can start several instances on your local server.
+Se utiliza para almacenar claves privadas. Este programa se inicia automáticamente cuando inicias comandos de **cleos** y puede iniciar varias instancias en tu servidor local.
 
-Refer to EOS's <a href="https://docs.eosnetwork.com/leap/latest/keosd/" target="_blank">Introduction - keosd</a> for more information.
+Consulta la <a href="https://docs.eosnetwork.com/leap/latest/keosd/" target="_blank">Introducción - keosd</a> de EOS para obtener más información.
 
 ## nodeos 
 
-This is the core WAX node daemon, used to run a local node on your server. You can initialize **nodeos** with various plug-ins and options.
+Este es el daemon principal de nodo de WAX, usado para ejecutar un nodo local en tu servidor. Puedes inicializar **nodeos** con varios plugins y opciones.
 
-Nodeos also allows you to communicate with the [WAX RPC API](/learn/api-reference/rpc_api).
+Nodeos también te permite comunicarte con la [API RPC de WAX](/learn/api-reference/rpc_api).
 
-Refer to EOS's <a href="https://docs.eosnetwork.com/leap/latest/nodeos/" target="_blank">Overview - nodeos</a> for more information.
+Consulta la <a href="https://docs.eosnetwork.com/leap/latest/nodeos/" target="_blank">Visión General - nodeos</a> de EOS para obtener más información.
 
 ## cleos
 
-Used to interact with your local blockchain and manage local wallets and accounts.
+Se utiliza para interactuar con tu blockchain local y gestionar billeteras y cuentas locales.
 
-Refer to EOS's <a href="https://docs.eosnetwork.com/leap/latest/cleos/" target="_blank">Overview - cleos</a> for more information.
+Consulta la <a href="https://docs.eosnetwork.com/leap/latest/cleos/" target="_blank">Visión General - cleos</a> de EOS para obtener más información.

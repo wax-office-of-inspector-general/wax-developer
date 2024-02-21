@@ -1,100 +1,100 @@
 ---
-title: Ricardian Clauses
+title: Cláusulas Ricardianas
 order: 112
 ---
 
-# Ricardian Clauses
+# Cláusulas Ricardianas
 
-Similar to a [Ricardian Contract](/build/tools/ricardian_contract), a Ricardian clause is a digital document that specifies the terms of your entire smart contract - not just per action. 
+Similar a un [Contrato Ricardiano](/build/tools/ricardian_contract), una cláusula Ricardiana es un documento digital que especifica los términos de todo tu contrato inteligente, no solo por acción.
 
-To associate a Ricardian clause with your smart contract, you'll need to create a markdown file. 
+Para asociar una cláusula Ricardiana con tu contrato inteligente, necesitarás crear un archivo en markdown.
 
-* This file must have the same name as your smart contract. For example, if your smart contract is named **wax.cpp**, your Ricardian markdown file must be named: wax.clauses.md.
-* Each **```<h1>```** tag must have the "clause" class: ```<h1 class="clause">```.
+* Este archivo debe tener el mismo nombre que tu contrato inteligente. Por ejemplo, si tu contrato inteligente se llama **wax.cpp**, tu archivo de cláusulas Ricardianas debe llamarse: wax.clauses.md.
+* Cada etiqueta **```<h1>```** debe tener la clase "clause": ```<h1 class="clause">```.
 
-It's also important where you store your Ricardian markdown file (in relation to your smart contract C++ file). This depends on how you're compiling your contract.
+También es importante dónde almacenas tu archivo de cláusulas Ricardianas (en relación con tu archivo C++ de contrato inteligente). Esto depende de cómo estés compilando tu contrato.
 
-## Use WAX-CDT
+## Usa WAX-CDT
 
-If you use **eosio-init** to create a smart contract template, a folder is automatically created for you under your project directory (e.g., wax/ricardian). By default, this folder does not contain a Ricardian clause. You'll need to create one, such as wax.clauses.md.
+Si usas **eosio-init** para crear una plantilla de contrato inteligente, se crea automáticamente una carpeta para ti bajo tu directorio de proyecto (por ejemplo, wax/ricardian). Por defecto, esta carpeta no contiene una cláusula Ricardiana. Necesitarás crear una, como wax.clauses.md.
 
-The CMake scripts will automatically include the files listed in the **ricardian** directory.
+Los scripts de CMake incluirán automáticamente los archivos listados en el directorio **ricardian**.
 
-Refer to [Create a Smart Contract](/build/dapp-development/smart-contract-quickstart/) for more information.
+Consulta [Crear un Contrato Inteligente](/build/dapp-development/smart-contract-quickstart/) para más información.
 
-## Use eosio-cpp
+## Usa eosio-cpp
 
-If you use eosio-cpp, your Ricardian clause must be in the same directory as wax.cpp and must be the same name: wax.clauses.md.
+Si usas eosio-cpp, tu cláusula Ricardiana debe estar en el mismo directorio que wax.cpp y debe tener el mismo nombre: wax.clauses.md.
 
 ```shell
 eosio-cpp -abigen wax.cpp -o wax.wasm
 ```
 
-## Example Ricardian Clause
+## Ejemplo de Cláusula Ricardiana
 
-To include a Ricardian clause:
+Para incluir una cláusula Ricardiana:
 
-1. Create a file named **your-contract.clauses.md** (e.g., wax.clauses.md).
-2. Include the "clause" class in the ```<h1>``` tag.
-3. Paste the markdown below into your clauses file.
+1. Crea un archivo llamado **tu-contrato.clauses.md** (por ejemplo, wax.clauses.md).
+2. Incluye la clase "clause" en la etiqueta ```<h1>```.
+3. Pega el siguiente markdown en tu archivo de cláusulas.
 
 ```html
 <hr style="height:1px; border:none; color:#000; background-color:#000; width:100%; text-align:left; margin: 0 auto 0 0;">
 
-<h1 class="clause">Warranty</h1>
+<h1 class="clause">Garantía</h1>
 
-The invoker of the contract action shall uphold its Obligations under this Contract in a timely and workmanlike manner, using knowledge and recommendations for performing the services which meet generally acceptable standards set forth by WAX.IO Blockchain Block Producers. 
+El invocador de la acción del contrato deberá cumplir sus Obligaciones bajo este Contrato de manera oportuna y profesional, utilizando conocimientos y recomendaciones para realizar los servicios que cumplan con los estándares generalmente aceptables establecidos por los Productores de Bloques de la Blockchain WAX.IO. 
 
-<h1 class="clause">Default</h1>
+<h1 class="clause">Incumplimiento</h1>
 
-The occurrence of any of the following shall constitute a material default under this Contract: 
+La ocurrencia de cualquiera de los siguientes constituirá un incumplimiento material bajo este Contrato: 
 
-<h1 class="clause">Remedies</h1>
+<h1 class="clause">Remedios</h1>
 
-In addition to any and all other rights a party may have available according to law, if a party defaults by failing to substantially perform any provision, term or condition of this Contract, the other party may terminate the Contract by providing written notice to the defaulting party. This notice shall describe with sufficient detail the nature of the default. The party receiving such notice shall promptly be removed from being a Block Producer and this Contract shall be automatically terminated. 
+Además de todos y cada uno de los demás derechos que una parte pueda tener disponibles según la ley, si una parte incumple al no cumplir sustancialmente con cualquier disposición, término o condición de este Contrato, la otra parte puede terminar el Contrato proporcionando un aviso por escrito a la parte incumplidora. Este aviso describirá con detalle suficiente la naturaleza del incumplimiento. La parte que recibe dicho aviso será eliminada de inmediato de ser un Productor de Bloques y este Contrato se terminará automáticamente. 
 
-<h1 class="clause">ForceMajeure</h1>
+<h1 class="clause">Fuerza Mayor</h1>
 
-If performance of this Contract or any obligation under this Contract is prevented, restricted, or interfered with by causes beyond either party's reasonable control ("Force Majeure"), and if the party unable to carry out its obligations gives the other party prompt written notice of such event, then the obligations of the party invoking this provision shall be suspended to the extent necessary by such event. The term Force Majeure shall include, without limitation, acts of God, fire, explosion, vandalism, storm or other similar occurrence, orders or acts of military or civil authority, or by national emergencies, insurrections, riots, or wars, or strikes, lock-outs, work stoppages, or supplier failures. The excused party shall use reasonable efforts under the circumstances to avoid or remove such causes of non-performance and shall proceed to perform with reasonable dispatch whenever such causes are removed or ceased. An act or omission shall be deemed within the reasonable control of a party if committed, omitted, or caused by such party, or its employees, officers, agents, or affiliates. 
+Si el desempeño de este Contrato o cualquier obligación bajo este Contrato es prevenido, restringido o interferido por causas más allá del control razonable de cualquiera de las partes ("Fuerza Mayor"), y si la parte incapaz de llevar a cabo sus obligaciones da a la otra parte un aviso escrito rápido de tal evento, entonces las obligaciones de la parte que invoca esta disposición serán suspendidas en la medida necesaria por tal evento. El término Fuerza Mayor incluirá, sin limitación, actos de Dios, incendio, explosión, vandalismo, tormenta u otra ocurrencia similar, órdenes o actos de autoridad militar o civil, o por emergencias nacionales, insurrecciones, disturbios o guerras, o huelgas, cier
 
-<h1 class="clause">DisputeResolution</h1>
+res patronales, paros de trabajo o fallos de proveedores. La parte excusada utilizará esfuerzos razonables bajo las circunstancias para evitar o eliminar tales causas de incumplimiento y procederá a realizar con prontitud siempre que tales causas sean removidas o cesen. Un acto u omisión se considerará dentro del control razonable de una parte si es cometido, omitido o causado por dicha parte, o sus empleados, oficiales, agentes o afiliados. 
 
-Any controversies or disputes arising out of or relating to this Contract will be resolved by binding arbitration under the default rules set forth by the WAX.IO Blockchain. The arbitrator's award will be final, and judgment may be entered upon it by any court having proper jurisdiction. 
+<h1 class="clause">Resolución de Disputas</h1>
 
-<h1 class="clause">Agreement</h1>
+Cualquier controversia o disputa que surja de o en relación con este Contrato será resuelta por arbitraje vinculante bajo las reglas predeterminadas establecidas por la Blockchain WAX.IO. La decisión del árbitro será definitiva, y el juicio puede ser ingresado sobre ella por cualquier corte que tenga jurisdicción apropiada. 
 
-This Contract contains the entire agreement of the parties, and there are no other promises or conditions in any other agreement whether oral or written concerning the subject matter of this Contract. This Contract supersedes any prior written or oral agreements between the parties. 
+<h1 class="clause">Acuerdo</h1>
 
-<h1 class="clause">Severability</h1>
+Este Contrato contiene el acuerdo completo de las partes, y no hay otras promesas o condiciones en ningún otro acuerdo ya sea oral o escrito concerniente al objeto de este Contrato. Este Contrato reemplaza cualquier acuerdo previo escrito u oral entre las partes. 
 
-If any provision of this Contract will be held to be invalid or unenforceable for any reason, the remaining provisions will continue to be valid and enforceable. If a court finds that any provision of this Contract is invalid or unenforceable, but that by limiting such provision it would become valid and enforceable, then such provision will be deemed to be written, construed, and enforced as so limited. 
+<h1 class="clause">Divisibilidad</h1>
 
-<h1 class="clause">Amendment</h1>
+Si alguna disposición de este Contrato se considera inválida o inaplicable por cualquier motivo, las disposiciones restantes continuarán siendo válidas y aplicables. Si un tribunal encuentra que alguna disposición de este Contrato es inválida o inaplicable, pero que limitando tal disposición se convertiría en válida y aplicable, entonces tal disposición se considerará escrita, interpretada y aplicada como así limitada. 
 
-This Contract may be modified or amended in writing by mutual agreement between the parties, if the writing is signed by the party obligated under the amendment. 
+<h1 class="clause">Enmienda</h1>
 
-<h1 class="clause">GoverningLaw</h1>
+Este Contrato puede ser modificado o enmendado por escrito por acuerdo mutuo entre las partes, si el escrito es firmado por la parte obligada bajo la enmienda. 
 
-This Contract shall be construed in accordance with the Maxims of Equity. 
+<h1 class="clause">Ley Aplicable</h1>
 
-<h1 class="clause">Notice</h1>
+Este Contrato será interpretado de acuerdo con las Máximas de Equidad. 
 
-Any notice or communication required or permitted under this Contract shall be sufficiently given if delivered to a verifiable email address or to such other email address as one party may have publicly furnished in writing, or published on a broadcast contract provided by this blockchain for purposes of providing notices of this type. 
+<h1 class="clause">Notificación</h1>
 
-<h1 class="clause">WaiverOfContractualRight</h1>
+Cualquier aviso o comunicación requerido o permitido bajo este Contrato será suficientemente dado si se entrega a una dirección de correo electrónico verificable o a tal otra dirección de correo electrónico como una de las partes haya proporcionado públicamente por escrito, o publicado en un contrato de difusión proporcionado por esta blockchain con el propósito de proporcionar avisos de este tipo. 
 
-The failure of either party to enforce any provision of this Contract shall not be construed as a waiver or limitation of that party's right to subsequently enforce and compel strict compliance with every provision of this Contract. 
+<h1 class="clause">Renuncia de Derecho Contractual</h1>
 
-<h1 class="clause">ArbitratorsFeesToPrevailingParty</h1>
+El fallo de cualquiera de las partes en hacer cumplir cualquier disposición de este Contrato no será interpretado como una renuncia o limitación del derecho de esa parte a posteriormente hacer cumplir y obligar el estricto cumplimiento con cada disposición de este Contrato. 
 
-In any action arising hereunder or any separate action pertaining to the validity of this Agreement, both sides shall pay half the initial cost of arbitration, and the prevailing party shall be awarded reasonable arbitrator's fees and costs. 
+<h1 class="clause">Honorarios de Árbitros a la Parte Prevalente</h1>
 
-<h1 class="clause">ConstructionAndInterpretation</h1>
+En cualquier acción que surja bajo este documento o cualquier acción separada relativa a la validez de este Acuerdo, ambas partes pagarán la mitad del costo inicial de arbitraje, y a la parte prevalente se le otorgarán honorarios y costos razonables del árbitro. 
 
-The rule requiring construction or interpretation against the drafter is waived. The document shall be deemed as if it were drafted by both parties in a mutual effort. 
+<h1 class="clause">Construcción e Interpretación</h1>
 
-<h1 class="clause">InWitnessWhereof</h1>
+Se renuncia a la regla que requiere construcción o interpretación contra el redactor. El documento se considerará como si hubiera sido redactado por ambas partes en un esfuerzo mutuo. 
 
-In witness whereof, the parties hereto have caused this Agreement to be executed by themselves or their duly authorized representatives as of the date of execution, and authorized as proven by the cryptographic signature on the transaction that invokes this contract.
+<h1 class="clause">En Testimonio de lo Cual</h1>
 
-```
+En testimonio de lo cual, las partes han causado que este Acuerdo sea ejecutado por ellos mismos o sus representantes debidamente autorizados a partir de la fecha de ejecución, y autorizado como probado por la firma criptográfica en la transacción que invoca este contrato.

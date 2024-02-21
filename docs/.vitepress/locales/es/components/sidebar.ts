@@ -88,7 +88,6 @@ export default [
                           {text: 'Crear cuentas', link: '/es/build/dapp-development/smart-contract-quickstart/dapp_account'},
                           {text: 'Crear un smart contract', link: '/es/build/dapp-development/smart-contract-quickstart/dapp_hello_world'},
                           {text: 'Desplegar el smart contract', link: '/es/build/dapp-development/smart-contract-quickstart/dapp_dev_deploy'},
-                          {text: 'Personalizar permisos', link: '/es/build/dapp-development/smart-contract-quickstart/custom_permission'},
                       ],
                   },
                   {
@@ -198,100 +197,111 @@ export default [
   //                 '/es/build/tutorials/howto_blockexplorer',
               ],
           },
-  //         {
-  //             text: 'Herramientas',
-  //             link: '/es/build/tools/',
-  //             collapsed: true,
-  //             items: [
-  //                 '/es/build/tools/blockchain_tools',
-  //                 '/es/build/tools/os',
-  //                 '/es/build/tools/cdt_options',
-  //                 '/es/build/tools/ricardian_contract',
-  //                 '/es/build/tools/ricardian_clause',
-  //             ],
-  //         },
-  //         {
-  //             text: 'API de referencia',
-  //             link: '/es/build/api-reference/',
-  //             collapsed: true,
-  //             items: [
-  //                 '/es/build/api-reference/rpc_api',
-  //                 '/es/build/api-reference/cdt_api',
-  //                 {
-  //                     text: 'dFuse',
-  //                     link: '/es/build/api-reference/dfuse',
-  //                     collapsed: true,
-  //                     items: ['/es/build/api-reference/dfuse/dfuse_example'],
-  //                 },
-  //             ],
-  //         },
+          {
+              text: 'Herramientas',
+              link: '/es/build/tools/',
+              collapsed: true,
+              items: [
+                  {text: 'Herramientas Blockchain', link: '/es/build/tools/blockchain_tools'},
+                  {text: 'S.O. soportados', link: '/es/build/tools/os'},
+                  {text: 'Opciones de WAX-CDT', link: '/es/build/tools/cdt_options'},
+                  {text: 'Contratos Ricardianos', link: '/es/build/tools/ricardian_contract'},
+                  {text: 'Cláusulas Ricardianas', link: '/es/build/tools/ricardian_clause'},
+              ],
+          },
+          {
+              text: 'API de referencia',
+              link: '/es/build/api-reference/',
+              collapsed: true,
+              items: [
+                  {text: 'API WAX-RPC', link: '/es/build/api-reference/rpc_api'},
+                  {text: 'API WAX-CDT', link: '/es/build/api-reference/cdt_api'},
+                  {
+                      text: 'dFuse',
+                      link: '/es/build/api-reference/dfuse/index',
+                      collapsed: true,
+                      items: [
+                        {text: 'Ejemplo dFuse', link: '/es/build/api-reference/dfuse/dfuse_example'}
+                      ],
+                  },
+              ],
+          },
       ],
   },
-  // {
-  //     text: 'Operar',
-  //     collapsed: false,
-  //     sidebarDepth: 2,
-  //     items: [
-  //         {
-  //             text: 'Conceptos básicos',
-  //             link: '/es/operate/wax-bp/',
-  //             collapsed: true,
-  //             items: [
-  //                 '/es/operate/wax-bp/chains-json',
-  //                 '/es/operate/wax-bp/bp-json',
-  //             ],
-  //         },
-  //         {
-  //             text: 'API de Atomic Assets',
-  //             link: '/es/operate/atomic-assets/',
-  //             collapsed: true,
-  //             items: [
-  //                 '/es/operate/atomic-assets/setup-wax-atomic-api-node',
-  //                 '/es/operate/atomic-assets/optimise-restore-wax-atomic-api-node',
-  //             ],
-  //         },
-  //         {
-  //             text: 'Guías',
-  //             link: '/es/operate/wax-infrastructure/',
-  //             collapsed: true,
-  //             items: [
-  //                 '/es/operate/wax-infrastructure/wax-testnet-node',
-  //                 '/es/operate/wax-infrastructure/wax-snapshots',
-  //                 '/es/operate/wax-infrastructure/wax-testnet-block-producer',
-  //                 '/es/operate/wax-infrastructure/wax-mainnet-node',
-  //                 '/es/operate/wax-infrastructure/wax-mainnet-node-load-balancer',
-  //                 '/es/operate/wax-infrastructure/wax-mainnet-node-mitigate-abuse',
-  //                 '/es/operate/wax-infrastructure/wax-mainnet-ship-node',
-  //                 '/es/operate/wax-infrastructure/working-with-wax-software-files',
-  //                 '/es/operate/wax-infrastructure/wax-ram-disk-utilisation',
-  //                 '/es/operate/wax-infrastructure/wax-account-custom-permissions',
-  //                 '/es/operate/wax-infrastructure/hyperion-guide',
-  //                 '/es/operate/wax-infrastructure/atomic-api-guide',
-  //             ],
-  //         },
-  //         {
-  //             text: 'Servicios de API de WAX',
-  //             link: '/es/operate/wax-api-services/',
-  //             collapsed: true,
-  //         },
-  //     ],
-  // },
-  // {
-  //     text: 'Crear',
-  //     link: '/es/create/',
-  //     collapsed: false,
-  //     sidebarDepth: 1,
-  //     items: [
-  //         {
-  //             text: 'Awesome WAX',
-  //             link: '/es/create/awesome-wax/',
-  //             collapsed: true,
-  //         },
-  //         {
-  //             text: 'Ayúdanos a mejorar la documentación',
-  //             link: '/es/create/docs/',
-  //             collapsed: true,
-  //         },
-  //     ],
-  // },
+  {
+      text: 'Operar',
+      collapsed: false,
+      sidebarDepth: 2,
+      items: [
+          {
+              text: 'Conceptos básicos',
+              link: '/es/operate/wax-bp/',
+              collapsed: true,
+              items: [
+                  {text: 'Crear chains.json', link: '/es/operate/wax-bp/chains-json'},
+                  {text: 'Crear bp.json', link: '/es/operate/wax-bp/bp-json'},
+              ],
+          },
+          {
+              text: 'API de Atomic Assets',
+              link: '/es/operate/atomic-assets/',
+              collapsed: true,
+              items: [
+                {text: 'Configurar API AA', link: '/es/operate/atomic-assets/setup-wax-atomic-api-node'},
+                {text: 'Optimizar y Restaurar API AA', link: '/es/operate/atomic-assets/optimise-restore-wax-atomic-api-node'},
+              ],
+          },
+          {
+            text: 'Hyperion API',
+            link: '/es/operate/wax-hyperion/',
+            collapsed: true,
+            items: [
+              {text: 'Introducción', link: '/es/operate/wax-hyperion/wax-intro-to-hyperion-full-history'},
+              {text: 'Componentes Hyperion', link: '/es/operate/wax-hyperion/wax-build-hyperion-software-components'},
+              {text: 'Configurar Componentes', link: '/es/operate/wax-hyperion/wax-config-hyperion-software-components'},
+              {text: 'Ejecutando Hyperion', link: '/es/operate/wax-hyperion/wax-running-hyperion'},
+              {text: 'Configurar Cluster Hyperion', link: '/es/operate/wax-hyperion/wax-clustering-elasticsearch-for-hyperion'},
+      ],
+          },
+          {
+              text: 'Guías',
+              link: '/es/operate/wax-infrastructure/',
+              collapsed: true,
+              items: [
+                {text: 'Configurar Nodo testnet', link: '/es/operate/wax-infrastructure/wax-testnet-node'},
+                {text: 'Uso de snapshots', link: '/es/operate/wax-infrastructure/wax-snapshots'},
+                {text: 'Configurar Nodo Productor (testnet)', link: '/es/operate/wax-infrastructure/wax-testnet-block-producer'},
+                {text: 'Configurar Nodo en mainnet', link: '/es/operate/wax-infrastructure/wax-mainnet-node'},
+                {text: 'Configurar Balanceador de Carga', link: '/es/operate/wax-infrastructure/wax-mainnet-node-load-balancer'},
+                {text: 'Mitigar Abuso sobre API', link: '/es/operate/wax-infrastructure/wax-mainnet-node-mitigate-abuse'},
+                {text: 'Configurar Nodo Estado-Historial', link: '/es/operate/wax-infrastructure/wax-mainnet-ship-node'},
+                {text: 'Estructura de Archivos de Nodos de WAX', link: '/es/operate/wax-infrastructure/working-with-wax-software-files'},
+                {text: 'Optimización de RAM y Disco', link: '/es/operate/wax-infrastructure/wax-ram-disk-utilisation'},
+                {text: 'Permisos Personalizados de Cuentas WAX', link: '/es/operate/wax-infrastructure/wax-account-custom-permissions'},
+                {text: 'Configurar API Hyperion', link: '/es/operate/wax-infrastructure/hyperion-guide'},
+                {text: 'Configurar API Atomic', link: '/es/operate/wax-infrastructure/atomic-api-guide'},
+              ],
+          },
+          {
+              text: 'Servicios de API de WAX',
+              link: '/es/operate/wax-api-services/',
+          },
+      ],
+  },
+  {
+      text: 'Crear',
+      link: '/es/create/',
+      collapsed: false,
+      sidebarDepth: 1,
+      items: [
+          {
+              text: 'Awesome WAX',
+              link: '/es/create/awesome-wax/',
+          },
+          {
+              text: 'Ayúdanos a mejorar la documentación',
+              link: '/es/create/docs/',
+          },
+      ],
+  },
 ];

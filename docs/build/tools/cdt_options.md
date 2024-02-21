@@ -1,149 +1,128 @@
 ---
-title: WAX-CDT Options
+title: Opciones de WAX-CDT
 order: 110
 ---
 
-# WAX-CDT Options
+# Opciones de WAX-CDT
 
-Below is a list of common WAX-CDT tools and parameters. You can use these tools to generate WASM and ABI files for your smart contracts.
+A continuación, se presenta una lista de herramientas y parámetros comunes de WAX-CDT. Puedes usar estas herramientas para generar archivos WASM y ABI para tus contratos inteligentes.
 
 ## eosio-abidiff
-Compares the differences between two ABI files. A report prints out to the console.
+Compara las diferencias entre dos archivos ABI. Un informe se imprime en la consola.
 
 ```shell
-USAGE: eosio-abidiff [options] [input file1] ... [input file2] ...
-EXAMPLE: eosio-abidiff hello.abi old_hello.abi   
+USO: eosio-abidiff [opciones] [archivo de entrada1] ... [archivo de entrada2] ...
+EJEMPLO: eosio-abidiff hello.abi old_hello.abi   
 
-OPTIONS:
+OPCIONES:
 
-Generic Options:
+Opciones Genéricas:
 
-  -help      - Display available options (-help-hidden for more)
-  -help-list - Display list of available options (-help-list-hidden for more)
-  -version   - Display the version of this program
+  -help      - Muestra las opciones disponibles (-help-hidden para más)
+  -help-list - Muestra la lista de opciones disponibles (-help-list-hidden para más)
+  -version   - Muestra la versión de este programa
 ```
 
 ## eosio-cpp
-Generates WASM and ABI files for your smart contracts.
+Genera archivos WASM y ABI para tus contratos inteligentes.
 
 ```shell
-USAGE: eosio-cpp [options] [input file] ...
-EXAMPLE: eosio-cpp -abigen wax.cpp -o wax.wasm
+USO: eosio-cpp [opciones] [archivo de entrada] ...
+EJEMPLO: eosio-cpp -abigen wax.cpp -o wax.wasm
 
-OPTIONS:
-  -C                       - Include comments in preprocessed output
-  -CC                      - Include comments from within macros in preprocessed output
-  -D=[string]              - Define [macro] to [value] (or 1 if [value] omitted)
-  -E                       - Only run the preprocessor
-  -I=[string]              - Add directory to include search path
-  -L=[string]              - Add directory to library search path
-  -O=[string]              - Optimization level s, 0-3
-  -S                       - Only run preprocess and compilation steps
-  -U=[string]              - Undefine macro [macro]
-  -W=[string]              - Enable the specified warning
-  -c                       - Only run preprocess, compile, and assemble steps
-  -dD                      - Print macro definitions in -E mode in addition to normal output
-  -dI                      - Print include directives in -E mode in addition to normal outpu
-  -dM                      - Print macro definitions in -E mode instead to normal output
-  -emit-ast                - Emit Clang AST files for source inputs
-  -emit-llvm               - Use the LLVM representation for assembler and object files
-  -faligned-allocation     - Enable C++17 aligned allocation functions
-  -fcoroutine-ts           - Enable support for the C++ Coroutines TS
-  -finline-functions       - Inline suitable functions
-  -finline-hint-functions  - Inline functions which are (explicitly or implicitly) marked inline
-  -fmerge-all-constants    - Allow merging of constants
-  -fno-cfl-aa              - Disable CFL Alias Analysis
-  -fno-elide-constructors  - Disable C++ copy constructor elision
-  -fno-lto                 - Disable LTO
-  -fstack-protector        - Enable stack protectors for functions potentially vulnerable to stack smashing
-  -fstack-protector-all    - Force the usage of stack protectors for all functions
-  -fstack-protector-strong - Use a strong heuristic to apply stack protectors to functions
-  -fstrict-enums           - Enable optimizations based on the strict definition of an enum's value range
-  -fstrict-return          - Always treat control flow paths that fall off the end of a non-void function as unreachable
-  -fstrict-vtable-pointers - Enable optimizations based on the strict rules for overwriting polymorphic C++ objects
-  -include=[string]        - Include file before parsing
-  -isysroot=[string]       - Set the system root directory (usually /)
-  -l=[string]              - Root name of library to link
-  -lto-opt=[string]        - LTO Optimization level (O0-O3)
-  -o=[string]              - Write output to [file]
-  -std=[string]            - Language standard to compile for
-  -v                       - Show commands to run and use verbose output
-  -w                       - Suppress all warnings
+OPCIONES:
+  -C                       - Incluir comentarios en la salida preprocesada
+  -CC                      - Incluir comentarios de dentro de macros en la salida preprocesada
+  -D=[string]              - Define [macro] a [valor] (o 1 si [valor] se omite)
+  -E                       - Solo ejecutar el preprocesador
+  -I=[string]              - Agregar directorio al camino de búsqueda de include
+  -L=[string]              - Agregar directorio al camino de búsqueda de bibliotecas
+  -O=[string]              - Nivel de optimización s, 0-3
+  -S                       - Solo ejecutar pasos de preproceso y compilación
+  -U=[string]              - Anular definición de macro [macro]
+  -W=[string]              - Activar la advertencia especificada
+  -c                       - Solo ejecutar pasos de preproceso, compilación y ensamblaje
+  -dD                      - Imprimir definiciones de macro en modo -E además de la salida normal
+  -dI                      - Imprimir directivas include en modo -E además de la salida normal
+  -dM                      - Imprimir definiciones de macro en modo -E en lugar de la salida normal
+  -emit-ast                - Emitir archivos AST de Clang para entradas de fuente
+  -emit-llvm               - Usar la representación LLVM para archivos ensambladores y de objeto
+  -faligned-allocation     - Habilitar funciones de asignación alineadas de C++17
+  -fcoroutine-ts           - Habilitar soporte para el TS de Corrutinas de C++
+  -finline-functions       - Inline funciones adecuadas
+  -finline-hint-functions  - Inline funciones que están (explícita o implícitamente) marcadas inline
+  -fmerge-all-constants    - Permitir fusión de constantes
+  -fno-cfl-aa              - Desactivar Análisis de Alias CFL
+  -fno-elide-constructors  - Desactivar elisión de constructor de copia de C++
+  -fno-lto                 - Desactivar LTO
+  -fstack-protector        - Habilitar protectores de pila para funciones potencialmente vulnerables al aplastamiento de pila
+  -fstack-protector-all    - Forzar el uso de protectores de pila para todas las funciones
+  -fstack-protector-strong - Usar una heurística fuerte para aplicar protectores de pila a las funciones
+  -fstrict-enums           - Habilitar optimizaciones basadas en la definición estricta del rango de valores de un enum
+  -fstrict-return          - Siempre tratar caminos de flujo de control que salen de una función no-void como inalcanzables
+  -fstrict-vtable-pointers - Habilitar optimizaciones basadas en las reglas estrictas para sobrescribir objetos C++ polimórficos
+  -include=[string]        - Incluir archivo antes de analizar
+  -isysroot=[string]       - Establecer el directorio raíz del sistema (usualmente /)
+  -l=[string]              - Nombre raíz de la biblioteca para enlazar
+  -lto-opt=[string]        -
 
-Generic Options:
+ Nivel de Optimización LTO (O0-O3)
+  -o=[string]              - Escribir salida a [archivo]
+  -std=[string]            - Estándar de lenguaje para compilar
+  -v                       - Mostrar comandos a ejecutar y usar salida detallada
+  -w                       - Suprimir todas las advertencias
 
-  -help                    - Display available options (-help-hidden for more)
-  -help-list               - Display list of available options (-help-list-hidden for more)
-  -version                 - Display the version of this program
+Opciones Genéricas:
+
+  -help                    - Muestra las opciones disponibles (-help-hidden para más)
+  -help-list               - Muestra la lista de opciones disponibles (-help-list-hidden para más)
+  -version                 - Muestra la versión de este programa
 ```
 
 ## eosio-init
-Creates a smart contract template and directory structure. Includes CMake build scripts by default.
+Crea una plantilla de contrato inteligente y estructura de directorios. Incluye scripts de compilación CMake por defecto.
 
 ```shell
-USAGE: eosio-init [options]
-EXAMPLE: eosio-init -project wax
+USO: eosio-init [opciones]
+EJEMPLO: eosio-init -project wax
 
-OPTIONS:
+OPCIONES:
 
-Generic Options:
+Opciones Genéricas:
 
-  -help             - Display available options (-help-hidden for more)
-  -help-list        - Display list of available options (-help-list-hidden for more)
-  -version          - Display the version of this program
+  -help             - Muestra las opciones disponibles (-help-hidden para más)
+  -help-list        - Muestra la lista de opciones disponibles (-help-list-hidden para más)
+  -version          - Muestra la versión de este programa
 
 eosio-init:
-generates an eosio smart contract project
+genera un proyecto de contrato inteligente eosio
 
-  -bare             - produces only a skeleton smart contract without CMake support
-  -path=[string]    - directory to place the project
-  -project=[string] - output project name
+  -bare             - produce solo un esqueleto de contrato inteligente sin soporte de CMake
+  -path=[string]    - directorio para colocar el proyecto
+  -project=[string] - nombre del proyecto de salida
 ```
 
 ## eosio-ld
-WebAssembly linker.
+Enlazador WebAssembly.
 
 ```shell
-USAGE: eosio-ld [options] [input file] ...
+USO: eosio-ld [opciones] [archivo de entrada] ...
 
-OPTIONS:
+OPCIONES:
 
-Generic Options:
+Opciones Genéricas:
 
-  -help             - Display available options (-help-hidden for more)
-  -help-list        - Display list of available options (-help-list-hidden for more)
-  -version          - Display the version of this program
+  -help             - Muestra las opciones disponibles (-help-hidden para más)
+  -help-list        - Muestra la lista de opciones disponibles (-help-list-hidden para más)
+  -version          - Muestra la versión de este programa
 
-eosio.ld options:
+opciones de eosio.ld:
 
-  -L=[string]       - Add directory to library search path
-  -fno-cfl-aa       - Disable CFL Alias Analysis
-  -fno-lto          - Disable LTO
-  -fno-post-pass    - Don't run post processing pass
-  -fno-stack-first  - Don't set the stack first in memory
-  -l=[string]       - Root name of library to link
-  -lto-opt=[string] - LTO Optimization level (O0-O3)
-  -o=[string]       - Write output to [file]
-```
-
-<!--### eosio-abigen
-
-```bash
-USAGE: eosio-abigen [options] <source0> [... <sourceN>]
-
-OPTIONS:
-
-Generic Options:
-
-  -help                      - Display available options (-help-hidden for more)
-  -help-list                 - Display list of available options (-help-list-hidden for more)
-  -version                   - Display the version of this program
-
-eosio-abigen:
-generates an ABI from C++ project input
-
-  -extra-arg=<string>        - Additional argument to append to the compiler command line
-  -extra-arg-before=<string> - Additional argument to prepend to the compiler command line
-  -output=<string>           - Set the output filename and fullpath
-  -p=<string>                - Build path
-```-->
+  -L=[string]       - Agregar directorio al camino de búsqueda de bibliotecas
+  -fno-cfl-aa       - Desactivar Análisis de Alias CFL
+  -fno-lto          - Desactivar LTO
+  -fno-post-pass    - No ejecutar paso de post procesamiento
+  -fno-stack-first  - No establecer la pila primero en memoria
+  -l=[string]       - Nombre raíz de la biblioteca para enlazar
+  -lto-opt=[string] - Nivel de Optimización LTO (O0-O3)
+  -o=[string]       - Escribir salida a [archivo]

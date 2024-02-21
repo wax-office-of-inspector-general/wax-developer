@@ -9,8 +9,7 @@ En este ejemplo, escribiremos un contrato inteligente que crea un NFT de Pegatin
 
 **Pegatina NFT de WAX (Ejemplo)**
 
-<img src="https://developer.wax.io/img/wax_sticker.png" style="height: 200px" />
-![Pegatina NFT de WAX](/assets/images/wax_sticker.png)
+![Pegatina NFT de WAX](/assets/images/logo.png)
 
 ## Configuración Inicial
 

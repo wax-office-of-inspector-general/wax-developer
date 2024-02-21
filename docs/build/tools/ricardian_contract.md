@@ -1,60 +1,60 @@
 ---
-title: Ricardian Contracts
+title: Contratos Ricardianos
 order: 111
 ---
 
-# Ricardian Contracts
+# Contratos Ricardianos
 
-A Ricardian contract is a machine and human-readable digital agreement between two parties (e.g., your app and your customer). Similar to a standard legal document, it includes your smart contracts actions, intentions, terms, and conditions. 
+Un contrato Ricardiano es un acuerdo digital legible tanto por máquinas como por humanos entre dos partes (por ejemplo, tu aplicación y tu cliente). Similar a un documento legal estándar, incluye las acciones, intenciones, términos y condiciones de tus contratos inteligentes.
 
-Ricardian contracts are defined per action. Every time your smart contract's action executes on the WAX Blockchain, this agreement is cryptographically signed and verified with a HASH (per action). 
+Los contratos Ricardianos se definen por acción. Cada vez que la acción de tu contrato inteligente se ejecuta en la Blockchain de WAX, este acuerdo se firma y verifica criptográficamente con un HASH (por acción).
 
-To associate a Ricardian contract with each of your actions, you'll need to create a markdown file. 
+Para asociar un contrato Ricardiano con cada una de tus acciones, necesitarás crear un archivo en markdown.
 
-* This file must have the same name as your smart contract. For example, if your smart contract is named **wax.cpp**, your Ricardian markdown file must be named: wax.contracts.md.
-* Each **```<h1>```** tag must have the "contract" class: ```<h1 class="contract"></h1>```.
-* To associate an action with your markdown file, the **```<h1>```** tag contents must match the action name: ```<h1 class="contract">hi</h1>```.
+* Este archivo debe tener el mismo nombre que tu contrato inteligente. Por ejemplo, si tu contrato inteligente se llama **wax.cpp**, tu archivo de markdown Ricardiano debe llamarse: wax.contracts.md.
+* Cada etiqueta **```<h1>```** debe tener la clase "contract": ```<h1 class="contract"></h1>```.
+* Para asociar una acción con tu archivo markdown, el contenido de la etiqueta **```<h1>```** debe coincidir con el nombre de la acción: ```<h1 class="contract">hi</h1>```.
 
-It's also important where you store your Ricardian markdown file (in relation to your smart contract C++ file). This depends on how you're compiling your contract.
+También es importante dónde almacenas tu archivo de markdown Ricardiano (en relación con tu archivo C++ de contrato inteligente). Esto depende de cómo estés compilando tu contrato.
 
-## Use WAX-CDT
+## Usa WAX-CDT
 
-If you use **eosio-init** to create a smart contract template, a folder is automatically created for you under your project directory (e.g., wax/ricardian). By default, this folder contains a sample Ricardian contract: wax.contracts.md.
+Si usas **eosio-init** para crear una plantilla de contrato inteligente, automáticamente se crea una carpeta para ti bajo tu directorio de proyecto (por ejemplo, wax/ricardian). Por defecto, esta carpeta contiene un contrato Ricardiano de muestra: wax.contracts.md.
 
-The CMake scripts will automatically include the files listed in the **ricardian** directory.
+Los scripts de CMake incluirán automáticamente los archivos listados en el directorio **ricardian**.
 
-Refer to [Create a Smart Contract](/build/dapp-development/smart-contract-quickstart/dapp_hello_world/)for more information.
+Consulta [Crear un Contrato Inteligente](/build/dapp-development/smart-contract-quickstart/dapp_hello_world/) para más información.
 
-## Use eosio-cpp
+## Usa eosio-cpp
 
-If you use [eosio-cpp](/build/dapp-development/wax-cdt/)to compile your contract, your Ricardian markdown file must be in the same directory as wax.cpp and must be the same name: wax.contracts.md.
+Si usas [eosio-cpp](/build/dapp-development/wax-cdt/) para compilar tu contrato, tu archivo de markdown Ricardiano debe estar en el mismo directorio que wax.cpp y debe tener el mismo nombre: wax.contracts.md.
 
 ```shell
 eosio-cpp -abigen wax.cpp -o wax.wasm
 ```
 
-## Example Ricardian Contract
+## Ejemplo de Contrato Ricardiano
 
-Below is a smart contract, with an action named: **hi**.
+A continuación, se muestra un contrato inteligente, con una acción llamada: **hi**.
 
 ```cpp
 ACTION wax::hi( name nm ) {
-   /* fill in action body */
-   print_f("Name : %\n",nm);
+   /* rellenar el cuerpo de la acción */
+   print_f("Nombre: %\n", nm);
 }
 ```
 
-To associate a Ricardian contract with this action:
+Para asociar un contrato Ricardiano con esta acción:
 
-1. Create a file named **your-contract.contracts.md** (e.g., wax.contracts.md).
-2. Paste the markdown below into your contracts file.
+1. Crea un archivo llamado **tu-contrato.contracts.md** (por ejemplo, wax.contracts.md).
+2. Pega el markdown a continuación en tu archivo de contratos.
 
 :::tip
-For each of your actions, use the ```<h1>``` tag with the "contract" class, and set its inner contents to the action name.
+Para cada una de tus acciones, usa la etiqueta ```<h1>``` con la clase "contract", y establece su contenido interno con el nombre de la acción.
 :::
 
 ```html
 <h1 class="contract"> hi </h1> 
 ```
 
-Stub for hi action's ricardian contract
+Espacio reservado para el contrato ricardiano de la acción hi
