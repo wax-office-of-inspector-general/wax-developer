@@ -193,7 +193,7 @@ module.exports = [
                         path: '/build/tutorials/wharfkit/',
                         children: [
                             '/build/tutorials/wharfkit/howto_react',
-                            '/build/tutorials/wharfkit/multissesion',
+                            '/build/tutorials/wharfkit/multisession',
                         ],
                     },
                     {
