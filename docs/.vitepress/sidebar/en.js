@@ -1,7 +1,7 @@
 module.exports = [
     {
         text: 'Learn',
-        link: '/learn/',
+        // link: '/learn/',
         collapsed: false,
         items: [
             {
@@ -40,7 +40,7 @@ module.exports = [
     },
     {
         text: 'Build',
-        link: '/build/',
+        // link: '/build/',
         collapsed: true,
         items: [
             {
@@ -236,7 +236,7 @@ module.exports = [
     },
     {
         text: 'Operate',
-        link: '/operate/',
+        // link: '/operate/',
         collapsed: true,
         items: [
             {
@@ -299,7 +299,7 @@ module.exports = [
     },
     {
         text: 'Create',
-        link: '/create/',
+        // link: '/create/',
         collapsed: true,
         items: [
           {

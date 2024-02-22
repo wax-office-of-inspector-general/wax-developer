@@ -3,9 +3,8 @@ layout: home
 title: WAX Developers Portal
 permalink: /
 hero:
-  name: "WAX Developer"
-  text: "Portal for Developers on WAX Blockchain"
-  tagline: Find the resources you need to build on WAX
+  name: "WAX Developer Portal"
+  tagline: "The Gateway for Building on the WAX Blockchain"
   image: {
   src: /assets/images/front-cube.png,
   alt: WAX Developer Portal
