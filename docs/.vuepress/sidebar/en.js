@@ -310,12 +310,20 @@ module.exports = [
         title: 'Create',
         path: '/create/',
         collapsable: false,
-        sidebarDepth: 1,
+        sidebarDepth: 2,
         children: [
           {
             title: 'Awesome WAX',
             path: '/create/awesome-wax/',
             collapsable: true,
+          },
+          {
+            title: 'WAX Labs',
+            path: '/create/wax-labs/',
+            collapsable: true,
+            children: [
+                '/create/wax-labs/how-to-submit',
+            ],
           },
           {
             title: 'Documentation',
