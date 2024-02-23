@@ -36,7 +36,7 @@
     "@vuepress/plugin-search": "^1.9.9",
     "@vuepress/utils": "^2.0.0-alpha.1",
     "sass-loader": "^7.3.1",
-    "vuepress": "^1.9.9"
+    "vuepress": "^1.9.10"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
