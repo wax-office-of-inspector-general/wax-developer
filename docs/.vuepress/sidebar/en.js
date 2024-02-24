@@ -151,6 +151,14 @@ module.exports = [
                 collapsable: true,
                 children: [
                     {
+                        title: 'Tic-Tac-Toe Game',
+                        path: '/build/tutorials/build-a-game/tic-tac-toe-game/',
+                        children: [
+                            '/build/tutorials/build-a-game/tic-tac-toe-game/smart-contract',
+                            '/build/tutorials/build-a-game/tic-tac-toe-game/client',
+                        ],
+                    },
+                    {
                         title: 'AtomicAssets Guide',
                         path: '/build/tutorials/howto_atomicassets/',
                         children: [
