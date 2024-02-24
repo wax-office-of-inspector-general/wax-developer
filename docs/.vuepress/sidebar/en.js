@@ -152,10 +152,10 @@ module.exports = [
                 children: [
                     {
                         title: 'Tic-Tac-Toe Game',
-                        path: '/build/tutorials/build-a-game/tic-tac-toe-game/',
+                        path: '/build/tutorials/tic-tac-toe-game/',
                         children: [
-                            '/build/tutorials/build-a-game/tic-tac-toe-game/smart-contract',
-                            '/build/tutorials/build-a-game/tic-tac-toe-game/client',
+                            '/build/tutorials/tic-tac-toe-game/client',
+                            '/build/tutorials/tic-tac-toe-game/smart-contract',
                         ],
                     },
                     {
