@@ -3,43 +3,38 @@ title: Game Client
 order: 2
 ---
 
-# Tic Tac Toe
-
-## 🎮 Overview
-![Preview Image](./preview_meta_data.png)
+# Tic Tac Toe: Game Client
 
 This tic-tac-toe contract provides an example of building a game on WAX, complete with secure use of random values to determine game outcomes.
 
+[Frontend Tutorial on github.com](https://github.com/worldwide-asset-exchange/tic-tac-toe-front-end)
+
 This will guide you how to make the Tictactoe game contract which run on Wax blockchain. Logic of the tictactoe game follow the eosio sample at Tic-tac-toe Game EOS tutorial, but we'll add more logic that support randomize the first turner and random game move if playing with bot.
 
-### [Frontend Tutorial](https://github.com/worldwide-asset-exchange/tic-tac-toe-front-end)
-
-### [Smart Contract Tutorial](https://github.com/worldwide-asset-exchange/tic-tac-toe)
 
 ### How To Play
+
 [Tic Tac Toe](https://tictactoe.wax.io/) is a classic game enjoyed by people of all ages. It's simple to learn but can be surprisingly strategic. Here's a step-by-step guide on how to play:
 
-Visit game: https://tictactoe.wax.io/
-
 1. **Setup**: Click `Play Game`
-<img src="./src/assets/screen_shot/Splash.png"/>
+<img src="/assets/images/tutorials/tic-tac-toe/splash.png"/>
 And choose `New Game`
-<img src="./src/assets/screen_shot/New Game.png"/>
+<img src="/assets/images/tutorials/tic-tac-toe/new_game.png"/>
 
 2. **Players**: Tic Tac Toe is typically played by two players. One player is assigned "X" and the other "O".
-<img src="./src/assets/screen_shot/New Game Popup.png"/>
+<img src="/assets/images/tutorials/tic-tac-toe/new_game_popup.png"/>
 
 3. **Objective**: The goal is to be the first to create a row of three of your marks (X's or O's) either horizontally, vertically, or diagonally.
 
 4. **Gameplay**: Players take turns placing their mark (X or O) in an empty square on the grid.
 
 5. **Turns**: The player assigned "X" usually goes first, followed by the player assigned "O". Players continue taking turns until one player wins or the grid is full (resulting in a tie).
-<img src="./src/assets/screen_shot/Playing Game.png"/>
+<img src="/assets/images/tutorials/tic-tac-toe/playing_game.png"/>
 
 6. **Winning**: A player wins the game if they successfully create a row of three of their marks either horizontally, vertically, or diagonally. If a player achieves this, they declare "Tic Tac Toe!" and are declared the winner.
 
 7. **Ties**: If all squares are filled without either player achieving three in a row, the game ends in a tie.
-<img src="./src/assets/screen_shot/Winner.png"/>
+<img src="/assets/images/tutorials/tic-tac-toe/winner.png"/>
 
 **Notes: The winner of the game will get a reward of 10 TIC token (the token issued by the game)**
 
@@ -54,7 +49,6 @@ And choose `New Game`
 
 ## 🚀 Getting Started
 
-### Prerequisites
 
 Ensure the following prerequisites are met before embarking on your journey:
 
@@ -101,7 +95,10 @@ yarn run dev
 6. **Access & Engage**:
 Navigate to `http://localhost:5173` and immerse yourself in the blockchain-powered Tic Tac Toe experience.
 
+
 ### 🐳 Docker Integration
+
+To quickly setup a development environment the tutorial is using Docker.
 
 #### 🛠️ Build & Launch Containers
 
@@ -118,11 +115,3 @@ To gracefully halt and remove containers, execute:
 ```
 docker-compose down
 ```
-
-## 🤝 Contributing
-
-Open arms and open source! We encourage community contributions. Please feel free to submit issues, suggest enhancements, or create pull requests to foster collaborative growth.
-
-## 📜 License
-
-This repository operates under the MIT License. Kindly refer to the [LICENSE.md](LICENSE.md) file for comprehensive details and stipulations.
