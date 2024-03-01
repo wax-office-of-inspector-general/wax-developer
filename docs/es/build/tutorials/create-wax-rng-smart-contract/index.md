@@ -17,7 +17,7 @@ En este tutorial, aprenderás cómo crear y desplegar un contrato inteligente WA
 <!-- * Instala el [Generador de Números Aleatorios de WAX (WAX RNG)](/build/tutorials/wax-rng/). -->
 * Para desplegar tu contrato inteligente en la red principal de WAX o en la red de pruebas de WAX, necesitarás crear una Cuenta de Blockchain de WAX autogestionada.
 
-<strong>Desarrolladores Nuevos:</strong> Si eres nuevo en el desarrollo de dApps, se recomienda que revises nuestro [Crear un Contrato Inteligente](/build/dapp-development/wax-cdt) Inicio Rápido.
+<strong>Desarrolladores Nuevos:</strong> Si eres nuevo en el desarrollo de dApps, se recomienda que revises nuestro [Crear un Contrato Inteligente](/build/dapp-development/wax-cdt/) Inicio Rápido.
 :::
 
 **Código Fuente:** 

@@ -43,7 +43,7 @@ El [Validador bp.json de EOS Nation](https://validate.eosnation.io/wax/reports/r
 
 ### Uso
 
-Utilizando el ejemplo de construcción de `nodeos` en el [anterior](/en/wax-infrastructure/wax-testnet-node) WAX Technical How To, todos los archivos relevantes se encuentran en `~/waxdata`.
+Utilizando el ejemplo de construcción de `nodeos` en el [anterior](/operate/wax-infrastructure/wax-testnet-node) WAX Technical How To, todos los archivos relevantes se encuentran en `~/waxdata`.
 
 Descarga y descomprime el archivo de instantánea deseado:
 

@@ -17,7 +17,7 @@ Refer to EOS's <a href="https://docs.eosnetwork.com/leap/latest/keosd/" target="
 
 This is the core WAX node daemon, used to run a local node on your server. You can initialize **nodeos** with various plug-ins and options.
 
-Nodeos also allows you to communicate with the [WAX RPC API](/learn/api-reference/rpc_api).
+Nodeos also allows you to communicate with the [WAX RPC API](/build/api-reference/rpc_api).
 
 Refer to EOS's <a href="https://docs.eosnetwork.com/leap/latest/nodeos/" target="_blank">Overview - nodeos</a> for more information.
 

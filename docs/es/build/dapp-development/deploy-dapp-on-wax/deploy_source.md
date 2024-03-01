@@ -7,7 +7,7 @@ order: 73
 
 En esta guía, usarás el comando `cleos set contract` para desplegar tu contrato inteligente en la mainnet de WAX.
 
-Antes de comenzar, deberás compilar tu contrato inteligente y tener listos tus archivos WASM y ABI. Consulta [Inicio Rápido de Contrato Inteligente](/es/build/dapp-development/smart-contract-quickstart/) o [Herramientas de Construcción WAX-CDT](/es/build/dapp-development/wax-cdt/cdt_cpp/) para más información.
+Antes de comenzar, deberás compilar tu contrato inteligente y tener listos tus archivos WASM y ABI. Consulta [Inicio Rápido de Contrato Inteligente](/es/build/dapp-development/smart-contract-quickstart/) o [Herramientas de Construcción WAX-CDT](/es/build/dapp-development/wax-cdt/cdt_cpp) para más información.
 
 También necesitarás:
 

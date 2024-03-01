@@ -29,7 +29,7 @@ Una vez que hayas configurado tu entorno de desarrollo, estos tutoriales pueden 
 
 Aprende a realizar solicitudes de API a tu blockchain local, testnet de WAX o mainnet de WAX, y obtén una visión general de la API C++ de WAX-CDT utilizada para construir tus contratos inteligentes.
 
-  * [API RPC de WAX](/es/learn/api-reference/)
-  * [API de WAX-CDT](/es/learn/api-reference/cdt_api/)
+  * [API RPC de WAX](/es/build/api-reference/)
+  * [API de WAX-CDT](/es/build/api-reference/cdt_api)
 
 <ChildTableOfContents :max="2" title="Más contenidos de esta sección" />

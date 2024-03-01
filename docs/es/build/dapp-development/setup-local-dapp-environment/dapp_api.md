@@ -49,4 +49,4 @@ curl: (7) Failed to connect to 127.0.0.1 port 8888: Connection refused
 
 ## Información Adicional
 
-Consulta [WAX RPC API](/es/learn/api-reference/rpc_api) para obtener más información.
+Consulta [WAX RPC API](/es/build/api-reference/rpc_api) para obtener más información.

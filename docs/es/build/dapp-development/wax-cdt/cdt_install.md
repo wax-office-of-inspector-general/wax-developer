@@ -17,7 +17,7 @@ git clone --recursive https://github.com/worldwide-asset-exchange/wax-cdt.git
 
 Si estás utilizando nuestras imágenes Docker, **no** necesitas completar estos pasos.
 
-Para construir WAX-CDT desde el código fuente, puedes usar los siguientes pasos. Si tienes una versión anterior instalada, primero tendrás que desinstalarla. Consulta [Desinstalar WAX-CDT](/es/build/tutorials/cdt_uninstall) para más información.
+Para construir WAX-CDT desde el código fuente, puedes usar los siguientes pasos. Si tienes una versión anterior instalada, primero tendrás que desinstalarla. Consulta [Desinstalar WAX-CDT](/es/build/dapp-development/wax-cdt/cdt_uninstall) para más información.
 
 :::warning
 Importante: La construcción desde el código fuente no está soportada. Si encuentras un problema con la construcción, puedes usar nuestras [Imágenes Docker](/es/build/dapp-development/docker-setup/) en su lugar (recomendado).

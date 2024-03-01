@@ -24,7 +24,7 @@ It's simple for mainstream gamers and app customers to use your dApp (not just t
 
 Tap into the global community of gamers, item traders, and collectors in just minutes - for free (seriously)
 
-* The [WCW Quickstart Guide](./waxjs/waxjs_qstart.md) features tutorials, installation instructions, code samples, and a live demo
+* The [WCW Quickstart Guide](/build/cloud-wallet/waxjs/waxjs_qstart) features tutorials, installation instructions, code samples, and a live demo
 * Users can whitelist your dApp and auto-sign transactions, so <b>you can execute blockchain transactions on their behalf</b>
 * Zero investment in account security & management means you stay focused on driving business
 
@@ -35,7 +35,7 @@ WCW is the uncomplicated crypto wallet
 * Localized into <b>48 languages</b>
 * Stores both <b>NFTs and crypto balances</b> all in one wallet
 * Works on <b>mobile</b> just as easily as it does on a desktop
-* Customers can automatically log into your dApp any time they access it using the [WaxJS feature](./waxjs)
+* Customers can automatically log into your dApp any time they access it using the [WaxJS feature](/build/cloud-wallet/waxjs/)
 
 ## Join dApps already using Cloud Wallet 
 

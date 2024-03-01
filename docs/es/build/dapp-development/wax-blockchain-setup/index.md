@@ -44,10 +44,6 @@ Si no estás usando nuestras imágenes de Docker, necesitarás:
 
 - Consultar [Sistemas Operativos Soportados](/es/build/tools/os) para asegurarte de que cumples con los requisitos del sistema operativo.
 
-  :::warning
-  <strong>Usuarios de Ubuntu 18.04:</strong> Consulta [Problemas Conocidos](/es/build/troubleshooting/) antes de comenzar la Configuración de la Blockchain WAX.
-  :::
-
 - Tener al menos 7 GB de RAM libre.
 
 - Tener al menos 20 GB de espacio libre en el disco duro.

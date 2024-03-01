@@ -44,7 +44,7 @@ The [EOS Nation bp.json Validator](https://validate.eosnation.io/wax/reports/res
 
 ### Usage
 
-Using the example ```nodeos``` build in the [previous](/en/wax-infrastructure/wax-testnet-node) WAX Technical How To, all relevant files are located in ```~/waxdata```.
+Using the example ```nodeos``` build in the [previous](/operate/wax-infrastructure/wax-testnet-node) WAX Technical How To, all relevant files are located in ```~/waxdata```.
 
 Download and unarchive the desired snapshot file:
 

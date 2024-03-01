@@ -41,4 +41,4 @@ Si el comando `docker ps` no muestra tu contenedor, intenta ejecutarlo con la cl
 docker ps -a
 ```
 
-Ahora que has configurado tu entorno Docker, estás listo para seguir las guías en esta sección. Aunque no es necesario completar la [Configuración de la Blockchain de WAX](/es/build/dapp-development/wax-blockchain-setup) en el siguiente tutorial, todavía recomendamos descargar el código fuente para acceder a ejemplos de código y scripts de **make**.
+Ahora que has configurado tu entorno Docker, estás listo para seguir las guías en esta sección. Aunque no es necesario completar la [Configuración de la Blockchain de WAX](/es/build/dapp-development/wax-blockchain-setup/) en el siguiente tutorial, todavía recomendamos descargar el código fuente para acceder a ejemplos de código y scripts de **make**.

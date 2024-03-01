@@ -21,7 +21,7 @@ Important: At this time, pre-compiled packages are not available. Support is <st
 
 ## What's Included
 
-- A [C/C++ API library](/learn/api-reference/cdt_api) to communicate with the WAX Blockchain
+- A [C/C++ API library](/build/api-reference/cdt_api) to communicate with the WAX Blockchain
 - Sample smart contracts to jumpstart your dApp development
 - Tools to create new smart contract templates 
 - CMake scripts and tools to build optimized, high-performance WASM files

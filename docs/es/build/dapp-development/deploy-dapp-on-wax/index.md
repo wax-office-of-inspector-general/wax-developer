@@ -5,7 +5,7 @@ order: 70
 
 # Despliega Tu dApp en WAX
 
-Para desplegar tu dApp en WAX, necesitarás usar [WAX-CDT](/es/build/dapp-development/wax-cdt/) y [Herramientas de Blockchain](/es/build/tools/blockchain_tools/) para:
+Para desplegar tu dApp en WAX, necesitarás usar [WAX-CDT](/es/build/dapp-development/wax-cdt/) y [Herramientas de Blockchain](/es/build/tools/blockchain_tools) para:
 
 - Compilar tus contratos inteligentes
 - Crear cuentas en la Blockchain de WAX para cada uno de tus contratos
@@ -44,7 +44,7 @@ Si prefieres, puedes desplegar tus contratos inteligentes desde la línea de com
 
 ### Ventajas
 
-- Permite un mayor control sobre el proceso de construcción y los parámetros de despliegue. Consulta [Opciones de WAX-CDT](/es/build/tools/cdt_options/) para más información.
+- Permite un mayor control sobre el proceso de construcción y los parámetros de despliegue. Consulta [Opciones de WAX-CDT](/es/build/tools/cdt_options) para más información.
 - Si usaste **eosio-init** para [Crear un Contrato Inteligente](/es/build/dapp-development/wax-cdt/cdt_use.html#compile-hello-world/) y desplegarlo en tu blockchain local, esta podría ser una buena opción para ti.
 - Compatible para usuarios de Windows.
 

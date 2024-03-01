@@ -23,7 +23,7 @@ Los archivos de cabecera de C++ contienen declaraciones globales. Dado que WAX u
 #include <eosio/eosio.hpp>
 ```
 
-Esto le da a tu contrato inteligente acceso a la API de C/C++ de WAX, permitiéndote definir acciones y estructuras que habilitan a tu contrato inteligente para comunicarse con la Blockchain de WAX. Consulta la [API de WAX-CDT](/es/learn/api-reference/cdt_api) para más información.
+Esto le da a tu contrato inteligente acceso a la API de C/C++ de WAX, permitiéndote definir acciones y estructuras que habilitan a tu contrato inteligente para comunicarse con la Blockchain de WAX. Consulta la [API de WAX-CDT](/es/build/api-reference/cdt_api) para más información.
 
 ### Acciones
 

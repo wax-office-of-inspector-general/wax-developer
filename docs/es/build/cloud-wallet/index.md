@@ -24,7 +24,7 @@ Es simple para los jugadores convencionales y los clientes de aplicaciones usar 
 
 Accede a la comunidad global de jugadores, comerciantes de artículos y coleccionistas en solo minutos - gratis (en serio)
 
-* La [Guía de Inicio Rápido de WCW](./waxjs/waxjs_qstart.md) presenta tutoriales, instrucciones de instalación, muestras de código y una demostración en vivo
+* La [Guía de Inicio Rápido de WCW](/es/build/cloud-wallet/waxjs/) presenta tutoriales, instrucciones de instalación, muestras de código y una demostración en vivo
 * Los usuarios pueden incluir tu dApp en la lista blanca y auto-firmar transacciones, así que <b>puedes ejecutar transacciones en la blockchain en su nombre</b>
 * Cero inversión en seguridad y gestión de cuentas significa que puedes mantenerte enfocado en impulsar el negocio
 
@@ -35,7 +35,7 @@ WCW es la billetera cripto sin complicaciones
 * Localizada en <b>48 idiomas</b>
 * Almacena tanto <b>NFTs como saldos de cripto</b> todo en una sola billetera
 * Funciona en <b>móviles</b> tan fácilmente como en un escritorio
-* Los clientes pueden iniciar sesión automáticamente en tu dApp cada vez que la accedan usando la [función WaxJS](./waxjs)
+* Los clientes pueden iniciar sesión automáticamente en tu dApp cada vez que la accedan usando la [función WaxJS](/es/build/cloud-wallet/waxjs/)
 
 ## Únete a las dApps que ya están usando Cloud Wallet
 
