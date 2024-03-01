@@ -39,9 +39,9 @@ Der häufigste Anwendungsfall für einen Snapshot ist die Wiederherstellung eine
 
 Zunächst einmal müssen Sie eine gültige Snapshot-Datei aus einer vertrauenswürdigen Quelle beziehen. Es gibt eine ganze Reihe von WAX-Snapshot-Diensten, die von den WAX-Gilden angeboten werden, darunter auch [EOSphere] (https://snapshots.eosphere.io/), aber nicht alle bieten Testnet-Snapshots an, so dass Sie sich vielleicht ein wenig umsehen müssen.
 
-
+:::warning
 Der [EOS Nation bp.json Validator](https://validate.eosnation.io/wax/reports/resources.html#chain) hat eine sehr praktische Liste von Snapshot-Diensten zusammengestellt, die von den Gilden beworben werden.
-{: .label .label-yellow }
+:::
 
 ![image](https://user-images.githubusercontent.com/12730423/187578145-07ba4f0d-8532-4a46-9e47-83347d5793a9.png)
 
@@ -82,9 +82,9 @@ Die sicherste Art, Snapshots zu verwenden, ist die Erstellung und Verwendung eig
 ```ini
 plugin = eosio::producer_api_plugin
 ```
-
-Warnung: Das producer_api_plugin öffentlich zugänglich zu machen ist ein Sicherheitsrisiko und kann ausgenutzt werden, die Node, die zur Erstellung eines Snapshots verwendet wird, sollte nicht öffentlich abfragbar sein.
-{: .label .label-yellow }
+:::warning
+Das producer_api_plugin öffentlich zugänglich zu machen ist ein Sicherheitsrisiko und kann ausgenutzt werden, die Node, die zur Erstellung eines Snapshots verwendet wird, sollte nicht öffentlich abfragbar sein.
+:::
 
 Erzeugen Sie einen Snapshot lokal mit der folgenden Syntax, die Snapshot-Datei wird standardmäßig im Ordner snapshots gespeichert:
 

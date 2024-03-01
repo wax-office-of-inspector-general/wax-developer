@@ -9,7 +9,7 @@ In this example, we'll write a smart contract that creates a WAX NFT Sticker usi
 
 **WAX NFT Sticker (Example)**
 
-<img src="https://developer.wax.io/images/wax_sticker.png" style="height: 200px" />
+![Pegatina NFT de WAX](/assets/images/logo.png)
 
 ## Get Set Up
 

@@ -13,7 +13,7 @@ In this guide, you'll learn how to use **WaxJS** to connect to the Cloud Wallet 
 * Get blockchain account names, public keys, and permissions
 * Easily execute smart contract transactions from your client
 
-:::tip Note
+:::tip 📝 Note
 In the next few sections, we'll go over how everything works. If you'd like to jump right to the code and run our live WaxJS example, refer to [WaxJS Demo](/build/cloud-wallet/waxjs/waxjs_demo).
 :::
 

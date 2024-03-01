@@ -68,7 +68,7 @@ Every time you call one of your smart contract's actions from your app, a new in
 
 To persist data between the actions of one or more of your smart contracts, you'll need to use the **multi_index** table functionality.
 
-:::tip Note	
+:::tip 📝 Note	
 Persistent data is stored on the WAX node's RAM and impacts the amount of WAX that you'll need to stake for your smart contract.
 :::
 

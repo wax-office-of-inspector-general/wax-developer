@@ -71,7 +71,9 @@ const immutableData = [
     console.log(result);
 })();
 ``` 
-**Note**: "ipfs" and "image" data are treated as "string".
+
+::: tip 📝 Note
+"ipfs" and "image" data are treated as "string".
 :::
 
 And call to action...

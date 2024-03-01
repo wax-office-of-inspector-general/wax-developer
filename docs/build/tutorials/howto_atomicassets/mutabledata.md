@@ -5,16 +5,6 @@ order: 44
 
 # Modifying mutable data for AA
 
-
-## Index
-
-- [Mutable data vs. immutable data](#p1)
-- [ATTRIBUTE_MAP](#p2)
-- [Writing mutable data in JavaScript](#p3)
-- [Modifying mutable data in JavaScript](#p4)
-- [Writing mutable data in Smart Contract](#p5)
-- [Modifying mutable data in Smart Contract](#p6)
-
 ## Mutable data vs. immutable data <a name="p1"></a>
 
 What makes an NFT a digital valuable? It is their ability to store unchangeable data over all its existence and its permanence in a decentralized system, as a blockchain is. Thanks to the permanence of its immutable data, it is possible to use NFTs as unique, non-forgeable property or authorship records, which is highly appreciated by digital creators who fight against piracy -against the illegitimate usage of their work, to be more specific.

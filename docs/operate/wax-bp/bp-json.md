@@ -5,7 +5,7 @@ order: 142
 
 # Creating a bp.json
 
-:::tip Note
+:::tip 📝 Note
 The current bp.json standard is updated in the GitHub Repository. This guide will explain everything you need to get started. You can find the latest updates in the [Repository](https://github.com/eosrio/bp-info-standard)
 :::
 
