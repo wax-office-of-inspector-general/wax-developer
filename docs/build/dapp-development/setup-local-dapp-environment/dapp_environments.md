@@ -51,7 +51,7 @@ When you [Set Up a Local dApp Environment](/build/dapp-development/), you can ma
 You can write WAX smart contracts using the C++ programming language. No custom language is required, although you'll need to familiarize yourself with the WAX C/C++ API library. This library contains the core files required to communicate with the WAX Blockchain. When you're ready to get started, refer to:
 
 - [WAX Contract Development Toolkit (WAX-CDT)](/build/dapp-development/wax-cdt/)
-- [WAX-CDT API](/learn/api-reference/cdt_api/)
+- [WAX-CDT API](/build/api-reference/cdt_api)
 - [Smart Contract Quickstart](/build/dapp-development/smart-contract-quickstart/)
 
 ## Development Tools

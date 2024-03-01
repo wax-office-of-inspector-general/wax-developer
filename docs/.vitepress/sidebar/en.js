@@ -154,6 +154,14 @@ module.exports = [
                 collapsed: true,
                 items: [
                     {
+                        text: 'Tic-Tac-Toe Game',
+                        link: '/build/tutorials/tic-tac-toe-game/',
+                        items: [
+                            {text: 'Game Client', link: '/build/tutorials/tic-tac-toe-game/client'},
+                            {text: 'Smart Contract', link: '/build/tutorials/tic-tac-toe-game/smart-contract'}
+                        ],
+                    },
+                    {
                         text: 'AtomicAssets Guide',
                         link: '/build/tutorials/howto_atomicassets/',
                         collapsed: true,

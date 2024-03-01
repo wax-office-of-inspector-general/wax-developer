@@ -13,7 +13,7 @@ This will guide you how to make the Tictactoe game contract which run on Wax blo
 [Smart Contract Tutorial on github.com](https://github.com/worldwide-asset-exchange/tic-tac-toe)
 
 ### What you will learn
-- [How the Game Works](#how-the-game-works)
+- [How the Game Works](/build/tutorials/tic-tac-toe-game/client.html#how-to-play)
 - [Development Workflow](#development-workflow)
 - [Game Contract Implementation](#game-contract-implementation)
   - [Requesting Random Values](#requesting-random-values)
@@ -68,8 +68,9 @@ cleos push action tic.token issue '["tictactoe","1000000.0000 TIC","issue token"
 ```
 
 
-# Game Contract Implementation
+## Game Contract Implementation
 &nbsp;
+
 ### 1. Game Logic
   - Player can create the game in one of two modes: player vs player or player vs bot
   - Game board is 3x3 rectangle
@@ -78,7 +79,7 @@ cleos push action tic.token issue '["tictactoe","1000000.0000 TIC","issue token"
   - When playing with bot, the contract will call the orgn.wax contract to get random number
   - The winner of the game will get a reward of 10 TIC token (the token issued by the game)
 
-## 2. Understanding the Game
+### 2. Understanding the Game
  For a basic game like tictactoe, we can visualize the game would have these actions:
  - create: create a new game
  - move: move by an user if it's his turn
@@ -101,7 +102,7 @@ Game logic will follow below diagrams:
   <img src="/assets/images/tutorials/tic-tac-toe/tictactoe-bot.png"/>
  
 
-## 3. Tic-tac-toe Smart Contract
+### 3. Tic-tac-toe Smart Contract
 Let dive into how can we implement these actions on tictactoe smartcontract.
 
 The smartcontract will have the [tictactoe.hpp header file](../include/tictactoe.hpp) and the [tictactoe.cpp implementation file](../src/tictactoe.cpp). 
