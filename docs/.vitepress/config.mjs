@@ -9,6 +9,8 @@ export default defineConfig({
   lang: 'en-US',
   lastUpdated: true,
   themeConfig: {
+    logo: '/assets/images/logo.png',
+    siteTitle: 'Developer',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
@@ -17,7 +19,8 @@ export default defineConfig({
     sidebar: sidebarEN,
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/wax-office-of-inspector-general/wax-developer' }
+      { icon: 'github', link: 'https://github.com/wax-office-of-inspector-general/wax-developer' },
+      { icon: 'twitter', link: 'https://twitter.com/WAX_io' },
     ],
 
     editLink: {

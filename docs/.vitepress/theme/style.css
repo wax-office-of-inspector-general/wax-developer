@@ -4,6 +4,7 @@
  */
 
 @import url("vars.css");
+@import url("fonts.css");
 
 
 /**
@@ -11,7 +12,7 @@
  * -------------------------------------------------------------------------- */
 
 .VPContent {
-  background: var(--vp-bg-gradient);
+  background: linear-gradient(180.84deg,hsla(0,0%,53.3%,.04) -11.6%,rgba(123,97,255,.05) 113.41%);
 }
 
 /**
