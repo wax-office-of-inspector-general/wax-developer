@@ -15,6 +15,16 @@
   background: linear-gradient(180.84deg,hsla(0,0%,53.3%,.04) -11.6%,rgba(123,97,255,.05) 113.41%);
 }
 
+.VPNav {
+  .VPNavBar:not(.top) {
+    background-color: var(--vp-nav-bg-color);
+
+    .divider {
+      display: none;
+    }
+}
+}
+
 /**
  * Component: Home
  * -------------------------------------------------------------------------- */
@@ -64,6 +74,10 @@
 
 .DocSearch {
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
+}
+
+.DocSearch-Button {
+  background-color: var(--vp-c-bg-soft);
 }
 
 .content * + h1,

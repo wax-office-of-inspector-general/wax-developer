@@ -473,8 +473,8 @@
 
 :root {
   --vp-nav-height: 64px;
-  --vp-nav-bg-color: var(--vp-c-bg);
-  --vp-nav-screen-bg-color: var(--vp-c-bg);
+  --vp-nav-bg-color: var(--vp-c-bg-alt);
+  --vp-nav-screen-bg-color: var(--vp-c-bg-alt);
   --vp-nav-logo-height: 24px;
 }
 
@@ -562,8 +562,8 @@
   * -------------------------------------------------------------------------- */
 
 :root {
-  --vp-local-search-bg: var(--vp-c-bg);
-  --vp-local-search-result-bg: var(--vp-c-bg);
+  --vp-local-search-bg: var(--vp-c-bg-soft);
+  --vp-local-search-result-bg: var(--vp-c-bg-soft);
   --vp-local-search-result-border: var(--vp-c-divider);
   --vp-local-search-result-selected-bg: var(--vp-c-bg);
   --vp-local-search-result-selected-border: var(--vp-c-brand-1);
