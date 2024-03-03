@@ -1,7 +1,7 @@
 ---
+layout: home
 title: 欢迎来到WAX开发者门户
-breadcrumb: 开始
-order: 1
+permalink: /cn/
 ---
 
 <ContentColumns :ltr="false">

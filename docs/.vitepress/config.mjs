@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 import sidebarEN from './sidebar/en.js';
-import esLocale from './locales/es/lang'
+import esLocale from './locales/es/lang';
+import cnLocale from './locales/cn/lang';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -12,9 +13,11 @@ export default defineConfig({
     hostname: 'https://developer.wax.io'
   },
   themeConfig: {
-    logo: '/assets/images/logo.png',
-    siteTitle: 'Developer',
     // https://vitepress.dev/reference/default-theme-config
+    logo: '/assets/images/logo.png',
+    
+    siteTitle: 'Developer',
+    
     nav: [
       { text: 'Home', link: '/' },
     ],
@@ -40,6 +43,7 @@ export default defineConfig({
       label: 'English',
       lang: 'en-US'
     },
-    es: esLocale
+    es: esLocale,
+    cn: cnLocale,
   },
 })
