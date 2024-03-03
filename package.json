@@ -30,7 +30,8 @@
   },
   "homepage": "https://github.com/wax-office-of-inspector-general/wax-developer#readme",
   "devDependencies": {
-    "vitepress": "^1.0.0-rc.31",
+    "vitepress": "^1.0.0-rc.44",
+    "vitepress-plugin-theme-override": "^0.0.2",
     "vue": "^3.3.9"
   }
 }
