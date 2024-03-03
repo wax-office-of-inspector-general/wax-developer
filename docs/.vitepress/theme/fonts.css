@@ -3,17 +3,16 @@
 html, body {
   font-size: 16px;
   line-height: 25px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .VPContent:not(.is-home) {
   h1, h2, h3, h4, h5 {
-      
+    font-family: 'Titillium Web', "Helvetica Neue", sans-serif;
+
     display: inline-block;
     border-bottom: none;
-
-    font-family: 'Titillium Web', "Helvetica Neue", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     
     &:after {
       content: '';
@@ -25,13 +24,14 @@ html, body {
   }
 }
 
-.theme-default-content:not(.custom) > h1:first-child,
-.theme-default-content:not(.custom) > h2:first-child,
-.theme-default-content:not(.custom) > h3:first-child,
-.theme-default-content:not(.custom) > h4:first-child,
-.theme-default-content:not(.custom) > h5:first-child,
-.theme-default-content:not(.custom) > h6:first-child,
-.theme-default-content:not(.custom) > *:first-child {
-  padding-top: 0;
-  margin-top: 0;
+.VPNavBarTitle > a {
+  font-family: 'Titillium Web', "Helvetica Neue", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold!important;
+  font-size: 13px!important;
+}
+
+.VPSidebarItem.level-0 > .item > .text {
+  font-family: 'Titillium Web', "Helvetica Neue", sans-serif;
+  font-size: 1.2em;
 }
