@@ -1,6 +1,5 @@
 import { defineConfig } from 'vitepress';
-import sidebarEN from './sidebar/en.js';
-import footerEN from './footer/en.js';
+import enLocale from './locales/en/lang';
 import esLocale from './locales/es/lang';
 import cnLocale from './locales/cn/lang';
 import { resolve } from 'path';
@@ -8,13 +7,18 @@ import VitepressThemeOverride from 'vitepress-plugin-theme-override';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "WAX Developer Portal",
-  description: "WAX Developer Portal - Inside the WAX Developer Portal, you'll find a wealth of resources to guide you on your development journey",
   lang: 'en-US',
+  
+  title: "WAX Developer Portal",
+  
+  description: "WAX Developer Portal - Inside the WAX Developer Portal, you'll find a wealth of resources to guide you on your development journey",
+  
   lastUpdated: true,
+
   sitemap: {
     hostname: 'https://developer.wax.io'
   },
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: {
@@ -23,16 +27,6 @@ export default defineConfig({
     },
     
     siteTitle: 'Developer',
-    
-    nav: [
-      { text: 'Home', link: '/' },
-    ],
-
-    sidebar: sidebarEN,
-
-    footer: {
-      navigation: footerEN
-    },
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/wax-office-of-inspector-general/wax-developer' },
@@ -49,10 +43,7 @@ export default defineConfig({
     }
   },
   locales: {
-    root: {
-      label: 'English',
-      lang: 'en-US'
-    },
+    root: enLocale,
     es: esLocale,
     cn: cnLocale,
   },

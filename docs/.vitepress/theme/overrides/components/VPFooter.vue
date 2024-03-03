@@ -29,7 +29,7 @@ import VPImage from '~theme/components/VPImage.vue';
 
 const { frontmatter, theme } = useData()
 
-console.log(theme.value);
+console.log(useData());
 </script>
 
 <style lang="scss">
