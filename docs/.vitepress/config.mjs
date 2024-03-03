@@ -8,6 +8,9 @@ export default defineConfig({
   description: "WAX Developer Portal - Inside the WAX Developer Portal, you'll find a wealth of resources to guide you on your development journey",
   lang: 'en-US',
   lastUpdated: true,
+  sitemap: {
+    hostname: 'https://developer.wax.io'
+  },
   themeConfig: {
     logo: '/assets/images/logo.png',
     siteTitle: 'Developer',
