@@ -108,7 +108,7 @@ export default defineConfig({
       'link',
       {
         rel: 'alternate',
-        href: `https://developer.wax.io/docs/public/assets/images/favicon.ico`,
+        href: `https://developer.wax.io/docs/public/favicon.ico`,
         type: 'image/x-icon',
       },
     ],

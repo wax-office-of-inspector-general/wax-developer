@@ -1,6 +1,9 @@
 <template>
   <div class="footer-container slide-enter" v-if="frontmatter.footer !== false">
     <footer class="footer">
+      <VPImage v-if="theme.logo" class="logo" :image="theme.logo" />
+    </footer>
+    <footer class="footer">
       <div class="footer-navigation" v-for="item in theme.footer.navigation">
         <h3 class="footer-title">{{ item.title }}</h3>
         <ul>
@@ -22,8 +25,11 @@
 <script setup>
 import { useData, withBase } from 'vitepress'
 import VPLink from '~theme/components/VPLink.vue';
+import VPImage from '~theme/components/VPImage.vue';
 
 const { frontmatter, theme } = useData()
+
+console.log(theme.value);
 </script>
 
 <style lang="scss">
@@ -69,6 +75,10 @@ const { frontmatter, theme } = useData()
 
 .footer {
   place-items: center;
+
+  .logo {
+    height: var(--vp-nav-logo-height);
+  }
 }
 
 .footer-navigation {
