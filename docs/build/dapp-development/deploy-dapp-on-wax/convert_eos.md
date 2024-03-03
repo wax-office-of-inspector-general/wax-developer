@@ -28,8 +28,8 @@ If you'd like to test your smart contracts on WAX, you can:
 * [Set Up a Local dApp Environment](/build/dapp-development/setup-local-dapp-environment/.
 * Deploy to the [WAX Testnet](/build/dapp-development/testnet-quickstart/.
 
-:::tip
-<strong>Warning:</strong> Setting up WAX source code in your local development environment will overwrite a current EOS installation. If you'd like to keep your EOS environment, it's recommended that you use Docker, a virtual machine, or a separate development environment.
+:::warning
+Setting up WAX source code in your local development environment will overwrite a current EOS installation. If you'd like to keep your EOS environment, it's recommended that you use Docker, a virtual machine, or a separate development environment.
 :::
 
 ## Deploy Your Smart Contracts

@@ -18,4 +18,4 @@ cleos -u https://wax-api-url get info
 
 Si las [Herramientas de Blockchain](/es/build/tools/blockchain_tools) se instalaron correctamente, este punto final devolverá varios detalles sobre la Blockchain WAX, incluyendo el `chain_id`, el productor de bloques y la altura más reciente del bloque.
 
-![](/es/assets/images/dapp-development/docker-setup/docker_results.jpg)
+![](/assets/images/dapp-development/docker-setup/docker_results.jpg)

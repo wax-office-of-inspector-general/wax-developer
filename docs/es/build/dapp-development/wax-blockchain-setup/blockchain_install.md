@@ -31,11 +31,7 @@ Para descargar el Repositorio de Código Fuente de la Blockchain WAX:
 
 Si estás utilizando nuestras imágenes de Docker, **no** necesitas completar estos pasos.
 
-Para construir la Blockchain WAX desde el código fuente, puedes utilizar los siguientes pasos. Si tienes una versión anterior instalada, necesitarás desinstalarla primero. Consulta [Desinstalar WAX](/es/build/tutorials/blockchain_uninstall) para obtener más información.
-
-:::warning
-Importante: Consulta [Problemas Conocidos](/es/build/troubleshooting/) si encuentras algún problema con la construcción o utiliza nuestras [Imágenes de Docker](/es/build/dapp-development/docker-setup/) en su lugar (recomendado). La construcción desde el código fuente no está soportada.
-:::
+Para construir la Blockchain WAX desde el código fuente, puedes utilizar los siguientes pasos. Si tienes una versión anterior instalada, necesitarás desinstalarla primero. Consulta [Desinstalar WAX](/es/build/dapp-development/wax-blockchain-setup/blockchain_uninstall) para obtener más información.
 
 1. Ejecuta el script de construcción y establece el directorio de instalación.
 

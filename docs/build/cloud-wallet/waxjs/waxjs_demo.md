@@ -13,11 +13,14 @@ Below is a basic example of WaxJS functionality. To use this demo, click WAX Log
 
 **WAX Login**
 <p>Use this if you're not automatically logged in. Note that if you are auto-logged in, clicking this does not open a popup and the userAccount is still returned.</p>
+
 ```html
 <button class="text-md mt-4 border-black border-solid border-2 rounded px-4 py-2 w-40" id="login" onclick=login() >WAX Login</button>
 ```
+
 <p style="color:#ef9d47" id="loginresponse"></p>
 <p>&nbsp;</p>
+
 **Sign Transaction**
 <p>Click once you're logged in.</p>
 

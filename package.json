@@ -1,7 +1,7 @@
 {
   "name": "wax-developer",
   "description": "WAX Developer Portal - Inside the WAX Developer Portal, you'll find a wealth of resources to guide you on your development journey.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -18,28 +18,21 @@
     "doc": "docs"
   },
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "engines": {
-    "node": ">=16.19.0"
+    "node": ">=20.10.0"
   },
   "bugs": {
     "url": "https://github.com/wax-office-of-inspector-general/wax-developer/issues"
   },
   "homepage": "https://github.com/wax-office-of-inspector-general/wax-developer#readme",
   "devDependencies": {
-    "@vuepress/client": "^2.0.0-beta.45",
-    "@vuepress/plugin-back-to-top": "^1.9.9",
-    "@vuepress/plugin-google-analytics": "^1.9.10",
-    "@vuepress/plugin-medium-zoom": "^1.9.9",
-    "@vuepress/plugin-search": "^1.9.9",
-    "@vuepress/utils": "^2.0.0-alpha.1",
-    "sass-loader": "^7.3.1",
-    "vuepress": "^1.9.10"
-  },
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.4.0",
-    "caniuse-lite": "^1.0.30001589"
+    "sass": "^1.71.1",
+    "vitepress": "^1.0.0-rc.44",
+    "vitepress-plugin-theme-override": "^0.0.2",
+    "vue": "^3.3.9"
   }
 }

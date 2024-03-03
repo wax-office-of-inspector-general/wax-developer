@@ -49,7 +49,7 @@ Cuando [Configures un Entorno dApp Local](/es/build/dapp-development/), puedes r
 Puedes escribir contratos inteligentes de WAX usando el lenguaje de programación C++. No se requiere un lenguaje personalizado, aunque necesitarás familiarizarte con la biblioteca de API de C/C++ de WAX. Esta biblioteca contiene los archivos principales necesarios para comunicarse con la Blockchain de WAX. Cuando estés listo para comenzar, consulta:
 
 - [Kit de Desarrollo de Contratos de WAX (WAX-CDT)](/es/build/dapp-development/wax-cdt/)
-- [API de WAX-CDT](/learn/api-reference/cdt_api/)
+- [API de WAX-CDT](/build/api-reference/cdt_api)
 - [Inicio Rápido de Contratos Inteligentes](/es/build/dapp-development/smart-contract-quickstart/)
 
 ## Herramientas de Desarrollo
@@ -58,6 +58,6 @@ Puedes usar cualquier editor o IDE de C++ de terceros para escribir tus contrato
 
 [EOS Studio](https://www.eosstudio.io/) es un IDE gráfico construido para el desarrollo de dApp de EOSIO, disponible en Linux, Mac OS y Windows. Esta herramienta cuenta con un editor de código, inspector de contratos y un gestor de redes. Para integrar WAX con EOS Studio, consulta [Cómo usar EOS Studio con WAX](https://github.com/worldwide-asset-exchange/wax-blockchain/tree/develop/samples/eos-studio). Nuestro script proporciona una integración mínima, desarrollada y probada con Ubuntu 18.04.
 
-[eosjs](https://github.com/EOSIO/eosjs) es un SDK de API javascript que puedes usar para comunicarte fácilmente con la API de la Blockchain de WAX. Consulta [API RPC de WAX](/es/learn/api-reference/rpc_api/) para más información.
+[eosjs](https://github.com/EOSIO/eosjs) es un SDK de API javascript que puedes usar para comunicarte fácilmente con la API de la Blockchain de WAX. Consulta [API RPC de WAX](/es/build/api-reference/rpc_api) para más información.
 
-[dfuse](https://www.dfuse.io) es un poderoso conjunto de APIs que te permiten consultar la Blockchain de WAX y transmitir datos en tiempo real. Consulta [dfuse para dApps de WAX](/es/learn/api-reference/dfuse/) para más información.
+[dfuse](https://www.dfuse.io) es un poderoso conjunto de APIs que te permiten consultar la Blockchain de WAX y transmitir datos en tiempo real. Consulta [dfuse para dApps de WAX](/es/build/api-reference/dfuse/) para más información.

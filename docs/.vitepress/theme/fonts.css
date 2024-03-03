@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;1,400&display=swap');
+
+html, body {
+  font-size: 16px;
+  line-height: 25px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.VPContent {
+  h1, h2, h3, h4, h5 {
+    font-family: 'Titillium Web', "Helvetica Neue", sans-serif;
+    border-bottom: none;
+    
+    &:after {
+      content: '';
+      display: block;
+      padding-top: 10px;
+      width: 80px;
+      border-bottom: 2px solid #8551b6;
+    }
+  }
+}
+
+.VPNavBarTitle > a {
+  font-family: 'Titillium Web', "Helvetica Neue", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold!important;
+  font-size: 13px!important;
+}
+
+.VPSidebarItem.level-0 > .item > .text {
+  font-family: 'Titillium Web', "Helvetica Neue", sans-serif;
+  font-size: 1.2em;
+}

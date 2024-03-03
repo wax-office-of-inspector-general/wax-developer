@@ -23,7 +23,7 @@ C++ header files contain global declarations. Because WAX uses a fork of EOS (An
   #include <eosio/eosio.hpp>
 ```
 
-This gives your smart contract access to WAX's C/C++ API, allowing you to define actions and structures that enable your smart contract to communicate with the WAX Blockchain. Refer to [WAX-CDT API](/learn/api-reference/cdt_api) for more information.
+This gives your smart contract access to WAX's C/C++ API, allowing you to define actions and structures that enable your smart contract to communicate with the WAX Blockchain. Refer to [WAX-CDT API](/build/api-reference/cdt_api) for more information.
 
 ### Actions
 
@@ -50,7 +50,7 @@ Transactions communicate using two models: inline and deferred.
 
 - **Deferred:** A deferred action is an action that's scheduled to run in the future, similar to an asynchronous call. These transactions are not guaranteed to run (there is a potential of it being dropped by the node). The original (calling) action is applied to the WAX Blockchain when the action runs, and can not be reverted if the deferred transaction fails.
 
-:::Warning
+:::warning
 As of Leap 3.1 deferred transactions are deprecated.
 :::
 
@@ -68,8 +68,7 @@ Every time you call one of your smart contract's actions from your app, a new in
 
 To persist data between the actions of one or more of your smart contracts, you'll need to use the **multi_index** table functionality.
 
-:::tip 
-Note: 
+:::tip 📝 Note	
 Persistent data is stored on the WAX node's RAM and impacts the amount of WAX that you'll need to stake for your smart contract.
 :::
 

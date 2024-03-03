@@ -26,7 +26,7 @@ Si deseas probar tus contratos inteligentes en WAX, puedes:
 * Completar nuestro [Inicio Rápido Docker](/es/build/dapp-development/docker-setup/) (recomendado) o usar la [Configuración de la Blockchain de WAX](/es/build/dapp-development/wax-blockchain-setup/) para construir desde el código fuente.
 * Construir tus contratos usando el [Kit de Herramientas de Desarrollo de Contratos de WAX (WAX-CDT)](/es/build/dapp-development/wax-cdt/).
 * [Configurar un Entorno dApp Local](/es/build/dapp-development/setup-local-dapp-environment/).
-* Desplegar en el [Testnet de WAX](/es/build/dapp-development/testnet-quickstart/).
+* Desplegar en el [Testnet de WAX](/es/build/dapp-development/testnet-quickstart).
 
 :::tip
 <strong>Advertencia:</strong> Configurar el código fuente de WAX en tu entorno de desarrollo local sobrescribirá una instalación actual de EOS. Si deseas mantener tu entorno de EOS, se recomienda que uses Docker, una máquina virtual o un entorno de desarrollo separado.

@@ -42,7 +42,7 @@ export const sessionKit = new SessionKit({
 
 // ... (resto del código)
 ```
-:::tip Nota
+:::tip 📝 Nota
 Para el ejemplo, se toman algunos datos de archivos de entorno y sus valores variarán dependiendo de la blockchain. Por ejemplo, para diferenciar entre mainnet y testnet:
 
 VITE_CHAIN=testnet  
@@ -222,7 +222,7 @@ export const InitTransaction = async (dataTrx: IBaseTransaction ) => {
 ```
 [Código de Ejemplo](https://github.com/3dkrender/WAX_CS_Template/blob/7b35853b5d7f44482b20a342fc27054989fff93d/Client/src/services/InitTransaction.ts#L15)
 
-:::tip Nota
+:::tip 📝 Nota
 El código mostrado tiene carácter educativo y trata de ser lo más sencillo y explicativo posible. Cada usuario debe adaptarlo a sus necesidades y optimizarlo según sus preferencias.
 :::
 

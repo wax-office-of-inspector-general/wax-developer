@@ -36,14 +36,15 @@ The most common use for a snapshot is recovering from an incorrectly stopped nod
 First of all you need to obtain a valid snapshot file from a trusted source. There are quite a few WAX snapshot services being provided by the WAX Guilds including [EOSphere](https://snapshots.eosphere.io/), however not all provide testnet snapshots.. so you may need to look around a bit.
 
 
+::: tip 📝 Note
 The [EOS Nation bp.json Validator](https://validate.eosnation.io/wax/reports/resources.html#chain) has a very handy snapshot service list collated from what the Guilds have advertised.
-{: .label .label-yellow }
+:::
 
 ![image](https://user-images.githubusercontent.com/12730423/187578145-07ba4f0d-8532-4a46-9e47-83347d5793a9.png)
 
 ### Usage
 
-Using the example ```nodeos``` build in the [previous](/en/wax-infrastructure/wax-testnet-node) WAX Technical How To, all relevant files are located in ```~/waxdata```.
+Using the example ```nodeos``` build in the [previous](/operate/wax-infrastructure/wax-testnet-node) WAX Technical How To, all relevant files are located in ```~/waxdata```.
 
 Download and unarchive the desired snapshot file:
 
@@ -79,8 +80,9 @@ The most security conscious way of using snapshots is to create and use your own
 plugin = eosio::producer_api_plugin
 ```
 
-Warning: Exposing the producer_api_plugin publicly is a security risk and can be exploited, the node used for creating a snapshot should not be publicly queriable.
-{: .label .label-yellow }
+:::warning
+Exposing the producer_api_plugin publicly is a security risk and can be exploited, the node used for creating a snapshot should not be publicly queriable.
+:::
 
 Generate a snapshot locally using the following syntax, the snapshot file will by default be saved to the snapshots folder:
 

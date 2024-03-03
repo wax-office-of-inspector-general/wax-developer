@@ -12,7 +12,7 @@ This tic-tac-toe contract provides an example of building a game on WAX, complet
 This will guide you how to make the Tictactoe game contract which run on Wax blockchain. Logic of the tictactoe game follow the eosio sample at Tic-tac-toe Game EOS tutorial, but we'll add more logic that support randomize the first turner and random game move if playing with bot.
 
 
-### How To Play
+## How To Play
 
 [Tic Tac Toe](https://tictactoe.wax.io/) is a classic game enjoyed by people of all ages. It's simple to learn but can be surprisingly strategic. Here's a step-by-step guide on how to play:
 
@@ -56,7 +56,7 @@ Ensure the following prerequisites are met before embarking on your journey:
 Node.js (Version: 16.16.0) or Yarn (Version: 1.22.17) & npm (Version: 9.6.7) installed on your machine.
 ```
 
-### 📋 Installation & Setup
+## 📋 Installation & Setup
 
 1. **Clone the Repository**:
 ```
@@ -96,11 +96,11 @@ yarn run dev
 Navigate to `http://localhost:5173` and immerse yourself in the blockchain-powered Tic Tac Toe experience.
 
 
-### 🐳 Docker Integration
+## 🐳 Docker Integration
 
 To quickly setup a development environment the tutorial is using Docker.
 
-#### 🛠️ Build & Launch Containers
+### 🛠️ Build & Launch Containers
 
 Execute the following command in your terminal within the project directory:
 ```
@@ -109,7 +109,7 @@ docker-compose up --build
 
 Access your application at `http://localhost:5173` (or the designated port as specified in your [docker-compose.yml](docker-compose.yml)).
 
-#### 🛑 Terminate Containers
+### 🛑 Terminate Containers
 
 To gracefully halt and remove containers, execute:
 ```
