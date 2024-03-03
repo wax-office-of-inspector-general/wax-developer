@@ -1,7 +1,10 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig } from 'vitepress';
 import sidebarEN from './sidebar/en.js';
+import footerEN from './footer/en.js';
 import esLocale from './locales/es/lang';
 import cnLocale from './locales/cn/lang';
+import { resolve } from 'path';
+import VitepressThemeOverride from 'vitepress-plugin-theme-override';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -23,6 +26,10 @@ export default defineConfig({
     ],
 
     sidebar: sidebarEN,
+
+    footer: {
+      navigation: footerEN
+    },
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/wax-office-of-inspector-general/wax-developer' },
@@ -46,4 +53,15 @@ export default defineConfig({
     es: esLocale,
     cn: cnLocale,
   },
+  vite: {
+    plugins: [
+      VitepressThemeOverride({
+        overridePath: resolve(__dirname, './theme/overrides'),
+        defaultThemeAlias: '~theme',
+      }),
+    ],
+    resolve: {
+      alias: []
+    }
+  }
 })
