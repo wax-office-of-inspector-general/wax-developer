@@ -73,11 +73,10 @@ const { frontmatter, theme } = useData()
 
 .footer-navigation {
   width: 100%;
-  line-height: 32px;
-  font-size: 14px;
+  line-height: 2em;
+  font-size: 13px;
   font-weight: 500;
   place-items: self-start;
-  border-bottom: 1px solid var(--vp-c-divider);
   gap: 0;
   overflow: hidden;
 
@@ -95,7 +94,7 @@ const { frontmatter, theme } = useData()
   ul > li > a {
     display: inline-block;
     transition: color 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
-    color: var(--vp-c-text-1);
+    color: var(--vp-c-text-2);
     padding: 6px 14px;
     width: 100%;
 
@@ -110,6 +109,7 @@ const { frontmatter, theme } = useData()
   width: 100%;
   user-select: all;
   font-weight: 700;
+  font-size: 1em;
   line-height: 1.33337;
   color: var(--vp-c-brand);
   text-transform: uppercase;

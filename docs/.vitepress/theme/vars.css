@@ -186,7 +186,7 @@
 :root {
   --vp-c-text-1: rgb(54, 52, 72);
   --vp-c-text-2: rgba(54, 52, 72, 0.78);
-  --vp-c-text-3: rgba(54, 52, 72, 0.56);
+  --vp-c-text-3: rgba(54, 52, 72, 0.55);
 }
 
 .dark {
