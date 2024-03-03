@@ -17,7 +17,10 @@ export default defineConfig({
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: '/assets/images/logo.png',
+    logo: {
+      light: '/assets/images/logo.png',
+      dark: '/assets/images/logo.svg',
+    },
     
     siteTitle: 'Developer',
     
@@ -105,7 +108,7 @@ export default defineConfig({
       'link',
       {
         rel: 'alternate',
-        href: `https://developer.wax.io/docs/public/favicon.ico`,
+        href: `https://developer.wax.io/docs/public/assets/images/favicon.ico`,
         type: 'image/x-icon',
       },
     ],
