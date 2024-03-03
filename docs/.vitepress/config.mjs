@@ -10,7 +10,6 @@ export default defineConfig({
   lang: 'en-US',
   
   title: "WAX Developer Portal",
-  
   description: "WAX Developer Portal - Inside the WAX Developer Portal, you'll find a wealth of resources to guide you on your development journey",
   
   lastUpdated: true,

@@ -3,16 +3,15 @@ layout: home
 title: Portal de Desarrolladores de WAX
 permalink: /es/
 hero:
-  name: "WAX Developer"
-  text: "Portal para Desarrolladores en WAX Blockchain"
-  tagline: Encuentra los recursos que necesitas para construir en WAX
+  name: "WAX Developer" 
+  tagline: Portal para Desarrolladores en WAX Blockchain
   image: {
     src: /assets/images/front-cube.png,
     alt: WAX Developer Portal
   }
   actions:
     - theme: brand
-      text: Aprender
+      text: Aprender →
       link: /es/learn/about-wax/
     - theme: alt
       text: Construir

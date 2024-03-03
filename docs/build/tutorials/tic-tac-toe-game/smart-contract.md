@@ -105,7 +105,7 @@ Game logic will follow below diagrams:
 ### 3. Tic-tac-toe Smart Contract
 Let dive into how can we implement these actions on tictactoe smartcontract.
 
-The smartcontract will have the [tictactoe.hpp header file](../include/tictactoe.hpp) and the [tictactoe.cpp implementation file](../src/tictactoe.cpp). 
+The smartcontract will have the [tictactoe.hpp header file](https://github.com/worldwide-asset-exchange/tic-tac-toe/tree/master/include/tictactoe.hpp) and the [tictactoe.cpp implementation file]https://github.com/worldwide-asset-exchange/tic-tac-toe/tree/master/include/tictactoe.cpp). 
 
 Let's put these declarations in header file, this is the main action of our smartcontract:
 

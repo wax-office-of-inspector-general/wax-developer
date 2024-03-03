@@ -7,7 +7,7 @@ export default [
             {
                 text: 'About WAX',
                 link: '/learn/about-wax/',
-                collapsed: true,
+                collapsed: false,
                 sidebarDepth: 2,
                 items: [
                     {
@@ -250,7 +250,7 @@ export default [
             {
                 text: 'Basics',
                 link: '/operate/wax-bp/',
-                collapsed: false,
+                collapsed: true,
                 items: [
                     {text: 'chains.json', link: '/operate/wax-bp/chains-json'},
                     {text: 'bp.json', link: '/operate/wax-bp/bp-json'}

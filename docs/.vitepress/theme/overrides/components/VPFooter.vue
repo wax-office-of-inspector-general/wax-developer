@@ -28,8 +28,6 @@ import VPLink from '~theme/components/VPLink.vue';
 import VPImage from '~theme/components/VPImage.vue';
 
 const { frontmatter, theme } = useData()
-
-console.log(useData());
 </script>
 
 <style lang="scss">

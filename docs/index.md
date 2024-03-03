@@ -1,6 +1,6 @@
 ---
 layout: home
-title: WAX Developers Portal
+title: Home
 permalink: /
 hero:
   name: "WAX Developer Portal"
@@ -11,17 +11,17 @@ hero:
   }
   actions:
   - theme: brand
-    text: Learn
+    text: Learn →
     link: /learn/about-wax/
   - theme: alt
     text: Build
     link: /build/dapp-development/
   - theme: alt
     text: Operate
-    link: /operate/
+    link: /operate/wax-infrastructure/
   - theme: alt
     text: Create
-    link: /create/
+    link: /create/awesome-wax/
 
 features:
 - title: Our Mission
