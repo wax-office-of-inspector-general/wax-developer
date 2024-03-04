@@ -261,8 +261,8 @@ export default [
                 link: '/operate/atomic-assets/',
                 collapsed: true,
                 items: [
-                    {text: '', link: '/operate/atomic-assets/setup-wax-atomic-api-node'},
-                    {text: '', link: '/operate/atomic-assets/optimise-restore-wax-atomic-api-node'}
+                    {text: 'Setup', link: '/operate/atomic-assets/setup-wax-atomic-api-node'},
+                    {text: 'Optimize', link: '/operate/atomic-assets/optimise-restore-wax-atomic-api-node'}
                 ],
             },
             {
