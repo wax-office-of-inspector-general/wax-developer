@@ -41,7 +41,7 @@ export default [
     {
         text: 'Build',
         // link: '/build/',
-        collapsed: true,
+        collapsed: false,
         items: [
             {
                 text: 'dApp Development',
@@ -245,7 +245,7 @@ export default [
     {
         text: 'Operate',
         // link: '/operate/',
-        collapsed: true,
+        collapsed: false,
         items: [
             {
                 text: 'Basics',
@@ -308,7 +308,7 @@ export default [
     {
         text: 'Create',
         // link: '/create/',
-        collapsed: true,
+        collapsed: false,
         items: [
           {
             text: 'Awesome WAX',
