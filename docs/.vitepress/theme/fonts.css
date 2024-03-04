@@ -33,3 +33,7 @@ html, body {
   font-family: 'Titillium Web', "Helvetica Neue", sans-serif;
   font-size: 1.2em;
 }
+
+.VPSidebarItem.level-0 > .items {
+  margin-top: 0.7em;
+}
