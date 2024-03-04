@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to WAX Developer Portal</h1>
+<h1 align="center">WAX Developer Portal</h1>
 <p>
   <img src="https://img.shields.io/badge/node-%3E%3D16.19.0-blue.svg" />
   <a href="https://github.com/wax-office-of-inspector-general/wax-developer/wiki" target="_blank">
@@ -16,21 +16,43 @@
 
 ### [Visit Documentation](https://developer.wax.io/)
 
-## Prerequisites
+## Installation
 
-- node >=16.19.0
+### Prerequisites
+- Node.js version 18 or higher.
+- Terminal for accessing VitePress via its command line interface (CLI).
+- Text Editor with Markdown syntax support.
+- VSCode is recommended, along with the official Vue extension.
 
-## Install
+VitePress can be used on its own, or be installed into an existing project. In both cases, you can install it with:
 
 ```sh
 npm install
 ```
 
-## Usage
+## Up and Running
+
+The tool should have also injected the following npm scripts to your package.json if you allowed it to do so during the setup process:
+
+```json
+{
+  ...
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  ...
+}
+````
 
 ```sh
 npm run docs:dev
 ```
+
+## What's Next?
+
+Read the [vitepress docs](https://vitepress.dev/guide/getting-started#what-s-next)
 
 ## Contributing
 
