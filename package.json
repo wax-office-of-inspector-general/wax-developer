@@ -25,6 +25,11 @@
   "engines": {
     "node": ">=20.10.0"
   },
+  "overrides": {
+    "vite": {
+      "rollup": "npm:@rollup/wasm-node"
+    }
+  },
   "bugs": {
     "url": "https://github.com/wax-office-of-inspector-general/wax-developer/issues"
   },
