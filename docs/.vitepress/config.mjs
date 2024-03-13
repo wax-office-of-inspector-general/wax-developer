@@ -2,16 +2,18 @@ import { defineConfig } from 'vitepress';
 import enLocale from './locales/en/lang';
 import esLocale from './locales/es/lang';
 import cnLocale from './locales/cn/lang';
+import ptLocale from './locales/pt/lang';
+
 import { resolve } from 'path';
 import VitepressThemeOverride from 'vitepress-plugin-theme-override';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   lang: 'en-US',
-  
+
   title: "WAX Developer Portal",
   description: "WAX Developer Portal - Inside the WAX Developer Portal, you'll find a wealth of resources to guide you on your development journey",
-  
+
   lastUpdated: true,
 
   sitemap: {
@@ -24,7 +26,7 @@ export default defineConfig({
       light: '/assets/images/logo.png',
       dark: '/assets/images/logo.svg',
     },
-    
+
     siteTitle: 'Developer',
 
     socialLinks: [
@@ -45,6 +47,7 @@ export default defineConfig({
     root: enLocale,
     es: esLocale,
     cn: cnLocale,
+    pt: ptLocale,
   },
   head: [
     [
