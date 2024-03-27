@@ -7,7 +7,7 @@ Running Antelope infrastructure to support the WAX Protocol Network can be quite
 
 This guide will show you how to get started with building a WAX node on the Public WAX Testnet.
 
-_This guide has been updated to incorporate the_ [_Antelope_](https://antelope.io/) _Leap software build process._
+_This guide has been updated to incorporate the_ [_Antelope_](https://antelope.io/) _Leap 5.0 software build process._
 
 # How to Set Up a WAX Testnet Node
 
@@ -23,9 +23,8 @@ The WAX Testnet has relatively low system requirements compared to the Mainnet, 
 
 **Operating System**
 
--   Ubuntu 18.04
--   Ubuntu 20.04  **_(Recommended)_**
--   Ubuntu 22.04
+-   Ubuntu 20.04
+-   Ubuntu 22.04 **_(Recommended)_**
 
 **Internet**
 
@@ -36,36 +35,42 @@ The WAX Testnet has relatively low system requirements compared to the Mainnet, 
 
 The WAX software is derived from opensource Antelope software, however it has been modified to suit the needs of the WAX Protocol Network.
 
-Currently the WAX Block Producer accepted software build and version is  `v3.1.0wax01`  created by  [cc32d9](https://cc32d9.medium.com/)  who is member of the  [EOS Amsterdam Guild](https://eosamsterdam.net/)
+Currently the WAX Block Producer accepted software build and version is ```v5.0.1wax01```
 
-The latest  `wax`build tag is currently available on the  [cc32d9 Github](https://github.com/cc32d9/wax-leap/tags)
+The latest ```wax``` build tag is always available on the [worldwide-asset-exchange Github](https://github.com/worldwide-asset-exchange/wax-blockchain/tags)
+
 
 **Building Process**
 
 This example uses  [Ubuntu Linux](https://ubuntu.com/)  to build the WAX software from source following the process below:
 
 ```
-> cd ~
-
-> sudo apt install -y file
-
-> git clone [https://github.com/cc32d9/wax-leap.git](https://github.com/cc32d9/wax-leap.git)
-
-> cd wax-leap
-
-> git checkout v3.1.0.wax01
-
 > git submodule update --init --recursive
 
-> sudo bash scripts/install_deps.sh
+> sudo apt update
 
-> mkdir build
+> sudo apt-get install -y \
+        build-essential \
+        cmake \
+        curl \
+        git \
+        libboost-all-dev \
+        libcurl4-openssl-dev \
+        libgmp-dev \
+        libssl-dev \
+        llvm-11-dev \
+        python3-numpy
+
+> mkdir -p build
+
+> cd build
+
+> cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=/usr/lib/llvm-11 ..
 
 # If necessary supplement $(nproc) below with the number of jobs your server can sustain, I suggest 4GB RAM required / job
+> make -j "$(nproc)" package
 
-> nice bash scripts/pinned_build.sh ~/wax-leap/build/leap-deps ~/wax-leap/build $(nproc)
-
-# Binaries are located in ~/wax-leap/build/programs
+#Binaries are located in ~/wax-blockchain/build/programs
 ```
 
 ## Configuration
@@ -89,7 +94,7 @@ Create a default  `config.ini`  by running  `nodeos`  without config as per the 
 ```
 > mkdir ~/waxdata
 
-> cd ~/wax-leap/build/programs/nodeos
+> cd ~/wax-blockchain/build/programs/nodeos
 
 > ./nodeos --data-dir ~/waxdata --config-dir ~/waxdata
 ```
@@ -115,76 +120,97 @@ enable-account-queries = true
 http-server-address = 0.0.0.0:8888  
 access-control-allow-origin = *  
 access-control-allow-headers = Origin, X-Requested-With, Content-Type, Accept  
-http-max-response-time-ms = 100  
+http-max-response-time-ms = 1000
 verbose-http-errors = true  
 http-validate-host = false
 
 p2p-listen-endpoint = 0.0.0.0:9876  
   
-# 3dkrenderwax: FI, Finland  
-p2p-peer-address = testnet-p2p.3dkrender.com:9876  
-  
-# amsterdamwax: DE, Falkenstein  
-p2p-peer-address = waxtest.eu.eosamsterdam.net:9912  
-  
-# blokcrafters: US, Portland, Oregon  
-p2p-peer-address = waxtest-peer-us.blokcrafters.io:19876  
-  
-# blokcrafters: FI, Helsinki, Uusimaa  
-p2p-peer-address = waxtest-peer-eu.blokcrafters.io:19876  
-  
-# bountyblokbp: FR, France  
-p2p-peer-address = p2p.wax-test.bountyblok.io:9874  
-  
-# bp.box: KY, Cayman Islands  
-p2p-peer-address = waxtest.defibox.xyz:19876  
-  
-# eosdacserver: DE, Germany  
-p2p-peer-address = waxtest-p2p.eosdac.io:49876  
-  
-# eosiodetroit: US, wax-testnet-bp  
-p2p-peer-address = p2p.testnet.wax.detroitledger.tech:1337  
-  
-# eosphereiobp: AU, Sydney  
-p2p-peer-address = peer1-wax-testnet.eosphere.io:9876  
-  
-# greeneosiobp: DE, Germany  
-p2p-peer-address = p2p.waxtest.waxgalaxy.io:9878  
-  
-# guild.nefty: DE, Germany  
-p2p-peer-address = p2p-testnet.neftyblocks.com:19876  
-  
-# ivote4waxusa: US, Greenville,SC,USA  
-p2p-peer-address = test.wax.p2p.eosusa.io:19875  
-  
-# liquidgaming: DE, Germany  
-p2p-peer-address = 138.201.23.118:9877  
-  
-# nation.wax: CA, Canada  
-p2p-peer-address = waxtest.seed.eosnation.io:9876  
-  
-# oneinacilian: GB, United Kingdom  
-p2p-peer-address = p2ptest.oiac.io:10877  
-  
-# pink.gg: DE, Germany  
-p2p-peer-address = peer1.testnet.wax.pink.gg:16714  
-  
-# waxhiveguild: DE, Germany  
-p2p-peer-address = peer-test.hivebp.io:9876  
-  
-# waxmadrid111: DE, SEED  
-p2p-peer-address = wax-seed-testnet.eosiomadrid.io:9876  
-  
-# waxswedenorg: SE, Sweden  
-p2p-peer-address = p2p.testnet.waxsweden.org:59676  
-  
-# wecan: DE, Berlin  
-p2p-peer-address = seed1-wax-testnet.wecan.dev:9876  
-  
-# wecan: GB, London  
+# alohaeosprod: US, Oregon
+p2p-peer-address = peer.waxtest.alohaeos.com:9876
+
+# amsterdamwax: DE, Falkenstein
+p2p-peer-address = waxtest.eu.eosamsterdam.net:9912
+
+# blacklusionx: DE, Germany
+p2p-peer-address = peer1.testnet.wax.blacklusion.io:5757
+
+# bountyblokbp: FR, France
+p2p-peer-address = p2p.wax-test.bountyblok.io:9874
+
+# bp.alcor: FI, Finland
+p2p-peer-address = waxtest-p2p.alcor.exchange:9876
+
+# bp.box: KY, Cayman Islands
+p2p-peer-address = waxtest.defibox.xyz:19876
+
+# cryptolions1: DE, Germany-Finland
+p2p-peer-address = wax-testnet.cryptolions.io:7987
+
+# dapplicawaxt: DE, Germany-Finland
+p2p-peer-address = wax-testnet.dapplica.io:9877
+
+# edeniaedenia: CR, San Jose
+p2p-peer-address = wax-testnet.edenia.cloud:9880
+
+# eosarabianet: FI, Helsinki
+p2p-peer-address = p2p-testnet-wax.eosarabia.net:9876
+
+# eosdacserver: DE, Germany
+p2p-peer-address = waxtest-p2p.eosdac.io:49876
+
+# eosdublinwow: FI, Finland
+p2p-peer-address = wax.p2p.eosdublin.io:9877
+
+# eosiodetroit: US, wax-testnet-bp
+p2p-peer-address = p2p.testnet.wax.detroitledger.tech:1337
+
+# eosphereiobp: AU, Sydney
+p2p-peer-address = peer1-wax-testnet.eosphere.io:9876
+
+# greeneosiobp: DE, Germany
+p2p-peer-address = p2p.waxtest.waxgalaxy.io:9878
+
+# guild.nefty: DE, Germany
+p2p-peer-address = p2p-testnet.neftyblocks.com:19876
+
+# guild.taco: DE, Germany
+p2p-peer-address = peer.wax-test.tacocrypto.io:9999
+
+# ivote4waxusa: US, Greenville,SC,USA
+p2p-peer-address = test.wax.p2p.eosusa.io:19875
+
+# nation.wax: CA, Canada
+p2p-peer-address = waxtest.seed.eosnation.io:9876
+
+# qaraqolblock: FI, Finland
+p2p-peer-address = p2p-waxtest.qaraqol.com:9004
+
+# waxauthority: GB, London
+p2p-peer-address = node-waxtest.eosauthority.com:9302
+
+# waxdaoguild1: US, United States
+p2p-peer-address = p2p-test.waxdaobp.io:9876
+
+# waxhiveguild: DE, Germany
+p2p-peer-address = peer-test.hivebp.io:9876
+
+# waxmadrid111: DE, SEED
+p2p-peer-address = wax-seed-testnet.eosiomadrid.io:9876
+
+# waxswedenorg: SE, Sweden
+p2p-peer-address = p2p.testnet.waxsweden.org:59676
+
+# wecan: DE, Berlin
+p2p-peer-address = seed1-wax-testnet.wecan.dev:9876
+
+# wecan: GB, London
 p2p-peer-address = seed2-wax-testnet.wecan.dev:9876
 
-# EOSNation Provided PeerList - https://validate.eosnation.io/waxtest/reports/config.html
+# wombatblockx: FI, Finland
+p2p-peer-address = wax-p2p-testnet.wombat.app:9876
+
+#EOSNation Provided PeerList - https://validate.eosnation.io/waxtest/reports/config.html#
 
 agent-name = "<yourname> WAX Testnet"
 
@@ -256,7 +282,7 @@ Reconnect screen session
 Run  `nodeos`  with pointers to the config, data directory and genesis file:
 
 ```
-> cd ~/wax-leap/build/programs/nodeos
+> cd ~/wax-blockchain/build/programs/nodeos
 
 > ./nodeos --data-dir ~/waxdata --config-dir ~/waxdata --genesis-json ~/waxdata/genesis.json
 ```
