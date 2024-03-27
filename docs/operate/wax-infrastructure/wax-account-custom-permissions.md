@@ -12,7 +12,7 @@ _This article has been updated to incorporate the_ [_Antelope_](https://antelope
 
 ## WAX Account Custom Permissions
 
-If you are after more detail Antelope accounts and permissions are covered extensively in the legacy but still valid  [EOSIO Developers Documentation](https://developers.eos.io/welcome/v2.0/protocol-guides/accounts_and_permissions)  , as well as the new [Antelope Documentation Site](https://docs.eosnetwork.com/docs/latest/protocol/accounts_and_permissions).
+If you are after more detail Antelope accounts and permissions are covered extensively in the legacy but still valid  [EOS Developers Documentation](https://docs.eosnetwork.com/docs/latest/core-concepts/accounts).
 
 By default a WAX account has two permissions  **owner**  and  **active**
 
