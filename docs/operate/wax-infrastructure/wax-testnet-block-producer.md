@@ -7,7 +7,7 @@ Providing API and Seed services are key to being part of the WAX service provide
 
 This guide will show you how to configure a WAX Testnet Block Production Node and register your account as a WAX Testnet Block Producer.
 
-_This article has been updated to incorporate the_ [_Antelope_](https://antelope.io/) _Leap software build process._
+_This article has been updated to incorporate the_ [_Antelope_](https://antelope.io/) _Leap 5.0 software build process._
 
 # How to Set Up a WAX Testnet Block Producer Node
 
@@ -34,7 +34,7 @@ In addition to configuring the latest available [peer list](https://validate.eos
 **Cleos Interface Node**  
 This Node is completely private and used to interact with the Public Testnet Network via command line. Ubuntu Terminal / MacOS Terminal / Windows Ubuntu Shell are great lightweight OS’s for running this private interface.
 
-Two WAX software included applications are used:  `cleos`  which is the command line interface for the WAX software and  `keosd`  which is essentially a wallet / key manager service daemon for storing private keys and signing digital messages. You can find the WAX Software binary’s here:  `~/wax-leap/build/programs/`
+Two WAX software included applications are used:  `cleos`  which is the command line interface for the WAX software and  `keosd`  which is essentially a wallet / key manager service daemon for storing private keys and signing digital messages. You can find the WAX Software binary’s here:  `~/wax-blockchain/build/programs/`
 
 As you will be importing your private keys into  `keosd`  it is important that this Node is secured and treated as private.
 
@@ -44,7 +44,7 @@ As you will be importing your private keys into  `keosd`  it is important that t
 
 The above diagram shows the relationship between WAX Software applications.
 
-_It must be noted that there have been a few reported instances of API queries/actions not working as intended when trying to use older version_ `_cleos_` _and_ `_keosd_` _with an updated Leap 3.x node. Advice is to ensure you use the 3.x version of_ `_cleos_` _and_ `_keosd_` _with Leap 3.x nodes._
+_It must be noted that there are instances when API queries/actions don't work as intended when trying to use older version cleos and keosd with an updated Leap 5.x node. Advice is to ensure you use the 5.x version of cleos and keosd with Leap 5.x nodes.._
 
 ## Getting a Testnet Account
 

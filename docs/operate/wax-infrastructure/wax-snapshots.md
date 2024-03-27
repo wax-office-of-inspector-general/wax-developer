@@ -7,6 +7,8 @@ You will have noticed that syncing up to a blockchain that has been running for 
 
 In this Article you will learn how to make use of snapshots as well as how to create them yourself.
 
+_This article has been updated to incorporate the Antelope Leap 5.0 software build process._
+
 ## How to use WAX Snapshots
 A valid snapshot can be used to sync a WAX ```nodeos``` process up to a desired block on launch by using a snapshot file to recreate a valid chain state database.
 
@@ -40,7 +42,7 @@ First of all you need to obtain a valid snapshot file from a trusted source. The
 The [EOS Nation bp.json Validator](https://validate.eosnation.io/wax/reports/resources.html#chain) has a very handy snapshot service list collated from what the Guilds have advertised.
 :::
 
-![image](https://user-images.githubusercontent.com/12730423/187578145-07ba4f0d-8532-4a46-9e47-83347d5793a9.png)
+![snapshotservice_v2](https://github.com/Rossco99/wax-developer/assets/12730423/60f41ad4-f85c-483d-8ed6-bc913c943369)
 
 ### Usage
 
@@ -74,7 +76,7 @@ nodeos --data-dir ~/waxdata --config-dir ~/waxdata --snapshot ~/waxdata/snapshot
 
 The most security conscious way of using snapshots is to create and use your own. Perhaps even provide a snapshot file hosting service for the rest of the WAX ecosystem to make use of.
 
-```nodoes``` requires a producer api plugin configured to enable snapshot generation. Add the following to the end of your ```config.ini```:
+```nodeos``` requires a producer api plugin configured to enable snapshot generation. Add the following to the end of your ```config.ini```:
 
 ```ini
 plugin = eosio::producer_api_plugin
