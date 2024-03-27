@@ -7,7 +7,7 @@ Many of our guides have worked with configuring and deploying WAX software, howe
 
 This guide will go over the functions of the WAX Software files and folders, the types of nodes determined by the data they contain and the nuances of successfully starting or recovering a node type.
 
-_This article has been updated to incorporate the_ [_Antelope_](https://antelope.io/) _Leap software build process._
+_This article has been updated to incorporate the_ [_Antelope_](https://antelope.io/) _Leap 5.0 software build process._
 
 # Working with WAX Software Files and Folders
 
@@ -73,26 +73,27 @@ The construct of a Full Node and Full State-History node are explained below:
 
 **Checking Tools**
 
-WAX software has a great tool for managing the  `blocks.log`  called  `eosio-blocklog`  this binary is created when building.
+WAX software has a great tool for managing the ```blocks.log``` called ```leap-util``` (previously known as ```eosio-blocklog```) this binary is created when building and located here ```~/wax-blockchain/build/programs/leap-util```
 
 Do the following to query current  `blocks.log`  blocks and  `blocks.index`  for currency and any issues:
 
 ```
-> ./eosio-blocklog --blocks-dir /home/eosphere/datavolume/blocks --smoke-test
+> ./leap-util block-log smoke-test --blocks-dir /home/eosphere/datavolume/blocks
 
-Smoke test of blocks.log and blocks.index in directory "/home/eosphere/datavolume/blocks"
-info  2022-01-10T04:59:07.720 eosio-blo block_log.cpp:1081            trim_data            ] block log version= 3
-info  2022-01-10T04:59:07.724 eosio-blo block_log.cpp:1133            trim_data            ] first block= 1
-info  2022-01-10T04:59:07.724 eosio-blo block_log.cpp:1134            trim_data            ] last block= 160670840
-blocks.log and blocks.index agree on number of blocks
+Smoke test of blocks.log and blocks.index in directory "/home/eosphere/datavolume/blocks/"
+info  2024-03-27T04:25:18.919 leap-util block_log.cpp:1583            smoke_test           ] block log version= 3
+info  2024-03-27T04:25:18.920 leap-util block_log.cpp:1584            smoke_test           ] first block= 1
+info  2024-03-27T04:25:18.920 leap-util block_log.cpp:1585            smoke_test           ] last block= 300080302
+info  2024-03-27T04:25:18.920 leap-util block_log.cpp:1589            smoke_test           ] blocks.log and blocks.index agree on number of blocks
+no problems found
 ```
 
 Also if you have any corruption due to an unclean shutdown of the node, it is possible to cleanly trim the end of the current  `blocks.log`  .
 
-For example you can trim to block 160670000 like below:
+For example you can trim to block 300080000 like below:
 
 ```
-./eosio-blocklog --blocks-dir /home/eosphere/datavolume/blocks --trim-blocklog --last 160670000
+> ./leap-util block-log trim-blocklog -l 300080000 --blocks-dir /home/eosphere/datavolume/blocks
 ```
 
 ---
