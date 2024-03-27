@@ -7,7 +7,7 @@ There is a nodeos implementation type that is crucial for the operation of numer
 
 This guide will show you how to build, configure and deploy nodeos to provide State-History functionality also known as a State History Protocol (SHIP) node.
 
-_This article has been updated to incorporate the_ [_Antelope_](https://antelope.io/) _Leap software build process._
+_This article has been updated to incorporate the_ [_Antelope_](https://antelope.io/) _Leap 5.0 software build process._
 
 # How to Set Up a WAX State-History Node
 
@@ -17,31 +17,30 @@ This plugin opens a websocket interface that can be utilised by multiple simulta
 
 Considering how reliant external services are on SHIP nodes, it is crucial that a Guild provide a solid reliable service that can scale to meet the demands of the expanding requirements of the WAX Mainnet.
 
-This article will walk through an example that is currently valid (September 2022) and in use by the EOSphere Guild who are serving multiple websocket connections for both our own services and services for other Guilds.
+This article will walk through an example that is currently valid (March 2024) and in use by the EOSphere Guild who are serving multiple websocket connections for both our own services and services for other Guilds.
 
 # Mainnet Requirements
 
 **Hardware**
 
 -   4 Core CPU /  _4Ghz+_
--   (1) 256GB+ Disk /  _Enterprise Grade SSD or NVMe (_**_High Endurance Req._**_)_
--   (2) 10TB+ Disk /  _SAS or SATA are OK however SSD or NVMe preferred_
+-   (1) 384GB+ Disk /  _Enterprise Grade SSD or NVMe (_**_High Endurance Req._**_)_
+-   (2) 20TB+ Disk /  _SAS or SATA are OK however SSD or NVMe preferred_
 
-Currently (September 2022) the  `blocks`and  `state-history`  directories take up just short of  **8TB**  of disk space.
+Currently (March 2024) the  `blocks`and  `state-history`  directories take up **14TB**  of disk space.
 
 ```
-2.1T    ./blocks  
-5.7T    ./state-history  
-7.8T    .
+3.8T    ./blocks  
+9.5T    ./state-history  
+14T    .
 ```
 
 -   128GB+ RAM
 
 **Operating System**
 
--   Ubuntu 18.04
--   Ubuntu 20.04  **_(Recommended)_**
--   Ubuntu 22.04
+-   Ubuntu 20.04
+-   Ubuntu 22.04 **_(Recommended)_**
 
 **Internet**
 
@@ -49,17 +48,17 @@ Currently (September 2022) the  `blocks`and  `state-history`  directories take u
 
 # Prepare the Operating System Environment
 
-Before the WAX software is built and configured, the operating system environment Ubuntu 20.04 in this case needs to be configured for performance and the load that is will take on.
+Before the WAX software is built and configured, the operating system environment Ubuntu 22.04 in this case needs to be configured for performance and the load that is will take on.
 
 # Zettabyte File System (ZFS)
 
-This node build uses  **2 Discrete SAS Disks**  in order to balance disk IO and provide a more affordable storage option for the  `/blocks`  and  `/state-history`  directories which together are currently 8TB and growing.
+This node build uses  **2 Discrete SAS Disks**  in order to balance disk IO and provide a more affordable storage option for the  `/blocks`  and  `/state-history`  directories which together are currently 14TB and growing.
 
 **Disk 1** is the high speed enterprise grade SSD or NVMe will be the OS disk used for the WAX software, all config and the state files. The state files are extremely IO intensive, a consumer based SSD’s life span will be short lived due to the high number of writes hence the need to use a high endurance enterprise SSD or NVMe.
 
 _Note:_  _It needs to be mentioned that there are mechanisms to run these state files in memory if you have enough available, this topic will be covered in a future article._
 
-In this example Disk 1 will run the default OS  **Ext4 File System** that will already be implemented during the Ubuntu 20.04 installation.
+In this example Disk 1 will run the default OS  **Ext4 File System** that will already be implemented during the Ubuntu 22.04 installation.
 
 **Disk 2**  is the large capacity SATA or SAS disk that will host the  `/blocks`  and  `/state-history`  directories. The IO demands on these directories are far lower than the state files and slower larger capacity spindle based disks are still suitable.
 
@@ -139,7 +138,7 @@ server 3.pool.ntp.org
 
 # Stack Limits and Openfiles
 
-WAX software memory addressing and the number of API requests a Production Mainnet Node will receive require that the Ubuntu 20.04 default Stack Limit and Number of Open Files be increased.
+WAX software memory addressing and the number of API requests a Production Mainnet Node will receive require that the Ubuntu 22.04 default Stack Limit and Number of Open Files be increased.
 
 Configure and verify the raised limits as below:
 
@@ -158,35 +157,41 @@ DefaultLimitSTACK=65536000
 
 The WAX software is derived from opensource Antelope software, however it has been modified to suit the needs of the WAX Protocol Network.
 
-Currently the WAX Block Producer accepted software build and version is  `v3.1.0wax01`  created by  [cc32d9](https://cc32d9.medium.com/)  who is member of the  [EOS Amsterdam Guild](https://eosamsterdam.net/)
+Currently the WAX Block Producer accepted software build and version is ```v5.0.1wax01``` (March 2024)
 
-The latest  `wax`build tag is currently available on the  [cc32d9 Github](https://github.com/cc32d9/wax-leap/tags)
+The latest ```wax``` build tag is always available on the [worldwide-asset-exchange Github](https://github.com/worldwide-asset-exchange/wax-blockchain/tags)
 
 **Building Process**
 
 This example uses  [Ubuntu Linux](https://ubuntu.com/)  to build the WAX software from source following the process below:
 
 ```
-> cd ~
-
-> sudo apt install -y file
-
-> git clone https://github.com/cc32d9/wax-leap.git
-
-> cd wax-leap
-
-> git checkout v3.1.0.wax01
-
 > git submodule update --init --recursive
 
-> sudo bash scripts/install_deps.sh
+> sudo apt update
 
-> mkdir build
+> sudo apt-get install -y \
+        build-essential \
+        cmake \
+        curl \
+        git \
+        libboost-all-dev \
+        libcurl4-openssl-dev \
+        libgmp-dev \
+        libssl-dev \
+        llvm-11-dev \
+        python3-numpy
+
+> mkdir -p build
+
+> cd build
+
+> cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=/usr/lib/llvm-11 ..
 
 # If necessary supplement $(nproc) below with the number of jobs your server can sustain, I suggest 4GB RAM required / job
-> nice bash scripts/pinned_build.sh ~/wax-leap/build/leap-deps ~/wax-leap/build $(nproc)
+> make -j "$(nproc)" package
 
-# Binaries are located in ~/wax-leap/build/programs
+#Binaries are located in ~/wax-blockchain/build/programs
 ```
 
 # Configuration
@@ -210,7 +215,7 @@ Create a default  `config.ini`  by running  `nodeos`  without config as per the 
 ```
 > mkdir ~/waxdata
 
-> cd ~/wax-leap/build/programs/nodeos
+> cd ~/wax-blockchain/build/programs/nodeos
 
 > ./nodeos --data-dir ~/waxdata --config-dir ~/waxdata
 ```
@@ -242,96 +247,116 @@ http-validate-host = false
 
 p2p-listen-endpoint = 0.0.0.0:9876
 
-# 3dkrenderwax: FI, wax-peer  
-p2p-peer-address = peer.3dkrender.com:9880  
-  
-# 3dkrenderwax: FI, query  
-p2p-peer-address = query.3dkrender.com:9880  
-  
-# amsterdamwax: NL, Amsterdam  
-p2p-peer-address = wax.eu.eosamsterdam.net:9101  
-  
-# amsterdamwax: US, Washington, D.C.  
-p2p-peer-address = waxp2p.us.eosamsterdam.net:9101  
-  
-# blokcrafters: CA, Montreal, Quebec  
-p2p-peer-address = wax-peer-ca.blokcrafters.io:9876  
-  
-# blokcrafters: FI, Helsinki, Uusimaa  
-p2p-peer-address = wax-peer-eu.blokcrafters.io:9876  
-  
-# bp.box: KY, Cayman Islands  
-p2p-peer-address = wax.defibox.xyz:9966  
-  
-# bp.wecan: GB, London  
-p2p-peer-address = seed2-wax-mainnet.wecan.dev:14998  
-  
-# bp.wecan: US, NewYork  
-p2p-peer-address = seed3-wax-mainnet.wecan.dev:14998  
-  
-# cryptolions1: DE, Germany-Finland  
-p2p-peer-address = wax.cryptolions.io:9876  
-  
-# dapplica: DE, Germany-Finland  
-p2p-peer-address = wax.dapplica.io:9876  
-  
-# eosauthority: DE, Falkenstein  
-p2p-peer-address = node-wax.eosauthority.com:10301  
-  
-# eosauthority: FI, Helsinki  
-p2p-peer-address = node-wax-p2p.eosauthority.com:10301  
-  
-# eosdacserver: GB, United Kingdom  
-p2p-peer-address = wax-p2p.eosdac.io:29876  
-  
-# eosdublinwow: FI, Finland  
-p2p-peer-address = wax.p2p.eosdublin.io:9876  
-  
-# eoseouldotio: JP, Seoul  
-p2p-peer-address = p2p.wax.eoseoul.io:29876  
-  
-# eosphereiobp: CA, Beauharnois  
-p2p-peer-address = peer1-wax.eosphere.io:9876  
-  
-# eosphereiobp: CA, Beauharnois  
-p2p-peer-address = peer2-wax.eosphere.io:9876  
-  
-# greeneosiobp: DE, Germany  
-p2p-peer-address = p2p1.wax.greeneosio.com:9876  
-  
-# guild.nefty: DE, Germany  
-p2p-peer-address = p2p-node1.neftyblocks.com:9876  
-  
-# guild.nefty: FI, Finland  
-p2p-peer-address = p2p-node2.neftyblocks.com:9876  
-  
-# ledgerwiseio: FI, LB  
-p2p-peer-address = waxp2p.ledgerwise.io:21877  
-  
-# nation.wax: CA, Canada  
-p2p-peer-address = wax.seed.eosnation.io:9876  
-  
-# oneinacilian: GB, United Kingdom  
-p2p-peer-address = p2p.oiac.io:9876  
-  
-# sentnlagents: GB, United Kingdom  
-p2p-peer-address = waxp2p.sentnl.io:9876  
-  
-# tokengamerio: DE, Germany  
-p2p-peer-address = peer2.wax.tgg.gg:9876  
-  
-# waxhiveguild: FI, Finnland  
-p2p-peer-address = peer1.hivebp.io:9876  
-  
-# waxhiveguild: DE, Germany  
-p2p-peer-address = peer2.hivebp.io:9876  
-  
-# waxmadrid111: DE, SEED  
-p2p-peer-address = wax-seed.eosiomadrid.io:9876  
-  
-# waxswedenorg: SE, Sweden  
-p2p-peer-address = p2p.waxsweden.org:35777
+# 3dkrenderwax: FI, Finland
+p2p-peer-address = peer.3dkrender.com:9880
 
+# alohaeosprod: US, Oregon
+p2p-peer-address = peer.wax.alohaeos.com:9876
+
+# amsterdamwax: NL, Amsterdam
+p2p-peer-address = wax.eu.eosamsterdam.net:9101
+
+# blacklusionx: DE, Germany
+p2p-peer-address = peer1-emea.wax.blacklusion.io:4646
+
+# blokcrafters: CA, Montreal, Quebec
+p2p-peer-address = wax-peer-ca.blokcrafters.io:9876
+
+# blokcrafters: FI, Helsinki, Uusimaa
+p2p-peer-address = wax-peer-eu.blokcrafters.io:9876
+
+# bp.adex: DE, Falkenstein
+p2p-peer-address = p2p-wax.a-dex.xyz:9876
+
+# bp.alcor: FI, Finland
+p2p-peer-address = wax-p2p.alcor.exchange:9876
+
+# bp.box: KY, Cayman Islands
+p2p-peer-address = wax.defibox.xyz:9966
+
+# bp.wecan: FI, Uusimaa
+p2p-peer-address = seed1-wax-mainnet.wecan.dev:14998
+
+# bp.wecan: DE, Gunzenhausen
+p2p-peer-address = seed2-wax-mainnet.wecan.dev:14998
+
+# cryptolions1: DE, Germany-Finland
+p2p-peer-address = wax.cryptolions.io:9876
+
+# dapplica: DE, Germany-Finland
+p2p-peer-address = wax.dapplica.io:9876
+
+# eosarabianet: DE, Munich
+p2p-peer-address = p2p-wax.eosarabia.net:9876
+
+# eosauthority: DE, Falkenstein
+p2p-peer-address = node-wax.eosauthority.com:10301
+
+# eosauthority: FI, Helsinki
+p2p-peer-address = node-wax-p2p.eosauthority.com:10301
+
+# eosdacserver: FI, Tuusula
+p2p-peer-address = wax-p2p.eosdac.io:29876
+
+# eosdacserver: GB, United Kingdom
+p2p-peer-address = wax-p2p.uk.eosdac.io:29873
+
+# eosdacserver: FI, Tuusula
+p2p-peer-address = wax-p2p.fi.eosdac.io:19876
+
+# eosdublinwow: FI, Finland
+p2p-peer-address = wax.p2p.eosdublin.io:9876
+
+# eosphereiobp: CA, Beauharnois
+p2p-peer-address = peer1-wax.eosphere.io:9876
+
+# eosphereiobp: CA, Beauharnois
+p2p-peer-address = peer2-wax.eosphere.io:9876
+
+# eosriobrazil: BR, Rio de Janeiro
+p2p-peer-address = br.eosrio.io:35668
+
+# greeneosiobp: DE, Germany
+p2p-peer-address = p2p1.wax.greeneosio.com:9876
+
+# guild.nefty: DE, Germany
+p2p-peer-address = p2p-node1.neftyblocks.com:9876
+
+# guild.nefty: FI, Finland
+p2p-peer-address = p2p-node2.neftyblocks.com:9876
+
+# guild.taco: DE, Germany
+p2p-peer-address = peer1.wax.tacocrypto.io:9999
+
+# guild.waxdao: US, United States
+p2p-peer-address = p2p.waxdaobp.io:9876
+
+# ivote4waxusa: US, Greenville,SC,USA
+p2p-peer-address = wax.p2p.eosusa.io:9875
+
+# ledgerwiseio: FI, LB
+p2p-peer-address = waxp2p.ledgerwise.io:21877
+
+# nation.wax: CA, Canada
+p2p-peer-address = wax.seed.eosnation.io:9876
+
+# oneinacilian: DE, Falkenstein
+p2p-peer-address = p2p.oiac.io:9876
+
+# sentnlagents: DE, Falkenstein
+p2p-peer-address = waxp2p.sentnl.io:9876
+
+# waxhiveguild: FI, Finnland
+p2p-peer-address = peer1.hivebp.io:9876
+
+# waxhiveguild: DE, Germany
+p2p-peer-address = peer2.hivebp.io:9876
+
+# waxmadrid111: DE, SEED
+p2p-peer-address = wax-seed.eosiomadrid.io:9876
+
+# waxswedenorg: SE, Sweden
+p2p-peer-address = p2p.waxsweden.org:35777
 # PeerList - https://validate.eosnation.io/wax/reports/config.html
 
 agent-name = "<yourname> WAX Mainnet State-History"  
@@ -407,13 +432,13 @@ Use screen to keep your session live even when you disconnect, usage below:
 Run  `nodeos`  with pointers to the config, data directory and genesis file:
 
 ```
-> cd ~/wax-leap/build/programs/nodeos
+> cd ~/wax-blockchain/build/programs/nodeos
 > ./nodeos --data-dir ~/waxdata --config-dir ~/waxdata --genesis-json ~/waxdata/genesis.json --disable-replay-opts
 ```
 
 Your WAX Mainnet node will now start syncing with the configured peers and catch-up with the WAX Mainnet chain headblock.
 
-At time of writing (September 2022) this may take up to a month for a complete block sync from genesis. It may also help if you choose a few closely located peers to limit peer overload and ensure low latency.
+At time of writing (March 2024) this may take up to 2 months for a complete block sync from genesis. It may also help if you choose a few closely located peers to limit peer overload and ensure low latency.
 
 As your node syncs from the start of the chain it will build the log and index files in the  `/blocks`  and  `/state-history`  directories.
 
