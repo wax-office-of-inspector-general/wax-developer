@@ -20,6 +20,7 @@ Paid service providers offer much more reliability, flexibility and better rate-
 | EOS USA       | [https://www.eosusa.io/hosting/](https://www.eosusa.io/hosting/ )         | FAH, SH, AA                | Dedicated Servers                            | https://www.eosusa.io/hosting/, Telegram ID: @EOSUSA_Michael         |
 | EOS Nation    | [https://dfuse.eosnation.io/pricing](https://dfuse.eosnation.io/pricing)      | FAH                        | API Metered Subscriptions                    | [info@eosnation.io](mailto:info@eosnation.io), Telegram ID: @mdarwin |
 | WAX Sweden    | [https://waxsweden.org/commercial-api/](https://waxsweden.org/commercial-api/)   | SH, Contract Notifications | Dedicated Servers                            | https://t.me/eossweden                                               |
+| EOSphere      | [https://eosphere.io/services/](https://eosphere.io/services/)  | FAH, SH, AA    | Dedicated Servers, API Metered Subscriptions                       | info@eosphere.io, Telegram ID: @rossco99                                          |
 
 - FAH: Full Archive History
 - PAH: Partial Archive History
