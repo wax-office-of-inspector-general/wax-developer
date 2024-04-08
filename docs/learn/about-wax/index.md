@@ -1,6 +1,6 @@
 ---
 title: About WAX
-order: 1
+order: 2
 ---
 
 # About WAX
