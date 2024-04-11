@@ -9,9 +9,9 @@ In this tutorial, you will learn how to create and mint a fungible token asset o
 
 ## Before You Start
 
-* You will need to complete our [Quick Start with Docker](/build/dapp-development/docker-setup) (recommended) and use the [WAX Blockchain Development Guide](/build/dapp-development) to build from source.
+* You will need to complete our [Quick Start with Docker](/build/dapp-development/docker-setup/) (recommended) and use the [WAX Blockchain Development Guide](/build/dapp-development/) to build from source.
 
-* To compile and deploy your smart contract, you will need to use the [WAX Contract Development Toolkit (WAX-CDT)](/build/dapp-development/wax-cdt).
+* To compile and deploy your smart contract, you will need to use the [WAX Contract Development Toolkit (WAX-CDT)](/build/dapp-development/wax-cdt/).
 
 * To deploy your smart contract on the WAX mainnet or the WAX testnet, you will need to create a self-managed WAX Blockchain Account.
 

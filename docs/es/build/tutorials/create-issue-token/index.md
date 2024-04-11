@@ -9,9 +9,9 @@ En este tutorial, aprenderás cómo crear y acuñar un token de activo fungible 
 
 ## Antes de Comenzar
 
-* Necesitarás completar nuestro [Inicio Rápido con Docker](/es/build/dapp-development/docker-setup) (recomendado) y usar la [Guía de desarrollo para la Blockchain de WAX](/es/build/dapp-development) para construir desde el código fuente.
+* Necesitarás completar nuestro [Inicio Rápido con Docker](/es/build/dapp-development/docker-setup/) (recomendado) y usar la [Guía de desarrollo para la Blockchain de WAX](/es/build/dapp-development/) para construir desde el código fuente.
 
-* Para compilar y desplegar tu contrato inteligente, necesitarás utilizar el [Kit de Desarrollo de Contratos de WAX (WAX-CDT)](/es/build/dapp-development/wax-cdt).
+* Para compilar y desplegar tu contrato inteligente, necesitarás utilizar el [Kit de Desarrollo de Contratos de WAX (WAX-CDT)](/es/build/dapp-development/wax-cdt/).
 
 * Para desplegar tu contrato inteligente en la red principal de WAX o en la red de pruebas de WAX, necesitarás crear una Cuenta de Blockchain de WAX autogestionada.
 
