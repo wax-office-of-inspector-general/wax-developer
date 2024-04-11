@@ -257,7 +257,7 @@ You can see we request the next random number and process the result in **receiv
 
 The game cover a logic when we found the winner, we'll reward him with an amount of TIC token. You can use this logic to issue game's token, let player trade and buy in-game item,...
 
-You can follow the tutorial on eosio issuing new token here: https://developers.eos.io/manuals/eosio.contracts/latest/guides/how-to-create-issue-and-transfer-a-token/.
+You can follow the tutorial on Antelope issuing new token here: [Create and Mint a Fungible Token Asset](/build/tutorials/create-issue-token/)
 
 After deploy the token, you'll have to create new token name TIC and issue a predefined amount of token to the game contract. After that, the game can transfer token to the winner.
 
