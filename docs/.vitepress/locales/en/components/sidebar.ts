@@ -162,6 +162,10 @@ export default [
                         ],
                     },
                     {
+                      text: 'Create/Issue Fungible Tokens',
+                      link: '/build/tutorials/create-issue-token/'
+                    },
+                    {
                         text: 'AtomicAssets Guide',
                         link: '/build/tutorials/howto_atomicassets/',
                         collapsed: true,
