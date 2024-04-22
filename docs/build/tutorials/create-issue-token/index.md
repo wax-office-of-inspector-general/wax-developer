@@ -5,7 +5,7 @@ order: 10
 
 # How to deploy Fungible token on WAX blockchain
 
-Deploying a fungible token on the WAX blockchain can be an exciting project for developers interested in blockchain technology and digital assets. This guide provides comprehensive instructions on setting up, deploying, and managing a fungible token using the WAX blockchain's features.
+Deploying a fungible token on the WAX blockchain can be an exciting project for developers. This guide provides comprehensive instructions on setting up, deploying, and managing a fungible token using the WAX blockchain.
 
 👉 [Example Repository](https://github.com/worldwide-asset-exchange/fungible-token-tutorial)
 
