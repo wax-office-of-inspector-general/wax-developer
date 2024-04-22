@@ -1,110 +1,145 @@
 ---
-title: Create and Mint a Fungible Token
+title: Create/Issue a Fungible Token
 order: 10
 ---
 
-# Create and Mint a Fungible Token Asset
+# How to deploy Fungible token on WAX blockchain
 
-In this tutorial, you will learn how to create and mint a fungible token asset on the WAX mainnet.
+Deploying a fungible token on the WAX blockchain can be an exciting project for developers interested in blockchain technology and digital assets. This guide provides comprehensive instructions on setting up, deploying, and managing a fungible token using the WAX blockchain's features.
 
-## Before You Start
+👉 [Example Repository](https://github.com/worldwide-asset-exchange/fungible-token-tutorial)
 
-* You will need to complete our [Quick Start with Docker](/build/dapp-development/docker-setup/) (recommended) and use the [WAX Blockchain Development Guide](/build/dapp-development/) to build from source.
+## Prerequisites
 
-* To compile and deploy your smart contract, you will need to use the [WAX Contract Development Toolkit (WAX-CDT)](/build/dapp-development/wax-cdt/).
+Before beginning, ensure you have the following tools installed:
 
-* To deploy your smart contract on the WAX mainnet or the WAX testnet, you will need to create a self-managed WAX Blockchain Account.
+- [cdt](https://github.com/AntelopeIO/cdt): Contract development toolkit for developing the contract
+- [leap](https://github.com/AntelopeIO/leap): Include the cleos command line tool to interact with the blockchain.
 
-## Clone the Smart Contract from GitHub
+## Build token contract
 
-1. Clone the fungible asset smart contract from the WAX GitHub repository:
+For easier to setup and deploy, original token contract has been copied from [wax-contract](https://github.com/worldwide-asset-exchange/wax-system-contracts/tree/develop/contracts/eosio.token/) to this repo. Prebuilt contract store on [build](https://github.com/worldwide-asset-exchange/fungible-token-tutorial/tree/master/build) folder.
 
-    ```shell
-    git clone https://github.com/worldwide-asset-exchange/wax-system-contracts.git
-    ```
+In case you want to build contract:
 
-2. Navigate to the smart contract directory:
-
-    ```shell
-    cd wax-system-contracts/contracts/eosio.token
-    ```
-
-:::warning IMPORTANT
-For the actions that we will perform below, it is necessary to unlock the wallet
-```shell
-cleos wallet unlock
+```bash
+$ cdt-cpp -abigen -R eosio.token/ricardian eosio.token/src/eosio.token.cpp -o ./build/eosio.token.wasm -I eosio.token/include --no-missing-ricardian-clause
 ```
-:::
 
-:::tip NOTE
-Replace these variables with your own values:
-- `<TOKEN_ACCOUNT_NAME>`: Name of the fungible asset token account (Will be the owner of the fungible asset token).
-- `<OWNER_PUBLIC_KEY>`: Public key of the fungible asset token account.
-- `<ACTIVE_PUBLIC_KEY>`: Active public key of the fungible asset token account.
-- `<ACTIVE_PRIVATE_KEY>`: Active private key of the fungible asset token account.
-- `<MAX_ISSUE>`: Maximum amount of fungible asset tokens to mint.
-- `<SYMBOL>`: Symbol of the fungible asset token.
-- `<AMOUNT>`: Amount of fungible asset tokens to mint (issue) or to send (transfer). The total of minted tokens cannot exceed the `<MAX_ISSUE>` value.
-:::
+This command compiles the source code into a WebAssembly (WASM) file, ready for deployment on the blockchain.
 
+## Deploy contract
 
-3. Create an account for the fungible asset token:
+### 1. Create contract account
 
-    ```shell
-    cleos create account eosio <TOKEN_ACCOUNT_NAME> <OWNER_PUBLIC_KEY> <ACTIVE_PUBLIC_KEY>
-    ```
+A contract account is necessary to deploy and manage your token. Ensure this account has at least 160 KB of RAM to store the contract and setup tables. Use the following command to create a new account:
 
-4. Add the fungible asset token account to the wallet:
+```bash
+$ cleos system newaccount eosio tokenexample EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV --stake-net "10.00000000 WAX" --stake-cpu "10.00000000 WAX" --buy-ram-kbytes 160 --transfer
+```
 
-    ```shell
-    cleos wallet import --private-key <ACTIVE_PRIVATE_KEY>
-    ```
+### 2. Deploy token contract
 
-5. Compile the smart contract:
+To deploy the token contract onto the blockchain, use the command:
 
-    ```shell
-    mkdir build
-    cd build
-    cmake ..
-    make
-    ```
-6. Deploy the smart contract on the WAX mainnet:
+```bash
+$ cleos set contract tokenexample . build/eosio.token.wasm build/eosio.token.abi -p tokenexample
+```
 
-    ```shell
-    cleos set contract eosio.token ../ --abi eosio.token.abi -p <TOKEN_ACCOUNT_NAME>@active
-    ```
-7. Mint the fungible asset token:
+### 3. Check deploy contract
 
-    ```shell
-    cleos push action <TOKEN_ACCOUNT_NAME> create '["<TOKEN_ACCOUNT_NAME>", "<MAX_ISSUE> <SYMBOL>"]' -p <TOKEN_ACCOUNT_NAME>@active
-    ```
+Verify the deployment by checking the code hash of the contract:
 
-8. Verify that the fungible asset token has been minted correctly:
+```bash
+$ cleos get code tokenexample
+code hash: 64ac1483b2ff62a4d36173882dca2a278c50e11136b70370123da6775e63659b
+```
 
-    ```shell
-    cleos get currency stats <TOKEN_ACCOUNT_NAME> <SYMBOL>
-    ```
-9. Mint additional fungible asset tokens:
+## Configure token
 
-    ```shell
-    cleos push action <TOKEN_ACCOUNT_NAME> issue '["<TOKEN_ACCOUNT_NAME>", "<AMOUNT> <SYMBOL>", "memo"]' -p <TOKEN_ACCOUNT_NAME>@active
-    ```
-10. Verify that the additional fungible asset tokens have been minted correctly:
+### 1. Create new token
 
-    ```shell
-    cleos get currency stats <TOKEN_ACCOUNT_NAME> <SYMBOL>
-    ```
+Call action `create` of token contract:
+- require contract permission
+- parameters:
+  - issuer: issuer account, account has permission to issue and retire token
+  - maximum_supply: maximum supply of token, make sure that you have correct number since it can not be changed
 
-11. Transfer fungible asset tokens to another account:
+```bash
+$ cleos push action tokenexample create '["tokenissuer", "1000000000.0000 EXP"]' -p tokenexample
+```
 
-    ```shell
-    cleos push action <TOKEN_ACCOUNT_NAME> transfer '["<TOKEN_ACCOUNT_NAME>", "<RECIPIENT_ACCOUNT_NAME>", "<AMOUNT> <SYMBOL>", "memo"]' -p <TOKEN_ACCOUNT_NAME>@active
-    ```
-  
-12. Verify that the fungible asset tokens have been transferred correctly:
+### 2. Issue token
 
-    ```shell  
-    cleos get currency balance <TOKEN_ACCOUNT_NAME> <RECIPIENT_ACCOUNT_NAME> <SYMBOL>
-    ```
+Issue the token by calling the issue `action`, which also requires issuer permission:
+- require issuer permission
+- parameters:
+  - to: token receiver
+  - quantity: quantity to issue
+  - memo
 
-Congratulations! You have created and minted a fungible token asset on the WAX mainnet.
+```bash
+$ cleos push action tokenexample issue '["tokenissuer", "1000000.0000 EXP", "first issue"]' -p tokenissuer
+```
+
+Get `stat` table to check issued amount:
+
+```bash
+$ cleos get table tokenexample EXP stat
+{
+  "rows": [{
+      "supply": "1000000.0000 EXP",
+      "max_supply": "1000000000.0000 EXP",
+      "issuer": "tokenexample"
+    }
+  ],
+  "more": false,
+  "next_key": ""
+}
+```
+
+Check token balance:
+
+```bash
+$ cleos get table tokenexample tokenissuer accounts
+{
+  "rows": [{
+      "balance": "1000000.0000 EXP"
+    }
+  ],
+  "more": false,
+  "next_key": ""
+}
+```
+
+### 3. Burn token
+
+Call `retire` action of token contract:
+- require issuer permission
+- issuer balance must greater than burn amount
+- parameters:
+  - quantity: burning quantity
+  - memo
+
+```bash
+$ cleos push action tokenexample retire '["1.0000 EXP", "first burn"]' -p tokenissuer
+```
+
+Check token stat after burn:
+
+```bash
+$ cleos get table tokenexample EXP stat
+{
+  "rows": [{
+      "supply": "999999.0000 EXP",
+      "max_supply": "1000000000.0000 EXP",
+      "issuer": "tokenexample"
+    }
+  ],
+  "more": false,
+  "next_key": ""
+}
+```
+
+## Conclusion
+Deploying and managing a fungible token on the WAX blockchain involves several detailed steps from setting up the development environment to managing the lifecycle of the token. By following this guide, developers can effectively deploy and manage their own digital assets on the WAX blockchain, leveraging the robust features and secure infrastructure it offers.
