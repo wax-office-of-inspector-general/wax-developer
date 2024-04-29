@@ -117,12 +117,6 @@ producer-name = eospherewoot
 #This is your block signing key-pair  
 signature-provider = EOS6HWBC39JAXaRo5aG5yAcAjgQYhQ44T5GtcxJVbZFZox6FFa15k=KEY:5JVfLEuHuoVkEX6CyScPHNLgxtRdUcdLp3hqzrXC54xVjtESFXX
 
-#Optimises hand off by producing a bit earlier  
-last-block-time-offset-us = -200000
-
-#Lowers CPU time available on last block for better hand off  
-last-block-cpu-effort-percent = 20
-
 #Enables block production on this node  
 plugin = eosio::producer_plugin
 ```
