@@ -58,9 +58,7 @@ Esta guía proporcionará un ejemplo de cómo construir y configurar HAProxy par
 
 # Instalar el Software
 
-En
-
- este ejemplo, instalaremos HAProxy desde un Personal Package Archive (PPA) de edición comunitaria recomendado, mantenido por [Vincent Berant](https://launchpad.net/~vbernat) y utilizando la última versión LTS de HAProxy [v2.6.0](https://github.com/haproxy/haproxy/releases/tag/v2.6.0) (Soportado hasta el segundo trimestre de 2027) al momento de octubre de 2022.
+En este ejemplo, instalaremos HAProxy desde un Personal Package Archive (PPA) de edición comunitaria recomendado, mantenido por [Vincent Berant](https://launchpad.net/~vbernat) y utilizando la última versión LTS de HAProxy [v2.6.0](https://github.com/haproxy/haproxy/releases/tag/v2.6.0) (Soportado hasta el segundo trimestre de 2027) al momento de octubre de 2022.
 
 Esta compilación tiene soporte nativo para **Prometheus**, lo que te permite ver y exportar métricas y habilita una observabilidad, así como registros y seguimiento geniales.
 

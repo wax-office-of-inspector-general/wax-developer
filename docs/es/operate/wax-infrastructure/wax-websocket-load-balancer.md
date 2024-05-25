@@ -2,8 +2,6 @@
 title: Configurar Soporte Websocket en un Balanceador de Carga de WAX
 ---
 
-
-
 Los servicios ofrecidos por la red WAX, como la API Atómica y Hyperion, dependen en gran medida de un servicio de Historial de Estado resiliente, también conocido como nodo de Protocolo de Historial de Estado (SHIP). A diferencia de otras API HTTP de software WAX, State-History hace uso de un protocolo de comunicación bidireccional llamado websocket, que afortunadamente es compatible con HAProxy.
 
 Esta guía explicará cómo configurar HAProxy para admitir la resiliencia y el equilibrio de carga de websockets entre múltiples nodos de Historial de Estado.

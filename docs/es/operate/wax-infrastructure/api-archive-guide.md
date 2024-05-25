@@ -1,66 +1,66 @@
 ---
-title: API Full/Partial Archive nodes-US
+title: API nodos de archivo completo/parcial-US
 ---
 
-# API Full/Partial Archive nodes-US
+# API nodos de archivo completo/parcial-US
 
-WAX is a distributed network of computers running software (known as nodes) that can verify blocks and transaction data. You need WAX software, on your server to "run" a node. "Node" refers to running WAX software. WAX software verifies all transactions in each block, keeping the network secure and the data accurate. 
+WAX es una red distribuida de computadoras que ejecutan software (conocido como nodos) que pueden verificar bloques y datos de transacciones. Necesitas el software WAX en tu servidor para "ejecutar" un nodo. "Nodo" se refiere a ejecutar el software WAX. El software WAX verifica todas las transacciones en cada bloque, manteniendo la red segura y los datos precisos.
 
-If you want to run your own node, you should understand that there are different types of node that consume and store data differently. In fact, WAX Software can be run in 3 different types of modes - peer, api, archive nodes. These setups also determine how quickly the node can get the most up-to-date information.
+Si deseas ejecutar tu propio nodo, debes entender que hay diferentes tipos de nodos que consumen y almacenan datos de manera diferente. De hecho, el software WAX se puede ejecutar en 3 tipos diferentes de modos: nodos de pares, API y archivo. Estas configuraciones también determinan la rapidez con la que el nodo puede obtener la información más actualizada.
 
-Archive nodes can be partial or full based on how they are started. These nodes contain the blocks, state history of the blockchain. Partial archive nodes are mainly started from snapshots so they don't contain full history of the blockchain but only have the history from a specific block.
+Los nodos de archivo pueden ser parciales o completos según cómo se inicien. Estos nodos contienen los bloques y el historial del estado de la cadena de bloques. Los nodos de archivo parcial se inician principalmente desde instantáneas, por lo que no contienen el historial completo de la cadena de bloques, sino solo el historial desde un bloque específico.
 
-Archive nodes are also referred as State-History or Ship nodes.
+Los nodos de archivo también se denominan nodos de historial de estado o nodos Ship.
 
-#### Credits:
-@cc32d9, Eosphere Team
+#### Créditos:
+@cc32d9, Equipo de Eosphere
 
-### Pre-requisites/Requirements:
+### Prerrequisitos/Requisitos:
 
-- **Full State-History node Hardware(recommended specs):** 4Ghz+ CPU speed, 128GB RAM, 8TB SSD or NvME [For a partial state-history, you can have lower specs as its started from a snapshot]
-- **Dependencies:** v2.0.13wax01(WAX Software recommended version)
-- **OS:** Ubuntu18.04 (recommended)
+- **Nodo de historial de estado completo (especificaciones recomendadas):** CPU de velocidad 4Ghz+, 128GB de RAM, 8TB SSD o NvME [Para un historial de estado parcial, puedes tener especificaciones más bajas ya que se inicia desde una instantánea]
+- **Dependencias:** v2.0.13wax01 (versión recomendada del software WAX)
+- **Sistema operativo:** Ubuntu 18.04 (recomendado)
 
-#### Bare-Metal Infra providers:
+#### Proveedores de infraestructura bare-metal:
 
 - [Hetzner](https://www.hetzner.com/dedicated-rootserver "Hetzner")
 - [Leaseweb](https://www.leaseweb.us/dedicated-servers "Leaseweb")
 
-### Setup and Installation:
+### Configuración e instalación:
 
-After securing the servers and setting up the boot configuration and appropriate RAID modes, you can login to the server and follow the next commands below: 
+Después de asegurar los servidores y configurar la configuración de arranque y los modos RAID apropiados, puedes iniciar sesión en el servidor y seguir los siguientes comandos:
 
-[Recommendation - Only setup root partition in Raid1 or Raid5 modes for now. We shall partition the disks later on after the boot and allocate them to a ZFS pool]
+[Recomendación - Configura solo la partición raíz en modos Raid1 o Raid5 por ahora. Particionaremos los discos más adelante después del arranque y los asignaremos a un pool ZFS]
 
-##### 1. Update the default pacakages and install new ones
+##### 1. Actualiza los paquetes predeterminados e instala nuevos
 ```
 apt-get update && apt-get install -y vim htop aptitude git lxc-utils zfsutils-linux netfilter-persistent sysstat ntp gpg screen zstd
 ```
-##### 2. For better CPU performance:
+##### 2. Para un mejor rendimiento de la CPU:
 ```
 apt-get install -y cpufrequtils
 echo 'GOVERNOR="performance"' | tee /etc/default/cpufrequtils
 systemctl disable ondemand
 systemctl restart cpufrequtils
 ```
-##### 3. Create disk partitions 
-First step is to determine the disks and their names using the commands below:
+##### 3. Crear particiones de disco 
+El primer paso es determinar los discos y sus nombres utilizando los siguientes comandos:
 ```
 fdisk -l
 ```
-Now after identifying the disk names, let's partition them using the example command below, we need to create two partitions One for Swap and One for ZFS storage pool.
+Ahora, después de identificar los nombres de los discos, particiónalos utilizando el siguiente comando de ejemplo, necesitamos crear dos particiones, una para Swap y otra para el pool de almacenamiento ZFS.
 
 ```
 cfdisk /dev/nvme0n1
 ```
-Do the above for all the disks on your server.
+Haz lo anterior para todos los discos en tu servidor.
 
-##### 4. Increase the Swap size as its usually small on the servers from Hetzner and Leaseweb.
+##### 4. Aumenta el tamaño de Swap ya que usualmente es pequeño en los servidores de Hetzner y Leaseweb.
 ```
 mkswap /dev/nvme0n1p5
 mkswap /dev/nvme1n1p5
 ```
-Now let's add the Swap pools to the System's FileSystem table by editing the file below:
+Ahora añadamos los pools de Swap a la tabla del sistema de archivos del sistema editando el siguiente archivo:
 ```
 cat >>/etc/fstab <<'EOT'
 /dev/nvme0n1p5     none            swap            defaults,pri=-2 0 0
@@ -68,74 +68,74 @@ cat >>/etc/fstab <<'EOT'
 /dev/nvme2n1p5     none            swap            defaults,pri=-2 0 0
 EOT
 ```
-After editing, let's enable the newly added Swap pool using the command below:
+Después de editar, habilita el nuevo pool de Swap utilizando el siguiente comando:
 ```
 swapon -a
 ```
 
-##### 5. Create ZFS storage pool based on your requirements with zraid or mirror etc modes. A good resource to do calculations on disk sizes: http://www.raidz-calculator.com/
+##### 5. Crea un pool de almacenamiento ZFS según tus necesidades con modos zraid o mirror, etc. Un buen recurso para hacer cálculos sobre tamaños de discos: http://www.raidz-calculator.com/
 
 ```
-zpool create -o ashift=12 zfast raidz /dev/nvme0n1p6 /dev/nvme1n1p6 /dev/nvme2n1p6 [--> adopt the partition names accordingly]
-#Disable ZFS access time Updates
+zpool create -o ashift=12 zfast raidz /dev/nvme0n1p6 /dev/nvme1n1p6 /dev/nvme2n1p6 [--> adopta los nombres de partición en consecuencia]
+#Deshabilita las actualizaciones de tiempo de acceso de ZFS
 > zfs set atime=off zfast
-#Set ARC to only cache metadata
+#Configura ARC para que solo almacene en caché los metadatos
 > sudo zfs set primarycache=all datavolume
-#Enable LZ4 compression
+#Habilita la compresión LZ4
 zfs set compression=lz4 zfast
-zfs create -o mountpoint=/home zfast/home [-->Creates mountpoint]
+zfs create -o mountpoint=/home zfast/home [-->Crea el punto de montaje]
 ```
 
-##### 6. Setup NTP to ensure the clocks are in sync
+##### 6. Configura NTP para asegurar que los relojes estén sincronizados
 
-It is important to have this as a peer-to-peer blockchain network to have synchronised time across all nodes. Chrony is an excellent NTP client and is quite suitable for the needs of WAX Mainnet.
+Es importante tener esto en una red blockchain de igual a igual para tener un tiempo sincronizado en todos los nodos. Chrony es un excelente cliente NTP y es bastante adecuado para las necesidades de WAX Mainnet.
 
-Install, configure and verify as below:
+Instala, configura y verifica como a continuación:
 
 ```
-#Install Chrony
+#Instala Chrony
 > sudo apt install chrony
-#If necessary manually add local peers, these are AU servers
+#Si es necesario, añade manualmente pares locales, estos son servidores de AU
 > sudo nano /etc/chrony/chrony.conf
 
 server 0.pool.ntp.org
 server 1.pool.ntp.org
 server 2.pool.ntp.org
 server 3.pool.ntp.org
-#Restart Chrony
+#Reinicia Chrony
 > sudo /etc/init.d/chrony restart
-#Verify
+#Verifica
 > chronyc sources -v
 > chronyc tracking
-#Set your local timezone if necessary
+#Configura tu zona horaria local si es necesario
 > sudo timedatectl set-timezone Europe/Stockholm
 ```
 
-##### 7. Setup Stack Limits and Openfiles on your server
+##### 7. Configura los límites de pila y archivos abiertos en tu servidor
 
-The default Stack Limits and Number of Open Files in Ubuntu 18.04 should be increased to support the WAX software memory requirements and the number of API requests on a Production Mainnet Node.
+Los límites de pila y el número de archivos abiertos en Ubuntu 18.04 deben aumentarse para soportar los requisitos de memoria del software WAX y el número de solicitudes API en un nodo de producción Mainnet.
 
-Configure and verify the raised limits as below:
+Configura y verifica los límites aumentados como se indica a continuación:
 ```
 > sudo nano /etc/systemd/system.conf
-#Append the following configuration
+#Añade la siguiente configuración
 DefaultLimitNOFILE=64000 
 DefaultLimitSTACK=65536000
-#Restart server and verify
+#Reinicia el servidor y verifica
 > ulimit -a
 ```
 
 ------------
 
-Now that we have setup the server and disk storage in a good way, let's go ahead with the next steps to build and setup the State-History nodes.
+Ahora que hemos configurado el servidor y el almacenamiento de discos de una buena manera, sigamos con los siguientes pasos para construir y configurar los nodos de historial de estado.
 
-##### 8. Build and Configure the Software:
+##### 8. Construye y configura el software:
 
-WAX software is an open-source modified version of Antelope software to suit the needs of the WAX Network.Currently the WAX accepted software build and version is v2.0.13wax01 created by [cc32d9](https://cc32d9.medium.com/) who is a member of the [EOS Amsterdam Guild](https://eosamsterdam.net/)
+El software WAX es una versión de código abierto modificada del software Antelope para satisfacer las necesidades de la red WAX. Actualmente, la versión aceptada del software WAX es v2.0.13wax01 creada por [cc32d9](https://cc32d9.medium.com/) que es miembro del [EOS Amsterdam Guild](https://eosamsterdam.net/).
 
-The latest waxbuild tag is always available on the [WAX Github](https://github.com/worldwide-asset-exchange/wax-blockchain/tags).
+La última etiqueta de compilación de wax siempre está disponible en el [Github de WAX](https://github.com/worldwide-asset-exchange/wax-blockchain/tags).
 
-**Manual Build**
+**Compilación manual**
 ```
 cd ~
 git clone https://github.com/worldwide-asset-exchange/wax-blockchain.git
@@ -143,21 +143,21 @@ cd wax-blockchain
 git checkout v2.0.13wax01
 git submodule update --init --recursive
 cd scripts > ./eosio_build.sh -P./eosio_install.sh 
-#If you want to install. Binaries are in ~/wax2.0/build/programs
+#Si quieres instalar. Los binarios están en ~/wax2.0/build/programs
 ```
-As the -P option is used on the build script this may take some time to compile as it will build with pinned clang and libcxx
+Como se utiliza la opción -P en el script de compilación, esto puede tardar un tiempo en compilarse ya que se compilará con clang y libcxx fijados.
 
-**Pre-Build Packages**
-WAX Sweden team offers Pre-Build packages that can be easily installed. You can find them here: https://eosswedenorg.github.io/apt/wax
-Please visit the above link and follow the provided instructions.
+**Paquetes precompilados**
+El equipo de WAX Sweden ofrece paquetes precompilados que se pueden instalar fácilmente. Puedes encontrarlos aquí: https://eosswedenorg.github.io/apt/wax
+Visita el enlace anterior y sigue las instrucciones proporcionadas.
 
-**Configuration**
+**Configuración**
 
-Now that WAX Software is installed, let's go ahead and configure the state-history setup:
+Ahora que el software WAX está instalado, configuremos el historial de estado:
 
-There are different components in the software like nodeos, cleos, keosd etc. **nodeos** is the core service which runs the protocol and is used across all the nodes. The configuration of nodeos is done using config.ini file. The settings of this file determine what kind of node you are running.
+Hay diferentes componentes en el software como nodeos, cleos, keosd, etc. **nodeos** es el servicio principal que ejecuta el protocolo y se usa en todos los nodos. La configuración de nodeos se realiza utilizando el archivo config.ini. Las configuraciones de este archivo determinan el tipo de nodo que estás ejecutando.
 
-Follow the below steps to config the nodeos:
+Sigue los pasos a continuación para configurar nodeos:
 
 ```
 mkdir /home/data
@@ -166,7 +166,7 @@ mkdir /home/conf
 cd /home/data
 nano config.ini
 ```
-Below is an example **mainnnet** config.ini file which is customized to setup state-history node, you can just copy and paste:
+A continuación se muestra un ejemplo de archivo config.ini de **mainnet** que está personalizado para configurar un nodo de historial de estado, puedes simplemente copiar y pegar:
 
 ```
 wasm-runtime = eos-vm-jit
@@ -175,12 +175,14 @@ eos-vm-oc-enable = true
 read-mode = head
 contracts-console = true
 
-chain-state-db-size-mb = 131072
+chain-state-db-size
+
+-mb = 131072
 chain-state-db-guard-size-mb = 1024
 chain-threads = 4
 http-threads = 8
 
-# Safely shut down node when less free space
+# Apagar el nodo de forma segura cuando haya menos espacio libre
 chain-state-db-guard-size-mb = 128
 reversible-blocks-db-guard-size-mb = 2
 
@@ -192,11 +194,11 @@ http-max-response-time-ms = 100
 verbose-http-errors = true
 http-validate-host = false
 
-#Peering endpoint config
+# Configuración del endpoint de peering
 p2p-listen-endpoint = 0.0.0.0:9876
 p2p-server-address = 0.0.0.0:9876
 
-# State History Settings (need add to start params --disable-replay-opts )
+# Configuración del historial de estado (necesita agregar a los parámetros de inicio --disable-replay-opts )
 plugin = eosio::state_history_plugin
 state-history-dir = state-history
 trace-history = true
@@ -210,59 +212,59 @@ connection-cleanup-period = 30
 sync-fetch-span = 2000
 enable-account-queries = true
 
-# Core Blockchain plugins
+# Plugins principales de la cadena de bloques
 plugin = eosio::chain_plugin
 plugin = eosio::chain_api_plugin
 plugin = eosio::http_plugin
 
-#Peers list - Refer this link for mainnet latest peers: https://validate.eosnation.io/wax/reports/config.html
+# Lista de peers - Consulta este enlace para los últimos peers de mainnet: https://validate.eosnation.io/wax/reports/config.html
 
-# alohaeosprod: US, Oregon
+# alohaeosprod: US, Oregón
 p2p-peer-address = peer.wax.alohaeos.com:9876
 
-# blacklusionx: DE, Germany
+# blacklusionx: DE, Alemania
 p2p-peer-address = peer1.wax.blacklusion.io:4646
 
-# blacklusionx: DE, Germany
+# blacklusionx: DE, Alemania
 p2p-peer-address = peer1-emea.wax.blacklusion.io:4646
 
-# bp.wecan: US, NewYork
+# bp.wecan: US, Nueva York
 p2p-peer-address = seed3-wax-mainnet.wecan.dev:14998
 
-# dapplica: DE, Germany-Finland
+# dapplica: DE, Alemania-Finlandia
 p2p-peer-address = wax.dapplica.io:9876
 
-# eosarabianet: DE, Munich
+# eosarabianet: DE, Múnich
 p2p-peer-address = p2p-wax.eosarabia.net:9876
 
-# eosdacserver: GB, United Kingdom
+# eosdacserver: GB, Reino Unido
 p2p-peer-address = wax-p2p.eosdac.io:29876
 
-# eosdublinwow: FI, Finland
+# eosdublinwow: FI, Finlandia
 p2p-peer-address = wax.p2p.eosdublin.io:9876
 
-# eoseouldotio: JP, Seoul
+# eoseouldotio: JP, Seúl
 p2p-peer-address = p2p.wax.eoseoul.io:29876
 
-# eosphereiobp: AU, Sydney
+# eosphereiobp: AU, Sídney
 p2p-peer-address = peer2-wax.eosphere.io:9876
 
-# guild.nefty: FI, Finland
+# guild.nefty: FI, Finlandia
 p2p-peer-address = p2p-node2.neftyblocks.com:9876
 
 # ledgerwiseio: FI, LB
 p2p-peer-address = waxp2p.ledgerwise.io:21877
 
-# waxhiveguild: FI, Finnland
+# waxhiveguild: FI, Finlandia
 p2p-peer-address = peer1.hivebp.io:9876
 ```
-If you are starting the node from the 1st block, then you also need to have **genesis.json** file as well:
+Si estás iniciando el nodo desde el primer bloque, también necesitas tener el archivo **genesis.json**:
 
 ```
 cd /home/conf
 nano genesis.json
 ```
-Add the following config to the genesis.json file. This is for the **WAX Mainnet**:
+Agrega la siguiente configuración al archivo genesis.json. Esto es para la **WAX Mainnet**:
 ```
 {
   "initial_timestamp": "2019-06-05T12:00:00.000",
@@ -288,7 +290,7 @@ Add the following config to the genesis.json file. This is for the **WAX Mainnet
   }
 }
 ```
-For **WAX Testnet**, add the following config to the genesis.json file:
+Para **WAX Testnet**, agrega la siguiente configuración al archivo genesis.json:
 ```
 {
   "initial_timestamp": "2019-12-06T06:06:06.000",
@@ -315,23 +317,23 @@ For **WAX Testnet**, add the following config to the genesis.json file:
 }
 
 ```
-##### 9. Running the Node:
+##### 9. Ejecutar el nodo:
 
-Once you are through the previous steps, the next step is to get started with the steps to run the node and sync with the WAX Mainnet/Testnet:
+Una vez que hayas completado los pasos anteriores, el siguiente paso es comenzar con los pasos para ejecutar el nodo y sincronizarlo con WAX Mainnet/Testnet:
 
-You can start the **nodeos** using the command and parameters below:
+Puedes iniciar el **nodeos** usando el siguiente comando y parámetros:
 
-For starting the node from genesis:
+Para iniciar el nodo desde el génesis:
 ```
 nodeos --disable-replay-opts --data-dir /home/data/ --config-dir /home/data/ --genesis-json=/home/conf/genesis.json
 ```
-For starting the node from a snapshot:
+Para iniciar el nodo desde una instantánea:
 ```
-nodeos --disable-replay-opts --data-dir /home/data/ --config-dir /home/data/ --snapshot /home/data/snapshots/<replace with snapshot file name>
+nodeos --disable-replay-opts --data-dir /home/data/ --config-dir /home/data/ --snapshot /home/data/snapshots/<reemplazar con el nombre del archivo de instantánea>
 ```
-###### Running and managing nodeos using scripts:
+###### Ejecutar y gestionar nodeos usando scripts:
 
-The below start and stop scripts will help you to daemonize and manage the nodeos service.
+Los siguientes scripts de inicio y detención te ayudarán a demonizar y gestionar el servicio nodeos.
 ```
 cd /home/conf
 vim start.sh
@@ -341,12 +343,12 @@ vim start.sh
 #!/bin/bash
 DATADIR="/home/data"
 
-#change the directory path according to your configuration
+#cambia la ruta del directorio según tu configuración
 NODEOSBINDIR="/usr/opt/wax/2013wax01-mv/bin/" 
 
 
 $DATADIR/stop.sh
-echo -e "Starting Nodeos \n";
+echo -e "Iniciando Nodeos \n";
 
 ulimit -c unlimited
 ulimit -n 65535
@@ -364,7 +366,7 @@ DIR="/home/data"
         kill $pid
 
 
-        echo -ne "Stoping Nodeos"
+        echo -ne "Deteniendo Nodeos"
 
         while true; do
             [ ! -d "/proc/$pid/fd" ] && break
@@ -380,21 +382,23 @@ DIR="/home/data"
         tar -pcvzf $DIR/logs/stderr-$DATE.txt.tar.gz stderr.txt stdout.txt
 
 
-        echo -ne "\rNodeos Stopped.    \n"
+        echo -ne "\rNodeos detenido.    \n"
     fi
 ```
 
-All you have to do now is start the script and monitor the logs in stderr.txt in /home/data folder.
+Todo lo que tienes que hacer ahora es iniciar el script y monitorear los registros en stderr.txt en la carpeta /home/data.
 
 ```
-tail -f stderr.tx
+tail -f stderr.txt
 ```
-Your State-History node will now start syncing with the configured peers and catch-up with the chain headblock. It may take up to 2-3 weeks for a complete block sync from genesis for WAX Mainnet. It may also help if you choose a few closely located peers to limit peer overload and ensure low latency.
+Tu nodo de historial de estado ahora comenzará a sincronizarse con los peers configurados y se pondrá al día con el bloque principal de la cadena. Puede tomar hasta 2-3 semanas una sincronización completa de bloques desde el génesis para WAX Mainnet. También puede ayudar si eliges algunos peers ubicados cerca para limitar la sobrecarga de peers y asegurar baja latencia.
 
-Example screenshot when the node is syncing successfully:
+Captura de pantalla de ejemplo cuando el nodo se está sincronizando con éxito:
 
-![image](https://user-images.githubusercontent.com/15923938/163224549-92f633fc-6ab5-4a15-adee-fe165ece874b.png)
+![image](https://user-images.githubusercontent.com/15923938/163224
 
-As your node syncs from the start of the chain it will build the log and index files in the /blocks and /state-history directories in your /home/data folder.
+549-92f633fc-6ab5-4a15-adee-fe165ece874b.png)
 
-**You can now query the node rest endpoint at http port 8888 and for websockets it is port 8080**
+A medida que tu nodo se sincroniza desde el inicio de la cadena, construirá los archivos de registro e índice en los directorios /blocks y /state-history en tu carpeta /home/data.
+
+**Ahora puedes consultar el nodo en el endpoint rest en el puerto http 8888 y para websockets es el puerto 8080**
