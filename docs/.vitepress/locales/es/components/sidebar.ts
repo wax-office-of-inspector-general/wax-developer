@@ -289,6 +289,7 @@ export default [
           { text: 'Configurar Nodo Productor (testnet)', link: '/es/operate/wax-infrastructure/wax-testnet-block-producer' },
           { text: 'Configurar Nodo en mainnet', link: '/es/operate/wax-infrastructure/wax-mainnet-node' },
           { text: 'Configurar Balanceador de Carga', link: '/es/operate/wax-infrastructure/wax-mainnet-node-load-balancer' },
+          { text: 'Visualizar Métricas Balanceador de Carga', link: '/es/operate/wax-infrastructure/wax-visualise-load-balancer-metrics' },
           { text: 'Mitigar Abuso sobre API', link: '/es/operate/wax-infrastructure/wax-mainnet-node-mitigate-abuse' },
           { text: 'Configurar Nodo Estado-Historial', link: '/es/operate/wax-infrastructure/wax-mainnet-ship-node' },
           { text: 'Estructura de Archivos de Nodos de WAX', link: '/es/operate/wax-infrastructure/working-with-wax-software-files' },
