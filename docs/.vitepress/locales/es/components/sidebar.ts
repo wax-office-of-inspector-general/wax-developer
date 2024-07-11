@@ -206,6 +206,10 @@ export default [
               { text: 'Wharfkit Multi-Session', link: '/es/build/tutorials/wharfkit/multisession' },
             ],
           },
+          {
+            text: 'SS verification',
+            link: '/es/build/tutorials/server-side-verification/',
+          }
           //                 '/es/build/tutorials/howto_blockexplorer',
         ],
       },
