@@ -213,8 +213,8 @@ export default [
                         ],
                     },
                     {
-                        text: 'SSI verrification',
-                        link: '/build/tutorials/server-side-veritification/',
+                        text: 'SS verification',
+                        link: '/build/tutorials/server-side-verification/',
                     },
                     {text: 'How To Explore WAX Blockchain', link: '/build/tutorials/howto_blockexplorer'}
                 ],
