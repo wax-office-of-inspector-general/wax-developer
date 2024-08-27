@@ -213,8 +213,8 @@ export default [
                         ],
                     },
                     {
-                        text: 'SSI verrification',
-                        link: '/build/tutorials/server-side-veritification/',
+                        text: 'SS verification',
+                        link: '/build/tutorials/server-side-verification/',
                     },
                     {text: 'How To Explore WAX Blockchain', link: '/build/tutorials/howto_blockexplorer'}
                 ],
@@ -292,7 +292,8 @@ export default [
                     {text: 'How To Route API Queries', link: '/operate/wax-infrastructure/wax-route-specific-api-queries'},
                     {text: 'Set Up Websocket Support on a Load Balancer', link: '/operate/wax-infrastructure/wax-websocket-load-balancer'},
                     {text: 'Set Up Full/Partial History Nodes (Hyperion)', link: '/operate/wax-infrastructure/hyperion-guide'},
-                    {text: 'Set Up an Atomic API Node', link: '/operate/wax-infrastructure/atomic-api-guide'}
+                    {text: 'Set Up an Atomic API Node', link: '/operate/wax-infrastructure/atomic-api-guide'},
+                    {text: 'Securely peer with WireGuard', link: '/operate/wax-infrastructure/wax-securely-peer-with-wireguard'}
                 ],
             },
             {
@@ -301,7 +302,7 @@ export default [
                 collapsed: true,
                 items: [
                     {text: 'Introduction', link: '/operate/wax-hyperion/wax-intro-to-hyperion-full-history'},
-                    {text: 'Hyperion Conmponents', link: '/operate/wax-hyperion/wax-build-hyperion-software-components'},
+                    {text: 'Hyperion Components', link: '/operate/wax-hyperion/wax-build-hyperion-software-components'},
                     {text: 'Configure Hyperion Components', link: '/operate/wax-hyperion/wax-config-hyperion-software-components'},
                     {text: 'Running Hyperion', link: '/operate/wax-hyperion/wax-running-hyperion'},
                     {text: 'Set Up Hyperion Cluster', link: '/operate/wax-hyperion/wax-clustering-elasticsearch-for-hyperion'},
