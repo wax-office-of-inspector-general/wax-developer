@@ -3,6 +3,8 @@ title: Creating a WAX Price Oracle Service via Bash or Python Script
 original: https://bountyblok.medium.com/creating-a-wax-price-oracle-service-via-bash-or-python-script-fd0ab41ea255
 ---
 
+# Creating a WAX Price Oracle Service via Bash or Python Script
+
 ## Introduction
 At bountyblok, we’ve tackled the challenge of creating a reliable WAX Price Oracle service, and we want to share our journey with you. In this article, we’ll walk you through how we used Bash and Python scripts to fetch cryptocurrency prices and push them to the WAX blockchain. We’ll start with a quick and straightforward solution, then dive into advanced features like secure wallet password handling, failure alerts, and API redundancy. Ensuring that these prices are accurately published on-chain is crucial for apps and exchanges, and we’ll show you how we made it happen.
 
