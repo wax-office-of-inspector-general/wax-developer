@@ -293,7 +293,7 @@ export default [
                     {text: 'Set Up Websocket Support on a Load Balancer', link: '/operate/wax-infrastructure/wax-websocket-load-balancer'},
                     {text: 'Set Up Full/Partial History Nodes (Hyperion)', link: '/operate/wax-infrastructure/hyperion-guide'},
                     {text: 'Set Up an Atomic API Node', link: '/operate/wax-infrastructure/atomic-api-guide'},
-                    {text: 'Set Up an Atomic API Node', link: '/operate/wax-infrastructure/wax-securely-peer-with-wireguard'}
+                    {text: 'Securely peer with WireGuard', link: '/operate/wax-infrastructure/wax-securely-peer-with-wireguard'}
                 ],
             },
             {
