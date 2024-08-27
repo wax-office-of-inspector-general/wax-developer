@@ -3,6 +3,8 @@ title: Monitor and Unregister WAX Producer with systemd while you Sleep
 original: https://bountyblok.medium.com/monitor-and-unregister-wax-producer-with-systemd-while-you-sleep-a97b45a45449
 ---
 
+# Monitor and Unregister WAX Producer with systemd while you Sleep
+
 ![image](https://github.com/user-attachments/assets/3270300b-e1ac-4c20-919a-ec1c42fbc5d6)
 
 ## Introduction
