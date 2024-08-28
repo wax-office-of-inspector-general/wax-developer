@@ -3,6 +3,8 @@ title: WaxJS Temporary Accounts
 order: 5
 ---
 
+# WaxJS Temporary Accounts
+
 **MyCloudWallet** allows the creation of temporary accounts that do not require the payment of the account creation fee. However, these accounts do not exist on the blockchain until this payment is made. This system is very useful for applications to create user accounts without the users having to pay the account creation fee directly or have prior knowledge of cryptocurrency purchases, transactions, etc.
 
 Users can follow the normal account creation process, but when they reach the step of paying the creation fee, they can cancel and close the popup. From that moment on, the account will exist within the **MyCloudWallet** context, but not on the blockchain. This temporary account can be used to log in to applications that have **MyCloudWallet** integrated and allow the use of temporary accounts.

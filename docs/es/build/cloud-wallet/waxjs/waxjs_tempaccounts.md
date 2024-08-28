@@ -3,6 +3,8 @@ title: Cuentas temporales de WaxJS
 order: 5
 ---
 
+# Cuentas temporales con WaxJS
+
 **MyCloudWallet** permite la creación de cuentas temporales que no requieren el pago de la comisión de creación de cuenta. Sin embargo, estas cuentas no existen en la blockchain hasta que se realiza dicho pago. Este sistema es muy útil para que las aplicaciones puedan crear cuentas de usuario sin que los usuarios tengan que pagar la comisión de creación de cuenta directamente o tener conocimientos previos sobre la compra de criptomonedas, transacciones, etc.
 
 Los usuarios pueden seguir el proceso normal de creación de cuenta, pero al llegar al paso de pagar la cuota de creación, pueden cancelar y cerrar el popup. A partir de ese momento, la cuenta existirá en el contexto de **MyCloudWallet**, pero no en la blockchain. Esta cuenta temporal podrá utilizarse para iniciar sesión en aplicaciones que tengan integrado **MyCloudWallet** y que permitan el uso de cuentas temporales.
