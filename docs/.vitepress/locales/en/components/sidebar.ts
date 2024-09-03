@@ -160,7 +160,7 @@ export default [
                         items: [
                             {text: 'How to make a game on WAX. General concepts', link: '/build/tutorials/howto-create_farming_game/Part1'},
                             {text: 'Creating a farmable object or item in AtomicAssets standard', link: '/build/tutorials/howto-create_farming_game/Part2'},
-                            {text: 'arming NFT creation on Atomic Hub', link:'/build/tutorials/howto-create_farming_game/Part3'},
+                            {text: 'Farming NFT creation on Atomic Hub', link:'/build/tutorials/howto-create_farming_game/Part3'},
                             {text: 'What are resources and tokens in our game creation process', link:'/build/tutorials/howto-create_farming_game/Part4'},
                             {text: 'NFT Staking', link:'/build/tutorials/howto-create_farming_game/Part5'},
                             {text: 'Types of Farming and farming process', link:'/build/tutorials/howto-create_farming_game/Part6'},
