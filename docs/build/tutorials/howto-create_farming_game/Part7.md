@@ -1,5 +1,7 @@
-Part 7: Creating GUI for WAX game, staking and farming
-======================================================
+---
+title: Part 7. Creating GUI for WAX game, staking and farming
+order: 35
+---
 
 This article will walk you through connecting a wallet to the WAX blockchain, integrating it into a ReactJS interface, and reading data from a WAX smart contract table. We'll also cover the NFT staking process and how to claim rewards.  
 

@@ -129,6 +129,7 @@ export default [
               { text: 'Instalar waxjs', link: '/es/build/cloud-wallet/waxjs/waxjs_install' },
               { text: 'Guía de uso', link: '/es/build/cloud-wallet/waxjs/waxjs_use' },
               { text: 'Demostración', link: '/es/build/cloud-wallet/waxjs/waxjs_demo' },
+              { text: 'Cuentas Temporales', link: '/es/build/cloud-wallet/waxjs/waxjs_tempaccounts' },
             ],
           },
           {

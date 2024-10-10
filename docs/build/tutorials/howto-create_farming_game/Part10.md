@@ -1,5 +1,7 @@
-Part 10: Implementing avatars in WAX games
-==========================================
+---
+title: Part 10. Implementing avatars in WAX games
+order: 50
+---
 
 This article will explore how to create avatars and their equipment, focusing on the customization and personalization aspects that enhance player experience. By detailing the process of designing avatars and selecting their gear, we aim to provide insights into building more engaging and interactive game elements, allowing players to deeply immerse themselves in the game world with characters that reflect their style and preferences. 
 ### 1. Creating categories

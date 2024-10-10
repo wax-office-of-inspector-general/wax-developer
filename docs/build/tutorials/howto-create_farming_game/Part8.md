@@ -1,5 +1,7 @@
-Part 8: Upgrades of game items in WAX games
-===========================================
+---
+title: Part 8. Upgrades of game items in WAX games
+order: 40
+---
 
 In previous articles, we explored how to farm resources using our NFT. Now, we'll delve into upgrading items for more efficient resource mining. Upgrading items involves enhancing their capabilities, making them more effective at mining resources. This process is key to progressing and achieving higher efficiency in the game. We'll start by adding the necessary code to implement item upgrades, focusing on improving the performance of our NFTs for resource collection.
 

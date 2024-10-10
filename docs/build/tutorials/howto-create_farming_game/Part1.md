@@ -1,5 +1,7 @@
-Part 1. How to make a game on WAX. General concepts.
-====================================================
+---
+title: Part 1. How to create a farming game on WAX. General concepts.
+order: 5
+---
 
 Hey WAX game makers! Ready for a step-by-step guide to building your own game on WAX? Let’s dive in:
 

@@ -1,5 +1,7 @@
-Part 6. Types of Farming and farming process
-============================================
+---
+title: Part 6. Types of Farming and farming process
+order: 30
+---
 
 In this article, we'll break down the resource farming process. Building on the staking code from our previous article, we'll introduce additional tables and functions specific to resource farming.
 

@@ -1,5 +1,7 @@
-Part 5. NFT Staking
-===================
+---
+title: Part 5. NFT Staking
+order: 25
+---
 
 Today, we're diving into staking NFTs in our game's smart contract. This strategy helps manage market prices by locking NFTs in the contract. Imagine setting an unstaking period of 3 to 30 days for added control.
 

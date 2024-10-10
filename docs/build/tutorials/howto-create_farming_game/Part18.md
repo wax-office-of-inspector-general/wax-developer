@@ -1,11 +1,13 @@
-Part 18: GUI for quests and leaderboards
-===
+---
+title: Part 18. GUI for quests and leaderboards
+order: 90
+---
 
 In our previous article, we looked at swaps, token stakes, and governance mechanisms.
 
 Building on that foundation, in this article we will also explore leaderboard functionality and delve into quests in the context of the game ecosystem.
 
-**Leaderboard**s
+**Leaderboard**
 ----------------
 
 A leaderboard is essential for tracking and displaying the performance and progress of participants in a gaming environment. It serves as a visual representation of rankings, motivating players to strive for higher positions and encouraging healthy competition.

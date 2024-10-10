@@ -1,5 +1,7 @@
-Part 9: Blends of NFTs for WAX games
-====================================
+---
+title: Part 9. Blends of NFTs for WAX games
+order: 45
+---
 
 In this article, following our previous one  on upgrading farming items, we're diving into creating blends. Blending involves combining specific items to create new or enhanced ones within the game. This feature adds depth and strategy to the game, offering players the opportunity to craft unique items with potentially higher value or utility. 
 

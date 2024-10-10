@@ -1,5 +1,7 @@
-Part 17: Quest systems in game
-===
+---
+title: Part 17. Quest systems in game
+order: 85
+---
 
 In this article, we will add a quest system that will allow us to engage more with the players in our games.
 
