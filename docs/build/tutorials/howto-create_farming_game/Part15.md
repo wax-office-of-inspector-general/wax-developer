@@ -1,5 +1,7 @@
-Part 15: GUI for swaps, staking and governance
-===
+---
+title: Part 15. GUI for swaps, staking and governance
+order: 75
+---
 
 In addition to the previous articles integrating it into a ReactJS interface, and reading data from a WAX smart contract table, we will also dive deeper into swaps. We will look at the use of WAX tokens or NFTs in games and how user/player governance works.
 

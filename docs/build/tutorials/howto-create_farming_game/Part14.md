@@ -1,5 +1,7 @@
-Part 14: Governance in games
-===
+---
+title: Part 14. Governance in games
+order: 70
+---
 
 In this article, we will develop a voting system that will allow users to provide developers with suggestions or change the value of game changes.
 

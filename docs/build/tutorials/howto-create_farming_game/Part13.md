@@ -1,5 +1,7 @@
-Part 13: Token Staking and Voting in games
-===
+---
+title: Part 13. Token Staking and Voting in games
+order: 65
+---
 
 To delve into token staking and its role in governance, we begin by setting up a new table to manage the staking process. This table will track the staked tokens and their corresponding voting rights, crucial for enabling players to participate in key decision-making processes, such as changing resource-to-token ratios in swaps. This functionality not only deepens player engagement but also decentralizes game governance, empowering players to have a say in the game's economic strategies.
 

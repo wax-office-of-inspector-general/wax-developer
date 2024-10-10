@@ -157,10 +157,36 @@ export default [
                     {
                         text: 'Tic-Tac-Toe Game',
                         link: '/build/tutorials/tic-tac-toe-game/',
+                        collapsed: true,
                         items: [
                             {text: 'Game Client', link: '/build/tutorials/tic-tac-toe-game/client'},
                             {text: 'Smart Contract', link: '/build/tutorials/tic-tac-toe-game/smart-contract'}
                         ],
+                    },
+                    {
+                      text: 'Create Farming Games',
+                      link: '/build/tutorials/howto-create_farming_game/',
+                      collapsed: true,
+                      items: [
+                        {text: 'General Concepts', link: '/build/tutorials/howto-create_farming_game/Part1'},
+                        {text: 'Create a Farmable Object', link: '/build/tutorials/howto-create_farming_game/Part2'},
+                        {text: 'NFT Creation', link: '/build/tutorials/howto-create_farming_game/Part3'},
+                        {text: 'What are Resources', link: '/build/tutorials/howto-create_farming_game/Part4'},
+                        {text: 'NFT Staking', link: '/build/tutorials/howto-create_farming_game/Part5'},
+                        {text: 'Farming Process', link: '/build/tutorials/howto-create_farming_game/Part6'},
+                        {text: 'Creating the GUI', link: '/build/tutorials/howto-create_farming_game/Part7'},
+                        {text: 'Upgrading Items', link: '/build/tutorials/howto-create_farming_game/Part8'},
+                        {text: 'NFT Blends', link: '/build/tutorials/howto-create_farming_game/Part9'},
+                        {text: 'Avatars', link: '/build/tutorials/howto-create_farming_game/Part10'},
+                        {text: 'UI for Blends', link: '/build/tutorials/howto-create_farming_game/Part11'},
+                        {text: 'Token Swaps', link: '/build/tutorials/howto-create_farming_game/Part12'},
+                        {text: 'Token Staking and Voting', link: '/build/tutorials/howto-create_farming_game/Part13'},
+                        {text: 'Governance', link: '/build/tutorials/howto-create_farming_game/Part14'},
+                        {text: 'GUI for Swaps/Staking/Governance', link: '/build/tutorials/howto-create_farming_game/Part15'},
+                        {text: 'Leaderboards', link: '/build/tutorials/howto-create_farming_game/Part16'},
+                        {text: 'Quest System', link: '/build/tutorials/howto-create_farming_game/Part17'},
+                        {text: 'GUI for Quest/Leaderboards', link: '/build/tutorials/howto-create_farming_game/Part18'},
+                      ],
                     },
                     {
                       text: 'Create/Issue Fungible Tokens',
@@ -183,6 +209,7 @@ export default [
                     {
                         text: 'SimpleAssets Guide',
                         link: '/build/tutorials/howto_simpleassets/',
+                        collapsed: true,
                         items: [
                             {text: 'Structure', link: '/build/tutorials/howto_simpleassets/nft_basics'},
                             {text: 'Mint NFT', link: '/build/tutorials/howto_simpleassets/nft_use'},
@@ -198,6 +225,7 @@ export default [
                     {
                         text: 'Create RNG Contract',
                         link: '/build/tutorials/create-wax-rng-smart-contract/',
+                        collapsed: true,
                         items: [
                             {text: 'RNG Basics', link: '/build/tutorials/create-wax-rng-smart-contract/rng_basics'},
                             {text: 'Calling RNG Contract', link: '/build/tutorials/create-wax-rng-smart-contract/rng_sample'},
@@ -208,6 +236,7 @@ export default [
                     {
                         text: 'WharfKit',
                         link: '/build/tutorials/wharfkit/',
+                        collapsed: true,
                         items: [
                           {text: 'Wharfkit in React', link: '/build/tutorials/wharfkit/howto_react'},
                           {text: 'Wharfkit Multi-Session', link: '/build/tutorials/wharfkit/multisession'},
@@ -217,7 +246,10 @@ export default [
                         text: 'SS verification',
                         link: '/build/tutorials/server-side-verification/',
                     },
-                    {text: 'How To Explore WAX Blockchain', link: '/build/tutorials/howto_blockexplorer'}
+                    {
+                        text: 'How To Explore WAX Blockchain', 
+                        link: '/build/tutorials/howto_blockexplorer'
+                    }
                 ],
             },
             {

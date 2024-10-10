@@ -1,5 +1,8 @@
-Part 3. Farming NFT creation on Atomic Hub
-==========================================
+---
+title: Part 3. Farming NFT creation on Atomic Hub
+order: 15
+---
+
 In our last article, we walked you through creating a collection and item. Now, let's step up the game and focus on crafting a farming item.
 
 ### 3.1 Creating a Category (Scheme) for NFTs

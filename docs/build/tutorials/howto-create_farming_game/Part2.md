@@ -1,5 +1,7 @@
-Part 2. Creating a farmable object or item in AtomicAssets standard.
-====================================================================
+---
+title: Part 2. Creating a farmable object or item in AtomicAssets standard.
+order: 10
+---
 
 This is next article regarding game creation series, you can follow first [introduction one](https://dapplica.io/blog/wax/part-1-how-to-make-a-game-on-wax-general-concepts) if you didn’t read it yet.
 
