@@ -288,6 +288,7 @@ export default [
                     {text: 'How To Mitigate API Abuse', link: '/operate/wax-infrastructure/wax-mainnet-node-mitigate-abuse'},
                     {text: 'WAX Files and Folders', link: '/operate/wax-infrastructure/working-with-wax-software-files'},
                     {text: 'Optimising RAM and Disk', link: '/operate/wax-infrastructure/wax-ram-disk-utilisation'},
+                    {text: 'Optimise Disk Utilisation with ZFS Deduplication', link: '/operate/wax-infrastructure/wax-optimise-disk-utilisation-zfs-dedup'},
                     {text: 'Custom Permissions', link: '/operate/wax-infrastructure/wax-account-custom-permissions'},
                     {text: 'How To Route API Queries', link: '/operate/wax-infrastructure/wax-route-specific-api-queries'},
                     {text: 'Set Up Websocket Support on a Load Balancer', link: '/operate/wax-infrastructure/wax-websocket-load-balancer'},
