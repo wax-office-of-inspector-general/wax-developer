@@ -188,6 +188,10 @@ export default [
                         ],
                     },
                     {
+                        text: 'Create/Issue Fungible Tokens',
+                        link: '/build/tutorials/create-issue-token/'
+                    },
+                    {
                         text: 'AtomicAssets Guide',
                         link: '/build/tutorials/howto_atomicassets/',
                         collapsed: true,
@@ -233,6 +237,10 @@ export default [
                           {text: 'Wharfkit in React', link: '/build/tutorials/wharfkit/howto_react'},
                           {text: 'Wharfkit Multi-Session', link: '/build/tutorials/wharfkit/multisession'},
                         ],
+                    },
+                    {
+                        text: 'SS verification',
+                        link: '/build/tutorials/server-side-verification/',
                     },
                     {text: 'How To Explore WAX Blockchain', link: '/build/tutorials/howto_blockexplorer'}
                 ],
@@ -302,6 +310,7 @@ export default [
                     {text: 'Set Up a State-Hisory Node', link: '/operate/wax-infrastructure/wax-mainnet-ship-node'},
                     {text: 'Using Snapshots', link: '/operate/wax-infrastructure/wax-snapshots'},
                     {text: 'Set Up a Load Balancer', link: '/operate/wax-infrastructure/wax-mainnet-node-load-balancer'},
+                    {text: 'Visualise Metrics from a WAX Load Balancer', link: '/operate/wax-infrastructure/wax-visualise-load-balancer-metrics'},
                     {text: 'How To Mitigate API Abuse', link: '/operate/wax-infrastructure/wax-mainnet-node-mitigate-abuse'},
                     {text: 'WAX Files and Folders', link: '/operate/wax-infrastructure/working-with-wax-software-files'},
                     {text: 'Optimising RAM and Disk', link: '/operate/wax-infrastructure/wax-ram-disk-utilisation'},
