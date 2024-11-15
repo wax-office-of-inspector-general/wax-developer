@@ -155,6 +155,32 @@ export default [
                 collapsed: true,
                 items: [
                     {
+                        text: 'How to create farming game',
+                        link: '/build/tutorials/howto-create_farming_game/',
+                        collapsed: true,
+                        items: [
+                            {text: 'How to make a game on WAX. General concepts', link: '/build/tutorials/howto-create_farming_game/Part1'},
+                            {text: 'Creating a farmable object or item in AtomicAssets standard', link: '/build/tutorials/howto-create_farming_game/Part2'},
+                            {text: 'Farming NFT creation on Atomic Hub', link:'/build/tutorials/howto-create_farming_game/Part3'},
+                            {text: 'What are resources and tokens in our game creation process', link:'/build/tutorials/howto-create_farming_game/Part4'},
+                            {text: 'NFT Staking', link:'/build/tutorials/howto-create_farming_game/Part5'},
+                            {text: 'Types of Farming and farming process', link:'/build/tutorials/howto-create_farming_game/Part6'},
+                            {text: 'Creating GUI for WAX game, staking and farming', link:'/build/tutorials/howto-create_farming_game/Part7'},
+                            {text: 'Upgrades of game items in WAX games', link:'/build/tutorials/howto-create_farming_game/Part8'},
+                            {text: 'Blends of NFTs for WAX games', link:'/build/tutorials/howto-create_farming_game/Part9'},
+                            {text: 'Implementing avatars in WAX games', link:'/build/tutorials/howto-create_farming_game/Part10'},
+                            {text: 'UI for Blends, upgrades and avatars', link:'/build/tutorials/howto-create_farming_game/Part11'},
+                            {text: 'Token and resource swaps', link:'/build/tutorials/howto-create_farming_game/Part12'},
+                            {text: 'Token Staking and Voting in games', link:'/build/tutorials/howto-create_farming_game/Part13'},
+                            {text: 'Governance in games', link:'/build/tutorials/howto-create_farming_game/Part14'},
+                            {text: 'GUI for swaps, staking and governance', link:'/build/tutorials/howto-create_farming_game/Part15'},
+                            {text: 'Leaderboards in games', link:'/build/tutorials/howto-create_farming_game/Part16'},
+                            {text: 'Quest systems in game', link:'/build/tutorials/howto-create_farming_game/Part17'},
+                            {text: 'GUI for quests and leaderboards', link:'/build/tutorials/howto-create_farming_game/Part18'}
+                        ]
+                    },
+
+                    {
                         text: 'Tic-Tac-Toe Game',
                         link: '/build/tutorials/tic-tac-toe-game/',
                         collapsed: true,
@@ -162,35 +188,6 @@ export default [
                             {text: 'Game Client', link: '/build/tutorials/tic-tac-toe-game/client'},
                             {text: 'Smart Contract', link: '/build/tutorials/tic-tac-toe-game/smart-contract'}
                         ],
-                    },
-                    {
-                      text: 'Create Farming Games',
-                      link: '/build/tutorials/howto-create_farming_game/',
-                      collapsed: true,
-                      items: [
-                        {text: 'General Concepts', link: '/build/tutorials/howto-create_farming_game/Part1'},
-                        {text: 'Create a Farmable Object', link: '/build/tutorials/howto-create_farming_game/Part2'},
-                        {text: 'NFT Creation', link: '/build/tutorials/howto-create_farming_game/Part3'},
-                        {text: 'What are Resources', link: '/build/tutorials/howto-create_farming_game/Part4'},
-                        {text: 'NFT Staking', link: '/build/tutorials/howto-create_farming_game/Part5'},
-                        {text: 'Farming Process', link: '/build/tutorials/howto-create_farming_game/Part6'},
-                        {text: 'Creating the GUI', link: '/build/tutorials/howto-create_farming_game/Part7'},
-                        {text: 'Upgrading Items', link: '/build/tutorials/howto-create_farming_game/Part8'},
-                        {text: 'NFT Blends', link: '/build/tutorials/howto-create_farming_game/Part9'},
-                        {text: 'Avatars', link: '/build/tutorials/howto-create_farming_game/Part10'},
-                        {text: 'UI for Blends', link: '/build/tutorials/howto-create_farming_game/Part11'},
-                        {text: 'Token Swaps', link: '/build/tutorials/howto-create_farming_game/Part12'},
-                        {text: 'Token Staking and Voting', link: '/build/tutorials/howto-create_farming_game/Part13'},
-                        {text: 'Governance', link: '/build/tutorials/howto-create_farming_game/Part14'},
-                        {text: 'GUI for Swaps/Staking/Governance', link: '/build/tutorials/howto-create_farming_game/Part15'},
-                        {text: 'Leaderboards', link: '/build/tutorials/howto-create_farming_game/Part16'},
-                        {text: 'Quest System', link: '/build/tutorials/howto-create_farming_game/Part17'},
-                        {text: 'GUI for Quest/Leaderboards', link: '/build/tutorials/howto-create_farming_game/Part18'},
-                      ],
-                    },
-                    {
-                      text: 'Create/Issue Fungible Tokens',
-                      link: '/build/tutorials/create-issue-token/'
                     },
                     {
                         text: 'AtomicAssets Guide',
@@ -321,6 +318,7 @@ export default [
                     {text: 'How To Mitigate API Abuse', link: '/operate/wax-infrastructure/wax-mainnet-node-mitigate-abuse'},
                     {text: 'WAX Files and Folders', link: '/operate/wax-infrastructure/working-with-wax-software-files'},
                     {text: 'Optimising RAM and Disk', link: '/operate/wax-infrastructure/wax-ram-disk-utilisation'},
+                    {text: 'Optimise Disk Utilisation with ZFS Deduplication', link: '/operate/wax-infrastructure/wax-optimise-disk-utilisation-zfs-dedup'},
                     {text: 'Custom Permissions', link: '/operate/wax-infrastructure/wax-account-custom-permissions'},
                     {text: 'How To Route API Queries', link: '/operate/wax-infrastructure/wax-route-specific-api-queries'},
                     {text: 'Set Up Websocket Support on a Load Balancer', link: '/operate/wax-infrastructure/wax-websocket-load-balancer'},
