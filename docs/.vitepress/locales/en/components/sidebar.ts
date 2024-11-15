@@ -305,6 +305,7 @@ export default [
                     {text: 'How To Mitigate API Abuse', link: '/operate/wax-infrastructure/wax-mainnet-node-mitigate-abuse'},
                     {text: 'WAX Files and Folders', link: '/operate/wax-infrastructure/working-with-wax-software-files'},
                     {text: 'Optimising RAM and Disk', link: '/operate/wax-infrastructure/wax-ram-disk-utilisation'},
+                    {text: 'Optimise Disk Utilisation with ZFS Deduplication', link: '/operate/wax-infrastructure/wax-optimise-disk-utilisation-zfs-dedup'},
                     {text: 'Custom Permissions', link: '/operate/wax-infrastructure/wax-account-custom-permissions'},
                     {text: 'How To Route API Queries', link: '/operate/wax-infrastructure/wax-route-specific-api-queries'},
                     {text: 'Set Up Websocket Support on a Load Balancer', link: '/operate/wax-infrastructure/wax-websocket-load-balancer'},
@@ -325,6 +326,10 @@ export default [
                     {text: 'Configure Hyperion Components', link: '/operate/wax-hyperion/wax-config-hyperion-software-components'},
                     {text: 'Running Hyperion', link: '/operate/wax-hyperion/wax-running-hyperion'},
                     {text: 'Set Up Hyperion Cluster', link: '/operate/wax-hyperion/wax-clustering-elasticsearch-for-hyperion'},
+                    {text: 'Rectify Missing Blocks', link: '/operate/wax-hyperion/wax-rectify-missing-blocks-in-hyperion'},
+                    {text: 'History Indexer Scaling', link: '/operate/wax-hyperion/wax-hyperion-indexer-scaling'},
+                    {text: 'Streaming with a Load Balancer', link: '/operate/wax-hyperion/wax-hyperion-streaming-load-balancer'},
+                    {text: 'Repair Indexed Data', link: '/operate/wax-hyperion/wax-hyperion-repair-indexed-data'}
                 ],
             },
             {
