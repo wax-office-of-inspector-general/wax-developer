@@ -1,5 +1,8 @@
-Part 4. What are resources and tokens in our game creation process.
-===================================================================
+---
+title: Part 4. What are resources and tokens in our game creation process.
+order: 20
+---
+
 In this article, we're diving into two game-changers: resources and tokens.
 
 First up, resources. Think of them as the nuts and bolts of your game's economy. They're the materials and items players mine, produce, or nab during gameplay. Each resource comes with its own flavor -- rarity, crafting abilities, and ways to interact within the game.

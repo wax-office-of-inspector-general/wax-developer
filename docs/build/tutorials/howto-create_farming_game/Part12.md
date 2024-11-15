@@ -1,5 +1,7 @@
-Part 12: Token and resource swaps
-===
+---
+title: Part 12. Token and resource swaps
+order: 60
+---
 
 In this article, we're building on previous discussions about upgrading items by introducing a method to exchange resources for tokens. We'll add a new table to track resources, where each entry includes a `key_id` (numerical ID for the resource), `resource_name`, and a `ratio` defining how many resources convert to one token. For instance, a ratio of 25 means 100 units of wood would exchange for 4 tokens. We'll also integrate the standard `eosio.token` contract, previously covered, to handle these transactions.
 

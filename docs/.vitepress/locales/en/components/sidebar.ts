@@ -129,6 +129,7 @@ export default [
                             {text: 'Install WaxJS', link: '/build/cloud-wallet/waxjs/waxjs_install'},
                             {text: 'Use WaxJS', link: '/build/cloud-wallet/waxjs/waxjs_use'},
                             {text: 'WaxJS Demo', link: '/build/cloud-wallet/waxjs/waxjs_demo'},
+                            {text: 'Temp Accounts', link: '/build/cloud-wallet/waxjs/waxjs_tempaccounts'}
                         ],
                     },
                     {
@@ -182,14 +183,11 @@ export default [
                     {
                         text: 'Tic-Tac-Toe Game',
                         link: '/build/tutorials/tic-tac-toe-game/',
+                        collapsed: true,
                         items: [
                             {text: 'Game Client', link: '/build/tutorials/tic-tac-toe-game/client'},
                             {text: 'Smart Contract', link: '/build/tutorials/tic-tac-toe-game/smart-contract'}
                         ],
-                    },
-                    {
-                        text: 'Create/Issue Fungible Tokens',
-                        link: '/build/tutorials/create-issue-token/'
                     },
                     {
                         text: 'AtomicAssets Guide',
@@ -208,6 +206,7 @@ export default [
                     {
                         text: 'SimpleAssets Guide',
                         link: '/build/tutorials/howto_simpleassets/',
+                        collapsed: true,
                         items: [
                             {text: 'Structure', link: '/build/tutorials/howto_simpleassets/nft_basics'},
                             {text: 'Mint NFT', link: '/build/tutorials/howto_simpleassets/nft_use'},
@@ -223,6 +222,7 @@ export default [
                     {
                         text: 'Create RNG Contract',
                         link: '/build/tutorials/create-wax-rng-smart-contract/',
+                        collapsed: true,
                         items: [
                             {text: 'RNG Basics', link: '/build/tutorials/create-wax-rng-smart-contract/rng_basics'},
                             {text: 'Calling RNG Contract', link: '/build/tutorials/create-wax-rng-smart-contract/rng_sample'},
@@ -233,6 +233,7 @@ export default [
                     {
                         text: 'WharfKit',
                         link: '/build/tutorials/wharfkit/',
+                        collapsed: true,
                         items: [
                           {text: 'Wharfkit in React', link: '/build/tutorials/wharfkit/howto_react'},
                           {text: 'Wharfkit Multi-Session', link: '/build/tutorials/wharfkit/multisession'},
@@ -242,7 +243,10 @@ export default [
                         text: 'SS verification',
                         link: '/build/tutorials/server-side-verification',
                     },
-                    {text: 'How To Explore WAX Blockchain', link: '/build/tutorials/howto_blockexplorer'}
+                    {
+                        text: 'How To Explore WAX Blockchain', 
+                        link: '/build/tutorials/howto_blockexplorer'
+                    }
                 ],
             },
             {

@@ -1,5 +1,7 @@
-Part 11: UI for Blends, upgrades and avatars
-============================================
+---
+title: Part 11. UI for Blends, upgrades and avatars
+order: 55
+---
 
 Building on our ReactJS and WAX smart contract interaction guide, this article advances our application's development. We'll delve into the intricacies of blends and workspace upgrades, alongside the necessary tools. Additionally, guidance will be provided on interface actions in sync with our smart contract, enhancing the application's functionality and user experience.
 

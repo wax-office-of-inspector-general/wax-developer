@@ -1,5 +1,7 @@
-Part 16: Leaderboards in games
-===
+---
+title: Part 16. Leaderboards in games
+order: 80
+---
 
 In this article, we will analyze the creation of leaderboards and consider the implementation of a leaderboard for user resources and their overall mining rate.
 
