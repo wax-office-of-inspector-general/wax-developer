@@ -240,7 +240,7 @@ export default [
                     },
                     {
                         text: 'SS verification',
-                        link: '/build/tutorials/server-side-verification/',
+                        link: '/build/tutorials/server-side-verification',
                     },
                     {text: 'How To Explore WAX Blockchain', link: '/build/tutorials/howto_blockexplorer'}
                 ],
