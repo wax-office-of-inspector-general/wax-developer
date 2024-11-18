@@ -342,7 +342,8 @@ export default [
                     {text: 'Rectify Missing Blocks', link: '/operate/wax-hyperion/wax-rectify-missing-blocks-in-hyperion'},
                     {text: 'History Indexer Scaling', link: '/operate/wax-hyperion/wax-hyperion-indexer-scaling'},
                     {text: 'Streaming with a Load Balancer', link: '/operate/wax-hyperion/wax-hyperion-streaming-load-balancer'},
-                    {text: 'Repair Indexed Data', link: '/operate/wax-hyperion/wax-hyperion-repair-indexed-data'}
+                    {text: 'Repair Indexed Data', link: '/operate/wax-hyperion/wax-hyperion-repair-indexed-data'},
+                    {text: 'Using Data Tiers', link: '/operate/wax-hyperion/wax-hyperion-data-tiers'}
                 ],
             },
             {
