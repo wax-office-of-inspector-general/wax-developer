@@ -3,168 +3,125 @@ title: Part 2. Creating a farmable object or item in AtomicAssets standard.
 order: 10
 ---
 
-This is next article regarding game creation series, you can follow first [introduction one](https://dapplica.io/blog/wax/part-1-how-to-make-a-game-on-wax-general-concepts) if you didn’t read it yet.
+This is the next article in the game creation series. You can follow the first [introduction one](/build/tutorials/howto-create_farming_game/Part1) if you haven’t read it yet.
 
-Play-to-Earn (P2E) gaming is taking the web3 and blockchain world by storm, redefining how players interact with games. At the forefront? The WAX blockchain. It’s not just about virtual assets; it’s a hub for profitable farming and trading unique NFTs. WAX is where gaming meets earning, blending fun with financial potential.”
+Play-to-Earn (P2E) gaming is taking the web3 and blockchain world by storm, redefining how players interact with games. At the forefront? The WAX blockchain. It’s not just about virtual assets; it’s a hub for profitable farming and trading unique NFTs. WAX is where gaming meets earning, blending fun with financial potential.
 
-**Step 1: Crafting Your NFT Collection on WAX**
+### Step 1: Crafting Your NFT Collection on WAX
 
 Kicking off your NFT collection? Start with a bang by picking a killer theme. Space opera, historical epic, or a fantasy world – the sky’s the limit. Your choice should resonate with your audience. It’s all about creating an NFT universe that captivates and connects.
 
 ![](/public/assets/images/tutorials/howto-create_farming_game/part2/collection_creation-980x517.png)
+*Collection creation screen on Atomic Hub*
 
-Collection creation screen on Atomic Hub
+1. **Collection Name**
+   - Time to brand your NFT collection! Pick a name that’s unique and captures your project’s spirit. Keep it within 12 characters, mixing numbers (1-5) and letters. No spaces allowed. Example: `galacticgame`.
 
-**1\. Collection Name**
+2. **Display Name**
+   - This is what players see. Choose something catchy that embodies your game’s vibe. Example: `Galactic Game`.
 
-Time to brand your NFT collection! Pick a name that’s unique and captures your project’s spirit. Keep it within 12 characters, mixing numbers and letters. No spaces allowed. Like ‘galacticgame’.
+3. **Website URL**
+   - Add your website link where players and investors can dive deeper into your world. For instance: [https://wax.io](https://wax.io).
 
-#### 2\. Display Name
+4. **Market Fee**
+   - Decide on the trading commission for your game’s platform. Let’s say, 2% for trading your NFTs.
 
-This is what players see. Choose something catchy that embodies your game’s vibe. Example: ‘Galactic Game’.
+5. **Collection Description**
+   - Get creative with your collection’s description. In 3000 characters or less, make it pop with your project’s main themes and ideas.
 
-#### 3\. Website URL
+6. **Collection Images**
+   - **Background Image**: Set the scene with a background image that mirrors your game’s mood and theme.
+   - **Logo Image**: Pick an iconic logo to represent your collection, making it instantly recognizable.
 
-Add your website link where players and investors can dive deeper into your world. For instance: https://wax.io.
-
-#### 4\. Market Fee
-
-Decide on the trading commission for your game’s platform. Let’s say, 2% for trading your NFTs.
-
-**5\. Collection Description**
-
-Get creative with your collection’s description. In 3000 characters or less, make it pop with your project’s main themes and ideas.
-
-#### 6\. Collection Images
-
-##### Background Image
-
-Set the scene with a background image that mirrors your game’s mood and theme.
-
-##### Logo Image
-
-Pick an iconic logo to represent your collection, making it instantly recognizable.
-
-#### 7\. Social Media
-
-Connect with your community. Add all your social links – Twitter, Medium, Facebook, GitHub, Discord, YouTube, Telegram.
+7. **Social Media**
+   - Connect with your community. Add all your social links – Twitter, Medium, Facebook, GitHub, Discord, YouTube, Telegram.
 
 These steps are your blueprint for crafting a standout NFT collection on WAX. Remember, every detail, from the name to socials, shapes your game’s appeal.
 
-**Step 2. Description of the Process of Creating NFT items on the WAX Testnet**
+### Step 2: Creating NFT Items on the WAX Testnet
 
-**2.1 creation of a category (scheme) for NFT**
+#### 2.1 Creating a Category (Scheme) for NFT
 
 ![](/public/assets/images/tutorials/howto-create_farming_game/part2/creatrschema1-980x500.png)
-
 ![](/public/assets/images/tutorials/howto-create_farming_game/part2/createschema2-980x504.png)
+*Schema creation screen in Atomic Hub*
 
-Schema creation screen in Atomic Hub
+We will have the following fields:
 
-We will have following fields:
+- **name**:
+  - Attribute type: *string*
+  - Description: Represents the name of the player or object being determined.
 
-**name:**
+- **img**:
+  - Attribute type: *image*
+  - Description: Corresponds to a visual representation or image associated with a player or object.
 
-Attribute type: string
+- **video**:
+  - Attribute type: *string*
+  - Description: Indicates any video content associated with a player or object that provides additional multimedia elements.
 
-Description: Represents the name of the player or object being determined.
+- **slots**:
+  - Attribute type: *uint8*
+  - Description: Shows the current number of available slots for resources, items, or other elements in the game.
 
-**img :**
+- **maxSlots**:
+  - Attribute type: *uint8*
+  - Description: Indicates the maximum number of slots that can be obtained or improved in the game.
 
-Attribute type: image
+- **level**:
+  - Attribute type: *uint8*
+  - Description: Indicates the level or rank of a player or object, indicating progress in the game.
 
-Description: Corresponds to a visual representation or image associated with a player or object.
+- **upgradable**:
+  - Attribute type: *bool*
+  - Description: A boolean value indicating whether a player or object can be improved or leveled up.
 
-**video:**
+- **rarity**:
+  - Attribute type: *string*
+  - Description: Describes the rarity level of a player or item, noting its uniqueness or rarity.
 
-Attribute type: string
+- **faction**:
+  - Attribute type: *string*
+  - Description: Represents the faction or group affiliation of a player or object in the game.
 
-Description: Indicates any video content associated with a player or object that provides additional multimedia elements.
+- **miningBoost**:
+  - Attribute type: *float*
+  - Description: Indicates any boost or bonus associated with loot related to a player or object.
 
-**slots:**
+- **staking**:
+  - Attribute type: *int32[]*
+  - Description: Calls the staking engine, providing information about the staking capabilities of a player or object.
 
-Attribute type: uint8
+- **stakeableResources**:
+  - Attribute type: *string[]*
+  - Description: Lists the types of resources that can be staked by a player or an object in the game.
 
-Description: Shows the current number of available slots for resources, items or other items in the game.
+#### 2.2 Creating Templates for NFT
 
-**maxSlots:**
-
-Attribute type: uint8
-
-Description: Indicates the maximum number of slots that can be obtained or improved in the game.
-
-**level:**
-
-Тип атрибуту: uint8
-
-Опис: Вказує на рівень чи ранг гравця чи об’єкта, вказуючи на прогрес в грі.
-
-**upgradable:**
-
-Attribute type: bool
-
-Description: A Boolean value indicating whether a player or object can be improved or leveled up.
-
-**rarity:**
-
-Attribute type: string
-
-Description: Describes the rarity level of a player or item, noting its uniqueness or rarity.
-
-**faction :**
-
-Attribute type: string
-
-Description: Represents the faction or group affiliation of a player or object in the game.
-
-**miningBoost:**
-
-Attribute type: float
-
-Description: Indicates any boost or bonus associated with loot associated with a player or object.
-
-**staking:**
-
-Attribute Type: int32\[\]
-
-Description: Calls the staking engine, providing information about the staking capabilities of a player or object.
-
-**stakeableResources:**
-
-Attribute Type: string\[\]
-
-Description: Lists the types of resources that can be placed by a player or an object in the game.
-
-**2.2 creation of Templates for NFT**
-
-First we need to choose a category (scheme)
+First, we need to choose a category (scheme):
 
 ![](/public/assets/images/tutorials/howto-create_farming_game/part2/selectschema-980x222.png)
+*Select schema for Template*
 
-Select schema for Template
-
-then we need enter all the data for our Template:
+Then we need to enter all the data for our Template:
 
 ![](/public/assets/images/tutorials/howto-create_farming_game/part2/CreateTemplate1-980x494.png)
+*Creating NFT Template via Atomic Hub*
 
-Creating NFT Template via Atomic Hub
-
-after successful creation, we can see the result, such as below
+After successful creation, we can see the result, as shown below:
 
 ![](/public/assets/images/tutorials/howto-create_farming_game/part2/templateCreated-1024x258.png)
+*Templates Created for Collection in Atomic Hub*
 
-Templates Created for Collection in Atomic Hub
+#### 2.3 Minting NFT
 
-**2.3 Mint NFT**
-
-So we need to choose a category (scheme) and a template:
+We need to choose a category (scheme) and a template:
 
 ![](/public/assets/images/tutorials/howto-create_farming_game/part2/createtemplate-result-980x476.png)
+*Minting new NFT at Atomic Hub*
 
-Minting new NFT at Atomic Hub
-
-then we enter whom to mint the NFT in Asset Receiver field and enter fields for NFT, if necessary:
+Then we enter whom to mint the NFT to in the Asset Receiver field and fill in the fields for the NFT, if necessary:
 
 ![](/public/assets/images/tutorials/howto-create_farming_game/part2/createtemplate3-1-980x481.png)
 
-This is a brief process of creating one of our main asset types in this series of articles. Now let’s proceed with another type of assets.
+This is a brief process of creating one of our main asset types in this series of articles. Now, let’s proceed with another type of asset.

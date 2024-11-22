@@ -1,60 +1,60 @@
 ---
-title: Part 10. Implementing avatars in WAX games
+title: Parte 10. Implementación de avatares en juegos WAX
 order: 50
 ---
 
-This article will explore how to create avatars and their equipment, focusing on the customization and personalization aspects that enhance player experience. By detailing the process of designing avatars and selecting their gear, we aim to provide insights into building more engaging and interactive game elements, allowing players to deeply immerse themselves in the game world with characters that reflect their style and preferences.
+Este artículo explorará cómo crear avatares y su equipo, enfocándose en los aspectos de personalización que mejoran la experiencia del jugador. Al detallar el proceso de diseño de avatares y la selección de sus accesorios, nuestro objetivo es brindar ideas para construir elementos de juego más atractivos e interactivos, permitiendo a los jugadores sumergirse profundamente en el mundo del juego con personajes que reflejen su estilo y preferencias.
 
-### 1. Creating categories
+### 1. Creación de categorías
 
-Creating an avatar category involves defining a character with specific characteristics, which can later be enhanced by equipping items. This foundational step allows for the customization of avatars, providing players with the ability to tailor characters to their play style and preferences, thus enriching the gaming experience by adding depth to character development and interaction within the game world.
+Crear una categoría de avatares implica definir un personaje con características específicas, que luego pueden ser mejoradas al equipar ítems. Este paso fundamental permite la personalización de los avatares, proporcionando a los jugadores la capacidad de adaptar los personajes a su estilo de juego y preferencias, enriqueciendo así la experiencia de juego al agregar profundidad al desarrollo e interacción del personaje dentro del mundo del juego.
 
 ![](/public/assets/images/tutorials/howto-create_farming_game/part10/image1.png)
 
-| Attribute Name | Attribute Type | Description                                      |
-|----------------|----------------|--------------------------------------------------|
-| name           | string         | Avatar’s name                                    |
-| description    | string         | Description of avatar’s lore and properties      |
-| img            | image          | Image of the avatar                              |
-| economic       | uint32         | Reduces the price of upgrade                     |
-| productivity   | uint32         | Increases mining rate                            |
-| vitality       | uint32         | Increases upgrade percentage                     |
-| bravery        | uint32         | Will affect quests                               |
-| diplomacy      | uint32         | Will affect interactions with other players      |
+| Nombre del Atributo | Tipo de Atributo | Descripción                                      |
+|---------------------|------------------|----------------------------------------------------|
+| name                | string           | Nombre del avatar                                  |
+| description         | string           | Descripción de la historia y propiedades del avatar |
+| img                 | image            | Imagen del avatar                                  |
+| economic            | uint32           | Reduce el costo de mejora                          |
+| productivity        | uint32           | Aumenta la tasa de extracción                      |
+| vitality            | uint32           | Incrementa el porcentaje de mejora                 |
+| bravery             | uint32           | Afecta a las misiones                              |
+| diplomacy           | uint32           | Afecta las interacciones con otros jugadores       |
 
-Table 1: Attributes of "avatar"
+Tabla 1: Atributos del "avatar"
 
-Creating a category for equipment items mirrors the process of avatar creation, with each piece of equipment also possessing distinct characteristics.
+Crear una categoría para los ítems de equipo refleja el proceso de creación de avatares, ya que cada pieza de equipo también posee características distintas.
 
 ![](/public/assets/images/tutorials/howto-create_farming_game/part10/image2.png)
 
-| Attribute Name | Attribute Type | Description                                           |
-|----------------|----------------|-------------------------------------------------------|
-| name           | string         | Item’s name                                           |
-| description    | string         | Description of item’s lore and properties             |
-| img            | image          | Image of the item                                     |
-| type           | string         | Represents the type of item (jewelry, flag, crown etc.)|
-| economic       | uint32         | Reduces the price of upgrade                          |
-| productivity   | uint32         | Increases mining rate                                 |
-| vitality       | uint32         | Increases upgrade percentage                          |
-| bravery        | uint32         | Will affect quests                                    |
-| diplomacy      | uint32         | Will affect interactions with other players           |
+| Nombre del Atributo | Tipo de Atributo | Descripción                                             |
+|---------------------|------------------|---------------------------------------------------------|
+| name                | string           | Nombre del ítem                                         |
+| description         | string           | Descripción de la historia y propiedades del ítem       |
+| img                 | image            | Imagen del ítem                                         |
+| type                | string           | Representa el tipo de ítem (joyería, bandera, corona, etc.)|
+| economic            | uint32           | Reduce el costo de mejora                                |
+| productivity        | uint32           | Aumenta la tasa de extracción                            |
+| vitality            | uint32           | Incrementa el porcentaje de mejora                       |
+| bravery             | uint32           | Afecta a las misiones                                    |
+| diplomacy           | uint32           | Afecta las interacciones con otros jugadores             |
 
-Table 2: Attributes of "equip"
+Tabla 2: Atributos del "equipo"
 
-### 2. Creating templates
+### 2. Creación de plantillas
 
-Here is an example of creating an avatar and an item of equipment.
+A continuación, se presenta un ejemplo de cómo crear un avatar y un ítem de equipo.
 
 ![](/public/assets/images/tutorials/howto-create_farming_game/part10/image3.png)
 
 ![](/public/assets/images/tutorials/howto-create_farming_game/part10/image4.png)
 
-The minting of avatars and equipment follows the processes outlined in previous articles, involving the creation and registration of these elements on the blockchain.
+La acuñación de avatares y equipo sigue los procesos descritos en artículos anteriores, que implican la creación y registro de estos elementos en la blockchain.
 
-### 3. Adding new tables to the contract code
+### 3. Agregar nuevas tablas al código del contrato
 
-Adding a table that links each player with their active avatar and equipped items is a strategic development step. This table not only tracks which avatars and items are currently in use but also facilitates interactions within the game, such as battles or resource collection, based on the equipped items’ attributes.
+Agregar una tabla que vincule a cada jugador con su avatar activo y los ítems equipados es un paso estratégico de desarrollo. Esta tabla no solo hace seguimiento de los avatares y ítems que están en uso actualmente, sino que también facilita las interacciones dentro del juego, como batallas o recolección de recursos, en función de los atributos de los ítems equipados.
 
 ```C
 struct [[eosio::table]] avatars_j
@@ -67,10 +67,10 @@ struct [[eosio::table]] avatars_j
   typedef multi_index< "avatarsc"_n, avatars_j> avatars_t;
 ```
 
-- **owner**: The account that puts on the avatar and equipment.
-- **equipment**: A vector of `uint64_t` identifiers that indicate the active avatar and equipment.
+- **owner**: La cuenta que usa el avatar y el equipo.
+- **equipment**: Un vector de identificadores `uint64_t` que indica el avatar y equipo activos.
 
-Creating a table for player stats involves aggregating the attributes of the avatar and any equipped items to reflect the player’s current capabilities within the game.
+Crear una tabla para las estadísticas del jugador implica agregar los atributos del avatar y los ítems equipados para reflejar las capacidades actuales del jugador dentro del juego.
 
 ```C
 struct [[eosio::table]] stats_j
@@ -83,12 +83,12 @@ struct [[eosio::table]] stats_j
   typedef multi_index<"stats"_n, stats_j> stats_t;
 ```
 
-- **owner**: An account whose characteristics are specified in the table.
-- **stats**: A map containing characteristics in the format `{"economic": 10, "bravery": 7, etc}`.
+- **owner**: Una cuenta cuyas características se especifican en la tabla.
+- **stats**: Un mapa que contiene las características en el formato `{"economic": 10, "bravery": 7, etc}`.
 
-### 4. The logic for setting avatars and equipment
+### 4. Lógica para establecer avatares y equipo
 
-The logic for setting avatars and equipment in the game involves players selecting their character and outfitting them with various items to enhance their stats.
+La lógica para establecer avatares y equipo en el juego implica que los jugadores seleccionen su personaje y lo equipen con varios ítems para mejorar sus estadísticas.
 
 ```C
  else if (memo == "set avatar")
@@ -103,7 +103,7 @@ The logic for setting avatars and equipment in the game involves players selecti
   }
 ```
 
-Incorporating two memo options into the `receive_asset_transfer()` function allows players to either set their avatar by transferring a single avatar NFT with the memo "set avatar" or equip up to four different items by specifying **"set equipment"**. The function then assigns the transferred avatar asset with the specified `asset_id` to the user's owner record, effectively updating the player's character or equipment setup in the game.
+Incorporar dos opciones de memo en la función `receive_asset_transfer()` permite a los jugadores establecer su avatar transfiriendo un NFT de avatar con el memo "set avatar" o equipar hasta cuatro ítems diferentes especificando **"set equipment"**. La función luego asigna el asset del avatar transferido con el `asset_id` especificado al registro del propietario del usuario, actualizando efectivamente el personaje o la configuración de equipo del jugador en el juego.
 
 ```C
 void game::set_avatar(const name &owner, const uint64_t &asset_id)
@@ -152,8 +152,8 @@ void game::set_avatar(const name &owner, const uint64_t &asset_id)
 }
 ```
 
-1. **Validation of the Transferred Asset**:
-   The function's purpose is to validate the asset transferred by the player, ensuring it belongs to the correct collection and category for avatars or equipment. 
+1. **Validación del asset transferido**:
+   La función tiene como propósito validar el asset transferido por el jugador, asegurándose de que pertenece a la colección correcta y categoría para avatares o equipo.
    
    ```C
    auto assets = atomicassets::get_assets(get_self());
@@ -163,16 +163,16 @@ void game::set_avatar(const name &owner, const uint64_t &asset_id)
    check(asset_itr->schema_name == "avatar"_n, "Not an avatar asset");
    ```
 
-2. **Retrieving Player Information from Avatars Table**:
-   To update a player's avatar in the game, the function retrieves the player's information from the avatars table using their username.
+2. **Recuperar información del jugador de la tabla de avatares**:
+   Para actualizar el avatar de un jugador en el juego, la función recupera la información del jugador desde la tabla de avatares usando su nombre de usuario.
 
    ```C
    avatars_t avatars_table(get_self(), get_self().value);
    auto owner_avatar_itr = avatars_table.find(owner.value);
    ```
 
-3. **Adding a New Player to the Avatars Table**:
-   If the user does not already exist in the avatars table, the function adds them by setting up a vector with five elements initialized to zeros. The avatar's ID is then placed in the first position of this vector, effectively registering the new avatar under the player's username.
+3. **Agregar un nuevo jugador a la tabla de avatares**:
+   Si el usuario no existe aún en la tabla de avatares, la función lo añade configurando un vector con cinco elementos inicializados en ceros. Luego, el ID del avatar se coloca en la primera posición de este vector, registrando efectivamente el nuevo avatar bajo el nombre de usuario del jugador.
 
    ```C
    if (owner_avatar_itr == std::end(avatars_table))
@@ -185,8 +185,8 @@ void game::set_avatar(const name &owner, const uint64_t &asset_id)
    }
    ```
 
-4. **Updating an Existing Player's Avatar**:
-   If the player already exists in the avatars table, the function updates their avatar with the new one provided in the argument. The old avatar is then returned to the player via an `atomicassets::transfer`, ensuring the player retains ownership of their previous avatar.
+4. **Actualizar el avatar de un jugador existente**:
+   Si el jugador ya existe en la tabla de avatares, la función actualiza su avatar con el nuevo proporcionado en el argumento. Luego, el avatar anterior es devuelto al jugador a través de un `atomicassets::transfer`, asegurando que el jugador retenga la propiedad de su avatar anterior.
 
    ```C
    else
@@ -213,17 +213,17 @@ void game::set_avatar(const name &owner, const uint64_t &asset_id)
    }
    ```
 
-5. **Recalculate Stats**:
+5. **Recalcular Estadísticas**:
 
 ```Cpp
   recalculate_stats(owner);
 ```
 
-This step recalculates the player's statistics after updating their avatar or equipment, ensuring that all bonuses or changes are accurately reflected in the player's profile.
+Este paso recalcula las estadísticas del jugador después de actualizar su avatar o equipo, asegurándose de que todos los bonos o cambios se reflejen con precisión en el perfil del jugador.
 
-### Equipping Items Function Overview
+### Resumen de la función para equipar ítems
 
-The function for equipping items involves listing the asset IDs of equipment to be worn by the player's avatar. This process checks each item for compatibility with the avatar and updates the player's equipment list in the game's database.
+La función para equipar ítems implica listar los IDs de los assets del equipo que serán usados por el avatar del jugador. Este proceso verifica la compatibilidad de cada ítem con el avatar y actualiza la lista de equipo del jugador en la base de datos del juego.
 
 ```Cpp
 void game::set_equipment_list(const name &owner,
@@ -259,10 +259,10 @@ const std::vector<uint64_t> &asset_ids)
 }
 ```
 
-### Function Description:
+### Descripción de la función:
 
-1. **Prepare for Changes**:
-   Create a vector to hold asset IDs of equipment to be returned and a map to ensure each equipment type is equipped no more than once.
+1. **Preparar para los cambios**:
+   Crear un vector para almacenar los IDs de los assets del equipo que serán devueltos y un mapa para asegurarse de que cada tipo de equipo sea equipado no más de una vez.
 
    ```Cpp
    std::vector<uint64_t> assets_to_return;
@@ -274,8 +274,8 @@ const std::vector<uint64_t> &asset_ids)
    equiped_types.insert(std::pair<std::string, uint32_t>("cloak", 0));
    ```
 
-2. **Equip New Items**:
-   Iterate through the provided asset IDs, equipping each item while adhering to the rule that each equipment type can only be worn once.
+2. **Equipar nuevos ítems**:
+   Iterar a través de los IDs de assets proporcionados, equipando cada ítem mientras se respeta la regla de que cada tipo de equipo solo puede ser usado una vez.
 
    ```Cpp
    for (uint64_t asset_id : asset_ids)
@@ -284,8 +284,8 @@ const std::vector<uint64_t> &asset_ids)
    }
    ```
 
-3. **Update and Return**:
-   Return any old assets back to the player's inventory and recalculate the player's characteristics based on the new equipment setup to reflect the changes in the player's abilities or stats accurately.
+3. **Actualizar y devolver**:
+   Devolver cualquier ítem antiguo al inventario del jugador y recalcular las características del jugador en base a la nueva configuración de equipo para reflejar los cambios en las habilidades o estadísticas del jugador de manera precisa.
 
    ```Cpp
    const std::string memo = "return equipment";
@@ -304,9 +304,9 @@ const std::vector<uint64_t> &asset_ids)
    recalculate_stats(owner);
    ```
 
-### Function to Equip a Single Item
+### Función para Equipar un Ítem Individual
 
-The `set_equipment_item` function handles equipping a single item (`asset_id`) on the player (`owner`). The `assets_to_return` vector stores assets to be returned, and `equiped_types` tracks the number of worn items of each equipment type.
+La función `set_equipment_item` maneja el equipamiento de un solo ítem (`asset_id`) en el jugador (`owner`). El vector `assets_to_return` almacena los ítems que deben ser devueltos, y `equiped_types` lleva un registro de la cantidad de ítems usados de cada tipo de equipo.
 
 ```Cpp
 void game::set_equipment_item(const name &owner, const uint64_t asset_id,
@@ -363,12 +363,12 @@ std::vector<uint64_t> &assets_to_return, std::map<std::string, uint32_t> &equipe
 }
 ```
 
-This function ensures that each item equipped is compatible with the player's avatar and that equipment slots are managed appropriately, with old equipment being returned to the player's inventory if replaced.
+Esta función asegura que cada ítem equipado sea compatible con el avatar del jugador y que las ranuras de equipo sean gestionadas adecuadamente, devolviendo el equipo antiguo al inventario del jugador si es reemplazado.
 
-### Function Description:
+### Descripción de la Función:
 
-1. **Verify Player Presence**:
-   Verify the player's presence in the equipment and avatar table; terminate if absent. Ensure the asset, from the correct collection and type, points correctly in the asset table. Load immutable template data into `equipment_template_idata`.
+1. **Verificar la Presencia del Jugador**:
+   Verificar la presencia del jugador en la tabla de equipo y avatares; terminar si no está presente. Asegurarse de que el asset, de la colección y tipo correctos, apunta correctamente en la tabla de assets. Cargar los datos de plantilla inmutables en `equipment_template_idata`.
 
    ```Cpp
    avatars_t avatars_table(get_self(), get_self().value);
@@ -384,8 +384,8 @@ This function ensures that each item equipped is compatible with the player's av
    check(asset_itr->schema_name == "equip"_n, "Not an equipment item");
    ```
 
-2. **Determine Equipment Type and Position**:
-   Identify the equipment type, incrementing its count in the map. If it's a duplicate, issue an error. Determine the `position` variable based on the equipment type for the new ID's placement.
+2. **Determinar el Tipo y Posición del Equipo**:
+   Identificar el tipo de equipo, incrementando su conteo en el mapa. Si es un duplicado, emitir un error. Determinar la variable `position` basada en el tipo de equipo para la colocación del nuevo ID.
 
    ```Cpp
    int32_t position = 0;
@@ -416,8 +416,8 @@ This function ensures that each item equipped is compatible with the player's av
    }
    ```
 
-3. **Update Equipment and Return Old Items**:
-   If an existing item is found at the position, add its ID to the return vector. Update the table with the new asset.
+3. **Actualizar el Equipo y Devolver Ítems Antiguos**:
+   Si se encuentra un ítem existente en la posición, agregar su ID al vector de retorno. Actualizar la tabla con el nuevo asset.
 
    ```Cpp
    const uint64_t old_equip_id = owner_avatar_itr->equipment[position];
@@ -431,8 +431,8 @@ This function ensures that each item equipped is compatible with the player's av
                         { row.equipment[position] = asset_id; });
    ```
 
-4. **Recalculate Stats**:
-   Recalculate player characteristics based on the new equipment setup.
+4. **Recalcular Estadísticas**:
+   Recalcular las características del jugador en base a la nueva configuración de equipo.
 
    ```Cpp
    void game::recalculate_stats(const name &owner)
@@ -442,14 +442,14 @@ This function ensures that each item equipped is compatible with the player's av
 
      std::map<std::string, uint32_t> stats;
 
-     // init stats
+     // inicializar estadísticas
      stats.insert(std::pair<std::string, uint32_t>("economic", 0));
      stats.insert(std::pair<std::string, uint32_t>("productivity", 0));
      stats.insert(std::pair<std::string, uint32_t>("vitality", 0));
      stats.insert(std::pair<std::string, uint32_t>("bravery", 0));
      stats.insert(std::pair<std::string, uint32_t>("diplomacy", 0));
 
-     // read stats
+     // leer estadísticas
      avatars_t avatars_table(get_self(), get_self().value);
      auto avatar_itr = avatars_table.require_find(owner.value, "Your avatar was deleted");
 
@@ -489,9 +489,9 @@ This function ensures that each item equipped is compatible with the player's av
    }
    ```
 
-**The function for calculating player characteristics involves several key steps:**
+**La función para calcular las características del jugador implica varios pasos clave:**
 
-1. **Retrieve the player's stats and avatars from their respective tables, initializing characteristics to zero.**
+1. **Recuperar las estadísticas del jugador y los avatares de sus respectivas tablas, inicializando las características a cero.**
 
    ```Cpp
    stats_t stats_table(get_self(), get_self().value);
@@ -499,19 +499,19 @@ This function ensures that each item equipped is compatible with the player's av
 
    std::map<std::string, uint32_t> stats;
 
-   // init stats
+   // inicializar estadísticas
    stats.insert(std::pair<std::string, uint32_t>("economic", 0));
    stats.insert(std::pair<std::string, uint32_t>("productivity", 0));
    stats.insert(std::pair<std::string, uint32_t>("vitality", 0));
    stats.insert(std::pair<std::string, uint32_t>("bravery", 0));
    stats.insert(std::pair<std::string, uint32_t>("diplomacy", 0));
 
-   // read stats
+   // leer estadísticas
    avatars_t avatars_table(get_self(), get_self().value);
    auto avatar_itr = avatars_table.require_find(owner.value, "Your avatar was deleted");
    ```
 
-2. **Process active assets, skipping any with an ID of 0, and read template data for each asset.**
+2. **Procesar activos activos, omitiendo cualquier ID que sea 0, y leer los datos de la plantilla para cada activo.**
 
    ```Cpp
    auto assets = atomicassets::get_assets(get_self());
@@ -527,8 +527,8 @@ This function ensures that each item equipped is compatible with the player's av
      auto equipment_template_idata = get_template_idata(asset_itr->template_id, asset_itr->collection_name);
    ```
 
-3. **Calculate Characteristics**:
-   Iterate through all the characteristics to be calculated, as listed in the map. If a characteristic is present in a given item, add it to the total value.
+3. **Calcular Características**:
+   Iterar a través de todas las características a calcular, como se indica en el mapa. Si una característica está presente en un ítem, agregarla al valor total.
 
    ```Cpp
    for (auto &key_value_pair : stats)
@@ -540,10 +540,10 @@ This function ensures that each item equipped is compatible with the player's av
    }
    ```
 
-   `key_value_pair` are pairs of the type {"economic", 0}, {"bravery", 0}, etc. If an element has the "economic" characteristic with a value of 3, then after this code, the "economic" field in the stats map will be updated to 3.
+   `key_value_pair` son pares del tipo {"economic", 0}, {"bravery", 0}, etc. Si un elemento tiene la característica "economic" con un valor de 3, entonces después de este código, el campo "economic" en el mapa de stats se actualizará a 3.
 
-4. **Sum Up Values and Update the Stats Table**:
-   Sum up the values for each characteristic listed in the map, adding to the total if present in the item.
+4. **Sumar Valores y Actualizar la Tabla de Estadísticas**:
+   Sumar los valores de cada característica listada en el mapa, añadiéndolos al total si están presentes en el ítem.
 
    ```Cpp
    if (stats_itr == std::end(stats_table))
@@ -560,14 +560,14 @@ This function ensures that each item equipped is compatible with the player's av
    }
    ```
 
-5. **Claim Function Modification**:
-   Update the claim function to reflect player characteristics.
+5. **Modificación de la Función Claim**:
+   Actualizar la función claim para reflejar las características del jugador.
 
    ```Cpp
    std::map<std::string, uint32_t> stats = get_stats(owner);
    ```
 
-   This retrieves the current characteristics of the player.
+   Esto recupera las características actuales del jugador.
 
    ```Cpp
    const uint8_t upgrade_percentage = 2 + stats["vitality"] / 10.0f;
@@ -575,19 +575,19 @@ This function ensures that each item equipped is compatible with the player's av
    const std::pair<std::string, float> item_reward = claim_item(assets_itr, upgrade_percentage, time_now, stats);
    ```
 
-   Now `upgrade_percentage` is not a constant, but depends on the "vitality" characteristic. The `claim_item` function also accepts `stats` to avoid unnecessary recalculations inside.
+   Ahora `upgrade_percentage` no es una constante, sino que depende de la característica "vitality". La función `claim_item` también acepta `stats` para evitar recalculaciones innecesarias.
 
-6. **Mining Rate Calculation Modification**:
+6. **Modificación del Cálculo de la Tasa de Minado**:
 
    ```Cpp
    float miningRate_according2lvl = miningRate + stats.at("productivity") / 10.0f;
    ```
 
-   The mining rate now also depends on the "productivity" characteristic.
+   La tasa de minado ahora también depende de la característica "productivity".
 
-**Upgradeitem Function Changes:**
+**Cambios en la Función Upgradeitem**:
 
-1. **Update Characteristics and Call Updated Claim Item**:
+1. **Actualizar Características y Llamar a Claim Item Actualizado**:
 
    ```Cpp
    std::map<std::string, uint32_t> stats = get_stats(owner);
@@ -595,29 +595,29 @@ This function ensures that each item equipped is compatible with the player's av
    const std::pair<std::string, float> item_reward = claim_item(asset_itr, upgrade_percentage, time_now, stats);
    ```
 
-   To read the player characteristics and calculate `upgrade_percentage`, the function calls the updated `claim_item`. The `upgrade_percentage` now depends on the player's "vitality" characteristic.
+   Para leer las características del jugador y calcular `upgrade_percentage`, la función llama al `claim_item` actualizado. El `upgrade_percentage` ahora depende de la característica "vitality" del jugador.
 
    ```Cpp
    upgrade_item(asset_itr, upgrade_percentage, owner, next_level, time_now, stats);
    ```
 
-   The `upgrade_item` function now accepts `stats` to avoid unnecessary recalculations.
+   La función `upgrade_item` ahora acepta `stats` para evitar recalculaciones innecesarias.
 
-2. **Mining Rate and Resource Price Calculation in upgrade_item**:
+2. **Cálculo de la Tasa de Minado y Precio del Recurso en upgrade_item**:
 
    ```Cpp
    float miningRate_according2lvl = mining_rate + stats.at("productivity") / 10.0f;
    ```
 
-   Here, the mining rate (`miningRate_according2lvl`) is updated to depend on the player's "productivity" characteristic.
+   Aquí, la tasa de minado (`miningRate_according2lvl`) se actualiza para depender de la característica "productivity" del jugador.
 
    ```Cpp
    const float &resource_price = upgrade_time * miningRate_according2lvl * (1.0f - stats.at("economic") / 100.0f);
    ```
 
-   The `resource_price` now decreases as the "economic" characteristic grows, making upgrades cheaper for players with higher "economic" stats.
+   El `resource_price` ahora disminuye a medida que crece la característica "economic", haciendo que las mejoras sean más baratas para los jugadores con estadísticas "economic" más altas.
 
-3. **get_stats Function**:
+3. **Función get_stats**:
 
    ```Cpp
    std::map<std::string, uint32_t> game::get_stats(const name &owner)
@@ -643,15 +643,14 @@ This function ensures that each item equipped is compatible with the player's av
    }
    ```
 
-   **Explanation**:
+   **Explicación**:
 
-   1. **Initialization**: A map is created to hold the function's results, and a pointer is set to the player's entry in the stats table using their name.
+   1. **Inicialización**: Se crea un mapa para contener los resultados de la función, y se establece un puntero a la entrada del jugador en la tabla de stats utilizando su nombre.
 
-   2. **Check for Player Stats**: If the player isn't found in the table, the function returns a map with all characteristics set to zero. If the player is found, it retrieves and returns their stats from the table, effectively summarizing their current game attributes.
+   2. **Comprobar las Estadísticas del Jugador**: Si el jugador no se encuentra en la tabla, la función devuelve un mapa con todas las características en cero. Si el jugador se encuentra, recupera y devuelve sus stats de la tabla, resumiendo efectivamente sus atributos actuales en el juego.
 
-This article delves into creating and managing avatars and their equipment in a game, outlining the process from initial avatar category creation to the dynamic assignment of equipment. It covers the integration of avatars with in-game mechanics, such as staking and claiming rewards, and emphasizes the importance of customization in enhancing player experience.
+Este artículo profundiza en la creación y gestión de avatares y su equipo en un juego, describiendo el proceso desde la creación inicial de la categoría de avatares hasta la asignación dinámica de equipo. Cubre la integración de avatares con la mecánica del juego, como el staking y la reclamación de recompensas, y enfatiza la importancia de la personalización para mejorar la experiencia del jugador.
 
-The article also discusses the technical aspects of setting up and updating player stats based on equipped items, ensuring a rich and interactive gaming environment.
+El artículo también aborda los aspectos técnicos de configurar y actualizar las estadísticas del jugador en función de los elementos equipados, asegurando un entorno de juego rico e interactivo.
 
-**PS.** The [following link](https://github.com/dapplicaio/GameAvatars) leads to a repository that corresponds with everything described, so you can simply build that code and use it as you wish.
-
+**PD.** El [siguiente enlace](https://github.com/dapplicaio/GameAvatars) lleva a un repositorio que corresponde a todo lo descrito, por lo que puedes simplemente construir ese código y usarlo como desees.

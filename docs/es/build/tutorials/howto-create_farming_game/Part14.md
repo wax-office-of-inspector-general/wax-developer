@@ -1,11 +1,11 @@
 ---
-title: Part 14. Governance in games
+title: Parte 14. Gobernanza en juegos
 order: 70
 ---
 
-In this article, we will develop a voting system that will allow users to provide developers with suggestions or change the value of game changes.
+En este artículo, desarrollaremos un sistema de votación que permitirá a los usuarios proporcionar sugerencias a los desarrolladores o cambiar el valor de algunos aspectos del juego.
 
-1.  Creating configs table
+1. Creando la tabla de configuraciones
 
 ```cpp
 struct [[eosio::table]] mconfig_j
@@ -20,7 +20,7 @@ struct [[eosio::table]] mconfig_j
 
 ```
 
-The table is organized from rows (variable name, variable type, variable value)
+La tabla se organiza en filas (nombre de la variable, tipo de variable, valor de la variable).
 
 ```cpp
 typedef std::variant<float, uint32_t, int32_t, std::string> CONFIG_TYPE;
@@ -54,7 +54,7 @@ void game::setcnfg(
 
 ```
 
-The **CONFIG_TYPE** type indicates the valid types for configuration variables. The **setcnfg** action accepts the variable name and its value (along with the type, the **eosio** platform itself checks for the correct type). If this variable is present in the config table, we check whether the type of the variable matches the one passed by the user and change the table field. If the variable is not in the table, we add it.
+El tipo **CONFIG_TYPE** indica los tipos válidos para las variables de configuración. La acción **setcnfg** acepta el nombre de la variable y su valor (junto con el tipo, la plataforma **eosio** verifica por sí misma el tipo correcto). Si esta variable está presente en la tabla de configuración, verificamos si el tipo de la variable coincide con el pasado por el usuario y cambiamos el campo de la tabla. Si la variable no está en la tabla, la agregamos.
 
 ```cpp
 std::pair<std::string, std::string> game::get_config_variant_data(const CONFIG_TYPE &var)
@@ -83,9 +83,9 @@ std::pair<std::string, std::string> game::get_config_variant_data(const CONFIG_T
 
 ```
 
-This helper function translates **CONFIG_TYPE** data into a pair (variable type, variable value).
+Esta función auxiliar traduce los datos de **CONFIG_TYPE** en un par (tipo de variable, valor de la variable).
 
-2\. Main tables
+2. Tablas principales
 
 ```cpp
 struct [[eosio::table]] votings_info_j
@@ -104,9 +104,9 @@ struct [[eosio::table]] votings_info_j
   typedef multi_index<"vtsinfo"_n, votings_info_j> vinfo_t;
 ```
 
-This table records voting information in a separate table. With its help, we can view the total number of staked tokens, see if the voting time has expired, and so on.
+Esta tabla registra la información de las votaciones en una tabla separada. Con su ayuda, podemos ver el número total de tokens apostados, verificar si el tiempo de votación ha expirado, entre otros.
 
-3. Creating votings
+3. Creando votaciones
 
 ```cpp
   struct [[eosio::table]] voting_j
@@ -122,7 +122,7 @@ This table records voting information in a separate table. With its help, we can
 
 ```
 
-This table (scope -- the name of the vote) stores the voting options and std::map with pairs (player, number of staked tokens), as well as the total amount of tokens staked for this option.
+Esta tabla (scope: el nombre de la votación) almacena las opciones de votación y el std::map con pares (jugador, número de tokens apostados), así como la cantidad total de tokens apostados para esta opción.
 
 ```cpp
  struct [[eosio::table]] closed_votings_j
@@ -136,9 +136,9 @@ This table (scope -- the name of the vote) stores the voting options and std::ma
   typedef multi_index<"closedvts"_n, closed_votings_j> closed_votings_t;
 ```
 
-This table stores pairs (voting, voting result).
+Esta tabla almacena pares (votación, resultado de la votación).
 
-4. Creating votings
+4. Creando votaciones
 
 ```cpp
 void game::crgenvt(
@@ -154,7 +154,7 @@ void game::crgenvt(
     vinfo_t vinfo(get_self(), get_self().value);
     check(vinfo.find(voting_name.value) == std::end(vinfo), "Voting with this name is active");
 
-    // add to info
+    // agregar a la información
 
     vinfo.emplace(get_self(), [&](auto &new_row)
                   {
@@ -170,7 +170,7 @@ void game::crgenvt(
 }
 ```
 
-This function writes voting data to the **vtsinfo** table and adds fields to the **genvtngs** table (option name, map with voters, total amount of tokens staked for the option).
+Esta función escribe los datos de la votación en la tabla **vtsinfo** y añade campos a la tabla **genvtngs** (nombre de la opción, mapa con los votantes, cantidad total de tokens apostados para la opción).
 
 ```cpp
 void game::cravote(
@@ -186,7 +186,7 @@ void game::cravote(
     vinfo_t vinfo(get_self(), get_self().value);
     check(vinfo.find(voting_name.value) == std::end(vinfo), "Voting with this name is active");
 
-    // check type correctness
+    // verificar la corrección del tipo
 
     std::vector<std::string> options;
     mconfigs_t configs_table(get_self(), get_self().value);
@@ -200,7 +200,7 @@ void game::cravote(
         options.push_back(variant_data.second);
     }
 
-    // add to info
+    // agregar a la información
 
     vinfo.emplace(get_self(), [&](auto &new_row)
                   {
@@ -217,9 +217,9 @@ void game::cravote(
 }
 ```
 
-This function creates a vote that affects some variable from the config table. First, for each option, we check if its type matches the variable name. If so, we add information about the vote to the **vtsinfo** and **genvtngs** tables.
+Esta función crea una votación que afecta alguna variable de la tabla de configuración. Primero, para cada opción, verificamos si su tipo coincide con el nombre de la variable. Si es así, añadimos la información de la votación a las tablas **vtsinfo** y **genvtngs**.
 
-5. Adding voting options
+5. Añadiendo opciones de votación
 
 ```cpp
 void game::add_voting_with_options(const name &voting_name, const std::vector<std::string> &options)
@@ -238,9 +238,9 @@ void game::add_voting_with_options(const name &voting_name, const std::vector<st
 }
 ```
 
-This is an auxiliary function that adds rows to the **genvtngs** table (id, option name, map with voters, total number of tokens).
+Esta es una función auxiliar que añade filas a la tabla **genvtngs** (id, nombre de la opción, mapa con votantes, número total de tokens).
 
-**6. Voting process**
+**6. Proceso de votación**
 
 ```cpp
 void game::gvote(
@@ -257,7 +257,7 @@ void game::gvote(
     vinfo_t vinfo(get_self(), get_self().value);
     auto voting_info_iter = vinfo.require_find(voting_name.value, "No such voting");
 
-    // check time
+    // verificar el tiempo
 
     if (voting_info_iter->time_to_vote != 0)
     {
@@ -265,7 +265,7 @@ void game::gvote(
               "Time for voting is over");
     }
 
-    // check max limit
+    // verificar límite máximo
 
     if (voting_info_iter->max_staked_tokens != 0)
     {
@@ -311,7 +311,7 @@ void game::gvote(
         row.quantity.amount -= voting_power;
     });
 
-    // check max limit and close if it's achieved
+    // verificar límite máximo y cerrar si se ha alcanzado
     if (voting_info_iter->max_staked_tokens != 0)
     {
         if (voting_info_iter->total_staked >= voting_info_iter->max_staked_tokens)
@@ -329,15 +329,15 @@ void game::gvote(
 }
 ```
 
-First, this function checks whether the user has tokens, whether they are sufficient in number, and whether the vote to which they are referring exists. Then we check whether the voting time has expired and whether the upper limit of votes has been reached. If so, it is no longer possible to vote.
+Esta función gestiona el proceso de votación. Primero, verifica si el usuario tiene tokens, si son suficientes y si la votación a la que hace referencia existe. Luego, comprueba si el tiempo de votación ha expirado y si se ha alcanzado el límite superior de votos. Si es así, ya no es posible votar.
 
-Otherwise, we go through the voting options and check whether the one the player is referring to is among them. We also check if they have voted before. If they have, we interrupt the function.
+De lo contrario, revisa las opciones de votación y verifica si la opción a la que el jugador se refiere está entre ellas. También se verifica si ya ha votado antes. Si es así, se interrumpe la función.
 
-If the option is found, we modify the field of the **genvtngs** table -- we add the player to std::map, increase the total number of tokens staked for the option. In the **vtsinfo** table, increase the **total_tokens_staked** field. We also charge the player the specified number of tokens.
+Si se encuentra la opción, se modifica el campo de la tabla **genvtngs**: se añade al jugador al mapa std::map y se incrementa la cantidad total de tokens apostados para la opción. En la tabla **vtsinfo**, se incrementa el campo **total_tokens_staked**. También se descuentan del jugador la cantidad especificada de tokens.
 
-At the very end, check whether the maximum number of votes has been reached. If so, close the voting (more details are provided later in the article).
+Al final, se verifica si se ha alcanzado el número máximo de votos. Si es así, se cierra la votación.
 
-7. Cancelling a vote
+**7. Cancelando un voto**
 
 ```cpp
 void game::cancelvote(const name& player, const name& voting_name)
@@ -398,9 +398,9 @@ void game::cancelvote(const name& player, const name& voting_name)
 }
 ```
 
-This feature allows a player to cancel their vote in a poll. Let's go through the voting options. If we find the one that the player voted for, we remove it from the map, reduce the number of staked tokens in both tables, and return the player's tokens back to them.
+Esta funcionalidad permite a un jugador cancelar su voto en una encuesta. Se recorren las opciones de votación y, si se encuentra la que el jugador votó, se elimina del mapa, se reduce el número de tokens apostados en ambas tablas y se devuelven los tokens al jugador.
 
-8. Closing voting
+**8. Cerrando la votación**
 
 ```cpp
 void game::clsvt(const name &voting_name)
@@ -421,7 +421,7 @@ void game::clsvt(const name &voting_name)
 }
 ```
 
-We should check if such a vote exists. Then we call separate functions for two different types of voting.
+Debemos comprobar si existe dicha votación. Luego, llamamos a funciones separadas para dos tipos diferentes de votación.
 
 ```cpp
 void game::close_general_voting(const name &voting_name)
@@ -429,7 +429,7 @@ void game::close_general_voting(const name &voting_name)
     clear_voting_from_vinfo(voting_name);
     std::string winner = get_voting_winner_clear(voting_name);
 
-    // add to closed
+    // agregar a las votaciones cerradas
     closed_votings_t closed_votings(get_self(), get_self().value);
     uint64_t voting_id = closed_votings.available_primary_key();
 
@@ -441,7 +441,9 @@ void game::close_general_voting(const name &voting_name)
 }
 ```
 
-First, delete the voting data from the **vtsinfo** table. Then we get the option with the largest number of staked tokens and delete the fields from the **genvtngs** table. Since the voting is of the general type, we add a row (id, voting name, winning option) to the table with the results of the general voting.
+Primero, eliminamos los datos de la votación de la tabla **vtsinfo**. Luego obtenemos la opción con el mayor número de tokens apostados y eliminamos los campos de la tabla **genvtngs**. Como la votación es del tipo general, se añade una fila (id, nombre de la votación, opción ganadora) a la tabla con los resultados de la votación general.
+
+**Cerrando votación automática**
 
 ```cpp
 void game::close_automatic_voting(const name &voting_name)
@@ -449,7 +451,7 @@ void game::close_automatic_voting(const name &voting_name)
     std::string variable_name = clear_voting_from_vinfo(voting_name);
     std::string winner = get_voting_winner_clear(voting_name);
 
-    // do transaction
+    // realizar la transacción
     mconfigs_t config_table(get_self(), get_self().value);
     auto config_iter = config_table.require_find(stringToUint64(variable_name), "Variable in question was deleted");
     config_table.modify(config_iter, get_self(), [&](auto &row)
@@ -457,7 +459,7 @@ void game::close_automatic_voting(const name &voting_name)
 }
 ```
 
-Closing automatic voting differs in that we modify the value of the variable in the config table at the end.
+Cerrar la votación automática difiere en que al final modificamos el valor de la variable en la tabla de configuración.
 
 ```cpp
 std::string game::clear_voting_from_vinfo(const name &voting_name)
@@ -488,7 +490,7 @@ std::string game::clear_voting_from_vinfo(const name &voting_name)
 }
 ```
 
-This function checks whether the conditions for closing the vote are met and deletes the data about it from the **vtsinfo** table.
+Esta función verifica si se cumplen las condiciones para cerrar la votación y elimina los datos de la misma de la tabla **vtsinfo**.
 
 ```cpp
 std::string game::get_voting_winner_clear(const name &voting_name)
@@ -534,8 +536,9 @@ std::string game::get_voting_winner_clear(const name &voting_name)
 }
 ```
 
-This function goes through the voting options, finds the winning option, and deletes the rows of the genvtngs table one by one. It also returns the player's tokens to the balance.
+Esta función recorre las opciones de votación, encuentra la opción ganadora y elimina las filas de la tabla **genvtngs** una por una. También devuelve los tokens del jugador a su balance.
 
-In this article we described a step by step process of creating governance via voting, so users can impact overall project game design or certain parts of game economy.
+En este artículo describimos paso a paso el proceso de crear una gobernanza mediante votaciones, para que los usuarios puedan influir en el diseño general del juego o en ciertas partes de la economía del juego.
 
-**PS.** The [Following link](https://github.com/dapplicaio/GamesGovernane) leads us to a repository that corresponds everything described.
+**PD.** El [enlace siguiente](https://github.com/dapplicaio/GamesGovernane) nos lleva a un repositorio que corresponde a todo lo descrito.
+ 

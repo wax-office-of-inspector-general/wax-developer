@@ -145,6 +145,31 @@ export default [
         link: '/es/build/tutorials/',
         collapsed: true,
         items: [
+            {
+              "text": "Cómo crear un juego de cultivo",
+              "link": "/es/build/tutorials/howto-create_farming_game/",
+              "collapsed": true,
+              "items": [
+                  {"text": "Cómo crear un juego en WAX. Conceptos generales", "link": "/es/build/tutorials/howto-create_farming_game/Part1"},
+                  {"text": "Creación de un objeto o ítem cultivable en el estándar AtomicAssets", "link": "/es/build/tutorials/howto-create_farming_game/Part2"},
+                  {"text": "Creación de NFT de cultivo en Atomic Hub", "link": "/es/build/tutorials/howto-create_farming_game/Part3"},
+                  {"text": "Qué son los recursos y tokens en nuestro proceso de creación de juegos", "link": "/es/build/tutorials/howto-create_farming_game/Part4"},
+                  {"text": "Staking de NFTs", "link": "/es/build/tutorials/howto-create_farming_game/Part5"},
+                  {"text": "Tipos de cultivo y proceso de cultivo", "link": "/es/build/tutorials/howto-create_farming_game/Part6"},
+                  {"text": "Creación de GUI para juegos en WAX, staking y cultivo", "link": "/es/build/tutorials/howto-create_farming_game/Part7"},
+                  {"text": "Mejoras de ítems de juego en juegos de WAX", "link": "/es/build/tutorials/howto-create_farming_game/Part8"},
+                  {"text": "Mezclas de NFTs para juegos de WAX", "link": "/es/build/tutorials/howto-create_farming_game/Part9"},
+                  {"text": "Implementación de avatares en juegos de WAX", "link": "/es/build/tutorials/howto-create_farming_game/Part10"},
+                  {"text": "UI para mezclas, mejoras y avatares", "link": "/es/build/tutorials/howto-create_farming_game/Part11"},
+                  {"text": "Intercambios de tokens y recursos", "link": "/es/build/tutorials/howto-create_farming_game/Part12"},
+                  {"text": "Staking de tokens y votación en juegos", "link": "/es/build/tutorials/howto-create_farming_game/Part13"},
+                  {"text": "Gobernanza en juegos", "link": "/es/build/tutorials/howto-create_farming_game/Part14"},
+                  {"text": "GUI para intercambios, staking y gobernanza", "link": "/es/build/tutorials/howto-create_farming_game/Part15"},
+                  {"text": "Tablas de clasificación en juegos", "link": "/es/build/tutorials/howto-create_farming_game/Part16"},
+                  {"text": "Sistemas de misiones en el juego", "link": "/es/build/tutorials/howto-create_farming_game/Part17"},
+                  {"text": "GUI para misiones y tablas de clasificación", "link": "/es/build/tutorials/howto-create_farming_game/Part18"}
+              ]
+          },
           {
             text: 'Tic-Tac-Toe Game',
             link: '/es/build/tutorials/tic-tac-toe-game/',
