@@ -1,11 +1,11 @@
 ---
-title: Part 16. Leaderboards in games
+title: Parte 16. Clasificaciones en juegos
 order: 80
 ---
 
-In this article, we will analyze the creation of leaderboards and consider the implementation of a leaderboard for user resources and their overall mining rate.
+En este artículo, analizaremos la creación de tablas de clasificación y consideraremos la implementación de una clasificación para los recursos de los usuarios y su tasa de minería general.
 
-1.  **New tables**
+1.  **Nuevas tablas**
 
 ```cpp
  struct [[eosio::table]] lboard_j
@@ -19,13 +19,13 @@ In this article, we will analyze the creation of leaderboards and consider the i
 
 ```
 
-points -- the value of points in the leaderboard
+points -- el valor de los puntos en la tabla de clasificación
 
-account -- the name of the account for which we record points
+account -- el nombre de la cuenta para la cual registramos los puntos
 
-**2\. Updating points in leaderboard**
+**2\. Actualización de puntos en la tabla de clasificación**
 
-To modify the values of the points in the leaderboard, we will introduce three functions: increase, decrease, and set a certain number of points. Let's consider the last one, the others are done in the same way.
+Para modificar los valores de los puntos en la tabla de clasificación, introduciremos tres funciones: aumentar, disminuir y establecer un cierto número de puntos. Consideremos la última, las otras se realizan de la misma manera.
 
 ```cpp
 void incr_lb_points(const name &lbname, const name &account, uint64_t points);
@@ -53,19 +53,18 @@ void game::set_lb_points(const name &lbname, const name &account, uint64_t point
                       { row.points = points; });
     }
 }
-
 ```
 
-Function description:
+Descripción de la función:
 
-1) Take the pointer to the leaderboard table by the name of the leaderboard. Then we found the record with the player
+1) Obtenemos el puntero a la tabla de clasificación por el nombre de la tabla. Luego encontramos el registro con el jugador
 
 ```cpp
 lboards_t lboard(get_self(), lbname.value);
 auto account_itr = lboard.find(account.value);
 ```
 
-2) If the player is not in the table, add him or her to the table. If there is, update the points value
+2) Si el jugador no está en la tabla, lo añadimos. Si ya está, actualizamos el valor de los puntos
 
 ```cpp
 if (account_itr == std::end(lboard))
@@ -82,20 +81,20 @@ else
 }
 ```
 
-**3\. Using leaderboards for resource records**
+**3\. Uso de las tablas de clasificación para los registros de recursos**
 
-In the **increase_owner_resource_balance** and **decrease_owner_resource_balance** functions, add the following lines inside the loop that runs through the map with resources
+En las funciones **increase_owner_resource_balance** y **decrease_owner_resource_balance**, añada las siguientes líneas dentro del bucle que recorre el mapa con los recursos
 
 ```cpp
 eosio::name resource_name(static_cast<std::string_view>(resources_table_itr->resource_name));
 set_lb_points(resource_name, owner, resources_table_itr->amount);
 ```
 
-The first of them creates **eosio::name** from a string denoting the name of the resource. That is, it is a leaderboard of wood or stone, etc. Then we set the already calculated value of the resource in the table.
+La primera de ellas crea **eosio::name** a partir de una cadena que denota el nombre del recurso. Es decir, es una tabla de clasificación de madera o piedra, etc. Luego establecemos el valor ya calculado del recurso en la tabla.
 
-**4\. Using leaderboards for mining rate**
+**4\. Uso de las tablas de clasificación para la tasa de minería**
 
-At the very end of the **stake_items** and **upgradeitem** functions, add a line with the **update_mining_power_lb** function, which recalculates the new total mining rate and enters it into the leaderboard.
+Al final de las funciones **stake_items** y **upgradeitem**, agregue una línea con la función **update_mining_power_lb**, que recalcula la nueva tasa total de minería y la ingresa en la tabla de clasificación.
 
 ```cpp
 void game::update_mining_power_lb(const name &account)
@@ -125,9 +124,9 @@ void game::update_mining_power_lb(const name &account)
 }
 ```
 
-Function description:
+Descripción de la función:
 
-1.  Take the pointer to the table where all the staked items are located. We get a map with the player's characteristics. Take the pointer to the table of assets.
+1.  Tome el puntero a la tabla donde se encuentran todos los ítems apostados. Obtenemos un mapa con las características del jugador. Tome el puntero a la tabla de activos.
 
 ```cpp
 staked_t staked_table(get_self(), account.value);
@@ -137,7 +136,7 @@ const std::map<std::string, uint32_t> stats = get_stats(account);
 auto assets = atomicassets::get_assets(get_self());
 ```
 
-2. Go through all the staked items. For each one, we take a pointer to its asset and find the value of miningBoost. Then, for each asset inside the staked one, we calculate the mining rate and add it to the total amount
+2. Recorra todos los ítems apostados. Para cada uno, tomamos un puntero a su activo y encontramos el valor de **miningBoost**. Luego, para cada activo dentro del ítem apostado, calculamos la tasa de minería y la sumamos al total
 
 ```cpp
 for (const auto &staked : staked_table)
@@ -156,13 +155,13 @@ for (const auto &staked : staked_table)
 }
 ```
 
-3. Update the mining rate for this player in the leaderboard
+3. Actualice la tasa de minería para este jugador en la tabla de clasificación
 
 ```cpp
 set_lb_points("miningpwr"_n, account, mining_power);
 ```
 
-Consider the function used to calculate the mining rate of an item
+Considere la función utilizada para calcular la tasa de minería de un ítem
 
 ```cpp
 float game::get_mining_power(const uint64_t asset_id, const std::map<std::string, uint32_t> &stats)
@@ -192,8 +191,8 @@ float game::get_mining_power(const uint64_t asset_id, const std::map<std::string
 }
 ```
 
-It completely repeats the logic of calculating the mining rate asset, which was described in previous articles and was used in **claim** and **upgradeitem**.
+Repite completamente la lógica de cálculo del activo de la tasa de minería, que se describió en artículos anteriores y se utilizó en **claim** y **upgradeitem**.
 
-In this article, we described how we can create various leaderboards in the game, which is one of core functions.
+En este artículo, describimos cómo podemos crear varias tablas de clasificación en el juego, que es una de las funciones principales.
 
-**PS.** The [Following link](https://github.com/dapplicaio/GameLeaderboards) leads us to a repository that corresponds to everything described.
+**PS.** El [siguiente enlace](https://github.com/dapplicaio/GameLeaderboards) lleva a un repositorio que corresponde a todo lo descrito.
