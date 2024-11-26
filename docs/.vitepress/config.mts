@@ -7,11 +7,14 @@ import VitepressThemeOverride from 'vitepress-plugin-theme-override';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  lang: 'en-US',
-  
   title: "WAX Developer Portal",
-  description: "WAX Developer Portal - Inside the WAX Developer Portal, you'll find a wealth of resources to guide you on your development journey",
-  
+  description: "WAX Blockchain Documentation - Resources for developers building on WAX",
+
+  rewrites: {
+    'en/:rest*': ':rest*'
+  },
+
+  cleanUrls: true,
   lastUpdated: true,
 
   sitemap: {
@@ -29,7 +32,7 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/wax-office-of-inspector-general/wax-developer' },
-      { icon: 'twitter', link: 'https://twitter.com/WAX_io' },
+      { icon: 'x', link: 'https://x.com/WAX_io' },
     ],
 
     editLink: {
@@ -82,16 +85,16 @@ export default defineConfig({
       'link',
       {
         rel: 'alternate',
-        hreflang: 'zh',
-        href: 'https://developer.wax.io/cn',
+        hreflang: 'es',
+        href: 'https://developer.wax.io/es',
       },
     ],
     [
       'link',
       {
         rel: 'alternate',
-        hreflang: 'es',
-        href: 'https://yuanshen.site/docs/es',
+        hreflang: 'zh',
+        href: 'https://developer.wax.io/cn',
       },
     ],
     [

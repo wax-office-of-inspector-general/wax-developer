@@ -6,7 +6,7 @@ export default {
   label: 'English',
   lang: 'en-EN',
   title: 'WAX Developer Portal',
-  description: "WAX Developer Portal - Inside the WAX Developer Portal, you'll find a wealth of resources to guide you on your development journey",
+  description: "WAX Blockchain Documentation - Resources for developers building on WAX",
   themeConfig: {
     nav,
     sidebar,
