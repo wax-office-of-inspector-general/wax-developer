@@ -12,7 +12,7 @@ export default [
       },
       {
         text: 'Infrastructure Chat',
-        href: 'https://t.me/waxinfra#'
+        href: 'https://t.me/waxinfra'
       },
       {
         text: 'Governance Chat',
@@ -28,24 +28,24 @@ export default [
     title: 'About WAX',
     items: [
       {
-        text: 'WAX website',
-        href: 'https://www.wax.io/'
+        text: 'WAX Homepage',
+        href: 'https://www.wax.io'
       },
       {
-        text: 'WAX Explorer',
-        href: 'https://waxblock.io/'
-      },
-      {
-        text: 'WAX DeFi',
-        href: 'https://www.waxdefi.io/'
-      },
-      {
-        text: 'WAX vIRL Widget',
-        href: 'https://github.com/worldwide-asset-exchange/wax-marketplace-widget'
+        text: 'WAX Block Explorer',
+        href: 'https://waxblock.io'
       },
       {
         text: 'Cloud Wallet',
-        href: 'https://www.mycloudwallet.com/'
+        href: 'https://www.mycloudwallet.com'
+      },
+      {
+        text: 'vIRL Marketplace',
+        href: 'https://virl.com'
+      },
+      {
+        text: 'vIRL Marketplace Widget',
+        href: 'https://widget.virl.com'
       }
     ]
   },
@@ -53,12 +53,12 @@ export default [
     title: 'About WAX OIG',
     items: [
       {
-        text: 'OIG Github',
+        text: 'OIG GitHub',
         href: 'https://github.com/wax-office-of-inspector-general'
       },
       {
-        text: 'OIG website',
-        href: 'https://oig.wax.io/'
+        text: 'OIG Website',
+        href: 'https://oig.wax.io'
       },
       {
         text: 'OIG Ratings',
@@ -66,12 +66,12 @@ export default [
       },
       {
         text: 'WAX Labs',
-        href: 'https://labs.wax.io/'
+        href: 'https://labs.wax.io'
       }
     ]
   },
   {
-    title: 'Follow us',
+    title: 'Follow WAX',
     items: [
       {
         text: 'on Discord',
@@ -87,7 +87,7 @@ export default [
       },
       {
         text: 'on Medium',
-        href: 'https://wax-io.medium.com/',
+        href: 'https://wax-io.medium.com',
       },
     ]
   }

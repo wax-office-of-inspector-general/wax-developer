@@ -10,11 +10,11 @@ hero:
   alt: WAX Developer Portal
   }
   actions:
-  - theme: brand
-    text: Learn →
-    link: /learn/about-wax/
   - theme: alt
-    text: Build
+    text: Learn
+    link: /learn/about-wax/
+  - theme: brand
+    text: Build →
     link: /build/dapp-development/
   - theme: alt
     text: Operate

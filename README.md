@@ -1,6 +1,6 @@
 <h1 align="center">WAX Developer Portal</h1>
 <p>
-  <img src="https://img.shields.io/badge/node-%3E%3D16.19.0-blue.svg" />
+  <img src="https://img.shields.io/badge/node-%3E%3D20.0.0-blue.svg" />
   <a href="https://github.com/wax-office-of-inspector-general/wax-developer/wiki" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
@@ -12,14 +12,14 @@
   </a>
 </p>
 
-> WAX Developer Portal - Inside the WAX Developer Portal, you'll find a wealth of resources to guide you on your development journey.
+> WAX Blockchain Documentation - Resources for developers building on WAX
 
 ### [Visit Documentation](https://developer.wax.io/)
 
 ## Installation
 
 ### Prerequisites
-- Node.js version 18 or higher.
+- Node.js version 20 or higher.
 - Terminal for accessing VitePress via its command line interface (CLI).
 - Text Editor with Markdown syntax support.
 - VSCode is recommended, along with the official Vue extension.

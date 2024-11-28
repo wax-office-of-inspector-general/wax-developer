@@ -1,14 +1,11 @@
 export default [
     {
         text: 'Learn',
-        // link: '/learn/',
-        collapsed: false,
         items: [
             {
                 text: 'About WAX',
                 link: '/learn/about-wax/',
                 collapsed: false,
-                sidebarDepth: 2,
                 items: [
                     {
                         text: 'What is WAX?',
@@ -40,8 +37,6 @@ export default [
     },
     {
         text: 'Build',
-        // link: '/build/',
-        collapsed: false,
         items: [
             {
                 text: 'dApp Development',
@@ -282,8 +277,6 @@ export default [
     },
     {
         text: 'Operate',
-        // link: '/operate/',
-        collapsed: false,
         items: [
             {
                 text: 'Basics',
@@ -355,8 +348,6 @@ export default [
     },
     {
         text: 'Create',
-        // link: '/create/',
-        collapsed: false,
         items: [
           {
             text: 'Awesome WAX',

@@ -1,6 +1,6 @@
 {
   "name": "wax-developer",
-  "description": "WAX Developer Portal - Inside the WAX Developer Portal, you'll find a wealth of resources to guide you on your development journey.",
+  "description": "WAX Blockchain Documentation - Resources for developers building on WAX",
   "version": "0.3.0",
   "main": "index.js",
   "repository": {
@@ -30,12 +30,9 @@
   },
   "homepage": "https://github.com/wax-office-of-inspector-general/wax-developer#readme",
   "devDependencies": {
-    "sass": "^1.71.1",
-    "vitepress": "^1.0.0-rc.44",
-    "vitepress-plugin-theme-override": "^0.0.2",
-    "vue": "^3.3.9"
-  },
-  "optionalDependencies": {
-    "@rollup/rollup-linux-x64-gnu": "4.12.0"
+    "sass": "^1.81.0",
+    "vitepress": "^1.5.0",
+    "vitepress-plugin-theme-override": "^0.1.0",
+    "vue": "^3.5.13"
   }
 }
