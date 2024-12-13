@@ -16,13 +16,13 @@
 }
 
 .VPNav {
-  .VPNavBar:not(.top) {
-    background-color: var(--vp-nav-bg-color);
+  .VPNavBar:not(.home) {
+    background-color: var(--vp-nav-bg-color) !important;
 
     .divider {
       display: none;
     }
-}
+  }
 }
 
 /**
