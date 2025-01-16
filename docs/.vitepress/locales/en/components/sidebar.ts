@@ -241,6 +241,10 @@ export default [
                     {
                         text: 'How To Explore WAX Blockchain', 
                         link: '/build/tutorials/howto_blockexplorer'
+                    },
+                    {
+                        text: 'How to Airdrop Tokens and NFTs on WAX Blockchain ', 
+                        link: '/build/tutorials/howto_airdrop'
                     }
                 ],
             },

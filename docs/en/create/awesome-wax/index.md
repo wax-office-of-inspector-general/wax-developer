@@ -15,11 +15,11 @@ You are new to the WAX Blockchain and you are looking to get started? You want t
 - [Anchor](https://greymass.com/en/anchor/)
 - [Wombat](https://www.wombat.app/)
 - [Ledger](https://www.ledger.com/eos-wallet/)
+- [Foundry](https://foundry.qaraqol.com/)
 
 **Block Explorer**
 - [WaxBlock](https://waxblock.io)
 - [Eosauthority](https://eosauthority.com/?network=wax)
-- [EOSQ](https://wax.eosq.eosnation.io/)
 - [Eoseye](https://wax.eoseyes.com/)
 
 **NFT Marketplaces**
@@ -37,7 +37,6 @@ You are new to the WAX Blockchain and you are looking to get started? You want t
 - [EOS Nation Validator](https://validate.eosnation.io/wax/reports/endpoints.html)
 
 **CPU Renting**
-- [Waxp.tools](https://waxp.tools/cpu)
 - [NftHive](https://nfthive.io/cpu)
 
 
