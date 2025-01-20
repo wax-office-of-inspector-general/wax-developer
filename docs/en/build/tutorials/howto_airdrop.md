@@ -7,7 +7,7 @@ order: 98
 
 ## Introduction
 
-Airdrops are a common way to distribute tokens or NFTs to multiple recipients on the WAX blockchain. This tutorial covers how to use the Disperse tool to efficiently manage token and NFT distributions at scale. The tool provides features for both fungible tokens (like WAX or TLM) and non-fungible tokens (NFTs).
+Airdrops are a popular way to share tokens or NFTs with a large audience, often used for promotions, rewards, or giveaways. They help projects gain attention, engage their community, or show appreciation to supporters. On the WAX blockchain, this process is made easy with Disperse. It works with both fungible tokens like WAX or TLM and non-fungible tokens (NFTs), allowing you to manage large-scale distributions quickly and efficiently.
 
 ## Key Features
 
