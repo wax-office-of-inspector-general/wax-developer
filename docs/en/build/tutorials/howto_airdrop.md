@@ -120,22 +120,6 @@ The script will:
 3. Process transactions with built-in delays
 4. Log transaction IDs and status
 
-## Best Practices
-
-1. **Testing**: Always test with a small number of recipients first
-2. **Rate Limiting**: The tool includes built-in delays, but monitor network conditions
-3. **Asset Verification**: Double-check token/NFT availability before starting
-4. **Transaction Monitoring**: Keep track of transaction IDs for verification
-5. **Backup**: Save your distribution logs for future reference
-
-## Error Handling
-
-The tool includes several safety features:
-- Validation of recipient accounts
-- Verification of token/NFT availability
-- Transaction retry logic
-- Detailed error logging
-
 ## Advanced Usage
 
 ### Custom Token Configuration
@@ -149,34 +133,3 @@ When using template mode:
 2. Specify collection_name and template_id
 3. Ensure sufficient template assets are available
 
-## Technical Details
-
-The tool uses:
-- EOSJS for blockchain interactions
-- PapaParse for CSV processing
-- AtomicAssets API for NFT operations
-- Automatic batching for optimization
-
-## Troubleshooting
-
-Common issues and solutions:
-1. Insufficient resources (CPU/NET)
-   - Solution: Stake more resources or use a powerup
-2. Transaction timeout
-   - Solution: Adjust network endpoint or retry
-3. Invalid NFT IDs
-   - Solution: Verify asset ownership and IDs
-
-## Security Considerations
-
-1. Never share your private key
-2. Verify recipient addresses carefully
-3. Monitor transaction logs
-4. Keep your distribution records secure
-
-## Support
-
-For issues or questions:
-1. Check the GitHub repository
-2. Join the WAX Developer Discord
-3. Review the WAX Developer Portal
