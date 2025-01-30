@@ -5,7 +5,7 @@ export default [
             {
                 text: 'About WAX',
                 link: '/learn/about-wax/',
-                collapsed: false,
+                collapsed: true,
                 items: [
                     {
                         text: 'What is WAX?',
@@ -16,20 +16,16 @@ export default [
                         link: '/learn/about-wax/why-wax',
                     },
                     {
-                        text: 'What is WAXP token?',
+                        text: 'What is WAXP Token?',
                         link: '/learn/about-wax/what-is-waxp-token',
                     },
                     {
-                        text: 'Consensus on WAX',
+                        text: 'How does WAX Work?',
                         link: '/learn/about-wax/wax-consensus',
                     },
                     {
                         text: 'WAX Interoparability',
                         link: '/learn/about-wax/wax-interoparability',
-                    },
-                    {
-                        text: 'WAX Governance',
-                        link: '/learn/about-wax/wax-governance',
                     },
                 ],
             },
@@ -239,7 +235,7 @@ export default [
                         link: '/build/tutorials/server-side-verification',
                     },
                     {
-                        text: 'How To Explore WAX Blockchain', 
+                        text: 'How To Explore WAX Blockchain',
                         link: '/build/tutorials/howto_blockexplorer'
                     },
                     {

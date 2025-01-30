@@ -25,6 +25,10 @@
   }
 }
 
+.aside-curtain {
+  display: none;
+}
+
 /**
  * Component: Home
  * -------------------------------------------------------------------------- */
@@ -54,6 +58,13 @@
 @media (min-width: 960px) {
   :root {
     --vp-home-hero-image-filter: blur(68px);
+  }
+  .VPSidebar {
+    margin-top: var(--vp-nav-height);
+    padding-top: 0 !important;
+  }
+  .curtain {
+    display: none;
   }
 }
 
