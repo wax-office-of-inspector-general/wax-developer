@@ -318,7 +318,7 @@ export default [
                     {text: 'Set Up Full/Partial History Nodes (Hyperion)', link: '/operate/wax-infrastructure/hyperion-guide'},
                     {text: 'Set Up an Atomic API Node', link: '/operate/wax-infrastructure/atomic-api-guide'},
                     {text: 'Securely peer with WireGuard', link: '/operate/wax-infrastructure/wax-securely-peer-with-wireguard'},
-                    {text: 'Automate WAX Snapshots', link: '/operate/wax-infrastructure/wax-automate-snapshots.md'},
+                    {text: 'Automate WAX Snapshots', link: '/operate/wax-infrastructure/wax-automate-snapshots'},
                     {text: 'Creating a WAX Price Oracle Service', link: '/operate/wax-infrastructure/creating-a-wax-price-oracle-service-bash-python'},
                     {text: 'Monitor/Unregister WAX Producer with systemd', link: '/operate/wax-infrastructure/monitor-and-unregister-wax-producer-with-systemd-while-you-sleep'}
                 ],
