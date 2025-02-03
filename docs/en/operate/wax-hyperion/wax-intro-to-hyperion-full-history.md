@@ -14,7 +14,7 @@ EOSphere have extensive production experience with providing Full History servic
 
 ![](https://miro.medium.com/v2/resize:fit:598/1*ATnQKunF5rVtPEsL-sP0JA.png)
 
-_This article has been updated to reflect the current Hyperion deployment in September 2023._
+_This article has been updated to reflect the current Hyperion deployment in December 2024._
 
 # Introduction to WAX Hyperion Full History
 
@@ -131,13 +131,14 @@ The recommendations below are for WAX Mainnet and WAX Testnet with Full History,
    * Modern CPU, 3Ghz+, 8 Cores+  
    * 64GB RAM  
    * Enterprise Grade SSD/NVMe  
-    _The current (September 2023) Elasticsearch Database is 26TB, I suggest provisioning 35–40TB across the cluster for Full History service longevity_  
+    _The current (December 2024) Elasticsearch Database is 32TB, I suggest provisioning 40–45TB across the cluster for Full History service longevity_  
    * 1Gb/s+ LAN
 * **WAX State-History**  
    * Modern CPU, 4Ghz+, 4 Cores  
    * 128GB RAM  
    * 256GB DISK 1  _(Enterprise Grade SSD/NVMe)_  
-   * 16TB DISK 2  _(SAS or SATA are OK)_
+   * 18TB+ DISK 2  _(SAS or SATA are OK)_
+   * 1Gb/s+ LAN
 
 **WAX Testnet**
 
