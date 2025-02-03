@@ -12,7 +12,7 @@ Once again this Technical How To series will cover some of the EOS RIO same cont
 
 ![](https://miro.medium.com/v2/resize:fit:598/0*QSOXBoNEcm0pWwSl.png)
 
-_This article has been updated to reflect the current Hyperion deployment in September 2023._
+_This article has been updated to reflect the current Hyperion deployment in December 2024._
 
 # Build WAX Hyperion Software Components
 
@@ -24,11 +24,11 @@ The process for building each of these primary building blocks is covered below:
 
 ## **WAX Software State-History (SHIP) Node**
 
-The WAX Hyperion deployment requires access to a fully sync’d WAX State-History Node, the current recommend version is  `v4.0.4wax02`. This build process is extensively covered in  [WAX Technical How To #7](https://medium.com/eosphere/wax-technical-how-to-7-9ccc102efd9d).
+The WAX Hyperion deployment requires access to a fully sync’d WAX State-History Node, the current recommend version is  `v5.0.1wax01`. This build process is extensively covered in  [WAX Technical How To #7](https://medium.com/eosphere/wax-technical-how-to-7-9ccc102efd9d).
 
 ## RabbitMQ
 
-To install the latest RabbitMQ currently  `3.12.6`  be sure to check their latest  [Cloudsmith Quick Start Script](https://www.rabbitmq.com/install-debian.html), this in our experience is the simplest way to ensure you are current and correctly built.
+To install the latest RabbitMQ currently  `4.0.5` and Erlang `27.2` be sure to check their latest  [Cloudsmith Quick Start Script](https://www.rabbitmq.com/install-debian.html), this in our experience is the simplest way to ensure you are current and correctly built.
 
 The summary process is below:
 
@@ -75,9 +75,16 @@ EOF
 **Check Version**
 > sudo rabbitmqctl version
 ```
+
+If you performed an upgrade to RabbitMQ version 4 you may need to enable all stable feature flags as below:
+
+```
+> sudo rabbitmqctl enable_feature_flag all
+```
+
 ## Redis
 
-Our current WAX Hyperion deployment is running on the latest Redis stable version  `v7.2.1`  which is built as below:
+Our current WAX Hyperion deployment is running on the latest Redis stable version  `v7.3.1`  which is built as below:
 
 ```
 > sudo apt install lsb-release curl gpg
@@ -97,7 +104,7 @@ Our current WAX Hyperion deployment is running on the latest Redis stable versio
 
 ## Node.js
 
-Hyperion requires Node.js v18 , our WAX Hyperion deployment is running the current LTS  `v18.18.0`  which is built below:
+Hyperion requires Node.js v22 , our WAX Hyperion deployment is running the current LTS  `v22.12.0`  which is built below:
 
 ```
 #Download and import the Nodesource GPG key#
@@ -110,7 +117,7 @@ Hyperion requires Node.js v18 , our WAX Hyperion deployment is running the curre
 > curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
 
 #Create .deb repository#
-> NODE_MAJOR=18
+> NODE_MAJOR=22
 
 > echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
 
@@ -125,7 +132,7 @@ Hyperion requires Node.js v18 , our WAX Hyperion deployment is running the curre
 
 ## PM2
 
-The latest public version is  `5.3.0`  and is built as below:
+The latest public version is  `5.4.3`  and is built as below:
 
 ```
 > sudo apt update
@@ -139,7 +146,7 @@ The latest public version is  `5.3.0`  and is built as below:
 
 ## Elasticsearch
 
-Currently our WAX Hyperion is using Elasticsearch  `8.5.2`  with great results, however the current recommended Elasticsearch version is  `8.9.0`  which I expect will work just as well or better. Build the latest Elasticsearch  `8.x`  as below:
+Currently our WAX Hyperion is using Elasticsearch  `8.13.2`  with great results, however the current recommended Elasticsearch version is  `8.17.0`  which I expect will work just as well or better. Build the latest Elasticsearch  `8.x`  as below:
 
 ```
 > sudo apt update
@@ -183,7 +190,7 @@ The utilised Kibana version should be paired with the installed Elasticsearch ve
 
 ## **EOS RIO Hyperion Indexer and API**
 
-Currently (September 2023) the most robust and production ready version of Hyperion from our experience is  `3.3.9–8`  and is used in our WAX Hyperion Fully History Service. The EOS RIO Team are constantly developing and improving their code, the best way to stay on top of the current recommend version is to join the  [Hyperion Telegram Group](https://t.me/EOSHyperion). Build Hyperion from  `main`  as below:
+Currently (December 2024) the most robust and production ready version of Hyperion from our experience is  `3.3.10-1`  and is used in our WAX Hyperion Fully History Service. The EOS RIO Team are constantly developing and improving their code, the best way to stay on top of the current recommend version is to join the  [Hyperion Telegram Group](https://t.me/EOSHyperion). Build Hyperion from  `main`  as below:
 
 ```
 > git clone https://github.com/eosrio/hyperion-history-api.git
@@ -196,6 +203,8 @@ Currently (September 2023) the most robust and production ready version of Hyper
 
 > npm audit fix
 ```
+
+_Hyperion version '3.5.0' is expected to release in the next few weeks, this guide will be updated accordingly._
 
 After all Hyperion Software Components are built and provisioned you can now proceed to configuration.
 
