@@ -12,7 +12,7 @@ Once again this Technical How To series will cover some of EOS RIO’s same cont
 
 [Learn more about EOS RIO Hyperion](https://eosrio.io/hyperion/)
 
-![image](https://github.com/user-attachments/assets/2e4b17c5-8d89-49f1-bf97-76e39748ab91)
+![image](https://github.com/user-attachments/assets/2ce31a7d-8a87-48a4-b85a-b5bb1e0685a8)
 
 # Using Data Tiers with WAX Hyperion Full History
 
@@ -52,7 +52,8 @@ The indices we are most interested in are the  `wax-action`  and  `wax-delta`  i
 > GET /_cat/indices/wax*
 ```
 
-![image](https://github.com/user-attachments/assets/e5391d4a-0129-4348-a4a4-d96a04189cc1)
+![image](https://github.com/user-attachments/assets/8c46dd0d-34d4-4a9c-a058-d09b8a071b07)
+
 
 The specific settings below show the existing data tier, as expected  `data_content`  by default.
 
@@ -60,7 +61,7 @@ The specific settings below show the existing data tier, as expected  `data_cont
 > GET /wax-action-v1-000023/_settings
 ```
 
-![image](https://github.com/user-attachments/assets/684b0011-bc93-40fa-a772-80f7f637622f)
+![image](https://github.com/user-attachments/assets/82830550-359f-4129-94a3-403ff4803d1b)
 
 ## Set Index Tier
 
@@ -73,7 +74,7 @@ Set the desired older index to  `data_warm`.
 }
 ```
 
-![image](https://github.com/user-attachments/assets/a57ceafd-8036-4853-935d-10f00622fb01)
+![image](https://github.com/user-attachments/assets/c9ced417-bb61-4e37-9a66-27c623c36f47)
 
 ## Observe Index Allocation
 
@@ -88,7 +89,7 @@ wax-action-v1-000023 wax-es-node-1 -> 10.125.0.89 fQeNr0UkSXuAnofq-rceoA wax-es-
 wax-action-v1-000023 wax-es-node-1 -> 10.125.0.89 fQeNr0UkSXuAnofq-rceoA wax-es-node-3
 ```
 
-![image](https://github.com/user-attachments/assets/a50ee046-b3a7-4956-882f-776b4d4e409b)
+![image](https://github.com/user-attachments/assets/e68130ee-7215-4272-8451-83331242f6e7)
 
 The move process may take some time and appears to use very little resources, which is obviously great for an in production cluster.
 

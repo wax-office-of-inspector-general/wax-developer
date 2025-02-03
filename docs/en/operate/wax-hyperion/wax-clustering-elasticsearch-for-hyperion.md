@@ -16,7 +16,7 @@ Once again this Technical How To series may cover some of EOS RIO’s same conte
 
 ![](https://miro.medium.com/v2/resize:fit:598/0*SMEjl3XTe2BtL1W3.png)
 
-_This article has been updated to reflect the current Hyperion deployment in September 2023._
+_This article has been updated to reflect the current Hyperion deployment in December 2024._
 
 ## Clustering Elasticsearch for WAX Hyperion Full History
 

@@ -12,7 +12,7 @@ Once again this Technical How To series will cover some of EOS RIO’s same cont
 
 ![](https://miro.medium.com/v2/resize:fit:598/0*K8f_xpc-l5NSUL7H.png)
 
-_This article has been updated to reflect the current Hyperion deployment in September 2023._
+_This article has been updated to reflect the current Hyperion deployment in December 2024._
 
 # Running WAX Hyperion Full History
 
@@ -170,7 +170,7 @@ Below is the initial configuration used for  `wax.config.json` :
     "root_only": false
   },
   "scaling": {
-    "readers": 2, #INCREASE READERS#
+    "readers": 1,
     "ds_queues": 1,
     "ds_threads": 1,
     "ds_pool_size": 1,
@@ -252,7 +252,7 @@ Make sure the following is configured or amended in the  `wax.config.json`  :
 "live_reader": false, #DISABLED FOR BULK INDEXING#
 "abi_scan_mode": false, #SET FOR INDEXING PHASE#
 "scaling": { #CONSERVATIVE SETTINGS#
-    "readers": 2,
+    "readers": 1,
     "ds_queues": 1,
     "ds_threads": 2,
     "ds_pool_size": 2,
@@ -366,8 +366,9 @@ In particular make sure  `last_indexed_block`  is equal to  `total_indexed_block
 ```
 > curl [http://<SERVER IP ADDRESS>:7000/v2/health](https://wax-testnet.eosphere.io/v2/health)
 
-{"version":"3.3.9-8","version_hash":"b94f99d552a8fe85a3ab2c1cb5b84ccd6ded6af4","host":"wax-testnet.eosphere.io","health":[{"service":"RabbitMq","status":"OK","time":1695700845755},{"service":"NodeosRPC","status":"OK","service_data":{"head_block_num":268459315,"head_block_time":"2023-09-26T04:00:45.500","time_offset":210,"last_irreversible_block":268458983,"chain_id":"1064487b3cd1a897ce03ae5b6a865651747e2e152090f99c1d19d44e01aea5a4"},"time":1695700845710},{"service":"Elasticsearch","status":"OK","service_data":{"active_shards":"100.0%","head_offset":2,"first_indexed_block":2,"last_indexed_block":268459313,"total_indexed_blocks":268459311,"missing_blocks":0,"missing_pct":"0.00%"},"time":1695700845712}],"features":{"streaming":{"enable":true,"traces":true,"deltas":true},"tables":{"proposals":true,"accounts":true,"voters":true},"index_deltas":true,"index_transfer_memo":true,"index_all_deltas":true,"deferred_trx":false,"failed_trx":false,"resource_limits":false,"resource_usage":false},"cached":true,"query_time_ms":0.158,"last_indexed_block":268459318,"last_indexed_block_time":"2023-09-26T04:00:47.000"}
+{"version":"3.3.10","version_hash":"3c24fea14d424eeef5fe2719238ef4e2ee65dc4e","host":"wax-testnet.eosphere.io","health":[{"service":"RabbitMq","status":"OK","time":1735014759377},{"service":"NodeosRPC","status":"OK","service_data":{"head_block_num":347074519,"head_block_time":"2024-12-24T04:32:39.500","time_offset":-165,"last_irreversible_block":347074187,"chain_id":"f16b1833c747c43682f4386fca9cbb327929334a762755ebec17f6f23c9b8a12"},"time":1735014759335},{"service":"Elasticsearch","status":"OK","service_data":{"active_shards":"100.0%","head_offset":3,"first_indexed_block":2,"last_indexed_block":347074516,"total_indexed_blocks":347074514,"missing_blocks":0,"missing_pct":"0.00%"},"time":1735014759338}],"features":{"streaming":{"enable":true,"traces":true,"deltas":true},"tables":{"proposals":true,"accounts":true,"voters":true},"index_deltas":true,"index_transfer_memo":true,"index_all_deltas":true,"deferred_trx":false,"failed_trx":false,"resource_limits":false,"resource_usage":false},"cached":true,"query_time_ms":0.323,"last_indexed_block":347074522,"last_indexed_block_time":"2024-12-24T04:32:41.000"}
 ```
+
 Congratulations you have now successfully built, configured and are running a WAX Hyperion Full History Service, ready to be made publicly available from behind a SSL offloading Load Balancer such as HAProxy.
 
 The next  **WAX Hyperion Full History**  sub article with cover missing blocks troubleshooting, Elasticsearch monitoring as well as ensuring Hyperion web services are available.
