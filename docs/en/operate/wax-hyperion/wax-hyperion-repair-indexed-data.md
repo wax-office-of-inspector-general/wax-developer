@@ -18,7 +18,7 @@ Once again this Technical How To series will cover some of EOS RIO’s same cont
 
 ![](https://miro.medium.com/v2/resize:fit:598/0*GqDtvMh8QunDs6Mc.png)
 
-_This article has been updated to reflect the current Hyperion deployment in September 2023._
+_This article has been updated to reflect the current Hyperion deployment in December 2024._
 
 # Repair WAX Hyperion Indexed Data
 

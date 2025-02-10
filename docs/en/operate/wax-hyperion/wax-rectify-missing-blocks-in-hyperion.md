@@ -3,7 +3,7 @@ title: Rectify Missing Blocks in WAX Hyperion Full History
 ---
 
 Initially indexing the complete WAX Mainnet from genesis will take time and it can be quite heavy on hardware resources causing pauses or stops in indexing, furthermore if you have taken our suggestion on batching block ranges to index you may encounter a scenario where you have gaps in your full history indexed blocks set.  
-This next sub-article in the series will go through the process of identifying gaps in your full history blocks set and how to manually correct them.
+This next sub-article in the series will go through the process of identifying gaps in your full history blocks set and how to *manually* correct them.
 
 EOS RIO have an excellent  [Hyperion Documentation Repository](https://hyperion.docs.eosrio.io/)  including details on how to run their Hyperion Full History product, however this article expands on their documentation specifically in relation to operating Hyperion using Elasticsearch 8.x
 
@@ -13,7 +13,7 @@ Once again this Technical How To series will cover some of EOS RIO’s same cont
 
 ![](https://miro.medium.com/v2/resize:fit:449/0*pY_GWzqlqGfAO7Kf.png)
 
-_This article has been updated to reflect the current Hyperion deployment in September 2023._
+_This article has been updated to reflect the current Hyperion deployment in December 2024._
 
 ## Rectify Missing Blocks in WAX Hyperion Full History
 
