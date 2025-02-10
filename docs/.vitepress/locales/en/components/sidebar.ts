@@ -179,7 +179,6 @@ export default [
                             {text: 'GUI for quests and leaderboards', link:'/build/tutorials/howto-create_farming_game/Part18'}
                         ]
                     },
-
                     {
                         text: 'Tic-Tac-Toe Game',
                         link: '/build/tutorials/tic-tac-toe-game/',
@@ -241,7 +240,7 @@ export default [
                     },
                     {
                         text: 'SS verification',
-                        link: '/build/tutorials/server-side-verification/',
+                        link: '/build/tutorials/server-side-verification',
                     },
                     {
                         text: 'How To Explore WAX Blockchain', 
