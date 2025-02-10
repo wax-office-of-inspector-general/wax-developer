@@ -8,7 +8,7 @@ Building on our ReactJS and WAX smart contract interaction guide, this article a
 **Blending assets**
 -------------------
 
-Blends in smart contracts allow collection owners to create new, improved assets by combining existing ones. Imagine upgrading your tools by blending two of the same type, resulting in a tool that extracts significantly more resources. 
+Blends in smart contracts allow collection owners to create new, improved assets by combining existing ones. Imagine upgrading your tools by blending two of the same type, resulting in a tool that extracts significantly more resources.
 
 This process enriches the user experience by adding depth to resource management and gameplay strategy, seamlessly integrated into the UI for easy user interaction.
 
@@ -79,7 +79,7 @@ export const blend = async ({ activeUser, componentIds, assets, blendId }) =>   
           from: activeUser.accountName,
           to: 'dappgamemine',
           assets_ids: assets,
-	    memo: `blend:${blendId}`
+        memo: `blend:${blendId}`
       }
   });
 };
@@ -106,7 +106,7 @@ Our tool starts at level 1, but we can upgrade it. When this tool is staking on 
 
 First, we need to decide which tool or workplace we want to improve. In order to perform this action, our tool needs to be staked. Then we pass it to the configuration of our action.
 
-The UI should look at the maximum allowed level of the tool we want to upgrade before calling the action. It is written in the data of this tool. 
+The UI should look at the maximum allowed level of the tool we want to upgrade before calling the action. It is written in the data of this tool.
 
 The next level should be higher than the current one. For our example, let's assume that our instrument has an initial first level.
 
@@ -143,7 +143,7 @@ Here we use an action game called "upgradeitem".
 
 -   **owner** -- this is our nickname of the user who connected his wallet, we take it from activeUser.accountName;
 -   **item_to-upgrade** -- ID of the tool we want to upgrade;
--   **stake_at_farmingitem** --  the ID of the workplace to which the tool is staking;
+-   **stake_at_farmingitem** --  the ID of the workplace to which the tool is staking;
 
 After a successful upgrade, our tool becomes level 2:
 

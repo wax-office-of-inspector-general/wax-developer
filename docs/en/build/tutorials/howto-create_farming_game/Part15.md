@@ -119,7 +119,7 @@ and balance table:
 
 <https://testnet.waxblock.io/account/dappgamemine?code=dappgamemine&scope=dappgamemine&table=balance&lower_bound=&upper_bound=&limit=10&reverse=false#contract-tables>
 
-Game **governance by users/players**
+**Game governance by users/players**
 ------------------------------------
 
 Let's outline the structure of the voting system:
@@ -216,5 +216,3 @@ a table with all created rate change votes:
 <https://testnet.waxblock.io/account/dappgamemine?code=dappgamemine&scope=dappgamemine&table=changeration&lower_bound=&upper_bound=&limit=10&reverse=false#contract-tables>
 
 **PS.** The [Following link](https://github.com/dapplicaio/GUIStakingGovernanceSwaps) leads us to a repository that corresponds everything described.
-
-###
