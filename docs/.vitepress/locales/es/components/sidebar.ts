@@ -19,21 +19,17 @@ export default [
             link: '/es/learn/about-wax/why-wax',
           },
           {
-            text: '¿Qué es el token WAXP?',
+            text: '¿Qué es el Token WAXP?',
             link: '/es/learn/about-wax/what-is-waxp-token',
           },
           {
-            text: 'Consenso en WAX',
+            text: 'Cómo trabaja WAX?',
             link: '/es/learn/about-wax/wax-consensus',
           },
           {
             text: 'Interoperabilidad en WAX',
             link: '/es/learn/about-wax/wax-interoparability',
-          },
-          {
-            text: 'Gobernanza en WAX',
-            link: '/es/learn/about-wax/wax-governance',
-          },
+          }
         ],
       },
     ],
