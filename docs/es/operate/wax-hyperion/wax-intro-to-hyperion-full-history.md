@@ -16,7 +16,7 @@ EOSphere tiene una extensa experiencia en producción con la provisión de servi
 
 ![](https://miro.medium.com/v2/resize:fit:598/1*ATnQKunF5rVtPEsL-sP0JA.png)
 
-_Este artículo ha sido actualizado para reflejar la implementación actual de Hyperion en septiembre de 2023._
+_Este artículo ha sido actualizado para reflejar la implementación actual de Hyperion en diciembre de 2024._
 
 # Introducción a WAX Hyperion Full History
 
@@ -137,13 +137,14 @@ Las recomendaciones a continuación son para WAX Mainnet y WAX Testnet con Histo
   * CPU moderna, 3Ghz+, 8 Núcleos+
   * 64GB RAM
   * SSD/NVMe de grado empresarial
-    _La base de datos Elasticsearch actual (septiembre de 2023) es de 26TB, sugiero provisionar 35–40TB a través del clúster para la longevidad del servicio de Historia Completa_
+    _La base de datos Elasticsearch actual (diciembre de 202a) es de 32TB, sugiero provisionar 40–45TB a través del clúster para la longevidad del servicio de Historia Completa_
   * LAN de 1Gb/s+
 * **WAX State-History**
   * CPU moderna, 4Ghz+, 4 Núcleos
   * 128GB RAM
   * 256GB DISCO 1 _(SSD/NVMe de grado empresarial)_
-  * 16TB DISCO 2 _(SAS o SATA están bien)_
+  * 18TB DISCO 2 _(SAS o SATA están bien)_
+  * 1Gb/s+ LAN  
 
 **WAX Testnet**
 

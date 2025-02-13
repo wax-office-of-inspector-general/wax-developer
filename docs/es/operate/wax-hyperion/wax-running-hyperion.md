@@ -14,7 +14,7 @@ Una vez más, esta serie de Cómo Técnico cubrirá parte del mismo contenido de
 
 ![](https://miro.medium.com/v2/resize:fit:598/0*K8f_xpc-l5NSUL7H.png)
 
-_Este artículo ha sido actualizado para reflejar la implementación actual de Hyperion en septiembre de 2023._
+_Este artículo ha sido actualizado para reflejar la implementación actual de Hyperion en diciembre de 2024._
 
 # Ejecutando el Historial Completo de WAX Hyperion
 
@@ -78,7 +78,142 @@ A continuación se muestra la configuración inicial utilizada para `wax.config.
 > nano wax.config.json
 
 {
-  ...
+  {
+  "api": {
+    "enabled": true,
+    "pm2_scaling": 1,
+    "node_max_old_space_size": 1024,
+    "chain_name": "WAX Testnet",
+    "server_addr": "<IP ADDRESS FOR SERVER API>",
+    "server_port": 7000,
+    "stream_port": 1234,
+    "stream_scroll_limit": -1,
+    "stream_scroll_batch": 500,
+    "server_name": "<YOUR PUBLIC SERVER URL>",
+    "provider_name": "<YOUR GUILD NAME>",
+    "provider_url": "<YOUR ORG URL>",
+    "chain_api": "",
+    "push_api": "",
+    "chain_logo_url": "<CHAIN LOGO.jpg URL>",
+    "enable_caching": false, #DISABLED FOR BULK INDEXING#
+    "cache_life": 1,
+    "limits": {
+      "get_actions": 1000,
+      "get_voters": 100,
+      "get_links": 1000,
+      "get_deltas": 1000,
+      "get_trx_actions": 200
+    },
+    "access_log": false,
+    "chain_api_error_log": false,
+    "custom_core_token": "",
+    "enable_export_action": false,
+    "disable_rate_limit": false,
+    "rate_limit_rpm": 1000,
+    "rate_limit_allow": [],
+    "disable_tx_cache": true, #DISABLED FOR BULK INDEXING#
+    "tx_cache_expiration_sec": 3600,
+    "v1_chain_cache": [
+      {
+        "path": "get_block",
+        "ttl": 3000
+      },
+      {
+        "path": "get_info",
+        "ttl": 500
+      }
+    ]
+  },
+  "indexer": {
+    "enabled": true,
+    "node_max_old_space_size": 4096,
+    "start_on": 0,
+    "stop_on": 0,
+    "rewrite": false,
+    "purge_queues": false,
+    "live_reader": false, #DISABLED FOR BULK INDEXING#
+    "live_only_mode": false,
+    "abi_scan_mode": true, #SET TO ABI_SCAN_MODE#
+    "fetch_block": true,
+    "fetch_traces": true,
+    "disable_reading": false,
+    "disable_indexing": false,
+    "process_deltas": true,
+    "disable_delta_rm": true
+  },
+  "settings": {
+    "preview": false,
+    "chain": "wax", #SET CHAINS ID#
+    "eosio_alias": "eosio",
+    "parser": "3.2", #SET TO 1.8 for < 3.1 SHIP#
+    "auto_stop": 0,
+    "index_version": "v1",
+    "debug": false,
+    "bp_logs": false,
+    "bp_monitoring": false,
+    "ipc_debug_rate": 60000,
+    "allow_custom_abi": false,
+    "rate_monitoring": true,
+    "max_ws_payload_mb": 256,
+    "ds_profiling": false,
+    "auto_mode_switch": false,
+    "hot_warm_policy": false,
+    "custom_policy": "",
+    "index_partition_size": 10000000,
+    "es_replicas": 0
+  },
+  "blacklists": {
+    "actions": [],
+    "deltas": []
+  },
+  "whitelists": {
+    "actions": [],
+    "deltas": [],
+    "max_depth": 10,
+    "root_only": false
+  },
+  "scaling": {
+    "readers": 1,
+    "ds_queues": 1,
+    "ds_threads": 1,
+    "ds_pool_size": 1,
+    "indexing_queues": 1,
+    "ad_idx_queues": 1,
+    "dyn_idx_queues": 1,
+    "max_autoscale": 4,
+    "batch_size": 5000,
+    "resume_trigger": 5000,
+    "auto_scale_trigger": 20000,
+    "block_queue_limit": 10000,
+    "max_queue_limit": 100000,
+    "routing_mode": "round_robin",
+    "polling_interval": 10000
+  },
+  "features": {
+    "streaming": {
+      "enable": false,
+      "traces": false,
+      "deltas": false
+    },
+    "tables": {
+      "proposals": true,
+      "accounts": true,
+      "voters": true
+    },
+    "index_deltas": true,
+    "index_transfer_memo": true
+    "index_all_deltas": true,
+    "deferred_trx": false,
+    "failed_trx": false,
+    "resource_limits": false,
+    "resource_usage": false
+  },
+  "prefetch": {
+    "read": 50,
+    "block": 100,
+    "index": 500
+  },
+  "plugins": {}
 }
 ```
 Se recomienda encarecidamente que el nodo SHIP esté conectado en LAN.
@@ -112,8 +247,15 @@ Asegúrate de que lo siguiente esté configurado o modificado en el `wax.config.
 "live_reader": false, #DESACTIVADO PARA INDEXACIÓN MASIVA#
 "abi_scan_mode": false, #CONFIGURADO PARA FASE DE INDEXACIÓN#
 "scaling": { #CONFIGURACIONES CONSERVADORAS#
-    "readers": 2,
-    ...
+    "readers": 1,
+    "ds_queues": 1,
+    "ds_threads": 2,
+    "ds_pool_size": 2,
+    "indexing_queues": 1,
+    "ad_idx_queues": 1,
+    "dyn_idx_queues": 1,
+    "max_autoscale": 4,
+
 ```
 
 Inicia el Indexador como se muestra a continuación:
@@ -222,11 +364,12 @@ En particular, asegúrate de que `last_indexed_block` sea igual a `total_indexed
 ```
 > curl [http://<DIRECCIÓN IP DEL SERVIDOR>:7000/v2/health](https://wax-testnet.eosphere.io/v2/health)
 
-{"version":"3.3.9-8","version_hash":"b94f99d552a8fe85a3ab2c1cb5b84ccd6ded6af4","host":"wax-testnet.eosphere.io","health":[{"service":"RabbitMq","status":"OK","time":1695700845755},{"service":"NodeosRPC","status":"OK","service_data":{"head_block_num":268459315,"head_block_time":"2023-09-26T04:00:45.500","time_offset":210,"last_irreversible_block":268458983,"chain_id":"1064487b3cd1a897ce03ae5b6a865651747e2e152090f99c1d19d44e01aea5a4"},"time":1695700845710},{"service":"Elasticsearch","status":"OK","service_data":{"active_shards":"100.0%","head_offset":2,"first_indexed_block":2,"last_indexed_block":268459313,"total_indexed_blocks":268459311,"missing_blocks":0,"missing_pct":"0.00%"},"time":1695700845712}],"features":{"streaming":{"enable":true,"traces":true,"deltas":true},"tables":{"proposals":true,"accounts":true,"voters":true},"index_deltas":true,"index_transfer_memo":true,"index_all_deltas":true,"deferred_trx":false,"failed_trx":false,"resource_limits":false,"resource_usage":false},"cached":true,"query_time_ms":0.158,"last_indexed_block":268459318,"last_indexed_block_time":"2023-09-26T04:00:47.000"}
+{"version":"3.3.10","version_hash":"3c24fea14d424eeef5fe2719238ef4e2ee65dc4e","host":"wax-testnet.eosphere.io","health":[{"service":"RabbitMq","status":"OK","time":1735014759377},{"service":"NodeosRPC","status":"OK","service_data":{"head_block_num":347074519,"head_block_time":"2024-12-24T04:32:39.500","time_offset":-165,"last_irreversible_block":347074187,"chain_id":"f16b1833c747c43682f4386fca9cbb327929334a762755ebec17f6f23c9b8a12"},"time":1735014759335},{"service":"Elasticsearch","status":"OK","service_data":{"active_shards":"100.0%","head_offset":3,"first_indexed_block":2,"last_indexed_block":347074516,"total_indexed_blocks":347074514,"missing_blocks":0,"missing_pct":"0.00%"},"time":1735014759338}],"features":{"streaming":{"enable":true,"traces":true,"deltas":true},"tables":{"proposals":true,"accounts":true,"voters":true},"index_deltas":true,"index_transfer_memo":true,"index_all_deltas":true,"deferred_trx":false,"failed_trx":false,"resource_limits":false,"resource_usage":false},"cached":true,"query_time_ms":0.323,"last_indexed_block":347074522,"last_indexed_block_time":"2024-12-24T04:32:41.000"}
 ```
+
 Felicidades, ahora has construido, configurado y estás ejecutando un Servicio de Historial Completo de WAX Hyperion con éxito, listo para ser hecho públicamente disponible desde detrás de un Balanceador de Carga con descarga SSL como HAProxy.
 
-El siguiente subartículo de **Historial Completo de WAX Hyperion** cubrirá la solución de problemas de bloques faltantes, monitoreo de Elasticsearch, así como asegurando que los servicios web de Hyperion estén disponibles.
+El siguiente artículo de **Historial Completo de WAX Hyperion** cubrirá la solución de problemas de bloques faltantes, monitoreo de Elasticsearch, así como asegurando que los servicios web de Hyperion estén disponibles.
 
 ---
 

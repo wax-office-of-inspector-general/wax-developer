@@ -19,21 +19,17 @@ export default [
             link: '/es/learn/about-wax/why-wax',
           },
           {
-            text: '¿Qué es el token WAXP?',
+            text: '¿Qué es el Token WAXP?',
             link: '/es/learn/about-wax/what-is-waxp-token',
           },
           {
-            text: 'Consenso en WAX',
+            text: 'Cómo trabaja WAX?',
             link: '/es/learn/about-wax/wax-consensus',
           },
           {
             text: 'Interoperabilidad en WAX',
             link: '/es/learn/about-wax/wax-interoparability',
-          },
-          {
-            text: 'Gobernanza en WAX',
-            link: '/es/learn/about-wax/wax-governance',
-          },
+          }
         ],
       },
     ],
@@ -303,6 +299,11 @@ export default [
           { text: 'Configurar Componentes', link: '/es/operate/wax-hyperion/wax-config-hyperion-software-components' },
           { text: 'Ejecutando Hyperion', link: '/es/operate/wax-hyperion/wax-running-hyperion' },
           { text: 'Configurar Cluster Hyperion', link: '/es/operate/wax-hyperion/wax-clustering-elasticsearch-for-hyperion' },
+          { text: 'Reparar Bloques Perdidos', link: '/es/operate/wax-hyperion/wax-rectify-missing-blocks-in-hyperion'},
+          { text: 'Escalar el Indexador', link: '/es/operate/wax-hyperion/wax-hyperion-indexer-scaling'},
+          { text: 'Streaming a través de Balanceador de Carga', link: '/es/operate/wax-hyperion/wax-hyperion-streaming-load-balancer'},
+          { text: 'Reparar Datos Indexados', link: '/es/operate/wax-hyperion/wax-hyperion-repair-indexed-data'},
+          { text: 'Usando Data Tiers', link: '/es/operate/wax-hyperion/wax-hyperion-data-tiers'}
         ],
       },
       {
