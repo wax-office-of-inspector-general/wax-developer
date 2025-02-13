@@ -16,7 +16,7 @@ Una vez más, esta serie de Cómo Hacerlo Técnico puede cubrir algunos de los m
 
 ![EOS RIO Hyperion](https://miro.medium.com/v2/resize:fit:598/0*SMEjl3XTe2BtL1W3.png)
 
-_Este artículo ha sido actualizado para reflejar el despliegue actual de Hyperion en septiembre de 2023._
+_Este artículo ha sido actualizado para reflejar el despliegue actual de Hyperion en diciembre de 2024._
 
 ## Agrupamiento de Elasticsearch para Hyperion Full History de WAX
 

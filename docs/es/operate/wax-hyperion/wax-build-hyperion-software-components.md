@@ -14,7 +14,7 @@ Una vez más, esta serie de Cómo Hacerlo Técnico cubrirá algunos de los mismo
 
 ![](https://miro.medium.com/v2/resize:fit:598/0*QSOXBoNEcm0pWwSl.png)
 
-_Este artículo ha sido actualizado para reflejar el despliegue actual de Hyperion en septiembre de 2023._
+_Este artículo ha sido actualizado para reflejar el despliegue actual de Hyperion en diciembre de 2024._
 
 # Construyendo los Componentes del Software Hyperion de WAX
 
@@ -26,11 +26,11 @@ El proceso para construir cada uno de estos bloques de construcción principales
 
 ## **Nodo de Historia del Estado (SHIP) del Software WAX**
 
-El despliegue de Hyperion de WAX requiere acceso a un Nodo de Historia de Estado de WAX completamente sincronizado, la versión recomendada actual es `v4.0.4wax02`. Este proceso de construcción está cubierto extensamente en [WAX Technical How To #7](https://medium.com/eosphere/wax-technical-how-to-7-9ccc102efd9d).
+El despliegue de Hyperion de WAX requiere acceso a un Nodo de Historia de Estado de WAX completamente sincronizado, la versión recomendada actual es `v5.0.1wax01`. Este proceso de construcción está cubierto extensamente en [WAX Technical How To #7](https://medium.com/eosphere/wax-technical-how-to-7-9ccc102efd9d).
 
 ## RabbitMQ
 
-Para instalar la última versión de RabbitMQ actualmente `3.12.6` asegúrate de revisar su último [Script de Inicio Rápido de Cloudsmith](https://www.rabbitmq.com/install-debian.html), esto en nuestra experiencia es la forma más simple de asegurar que estás actualizado y construido correctamente.
+Para instalar la última versión de RabbitMQ actualmente `4.0.5` y Erlang `27.2` asegúrate de revisar su último [Script de Inicio Rápido de Cloudsmith](https://www.rabbitmq.com/install-debian.html), esto en nuestra experiencia es la forma más simple de asegurar que estás actualizado y construido correctamente.
 
 El resumen del proceso está a continuación:
 
@@ -79,9 +79,16 @@ EOF
 **Verificar Versión**
 > sudo rabbitmqctl version
 ```
+
+Si actualizaste a la versión 4 de RabbitMQ, es posible que necesites habilitar todas las feature flags estables como se muestra a continuación:
+
+```
+> sudo rabbitmqctl enable_feature_flag all
+```
+
 ## Redis
 
-Nuestro despliegue actual de Hyperion de WAX está funcionando en la última versión estable de Redis `v7.2.1` que se construye de la siguiente manera:
+Nuestro despliegue actual de Hyperion de WAX está funcionando en la última versión estable de Redis `v7.3.1` que se construye de la siguiente manera:
 
 ```
 > sudo apt install lsb-release curl gpg
@@ -101,7 +108,7 @@ Nuestro despliegue actual de Hyperion de WAX está funcionando en la última ver
 
 ## Node.js
 
-Hyperion requiere Node.js v18, nuestro despliegue de Hyperion de WAX está funcionando en la actual LTS `v18.18.0` que se construye a continuación:
+Hyperion requiere Node.js v22, nuestro despliegue de Hyperion de WAX está funcionando en la actual LTS `v22.12.0` que se construye a continuación:
 
 ```
 #Descargar e importar la clave GPG de Nodesource#
@@ -114,7 +121,7 @@ Hyperion requiere Node.js v18, nuestro despliegue de Hyperion de WAX está funci
 > curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
 
 #Crear repositorio .deb#
-> NODE_MAJOR=18
+> NODE_MAJOR=22
 
 > echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
 
@@ -129,7 +136,7 @@ Hyperion requiere Node.js v18, nuestro despliegue de Hyperion de WAX está funci
 
 ## PM2
 
-La última versión pública es `5.3.0` y se construye como sigue:
+La última versión pública es `5.4.3` y se construye como sigue:
 
 ```
 > sudo apt update
@@ -143,7 +150,7 @@ La última versión pública es `5.3.0` y se construye como sigue:
 
 ## Elasticsearch
 
-Actualmente, nuestro Hyperion de WAX está utilizando Elasticsearch `8.5.2` con excelentes resultados, sin embargo, la versión recomendada actual de Elasticsearch es `8.9.0` que espero funcione igual de bien o mejor. Construye la última versión de Elasticsearch `8.x` de la siguiente manera:
+Actualmente, nuestro Hyperion de WAX está utilizando Elasticsearch `8.13.2` con excelentes resultados, sin embargo, la versión recomendada actual de Elasticsearch es `8.17.0` que espero funcione igual de bien o mejor. Construye la última versión de Elasticsearch `8.x` de la siguiente manera:
 
 ```
 > sudo apt update
@@ -189,7 +196,7 @@ La versión de Kibana utilizada debe emparejarse con la versión instalada de El
 
 ## **EOS RIO Hyperion Indexador y API**
 
-Actualmente (septiembre de 2023), la versión más robusta y lista para producción de Hyperion desde nuestra experiencia es `3.3.9–8` y se utiliza en nuestro Servicio de Historia Completa de Hyperion de WAX. El equipo de EOS RIO está desarrollando y mejorando constantemente su código, la mejor manera de estar al tanto de la versión recomendada actual es unirse al [Grupo de Telegram de Hyperion](https://t.me/EOSHyperion). Construye Hyperion desde `main` de la siguiente manera:
+Actualmente (diciembre de 2024), la versión más robusta y lista para producción de Hyperion desde nuestra experiencia es `3.3.10-1` y se utiliza en nuestro Servicio de Historia Completa de Hyperion de WAX. El equipo de EOS RIO está desarrollando y mejorando constantemente su código, la mejor manera de estar al tanto de la versión recomendada actual es unirse al [Grupo de Telegram de Hyperion](https://t.me/EOSHyperion). Construye Hyperion desde `main` de la siguiente manera:
 
 ```
 > git clone https://github.com/eosrio/hyperion-history-api.git
@@ -202,6 +209,8 @@ Actualmente (septiembre de 2023), la versión más robusta y lista para producci
 
 > npm audit fix
 ```
+
+_Se espera que la versión 3.5.0 de Hyperion se lance en las próximas semanas; esta guía se actualizará en consecuencia._
 
 Después de que todos los Componentes del Software Hyperion estén construidos y aprovisionados, ahora puedes proceder a la configuración.
 

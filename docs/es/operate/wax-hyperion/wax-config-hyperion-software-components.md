@@ -14,7 +14,7 @@ Una vez más, esta serie de Cómo Hacerlo Técnico cubrirá parte del mismo cont
 
 ![](https://miro.medium.com/v2/resize:fit:598/0*e9la30mQaOGWxfmM.png)
 
-_Este artículo ha sido actualizado para reflejar la implementación actual de Hyperion en septiembre de 2023._
+_Este artículo ha sido actualizado para reflejar la implementación actual de Hyperion en diciembre de 2024._
 
 # Configurar Componentes de Software Hyperion WAX
 
@@ -99,20 +99,20 @@ Depura problemas de Redis en los logs:
 
 Aquí no hay nada que configurar
 
-, sin embargo, asegúrate de estar ejecutando Node.js v16
+, sin embargo, asegúrate de estar ejecutando Node.js v22
 
 ```
 > node -v  
-v18.x.x
+v22.x.x
 ```
 
 ## PM2
 
-Aquí no hay nada que configurar, verifica que estás ejecutando la última versión de PM2`5.3.0`
+Aquí no hay nada que configurar, verifica que estás ejecutando la última versión de PM2`5.4.3`
 
 ```
 > pm2 --version  
-5.3.0
+5.4.3
 ```
 
 ## Elasticsearch
@@ -198,15 +198,15 @@ Enter host password for user 'elastic':
 {
   "name" : "<TU NOMBRE DE NODO>",
   "cluster_name" : "<TU NOMBRE DE CLÚSTER>",
-  "cluster_uuid" : "exucKwVpRJubHGq5Jwu1_Q",
+  "cluster_uuid" : "36T00kPBT6qq8Tb1JYUgCw",
   "version" : {
-    "number" : "8.10.1",
+    "number" : "8.13.2",
     "build_flavor" : "default",
     "build_type" : "deb",
-    "build_hash" : "a94744f97522b2b7ee8b5dc13be7ee11082b8d6b",
-    "build_date" : "2023-09-14T20:16:27.027355296Z",
+    "build_hash" : "16cc90cd2d08a3147ce02b07e50894bc060a4cbf",
+    "build_date" : "2024-04-05T14:45:26.420424304Z",
     "build_snapshot" : false,
-    "lucene_version" : "9.7.0",
+    "lucene_version" : "9.10.0",
     "minimum_wire_compatibility_version" : "7.17.0",
     "minimum_index_compatibility_version" : "7.0.0"
   },
@@ -492,7 +492,7 @@ disable_reading": false,
     "root_only": false
   },
   "scaling": {
-    "readers": 2, #INCREMENTA LOS LECTORES#
+    "readers": 1,
     "ds_queues": 1,
     "ds_threads": 1,
     "ds_pool_size": 1,
